@@ -28,13 +28,17 @@
 % Quem tiver problemas com os acentos, trocar utf8 por latin1
 \usepackage[portuguese,english]{babel}
 \usepackage{times}
-\usepackage{graphicx}
 \usepackage{xspace}
 \usepackage{setspace}
 \usepackage[show]{chato-notes}
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage[vlined,ruled,commentsnumbered,linesnumbered]{algorithm2e} 
 
+\usepackage{graphicx,subfigure,multirow}
+\usepackage{array}
+\usepackage{mathptmx} % use Times in math mode
+\usepackage{moreverb}
+\usepackage{lscape, rotating}
 
 % Indice remissivo
 \usepackage{makeidx}
@@ -269,15 +273,15 @@
 \vspace{2.0cm}
 \vfill
 \IdiomaTese
-\Large{\bf \TITULO}\\
+\Large{\textbf{\TITULO}}\\
 \vspace{2cm}
 \vfill
 
-\large{\bf{\DOUTORAMENTO}}\\
+\large{\textbf{\DOUTORAMENTO}}\\
 %\normalsize{\Especialidade}\\
 \vspace{2.0cm}
 \vfill
-\Large{\bf \Autor}\\
+\Large{\textbf{\Autor}}\\
 \vspace{1,8 cm}
 \vfill
 \large{Tese orientada por:}\\
@@ -308,16 +312,16 @@ e co-orientada pelo Prof. Doutor \CoOrientador \\
 \vspace{0.5cm}
 \vfill
 \IdiomaTese
-\Large{\bf \TITULO}\\
+\Large{\textbf{\TITULO}}\\
 \selectlanguage{portuguese}
 \vspace{1cm}
 \vfill
 
-\large{\bf{\DOUTORAMENTO}}\\
+\large{\textbf{\DOUTORAMENTO}}\\
 %\normalsize{\Especialidade }\\
 \vspace{1cm}
 \vfill
-\Large{\bf \Autor}\\
+\Large{\textbf{\Autor}}\\
 \vspace{.5 cm}
 \vfill
 \large{Tese orientada por:}\\
@@ -363,12 +367,10 @@ e pelo Prof. Doutor \CoOrientador \\
 % Fim da capa
 % ----------------------------------------------------------------------
 
-% This work was supported by Fundação para a Ciência e a Tecnologia (FCT), through Multiannual
-%Funding to the LaSIGE research unit and the Individual Doctoral Grant SFRH/BD/84375/2012.
 \setcounter{page}{1}
 \pagenumbering{roman}
 
-\addcontentsline {toc} {chapter} {Acks}
+\addcontentsline {toc} {chapter} {Acknowledgements}
 \include{chapters/acks/agradecimentos}
 
 \addcontentsline {toc} {chapter} {Abstract (PT)}
@@ -409,15 +411,13 @@ e pelo Prof. Doutor \CoOrientador \\
 
 \setcounter{page}{1}
 \pagenumbering{arabic}
+
 \include{chapters/introduction/introduction}
-\include{chapters/relatedwork/relatedwork}
-\include{chapters/overview/overview}
+\include{chapters/relatedwork/related_work}
+\include{chapters/datasource/datasource}
+\include{chapters/lazarus/lazarus_design}
+\include{chapters/lazarus/lazarus_implementation}
 \include{chapters/sieveq/sieveq}
-\include{chapters/lazarus/theoretical_lazarus}
-\include{chapters/lazarus/practical_lazarus}
-\include{chapters/controller/controller}
-%\include{chapters/evaluation/sieveqevaluation}
-%\include{chapters/evaluation/lazarusevaluation}
 \include{chapters/conclusion/conclusion}
 
 
