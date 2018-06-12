@@ -1,0 +1,477 @@
+
+### NUMBER OF RUNS: 5000 runs
+### ALL OPERATING SYSTEMS (2017 included)
+### All special attacks
+
+
+**************** Wannacry ******************
+
+### FINAL
+[3;J[H[2J[16:21:2] Selected algorithm=kmeans
+Stopword size=817
+[16:21:2] Selected schema=vulns
+[16:21:3] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+wannacry exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					0/5000 ( 0.0)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### RANDOM
+[3;J[H[2J[16:23:33] Selected algorithm=kmeans
+Stopword size=817
+[16:23:33] Selected schema=vulns
+[16:23:34] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+wannacry exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					4861/5000 ( 0.9722)
+TTC (AVG):						19.0
+TTC (STD):						1095.4076866628243
+execution finished
+
+### STATIC
+[3;J[H[2J[16:24:9] Selected algorithm=kmeans
+Stopword size=817
+[16:24:9] Selected schema=vulns
+[16:24:9] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+wannacry exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					610/5000 ( 0.122)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[16:25:52] Selected algorithm=kmeans
+Stopword size=817
+[16:25:53] Selected schema=vulns
+[16:25:53] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+wannacry exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					859/5000 ( 0.1718)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+
+**************** ALL ******************
+
+### FINAL
+[3;J[H[2J[16:27:44] Selected algorithm=kmeans
+Stopword size=817
+[16:27:44] Selected schema=vulns
+[16:27:44] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					31/5000 ( 0.0062)
+TTC (AVG):						90.0
+TTC (STD):						231.330931783884
+execution finished
+
+### RANDOM
+[3;J[H[2J[16:30:22] Selected algorithm=kmeans
+Stopword size=817
+[16:30:22] Selected schema=vulns
+[16:30:22] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					5000/5000 ( 1.0)
+TTC (AVG):						7.0
+TTC (STD):						418.51045387182387
+execution finished
+
+### STATIC
+[3;J[H[2J[16:30:46] Selected algorithm=kmeans
+Stopword size=817
+[16:30:46] Selected schema=vulns
+[16:30:46] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					1525/5000 ( 0.305)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[16:32:14] Selected algorithm=kmeans
+Stopword size=817
+[16:32:14] Selected schema=vulns
+[16:32:15] Weka: 1696 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 82 New cluster=111
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	54
+Vulnerable runs:					2285/5000 ( 0.457)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+**************** Samba ******************
+
+### FINAL
+[3;J[H[2J[15:1:33] Selected algorithm=kmeans
+Stopword size=817
+[15:1:33] Selected schema=vulns
+[15:1:33] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+smb exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					0/5000 ( 0.0)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### RANDOM
+[3;J[H[2J[15:4:10] Selected algorithm=kmeans
+Stopword size=817
+[15:4:10] Selected schema=vulns
+[15:4:10] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+smb exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					4878/5000 ( 0.9756)
+TTC (AVG):						19.0
+TTC (STD):						1123.8665401194219
+execution finished
+
+### STATIC
+[3;J[H[2J[15:4:51] Selected algorithm=kmeans
+Stopword size=817
+[15:4:51] Selected schema=vulns
+[15:4:51] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+smb exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					558/5000 ( 0.1116)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[15:6:43] Selected algorithm=kmeans
+Stopword size=817
+[15:6:44] Selected schema=vulns
+[15:6:44] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+smb exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					839/5000 ( 0.1678)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+
+**************** Powershell ******************
+
+### FINAL
+[3;J[H[2J[15:8:45] Selected algorithm=kmeans
+Stopword size=817
+[15:8:45] Selected schema=vulns
+[15:8:45] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+powershell exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					0/5000 ( 0.0)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### RANDOM
+[3;J[H[2J[15:11:23] Selected algorithm=kmeans
+Stopword size=817
+[15:11:23] Selected schema=vulns
+[15:11:24] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+powershell exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					4004/5000 ( 0.8008)
+TTC (AVG):						60.0
+TTC (STD):						2794.8232502253163
+execution finished
+
+### STATIC
+[3;J[H[2J[15:12:43] Selected algorithm=kmeans
+Stopword size=817
+[15:12:43] Selected schema=vulns
+[15:12:43] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+powershell exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					117/5000 ( 0.0234)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[15:14:44] Selected algorithm=kmeans
+Stopword size=817
+[15:14:44] Selected schema=vulns
+[15:14:44] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+powershell exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					436/5000 ( 0.0872)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+
+**************** Stack Clash ******************
+
+### FINAL
+[3;J[H[2J[15:16:59] Selected algorithm=kmeans
+Stopword size=817
+[15:16:59] Selected schema=vulns
+[15:16:59] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+stackclash exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					6/5000 ( 0.0012)
+TTC (AVG):						25.0
+TTC (STD):						85.98255637046388
+execution finished
+
+### RANDOM
+[3;J[H[2J[15:19:42] Selected algorithm=kmeans
+Stopword size=817
+[15:19:42] Selected schema=vulns
+[15:19:42] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+stackclash exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					5000/5000 ( 1.0)
+TTC (AVG):						12.0
+TTC (STD):						761.606197453776
+execution finished
+
+### STATIC
+[3;J[H[2J[15:20:15] Selected algorithm=kmeans
+Stopword size=817
+[15:20:15] Selected schema=vulns
+[15:20:16] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+stackclash exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					988/5000 ( 0.1976)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[15:21:58] Selected algorithm=kmeans
+Stopword size=817
+[15:21:58] Selected schema=vulns
+[15:21:59] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+stackclash exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					1456/5000 ( 0.2912)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+
+**************** ALL ******************
+
+### FINAL
+[3;J[H[2J[15:23:47] Selected algorithm=kmeans
+Stopword size=817
+[15:23:47] Selected schema=vulns
+[15:23:48] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.IntelSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					9/5000 ( 0.0018)
+TTC (AVG):						66.0
+TTC (STD):						201.41251202445196
+execution finished
+
+### RANDOM
+[3;J[H[2J[15:26:31] Selected algorithm=kmeans
+Stopword size=817
+[15:26:32] Selected schema=vulns
+[15:26:32] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.RandomSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					5000/5000 ( 1.0)
+TTC (AVG):						7.0
+TTC (STD):						412.3311775745317
+execution finished
+
+### STATIC
+[3;J[H[2J[15:27:1] Selected algorithm=kmeans
+Stopword size=817
+[15:27:1] Selected schema=vulns
+[15:27:1] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.StaticSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					1532/5000 ( 0.3064)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished
+
+### EQUAL
+[3;J[H[2J[15:28:37] Selected algorithm=kmeans
+Stopword size=817
+[15:28:37] Selected schema=vulns
+[15:28:37] Weka: 1714 lines written in weka/912017_solo_vulnerabilities.arff
+Cluster size = 150
+Re-clustered= 104 New cluster=109
+Vulnerabilities added = 5
+all exists ? true
+Set type:		lazarus.algorithm.set.EqualSet
+Learning period:	2010-1-1 to 2016-12-30
+Running period:		2016-12-30 to 2017-7-31
+Finished write in gnuplot/score/score.plot 
+Vulnerabilities between 2016-12-30 and 2017-8-15:	55
+Vulnerable runs:					2229/5000 ( 0.4458)
+TTC (AVG):						0.0
+TTC (STD):						0.0
+execution finished

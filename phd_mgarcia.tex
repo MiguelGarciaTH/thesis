@@ -1,0 +1,445 @@
+%
+% Modelo para Capa final de tese de doutoramento
+% do MEI.
+%
+% Incorpora elementos impostos pelo Regulamento de Estudos Pos-Graduados da
+% Universidade de Lisboa (DR: 31/08/2017)
+%
+\documentclass[
+ paper=A4,               % paper size --> A4 is default in Germany
+    twoside=true,           % onesite or twoside printing
+    openright,              % doublepage cleaning ends up right side
+    parskip=full,           % spacing value / method for paragraphs
+    chapterprefix=true,     % prefix for chapter marks
+    11pt,                   % font size
+    headings=normal,        % size of headings
+    bibliography=totoc,     % include bib in toc
+    listof=totoc,           % include listof entries in toc
+    titlepage=on,           % own page for each title page
+    captions=tableabove,    % display table captions above the float env
+    draft=false,            % value for draft version
+]{scrreprt}
+
+%\DeclareOldFontCommand{\bf}{\normalfont\bfseries}
+\usepackage{newstyle}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,url,array}
+
+% Quem tiver problemas com os acentos, trocar utf8 por latin1
+\usepackage[portuguese,english]{babel}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{setspace}
+\usepackage[show]{chato-notes}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage[vlined,ruled,commentsnumbered,linesnumbered]{algorithm2e} 
+
+
+% Indice remissivo
+\usepackage{makeidx}
+\makeindex
+
+% Glossario
+%\usepackage{glossaries}
+%\makeglossary
+
+
+% Links
+\usepackage{hyperref}
+
+% Package para cabecalhos
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+%\usepackage[subfigure]{tocloft}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[]
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,fill,inner sep=1pt] (char) {\textcolor{white}{#1}};}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    keywordstyle={[2]\color{magenta}},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    comment=[l]{\%},
+    keywords={@relation,@attribute,@data,modifyvm, do, Vagrant, configure, id},
+    morekeywords=[2]{real,integer,numeric,string,date,provider,customize,gui,v,provision, config,vm,box,ssh,insert_key,network},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=1
+}
+
+\lstset{style=mystyle}
+
+\usepackage{xcolor}
+
+
+\newtheorem*{validity}{Validity}{}
+\newtheorem*{liveness}{Liveness}{}
+\newtheorem*{security}{Compliance}{}
+\newtheorem*{resilience}{Resilience}{}
+\newtheorem{definition}{Definition}[]
+\newtheorem{assumption}{Assumption}[]
+
+\newcommand{\sender}{\emph{sender-SQ}\xspace}
+\newcommand{\Sender}{\emph{Sender-SQ}\xspace}
+\newcommand{\senders}{\emph{sender-SQs}\xspace}
+\newcommand{\Senders}{\emph{Sender-SQs}\xspace}
+\newcommand{\presieve}{\emph{pre-SQ}\xspace}
+\newcommand{\Presieve}{\emph{Pre-SQ}\xspace}
+\newcommand{\Presieves}{\emph{Pre-SQs}\xspace}
+\newcommand{\presieves}{\emph{pre-SQs}\xspace}
+\newcommand{\repsieve}{\emph{replica-SQ}\xspace}
+\newcommand{\Repsieve}{\emph{Replica-SQ}\xspace}
+\newcommand{\repsieves}{\emph{replica-SQs}\xspace}
+\newcommand{\Repsieves}{\emph{Replica-SQs}\xspace}
+\newcommand{\postsieve}{\emph{post-SQ}\xspace}
+\newcommand{\Postsieve}{\emph{Post-SQ}\xspace}
+
+\newcommand{\msg}{\texttt{Msg}\xspace}
+\newcommand{\sn}{\emph{sn}\xspace}
+\newcommand{\signature}{\emph{sgn}\xspace}
+\newcommand{\mac}{\emph{mac}\xspace}
+\newcommand{\senderi}{\emph{S}\xspace}
+\newcommand{\sendersqi}{\emph{SQ}\xspace}
+\newcommand{\presievei}{\emph{PS}\xspace}
+\newcommand{\replicak}{\emph{RS}\xspace}
+\newcommand{\postsievej}{\emph{PQ}\xspace}
+\newcommand{\receiverj}{\emph{R}\xspace}
+\newcommand{\privkey}{\emph{prk}\xspace}
+\newcommand{\pubkey}{\emph{puk}\xspace}
+\newcommand{\sharedkey}{\emph{shk}\xspace}
+
+
+\newcommand{\system}{\textsc{Lazarus}\xspace}
+\newcommand{\sieveq}{\textsc{SieveQ}\xspace}
+\newcommand{\controller}{\textsc{Baton}\xspace}
+\newcommand{\fetcher}{\emph{Data manager}\xspace}
+\newcommand{\manager}{\emph{Deploy manager}\xspace}
+\newcommand{\risk}{\emph{Risk manager}\xspace}
+
+\newcommand{\block}{\emph{Diversity block}\xspace}
+\newcommand{\blocks}{\emph{Diversity blocks}\xspace}
+\newcommand{\replica}{\emph{replica}\xspace}
+\newcommand{\replicas}{\emph{replicas}\xspace}
+\newcommand{\configuration}{\emph{System configuration}\xspace}
+\newcommand{\configurations}{\emph{System configurations}\xspace}
+\newcommand{\configurationClean}{System configuration}
+
+
+\newcommand{\systemformula}{risk\xspace}
+\newcommand{\pairformula}{common\xspace}
+\newcommand{\vulnerabilityformula}{score\xspace}
+
+
+\SetKwData{RS}{\texttt{POOL}}
+\SetKwData{ES}{\texttt{CONFIG}}
+\SetKwData{PS}{\texttt{CANDIDATES}}
+\SetKwData{RM}{\texttt{REMOVABLES}}
+\SetKwData{QS}{\texttt{QUARANTINE}}
+\SetKwData{MAX}{\texttt{MAXIMALS}}
+\SetKwData{N}{\texttt{N}}
+\SetKwData{r}{\texttt{r}}
+\SetKwData{K}{\texttt{K}}
+\SetKwData{toRemove}{\texttt{toRemove}}
+\SetKwFunction{Rand}{rand}
+\SetKwFunction{Size}{size}
+\SetKwFunction{Remove}{rm}
+\SetKwFunction{Risk}{risk}
+\SetKwFunction{Common}{common}
+\SetKwFunction{Older}{older}
+\SetKwFunction{healing}{init\_healing}
+\SetKwFunction{Inc}{increment}
+\SetKwFunction{Dec}{decrement}
+\SetKwProg{Fn}{Function}{}{}
+
+\fancyhf{} %
+\lhead{\nouppercase {\leftmark}} %
+\rhead{\nouppercase {\bf \thepage}}
+\renewcommand{\headrulewidth}{0.1pt}
+
+% Comando para inserir pagina em branco (inserida na numeracao, mas sem
+% numero impresso) para quando e' preciso obrigar um capitulo a comecar
+% do lado direito (pagina impar)
+\newcommand{\LIMPA}{
+\newpage
+\mbox{}
+\thispagestyle{empty}
+}
+
+% Igual, mas insere pagina com numero impresso (normalmente nao se usa)
+\newcommand{\LIMPAC}{
+\newpage
+\mbox{}
+\thispagestyle{plain}
+}
+
+%
+% ALTERAR AQUI AS INFORMACOES RELATIVAS AO PROJECTO
+%
+\newcommand{\TITULO}{DIVERSE INTRUSION-TOLERANT SYSTEMS}
+\newcommand{\Autor}{Miguel Garcia Tavares Henriques}
+\newcommand{\AutorNumAluno}{35054}
+
+%Orientador e CoOrientador *sem* titulos (e.g. Prof. Doutor)
+\newcommand{\Orientador}{Alysson Neves Bessani}
+\newcommand{\CoOrientador}{Nuno Fuentecilla Maia Ferreira Neves} %se nao se aplicar, nao importa o que aqui esteja
+
+%Se aplicavel, o supervisor pode ter um titulo (Dr., Eng.) colocado aqui
+\newcommand{\SupervisorInstituicao}{Nome Completo do Supervisor}  %se nao se aplicar, nao importa o que aqui esteja
+
+\newcommand{\AnoLectivo}{2017/2018}
+\newcommand{\Ano}{\Large{2018}}
+
+% Comentar/descomentar conforme conveniente
+\newcommand{\TIPO}{DISSERTA\c{C}\~{A}O }
+%\newcommand{\TIPO}{TRABALHO DE PROJETO }
+
+% Comentar/descomentar conforme conveniente
+%\newcommand{\MESTRADO}{MESTRADO EM -- PREENCHER --}
+\newcommand{\DOUTORAMENTO}{Doutoramento em Inform\'{a}tica}
+
+% Comentar/descomentar conforme conveniente
+%\newcommand{\IdiomaTese}{\selectlanguage{portuguese}}
+\newcommand{\IdiomaTese}{\selectlanguage{english}}
+
+% Comentar/descomentar conforme conveniente
+\newcommand{\Especialidade}{}
+
+\newcommand{\Cabecalho}{
+\vspace{1cm}\normalfont\normalfont
+\vfill
+\textsc{\normalsize\uppercase{Universidade de Lisboa}}\\
+\normalsize\uppercase{Faculdade de Ci\^{e}ncias}\\
+\vspace{1cm}
+\includegraphics[scale=.45]{pic/logo_fcul_vertical.png}\\
+}
+
+\usepackage{ifpdf}
+\ifpdf
+\pdfinfo {
+	/Author (\Autor)
+	/Title (\TITULO)
+	/Subject (\DOUTORAMENTO)
+	/Keywords ()
+	/CreationDate (D:20081112151803)
+}
+\fi
+
+%\usepackage[dvips]{geometry}
+%\geometry{a4paper=true,portrait=true,left=3cm,right=3cm,top=2.5cm,bottom=3.5cm}
+
+\title{\TITULO}
+\author{\Autor}
+%\date{\today}
+
+\usepackage{glossaries}
+\makeglossaries
+
+\begin{document}
+\selectlanguage{english}
+\pagestyle{empty}
+
+% Primeira capa
+% 
+%
+\begin{center}
+
+\Cabecalho
+
+\vspace{2.0cm}
+\vfill
+\IdiomaTese
+\Large{\bf \TITULO}\\
+\vspace{2cm}
+\vfill
+
+\large{\bf{\DOUTORAMENTO}}\\
+%\normalsize{\Especialidade}\\
+\vspace{2.0cm}
+\vfill
+\Large{\bf \Autor}\\
+\vspace{1,8 cm}
+\vfill
+\large{Tese orientada por:}\\
+%\normalsize{Trabalho de projeto orientado por:}\\
+\large{Prof. Doutor \Orientador} \\
+% DESCOMENTAR a linha relevante (se alguma), removendo o % no inicio
+e co-orientada pelo Prof. Doutor \CoOrientador \\
+\vspace{1 cm}
+\vfill
+
+\normalsize{Documento especialmente elaborado para a obten\c{c}\~{a}o do grau de doutor}
+\vspace{0.5cm}
+\vfill
+\Ano
+\end{center}
+\newpage
+\mbox{}
+\newpage
+
+%
+% Segunda capa
+%
+
+\begin{center}
+
+\Cabecalho
+
+\vspace{0.5cm}
+\vfill
+\IdiomaTese
+\Large{\bf \TITULO}\\
+\selectlanguage{portuguese}
+\vspace{1cm}
+\vfill
+
+\large{\bf{\DOUTORAMENTO}}\\
+%\normalsize{\Especialidade }\\
+\vspace{1cm}
+\vfill
+\Large{\bf \Autor}\\
+\vspace{.5 cm}
+\vfill
+\large{Tese orientada por:}\\
+%\normalsize{Trabalho de projeto orientado por:}\\
+\large{Prof. Doutor \Orientador} \\
+% DESCOMENTAR a linha relevante (se alguma), removendo o % no inicio
+e pelo Prof. Doutor \CoOrientador \\
+\vspace{.5 cm}
+\vfill
+
+\begin{flushleft}  
+\large{J\'{u}ri}
+\vfill
+\setlength{\leftskip}{0.5cm}
+\normalsize{Presidente:}
+\begin{itemize}
+\setlength\itemsep{-0.5 em}
+\item{Nome do Presidente}
+\end{itemize}
+\normalsize{Vogais:}
+\begin{itemize}
+\setlength\itemsep{-0.5 em}
+\item{Nome do Vogal}
+\item{Nome do Vogal}
+\item{Nome do Vogal}
+\item{Nome do Vogal}
+\end{itemize}
+\setlength{\leftskip}{0cm}
+\end{flushleft}
+\vspace{0.0cm}
+\vfill
+
+\normalsize{Documento especialmente elaborado para a obten\c{c}\~{a}o do grau de doutor\par}
+\vspace{0.0cm}
+\normalsize{Este trabalho foi financiado pela Funda\c{c}\~{a}o para a Ci\^{e}ncia e Tecnologia (FCT) atrav\'{e}s da Bolsa Individual de Doutormento SFRH/BD/84375/2012 e atrav\'{e}s dos projectos da Comiss\~{a}o Europeia FP7-257475 (MASSIF) e H2020-700692 (DiSIEM).}
+\vspace{0.cm}
+\vfill
+\Ano
+\end{center}
+\newpage
+\mbox{}
+\newpage
+% Fim da capa
+% ----------------------------------------------------------------------
+
+% This work was supported by Fundação para a Ciência e a Tecnologia (FCT), through Multiannual
+%Funding to the LaSIGE research unit and the Individual Doctoral Grant SFRH/BD/84375/2012.
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\addcontentsline {toc} {chapter} {Acks}
+\include{chapters/acks/agradecimentos}
+
+\addcontentsline {toc} {chapter} {Abstract (PT)}
+% Pagina do resumo em portugues
+\include{chapters/abstract/resumo_pt}
+
+\addcontentsline {toc} {chapter} {Abstract (EN)}
+% Pagina do resumo em ingles
+\include{chapters/abstract/resumo_ing}
+
+
+
+\tableofcontents
+
+\LIMPA
+
+%Lista de figuras
+\listoffigures
+
+\addcontentsline {toc} {chapter} {List of Figures}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%Lista de tabelas
+\listoftables
+
+\addcontentsline {toc} {chapter} {List of Tables}
+\newpage
+\thispagestyle{empty} \mbox{}
+\newpage
+
+% ----------------------------------------------------------------------
+% Inicio conteudo
+\pagestyle{fancy}
+\cleardoublepage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\include{chapters/introduction/introduction}
+\include{chapters/relatedwork/relatedwork}
+\include{chapters/overview/overview}
+\include{chapters/sieveq/sieveq}
+\include{chapters/lazarus/theoretical_lazarus}
+\include{chapters/lazarus/practical_lazarus}
+\include{chapters/controller/controller}
+%\include{chapters/evaluation/sieveqevaluation}
+%\include{chapters/evaluation/lazarusevaluation}
+\include{chapters/conclusion/conclusion}
+
+
+% Fim do conteudo
+% ----------------------------------------------------------------------
+
+% Glossario
+
+%
+% Para actualizar o glossario, e' preciso correr o script ./fazindice
+% e voltar a gerar o PDF
+%
+\LIMPA
+\renewcommand{\glossaryname}{Acronyms}
+\include{acronimos}
+\printglossaries
+\addcontentsline {toc} {chapter} {Acronyms}
+% Bibliografia
+
+\LIMPA
+\bibliographystyle{abbrv}
+\bibliography{chapters/references/references}
+\addcontentsline {toc} {chapter} {Bibliography}
+
+\end{document}

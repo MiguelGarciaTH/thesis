@@ -1,0 +1,81 @@
+\BOOKMARK [0][-]{Doc-Start}{Acks}{}% 1
+\BOOKMARK [0][-]{section*.2}{Abstract \(PT\)}{}% 2
+\BOOKMARK [0][-]{section*.4}{Abstract \(EN\)}{}% 3
+\BOOKMARK [0][-]{section*.6}{List of Figures}{}% 4
+\BOOKMARK [0][-]{section*.6}{List of Tables}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
+\BOOKMARK [1][-]{section*.8}{Motivation}{chapter.1}% 7
+\BOOKMARK [1][-]{section*.9}{Background}{chapter.1}% 8
+\BOOKMARK [1][-]{section*.14}{Problem Statement}{chapter.1}% 9
+\BOOKMARK [1][-]{section*.15}{Identified Problems}{chapter.1}% 10
+\BOOKMARK [1][-]{section*.16}{Summary of the Contributions}{chapter.1}% 11
+\BOOKMARK [1][-]{section*.18}{Document Structure}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 13
+\BOOKMARK [1][-]{section*.20}{Byzantine Fault Tolerance}{chapter.2}% 14
+\BOOKMARK [1][-]{section*.22}{Rejuvenations}{chapter.2}% 15
+\BOOKMARK [1][-]{section*.23}{Diversity}{chapter.2}% 16
+\BOOKMARK [1][-]{section*.24}{Intrusion-tolerant Firewalls}{chapter.2}% 17
+\BOOKMARK [1][-]{section*.25}{Security Metrics}{chapter.2}% 18
+\BOOKMARK [1][-]{section*.26}{Systems Management}{chapter.2}% 19
+\BOOKMARK [1][-]{section*.27}{Moving Target Defenses}{chapter.2}% 20
+\BOOKMARK [0][-]{chapter.3}{Overview and Preliminaries}{}% 21
+\BOOKMARK [1][-]{section*.29}{Overview}{chapter.3}% 22
+\BOOKMARK [1][-]{section*.31}{System Model}{chapter.3}% 23
+\BOOKMARK [1][-]{section*.32}{Execution Plane}{chapter.3}% 24
+\BOOKMARK [1][-]{section*.33}{Control Plane}{chapter.3}% 25
+\BOOKMARK [2][-]{section*.34}{BFT-Control Plane}{section*.33}% 26
+\BOOKMARK [1][-]{section*.35}{Diversity of Replicas}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Traffic Dissemination}{}% 28
+\BOOKMARK [1][-]{section*.37}{Introduction}{chapter.4}% 29
+\BOOKMARK [1][-]{section*.38}{Intrusion-Tolerant Firewalls}{chapter.4}% 30
+\BOOKMARK [2][-]{section*.41}{SieveQ Architecture}{section*.38}% 31
+\BOOKMARK [2][-]{section*.43}{System and Threat Model}{section*.38}% 32
+\BOOKMARK [2][-]{section*.44}{Resilience Mechanisms}{section*.38}% 33
+\BOOKMARK [1][-]{section*.45}{SieveQ Protocol}{chapter.4}% 34
+\BOOKMARK [2][-]{section*.46}{Properties}{section*.45}% 35
+\BOOKMARK [2][-]{section*.47}{Message Transmission}{section*.45}% 36
+\BOOKMARK [2][-]{section*.50}{Addressing Component Failures}{section*.45}% 37
+\BOOKMARK [1][-]{section*.51}{Implementation}{chapter.4}% 38
+\BOOKMARK [1][-]{section*.52}{Evaluation}{chapter.4}% 39
+\BOOKMARK [2][-]{section*.53}{Testbed Setup}{section*.52}% 40
+\BOOKMARK [2][-]{section*.55}{Methodology}{section*.52}% 41
+\BOOKMARK [2][-]{section*.56}{Performance in failure-free executions}{section*.52}% 42
+\BOOKMARK [2][-]{section*.59}{Effect of Filtering Rules Complexity}{section*.52}% 43
+\BOOKMARK [2][-]{section*.61}{SieveQ Under Attack}{section*.52}% 44
+\BOOKMARK [2][-]{section*.66}{Use Case: SieveQ to Protect a SIEM System}{section*.52}% 45
+\BOOKMARK [1][-]{section*.69}{Discussion}{chapter.4}% 46
+\BOOKMARK [1][-]{section*.70}{Final Remarks}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Finding evidence for supporting and manage diversity}{}% 48
+\BOOKMARK [1][-]{section*.72}{Introduction}{chapter.5}% 49
+\BOOKMARK [1][-]{section*.73}{Diversity-aware Reconfigurations}{chapter.5}% 50
+\BOOKMARK [2][-]{section*.74}{Finding Common Vulnerabilities}{section*.73}% 51
+\BOOKMARK [2][-]{section*.76}{Measuring risk}{section*.73}% 52
+\BOOKMARK [2][-]{section*.78}{Selecting Configurations}{section*.73}% 53
+\BOOKMARK [1][-]{section*.80}{Lazarus Implementation}{chapter.5}% 54
+\BOOKMARK [2][-]{section*.81}{Control Plane}{section*.80}% 55
+\BOOKMARK [2][-]{section*.83}{Additional Details}{section*.80}% 56
+\BOOKMARK [2][-]{section*.84}{Clustering}{section*.80}% 57
+\BOOKMARK [1][-]{section*.85}{Evaluation of Replica Set Risk}{chapter.5}% 58
+\BOOKMARK [2][-]{section*.86}{Diversity vs Vulnerabilities}{section*.85}% 59
+\BOOKMARK [2][-]{section*.88}{Risk evaluation}{section*.85}% 60
+\BOOKMARK [2][-]{section*.90}{Diversity vs Attacks}{section*.85}% 61
+\BOOKMARK [1][-]{section*.93}{Final Remarks}{chapter.5}% 62
+\BOOKMARK [0][-]{chapter.6}{Supporting Diversity Mechanisms}{}% 63
+\BOOKMARK [1][-]{section*.95}{Lazarus Implementation}{chapter.6}% 64
+\BOOKMARK [2][-]{section*.96}{Control Plane}{section*.95}% 65
+\BOOKMARK [2][-]{section*.98}{Additional Details}{section*.95}% 66
+\BOOKMARK [2][-]{section*.99}{Clustering}{section*.95}% 67
+\BOOKMARK [1][-]{section*.100}{Performance Evaluation}{chapter.6}% 68
+\BOOKMARK [2][-]{section*.102}{Homogeneous Replicas Throughput}{section*.100}% 69
+\BOOKMARK [2][-]{section*.104}{Diverse Replicas Throughput}{section*.100}% 70
+\BOOKMARK [2][-]{section*.106}{Performance During Reconfiguration}{section*.100}% 71
+\BOOKMARK [2][-]{section*.108}{Booting time}{section*.100}% 72
+\BOOKMARK [2][-]{section*.110}{Application Benchmarks}{section*.100}% 73
+\BOOKMARK [1][-]{section*.112}{Final Remarks}{chapter.6}% 74
+\BOOKMARK [0][-]{chapter.7}{Untrusted \(distributed\) controller}{}% 75
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 76
+\BOOKMARK [1][-]{section*.115}{Final Remarks}{chapter.8}% 77
+\BOOKMARK [1][-]{section*.116}{Future work}{chapter.8}% 78
+\BOOKMARK [0][-]{section*.119}{Acronyms}{}% 79
+\BOOKMARK [0][-]{chapter*.120}{Bibliography}{}% 80
+\BOOKMARK [0][-]{section*.121}{Bibliography}{}% 81

@@ -1,0 +1,26 @@
+** Risk assessment vs. risk analysis vs. risk management
+
+- A risk analysis involves identifying the most probable threats to an organization and analyzing the related vulnerabilities of the organization to these threats.
+- A risk assessment involves evaluating existing security and controls and assessing their adequacy relative to the potential threats of the organization.
+- Risk management is the systematic application of management policies, procedures and practices to the tasks of establishing the context, identifying, analyzing, evaluating, treating, monitoring and communicating risk.
+
+http://searchsecurity.techtarget.com/answer/Risk-assessment-vs-risk-analysis-vs-risk-management
+
+
+**  Risk in Security
+Security risk management involves protection of assets from harm caused by deliberate acts. A more detailed definition is: "A security risk is any event that could result in the compromise of organizational assets i.e. the unauthorized use, loss, damage, disclosure or modification of organizational assets for the profit, personal interest or political interests of individuals, groups or other entities constitutes a compromise of the asset, and includes the risk of harm to people. Compromise of organizational assets may adversely affect the enterprise, its business units and their clients. As such, consideration of security risk is a vital component of risk management."[31]
+
+https://en.wikipedia.org/wiki/Risk#Security
+[31] Julian Talbot and Miles Jakeman Security Risk Management Body of Knowledge, John Wiley & Sons, 2009.
+
+
+** Risk in Cybersecurity[41]
+Closely related to information assurance and security risk, cybersecurity is the application of system security engineering[42] in order to address the compromise of company cyber-assets required for business or mission purposes. In order to address cyber-risk, cybersecurity applies security to the supply chain, the design and production environment for a product or service, and the product itself in order to provide efficient and appropriate security commensurate with the value of the asset to the mission or business process.
+
+[41] noun. The state of being protected against the criminal or unauthorized use of electronic data, or the measures taken to achieve this. 'But despite the number of agencies involved, cybersecurity generally seems to have slipped in importance for the administration
+[42] https://csrc.nist.gov/News/2016/NIST-Releases-SP-800-160-Sys-Security-Engineering
+
+
+** Risk Management Process
+“The purpose of the Risk Management process is to identify, analyze, treat and monitor the risks continually.”
+ISO/IEC/IEEE 15288-2015. Reprinted with permission from IEEE, Copyright IEEE 2015, All rights reserved.

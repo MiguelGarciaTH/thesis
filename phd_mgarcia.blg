@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: phd_mgarcia.aux
+A level-1 auxiliary file: chapters/acks/agradecimentos.aux
+A level-1 auxiliary file: chapters/abstract/resumo_pt.aux
+A level-1 auxiliary file: chapters/abstract/resumo_ing.aux
+A level-1 auxiliary file: chapters/introduction/introduction.aux
+A level-1 auxiliary file: chapters/relatedwork/relatedwork.aux
+A level-1 auxiliary file: chapters/overview/overview.aux
+A level-1 auxiliary file: chapters/sieveq/sieveq.aux
+A level-1 auxiliary file: chapters/lazarus/theoretical_lazarus.aux
+A level-1 auxiliary file: chapters/lazarus/practical_lazarus.aux
+A level-1 auxiliary file: chapters/controller/controller.aux
+A level-1 auxiliary file: chapters/conclusion/conclusion.aux
+A level-1 auxiliary file: acronimos.aux
+The style file: abbrv.bst
+Database file #1: chapters/references/references.bib
+I was expecting a `,' or a `}'---line 335 of file chapters/references/references.bib
+ :  
+ :  year = {2006}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 744 of file chapters/references/references.bib
+ : @inproceedings{Snow:2013
+ :                         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 997 of file chapters/references/references.bib
+ :  
+ :  title={{Assessing the Effectiveness of Moving Target Defenses Using Security Models}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--string name "poster" is undefined
+--line 1043 of file chapters/references/references.bib
+I was expecting a `,' or a `}'---line 1043 of file chapters/references/references.bib
+ :  booktitle= eurosys # poster 
+ :                              session,
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 1261 of file chapters/references/references.bib
+ :  howpublished = "{\http://www.netfilter.org/}
+ :                                              }"
+I'm skipping whatever remains of this entry
+Warning--entry type for "Chauhan:2011" isn't style-file defined
+--line 1345 of file chapters/references/references.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Deswarte:1999"
+Warning--I didn't find a database entry for "Bessani2014"
+Warning--to sort, need author or key in juniper
+Warning--to sort, need author or key in paloalto
+Warning--to sort, need author or key in sonicwall
+Warning--empty booktitle in Bhatkar:2003
+Warning--empty year in Bhatkar:2003
+Warning--can't use both volume and number fields in Fraga:1985
+Warning--empty booktitle in Frei:2006
+Warning--empty year in Frei:2006
+Warning--empty title in Garcia:2016b
+Warning--empty year in Garcia:2016b
+Warning--empty title in Hong:2015
+Warning--empty year in Hong:2015
+Warning--empty publisher in Nist:2012
+Warning--empty year in Obelheiro:2006
+Warning--empty chapter and pages in Verissimo:2003
+Warning--empty booktitle in Vianello:2013
+Warning--empty booktitle in Vigna:2003
+Warning--empty year in Vigna:2003
+Warning--empty journal in Walfish:2010
+Warning--empty year in Zhao:2010
+You've used 138 entries,
+            2118 wiz_defined-function locations,
+            1273 strings with 28355 characters,
+and the built_in function-call counts, 45353 in all, are:
+= -- 4045
+> -- 2624
+< -- 19
++ -- 1041
+- -- 899
+* -- 3050
+:= -- 7568
+add.period$ -- 424
+call.type$ -- 138
+change.case$ -- 856
+chr.to.int$ -- 0
+cite$ -- 158
+duplicate$ -- 1719
+empty$ -- 3679
+format.name$ -- 899
+if$ -- 9493
+int.to.chr$ -- 0
+int.to.str$ -- 138
+missing$ -- 111
+newline$ -- 700
+num.names$ -- 272
+pop$ -- 1228
+preamble$ -- 1
+purify$ -- 723
+quote$ -- 0
+skip$ -- 1139
+stack$ -- 0
+substring$ -- 1598
+swap$ -- 329
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 542
+warning$ -- 20
+while$ -- 342
+width$ -- 141
+write$ -- 1438
+(There were 5 error messages)

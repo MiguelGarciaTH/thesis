@@ -1,0 +1,123 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {portuguese}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{Acks}{i}{Doc-Start}
+\select@language {portuguese}
+\contentsline {chapter}{Abstract (PT)}{vi}{section*.2}
+\select@language {english}
+\contentsline {chapter}{Abstract (EN)}{ix}{section*.4}
+\contentsline {chapter}{List of Figures}{xv}{section*.6}
+\contentsline {chapter}{List of Tables}{xvii}{section*.6}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section*.8}
+\contentsline {section}{\numberline {1.2}Background}{2}{section*.9}
+\contentsline {section}{\numberline {1.3}Problem Statement}{5}{section*.14}
+\contentsline {section}{\numberline {1.4}Identified Problems}{5}{section*.15}
+\contentsline {section}{\numberline {1.5}Summary of the Contributions}{7}{section*.16}
+\contentsline {section}{\numberline {1.6}Document Structure}{9}{section*.18}
+\contentsline {chapter}{\numberline {2}Literature Review}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Byzantine Fault Tolerance}{11}{section*.20}
+\contentsline {paragraph}{Summary.}{11}{table.caption.21}
+\contentsline {section}{\numberline {2.2}Rejuvenations}{12}{section*.22}
+\contentsline {paragraph}{Summary.}{13}{section*.22}
+\contentsline {section}{\numberline {2.3}Diversity}{13}{section*.23}
+\contentsline {paragraph}{N-version programming}{14}{section*.23}
+\contentsline {paragraph}{Artificial diversity.}{14}{section*.23}
+\contentsline {paragraph}{Off-the-shelf diversity.}{14}{section*.23}
+\contentsline {paragraph}{Summary.}{16}{section*.23}
+\contentsline {section}{\numberline {2.4}Intrusion-tolerant Firewalls}{16}{section*.24}
+\contentsline {paragraph}{Summary}{17}{section*.24}
+\contentsline {section}{\numberline {2.5}Security Metrics}{17}{section*.25}
+\contentsline {paragraph}{Summary.}{19}{section*.25}
+\contentsline {section}{\numberline {2.6}Systems Management}{19}{section*.26}
+\contentsline {paragraph}{Summary.}{20}{section*.26}
+\contentsline {section}{\numberline {2.7}Moving Target Defenses}{21}{section*.27}
+\contentsline {chapter}{\numberline {3}Overview and Preliminaries}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{23}{section*.29}
+\contentsline {section}{\numberline {3.2}System Model}{23}{section*.31}
+\contentsline {section}{\numberline {3.3}Execution Plane}{24}{section*.32}
+\contentsline {section}{\numberline {3.4}Control Plane}{26}{section*.33}
+\contentsline {subsection}{\numberline {3.4.1}BFT-Control Plane}{26}{section*.34}
+\contentsline {section}{\numberline {3.5}Diversity of Replicas}{26}{section*.35}
+\contentsline {chapter}{\numberline {4}Traffic Dissemination}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{29}{section*.37}
+\contentsline {section}{\numberline {4.2}Intrusion-Tolerant Firewalls}{30}{section*.38}
+\contentsline {subsection}{\numberline {4.2.1}\textsc {SieveQ}\xspace Architecture}{32}{section*.41}
+\contentsline {subsection}{\numberline {4.2.2}System and Threat Model}{34}{section*.43}
+\contentsline {subsection}{\numberline {4.2.3}Resilience Mechanisms}{35}{section*.44}
+\contentsline {section}{\numberline {4.3}\textsc {SieveQ}\xspace Protocol}{36}{section*.45}
+\contentsline {subsection}{\numberline {4.3.1}Properties}{36}{section*.46}
+\contentsline {subsection}{\numberline {4.3.2}Message Transmission}{37}{section*.47}
+\contentsline {subsubsection}{\emph {Sender-SQ}\xspace processing}{37}{section*.47}
+\contentsline {subsubsection}{\emph {Pre-SQ}\xspace filtering}{38}{figure.caption.48}
+\contentsline {subsubsection}{\emph {Replica-SQ}\xspace filtering}{39}{figure.caption.48}
+\contentsline {subsubsection}{\emph {Post-SQ}\xspace processing}{40}{equation.4.3.2}
+\contentsline {subsubsection}{Correctness Argument}{41}{AlgoLine.1.13}
+\contentsline {subsection}{\numberline {4.3.3}Addressing Component Failures}{42}{section*.50}
+\contentsline {subsubsection}{Faulty \emph {Sender-SQ}\xspace }{43}{section*.50}
+\contentsline {subsubsection}{Faulty \emph {Pre-SQ}\xspace }{44}{section*.50}
+\contentsline {subsubsection}{Faulty \emph {Replica-SQ}\xspace }{46}{Item.11}
+\contentsline {section}{\numberline {4.4}Implementation}{47}{section*.51}
+\contentsline {section}{\numberline {4.5}Evaluation}{48}{section*.52}
+\contentsline {subsection}{\numberline {4.5.1}Testbed Setup}{48}{section*.53}
+\contentsline {subsection}{\numberline {4.5.2}Methodology}{49}{section*.55}
+\contentsline {subsection}{\numberline {4.5.3}Performance in failure-free executions}{50}{section*.56}
+\contentsline {subsection}{\numberline {4.5.4}Effect of Filtering Rules Complexity}{51}{section*.59}
+\contentsline {subsection}{\numberline {4.5.5}\textsc {SieveQ}\xspace Under Attack}{52}{section*.61}
+\contentsline {subsection}{\numberline {4.5.6}Use Case: \textsc {SieveQ}\xspace to Protect a SIEM System}{54}{section*.66}
+\contentsline {section}{\numberline {4.6}Discussion}{56}{section*.69}
+\contentsline {section}{\numberline {4.7}Final Remarks}{57}{section*.70}
+\contentsline {chapter}{\numberline {5}Finding evidence for supporting and manage diversity}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{59}{section*.72}
+\contentsline {section}{\numberline {5.2}Diversity-aware Reconfigurations}{61}{section*.73}
+\contentsline {subsection}{\numberline {5.2.1}Finding Common Vulnerabilities}{61}{section*.74}
+\contentsline {subsection}{\numberline {5.2.2}Measuring risk}{62}{section*.76}
+\contentsline {subsection}{\numberline {5.2.3}Selecting Configurations}{64}{section*.78}
+\contentsline {section}{\numberline {5.3}\textsc {Lazarus}\xspace Implementation}{65}{section*.80}
+\contentsline {subsection}{\numberline {5.3.1}Control Plane}{65}{section*.81}
+\contentsline {paragraph}{Setup.}{67}{figure.caption.82}
+\contentsline {paragraph}{Download.}{67}{lstnumber.5.1.17}
+\contentsline {paragraph}{Deploy and provision.}{67}{lstnumber.5.1.17}
+\contentsline {paragraph}{Command and Control.}{68}{lstnumber.5.1.17}
+\contentsline {subsection}{\numberline {5.3.2}Additional Details}{68}{section*.83}
+\contentsline {subsection}{\numberline {5.3.3}Clustering}{68}{section*.84}
+\contentsline {paragraph}{1) Data representation}{69}{section*.84}
+\contentsline {paragraph}{2) Data preparation}{69}{lstnumber.5.2.7}
+\contentsline {paragraph}{3) Making clusters}{70}{lstnumber.5.2.7}
+\contentsline {section}{\numberline {5.4}Evaluation of Replica Set Risk}{72}{section*.85}
+\contentsline {subsection}{\numberline {5.4.1}Diversity vs Vulnerabilities}{73}{section*.86}
+\contentsline {subsection}{\numberline {5.4.2}Risk evaluation}{73}{section*.88}
+\contentsline {subsection}{\numberline {5.4.3}Diversity vs Attacks}{74}{section*.90}
+\contentsline {section}{\numberline {5.5}Final Remarks}{75}{section*.93}
+\contentsline {chapter}{\numberline {6}Supporting Diversity Mechanisms}{77}{chapter.6}
+\contentsline {section}{\numberline {6.1}\textsc {Lazarus}\xspace Implementation}{77}{section*.95}
+\contentsline {subsection}{\numberline {6.1.1}Control Plane}{77}{section*.96}
+\contentsline {paragraph}{Setup.}{78}{figure.caption.97}
+\contentsline {paragraph}{Download.}{79}{lstnumber.6.1.17}
+\contentsline {paragraph}{Deploy and provision.}{79}{lstnumber.6.1.17}
+\contentsline {paragraph}{Command and Control.}{79}{lstnumber.6.1.17}
+\contentsline {subsection}{\numberline {6.1.2}Additional Details}{80}{section*.98}
+\contentsline {subsection}{\numberline {6.1.3}Clustering}{80}{section*.99}
+\contentsline {paragraph}{1) Data representation}{80}{section*.99}
+\contentsline {paragraph}{2) Data preparation}{81}{lstnumber.6.2.7}
+\contentsline {paragraph}{3) Making clusters}{82}{lstnumber.6.2.7}
+\contentsline {section}{\numberline {6.2}Performance Evaluation}{83}{section*.100}
+\contentsline {subsection}{\numberline {6.2.1}Homogeneous Replicas Throughput}{84}{section*.102}
+\contentsline {subsection}{\numberline {6.2.2}Diverse Replicas Throughput}{85}{section*.104}
+\contentsline {subsection}{\numberline {6.2.3}Performance During Reconfiguration}{86}{section*.106}
+\contentsline {subsection}{\numberline {6.2.4}Booting time}{87}{section*.108}
+\contentsline {subsection}{\numberline {6.2.5}Application Benchmarks}{88}{section*.110}
+\contentsline {section}{\numberline {6.3}Final Remarks}{89}{section*.112}
+\contentsline {chapter}{\numberline {7}Untrusted (distributed) controller}{91}{chapter.7}
+\contentsline {chapter}{\numberline {8}Conclusion}{93}{chapter.8}
+\contentsline {section}{\numberline {8.1}Final Remarks}{93}{section*.115}
+\contentsline {section}{\numberline {8.2}Future work}{93}{section*.116}
+\contentsline {chapter}{Acronyms}{99}{section*.119}
+\contentsline {chapter}{\nonumberline Bibliography}{101}{chapter*.120}
+\contentsline {chapter}{Bibliography}{113}{section*.121}

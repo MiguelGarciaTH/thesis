@@ -1,0 +1,1 @@
+makeindex -s phd_mgarcia.ist -t phd_mgarcia.alg -o phd_mgarcia.acr phd_mgarcia.acn

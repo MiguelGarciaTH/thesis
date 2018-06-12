@@ -1,0 +1,1560 @@
+\ifglsentryexists{aslr}{}%
+{%
+\gls@defglossaryentry{aslr}%
+{%
+name={ASLR},%
+sort={ASLR},%
+type={main},%
+first={Address Space Layout Randomization\glsspace (ASLR)},%
+firstplural={Address Space Layout Randomizations\glsspace (ASLRs)},%
+text={ASLR},%
+plural={ASLRs},%
+description={Address Space Layout Randomization},%
+descriptionplural={Address Space Layout Randomization\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Address Space Layout Randomization},%
+longplural={Address Space Layout Randomizations},%
+short={ASLR},%
+shortplural={ASLRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{arff}{}%
+{%
+\gls@defglossaryentry{arff}%
+{%
+name={ARFF},%
+sort={ARFF},%
+type={main},%
+first={Attribute-Relation File Format\glsspace (ARFF)},%
+firstplural={Attribute-Relation File Formats\glsspace (ARFFs)},%
+text={ARFF},%
+plural={ARFFs},%
+description={Attribute-Relation File Format},%
+descriptionplural={Attribute-Relation File Format\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Attribute-Relation File Format},%
+longplural={Attribute-Relation File Formats},%
+short={ARFF},%
+shortplural={ARFFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bft}{}%
+{%
+\gls@defglossaryentry{bft}%
+{%
+name={BFT},%
+sort={BFT},%
+type={main},%
+first={Byzantine fault-tolerant\glsspace (BFT)},%
+firstplural={Byzantine fault-tolerants\glsspace (BFTs)},%
+text={BFT},%
+plural={BFTs},%
+description={Byzantine fault-tolerant},%
+descriptionplural={Byzantine fault-tolerant\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Byzantine fault-tolerant},%
+longplural={Byzantine fault-tolerants},%
+short={BFT},%
+shortplural={BFTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bm}{}%
+{%
+\gls@defglossaryentry{bm}%
+{%
+name={BM},%
+sort={BM},%
+type={main},%
+first={Bare Metal\glsspace (BM)},%
+firstplural={Bare Metals\glsspace (BMs)},%
+text={BM},%
+plural={BMs},%
+description={Bare Metal},%
+descriptionplural={Bare Metal\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Bare Metal},%
+longplural={Bare Metals},%
+short={BM},%
+shortplural={BMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cve}{}%
+{%
+\gls@defglossaryentry{cve}%
+{%
+name={CVE},%
+sort={CVE},%
+type={main},%
+first={Common Vulnerabilities and Exposures\glsspace (CVE)},%
+firstplural={Common Vulnerabilities and Exposuress\glsspace (CVEs)},%
+text={CVE},%
+plural={CVEs},%
+description={Common Vulnerabilities and Exposures},%
+descriptionplural={Common Vulnerabilities and Exposures\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerabilities and Exposures},%
+longplural={Common Vulnerabilities and Exposuress},%
+short={CVE},%
+shortplural={CVEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cpe}{}%
+{%
+\gls@defglossaryentry{cpe}%
+{%
+name={CPE},%
+sort={CPE},%
+type={main},%
+first={Common Platform Enumeration\glsspace (CPE)},%
+firstplural={Common Platform Enumerations\glsspace (CPEs)},%
+text={CPE},%
+plural={CPEs},%
+description={Common Platform Enumeration},%
+descriptionplural={Common Platform Enumeration\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Platform Enumeration},%
+longplural={Common Platform Enumerations},%
+short={CPE},%
+shortplural={CPEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cvss}{}%
+{%
+\gls@defglossaryentry{cvss}%
+{%
+name={CVSS},%
+sort={CVSS},%
+type={main},%
+first={Common Vulnerability Scoring System\glsspace (CVSS)},%
+firstplural={Common Vulnerability Scoring Systems\glsspace (CVSSs)},%
+text={CVSS},%
+plural={CVSSs},%
+description={Common Vulnerability Scoring System},%
+descriptionplural={Common Vulnerability Scoring System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerability Scoring System},%
+longplural={Common Vulnerability Scoring Systems},%
+short={CVSS},%
+shortplural={CVSSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{xss}{}%
+{%
+\gls@defglossaryentry{xss}%
+{%
+name={XSS},%
+sort={XSS},%
+type={main},%
+first={Cross-site scripting\glsspace (XSS)},%
+firstplural={Cross-site scriptings\glsspace (XSSs)},%
+text={XSS},%
+plural={XSSs},%
+description={Cross-site scripting},%
+descriptionplural={Cross-site scripting\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Cross-site scripting},%
+longplural={Cross-site scriptings},%
+short={XSS},%
+shortplural={XSSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cots}{}%
+{%
+\gls@defglossaryentry{cots}%
+{%
+name={COTS},%
+sort={COTS},%
+type={main},%
+first={Components Off-the-Shelf\glsspace (COTS)},%
+firstplural={Components Off-the-Shelfs\glsspace (COTSs)},%
+text={COTS},%
+plural={COTSs},%
+description={Components Off-the-Shelf},%
+descriptionplural={Components Off-the-Shelf\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Components Off-the-Shelf},%
+longplural={Components Off-the-Shelfs},%
+short={COTS},%
+shortplural={COTSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cis}{}%
+{%
+\gls@defglossaryentry{cis}%
+{%
+name={CIS},%
+sort={CIS},%
+type={main},%
+first={CRUTIAL Information Switch\glsspace (CIS)},%
+firstplural={CRUTIAL Information Switchs\glsspace (CISs)},%
+text={CIS},%
+plural={CISs},%
+description={CRUTIAL Information Switch},%
+descriptionplural={CRUTIAL Information Switch\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={CRUTIAL Information Switch},%
+longplural={CRUTIAL Information Switchs},%
+short={CIS},%
+shortplural={CISs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dos}{}%
+{%
+\gls@defglossaryentry{dos}%
+{%
+name={DoS},%
+sort={DoS},%
+type={main},%
+first={Denial-of-Service\glsspace (DoS)},%
+firstplural={Denial-of-Services\glsspace (DoSs)},%
+text={DoS},%
+plural={DoSs},%
+description={Denial-of-Service},%
+descriptionplural={Denial-of-Service\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Denial-of-Service},%
+longplural={Denial-of-Services},%
+short={DoS},%
+shortplural={DoSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ddos}{}%
+{%
+\gls@defglossaryentry{ddos}%
+{%
+name={DDoS},%
+sort={DDoS},%
+type={main},%
+first={Distributed Denial-of-Service\glsspace (DDoS)},%
+firstplural={Distributed Denial-of-Services\glsspace (DDoSs)},%
+text={DDoS},%
+plural={DDoSs},%
+description={Distributed Denial-of-Service},%
+descriptionplural={Distributed Denial-of-Service\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Distributed Denial-of-Service},%
+longplural={Distributed Denial-of-Services},%
+short={DDoS},%
+shortplural={DDoSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dbms}{}%
+{%
+\gls@defglossaryentry{dbms}%
+{%
+name={DBMS},%
+sort={DBMS},%
+type={main},%
+first={Databases Management Systems\glsspace (DBMS)},%
+firstplural={Databases Management Systemss\glsspace (DBMSs)},%
+text={DBMS},%
+plural={DBMSs},%
+description={Databases Management Systems},%
+descriptionplural={Databases Management Systems\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Databases Management Systems},%
+longplural={Databases Management Systemss},%
+short={DBMS},%
+shortplural={DBMSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{db}{}%
+{%
+\gls@defglossaryentry{db}%
+{%
+name={DB},%
+sort={DB},%
+type={main},%
+first={Database\glsspace (DB)},%
+firstplural={Databases (DBs)},%
+text={DB},%
+plural={DBs},%
+description={Database},%
+descriptionplural={Database\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Database},%
+longplural={Databases},%
+short={DB},%
+shortplural={DBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{hmac}{}%
+{%
+\gls@defglossaryentry{hmac}%
+{%
+name={HMAC},%
+sort={HMAC},%
+type={main},%
+first={Hash-based Message Authentication Code\glsspace (HMAC)},%
+firstplural={Hash-based Message Authentication Codes\glsspace (HMACs)},%
+text={HMAC},%
+plural={HMACs},%
+description={Hash-based Message Authentication Code},%
+descriptionplural={Hash-based Message Authentication Code\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hash-based Message Authentication Code},%
+longplural={Hash-based Message Authentication Codes},%
+short={HMAC},%
+shortplural={HMACs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{jvm}{}%
+{%
+\gls@defglossaryentry{jvm}%
+{%
+name={JVM},%
+sort={JVM},%
+type={main},%
+first={Java Virtual Machine\glsspace (JVM)},%
+firstplural={Java Virtual Machines\glsspace (JVMs)},%
+text={JVM},%
+plural={JVMs},%
+description={Java Virtual Machine},%
+descriptionplural={Java Virtual Machine\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Java Virtual Machine},%
+longplural={Java Virtual Machines},%
+short={JVM},%
+shortplural={JVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ics}{}%
+{%
+\gls@defglossaryentry{ics}%
+{%
+name={ICS},%
+sort={ICS},%
+type={main},%
+first={Industrial Control Systems\glsspace (ICS)},%
+firstplural={Industrial Control Systemss\glsspace (ICSs)},%
+text={ICS},%
+plural={ICSs},%
+description={Industrial Control Systems},%
+descriptionplural={Industrial Control Systems\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Industrial Control Systems},%
+longplural={Industrial Control Systemss},%
+short={ICS},%
+shortplural={ICSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ots}{}%
+{%
+\gls@defglossaryentry{ots}%
+{%
+name={OTS},%
+sort={OTS},%
+type={main},%
+first={Off-the-Shelf\glsspace (OTS)},%
+firstplural={Off-the-Shelfs\glsspace (OTSs)},%
+text={OTS},%
+plural={OTSs},%
+description={Off-the-Shelf},%
+descriptionplural={Off-the-Shelf\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Off-the-Shelf},%
+longplural={Off-the-Shelfs},%
+short={OTS},%
+shortplural={OTSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{osi}{}%
+{%
+\gls@defglossaryentry{osi}%
+{%
+name={OSI},%
+sort={OSI},%
+type={main},%
+first={Open Systems Interconnection\glsspace (OSI)},%
+firstplural={Open Systems Interconnections\glsspace (OSIs)},%
+text={OSI},%
+plural={OSIs},%
+description={Open Systems Interconnection},%
+descriptionplural={Open Systems Interconnection\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Open Systems Interconnection},%
+longplural={Open Systems Interconnections},%
+short={OSI},%
+shortplural={OSIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{os}{}%
+{%
+\gls@defglossaryentry{os}%
+{%
+name={OS},%
+sort={OS},%
+type={main},%
+first={Operating System\glsspace (OS)},%
+firstplural={Operating Systems\glsspace (OSs)},%
+text={OS},%
+plural={OSes},%
+description={Operating System},%
+descriptionplural={Operating System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Operating System},%
+longplural={Operating Systems},%
+short={OS},%
+shortplural={OSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ids}{}%
+{%
+\gls@defglossaryentry{ids}%
+{%
+name={IDS},%
+sort={IDS},%
+type={main},%
+first={Intrusion Detection System\glsspace (IDS)},%
+firstplural={Intrusion Detection Systems\glsspace (IDSs)},%
+text={IDS},%
+plural={IDSs},%
+description={Intrusion Detection System},%
+descriptionplural={Intrusion Detection System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Intrusion Detection System},%
+longplural={Intrusion Detection Systems},%
+short={IDS},%
+shortplural={IDSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mac}{}%
+{%
+\gls@defglossaryentry{mac}%
+{%
+name={MAC},%
+sort={MAC},%
+type={main},%
+first={Message Authentication Code\glsspace (MAC)},%
+firstplural={Message Authentication Codes\glsspace (MACs)},%
+text={MAC},%
+plural={MACs},%
+description={Message Authentication Code},%
+descriptionplural={Message Authentication Code\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Message Authentication Code},%
+longplural={Message Authentication Codes},%
+short={MAC},%
+shortplural={MACs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{nist}{}%
+{%
+\gls@defglossaryentry{nist}%
+{%
+name={NIST},%
+sort={NIST},%
+type={main},%
+first={National Institute of Standards and Technology\glsspace (NIST)},%
+firstplural={National Institute of Standards and Technologys\glsspace (NISTs)},%
+text={NIST},%
+plural={NISTs},%
+description={National Institute of Standards and Technology},%
+descriptionplural={National Institute of Standards and Technology\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={National Institute of Standards and Technology},%
+longplural={National Institute of Standards and Technologys},%
+short={NIST},%
+shortplural={NISTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{nvd}{}%
+{%
+\gls@defglossaryentry{nvd}%
+{%
+name={NVD},%
+sort={NVD},%
+type={main},%
+first={National Vulnerability Database\glsspace (NVD)},%
+firstplural={National Vulnerability Databases\glsspace (NVDs)},%
+text={NVD},%
+plural={NVDs},%
+description={National Vulnerability Database},%
+descriptionplural={National Vulnerability Database\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={National Vulnerability Database},%
+longplural={National Vulnerability Databases},%
+short={NVD},%
+shortplural={NVDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{nfs}{}%
+{%
+\gls@defglossaryentry{nfs}%
+{%
+name={NFS},%
+sort={NFS},%
+type={main},%
+first={Network File System\glsspace (NFS)},%
+firstplural={Network File Systems\glsspace (NFSs)},%
+text={NFS},%
+plural={NFSs},%
+description={Network File System},%
+descriptionplural={Network File System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Network File System},%
+longplural={Network File Systems},%
+short={NFS},%
+shortplural={NFSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ltu}{}%
+{%
+\gls@defglossaryentry{ltu}%
+{%
+name={LTU},%
+sort={LTU},%
+type={main},%
+first={Logical Trusted Unit\glsspace (LTU)},%
+firstplural={Logical Trusted Units\glsspace (LTUs)},%
+text={LTU},%
+plural={LTUs},%
+description={Logical Trusted Unit},%
+descriptionplural={Logical Trusted Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Trusted Unit},%
+longplural={Logical Trusted Units},%
+short={LTU},%
+shortplural={LTUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{scada}{}%
+{%
+\gls@defglossaryentry{scada}%
+{%
+name={SCADA},%
+sort={SCADA},%
+type={main},%
+first={Supervisory Control and Data Acquisition\glsspace (SCADA)},%
+firstplural={Supervisory Control and Data Acquisitions\glsspace (SCADAs)},%
+text={SCADA},%
+plural={SCADAs},%
+description={Supervisory Control and Data Acquisition},%
+descriptionplural={Supervisory Control and Data Acquisition\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Supervisory Control and Data Acquisition},%
+longplural={Supervisory Control and Data Acquisitions},%
+short={SCADA},%
+shortplural={SCADAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{smr}{}%
+{%
+\gls@defglossaryentry{smr}%
+{%
+name={SMR},%
+sort={SMR},%
+type={main},%
+first={State Machine Replication\glsspace (SMR)},%
+firstplural={State Machine Replications\glsspace (SMRs)},%
+text={SMR},%
+plural={SMRs},%
+description={State Machine Replication},%
+descriptionplural={State Machine Replication\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={State Machine Replication},%
+longplural={State Machine Replications},%
+short={SMR},%
+shortplural={SMRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{siem}{}%
+{%
+\gls@defglossaryentry{siem}%
+{%
+name={SIEM},%
+sort={SIEM},%
+type={main},%
+first={Security Information and Event Management\glsspace (SIEM)},%
+firstplural={Security Information and Event Managements\glsspace (SIEMs)},%
+text={SIEM},%
+plural={SIEMs},%
+description={Security Information and Event Management},%
+descriptionplural={Security Information and Event Management\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Security Information and Event Management},%
+longplural={Security Information and Event Managements},%
+short={SIEM},%
+shortplural={SIEMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{udp}{}%
+{%
+\gls@defglossaryentry{udp}%
+{%
+name={UDP},%
+sort={UDP},%
+type={main},%
+first={User Datagram Protocol\glsspace (UDP)},%
+firstplural={User Datagram Protocols\glsspace (UDPs)},%
+text={UDP},%
+plural={UDPs},%
+description={User Datagram Protocol},%
+descriptionplural={User Datagram Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User Datagram Protocol},%
+longplural={User Datagram Protocols},%
+short={UDP},%
+shortplural={UDPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ycsb}{}%
+{%
+\gls@defglossaryentry{ycsb}%
+{%
+name={YCSB},%
+sort={YCSB},%
+type={main},%
+first={Yahoo! Cloud Serving Benchmark\glsspace (YCSB)},%
+firstplural={Yahoo! Cloud Serving Benchmarks\glsspace (YCSBs)},%
+text={YCSB},%
+plural={YCSBs},%
+description={Yahoo! Cloud Serving Benchmark},%
+descriptionplural={Yahoo! Cloud Serving Benchmark\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Yahoo! Cloud Serving Benchmark},%
+longplural={Yahoo! Cloud Serving Benchmarks},%
+short={YCSB},%
+shortplural={YCSBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{osint}{}%
+{%
+\gls@defglossaryentry{osint}%
+{%
+name={OSINT},%
+sort={OSINT},%
+type={main},%
+first={Open Source Intelligence \glsspace (OSINT)},%
+firstplural={Open Source Intelligence s\glsspace (OSINTs)},%
+text={OSINT},%
+plural={OSINTs},%
+description={Open Source Intelligence},%
+descriptionplural={Open Source Intelligence \acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Open Source Intelligence},%
+longplural={Open Source Intelligence s},%
+short={OSINT},%
+shortplural={OSINTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{osvdb}{}%
+{%
+\gls@defglossaryentry{osvdb}%
+{%
+name={OSVDB},%
+sort={OSVDB},%
+type={main},%
+first={Open Sourced Vulnerability Database\glsspace (OSVDB)},%
+firstplural={Open Sourced Vulnerability Databases\glsspace (OSVDBs)},%
+text={OSVDB},%
+plural={OSVDBs},%
+description={Open Sourced Vulnerability Database},%
+descriptionplural={Open Sourced Vulnerability Database\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Open Sourced Vulnerability Database},%
+longplural={Open Sourced Vulnerability Databases},%
+short={OSVDB},%
+shortplural={OSVDBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{tom}{}%
+{%
+\gls@defglossaryentry{tom}%
+{%
+name={TOM},%
+sort={TOM},%
+type={main},%
+first={Total Ordered Multicast\glsspace (TOM)},%
+firstplural={Total Ordered Multicasts\glsspace (TOMs)},%
+text={TOM},%
+plural={TOMs},%
+description={Total Ordered Multicast},%
+descriptionplural={Total Ordered Multicast\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Total Ordered Multicast},%
+longplural={Total Ordered Multicasts},%
+short={TOM},%
+shortplural={TOMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{tls}{}%
+{%
+\gls@defglossaryentry{tls}%
+{%
+name={TLS},%
+sort={TLS},%
+type={main},%
+first={Transport Layer Security\glsspace (TLS)},%
+firstplural={Transport Layer Securitys\glsspace (TLSs)},%
+text={TLS},%
+plural={TLSs},%
+description={Transport Layer Security},%
+descriptionplural={Transport Layer Security\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Transport Layer Security},%
+longplural={Transport Layer Securitys},%
+short={TLS},%
+shortplural={TLSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{po}{}%
+{%
+\gls@defglossaryentry{po}%
+{%
+name={PO},%
+sort={PO},%
+type={main},%
+first={Proactive Obfuscation\glsspace (PO)},%
+firstplural={Proactive Obfuscations\glsspace (POs)},%
+text={PO},%
+plural={POs},%
+description={Proactive Obfuscation},%
+descriptionplural={Proactive Obfuscation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Proactive Obfuscation},%
+longplural={Proactive Obfuscations},%
+short={PO},%
+shortplural={POs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pr}{}%
+{%
+\gls@defglossaryentry{pr}%
+{%
+name={PR},%
+sort={PR},%
+type={main},%
+first={Proactive Recovery\glsspace (PR)},%
+firstplural={Proactive Recoverys\glsspace (PRs)},%
+text={PR},%
+plural={PRs},%
+description={Proactive Recovery},%
+descriptionplural={Proactive Recovery\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Proactive Recovery},%
+longplural={Proactive Recoverys},%
+short={PR},%
+shortplural={PRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{prr}{}%
+{%
+\gls@defglossaryentry{prr}%
+{%
+name={PRR},%
+sort={PRR},%
+type={main},%
+first={Proactive-Reactive Recovery\glsspace (PRR)},%
+firstplural={Proactive-Reactive Recoverys\glsspace (PRRs)},%
+text={PRR},%
+plural={PRRs},%
+description={Proactive-Reactive Recovery},%
+descriptionplural={Proactive-Reactive Recovery\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Proactive-Reactive Recovery},%
+longplural={Proactive-Reactive Recoverys},%
+short={PRR},%
+shortplural={PRRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{prrw}{}%
+{%
+\gls@defglossaryentry{prrw}%
+{%
+name={PRRW},%
+sort={PRRW},%
+type={main},%
+first={Proactive-Reactive Recovery Wormhole\glsspace (PRRW)},%
+firstplural={Proactive-Reactive Recovery Wormholes\glsspace (PRRWs)},%
+text={PRRW},%
+plural={PRRWs},%
+description={Proactive-Reactive Recovery Wormhole},%
+descriptionplural={Proactive-Reactive Recovery Wormhole\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Proactive-Reactive Recovery Wormhole},%
+longplural={Proactive-Reactive Recovery Wormholes},%
+short={PRRW},%
+shortplural={PRRWs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{zda}{}%
+{%
+\gls@defglossaryentry{zda}%
+{%
+name={ZDA},%
+sort={ZDA},%
+type={main},%
+first={Zero-Day Attack\glsspace (ZDA)},%
+firstplural={Zero-Day Attacks\glsspace (ZDAs)},%
+text={ZDA},%
+plural={ZDAs},%
+description={Zero-Day Attack},%
+descriptionplural={Zero-Day Attack\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Zero-Day Attack},%
+longplural={Zero-Day Attacks},%
+short={ZDA},%
+shortplural={ZDAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pzda}{}%
+{%
+\gls@defglossaryentry{pzda}%
+{%
+name={PZDA},%
+sort={PZDA},%
+type={main},%
+first={Pseudo Zero-Day Attack\glsspace (PZDA)},%
+firstplural={Pseudo Zero-Day Attacks\glsspace (PZDAs)},%
+text={PZDA},%
+plural={PZDAs},%
+description={Pseudo Zero-Day Attack},%
+descriptionplural={Pseudo Zero-Day Attack\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Pseudo Zero-Day Attack},%
+longplural={Pseudo Zero-Day Attacks},%
+short={PZDA},%
+shortplural={PZDAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ppzda}{}%
+{%
+\gls@defglossaryentry{ppzda}%
+{%
+name={PPZDA},%
+sort={PPZDA},%
+type={main},%
+first={Potential Pseudo Zero-Day Attack\glsspace (PPZDA)},%
+firstplural={Potential Pseudo Zero-Day Attacks\glsspace (PPZDAs)},%
+text={PPZDA},%
+plural={PPZDAs},%
+description={Potential Pseudo Zero-Day Attack},%
+descriptionplural={Potential Pseudo Zero-Day Attack\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Potential Pseudo Zero-Day Attack},%
+longplural={Potential Pseudo Zero-Day Attacks},%
+short={PPZDA},%
+shortplural={PPZDAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{poa}{}%
+{%
+\gls@defglossaryentry{poa}%
+{%
+name={POA},%
+sort={POA},%
+type={main},%
+first={Potential for Attack\glsspace (POA)},%
+firstplural={Potential for Attacks\glsspace (POAs)},%
+text={POA},%
+plural={POAs},%
+description={Potential for Attack},%
+descriptionplural={Potential for Attack\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Potential for Attack},%
+longplural={Potential for Attacks},%
+short={POA},%
+shortplural={POAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rsa}{}%
+{%
+\gls@defglossaryentry{rsa}%
+{%
+name={RSA},%
+sort={RSA},%
+type={main},%
+first={Rivest\IeC {\textendash }Shamir\IeC {\textendash }Adleman\glsspace (RSA)},%
+firstplural={Rivest\IeC {\textendash }Shamir\IeC {\textendash }Adlemans\glsspace (RSAs)},%
+text={RSA},%
+plural={RSAs},%
+description={Rivest–Shamir–Adleman},%
+descriptionplural={Rivest–Shamir–Adleman\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Rivest\IeC {\textendash }Shamir\IeC {\textendash }Adleman},%
+longplural={Rivest\IeC {\textendash }Shamir\IeC {\textendash }Adlemans},%
+short={RSA},%
+shortplural={RSAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{kvs}{}%
+{%
+\gls@defglossaryentry{kvs}%
+{%
+name={KVS},%
+sort={KVS},%
+type={main},%
+first={Key-Value Storage\glsspace (KVS)},%
+firstplural={Key-Value Storages\glsspace (KVSs)},%
+text={KVS},%
+plural={KVSs},%
+description={Key-Value Storage},%
+descriptionplural={Key-Value Storage\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Key-Value Storage},%
+longplural={Key-Value Storages},%
+short={KVS},%
+shortplural={KVSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{kmp}{}%
+{%
+\gls@defglossaryentry{kmp}%
+{%
+name={KMP},%
+sort={KMP},%
+type={main},%
+first={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratt\glsspace (KMP)},%
+firstplural={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratts\glsspace (KMPs)},%
+text={KMP},%
+plural={KMPs},%
+description={Knuth–Morris–Pratt},%
+descriptionplural={Knuth–Morris–Pratt\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratt},%
+longplural={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratts},%
+short={KMP},%
+shortplural={KMPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{svm}{}%
+{%
+\gls@defglossaryentry{svm}%
+{%
+name={SVM},%
+sort={SVM},%
+type={main},%
+first={Support Vector Machines\glsspace (SVM)},%
+firstplural={Support Vector Machiness\glsspace (SVMs)},%
+text={SVM},%
+plural={SVMs},%
+description={Support Vector Machines},%
+descriptionplural={Support Vector Machines\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Support Vector Machines},%
+longplural={Support Vector Machiness},%
+short={SVM},%
+shortplural={SVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sha}{}%
+{%
+\gls@defglossaryentry{sha}%
+{%
+name={SHA},%
+sort={SHA},%
+type={main},%
+first={Secure Hash Algorithm \glsspace (SHA)},%
+firstplural={Secure Hash Algorithm s\glsspace (SHAs)},%
+text={SHA},%
+plural={SHAs},%
+description={Secure Hash Algorithm},%
+descriptionplural={Secure Hash Algorithm \acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Secure Hash Algorithm},%
+longplural={Secure Hash Algorithm s},%
+short={SHA},%
+shortplural={SHAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{tcp}{}%
+{%
+\gls@defglossaryentry{tcp}%
+{%
+name={TCP},%
+sort={TCP},%
+type={main},%
+first={Transmission Control Protocol\glsspace (TCP)},%
+firstplural={Transmission Control Protocols\glsspace (TCPs)},%
+text={TCP},%
+plural={TCPs},%
+description={Transmission Control Protocol},%
+descriptionplural={Transmission Control Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Transmission Control Protocol},%
+longplural={Transmission Control Protocols},%
+short={TCP},%
+shortplural={TCPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{vm}{}%
+{%
+\gls@defglossaryentry{vm}%
+{%
+name={VM},%
+sort={VM},%
+type={main},%
+first={Virtual Machine\glsspace (VM)},%
+firstplural={Virtual Machines\glsspace (VMs)},%
+text={VM},%
+plural={VMs},%
+description={Virtual Machine},%
+descriptionplural={Virtual Machine\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Machine},%
+longplural={Virtual Machines},%
+short={VM},%
+shortplural={VMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{vmm}{}%
+{%
+\gls@defglossaryentry{vmm}%
+{%
+name={VMM},%
+sort={VMM},%
+type={main},%
+first={Virtual Machine Manager\glsspace (VMM)},%
+firstplural={Virtual Machine Managers\glsspace (VMMs)},%
+text={VMM},%
+plural={VMMs},%
+description={Virtual Machine Manager},%
+descriptionplural={Virtual Machine Manager\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Machine Manager},%
+longplural={Virtual Machine Managers},%
+short={VMM},%
+shortplural={VMMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{xml}{}%
+{%
+\gls@defglossaryentry{xml}%
+{%
+name={XML},%
+sort={XML},%
+type={main},%
+first={Extensible Markup Language\glsspace (XML)},%
+firstplural={Extensible Markup Languages\glsspace (XMLs)},%
+text={XML},%
+plural={XMLs},%
+description={Extensible Markup Language},%
+descriptionplural={Extensible Markup Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Extensible Markup Language},%
+longplural={Extensible Markup Languages},%
+short={XML},%
+shortplural={XMLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

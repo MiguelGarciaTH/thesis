@@ -1,0 +1,5 @@
+latexmk -pdf
+makeglossaries phd_mgarcia
+./fazindice
+latexmk -pdf
+
