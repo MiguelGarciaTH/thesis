@@ -1,27 +1,43 @@
-\BOOKMARK [0][-]{Doc-Start}{Acknowledgements}{}% 1
-\BOOKMARK [0][-]{section*.2}{Abstract \(PT\)}{}% 2
-\BOOKMARK [0][-]{section*.4}{Abstract \(EN\)}{}% 3
-\BOOKMARK [0][-]{section*.6}{List of Figures}{}% 4
-\BOOKMARK [0][-]{section*.6}{List of Tables}{}% 5
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
-\BOOKMARK [1][-]{section*.8}{Context and Motivation}{chapter.1}% 7
-\BOOKMARK [1][-]{section*.9}{Research Method}{chapter.1}% 8
-\BOOKMARK [1][-]{section*.11}{Contributions}{chapter.1}% 9
-\BOOKMARK [1][-]{section*.13}{Thesis Overview}{chapter.1}% 10
-\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 11
-\BOOKMARK [0][-]{chapter.3}{Data Source}{}% 12
-\BOOKMARK [1][-]{section*.16}{Methodology}{chapter.3}% 13
-\BOOKMARK [2][-]{section*.18}{Filtering the Data}{section*.16}% 14
-\BOOKMARK [1][-]{section*.20}{OS Diversity Study}{chapter.3}% 15
-\BOOKMARK [2][-]{section*.21}{Vulnerability Distribution by OS Component}{section*.20}% 16
-\BOOKMARK [2][-]{section*.23}{Common Vulnerabilities}{section*.20}% 17
-\BOOKMARK [1][-]{section*.28}{Strategies for OS Diversity Selection}{chapter.3}% 18
-\BOOKMARK [1][-]{section*.43}{Decisions about deploying diversity}{chapter.3}% 19
-\BOOKMARK [1][-]{section*.44}{Final Remmarks}{chapter.3}% 20
+\BOOKMARK [0][-]{section*.8}{List of Figures}{}% 1
+\BOOKMARK [0][-]{section*.8}{List of Tables}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section*.10}{Context and Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section*.11}{Objectives and Contributions}{chapter.1}% 5
+\BOOKMARK [1][-]{section*.16}{Thesis Overview}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 7
+\BOOKMARK [1][-]{section*.18}{Intrusion Tolerance Overview}{chapter.2}% 8
+\BOOKMARK [1][-]{section*.23}{Byzantine Fault Tolerance}{chapter.2}% 9
+\BOOKMARK [1][-]{section*.25}{Replica Rejuvenation}{chapter.2}% 10
+\BOOKMARK [1][-]{section*.26}{Diversity}{chapter.2}% 11
+\BOOKMARK [1][-]{section*.27}{Risk Management}{chapter.2}% 12
+\BOOKMARK [1][-]{section*.28}{Pratical BFT System with Diversity}{chapter.2}% 13
+\BOOKMARK [1][-]{section*.29}{Final Remarks}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{A Study on Common Vulnerabilities}{}% 15
+\BOOKMARK [1][-]{section*.31}{Methodology}{chapter.3}% 16
+\BOOKMARK [1][-]{section*.36}{OS Diversity Study}{chapter.3}% 17
+\BOOKMARK [1][-]{section*.39}{Strategies for OS Diversity Selection}{chapter.3}% 18
+\BOOKMARK [1][-]{section*.54}{Decisions about deploying diversity}{chapter.3}% 19
+\BOOKMARK [1][-]{section*.55}{Final Remmarks}{chapter.3}% 20
 \BOOKMARK [0][-]{chapter.4}{Lazarus Design}{}% 21
-\BOOKMARK [0][-]{chapter.5}{Lazarus Implementation}{}% 22
-\BOOKMARK [0][-]{chapter.6}{SieveQ}{}% 23
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 24
-\BOOKMARK [0][-]{section*.48}{Acronyms}{}% 25
-\BOOKMARK [0][-]{chapter*.49}{Bibliography}{}% 26
-\BOOKMARK [0][-]{section*.50}{Bibliography}{}% 27
+\BOOKMARK [1][-]{section*.57}{Introduction}{chapter.4}% 22
+\BOOKMARK [1][-]{section*.58}{Diversity-aware Reconfigurations}{chapter.4}% 23
+\BOOKMARK [1][-]{section*.65}{Lazarus Implementation}{chapter.4}% 24
+\BOOKMARK [1][-]{section*.70}{Evaluation of Replica Set Risk}{chapter.4}% 25
+\BOOKMARK [1][-]{section*.78}{Final Remarks}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Lazarus Implementation}{}% 27
+\BOOKMARK [1][-]{section*.80}{Lazarus Implementation}{chapter.5}% 28
+\BOOKMARK [1][-]{section*.85}{Performance Evaluation}{chapter.5}% 29
+\BOOKMARK [1][-]{section*.97}{Final Remarks}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{SieveQ}{}% 31
+\BOOKMARK [1][-]{section*.99}{Introduction}{chapter.6}% 32
+\BOOKMARK [1][-]{section*.100}{Intrusion-Tolerant Firewalls}{chapter.6}% 33
+\BOOKMARK [1][-]{section*.107}{SieveQ Protocol}{chapter.6}% 34
+\BOOKMARK [1][-]{section*.113}{Implementation}{chapter.6}% 35
+\BOOKMARK [1][-]{section*.114}{Evaluation}{chapter.6}% 36
+\BOOKMARK [1][-]{section*.131}{Discussion}{chapter.6}% 37
+\BOOKMARK [1][-]{section*.132}{Final Remarks}{chapter.6}% 38
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 39
+\BOOKMARK [1][-]{section*.134}{Summary of the Results}{chapter.7}% 40
+\BOOKMARK [1][-]{section*.135}{Future Work}{chapter.7}% 41
+\BOOKMARK [0][-]{section*.138}{Acronyms}{}% 42
+\BOOKMARK [0][-]{chapter*.139}{Bibliography}{}% 43

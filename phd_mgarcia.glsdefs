@@ -178,6 +178,186 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{cvi}{}%
+{%
+\gls@defglossaryentry{cvi}%
+{%
+name={CVI},%
+sort={CVI},%
+type={main},%
+first={Common Vulnerability Indicator\glsspace (CVI)},%
+firstplural={Common Vulnerability Indicators\glsspace (CVIs)},%
+text={CVI},%
+plural={CVIs},%
+description={Common Vulnerability Indicator},%
+descriptionplural={Common Vulnerability Indicator\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerability Indicator},%
+longplural={Common Vulnerability Indicators},%
+short={CVI},%
+shortplural={CVIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cvcs}{}%
+{%
+\gls@defglossaryentry{cvcs}%
+{%
+name={CVCst},%
+sort={CVCst},%
+type={main},%
+first={Common Vulnerability Count Strategy\glsspace (CVCst)},%
+firstplural={Common Vulnerability Count Strategys\glsspace (CVCsts)},%
+text={CVCst},%
+plural={CVCsts},%
+description={Common Vulnerability Count Strategy},%
+descriptionplural={Common Vulnerability Count Strategy\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerability Count Strategy},%
+longplural={Common Vulnerability Count Strategys},%
+short={CVCst},%
+shortplural={CVCsts},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cvc}{}%
+{%
+\gls@defglossaryentry{cvc}%
+{%
+name={CVC},%
+sort={CVC},%
+type={main},%
+first={Common Vulnerability Count\glsspace (CVC)},%
+firstplural={Common Vulnerability Counts\glsspace (CVCs)},%
+text={CVC},%
+plural={CVCs},%
+description={Common Vulnerability Count},%
+descriptionplural={Common Vulnerability Count\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerability Count},%
+longplural={Common Vulnerability Counts},%
+short={CVC},%
+shortplural={CVCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cvis}{}%
+{%
+\gls@defglossaryentry{cvis}%
+{%
+name={CVCst},%
+sort={CVCst},%
+type={main},%
+first={Common Vulnerability Indicator Strategy\glsspace (CVCst)},%
+firstplural={Common Vulnerability Indicator Strategys\glsspace (CVCsts)},%
+text={CVCst},%
+plural={CVCsts},%
+description={Common Vulnerability Indicator Strategy},%
+descriptionplural={Common Vulnerability Indicator Strategy\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Vulnerability Indicator Strategy},%
+longplural={Common Vulnerability Indicator Strategys},%
+short={CVCst},%
+shortplural={CVCsts},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{irt}{}%
+{%
+\gls@defglossaryentry{irt}%
+{%
+name={IRT},%
+sort={IRT},%
+type={main},%
+first={Inter-reporting Times\glsspace (IRT)},%
+firstplural={Inter-reporting Timess\glsspace (IRTs)},%
+text={IRT},%
+plural={IRTs},%
+description={Inter-reporting Times},%
+descriptionplural={Inter-reporting Times\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Inter-reporting Times},%
+longplural={Inter-reporting Timess},%
+short={IRT},%
+shortplural={IRTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{irts}{}%
+{%
+\gls@defglossaryentry{irts}%
+{%
+name={IRTst},%
+sort={IRTst},%
+type={main},%
+first={Inter-reporting Times Strategy\glsspace (IRTst)},%
+firstplural={Inter-reporting Times Strategys\glsspace (IRTsts)},%
+text={IRTst},%
+plural={IRTsts},%
+description={Inter-reporting Times Strategy},%
+descriptionplural={Inter-reporting Times Strategy\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Inter-reporting Times Strategy},%
+longplural={Inter-reporting Times Strategys},%
+short={IRTst},%
+shortplural={IRTsts},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{cvss}{}%
 {%
 \gls@defglossaryentry{cvss}%
@@ -383,6 +563,36 @@ long={Databases Management Systems},%
 longplural={Databases Management Systemss},%
 short={DBMS},%
 shortplural={DBMSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dns}{}%
+{%
+\gls@defglossaryentry{dns}%
+{%
+name={DNS},%
+sort={DNS},%
+type={main},%
+first={Domain Name System\glsspace (DNS)},%
+firstplural={Domain Name Systems\glsspace (DNSs)},%
+text={DNS},%
+plural={DNSs},%
+description={Domain Name System},%
+descriptionplural={Domain Name System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Domain Name System},%
+longplural={Domain Name Systems},%
+short={DNS},%
+shortplural={DNSs},%
 counter={page},%
 parent={},%
 %

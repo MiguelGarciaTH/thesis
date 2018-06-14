@@ -1,2 +1,33 @@
 \chapter{Conclusion}
 \label{chap:conclusion}
+
+\section{Summary of the Results}
+\system addresses the long-standing open problem of evaluating, selecting, and managing the diversity of a BFT system to make it resilient to malicious adversaries.
+Our work focuses on two fundamental issues: how to select the best replicas to run together given the current threat landscape, and what is the performance overhead of running a diverse BFT system in practice.
+Our results open many avenues for future work on this topic.
+
+\section{Future Work}
+
+\textbf{Virtualization technology:}
+\system paid a performance penalty due to the limitations of the virtualization platform we used (VirtualBox).
+VirtualBox was selected because it was the platform we could run more OSes.
+Therefore its use enabled \system to support 17 different OSes for running BFT systems.
+It would be great to have a VM technology capable of supporting all existing OSes without the resource limitations we experienced.
+
+\textbf{Distributed control plane:}
+As in previous works~\cite{Roeder:2010,Platania:2014}, our current design for \system considers a centralized trusted control plane that analyzes OSINT and orchestrates replica set reconfigurations.
+It would be desirable to have a distributed version of such control plane, not only for improving its dependability but also to support the existence of multi-domain applications, such as blockchain platforms.
+
+\textbf{Trusted components:}
+Our prototype implements the LTU as a trusted component isolated from the rest of the replica in a VM, as many works on hybrid BFT~\cite{Veronese:2013,Roeder:2010,Platania:2014,Sousa:2010,Distler:2011}.
+The recent popularization of trusted computing technologies such as Intel SGX~\cite{sgx}, and its use for implementing efficient BFT replication~\cite{Behl:2017}, open interesting possibilities for using novel hardware to support services like \system on bare metal.
+
+\textbf{Integration with other sensors:}
+\system monitors only five security data feeds on the internet looking for vulnerabilities, exploits, and patches in the OSes it manages, but it could be extended to monitor other indicators of compromise (e.g., IP black lists) extracted from a much richer set of sources~\cite{Liao:2016,Sabottke:2015}.
+Similarly, \system can be extended to additionally use the outputs of IDSes to assess the BFT system behavior and trigger replica reconfigurations in case of need.
+
+\textbf{Diversity-aware replication:}
+The evaluation of BFT-SMaRt on top of \system shows that different replica set configurations can impact on the performance of applications, mostly due to the performance heterogeneity of the different OSes.
+It would be interesting to consider protocols in which this heterogeneity is taken into account.
+For example, the leader could be allocated in the fastest replica, or weighted-replication protocols such as WHEAT~\cite{Sousa:2015} could be used to assign higher weights to the replicas running in faster replicas.
+

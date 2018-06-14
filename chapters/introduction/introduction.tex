@@ -3,18 +3,111 @@
 
 \section{Context and Motivation}
 
+cite all papers on BFT diversity assumption
+
+cite papers on diversity 
+
+mention real systems which depend on diversity
+
+In the last twenty years of \gls{bft} replication research, few efforts were made to justify or support the assumption that nodes fail independently. 
+On contrary, there were great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
+These works assume, either implicitly or explicitly, that replicas fail independently, relying on some orthogonal mechanism (e.g.,~\cite{Roeder:2010,Chen:1995}) to remove common weaknesses, or rule out the possibility of malicious failures from their system models.
+A few works have implemented and experimented with such mechanisms~\cite{Rodrigues:2001,Roeder:2010,Amir:2011}, but in a very limited way.
+Nonetheless, in practice, diversity is a fundamental building block of dependable services in avionics~\cite{Yeh:2004}, military systems~\cite{rhimes}, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} -- three essential applications of \gls{bft}. 
+
+A few works consider the diversity of replicas as a way to achieve such failure independence, however, it is mostly taken for granted.
+For example, by using memory randomization techniques~\cite{Roeder:2010} or different \glspl{os}~\cite{Rodrigues:2001,Junqueira:2005} without providing evidence for such independence. 
+Moreover, it has been shown that memory randomization does not suffice to impede common failures to occurring~\cite{Snow:2013,Bittau:2014}, and that although diversity promotes fault independence to some extent, it does not avoid utterly different \glspl{os} from sharing vulnerabilities~\cite{Garcia:2014}.
+
+Even considering an initial set of $n$ diverse replicas, supporting the fault independence assumption, long-running services need to be cleaned from possible failures and intrusions.
+A few works on the proactive recovery of \gls{bft} systems~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011} periodically restart their replicas to clean undetected faulty states introduced by a stealth attacker. 
+However, a common limitation of these works is that they assume that these weaknesses will be cleaned after the recovery.
+In practice, this will not happen unless the replica changes its software (e.g., via the previously described techniques) after its recovery.
 
 
 
-\section{Research Method}
-\subsection*{Goal}
+\section{Objectives and Contributions}
+
+
+\subsection*{Diversity a corner stone of Intrusion tolerance}
+The current solutions that vouch for diversity as a way to guarantee failure independence, either lack of supporting evidence, or use evidence that is limited to some extent.
+Therefore, some of the results may provide false conclusions.
+We identify a need for finding \emph{accurate} sources for supporting sound evidence of the benefits diversity as a dependable mechanism.
+
+
+The results achieved during the MSc thesis encouraged us to extend the work on \gls{ots} \glspl{os} common vulnerabilities.
+In this extension, we devised three manual strategies for selecting diverse software components to minimize the incidence of common vulnerabilities in replicated systems.
+Moreover, we observed that using different \gls{os} releases of the same \gls{os} are enough to warrant its adoption as a more straightforward, less complicated, more manageable configuration for replicated systems.
+
+\begin{enumerate}
+\item[6.] \emph{Analysis of operating system diversity for intrusion tolerance, Miguel Garcia, Alysson Bessani, Ilir Gashi Nuno Neves, and Rafael Obelheiro, in Software: Practice and Experience, 2014}~\cite{Garcia:2014}.
+\end{enumerate}
+
+
+
+\subsection*{Managing diversity in a dependable way and Creating mechanisms to support intrusion-tolerance on long-lived systems}
+Therefore, some of the results may provide false conclusions.
+We identify a need for finding \emph{accurate} sources for supporting sound evidence of the benefits diversity as a dependable mechanism.
+
+A few works use automatic and artificial diversity (e.g.,~\cite{Roeder:2010,Amir:2011}). 
+However, they lack evidence to support the failure of independence through diversity. 
+Moreover, some studies show that these techniques fail to provide real diversity~\cite{Snow:2013,Bittau:2014}. 
+Additionally, the existent systems that implement time-triggered recoveries assume that it takes the same time to compromise each replica. 
+This assumption is unrealistic, especially when the diversity of replicas is considered. 
+Therefore, it is required tailored methods to evaluate the risk of a replicated system becoming compromised.
+
+
+The few works have implemented and experimented with such mechanisms~\cite{Rodrigues:2001,Roeder:2010,Amir:2011}. 
+However, despite the lack of evidence for supporting the diversity claim, they lack mechanisms that can make practical \gls{bft} systems using diversity in a continuous mode operation (i.e., with recoveries).  
+Thus, reducing the costs typically associated with the management of such complex systems which deemed them as practical.
 
 
 The problem is addressed from both a theoretical and practical perspective.
 
 
-\section{Contributions}
-The main contributions of this thesis are summarized into the following points, along with the resulting publications:
+We address the problems of \emph{finding evidence for supporting diversity}, \emph{manage diversity in a dependable way}, and \emph{supporting diversity mechanism} in the thesis main contribution.
+We use different \gls{osint} data sources to build a complete knowledge base about the possible vulnerabilities, exploits, and patches related to the systems of interest. 
+Moreover, this data is used to create clusters of similar vulnerabilities, which potentially can be affected by (variations of) the same exploit. 
+These clusters and the other collected data are used to assess the risk of the \gls{bft} system becoming compromised due to common vulnerabilities.
+Once the risk increases, the system replaces the potentially vulnerable replica by another one, to maximize the failure independence of the replicated service.
+The solution continuously collects data from the online sources and monitors the risk of the \gls{bft} in such a way that removes the human from the loop.
+We developed these contributions in a solution named \system, and it is the first system that manages \gls{bft} replicated systems (e.g., \sieveq) in a dependable and automatic way.
+\system experimental evaluation shows that its strategy reduces the number of executions where the system becomes compromised and that our prototype supports the execution of full-fledged \gls{bft} systems in diverse configurations with 17 \gls{os} versions, reaching a performance close to a homogeneous bare metal setup. 
+
+
+The contributions of this work resulted in the following publications:
+
+\begin{enumerate}
+
+\item[3] \emph{Towards an Execution Environment for Intrusion-Tolerant Systems, Miguel Garcia, Alysson Bessani, and Nuno Neves, Poster session in the European Conference on Computer Systems (EuroSys), 2016}~\cite{Garcia:2016b}.
+
+
+\item[4.] \emph{\system: Automatic Management of Diversity in BFT Systems, Miguel Garcia, Alysson Bessani, and Nuno Neves -- Submitted for publication}.
+
+\end{enumerate}
+
+
+\subsection*{Creating mechanisms to support intrusion-tolerance on long-lived systems}
+
+Typical \gls{bft} protocols use one of the two following approaches to disseminate messages to the replicas: (1) traffic replicator before the replicas or (2) a leader is responsible to dessiminate the messages to the other replicas. 
+The dissemination of a message to all replicas can be detrimental to the proper operation of the replicated service.
+For example, a traffic replicator device (e.g., hub) can be placed at the entry of the system to transparently reproduce all messages~\cite{Sousa:2010,Roeder:2010}. 
+The effect is an attack amplification caused by the replicator device.
+Alternatively, a leader replica could receive the traffic and then disseminate the messages to the others~\cite{Amir:2011}.
+The drawback is that the leader becomes a natural bottleneck, especially when under attack (instead of dispersing the attack load over all replicas).
+%Then, new architectures can be designed to accommodate external attacks in a resourceful and resilient manner.
+
+We design a new architecture to solve the \emph{dissemination problem}, and the envisioned solution applies filtering operations in two stages acting like a sieve.
+We introduced a first pre-filtering stage that performs lightweight checks, making it efficient to detect and discard malicious messages from external adversaries.
+This effort resulted in a \gls{bft} system named \sieveq, that mixes the firewall paradigm with a message queue service, with the goal of improving the state-of-the-art approaches under accidental failures and/or attacks. 
+\sieveq was experimentally evaluated in different scenarios, and the results show that it is much more resilient to \gls{dos} attacks and various kinds of intrusions than existing replicated-firewall approaches.
+The contributions of this work resulted in the following publications:
+
+\begin{enumerate}
+\item[1.] \emph{An Intrusion-Tolerant Firewall Design for Protecting SIEM Systems, Miguel Garcia, Nuno Neves, Alysson Bessani, in the Workshop on Systems Resilience in conjunction with the IEEE/IFIP International Conference on Dependable Systems and Networks, 2013}~\cite{Garcia:2013}.
+
+\item[2.] \emph{\sieveq: A Layered BFT Protection System for Critical Services, Miguel Garcia, Nuno Neves, and Alysson Bessani, in IEEE Transactions on Dependable and Secure Computing, 2018}~\cite{Garcia:2016}.
+\end{enumerate}
 
 
 \subsection*{Thesis Statement}

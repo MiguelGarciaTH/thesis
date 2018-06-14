@@ -1,9 +1,10 @@
 This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: phd_mgarcia.aux
-A level-1 auxiliary file: chapters/acks/agradecimentos.aux
-A level-1 auxiliary file: chapters/abstract/resumo_pt.aux
 A level-1 auxiliary file: chapters/abstract/resumo_ing.aux
+A level-1 auxiliary file: chapters/abstract/resumo_pt.aux
+A level-1 auxiliary file: chapters/abstract/resumo_estendido_pt.aux
+A level-1 auxiliary file: chapters/acks/agradecimentos.aux
 A level-1 auxiliary file: chapters/introduction/introduction.aux
 A level-1 auxiliary file: chapters/relatedwork/related_work.aux
 A level-1 auxiliary file: chapters/datasource/datasource.aux
@@ -14,57 +15,71 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-Unbalanced braces---line 1261 of file chapters/references/references.bib
+Repeated entry---line 790 of file chapters/references/references.bib
+ : @inproceedings{Snow:2013
+ :                         ,
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 1307 of file chapters/references/references.bib
  :  howpublished = "{\http://www.netfilter.org/}
  :                                              }"
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Ver03"
-Warning--I didn't find a database entry for "Cas02"
-Warning--I didn't find a database entry for "Bessani08:depspace"
-Warning--I didn't find a database entry for "Mon11"
-Warning--I didn't find a database entry for "sousa:pc"
-Warning--I didn't find a database entry for "Abd05"
-Warning--I didn't find a database entry for "Kot09"
-Warning--I didn't find a database entry for "Ser10"
-You've used 2 entries,
+Warning--entry type for "Chauhan:2011" isn't style-file defined
+--line 1391 of file chapters/references/references.bib
+Warning--I didn't find a database entry for "Deswarte:1999"
+Warning--I didn't find a database entry for "Bessani2014"
+Warning--to sort, need author or key in juniper
+Warning--to sort, need author or key in paloalto
+Warning--to sort, need author or key in sonicwall
+Warning--empty booktitle in Bhatkar:2003
+Warning--empty year in Bhatkar:2003
+Warning--can't use both volume and number fields in Fraga:1985
+Warning--empty booktitle in Frei:2006
+Warning--empty year in Frei:2006
+Warning--empty publisher in Nist:2012
+Warning--empty chapter and pages in Verissimo:2003
+Warning--empty booktitle in Vianello:2013
+Warning--empty booktitle in Vigna:2003
+Warning--empty year in Vigna:2003
+Warning--empty year in Zhao:2010
+You've used 126 entries,
             2118 wiz_defined-function locations,
-            585 strings with 5878 characters,
-and the built_in function-call counts, 454 in all, are:
-= -- 44
-> -- 14
-< -- 0
-+ -- 6
-- -- 4
-* -- 14
-:= -- 83
-add.period$ -- 8
-call.type$ -- 2
-change.case$ -- 8
+            1217 strings with 26320 characters,
+and the built_in function-call counts, 41309 in all, are:
+= -- 3692
+> -- 2370
+< -- 18
++ -- 940
+- -- 811
+* -- 2773
+:= -- 6893
+add.period$ -- 389
+call.type$ -- 126
+change.case$ -- 778
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 14
-empty$ -- 45
-format.name$ -- 4
-if$ -- 97
+cite$ -- 140
+duplicate$ -- 1564
+empty$ -- 3364
+format.name$ -- 811
+if$ -- 8660
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 0
-newline$ -- 15
-num.names$ -- 4
-pop$ -- 16
+int.to.str$ -- 126
+missing$ -- 101
+newline$ -- 642
+num.names$ -- 248
+pop$ -- 1106
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 655
 quote$ -- 0
-skip$ -- 12
+skip$ -- 1036
 stack$ -- 0
-substring$ -- 10
-swap$ -- 2
-text.length$ -- 0
+substring$ -- 1476
+swap$ -- 298
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
-warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 26
-(There was 1 error message)
+type$ -- 494
+warning$ -- 14
+while$ -- 314
+width$ -- 129
+write$ -- 1322
+(There were 2 error messages)

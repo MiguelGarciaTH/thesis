@@ -14,7 +14,7 @@
 % Colors
 \definecolor{MyRed}{rgb}{0.6,0.0,0.0} 
 \definecolor{MyBlack}{rgb}{0.1,0.1,0.1} 
-\newcommand{\inred}[1]{{\color{MyRed}\sf\textbf{\textsc{#1}}}}
+\newcommand{\inred}[1]{{\color{MyRed}\textbf{\textsc{#1}}}}
 
 % Frame
 \newcommand{\frameit}[2]{
@@ -22,7 +22,7 @@
     {\color{MyRed}
     \framebox[.9\columnwidth][l]{
         \begin{minipage}{.85\columnwidth}
-        \inred{#1}: {\sf\color{MyBlack}#2}
+        \inred{#1}: {\color{MyBlack}#2}
         \end{minipage}
     }\\
     }
@@ -34,7 +34,7 @@
     {\color{MyBlack}
     \framebox[.9\columnwidth][l]{
         \begin{minipage}{.85\columnwidth}
-        \inred{#1}{\sf\color{MyBlack}#2}
+        \inred{#1}{\color{MyBlack}#2}
         \end{minipage}
     }\\
     }

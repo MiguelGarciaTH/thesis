@@ -1,0 +1,109 @@
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    keywordstyle={[2]\color{magenta}},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    comment=[l]{\%},
+    keywords={@relation,@attribute,@data,modifyvm, do, Vagrant, configure, id},
+    morekeywords=[2]{real,integer,numeric,string,date,provider,customize,gui,v,provision, config,vm,box,ssh,insert_key,network},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=1
+}
+
+\lstset{style=mystyle}
+
+
+\newtheorem*{validity}{Validity}{}
+\newtheorem*{liveness}{Liveness}{}
+\newtheorem*{security}{Compliance}{}
+\newtheorem*{resilience}{Resilience}{}
+\newtheorem{definition}{Definition}[]
+\newtheorem{assumption}{Assumption}[]
+
+\newcommand{\sender}{\emph{sender-SQ}\xspace}
+\newcommand{\Sender}{\emph{Sender-SQ}\xspace}
+\newcommand{\senders}{\emph{sender-SQs}\xspace}
+\newcommand{\Senders}{\emph{Sender-SQs}\xspace}
+\newcommand{\presieve}{\emph{pre-SQ}\xspace}
+\newcommand{\Presieve}{\emph{Pre-SQ}\xspace}
+\newcommand{\Presieves}{\emph{Pre-SQs}\xspace}
+\newcommand{\presieves}{\emph{pre-SQs}\xspace}
+\newcommand{\repsieve}{\emph{replica-SQ}\xspace}
+\newcommand{\Repsieve}{\emph{Replica-SQ}\xspace}
+\newcommand{\repsieves}{\emph{replica-SQs}\xspace}
+\newcommand{\Repsieves}{\emph{Replica-SQs}\xspace}
+\newcommand{\postsieve}{\emph{post-SQ}\xspace}
+\newcommand{\Postsieve}{\emph{Post-SQ}\xspace}
+
+\newcommand{\msg}{\texttt{Msg}\xspace}
+\newcommand{\sn}{\emph{sn}\xspace}
+\newcommand{\signature}{\emph{sgn}\xspace}
+\newcommand{\mac}{\emph{mac}\xspace}
+\newcommand{\senderi}{\emph{S}\xspace}
+\newcommand{\sendersqi}{\emph{SQ}\xspace}
+\newcommand{\presievei}{\emph{PS}\xspace}
+\newcommand{\replicak}{\emph{RS}\xspace}
+\newcommand{\postsievej}{\emph{PQ}\xspace}
+\newcommand{\receiverj}{\emph{R}\xspace}
+\newcommand{\privkey}{\emph{prk}\xspace}
+\newcommand{\pubkey}{\emph{puk}\xspace}
+\newcommand{\sharedkey}{\emph{shk}\xspace}
+
+
+\newcommand{\system}{\textsc{Lazarus}\xspace}
+\newcommand{\sieveq}{\textsc{SieveQ}\xspace}
+\newcommand{\controller}{\textsc{Baton}\xspace}
+\newcommand{\fetcher}{\emph{Data manager}\xspace}
+\newcommand{\manager}{\emph{Deploy manager}\xspace}
+\newcommand{\risk}{\emph{Risk manager}\xspace}
+
+\newcommand{\block}{\emph{Diversity block}\xspace}
+\newcommand{\blocks}{\emph{Diversity blocks}\xspace}
+\newcommand{\replica}{\emph{replica}\xspace}
+\newcommand{\replicas}{\emph{replicas}\xspace}
+\newcommand{\configuration}{\emph{System configuration}\xspace}
+\newcommand{\configurations}{\emph{System configurations}\xspace}
+\newcommand{\configurationClean}{System configuration}
+
+
+\newcommand{\systemformula}{risk\xspace}
+\newcommand{\pairformula}{common\xspace}
+\newcommand{\vulnerabilityformula}{score\xspace}
+
+
+\SetKwData{RS}{\texttt{POOL}}
+\SetKwData{ES}{\texttt{CONFIG}}
+\SetKwData{PS}{\texttt{CANDIDATES}}
+\SetKwData{RM}{\texttt{REMOVABLES}}
+\SetKwData{QS}{\texttt{QUARANTINE}}
+\SetKwData{MAX}{\texttt{MAXIMALS}}
+\SetKwData{N}{\texttt{N}}
+\SetKwData{r}{\texttt{r}}
+\SetKwData{K}{\texttt{K}}
+\SetKwData{toRemove}{\texttt{toRemove}}
+\SetKwFunction{Rand}{rand}
+\SetKwFunction{Size}{size}
+\SetKwFunction{Remove}{rm}
+\SetKwFunction{Risk}{risk}
+\SetKwFunction{Common}{common}
+\SetKwFunction{Older}{older}
+\SetKwFunction{healing}{init\_healing}
+\SetKwFunction{Inc}{increment}
+\SetKwFunction{Dec}{decrement}
+\SetKwProg{Fn}{Function}{}{}
