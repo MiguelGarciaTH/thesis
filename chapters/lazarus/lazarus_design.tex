@@ -1,35 +1,13 @@
-\chapter{\system Design}
+\chapter{BFT Diversity Management}
 \label{chap:lazarus_design}
 
  \note{We need to clarify that \system is proactive and \sieveq is reactive, they can be used together. E.g., when there is a problem the controller increases the risk}
 \section{Introduction}
 
-Practical \gls{bft} replication was initially proposed as a solution to handle Byzantine faults of both accidental and malicious nature~\cite{Castro:1999}.
-The correctness of a BFT service comes from the existence of a quorum of correct nodes, capable of reaching consensus on the (total) order of messages to be delivered to the replicas.
-For instance, to tolerate a single replica failure, the system typically must have four replicas~\cite{Castro:2002,Kotla:2010,Aublin:2015}. 
-This model only works if nodes fail independently, otherwise, once an attacker discovers a vulnerability in one node, it is most likely that the remaining nodes suffer from the same weakness. 
 
-In the last twenty years of \gls{bft} replication research, few efforts were made to justify or support this assumption. 
-However, there were great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Veronese:2013,Behl:2017,Liu:2016,Yin:2003}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of BFT systems.
-These works assume, either implicitly or explicitly, that replicas fail independently, relying on some orthogonal mechanism (e.g.,~\cite{Roeder:2010,Chen:1995}) to remove common weaknesses, or rule out the possibility of malicious failures from their system models.
-A few works have implemented and experimented such mechanisms~\cite{Rodrigues:2001,Roeder:2010,Amir:2011}, but in a very limited way.
-Nonetheless, in practice, diversity is a fundamental building block of dependable services in avionics~\cite{Yeh:2004}, military systems~\cite{rhimes}, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} -- three essential applications of \gls{bft}. 
+%This model only works if nodes fail independently, otherwise, once an attacker discovers a vulnerability in one node, it is most likely that the remaining nodes suffer from the same weakness. 
 
-For the few works that do consider the diversity of replicas, the absence of common-mode failures is mostly taken for granted.
-For example, by using memory randomization techniques~\cite{Roeder:2010} or different OSes~\cite{Rodrigues:2001,Junqueira:2005}, it is assumed that such failures will not exist without providing evidence for it. 
-In fact, researchers have argued that randomization techniques do not suffice to create fault independence~\cite{Snow:2013,Bittau:2014}.
-In addition, although the use of distinct OSes promotes fault independence to some extent, \emph{per se} it is not enough to preclude vulnerability sharing among diverse \glspl{os}~\cite{Garcia:2014}.
-
-Even if there was an initial diverse set of $n$ replicas that would have fault independence, long-running services eventually will need to be cleaned from possible failures and intrusions.
-Proactive recovery of \gls{bft} systems~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011} periodically restarts the replicas to remove undetected faulty states introduced by a stealth attacker. 
-However, a common limitation is that these works assume that the weaknesses will be eliminated after the recovery.
-In practice, this does not happen unless the replica code changes after its recovery.
-
-This paper presents \system, 
-%a control plane integrated with BFT replication.
-%It is the first to apply techniques from MTD to automatically change the attack surface of BFT systems in a dependable and automatic way.
-%It is 
-the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
+This paper presents \system, the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
 \system continuously collects security data from \gls{osint} feeds on the internet to build a knowledge base about the possible vulnerabilities, exploits, and patches related to the systems of interest.
 This data is used to create clusters of similar vulnerabilities, which potentially can be affected by (variations of) the same exploit.
 These clusters and other collected attributes are used to analyze the risk of the \gls{bft} system becoming compromised. % due to common vulnerabilities.
@@ -58,20 +36,116 @@ The method overcomes limitations from works that use NVD data for managing the r
 \end{enumerate}
 
 
+
+In a nutshell, as displayed in~Figure~\ref{fig:overview}, \system provides a distributed operating system for \gls{bft}-replicated services.
+The system manages in its execution plane a set of nodes that can run \emph{unmodified replicas} (encapsulated in \glspl{vm} or containers). 
+Each node must have a small \gls{ltu} that allows the activation and deactivation of replicas as demanded by the \system \emph{Controller}, in the control plane.
+The controller decides which software should run at any given time by monitoring the existing vulnerabilities in the pool of replicas, aiming to minimize the risk of having several nodes being compromised by the same attack.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{images/images/overview.pdf}
+\vspace{-5mm}
+\caption{\system overview.}
+\label{fig:overview}
+\end{center}
+\end{figure}
+
+
+\section{System Model}
+\label{sec:systemmodel}
+
+\system system model shares some similarity with previous works on the proactive recovery of \gls{bft} systems (e.g.,~\cite{Castro:2002,Platania:2014,Sousa:2010,Roeder:2010}).
+More specifically, we consider a \emph{hybrid system model} composed of two planes with different properties and assumptions:
+
+\begin{itemize}
+
+\item \textbf{Execution Plane:} 
+This plane is componsed of replica processes that can be subject to Byzantine failures.
+Therefore, a Byzantine replica can try to mislead the other replicas or the clients.
+These replicas communicate through an asynchronous network that can delay, drop or modify messages, just like most \gls{bft} system models~\cite{Castro:1999,Kotla:2010,Bessani:2014,Aublin:2015}.
+This plane hosts $n$ replicas from which at most $f$ can be compromised at any given moment.
+In this paper, we consider the typical scenario in which $n=3f+1$~\cite{Castro:2002,Kotla:2010,Aublin:2015}.  
+
+\item \textbf{Control Plane:}  
+For simplicity, we will address this component as a logical-centralized controller, which requires stronger assumptions. 
+However, in Chapter~\ref{} we introduce \controller which requires weaker assumptions like the Execution Plane.
+
+In this plane, we assume that each component can only fail by crashing. 
+Each \emph{node} hosting processes contains a \gls{ltu}, and there is a logically-centralized controller to reconfigure the system, just like what has been used in several previous works on proactive recovery (e.g.,~\cite{Roeder:2010,Platania:2014,Sousa:2010}).
+The failures of such components do not compromise the liveness and safety of the service as long as the control plane is recovered before $f$ replicas fail.
+
+
+\end{itemize}
+
+Besides the execution and control planes, we assume the existence of two types of external components: (1) clients of the replicated service, which can be subject to Byzantine failures; (2) \gls{osint} sources (e.g., \gls{nvd}, ExploitDB) that can not be subverted and controlled by the adversary.
+In practice, this assumption lead us consider only well-established and authenticated data sources.
+Dealing with untrusted sources is an active area of research in the threat intelligence community (e.g.,~\cite{Sabottke:2015,Liu:2015}), which we consider out of scope for this paper.
+
+
+\section{Execution Plane}
+\label{sec:executionplane}
+
+The Execution Plane can accomodate any replicated system that already levareges on the existence of a controller node (e.g.,~\cite{Sousa:2010,Roeder:2010,Platania:2014,Garcia:2016}) or any \gls{bft} system that would benefit from the \system assistence (e.g.,~\cite{Sousa:2018}). 
+
+
+\section{Control Plane}
+\label{sec:controlplane}
+
+\system is the first control plane that automatically changes the attack surface of a \gls{bft} system in a dependable way.
+\system continuously collects security data from \gls{osint} feeds on the internet to build a knowledge base about the possible vulnerabilities, exploits, and patches related to the systems of interest.
+This data is used to create clusters of similar vulnerabilities, which potentially can be affected by (variations of) the same exploit.
+These clusters and other collected attributes are used to analyze the risk of the \gls{bft} system becoming compromised. % due to common vulnerabilities.
+Once the risk increases, \system replaces the potentially vulnerable replica by another one, trying to maximize the failure independence. % of the replicated service.
+Then, the replaced node is put on quarantine and updated with the available patches, to be re-used later.
+These mechanisms were implemented to be fully automated, removing the human from the loop.
+
+The current implementation of \system manages 17 \gls{os} versions, supporting the \gls{bft} replication of a set of representative applications.
+The replicas run in \glspl{vm}, allowing provisioning mechanisms to configure them. 
+We conducted two sets of experiments, one demonstrates that \system risk management can prevent a group of replicas from sharing vulnerabilities over time; the other, reveals the potential negative impact that virtualization and diversity can have on performance. 
+However, we also show that if naive configurations are avoided, \gls{bft} applications in diverse configurations can actually perform close to our homogeneous bare metal setup.
+
+\section{Diversity of Replicas}
+\label{sec:diversityofreplicas}
+\note{citar survey \cite{Baudry:2015}}
+%BFT-replicated services running on \system are composed by $n$ replicas.
+For our purposes, each \replica is composed of a stack of software, including an OS (kernel plus other software contained in an \gls{os} distribution), execution support (e.g., \gls{jvm}, \gls{dbms}), a \gls{bft} library, and the service that is provided by the system.
+%(see Figure~\ref{fig:arch1}).
+The set of $n$ replicas is called a \configuration.
+
+It is possible to improve the \replicas fault independence by resorting to different \gls{ots} components in the software stack~\cite{Deswarte:1998}. 
+For example, it has been shown that using distinct \glspl{os}~\cite{Garcia:2014}, filesystems~\cite{Rodrigues:2001,Bairavasundaram:2009}, and databases~\cite{Gashi:2007}, can yield important benefits in terms of fault independence. In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
+
+Although \system can exploit automatic techniques, in this paper we center our attention on diverse \gls{ots} components. 
+In particular, \system monitors the disclosed vulnerabilities of all elements of the software stacks of the replicas to assess which of them may contain common vulnerabilities.  
+
+However, in the experimental evaluation, we focus on the diversity of OSes (not only the kernel, but the whole product) for three fundamental reasons: (1) by far, most of the replica’s code is the \gls{os}; (2) such size and importance, make \glspl{os} a valuable target, with new vulnerabilities and exploits being discovered every day; and (3) there are many options of OSes that can be used.
+The two last factors are particularly important to enrich the validity of our analysis.
+
+Moreover, we do not explicitly consider the diversity of the \gls{bft} library (i.e., the protocol implementation) or the service code implemented on top of it.
+Four facts justify this decision: (1) N-version programming is too costly for this~\cite{Avizienis:1977}; (2) there have been some works showing that such protocol implementations can be generated from formally verified specifications~\cite{Hawblitzel:2015,Rahli:2018}; (3) the relatively small size of such components (e.g., a key-value store on top of BFT-SMaRt has less than 15k lines of code~\cite{Bessani:2014}) make them relatively simple to test and assess with some confidence~\cite{Martins:2013,Lee:2014};  and (4) there are no reported vulnerabilities about these system to support our study.
+Notice that, although we do not explicitly consider the diversity of \gls{bft} libraries, nothing prevents \system from monitoring them (when several alternatives become available). 
+Additionally, as a pragmatic approach, we could employ automatic diversity techniques in this layer~\cite{Platania:2014,Roeder:2010}.
+
+
+
+
 \section{Diversity-aware Reconfigurations}
 \label{sec:metric}
 
 The core of \system is the vulnerability evaluation method used to assess the risk of having replicas with shared vulnerabilities.
 This section details this method.
 
-\subsection*{Finding Common Vulnerabilities}
+\subsection{Finding Common Vulnerabilities}
 
-\gls{nist}'s \gls{nvd}~\cite{nvd} is the authoritative data source for disclosure of vulnerabilities and associated information~\cite{Massacci:2010}. 
-\gls{nvd} aggregates vulnerability reports from more than 70 security companies, advisory groups, and organizations, thus being the most extensive vulnerability database on the web. 
-All data is made available as \gls{xml} data feeds, containing the reported vulnerabilities on a given period. 
-Each \gls{nvd} vulnerability receives a unique identifier and a short description provided by the \gls{cve}~\cite{cveterm}. 
-The \gls{cpe}~\cite{cpe} provides the list of products affected by the vulnerability and the date of the vulnerability publication.
-The \gls{cvss}~\cite{cvss} calculates the vulnerability severity considering several attributes, such as the attack vector, privileges required, exploitability score, and the security properties compromised by the vulnerability (i.e., integrity, confidentiality, or availability).
+%\gls{nist}'s \gls{nvd}~\cite{nvd} is the authoritative data source for disclosure of vulnerabilities and associated information~\cite{Massacci:2010}. 
+%\gls{nvd} aggregates vulnerability reports from more than 70 security companies, advisory groups, and organizations, thus being the most extensive vulnerability database on the web. 
+%All data is made available as \gls{xml} data feeds, containing the reported vulnerabilities on a given period. 
+%Each \gls{nvd} vulnerability receives a unique identifier and a short description provided by the \gls{cve}~\cite{cveterm}. 
+%The \gls{cpe}~\cite{cpe} provides the list of products affected by the vulnerability and the date of the vulnerability publication.
+%The \gls{cvss}~\cite{cvss} calculates the vulnerability severity considering several attributes, such as the attack vector, privileges required, exploitability score, and the security properties compromised by the vulnerability (i.e., integrity, confidentiality, or availability).
+WE USE THE NVD (as described in Chapter~\ref{chap:datasource}
+
 
 Previous studies on diversity solely count the number of shared vulnerabilities among different \glspl{os}, assuming that less common vulnerabilities implies a smaller probability of compromising $f+1$ OSes~\cite{Garcia:2014}. 
 Although this intuition may seem acceptable, in practice it underestimates the number of shared vulnerabilities due to imprecisions in the data sources. 
@@ -104,7 +178,7 @@ For example, the vulnerabilities in Table~\ref{tab:missing_products} will be pla
 
 It is worth to remark that by using clusters to find similar vulnerabilities, we conservatively increase the chances of capturing shared weaknesses contributing to the score of a pair of replicas.
 
-\subsection*{Measuring risk}
+\subsection{Measuring risk}
 \label{sec:measurerisk}
 
 As discussed before, each vulnerability in \gls{nvd} has an associated \gls{cvss} severity score. 
@@ -112,7 +186,7 @@ Therefore, a straw man solution for measuring risk would be to sum the \gls{cvss
 However, \gls{cvss} has some limitations that make it unsuitable for managing the risk of replicated systems:
 (1) In practice, it has been shown that there is no correlation between the \gls{cvss} exploitability score and the existence of real exploits for the vulnerability~\cite{Bozorgi:2010}; 
 (2) \gls{cvss} does not provide information about vulnerabilities exploiting and patching times; 
-(3) \gls{cvss} does not account for the vulnerability age, which means that severity remains the same over the years~\cite{Frei:2006}; 
+(3) \gls{cvss} does not account for the vulnerability age, which means that severity remains the same over the years~\cite{Frei:2006,Melo:2013}; 
 and (4) some studies show that \gls{cvss} may overestimate  severity~\cite{Sabottke:2015}, as for example larger scores do not correspond to higher prices in the vulnerabilities' black markets~\cite{Allodi:2014}.
 
 Given these limitations, we derive a novel, more refined, metric to measure the risk of a \gls{bft} system being affected by common vulnerabilities.
@@ -122,7 +196,6 @@ We solved (1) and (2) by using additional \gls{osint} sources that provide infor
 Since NVD does not provide this information, we collect more data from other \gls{osint} sources like Exploit-DB~\cite{edb} for exploits, patching information from CVE-details~\cite{cvedetails}, and additional vendor websites, such as Ubuntu Security Notices~\cite{ubuntu}, Debian Security Tracker~\cite{debian}, and Microsoft Security Advisories and Bulletins~\cite{microsoft} (which also give additional product versions affected by the vulnerability).
 We solve (3) using the vulnerability published date to calculate its age.
 Finally, we only use the \gls{cvss} attributes that concern to integrity and availability, the properties traditionally related with \gls{bft} replication (4).
-
 
 
 \begin{table}[h]
@@ -171,7 +244,7 @@ This is calculated considering the number of days to patch ($DP$) and to exploit
 \emph{(iii)} and we use an amortization function to reflect the fact that older vulnerabilities have are less likely to harm the system ($\mathit{tdist(v_k)} \in [0,1]$).
 
 
-\subsection*{Selecting Configurations}
+\subsection{Selecting Configurations}
 \label{sec:configurations}
 
 
@@ -229,9 +302,11 @@ The heuristic is quite simple: we just calculate the risk of a configuration wit
 %Then, a random \r is picked from \PS and added to \ES (line 35) which is then returned (line 36).
 
 Although better heuristics can be developed, this brute-force method works in \system because we do not expect \RS (our solution space) to be large.
-In addition, this function is only called  if the risk exceeds the threshold. 
+In addition, this function is only called if the risk exceeds the threshold. 
 
-\begin{algorithm}[t]
+{\centering
+\begin{minipage}{.7\linewidth}
+  \begin{algorithm}[H]
 \caption{Replica Set Reconfiguration}\label{alg:algorithm2}
 {\footnotesize
 %\N: number of replicas\;
@@ -302,230 +377,9 @@ In addition, this function is only called  if the risk exceeds the threshold.
 }
 \end{algorithm}
 
-
-\section{\system Implementation}
-\label{sec:implementation}
-
-This section details the implementation of each component of \system. 
-It also briefly presents other aspects of our prototype.% like the management of replicas running in a virtualized environment.
-
-
-\subsection*{Control Plane}
-\label{sec:lazarus}
-
-Figure~\ref{fig:arch1} shows \system control plane with its four main modules, described below.
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=.9\columnwidth]{images/images/architecture_new.pdf}
-\vspace{-5mm}
-\caption{\system architecture.}
-\vspace{-5mm}
-\label{fig:arch1}
-\end{center}
-\end{figure}
-
-
-\circled{1} \textbf{\fetcher.} \system needs to know the software stack of each available replica to be able to look for vulnerabilities in this software.
-The list of software products is provided following the \gls{cpe} Dictionary~\cite{cpe}, which is also used by \gls{nvd}. 
-%The \fetcher determines if the CPE list is updated by checking the most recent CPE count in the NVD web page.
-For each software, the administrator can indicate the time interval (in years) during which data should be obtained from \gls{nvd}' feeds.
-
-The \fetcher parses the \gls{nvd} feeds considering only the vulnerabilities that affect the chosen products. 
-The processing is carried out with several threads cooperatively assemblying as much data as possible about each vulnerability -- a queue is populated with requests pertaining a particular vulnerability, and other threads will look for related data in additional \gls{osint} sources. 
-Typically, the other sources are not as well structured as \gls{nvd}, and therefore they have to be handled with specialized HTML parsers that we have developed. 
-Currently, the prototype supports five other sources, namely Exploit DB, CVE-details, Ubuntu, Debian, and Microsoft. 
-As previously mentioned, such sources provide complementary data, like additional affected products versions not mentioned in \gls{nvd}.
-
-The collected data is stored in a relational database (MySQL).
-For each vulnerability we keep its \gls{cve} identifier, the published date, the products it affects, its text description, some \gls{cvss} attributes (e.g., availability and integrity); and exploit and patching dates.
-
-
-\circled{2} \textbf{\risk.} This component finds out when it is necessary to replace the currently running group of \replicas and discovers an alternative configuration that decreases the risk. 
-As explained in Section~\ref{sec:measurerisk}, the risk is computed using score values that require two kinds of data: the information about the vulnerabilities, which is collected by the \fetcher; and the vulnerability clusters. 
-A vulnerability cluster is a set of vulnerabilities that are related accordingly to their description (see Section~\ref{sec:details} for details).
-The \risk also runs Algorithm~\ref{alg:algorithm2} to monitor the replicated system and trigger reconfigurations.
-
-
-\circled{3} \textbf{\manager.} 
-This component automates the setup and execution of the diverse replicas. 
-It creates and deploys the \replicas in the execution environment implementing the decisions of the \risk, i.e., it dictates when and which \replicas leave and join the system. 
-We developed a replica builder on top of Vagrant~\cite{vagrant}.
-It is responsible for downloading, installing, and configuring the \replicas.
-Moreover, it performs replica maintenance, where  \replicas in \QS are booted to carry out automatic software updates (i.e., patching). 
-
-
-\paragraph{Setup.}
-The box configuration is defined in a configuration file, named \emph{Vagrantfile}, consider the example in Listing~\ref{vagrantfile}.
-In this file, it is possible to set several options of the box, to name a few:
-the box name, the number of CPUs, the amount of memory RAM, the IP, the type of network, sync folders between host and the box, etc. 
-Additionally, it is possible to pass some VM-specific parameters, e.g., some CPU/mother board flags such as enabling VT-x technology -- consider the \texttt{modifyvm} fields in Listing~\ref{vagrantfile} (lines 6-14).
-It is possible to select different \gls{vm} providers (e.g., libvirt, VMware, VirtualBox, Parallels, Docker, etc), we rely on VirtualBox since it is the one with more diversity opportunities in the Vagrant Cloud~\cite{vagrantcloud}. 
-Vagrant Cloud is a website that offers a plethora of different VMs.
-
-\begin{lstlisting}[style=mystyle,caption=Windows Server 2016 Vagrantfile,label=vagrantfile]
-Vagrant.configure(2) do |config|
-	config.vm.box = "geerlingguy/ubuntu1604"
-	config.ssh.insert_key = false
-	config.vm.provider "virtualbox" do |v|
-		v.customize ["modifyvm", :id, "--cpus", 4]
-		v.customize ["modifyvm", :id, "--memory", 22000]
-		v.customize ["modifyvm", :id, "--cpuexecutioncap", 100]
-		v.customize ["modifyvm", :id, "--ioapic", "on"]
-		v.customize ["modifyvm", :id, "--hwvirtex", "on"]
-		v.customize ["modifyvm", :id, "--nestedpaging", "on"]
-		v.customize ["modifyvm", :id, "--pae", "on"]
-		v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-		v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-	end
-	config.vm.network "public_network", ip:"192.168.2.50", bridge:"em1"
-	config.vm.provision :shell, path: "run_debian.sh", privileged: true
-end
-\end{lstlisting}
-
-\todo{Add all fields that are mentioned, then add lines to the text}
-
-\paragraph{Download.}
-One of the fields of the \emph{Vagranfile} is the boxname, the \texttt{box} field is the key that is used to choose which box will be downloaded, each key is unique for each box.
-There are plenty of \glspl{os} and versions ready-to-use, and the same OS/version can have different ``manufacturers" -- some of which are official.
-
-\paragraph{Deploy and provision.}
-Vagrant supports complex provisions mechanisms, such as Chef or Puppet, but shell script was sufficient for us. 
-This is set in the \emph{Vagranfile} \texttt{provision} field, one can describe the provision steps inline or in an external file and link it to the \emph{Vagranfile}.
-Then, when the OS is booting, after the basic setup, the \glspl{os} will execute the provision script.
-In this script, we program which software will be downloaded and run in the \glspl{vm} and what configurations are needed. 
-We have developed shell scripts for each \glspl{os}, some of which share the same script as Debian and Ubuntu. 
-Each \glspl{os}, especially the ones from different \glspl{os} families (e.g., Solaris and BSD) have different commands to execute the same instructions.
-Although different, all scripts were meant to do the same thing:
-First the script installs the software that is missing in the box -- this is not true for all OSes -- like Java 8, \texttt{wget}, \texttt{unzip}, and any additional software that one wants to install/run after the \glspl{os} boot.
-
-
-
-\paragraph{Command and Control.}
-There are some simple commands to boot and halt a box, e.g., \texttt{vagrant up} and \texttt{vagrant halt}. 
-Vagrant also provides an ssh command (\texttt{vagrant ssh}) that allows the host to connect to the box. 
-Our manager component makes the bridge between the \risk and the execution environment.
-We developed an API on top of Vagrant, another level of abstraction made to manage replicated systems.
-
-
-\circled{4} \textbf{LTUs.} Each node that hosts a replica has a Vagrant daemon (see details in next section) running on its trusted domain.
-This component is isolated from the internet and communicates only with the \system controller through \gls{tls} channels.
-
-\subsection*{Additional Details}
-\label{sec:details}
-
-\textbf{Vulnerability Clustering.}
-A few steps are carried out to create the vulnerability clusters. 
-First, the vulnerability description needs to be transformed into a vector, where a numerical value is associated with the most relevant words (up to 200 words). 
-This operation entails, for example, converting all words to a canonical form and calculating their frequency (less frequent words are given higher weights).
-Then, the K-means algorithm is applied to build the clusters~\cite{Jain:2010}, where the number of clusters to be formed is determined by the elbow method~\cite{Thorndike:1953}. 
-%Currently, it is set $K=200$.
-%The algorithm assigns each vulnerability to the cluster with the minimum distance to the cluster center. 
-%Then, it computes the cluster centroid, i.e., the average of each data attribute using only the members of a cluster. 
-%Next, it calculates the distance of every vulnerability to the centroid, potentially placing them in close clusters. 
-%The algorithm stops when there are no further exchanges between clusters.
-%We used the elbow method~\cite{Thorndike53whobelongs} to determine the number of clusters to be formed, in our case was $200$ clusters.
-We used the open-source machine learning library Weka~\cite{weka} to build the clusters. 
-
-
-\subsection*{Clustering}\label{sec:clustering}
-Clustering is the process of aggregating elements into similar groups, named clusters. 
-For example, two elements from the same cluster have a higher probability of being similar than two elements from different clusters. 
-We apply this technique to build clusters of similar vulnerabilities.
-One of the benefits of applying clustering techniques to vulnerability-data is that the algorithm does not need prior knowledge about the data.
-It is the process alone that discovers the hidden knowledge in the data.
-Each cluster is used as a hint that similar vulnerabilities are likely to be activated through the same or similar exploit.
-We considered the vulnerability description and published date to find these similarities. 
-In the end, it is expected that the clusters have a minimal number of elements that just represent the same or similar vulnerabilities.
-
-
-In order to apply a clustering technique to our data, we need to follow some steps:
-
-\paragraph{1) Data representation}
-We transform the data that is stored in a database into a format that is readable by the clustering algorithm. 
-Since we are using Weka~\cite{weka}, the data must be represented as \gls{arff}. 
-Basically, this is a CSV file with some meta information, see Listing~\ref{list:arff}.
-
-\begin{lstlisting}[style=mystyle,caption=ARFF file describing a vulnerability.,label=list:arff]
-@RELATION vulnerabilities
-@ATTRIBUTE cve string
-@ATTRIBUTE description string
-@ATTRIBUTE published_date date "yyyy-MM-dd"
-@DATA
-CVE-2017-3301, 'vulnerability in the solaris component of oracle sun systems products suite subcomponent kernel the supported version that is [...] attacks of this vulnerability can result in unauthorized update insert or delete access to some of solaris accessible data cvss v base score integrity impacts', '2017-01-27'
-...more
-\end{lstlisting}
-
-
-This file contains all the vulnerabilities entries in the database. 
-As we are interested in the vulnerability similarities, we select only the \gls{cve} identifier, the text, that contains the most relevant and nonstructured information, and the published date.
-These attributes add meaning and temporal reference to the clustering algorithm.
-
-
-\paragraph{2) Data preparation}
-In general, machine learning algorithms do not handle raw data, then the data needs to be prepared:
-First, we transform the \gls{cve} string into a number, basically, for each \gls{cve}, there is a real number that identifies each \gls{cve} unequivocally. 
-This attribute is transformed in numeric values using \emph{StringToNominal} filter. 
-Each \gls{cve} identifier is mapped to a numeric value.
-Second, we transform the published date to a number format that Weka can handle using the \emph{NumericToNominal} filter.
-Third, the text description must be transformed into a vector, the vector will represent the frequencies of each word in the whole document of strings. 
-We used the \emph{StringToWordVector} to transform a text string into a vector of word weights, these weights represent the relevance of each word in the document.
-This filter contains the following parameters:
-\begin{itemize}
-\item \textbf{TF- and IDF-Transform}, both set to true, TF-IDF stands for term frequency-inverse document frequency. 
-This is a statistical measure used to evaluate how relevant a word is to a document in a collection. 
-The relevance increases proportionally to the number of times a word appears in the document but is offset by the frequency of the word in the corpus. 
-For example, words that appear in all vulnerability descriptions, are less relevant than the ones that appear more in few vulnerabilities.
-\item \textbf{lowerCaseTokens}, convert all the words to lower case.
-\item \textbf{minTermFreq}, set to -1, this will preserve any word despite their occurrences in the document.
-\item \textbf{normalizeDocLength}, set to normalize all data.
-\item \textbf{stopwords}, we define a stop word list, then words from this list are discarded. We begin with a general English stop word list containing pronouns, articles, etc. 
-\item \textbf{tokenizer}, set to \emph{WordTokenizer}, this filter will remove special characters from the text, there is a default set of characters but we added a few more.
-\item \textbf{wordsTopKeep}, is the number of words that will be kept to make the clusters. We kept $200$ as it was the number of words that represent better the lexical of vulnerabilities after removing the \emph{stopwords}.
-\end{itemize}
-
-
-Our goal is to build clusters in such way that similar vulnerabilities, even if they affect different products, are put together in the same cluster. 
-For example, recall the vulnerabilities in Table~\ref{tab:missing_products}, which can be put in the same cluster since they are very similar.
-Some of the parameters listed above needed some tuning to achieve our goals.
-For example, before the tuning, some of the clusters were representing types of vulnerabilities, e.g., buffer overflow, cross-site scripting, etc. 
-Since we are not interested in that type of clusters we have refined our \emph{stopword list} to reduce the description vocabulary to contain only what matters for us.
-We have done this by iterating the process and checking the most used words (top 200 words) for clustering (this can be seen in Weka's intermediary output).
-Then, we added the most relevant from the 200 words that were deviating from our goal.
-In the end, we have a stop word list~\footnote{Stop word list is available: here} without the security-vocabulary noise.
-
-
-When the pre-filtering ends, Weka presents a file very similar to the previous \gls{arff} file with the difference that the features are the most relevant words in the corpus. And each instance contains a value of relevance for each word.
-
-
-\paragraph{3) Making clusters}
-K-means is an unsupervised machine learning algorithm that groups data in K clusters.
-The \emph{K-means} has two important parameters: the number of clusters to be formed, we set to $200$ clusters. We used the elbow method~\cite{Thorndike:1953} to decide $k=200$; and the \emph{distance function}, to calculate the distance between objects, the \emph{Euclidean Distance} is the most adequate for this type of data;
-The \emph{K-means} computes the distance from each data entry to the cluster center (randomly selected in the first round).
-Then, it assigns each data entry to a cluster based on the minimum distance (i.e., Euclidean distance) to each cluster center.
-Then, it computes the centroid, that is the average of each data attribute using only the members of each cluster.
-Calculate the distance from each data entry to the recent centroids. 
-If there is no modification (i.e., re-arrangement of the elements in the cluster), then the clusters are complete, or it recalculates the distance that best fits the elements. 
-When the K-means finishes the execution, we take the cluster assignments of each vulnerability. 
-The assignments will be added to a new \gls{arff} file, similar to the first one but with a new attribute that is the cluster name (e.g., cluster1, cluster2, etc). 
-
-
-
-Sometimes the resulting clusters include vulnerabilities that are unrelated. Therefore, we use the Jaccard index (J-index) to measure the similarity between the vulnerabilities within the cluster. We calculate the J-index of each element, and then the average J-index of the cluster. 
-The clusters with a smaller average J-index (below a certain threshold) are considered ill-formed. In this case, we select the vulnerabilities with lower J-index and move them to another cluster that would result in a better J-index. If no such cluster exists, then we create a new one with the ``orphan'' vulnerability.
-
-\textbf{BFT replication.}
-Although there has been relevant research on \gls{bft} protocols over the last twenty years, there are few open-source replication libraries that implement them. \system can use any of those libraries, as long as they support replica set reconfigurations.
-More specifically, to manage the \replicas, we need the ability to add first a new \replica to the set and then remove the old \replica to be quarantined. 
-Therefore, we employ BFT-SMaRt~\cite{Bessani:2014}, a stable \gls{bft} library that provides reconfigurations on the \replicas set.
-
-\textbf{Replica Virtualization.}
-\glspl{vm} can be used to implement replicated systems, leveraging on the isolation between the untrusted and the trusted domains~\cite{Sousa:2010,Platania:2014,Distler:2011}.
-Recovery triggering can be initiated from the isolated domain in a synchronous manner, reducing the downtime of the service during the reconfigurations. 
-In our implementation, we resort to the Vagrant~\cite{vagrant} provisioning tool to do fast deployment of ready-to-use \glspl{os} and applications on \glspl{vm}. 
-Vagrant supports several virtualization providers, e.g., VMware and Docker. 
-From the available alternatives, we chose VirtualBox~\cite{virtualbox} because it offers more diversity opportunities, i.e., it supports a more extensive set of different guests \glspl{os}.
-%The VMs are available in the Vagrant Cloud~\cite{vagrantcloud}.
+\end{minipage}
+\par
+}
 
 
 \section{Evaluation of Replica Set Risk}
@@ -574,7 +428,7 @@ At the beginning of the execution phase, the OSes are assumed to be fully patche
 
 
 
-\subsection*{Diversity vs Vulnerabilities}
+\subsection{Diversity vs Vulnerabilities}
 We evaluate how each strategy can prevent the replicated system from being compromised. 
 Each strategy is analyzed over $5000$ runs throughout the execution phase in two-month slots. 
 Different runs are initiated with distinct random number generator seeds, resulting in potentially different \gls{os} selections over the time slot. 
@@ -597,7 +451,7 @@ Interestingly, and contrary to intuition, changing \glspl{os} every day with no 
 Therefore, it is paramount to have selection strategies like the ones we use in \system.
 \note{Add all the months we already have}
 
-\subsection*{Risk evaluation}
+\subsection{Risk evaluation}
 
 
 In order to better understand how \system performed, we isolated one of the $5000$ runs to observe the risk evolution over time. 
@@ -623,7 +477,7 @@ But then, the next reconfigurations are carried out with the goal of decreasing 
 Notice that the risk value is always under $1$ for \system, and in the \emph{Random} is mostly above $10$.
 
 
-\subsection*{Diversity vs Attacks}
+\subsection{Diversity vs Attacks}
 
 \begin{table}[t]
 \begin{center}

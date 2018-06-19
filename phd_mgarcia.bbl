@@ -58,6 +58,12 @@ E.~Androulaki, A.~Barger, V.~Bortnikov, C.~Cachin, K.~Christidis, A.~De~Caro,
 \newblock In {\em Proceedings of the ACM European Conference on Computer
   Systems}, 2018.
 
+\bibitem{weka}
+M.~L.~G. at~the University~of Waikato.
+\newblock {WEKA}.
+\newblock \url{http://www.cs.waikato.ac.nz/ml/weka/}, 2018.
+\newblock Accessed: 2018-4-26.
+
 \bibitem{Aublin:2015}
 P.~Aublin, R.~Guerraoui, N.~Kne\v{z}evi\'{c}, V.~Qu{\'e}ma, and M.~Vukoli\'{c}.
 \newblock {The Next 700 BFT Protocols}.
@@ -76,6 +82,12 @@ L.~N. Bairavasundaram, S.~Sundararaman, A.~C. Arpaci-Dusseau, and R.~H.
 \newblock {Tolerating File-system Mistakes with EnvyFS}.
 \newblock In {\em Proceedings of the Annual Conference on USENIX Annual
   Technical Conference}, 2009.
+
+\bibitem{Baudry:2015}
+B.~Baudry and M.~Monperrus.
+\newblock {The Multiple Facets of Software Diversity: Recent Developments in
+  Year 2000 and Beyond}.
+\newblock {\em ACM Computer Surveys}, 48(1):16:1--16:26, Sept. 2015.
 
 \bibitem{Behl:2015}
 J.~Behl, T.~Distler, and R.~Kapitza.
@@ -102,7 +114,7 @@ A.~Bessani, E.~P. Alchieri, M.~Correia, and J.~Fraga.
   Systems}, 2008.
 
 \bibitem{Bessani:2013}
-A.~Bessani, M.~Santos, J.~F\'elix, N.~Neves, and M.~Correia.
+A.~Bessani, M.~Santos, J.~{a}o F\'elix, N.~Neves, and M.~Correia.
 \newblock On the efficiency of durable state machine replication.
 \newblock In {\em Proceedings of the USENIX Annual Technical Conference}, June
   2013.
@@ -209,6 +221,12 @@ Debian.
 \newblock \url{https://security-tracker.debian.org/tracker/}, 2018.
 \newblock Accessed: 2018-4-26.
 
+\bibitem{Deswarte:1998}
+Y.~Deswarte, K.~Kanoun, and J.~Laprie.
+\newblock {Diversity Against Accidental and Deliberate Faults}.
+\newblock In {\em Proceedings of the Conference on Computer Security,
+  Dependability, and Assurance: From Needs to Solutions}, 1998.
+
 \bibitem{cvedetails}
 C.~Details.
 \newblock {CVE Details Website}.
@@ -256,7 +274,7 @@ B.~Freeman.
 
 \bibitem{Frei:2006}
 S.~Frei, M.~May, U.~Fiedler, and B.~Plattner.
-\newblock 6large-scale vulnerability analysis.
+\newblock Large-scale vulnerability analysis.
 
 \bibitem{Garcia:2016b}
 M.~Garcia and A.~B. amd N.~Neves.
@@ -274,6 +292,11 @@ M.~Garcia, A.~Bessani, I.~Gashi, N.~Neves, and R.~Obelheiro.
 M.~Garcia, A.~Bessani, I.~Gashi, N.~Neves, and R.~Obelheiro.
 \newblock {Analysis of Operating System Diversity for Intrusion Tolerance}.
 \newblock {\em Software: Practice and Experience}, 44(6):735--770, 2014.
+
+\bibitem{Garcia:2012b}
+M.~Garcia, N.~Neves, and A.~Bessani.
+\newblock Diversys: Diverse rejuvenation system.
+\newblock In {\em {Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)}, 2012.
 
 \bibitem{Garcia:2013}
 M.~Garcia, N.~Neves, and A.~Bessani.
@@ -342,6 +365,20 @@ HashiCorp.
 \newblock {Vagrant Cloud}.
 \newblock {\url{https://app.vagrantup.com/boxes/search}}, 2017.
 \newblock Accessed: 2018-4-26.
+
+\bibitem{Hawblitzel:2015}
+C.~Hawblitzel, J.~Howell, M.~Kapritsos, J.~Lorch, B.~Parno, M.~L. Roberts,
+  S.~Setty, and B.~Zill.
+\newblock {IronFleet: Proving Practical Distributed Systems Correct}.
+\newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
+  Principles}, 2015.
+
+\bibitem{Holm:2014}
+H.~Holm.
+\newblock A large-scale study of the time required to compromise a computer
+  system.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  11(1):2--15, Jan 2014.
 
 \bibitem{Homescu:2013}
 A.~Homescu, S.~Neisius, P.~Larsen, S.~Brunthaler, and M.~Franz.
@@ -438,6 +475,12 @@ L.~Lamport.
 \newblock {\em ACM Transactions Programming Languages Systems}, 6(2):254--280,
   Apr. 1984.
 
+\bibitem{Lamport:1982}
+L.~Lamport, R.~Shostak, and M.~Pease.
+\newblock The byzantine generals problem.
+\newblock {\em ACM Transactions Programming Languages Systems}, 4(3):382--401,
+  July 1982.
+
 \bibitem{Larsen:2014}
 P.~Larsen, S.~Brunthaler, and M.~Franz.
 \newblock {Security through Diversity: Are We There Yet?}
@@ -454,12 +497,19 @@ C.-L. Lee, Y.-S. Lin, and Y.-C. Chen.
   Inspection}.
 \newblock {\em {PLoS ONE}}, 10(10), 10 2015.
 
+\bibitem{Lee:2014}
+H.~Lee, J.~Seibert, E.~Hoque, C.~Killian, and C.~Nita-Rotaru.
+\newblock Turret: A platform for automated attack finding in unmodified
+  distributed system implementations.
+\newblock In {\em Proceedings of the IEEE International Conference on
+  Distributed Computing Systems}, 2014.
+
 \bibitem{Liao:2016}
 X.~Liao, K.~Yuan, X.~Wang, Z.~Li, L.~Xing, and R.~Beyah.
 \newblock {Acing the {IoC} game: Toward automatic discovery and analysis of
   open-source cyber threat intelligence}.
-\newblock In {\em Proceedings of the ACM SIGSAC Conference on Computer and
-  Communications Security}, 2016.
+\newblock In {\em {Proceedings of the ACM Conference on Computer and
+  Communications Security}}, 2016.
 
 \bibitem{Liu:2016}
 S.~Liu, P.~Viotti, C.~Cachin, V.~Quema, and M.~Vukolic.
@@ -467,12 +517,33 @@ S.~Liu, P.~Viotti, C.~Cachin, V.~Quema, and M.~Vukolic.
 \newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
   Design and Implementation}, 2016.
 
+\bibitem{Liu:2015}
+Y.~Liu, A.~Sarabi, J.~Zhang, P.~Naghizadeh, M.~Karir, M.~Bailey, and M.~Liu.
+\newblock {Cloudy with a chance of breach: Forecasting cyber security
+  incidents}.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, 2015.
+
+\bibitem{Martins:2013}
+R.~Martins, R.~Gandhi, P.~Narasimhan, S.~Pertet, A.~Casimiro, D.~Kreutz, and
+  P.~Ver{\'i}ssimo.
+\newblock Experiences with fault-injection in a byzantine fault-tolerant
+  protocol.
+\newblock In {\em {Proceedings of the ACM/IFIP/USENIX International Conference
+  on Middleware}}, 2013.
+
 \bibitem{Massacci:2010}
 F.~Massacci and V.~H. Nguyen.
 \newblock {Which is the Right Source for Vulnerability Studies?: An Empirical
   Analysis on Mozilla Firefox}.
 \newblock In {\em Proceedings of the International Workshop on Security
   Measurements and Metrics}, 2010.
+
+\bibitem{Melo:2013}
+M.~Melo, P.~Maciel, J.~Araujo, R.~Matos, and C.~Araújo.
+\newblock Availability study on cloud computing environments: Live migration as
+  a rejuvenation mechanism.
+\newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
+  Dependable Systems and Networks}, 2013.
 
 \bibitem{microsoft}
 Microsoft.
@@ -517,6 +588,19 @@ J.~Moscola, J.~Lockwood, R.~Loui, and M.~Pachos.
 \newblock In {\em Proceedings of the Annual IEEE Symposium on
   Field-Programmable Custom Computing Machines}, 2003.
 
+\bibitem{Mu:2014}
+C.~Mu, M.~Yu, Y.~Li, and W.~Zang.
+\newblock Risk balance defense approach against intrusions for network server.
+\newblock {\em International Journal of Information Security}, 13(3):255--269,
+  Jun 2014.
+
+\bibitem{Nappa:2015}
+A.~Nappa, R.~Johnson, L.~Bilge, J.~Caballero, and T.~Dumitras.
+\newblock {The Attack of the Clones: A Study of the Impact of Shared Code on
+  Vulnerability Patching}.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2015.
+
 \bibitem{Nist:2012}
 {National Institute of Standards and Technology}.
 \newblock {\em {{Guide for Conducting Risk Assessments}}}.
@@ -525,6 +609,7 @@ J.~Moscola, J.~Lockwood, R.~Loui, and M.~Pachos.
 \bibitem{iptables}
 Netfilter.
 \newblock The netfilter.org project.
+\newblock {\url{http://www.netfilter.org/}}.
 \newblock Accessed: 2018-4-26.
 
 \bibitem{Newell:2015}
@@ -539,6 +624,12 @@ NIST.
 \newblock {National Vulnerability Database}.
 \newblock {\url{http://nvd.nist.gov/}}, 2018.
 \newblock Accessed: 2018-4-26.
+
+\bibitem{Nogueira:2018}
+A.~Nogueira, M.~Garcia, A.~Bessani, and N.~Neves.
+\newblock On the challenges of building a bft scada,.
+\newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
+  Dependable Systems and Networks}, 2018.
 
 \bibitem{Obelheiro:2006}
 R.~R. Obelheiro, A.~N. Bessani, L.~C. Lung, and M.~Correia.
@@ -577,24 +668,22 @@ Pyloris.
 \newblock {\url{https://sourceforge.net/projects/pyloris/}}, Accessed:
   2018-4-26.
 
+\bibitem{Rahli:2018}
+V.~Rahli, I.~Vukotic, M.~Volp, and P.~Verissimo.
+\newblock {Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}.
+\newblock In {\em Proceedings of the European Symposium on Programming}, 2018.
+
+\bibitem{Randell:1975}
+B.~Randell.
+\newblock {System Structure for Software Fault Tolerance}.
+\newblock {\em IEEE Transactions on Software Engineering}, 1(2), 1975.
+
 \bibitem{Reiser:2007}
 H.~P. Reiser and R.~Kapitza.
 \newblock {VM-FIT: supporting intrusion tolerance with virtualisation
   technology}.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, 2007.
-
-\bibitem{weka}
-\relax Machine Learning Group at the University~of Waikato.
-\newblock {WEKA}.
-\newblock \url{http://www.cs.waikato.ac.nz/ml/weka/}, 2018.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{virtualbox}
-\relax Oracle~VirtualBox.
-\newblock {VirtualBox}.
-\newblock {\url{https://www.virtualbox.org/}}, 2018.
-\newblock Accessed: 2018-4-26.
 
 \bibitem{Rodrigues:2001}
 R.~Rodrigues, M.~Castro, and B.~Liskov.
@@ -626,6 +715,13 @@ M.~Serafini, P.~Bokor, D.~Dobre, M.~Majuntke, and N.~Suri.
   Presence of Unresponsive Replicas}.
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, 2010.
+
+\bibitem{Shahzad:2012}
+M.~Shahzad, M.~Z. Shafiq, and A.~X. Liu.
+\newblock A large scale exploratory analysis of software vulnerability life
+  cycles.
+\newblock In {\em Proceedings of the International Conference on Software
+  Engineering}, 2012.
 
 \bibitem{snort}
 Snort.
@@ -727,6 +823,12 @@ V.~Vianello, V.~Gulisano, R.~Jimenez-Peris, M.~Patino-Martinez, R.~Torres,
 G.~Vigna, W.~Robertson, V.~Kher, and R.~A. Kemmerer.
 \newblock 6a stateful intrusion detection system for world-wide web servers.
 
+\bibitem{virtualbox}
+O.~VirtualBox.
+\newblock {VirtualBox}.
+\newblock {\url{https://www.virtualbox.org/}}, 2018.
+\newblock Accessed: 2018-4-26.
+
 \bibitem{Wang:2014}
 L.~Wang, S.~Jajodia, A.~Singhal, P.~Cheng, and S.~Noel.
 \newblock {k-Zero Day Safety: A Network Security Metric for Measuring the Risk
@@ -741,6 +843,13 @@ D.~Williams-King, G.~Gobieski, K.~Williams-King, J.~P. Blake, X.~Yuan, P.~Colp,
 \newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
   Design and Implementation}, 2016.
 
+\bibitem{Xiao:2017}
+G.~Xiao, Z.~Zheng, B.~Yin, K.~S. Trivedi, X.~Du, and K.~Cai.
+\newblock Experience report: Fault triggers in linux operating system: from
+  evolution perspective.
+\newblock In {\em Proceedings of the IEEE International Symposium on Software
+  Reliability Engineering}, 2017.
+
 \bibitem{Yeh:2004}
 Y.~Yeh.
 \newblock {Unique dependability issues for commercial airplane fly by wire
@@ -754,6 +863,12 @@ J.~Yin, J.~Martin, A.~Venkataramani, L.~Alvisi, and M.~Dahlin.
   Services}.
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
   Principles}, 2003.
+
+\bibitem{Zhai:2014}
+E.~Zhai, R.~Chen, D.~I. Wolinsky, and B.~Ford.
+\newblock Heading off correlated failures through independence-as-a-service.
+\newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
+  Design and Implementation}, 2014.
 
 \bibitem{Zhao:2010}
 F.~Zhao, M.~Li, W.~Qiang, H.~Jin, D.~Zou, and Q.~Zhang.

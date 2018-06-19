@@ -1,5 +1,12 @@
-\chapter{\sieveq}
+\chapter{\sieveq an Use Case}
 \label{chap:sieveq}
+
+In the previous chapter, we presented \system a dataplane controler for \gls{bft} systems. 
+In already briefly described \sieveq in the \system last experiment. 
+In this chapter we detail \sieveq contributions.
+\sieveq a message queue service that protects and regulates the access to critical systems, in a way similar to an application-level firewall.
+The solution provices fault and intrusion tolerance by employing an architecture based on two filtering layers, enabling efficient removal of invalid messages at early stages and decreasing the costs associated with \gls{bft} replication of previous solutions.
+
 
 \section{Introduction}
 
@@ -73,7 +80,7 @@ Thus, if a compromised replica produces a message with malicious content, it wil
 \begin{figure}[!t]
 \begin{center}
 \includegraphics[width=.8\columnwidth]{images/images/arch_traditional.pdf}
-\caption{\small Architecture of a state-of-the-art replicated firewall.}
+\caption{Architecture of a state-of-the-art replicated firewall.}
 \label{fig:traditional}
 \end{center}
 \end{figure}
@@ -112,7 +119,7 @@ The results show that the system performance is significantly affected by the at
 \subfloat{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf}}
 \hspace{-5mm}
 \subfloat{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf}}
-\caption{\small Effect of a DoS attack (initiated at second 50) on the latency and throughput of the intrusion-tolerant firewall architecture displayed in Figure \ref{fig:traditional}.}
+\caption{Effect of a DoS attack (initiated at second 50) on the latency and throughput of the intrusion-tolerant firewall architecture displayed in Figure \ref{fig:traditional}.}
 \label{fig:attack_traditional}
 \end{center}
 \end{figure}
@@ -121,7 +128,38 @@ In \sieveq, we explore a different design for replicated protection devices, whe
 In particular, we propose an architecture in which critical services and devices can only be accessed through a message queue and implement the application-level filtering in this queue.
 It is assumed that these services have a limited number of senders, which can be appropriately configured to ensure that only they are authorized to communicate through \sieveq.
 
-\subsection*{\sieveq Architecture}
+\section{Overview of \sieveq}
+\label{architecture}
+
+Typical resilient firewall designs are based on primary-backup replication, and consequently, they are able to tolerate only crash failures.
+Therefore, more elaborated failure modes may allow an adversary to penetrate into the protected network.
+
+
+Some organizations deal with crashes (or \gls{dos} attacks) by resorting to several firewalls to support multiple entry points. 
+This solution is helpful to address some (accidental) failures, but is incapable of dealing with an intrusion in a firewall.
+In this case, the adversary gains access to the internal network, enabling an escalation of the attack, which at that stage can only be stopped if other protection mechanisms are in place.
+
+\sieveq provides a message queue abstraction for critical services, applying various filtering rules to determine if messages are allowed to go through.
+\sieveq is not a conventional firewall and we do not claim that it should replace existing firewalls in all deployment scenarios.
+We are focusing on service- or information-critical systems that require a high-level of protection, and therefore, justify the implementation of advanced replication mechanisms.
+The system we propose is able to deliver messages while guaranteeing authenticity, integrity, and availability.
+As a consequence, and in contrast to conventional firewalls, we lose transparency on senders and receivers, since they are aware of the \sieveq's end-points.
+The rest of the section explains how we address some of the mentioned issues and introduces the main design choices and the architecture of \sieveq.
+
+\subsection{Design Principles}
+Our solution was guided by the following  principles:
+
+\begin{itemize}
+
+\item \emph{Application-level filtering}: support sophisticated firewall filtering rules that take advantage of application knowledge. \sieveq implements this sort of rules by maintaining state about the existing flows, and this state has to be consistently replicated using a \gls{bft} protocol.
+
+\item \emph{Performance}: address the most probable attack scenarios with highly efficient approaches, and as early as possible in the filtering stages; Reduce communication costs with external senders, as these messages may have to travel over high latency links (e.g., do not require message multicasts).	
+
+\item \emph{Resilience}: tolerate a broad range of failure scenarios, including malicious external/internal attackers, compromised authenticated senders, and intrusions in a subset of the \sieveq components; Prevent malicious external traffic from reaching the internal network by requiring explicit message authentication.
+
+\end{itemize}
+
+\subsection{\sieveq Architecture}
 
 A fundamental difference of the \sieveq architecture, when compared with other replicated firewall designs (see Figure~\ref{fig:traditional}), is the separation of filtering in several stages.
 The rationale for this change is to gain flexibility in the filtering operations while ensuring better performance under attack, retaining the ability to tolerate intrusions.
@@ -138,7 +176,7 @@ If a \presieve becomes overloaded, it will request the creation of more \presiev
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{images/images/arch.pdf}
-\caption{\small \sieveq layered architecture.}
+\caption{\sieveq layered architecture.}
 \label{fig:arch}
 \end{center}
 \end{figure}
@@ -149,12 +187,10 @@ They receive all accepted messages from the \presieves and process them in the s
 However, if $f$ replicas are faulty, their output could be different.
 Consequently, as long as more than two-thirds of the \repsieves are correct, the right decision is taken by the \postsieve by performing a message voting.
 
-In the following, we describe each module of Figure~\ref{fig:arch}:
+In the following, we describe each module of \sieveq presented in Figure~\ref{fig:arch}:
 
-\note{TOM deve ser explicado na intro}
 
 \begin{itemize}
-
 
 \item \sender: The sender nodes cooperate with \sieveq to secure the messages by deploying a \sender module locally. 
 Its primary role is to secure the messages and assist in the detection of some intruded \sieveq components. 
@@ -182,25 +218,56 @@ From a deployment perspective, this module can be implemented in the \gls{os} or
 It takes input from the \repsieves to decide on the creation or destruction of \presieves if some misbehavior is observed.
 Depending on the actual \sieveq implementation, it can be developed in different ways.
 This sort of component was used in previous works, and it can be implemented both in a centralized~\cite{Roeder:2010,Platania:2014} or distributed~\cite{Sousa:2010} way.
-In Chapter~\ref{chap:lazarus}, we present a sophisticated implementation of this controller component and in the Chapter~\ref{chap:controller} we present a intrusion-tolerant \emph{controller} version.
+As already presented in Chapter~\ref{chap:lazarus_implementation}, we presented an implementation for this type of controllers.
 
 
 \end{itemize}
 
+\subsection{Resilience Mechanisms}
+
+The \sieveq architecture is built to tolerate both faults with an accidental nature (e.g., crashes) and caused by malicious actions (e.g., a vulnerability is exploited and a specific module is compromised).
+To be conservative, we assume that all failed components are controlled by a single entity, which will make them act together in the worst possible manner to defeat the correctness of the system. Therefore, failed components can for instance: stop sending messages, produce erroneous information, or try to delay the system. 
+\sieveq performs several mitigation actions to guarantee a valid operation (as long as the number of faults is within the assumed bounds, see Section~\ref{fault_model}).
+
+The most common attack scenario occurs when an external adversary attempts to attack a system that is being protected by \sieveq. 
+He can deploy many nodes, whose aim is either to delay the communications or bypass \sieveq protection and reach the internal network. 
+\sieveq addresses these attacks by discarding unauthenticated or corrupted messages with minimal effort at the \presieve filtering stage.
+As with any other firewall, if a DoS attack completely overloads the incoming channels, \sieveq cannot handle or react to the attack.
+The network needs to include other defense mechanisms to deal with this sort of problem~\cite{Mishra:2011}.
+
+As (authenticated) senders  might be spread over many (outside) networks, it is advisable to consider a second scenario where an adversary is capable of taking control of some of these nodes. 
+In this case, we assume that the adversary gains access to all data stored locally, including the \sender keys. 
+Thus, he will be able to generate traffic that is correctly authenticated, allowing these messages to go through the first filtering step.
+The messages are however still checked against the application related rules (namely, the ones defined in the \repsieve), which can cause most malicious traffic to be dropped (e.g., a pre-defined \sender can only send messages to a particular \postsieve accordingly to a specific application protocol).
+If the messages follow all the rules, the firewall has to forward them because they are indistinguishable from any other valid messages.
+
+A third scenario occurs when the adversary is able to cause an intrusion in \sieveq and compromises a few of the \presieves and/or \repsieves. 
+When this happens, these components can act in an erroneous (Byzantine) way. 
+However, unlike with an intruded \sender, malicious \presieves cannot generate fully authenticated messages, since they lack all the required keys. 
+They can still perform \gls{dos} attacks on the \repsieves, e.g., by transmitting many messages, but this strategy creates an obvious misbehavior allowing immediate discovery. 
+Malicious \presieves are detected with the assistance of correct \sender and  \repsieves, eventually leading to their substitution.
+
+\Repsieves modules are much harder to exploit because they do not face the external network. However, if they end up being intruded, \repsieves can produce arbitrary traffic to the internal network. \Postsieve addresses this issue by carrying out a voting step, which excludes these messages. Moreover, an alarm is generated and sent to the \emph{controller}.
+
+The \sieveq architecture makes no attempt to recover from intrusions in the \emph{controller} and \postsieve.
+The first is assumed to be trusted, as it is deployed in a separated administrative domain and is to be used only in a few very specific operations.
+Moreover, its simplicity allows the audit of its code and ensures correctness with a high level of confidence.
+The \postsieve already runs in the internal network, and therefore, \sieveq can not preclude its misbehavior.
 
 
-\subsection*{System and Threat Model}
+
+\subsection{System and Threat Model}
 \label{fault_model}
 
-The system is composed of a (potentially) large number of external nodes, called \emph{senders}, some internal nodes, called \emph{receivers}, and \system nodes.
-Senders run \sender modules to be able to transmit packets through the \system, while receivers receive validated messages by using \postsieve modules. 
+The system is composed of a (potentially) large number of external nodes, called \emph{senders}, some internal nodes, called \emph{receivers}, and \sieveq nodes.
+Senders run \sender modules to be able to transmit packets through the \sieveq, while receivers receive validated messages by using \postsieve modules. 
 
 Communications can experience accidental faults or attacks.
 Thus, packets might be lost, delayed, reordered or corrupted, but we assume that if messages are retransmitted, eventually they will be correctly received by \sieveq.
 The fault model also assumes that \sender, \presieve, and \repsieve nodes can suffer from arbitrary (Byzantine) faults.
 When this happens, failed nodes may perform actions that deviate from their specification, including colluding against the system.
 However, at most $f_{ps}$ \presieves from a total of $N_{ps} = f_{ps} + k$ (with $k > 1$), and $f_{rs}$ \repsieve from a total of $N_{rs} = 3f_{rs}+1$ may fail.
-Redundant components should fail independently by employing diversity techniques such as the ones described in Chapter~\ref{chap:lazarus}.
+Redundant components should fail independently by employing diversity techniques such as the ones described in Chapter~\ref{chap:lazarus_design}.
 A component that is unable to communicate is also considered faulty because from a practical perspective it is indistinguishable from a crashed module.
 
 The cryptographic operations used in the \sieveq protocol are assumed to be secure, and therefore, they cannot be subverted by an adversary. 
@@ -210,7 +277,7 @@ We assume that the key distribution scheme is similar to solutions that already 
 If required, the key distribution infrastructure could also be made intrusion-tolerant~\cite{Kreutz:2014,Zhou:2002}.
 
 
-\subsection*{Resilience Mechanisms}
+\subsection{Resilience Mechanisms}
 
 
 The \sieveq architecture is built to tolerate both faults with an accidental nature (e.g., crashes) and caused by malicious actions (e.g., a vulnerability is exploited, and a specific module is compromised).
@@ -245,9 +312,6 @@ The \sieveq architecture does not attempt to recover from intrusions in the \emp
 The \postsieve already runs in the internal network, and therefore, \sieveq can not preclude its misbehavior.
 In this chapter the \emph{controller} is assumed to be trusted, as it is deployed in a separated administrative domain and is to be used only in a few particular operations.
 Moreover, its simplicity allows the audit of its code and ensures correctness with a high level of confidence.
-Nevertheless, in Chapter~\ref{chap:controller} we present a intrusion-tolerant \emph{controller}.
-
-
 
 
 \section{\sieveq Protocol}
@@ -257,7 +321,7 @@ Nevertheless, in Chapter~\ref{chap:controller} we present a intrusion-tolerant \
 This section details the \sieveq protocol and the service properties. 
 We conclude the section with an analysis of the behavior of the system under different kinds of attacks and component failures, and highlight how the countermeasures integrated in our design mitigate such threats.
 
-\subsection*{Properties}
+\subsection{Properties}
 \label{properties}
 
 \sieveq protocol guarantees the following three properties for messages transmitted from a sender to a receiver:
@@ -287,13 +351,13 @@ Every component exhibiting observable faulty behavior will be eventually removed
 \end{resilience}
 
 In the following we present the mechanisms for implementing the \sieveq functionalities, i.e., the mechanisms for satisfying the three functional properties stated above.
-The mechanisms for ensuring resilience will be detailed in Section~\ref{sec:failures}.
+The mechanisms for ensuring resilience will be detailed after that.
 
-\subsection*{Message Transmission}
+\subsection{Message Transmission}
 \label{transmittingmessage}
 
 
-\subsubsection{\Sender processing}
+\paragraph{\Sender processing}
 
 This module gets a buffer with the \texttt{DATA} to be transmitted to a particular application placed behind \sieveq.
 The buffer needs to be encapsulated in a message with some extra information required for protection (see (\ref{msg}), below): we add a \sender identifier $\senderi_i$ and a sequence number \sn that is incremented on each message.
@@ -310,7 +374,7 @@ This \gls{mac} serves as an optimization to speed up checks~\cite{Clement:2009}.
 \begin{figure}[!t]
 \centering
 \includegraphics[scale=0.5]{images/images/filtering_steps_1.pdf}
-\caption{\small Filtering stages at the \sieveq.}
+\caption{Filtering stages at the \sieveq.}
 \label{fig:filters}
 \end{figure}
 
@@ -318,7 +382,7 @@ This \gls{mac} serves as an optimization to speed up checks~\cite{Clement:2009}.
 After constructing the message, it is sent to the \presieve assigned to the \sender, and a timer is started.
 If this timer expires before the \sender receives an acknowledgement message, it re-sends the \msg to another \presieve.
 
-\subsubsection{\Presieve filtering}
+\paragraph{\Presieve filtering}
 
 The \presieve determines if an arriving message \msg should be forwarded or discarded (stages (a)--(d) in Figure~\ref{fig:filters}). It applies the following checks to make this decision:
 
@@ -332,7 +396,7 @@ This check is based on the address of the message sender, and therefore it serve
 In the affirmative case, the message is discarded to prevent replay attacks.
 Messages are also dropped if their \sn is much higher than the largest sequence number ever observed from that \sender (a sliding window of acceptable sequence numbers is used).
 
-\item[(c)]  \textbf{MAC test:} \gls{mac} $\mac_{ski}$ is verified to authenticate the message contents, including finding out that the expected $\senderi_i$  was the sender. 
+\item[(c)]  \textbf{MAC test:} \gls{mac} $\mac_{ski}$ is verified to authenticate the message contents, including to find out if the expected $\senderi_i$  is the sender. 
 If the check is invalid, the message is dropped, and the sequence number information is updated to forget that this message was ever received (the update carried out in the previous step needs to be undone).
 
 \item[(d)] \textbf{Grant check:} each \presieve controls the amount of traffic that a \sender is transmitting.
@@ -344,8 +408,7 @@ The amount of traffic that is allowed to each \sender is adjusted dynamically ba
 
 Finally, the \presieve invokes the \gls{tom} primitive to forward the message to every correct \repsieve.
 
-\subsubsection{\Repsieve filtering}
-\label{sec:repseivefiltering}
+\paragraph{\Repsieve filtering}
 When a correct \repsieve delivers a message to be filtered, the following checks are applied:
 
 \begin{enumerate}
@@ -370,7 +433,7 @@ This \gls{mac} is created with a shared key between the \repsieve and the \posts
 \label{msgl}
 \end{equation}
 
-\subsubsection{\Postsieve processing}
+\paragraph{\Postsieve processing}
 
 \Postsieve accumulates the messages that arrive from \repsieves until enough evidence is collected to allow their delivery.
 
@@ -424,7 +487,11 @@ This allows \postsieve to deliver messages in order while there are messages wit
 \SetKwFunction{return}{return}
 \SetKwFunction{equalMsg}{equalMsg}
 \SetKwFunction{mostVotedMsg}{mostVotedMsg}
-\begin{algorithm}[t]
+
+{\centering
+\begin{minipage}{.7\linewidth}
+ 
+\begin{algorithm}[H]
 \caption{\postsieve protocol}\label{algo:post_filter}
 {
 \footnotesize
@@ -454,12 +521,17 @@ This allows \postsieve to deliver messages in order while there are messages wit
 }
 }
 \end{algorithm}
+\end{minipage}
+\par
+}
+
+
 
 
 
 \subsubsection{Correctness Argument}
 In the following, we show that \sieveq design satisfies the three functional properties described in Section~\ref{properties}.
-The proofs work under the assumptions of our system and threat model (Section~\ref{fault_model}).
+The proofs work under the assumptions of our system and threat model (defined in Section~\ref{fault_model}).
 
 \begin{validity}
 
@@ -506,15 +578,18 @@ Eventually, this process will make some correct \presieve forward $\msg$ to the 
 \end{proof}
 
 
-\subsection*{Addressing Component Failures}
+\subsection{Addressing Component Failures}
 \label{sec:failures}
 
 In this section, we discuss the implications of failures in the different components of the \sieveq, and how they are handled for ensuring the \emph{Resilience} property stated in Section~\ref{properties}.
 
 In the Byzantine model, every failed component can behave arbitrarily, intentionally or accidentally. Therefore, the \sieveq design incorporates mechanisms that are resilient to different failure scenarios. 
 Given the architecture of Figure~\ref{fig:arch}, one has to address faults in authenticated \senders, \presieves and \repsieves, as they are the main components subject to Byzantine failures in our model. 
-Other components of our architecture, such as the \emph{controller} and \postsieve are not considered in this section as they are either assumed to be trusted or co-located with the receiver. 
-However, in Chapter~\ref{chap:controller} we introduce a intrusion-tolerant \emph{controller} version.
+\Postsieve is not considered in this section as it is co-located with the receiver.
+Therefore, we can not make further assumptions on it. 
+In this chapter, we assume the \emph{controller} as trusted for simplicity.
+In Chapter~\ref{chap:lazarus_implementation} we presented an intrusion-tolerant \emph{controller}
+
 
 In the following, we try to focus on complex scenarios in whereas faulty components send syntactically-valid messages. Therefore avoiding cases that could be easily detected and recovered by existing network monitoring and protection tools (e.g., it is easy to discover that a \presieve is sending messages to another \presieve, something our protocol does not allow).
 
@@ -647,11 +722,14 @@ Then, it requests the individual recovery of the compromised replica.
 \end{itemize}
 
 The previous mitigation mechanisms suggest two kinds of recovery actions.
-First, an individual recovery, where the machine is rebooted with clean code (we address this in Chapter~\ref{chap:lazarus}) and then is reintegrated in the system.
+First, an individual recovery, where the machine is rebooted with clean code (we addressed this in Chapter~\ref{chap:lazarus_design}) and then is reintegrated in the system.
 Second, a recovery round is used when a performance degradation attack is detected, but there is no certainty about which \repsieve was compromised.
 %Therefore, in this case, we recover all replicas, one after another to avoid unavailability periods in the system, just like in proactive recovery systems~\cite{Castro:2002,Sousa:2010,Roeder:2010}.
 %There are several works that present these techniques, and most of them are compatible with our architecture, therefore we refrain from describing them in more detail.
 %Notice that the use of a recovery round is enough to ensure that \emph{a faulty \emph{\repsieve} will eventually be recovered in \sieveq}.
+
+The integration of these reactive recovery mechanisms into \system' risk management can be assessed by drastically increasing the an individual risk of each replica (e.g., similarly to the \emph{age} value of reach replica). 
+Then, \system proceed on the recovery of the faulty replica.
 
 
 \section{Implementation}
@@ -660,7 +738,7 @@ Second, a recovery round is used when a performance degradation attack is detect
 
 We implemented a prototype of \sieveq following the specification of the previous section to validate our design.
 The \sender and \postsieve were developed as libraries that are linked with the sender and receiver applications. 
-The libraries offer an interface similar to the \gls{tcp} sockets, to simplify the integration and minimize changes in the applications. 
+The libraries offer an interface similar to the \gls{tcp} sockets, to simplify the integration and minimize changes both in the client and server applications. 
 A sender can provide a buffer to be transmitted, and the receiver can indicate a buffer where the received data is to be stored.
 Internally, the \sender library adds a \gls{mac} and a signature to each message. 
 The \gls{mac} is created using \gls{hmac} with the \gls{sha}-256 hash function and a 256-bit key, and the signature employs \gls{rsa} with 512-bit keys. 
@@ -694,14 +772,14 @@ If the sender and receiver applications are coded in other languages, they can s
 \label{evaluation}
 
 
-This section focuses on the evaluation of \sieveq under different network and attack conditions.
+In this section we presente the evaluation of \sieveq under different network and attack conditions.
 We present the results of four types of experiments.
 In the first one, we evaluate the latency for different \sender workloads, assessing the performance of \sieveq in the absence of failures.
 The second experiment assesses the effect of filtering rules complexity on the performance of the system.
-In the third experiment, we assess the throughput in three scenarios: \emph{i)} the normal case, \emph{ii)} a DoS attack without countermeasures; and \emph{iii)} a DoS with all the mechanisms defined in Section~\ref{sec:failures} enabled (in fact we considered two \gls{dos} attacks: external, from a malicious \sender, and internal, from a compromised \repsieve).
+In the third experiment, we assess the throughput in three scenarios: \emph{i)} the normal case, \emph{ii)} a DoS attack without countermeasures; and \emph{iii)} a DoS with all the resilience mechanisms enabled (in fact we considered two \gls{dos} attacks: external, from a malicious \sender, and internal, from a compromised \repsieve).
 The last experiment considers the capability of \sieveq to safeguard a \gls{siem} system under a similar workload as the one observed in the 2012 Summer Olympic Games.
 
-\subsection*{Testbed Setup}
+\subsection{Testbed Setup}
 
 Figure~\ref{fig:testbed} illustrates the testbed, showing how the various \sieveq components were deployed in the machines.
 We consider one \sender and one \postsieve deployed in different physical nodes, and an additional host acted as a malicious external adversary.
@@ -713,12 +791,12 @@ All the machines were connected by a 1Gbps switched network and run Ubuntu $10.0
 
 \begin{figure}[ht!]
 \includegraphics[width=0.8\columnwidth]{images/images/testbed1.pdf}
-\caption{\small The \sieveq testbed architecture used in the experiments.}
+\caption{The \sieveq testbed architecture used in the experiments.}
 \label{fig:testbed}
 \end{figure}
 
 
-\subsection*{Methodology}
+\subsection{Methodology}
 
 \sieveq acts as a highly resilient protection device, receiving messages on one side and forwarding them to the other side.
 Therefore, the performance of \sieveq is assessed with latency/throughput measurements that can be attained under different network loads. 
@@ -746,13 +824,20 @@ In our setup, PyLoris was configured to perform an unlimited number of connectio
 In all experiments, measurements were taken only after the \gls{jvm} was warmed-up, and the disks were not used (all data is kept in memory).
 
 
-\subsection*{Performance in failure-free executions}
+\subsection{Performance in failure-free executions}
 \label{throughput_latency}
 
 This experiment measures the latency of \sieveq with several message sizes and distinct message transmission rates. 
 It demonstrates the overall performance of \sieveq in different scenarios, gradually stressing the \postsieve side as the workload is slowly increased. 
 Measurements were collected after the system reached a steady state. 
 The experiments were repeated 10 times for every workload and the average result is reported.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf}
+\caption{\sieveq latency for each workload (message size and transmission rate).}
+\label{fig:lat_vs_throu}
+\end{figure}
 
 Figure~\ref{fig:lat_vs_throu} shows how the latency is affected by the transmission rate and message size.
 As expected, when the system becomes increasingly loaded, the latency grows proportionally because resources have to be shared among the various messages.
@@ -761,22 +846,10 @@ The messages with $1k$ bytes have a linear increase on latency until the through
 This means that very high workloads can only be supported if applications have some tolerance to network delays.
 Overall, the performance degrades gracefully when varying the message payload sizes, for rates under $7k$ messages per second.
 
-We performed a more detailed analysis of the overheads introduced by the various components of \sieveq.
-We observed that \sender performs the most expensive operations, which is interesting because it shows that our design offloads part of the effort to the edges, reducing bottlenecks.
-%Nevertheless, the \sender library could still be optimized.
-The most important overheads were caused by the tasks associated with securing the message payload (which in fact are the most costly operations in the system). Several optimizations were made to mitigate the performance penalties during the message serialization (e.g., creation of the signature), including the use of parallelization to take advantage of the multicore architecture (as done, for example, in~\cite{Kirsch:2014}).
-Table~\ref{tab:client_evaluation} shows the gain of using the optimized version of the \sender library. Similar optimizations were employed in other components.
 
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf}
-\caption{\small \sieveq latency for each workload (message size and transmission rate).}
-\label{fig:lat_vs_throu}
-\end{figure}
-
-\begin{table}[t!]
-\begin{tabular}{ccc}\hline\hline
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c c c}\hline\hline
 \textbf{Payload size } & \textbf{Non-optimized}  & \textbf{Optimized}   \\
 \textbf{$(bytes)$} & \textbf{$(msg/sec)$} & \textbf{$(msg/sec)$}  \\\hline
 $100  $ & 1360 & 10682 \\
@@ -784,10 +857,19 @@ $500  $ & 1320 & 10618 \\
 $1000 $ & 1311 & 10332  \\
 \hline\hline
 \end{tabular}
-\caption{\small Maximum load induced by the \sender library with various message sizes\label{tab:client_evaluation}}
+\caption{Maximum load induced by the \sender library with various message sizes\label{tab:client_evaluation}}
+\end{center}
 \end{table}
 
-\subsection*{Effect of Filtering Rules Complexity}
+We performed a more detailed analysis of the overheads introduced by the various components of \sieveq.
+We observed that \sender performs the most expensive operations, which is interesting because it shows that our design offloads part of the effort to the edges, reducing bottlenecks.
+%Nevertheless, the \sender library could still be optimized.
+The most important overheads were caused by the tasks associated with securing the message payload (which in fact are the most costly operations in the system). Several optimizations were made to mitigate the performance penalties during the message serialization (e.g., creation of the signature), including the use of parallelization to take advantage of the multicore architecture (as done, for example, in~\cite{Kirsch:2014}).
+Table~\ref{tab:client_evaluation} shows the gain of using the optimized version of the \sender library. Similar optimizations were employed in other components.
+
+
+
+\subsection{Effect of Filtering Rules Complexity}
 
 The results presented in the previous section do not consider any kind of complex filtering rule set.
 This section presents experiments with a fully loaded system and application-level filtering rules with different complexity at the \repsieves.
@@ -812,17 +894,17 @@ Implementations with hardware support (as mentioned before) could be integrated 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_plot_fw/fw.pdf}
-\caption{\small Comparison of the \sieveq's latency between the baseline and adding the filtering rules.}
+\caption{Comparison of the \sieveq's latency between the baseline and adding the filtering rules.}
 \label{fig:KMP}
 \end{figure}
 
 
-\subsection*{\sieveq Under Attack}
+\subsection{\sieveq Under Attack}
 
 Our next set of experiments aims to evaluate the system under different attack scenarios.
 Here, the \sender creates a steady load of 1000 500-byte messages per second.
 We measured the latency and throughput of the system in three conditions: failure-free operation, a malicious external and internal DoS attack, and a malicious attack with remediation mechanisms.
-The results are reported in Figure~\ref{fig:performance_attacks}.
+%The results are reported in Figure~\ref{fig:performance_attacks}.
 Before presenting the results, we need to stress that these experiments must be compared with the results displayed in Figure \ref{fig:attack_traditional}, which were obtained in the same way but with a different architecture (see Figure \ref{fig:traditional}).
 
 Figure~\ref{fig:latency_normal} and Figure~\ref{fig:throughput_normal} show the latency and throughput, in the failure-free scenario.
@@ -835,7 +917,7 @@ It is possible to observe some momentary spikes in the latency and throughput, w
 \subfloat[Baseline latency.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf}\label{fig:latency_normal}}
 \hspace{-5mm}
 \subfloat[Baseline throughput.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/server_throughput_normal.pdf}\label{fig:throughput_normal}}
-\caption{\small Performance of \sieveq under different attack conditions.}
+\caption{Performance of \sieveq under different attack conditions.}
 \label{fig:performance_attacks}
 \end{figure}
 
@@ -852,7 +934,7 @@ The attack also has consequences on the throughput as it is possible to observe 
 \hspace{-5mm}
 \subfloat[DoS w/ no recovery.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/server_throughput_attack.pdf}\label{fig:throughput_attack}}
 \hspace{-5mm}
-\caption{\small Performance of \sieveq under different attack conditions.}
+\caption{Performance of \sieveq under different attack conditions.}
 \label{fig:performance_attacks}
 \end{figure}
 
@@ -891,11 +973,11 @@ This would take  $\mathit{(f_{rs}+1)} \times$ 3 seconds (in our setup) before th
 \begin{figure}[h]
 \subfloat[Internal DoS execution without recovery actions.]{\includegraphics[width=.5\columnwidth]{images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replicas_dos.pdf}\label{fig:replica_dos_no_recovery}}
 \subfloat[Internal DoS execution with recovery actions.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_replicas_dos.pdf}\label{fig:replica_dos_recovery}}
-\caption{\small Performance of \sieveq under different attack conditions.}
+\caption{Performance of \sieveq under different attack conditions.}
 \label{fig:performance_attacks}
 \end{figure}
 
-\subsection*{Use Case: \sieveq to Protect a SIEM System}
+\subsection{Use Case: \sieveq to Protect a SIEM System}
 \label{use_case}
 
 \gls{siem} systems offer various capabilities for the collection and analysis of security events and information in networked infrastructures~\cite{Miller:2010}.
@@ -906,10 +988,10 @@ A \gls{siem} operates by collecting data from the monitored network and applicat
 The engine performs an analysis of the stream of events and generates alarms and other information for post-processing by other \gls{siem} components.
 Examples of such components are an archival subsystem for the storage of data needed to support forensic investigations, or a communication subsystem to send alarms to the system administrators.
 
-\begin{figure}[!t]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.65\columnwidth]{images/images/SIEM.pdf}
-\caption{\small Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \sieveq.}
+\caption{Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \sieveq.}
 \label{fig:siem}
 \end{figure}
 
@@ -924,10 +1006,10 @@ As can be observed, the latency is in the order of 4 milliseconds for the emulat
 Even with the highest load (16 times) the observed values had a latency below $70$ milliseconds.
 This means that \sieveq could potentially deliver on average 176 million events per day, which is more than enough to accommodate the expected growth in the number of events for the next Olympic Games.
 
-\begin{figure}[!t]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_massif/massif.pdf}
-\caption{\small \sieveq latency for the 2012 Summer Olympic Games scenario throughput requirement (127 events per second) and how the \sieveq scale, we doubled on each experiment the number of events.}
+\caption{\sieveq latency for the 2012 Summer Olympic Games scenario throughput requirement (127 events per second) and how the \sieveq scale, we doubled on each experiment the number of events.}
 \label{fig:massif}
 \end{figure}
 

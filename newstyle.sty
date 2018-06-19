@@ -84,13 +84,13 @@
 
 % OPTION bibfile
 % --> values = file name of your bibtex file
-%\define@key[ct]{cthesis}{bibfile}[bib-refs]{\def\cthesis@bibfile{#1}}
-%\setkeys[ct]{cthesis}{bibfile=bib-refs}
+\define@key[ct]{cthesis}{bibfile}[chapters/references/references]{\def\cthesis@bibfile{#1}}
+\setkeys[ct]{cthesis}{bibfile=chapters/references/references}
 
 % OPTION bibstyle
 % --> values = alphabetic|numeric|ieee|authoryear
-%\define@choicekey*[ct]{cthesis}{bibstyle}[\val\bibstylenr]{alphabetic,numeric,ieee,authoryear}[alphabetic]{\def\cthesis@bibstyle{#1}}
-%\setkeys[ct]{cthesis}{bibstyle=alphabetic}
+\define@choicekey*[ct]{cthesis}{bibstyle}[\val\bibstylenr]{alphabetic,numeric,ieee,authoryear}[alphabetic]{\def\cthesis@bibstyle{#1}}
+\setkeys[ct]{cthesis}{bibstyle=alphabetic}
 
 % OPTION wrapfooter
 % --> values = true|false

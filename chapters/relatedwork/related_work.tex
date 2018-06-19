@@ -2,13 +2,13 @@
 \label{chap:related_work}
 
 
-\section{Intrusion Tolerance Overview}
+\section{The Need for Intrusion Tolerance}
 
 It is unrealistic to make prior assumptions on the attacker's power rather than assuming that he or she is a powerful attacker.
 Therefore, researchers and developers have been putting all the efforts on the vulnerability side by trying to reduce the probability of the attacker's success. 
 In the following, we make an overview of the different approaches that can be combined to deal with the challenge of providing security and dependability for critical systems.
 
-\subsection*{Prevention}
+\subsection{Prevention}
 One of the primary techniques is to try to avoid that vulnerabilities persist in the code throughout all the software development phases until it is in production. 
 One way to do that is to detect and remove vulnerabilities during the development and testing stages.
 There are three main categories: static, dynamic, and concolic analysis.
@@ -28,7 +28,7 @@ Therefore, it is more accurate than fuzzing, but it tends to succumb to path exp
 Some of these techniques can be combined to take the best of some of the approaches (e.g., using fuzzing with symbolic execution~\cite{Stephens:2016}).
 
 
-\subsection*{Detection and removal}
+\subsection{Detection and removal}
 A more complex approach tries to cope with the existence of vulnerabilities that can be exploited.
 This approach works when an intrusion is detected, and then a recovery mechanism is triggered to clear its effects. 
 Since some attacks use a combination of different vulnerabilities, which isolated would be harmless, it is hard to detect them when the system is already in production. 
@@ -39,7 +39,7 @@ Last, recovering a system might clean its faults, but the system remains vulnera
 Therefore, it is easy for an attacker to repeat the same procedure to compromise the system every time it recovers.
 
 
-\subsection*{Tolerance and masking}
+\subsection{Tolerance and masking}
 The previously described approaches assume that vulnerability prevention is complete to some extent or that is possible to detect all the attacks.
 First, these assumptions are unrealistic, and it is not advisable to trust the security and dependability of a system in a single component, as it creates a single point-of-failure. 
 Thus, once the system becomes compromised the whole infrastructure becomes open to more attacks. 
@@ -83,6 +83,10 @@ For this reason, several authors built their models assuming that the nodes fail
 
 
 \section{Byzantine Fault Tolerance}
+
+Practical \gls{bft} replication was initially proposed as a solution to handle Byzantine faults of both accidental and malicious nature~\cite{Castro:1999}.
+The correctness of a BFT service comes from the existence of a quorum of correct nodes, capable of reaching consensus on the (total) order of messages to be delivered to the replicas.
+For instance, to tolerate a single replica failure, the system typically must have four replicas~\cite{Castro:2002,Kotla:2010,Aublin:2015}. 
 
 Intrusion tolerance was first proposed by Fraga and Powell in 1985~\cite{Fraga:1985} as a solution to address faults without compromising the security of a system. 
 Almost 15 years after, \gls{bft} replication became the most common solution to implement intrusion tolerance systems.
@@ -188,16 +192,15 @@ However, our solution will implement a different (from~\cite{Sousa:2010}) algori
 
 In some of the works presented before, the correctness is ensured under the assumption that replicas fail independently. 
 Often the authors assume that fault independence is achieved using diversity~\cite{Castro:2002,Sousa:2010}. 
-Diversity can be implemented in different ways~\cite{Deswarte:1999,Obelheiro:2006}, which may differ in the mean and the amount of diversity generated, but the goal is the same: to create different attack surfaces. 
+Diversity can be implemented in different ways~\cite{Deswarte:1998,Obelheiro:2006}, which may differ in the mean and the amount of diversity generated, but the goal is the same: to create different attack surfaces. 
 The goal is to make the discovery of common vulnerabilities more difficult. 
 We present at least three different ways to generate diversity: 
 (i) N-version programming consists in design/implementation of different program binaries (from the same or different source code); 
 (ii) Randomization implements different memory schemes; 
 and (iii) Off-the-shelf diversity comprises the use of different products with the same functionality but taking advantage of implementations that are already available.
 
-
 \paragraph{N-version programming}
-N-version programming is a technique used to create diverse software components~\cite{Avizienis:1977,Knight:1986,Chen:1995}.
+N-version programming is a technique used to create diverse software components~\cite{Randell:1975,Avizienis:1977,Knight:1986,Chen:1995}.
 The main idea behind this mechanism is to develop N different implementations of the same specification. 
 These implementations can be implemented by N different developers or using translators to N different programming languages.
 
@@ -270,6 +273,7 @@ The paper explains in detail what to diversify, from single instructions to an e
 They also explain the three types of security impacts when diversity is applied: entropy analysis, attack-specific code analysis, and logical argument. 
 However, they also point that there is no consensus on how to evaluate the efficacy of diversity. 
 
+Independece as a service~\cite{Zhai:2014}
 
 
 \paragraph{Summary.}
@@ -285,6 +289,8 @@ For example, how to measure diversity in such a way that failure independence ca
 
 \section{Risk Management}
 
+
+
 Jumratjaroenvanit and Teng-amnuay~\cite{Jumratjaroenvanit:2008} described vulnerability life-cycles presenting their different stages. 
 The authors goal was to understand how different dates can be useful to estimate the probability of an attack. 
 The authors methodology was to collect and analyze data on the discovery, disclosure, and exploit dates, exploit and patch availability, all from public data sources. 
@@ -296,6 +302,25 @@ On the contrary, results showed that language safety was the less influent facto
 The main result of the study was that two weeks of work were enough to have a 50\% chance of finding a zero-day vulnerability. 
 Sometimes, 53 hours were enough to find one vulnerability with more than 95\% of probability.
 
+
+Shahzad~\etal{}~\cite{Shahzad:2012} obtained data between 1988 to 2011 from three data sources: \gls{nvd}, \gls{osvdb}, and the data from~\cite{Frei:2006}. 
+They collected vulnerabilities that affected popular applications like Internet Explorer, Firefox and Chrome, and popular \glspl{os} like Windows, Mac OS X, Solaris and several Linux distributions. 
+The authors found that 2006 was the peak of vulnerability disclosures, and since then there was a decrease even though there are more software products. 
+However, the complexity of the disclosed vulnerabilities has increased, ased on the \gls{cvss} score. 
+From their dataset, 2.8\% vulnerabilities have an exploit released before their public disclosure. 
+More dramatic is the percentage of exploits that are released on the day of the vulnerability disclosure, which is in the order of 88.2\%. 
+There are a cases when even after the disclosure there are exploits being released (the authors found 9.7\% of their vulnerabilities fitting this condition). 
+As already stated in~\cite{Gorbenko:2011}, the software’s popularity can be attractive to attackers. 
+In this study, the authors found that Microsoft and Apple have more exploits before the vulnerability disclosure than the other vendors. 
+This may primarily be because hackers find it more rewarding to exploit these products due to their wider market capitalization.
+To what concerns patching, the authors argue that 10\% of the vulnerabilities had a patch before their disclosure, and 62\% had a patch on its disclosure day. 
+There was a considerable number of vulnerabilities that were disclosed only after a patch is made, more precisely 28\%. 
+However, the authors noticed that from 2007 there was an improvement from the vendors to respond to vulnerabilities with earlier patches. 
+Nevertheless, the closed-source vendors are more efficient to patch vulnerabilities. 
+Another conclusion is that it is easier to exploit opensource code vulnerabilities than in closed-source – this conclusion may seem obvious, but no one had showed it previously with statistical tests.
+
+
+Large Scale Study of the time required to Compromise a computer system~\cite{Holm:2014}
 
 Okhravi~\etal{} presented TALENT a framework for live migration of critical infrastructures across heterogeneous platforms~\cite{Okhravi:2014,Okhravi:2009}. 
 The idea was to create a moving target that difficult the success of advanced targeted attacks. 
@@ -324,6 +349,8 @@ The study explored how many zero-day vulnerabilities were required to compromise
 They assumed that zero-day vulnerabilities typically do not occur at the same time, however the solution did not depend on any statistical model. 
 The reasoning behind the proposal was novel, e.g., on the method to find the complexity of multiple zero-day vulnerabilities in a N-node network.
 
+Similar to ours, but very weak.... need to read and show how it fails~\cite{Mu:2014}
+
 Newell~\etal{} ~\cite{Newell:2015} presented a solution to assign diversity variants among network nodes to increase the network's resiliency.
 
 Sabote~\etal{}~\cite{Sabottke:2015} presented a study that used non-common vulnerability data sources, i.e., Twitter data (e.g., specific words, the number of retweets, and replies, information about
@@ -340,6 +367,9 @@ For example, the \gls{svm} classifier set to a precision of 25\% could detect th
 They also showed that organizations like \gls{nvd} overestimate the severity of some vulnerabilities that never become in fact exploited.
 However, their work did not focus on the discovery of the zero-day vulnerabilities, which is relevant for our research.
 
+
+
+
 \paragraph{Summary.} We presented several works that carry out for risk assessment in a way to prevent exploits or to take action upon vulnerability detection. 
 This is the last building block that intrusion tolerance is missing. 
 There is a lot of relevant free information available to address the security and dependability of software. 
@@ -349,7 +379,7 @@ We want to explore the free available data to improve, the dependability and sec
 
 
 
-\section{Pratical BFT System with Diversity}
+\section{Pratical BFT Systems with Diversity}
 
 
 In the last two decades there were a number of \gls{bft} protocols and systems deemed ``practical'' (e.g.,~\cite{Castro:2002,Kotla:2010,Veronese:2013,Aublin:2015,Behl:2015,Behl:2017,Liu:2016,Yin:2003}).
@@ -383,6 +413,8 @@ Although operators can control only $r$ and $n$, the authors suggest (but does n
 The authors implemented their solution in two settings, including a virtualized environment provided by the Xen Hypervisor.
 In this setting, each replica executes in a Linux \gls{vm}, the recovery watchdog runs in a trusted domain of the same machine, and the proactive-recovery controller runs in another physical machine, in an architecture similar to ours.
 
+
+MOVNG TARGET HERE
 
 \paragraph{Summary.} 
 Diversity is becoming one of the building blocks of intrusion tolerance, alongside with \gls{bft} and rejuvenations. 

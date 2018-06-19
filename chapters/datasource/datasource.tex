@@ -2,17 +2,19 @@
 \label{chap:datasource}
 
 In this chapter we answer the following question: \emph{What are the security gains from using diverse \glspl{os} on a replicated intrusion-tolerant system?}
-To answer this question we have analyzed to what extent different \glspl{os} share common vulnerabilities.
-We made an analysis using a well established database and divise three strategies to build diverse sets of \gls{os}.
-The promising results confirm , to some extent, the intuition that diversity employ vulnerability independece.
+To answer this question, we have analyzed to what extent different \glspl{os} share common vulnerabilities.
+We made an analysis using a well-established database and devise three strategies to build diverse sets of \glspl{os}.
+The promising results confirm, to some extent, the intuition that diversity implies vulnerability independence.
 
 \section{Methodology}
 
-This section presents the methodology adopted in this study, with particular focus on how the data set (i.e., the vulnerabilities) was selected, processed and analyzed.
+This section presents the methodology adopted in this study, with a particular focus on how the dataset was selected, processed and analyzed.
 
-\subsection*{Data source}
+%\subsection{Object of the study}
+
+\subsection{Data source}
 We have analyzed \gls{os} vulnerability data from the \gls{nvd} database~\cite{nvd}. 
-According to \gls{nist} a vulnerbility is definied as follows:
+According to \gls{nist} a vulnerability is defined as follows:
 %\gls{nvd} uses the \gls{cve} definition of vulnerability \cite{cveterm}, which is given below:
 
 \begin{defn}
@@ -20,20 +22,21 @@ According to \gls{nist} a vulnerbility is definied as follows:
 \end{defn}
 
 
-\gls{nvd} aggregates vulnerability reports from more than 70 security companies, forums, advisory groups and organizations\footnote{See the complete list on \url{http://cve.mitre.org/compatible/alerts_announcements.html}.}, being thus the most complete vulnerability database on the web.
-All data is made available as XML files containing the reported vulnerabilities on a given period, called \emph{data feeds}.
-%We analyze feeds from 2002 to 2011\footnote{The 2002 feed includes information about vulnerabilities that were reported between 1994 and 2002. 
-%The most recent feed that was analyzed in this paper contained vulnerabilities until the end of 2011.}.
+%\gls{nvd} aggregates vulnerability reports from more than 70 security companies, forums, advisory groups and organizations,\footnote{See the complete list on \url{http://cve.mitre.org/compatible/alerts_announcements.html}.} being thus the most complete vulnerability database on the web.
+%All data is made available as \gls{xml} files containing the reported vulnerabilities on a given period, called \emph{data feeds}.
+
+\gls{nist}'s \gls{nvd}~\cite{nvd} is the authoritative data source for disclosure of vulnerabilities and associated information~\cite{Massacci:2010}. 
+\gls{nvd} aggregates vulnerability reports from more than 70 security companies, advisory groups, and organizations, thus being the most extensive vulnerability database on the web. 
+All data is made available as \gls{xml} data feeds, containing the reported vulnerabilities on a given period. 
+Each \gls{nvd} vulnerability receives a unique identifier, in the format CVE-\textit{YEAR}-\textit{NUMBER}, and a short description provided by the \gls{cve}~\cite{cveterm}. 
+The \gls{cpe}~\cite{cpe} provides the list of products affected by the vulnerability and the date of the vulnerability publication.
+The \gls{cvss}~\cite{cvss} calculates the vulnerability severity considering several attributes, such as the attack vector, privileges required, exploitability score, and the security properties compromised by the vulnerability (i.e., integrity, confidentiality, or availability).
 
 
+We developed a program that collects, parses and inserts the \gls{xml} data feeds into an SQL database, deployed with a custom schema to group vulnerabilities by affected products and versions.
 
-Each \gls{nvd} data feed contains a list of reported vulnerabilities sorted by its date of publication on a given period.
-For each vulnerability, called \emph{entry} in the \gls{nvd} parlance, interesting information is provided such as: a unique name for the entry, in the format CVE-\textit{YEAR}-\textit{NUMBER}; the list of products (with version numbers) affected by the vulnerability; the date of vulnerability publication; and the security attributes that are affected when the vulnerability is exploited on a system.
-
-We developed a program that collects, parses and inserts the XML data feeds into an SQL database, deployed with a custom schema to group vulnerabilities by affected products and versions.
-
-\subsection*{Data selection}
-Despite the large amount of information about each vulnerability available in \gls{nvd}, for the purposes of this study we are only interested in the name, publication date, summary (description), type of exploit (local or remote), and list of affected configurations.
+\subsection{Data selection}
+Despite the vast amount of information about each vulnerability available in \gls{nvd}, for this study, we are only interested in the name, publication date, summary (description), type of exploit (local or remote), and list of affected products.
 We have collected vulnerabilities reported for 64 \gls{cpe}~\cite{cpe}.
 Each one of these describes a system, i.e., a stack of software/hardware components in which the vulnerability may be exploited.
 These \gls{cpe} were filtered, resulting in the following information that was stored in our database:
@@ -45,8 +48,8 @@ These \gls{cpe} were filtered, resulting in the following information that was s
 \end{itemize}
 
 
-Those 64 CPEs were, by manual analysis, grouped in 11 server-based \gls{os} distributions: \textit{OpenBSD, NetBSD, FreeBSD, OpenSolaris, Solaris, Debian, Ubuntu, Red Hat\footnote{\textit{Red Hat} comprises the ``old'' Red Hat Linux (discontinued in 2003) and the newer Red Hat Enterprise Linux (RHEL).}, Windows2000, Windows2003} and \textit{Windows2008}.
-These distributions cover the most used \emph{server \gls{os} products} of the BSD, Solaris, Linux and Windows families.
+Those 64 CPEs were, by manual analysis, grouped in 11 \gls{os} distributions: \textit{OpenBSD, NetBSD, FreeBSD, OpenSolaris, Solaris, Debian, Ubuntu, Red Hat,\footnote{\textit{Red Hat} comprises the ``old'' Red Hat Linux (discontinued in 2003) and the newer Red Hat Enterprise Linux (RHEL).} Windows2000, Windows2003} and \textit{Windows2008}.
+These distributions cover the most used \emph{\gls{os} products} of the BSD, Solaris, Linux and Windows families.
 
 %We did not include Mac~OS~X because, unlike for the included OSes, we did not have an OS~X system available for cross-validation of vulnerability reports.
 
@@ -74,18 +77,18 @@ First, it allows us to \emph{enrich the data set} by hand, for example, by assoc
 Second, it allows us to modify the \gls{cve} fields to correct problems.
 For instance, one of the problems with \gls{nvd} is that the same product is occasionally registered with distinct names in different entries;
 For instance, (\textit{debian\_linux}, \textit{debian}) and (\textit{linux}, \textit{debian}) are two (product, vendor) pairs we have found for the Debian Linux distribution.
-This same problem was previously observed by other users of \gls{nvd} data feeds \cite{cvedetails}.
+Other users of \gls{nvd} data feeds previously observed this same problem~\cite{cvedetails}.
 Finally, an SQL database is much more convenient to work with than parsing the feeds on demand.
 
-\subsection*{Filtering the Data}\label{filtering_data}
+\subsection{Filtering the Data}\label{filtering_data}
 
 
 From the more than 44,000 vulnerabilities published by \gls{nvd} at the time of this study, we selected 2563 vulnerabilities.
 These vulnerabilities are the ones classified as \gls{os}-level vulnerabilities (``/o'' in their \gls{cpe}) for the \glspl{os} under consideration.
 
 When manually inspecting the data set, we discovered and removed vulnerabilities that contained tags in their descriptions such as \emph{Unknown} and \emph{Unspecified}. 
-These correspond to vulnerabilities for which \gls{nvd} does not know exactly where they occur or why they exist (however, they are usually included in the \gls{nvd} database because they were mentioned in some patch released by a vendor). 
-We also found few vulnerabilities flagged as \emph{**DISPUTED**}, meaning that product vendors disagree with the vulnerability existence, and \emph{Duplicate}, used for vulnerabilities in which the \emph{summary} points to a duplicate entry or duplicate entry suspicion.
+These correspond to vulnerabilities for which \gls{nvd} does not know precisely where they occur or why they exist (however, they are usually included in the \gls{nvd} database because they were mentioned in some patch released by a vendor). 
+We also found few vulnerabilities flagged as \emph{**DISPUTED**}, meaning that product vendors disagree that the vulnerability exists, and \emph{Duplicate}, used for vulnerabilities in which the \emph{summary} points to a duplicate entry or duplicate entry suspicion.
 Due to the uncertainty that surrounds these vulnerabilities, we decided to exclude them from the study as well.
 
 Table \ref{tab:unknowns} shows the distribution of these vulnerabilities across the analyzed \glspl{os}, together with the total number of valid vulnerabilities.
@@ -122,14 +125,8 @@ We should remark that this manual filtering was necessary to increase the confid
 
 
 \section{OS Diversity Study}\label{study}
-
-%This section prsents prelimanary results of the study on common vulnerabilities.
-%It presents vulnerabilities that are common to \gls{os} pairs, and also gives empirical evidence to demonstrate that there are security gains in using diverse \glspl{os} in a replicated system.
-
-%\subsection*{Common Vulnerabilities}\label{common_vulns}
-
 This section analyzes the vulnerabilities that were shared in \gls{os} pairs over the period of 1994 to 2011. 
-In the investigation, we consider three possible server machine setups offering an increasingly more secure platform. 
+In the investigation, we consider two possible server machine setups offering an increasingly more secure platform. 
 This accommodates the case where system administrators create differentiated \gls{os} installations, which contain more or less vulnerabilities depending on the services and applications available in the server. 
 Of course, other setups could be used, but we decided to concentrate on these configurations because they are quite generic and they lead to results that can be directly obtained from the \gls{nvd} data. 
 The setups are the following:
@@ -138,27 +135,29 @@ The setups are the following:
 
 \item \textbf{Fat Server:} The server contains most of the software packages for a given \gls{os}, and consequently, it can be used to run various kinds of applications by locally or remotely connected users. This server has potentially all vulnerabilities that were reported for the corresponding \gls{os};
 
-\item \textbf{Thin Server:} This setting corresponds to a platform that does not contain any applications (with the exception of the replicated service). The server has a decreased security risk because the attack vectors related to applications have been mostly eliminated. In this setting, vulnerabilities classified as \textit{Applications} are excluded from the statistics (see Section~\ref{vulntypes});
+%\item \textbf{Thin Server:} This setting corresponds to a platform that does not contain any applications (except for the replicated service). The server has a decreased security risk because the attack vectors related to applications have been mostly eliminated. 
+%In this setting, vulnerabilities classified as \textit{Applications} are excluded from the statistics;
 
-\item \textbf{Isolated Thin Server:} The server is configured similarly to the Thin Server but is placed in a room physically protected from illegal accesses, with remote logins disabled, and therefore it can only be compromised by receiving malicious packets from the network. In this setting, we only consider remotely exploitable vulnerabilities (those with ``Network'' or ``Adjacent Network'' values in their CVSS\_ACCESS\_VECTOR field) that are not classified as \textit{Applications}.
+\item \textbf{Isolated Thin Server:} This setting corresponds to a platform that does not contain any applications (except for the replicated service). 
+The server has a decreased security risk because the attack vectors related to applications have been mostly eliminated. 
+Moroever, is placed in a room physically protected from illegal accesses, with remote logins disabled, and therefore it can only be compromised by receiving malicious packets from the network. In this setting, we only consider remotely exploitable vulnerabilities (those with ``Network'' or ``Adjacent Network'' values in their CVSS\_ACCESS\_VECTOR field) that are not classified as \textit{Applications}.
 
 \end{itemize}
 
-The Fat Server setup corresponds to a case where any application available in the \gls{os} distribution may be targeted by attack. 
+The Fat Server setup corresponds to a case where an attack may target an application available in the \gls{os} distribution. 
 Therefore, it provides an upper bound estimate on the number of vulnerabilities that can be exploited. 
-The Thin Server setups (Isolated or not) are the counterpart case, where the system is deployed without applications that come bundled with the \gls{os}, and thus provide a lower bound estimate on the number of common vulnerabilities. 
-The Isolated Thin Server, in particular, only has the vulnerabilities that can be remotely exploited. 
+The Isolated Thin Server setups is the counterpart case, where the system is deployed without applications that come bundled with the \gls{os} and thus provide a lower bound estimate on the number of common vulnerabilities and it has the vulnerabilities that can be remotely exploited. 
 Of course, in practice, at least one application (such as a name service or a distributed file service) would be deployed in an intrusion-tolerant system, and the vulnerabilities of this application would add up to the flaws that we will report. 
 In any case, since we expect that most of the complexity is in the \gls{os}, we anticipate that a single application will have a small contribution to the overall number of vulnerabilities.
 
 
 
-Intrusion-tolerant systems are usually built using four or more replicated servers. 
+Intrusion-tolerant systems are usually built using four or more replicated servers~\cite{Castro:2002}. 
 Therefore, it is useful to understand if there are many vulnerabilities that involve groups of \glspl{os} larger than two -- if this is the case, then it will be hard to find \gls{os} configurations for the various servers that do not share vulnerabilities, and a goal of using \gls{ots} diversity will be difficult to be achieved in practice. 
-Figure \ref{top} portrays the number of common vulnerabilities that exist simultaneously in increasingly larger sets of \glspl{os} (with Isolated Thin Servers). 
-The graph shows a rapid decrease of the shared vulnerabilities as the number of \glspl{os} grows. 
-The largest group that was affected by the same vulnerability had six \gls{os}, and this occurred only for a single flaw, and there were also two vulnerabitlities in sets with five \glspl{os}. Vulnerabilities in two and three \glspl{os} normally occur in systems from the same family, whose common ancestry implies the reuse of larger portions of the code base.
-As we have seen in previous tables, this is particularly true for the Windows and BSD families.
+Figure \ref{top} portrays the number of common vulnerabilities that exist simultaneously in increasingly more extensive sets of \glspl{os} (with Isolated Thin Servers). 
+The graph shows a rapid decrease in the shared vulnerabilities as the number of \glspl{os} grows. 
+The largest group that was affected by the same vulnerability had six \glspl{os}, and this occurred only for a single flaw, and there were also two vulnerabilities in sets with five \glspl{os}. Vulnerabilities in two and three \glspl{os} usually occur in systems from the same family, whose common ancestry implies the reuse of more significant portions of the code base.
+%As we have seen in previous tables, this is particularly true for the Windows and BSD families.
 
 \begin{figure}[!h]
  \centering
@@ -170,11 +169,12 @@ As we have seen in previous tables, this is particularly true for the Windows an
 
 Table \ref{tab:spreaded_vulns} lists in more detail the vulnerabilities that can be exploited in larger groups (four to six) of \glspl{os}. 
 The first three bugs have a considerable impact because they allow a remote adversary to run arbitrary commands on the local system using a high-privilege account. 
-They occurred either in widespread login services (telnet and rlogin) or in a basic system function, and consequently several products from the BSD family were affected, as well as Solaris. 
+They occurred either in widespread login services (telnet and rlogin) or in a primary system function, and consequently, several products from the BSD family were affected, as well as Solaris. 
 The \gls{nvd} entry for the CVE-2001-0554 vulnerability also had external references to the Debian and Red Hat websites, which could indicate that these systems might suffer from a similar (or the same) problem. 
 Vulnerability CVE-2008-1447 occurs in a large number of systems because it results from a bug in the BIND implementation of the \gls{dns}. Since BIND is a highly popular service, more \glspl{os} could potentially be affected. 
 A closer look at the corresponding \gls{nvd} entry reveals external references to the sites of OpenBSD, NetBSD, and FreeBSD, indicating that they would be vulnerable in case this software was being used. 
 This sort of vulnerability confirms that from an intrusion-tolerance perspective it is unwise to run the same server software everywhere, and that diverse implementations must be selected (in this case for recursive \gls{dns} servers).
+
 
 \begin{table}[!ht]
 \begin{center}
@@ -199,25 +199,24 @@ CVE-2008-4609  &  6  & TCP implementation allows a DoS via multiple vectors that
 The remaining three vulnerabilities are related to the TCP/IP protocol stack. 
 All of them affect system availability, allowing different forms of \gls{dos} attacks. 
 CVE-2008-4609 is the vulnerability that affects more \glspl{os}, according to the \gls{nvd} database. 
-Given that TCP/IP stack code is often reused across \glspl{os}, we checked the web sites of the other \glspl{os} for reports related to this vulnerability. 
+Given that TCP/IP stack code is often reused across \glspl{os}, we checked the websites of the other \glspl{os} for reports related to this vulnerability. 
 We only found a disclaimer by Red Hat~\footnote{\url{https://access.redhat.com/kb/docs/DOC-18730}} stating that this flaw affected some releases but that they would not provide an update (they only offered a mitigation solution based on IPtables, the Linux firewall software).
 
-Overall, the above results look encouraging because over a large period of time (around 18 years) there are very few vulnerabilities that appear in many \glspl{os}. 
+Overall, the above results look encouraging because over a significant period (around 18 years) there are very few vulnerabilities that appear in many \glspl{os}. 
 A good portion of them are in the TCP/IP stack implementation, which is probably the most shared software component across \glspl{os}, but they only impact on the availability of the system, leaving confidentiality and integrity of data unharmed.
 
 
-
 \section{Strategies for OS Diversity Selection}\label{evaluation}
-
-This section presents three alternative strategies to deploy diverse \glspl{os} on replicated systems, to decrease the chance of common vulnerabilities. 
+The prelimary analysis indicate that it is possible to find that some \glspl{os} share less vulnerabilities than others. 
+Therefore, in this section we present three alternative strategies to select \glspl{os}, based on the built dataset, to decrease the chance of common vulnerabilities on replicated systems. 
 We start the section by first describing an approach we called the \gls{cvi}, which is used by one of the strategies. 
-For each strategy, we then give example sets of \glspl{os} that exhibit a good level of diversity, and perform an evaluation based on the collected data. 
-Finally we conclude the section with an analysis of potential diversity between releases of the same \glspl{os} (concentrating on the \glspl{os} that the three strategies picked as the best configuration).
+For each strategy, we then give example sets of \glspl{os} that exhibit a reasonable level of diversity, and perform an evaluation based on the collected data. 
+Finally, we conclude the section with an analysis of potential diversity between releases of the same \glspl{os} (concentrating on the \glspl{os} that the three strategies picked as the best configuration).
 
-\subsection*{Common Vulnerability Indicator}\label{cvi}
 
-We already saw in the previous section that the number of common vulnerabilities that are observed between different \glspl{os} varies over time. 
-In order to be able to evaluate which \gls{os} pairs are more (or less) likely to experience common flaws while taking into account the timing of vulnerability disclosures, we developed a new metric, called the \emph{\gls{cvi}}. 
+\subsection{Common Vulnerability Indicator}\label{cvi}
+In a previous work~\cite{Garcia:2012} we have found that the number of common vulnerabilities that are observed between different \glspl{os} varies over time. 
+Thus, in order to be able to evaluate which \gls{os} pairs are more (or less) likely to experience common flaws while taking into account the timing of vulnerability disclosures, we developed a new metric, called the \emph{\gls{cvi}}. 
 This indicator is calculated for a given year $y$, based on the vulnerabilities that were shared by \glspl{os} A and B over a period of $\mathit{tspan}$ previous years. \gls{cvi} is built to ensure the following desirable properties:
 \begin{enumerate}
 \newcommand{\OLDtheenumi}{\theenumi}
@@ -229,40 +228,22 @@ This indicator is calculated for a given year $y$, based on the vulnerabilities 
 \renewcommand{\theenumi}{\OLDtheenumi}
 \end{enumerate}
 
-Therefore, \gls{cvi} is useful for comparison purposes, allowing the identification of \gls{os} pairs that have a smaller number of common flaws, while taking into consideration the instant when vulnerabilities were found. 
-This last point is particularly important because \glspl{os} are constantly evolving, potentially getting more (or less) diverse, and consequently, one should take into consideration the time dimension when selecting \gls{os} configurations (e.g., \gls{os} pairs that have had less common flaws recently are likely better candidates).
-
+Therefore, \gls{cvi} is useful for comparison purposes, allowing the identification of \gls{os} pairs that have a smaller number of common flaws, while considering the instant when vulnerabilities were found. 
+This last point is particularly crucial because \glspl{os} are continually evolving, potentially getting more (or less) diverse, and consequently, one should take into consideration the time dimension when selecting \gls{os} configurations (e.g., \gls{os} pairs that have had less common flaws recently are likely better candidates).
 \gls{cvi} is computed as follows:
 
-\begin{itemize}
-
-\item First, a weighting factor $\alpha_{i}$ is defined for each year   $i \in \{y-\mathit{tspan}+1, ..., y-2, y-1, y\}$,
+First, a weighting factor $\alpha_{i}$ is defined for each year   $i \in \{y-\mathit{tspan}+1, ..., y-2, y-1, y\}$.
 
 \begin{equation}
 \alpha_{i} = 1 - \frac{y-i}{\mathit{tspan}}
 \end{equation}
 
-\item CVI is then obtained using the number of vulnerabilities $v_{i}(A,B)$ that appeared in both \glspl{os} A and B for every year $i$ from the start of the time span up to reference year $y$,
+Then, CVI is obtained using the number of vulnerabilities $v_{i}(A,B)$ that appeared in both \glspl{os} A and B for every year $i$ from the start of the time span up to reference year $y$.
 
 \begin{equation}
 \mathit{CVI}_{y}(A,B)= \sum_{i = y-\mathit{tspan}+1}^{y} \alpha_{i}\cdot v_{i}(A,B)
 \end{equation}
 
-\end{itemize}
-
-
-Table~\ref{tab:cvi-2011-2009} presents \gls{cvi} values for the years 2009 to 2011. 
-We have excluded from this analysis \glspl{os} with vulnerability information missing for more than one year over the period, to avoid using incomplete data in the calculation of the indicators. Therefore, the following \glspl{os} were not considered in Table~\ref{tab:cvi-2011-2009}: Windows2003, Windows2008, Ubuntu, and OpenSolaris. 
-The \gls{cvi} values are computed for a $\mathit{tspan}$ of 10 years to reflect a reasonable history. 
-It is possible to see that, with the exception of one system (Solaris with FreeBSD/Red Hat/Windows2000 in the Fat Server), in all remaining cases \gls{cvi} shows a decreasing trend. 
-Several of the \glspl{os} that have evolved over a large period are having less reported vulnerabilities, and this causes a decline in shared vulnerabilities in the recent years. 
-For some of the \gls{os} pairs the drop in the \gls{cvi} value is quite significant, becoming almost one third of the 2009 value (NetBSD with Debian or Red Hat). 
-In the Isolated Thin Server case, there are three pairs with $\mathit{CVI}(A,B)=0$, which shows that they have shared no vulnerabilities during the past 12 years, and are thus particularly good candidates to include in intrusion-tolerant configurations. 
-These systems are Debian with either OpenBSD or FreeBSD or Solaris.
-
-%An example of the usefulness of \gls{cvi} can be seen, e.g., when comparing OpenBSD-Red Hat with Solaris-Red Hat. 
-According to Table~\ref{tab:pairs_vulns_by_year}, both \gls{os} pairs had 10 common vulnerabilities in the 2000--2011 period, suggesting that they both provide the same degree of diversity. 
-From the \gls{cvi} values in Table~\ref{tab:cvi-2011-2009}, it is apparent that OpenBSD and Red Hat have become more diverse, in recent years, than Red Hat and Solaris, making it advisable, from a diversity standpoint, to choose the former \gls{os} pair over the latter.
 
 \begin{table}[!ht]
 \begin{center}
@@ -299,20 +280,33 @@ Red Hat-Win2000 & 1.8 & 1.6 & -             & 0.9 & 0.8 & -   \\ \hline
 \end{center}
 \end{table}
 
+Table~\ref{tab:cvi-2011-2009} presents \gls{cvi} values for the years 2009 to 2011. 
+We have excluded from this analysis \glspl{os} with vulnerability information missing for more than one year over the period, to avoid using incomplete data in the calculation of the indicators. Therefore, the following \glspl{os} were not considered in Table~\ref{tab:cvi-2011-2009}: Windows2003, Windows2008, Ubuntu, and OpenSolaris. 
+The \gls{cvi} values are computed for a $\mathit{tspan}$ of 10 years to reflect a reasonable history. 
+It is possible to see that, except for one system (Solaris with FreeBSD/Red Hat/Windows2000 in the Fat Server), in all remaining cases \gls{cvi} shows a decreasing trend. 
+Several of the \glspl{os} that have evolved over a considerable period are having less reported vulnerabilities, and this causes a decline in shared vulnerabilities in the recent years. 
+For some of the \gls{os} pairs the drop in the \gls{cvi} value is quite significant, becoming almost one-third of the 2009 value (NetBSD with Debian or Red Hat). 
+In the Isolated Thin Server case, there are three pairs with $\mathit{CVI}(A,B)=0$, which shows that they have shared no vulnerabilities during the past 12 years, and are thus particularly good candidates to include in intrusion-tolerant configurations. 
+These systems are Debian with either OpenBSD or FreeBSD or Solaris.
+
+%According to Table~\ref{tab:pairs_vulns_by_year}, both \gls{os} pairs had 10 common vulnerabilities in the 2000--2011 period, suggesting that they both provide the same degree of diversity. 
+From the \gls{cvi} values in Table~\ref{tab:cvi-2011-2009}, it is apparent that OpenBSD and Red Hat have become more diverse, in recent years, than Red Hat and Solaris, and to make it advisable, from a diversity standpoint, to choose the former \gls{os} pair over the latter.
 
 
-\subsection*{Building Replicated Systems with Diversity}
+
+\subsection{Building Replicated Systems with Diversity}
 \label{build_diversity}
+
 
 This section describes three strategies for choosing diverse sets of \glspl{os}. 
 These strategies utilize the data analyzed earlier as a basis to make decisions, by assuming that the information reported by \gls{nvd} on vulnerabilities can be correlated to the amount of diversity among \glspl{os}. 
-Of course there are some caveats associated with this approach, but the alternatives can be even harder to put in practice, especially if one wants to consider a large number of \glspl{os}. 
-For example, for closed systems (e.g., Windows) it is very difficult to actually determine the level of sharing of \gls{os} components, and therefore, diversity estimations based on the code cannot be performed. Moreover, even if this estimate could be obtained, there is the risk that it does not reflect the number of vulnerabilities that occur simultaneously in several \glspl{os} (e.g., two distinct implementations of the same flawed algorithm are vulnerable).
+Of course, there are some caveats associated with this approach, but the alternatives can be even harder to put in practice, especially if one wants to consider a large number of \glspl{os}. 
+For example, for closed systems (e.g., Windows) it is challenging to determine the level of sharing of \gls{os} components, and therefore, diversity estimations based on the code cannot be performed. Moreover, even if this estimate could be obtained, there is the risk that it does not reflect the number of vulnerabilities that occur simultaneously in several \glspl{os} (e.g., two distinct implementations of the same flawed algorithm are vulnerable).
 
-The first strategy, called \gls{cvcs}, is based on raw data collected over a large interval, and is the simplest approach for selecting \gls{os} pairs. 
-It should be used when one wants to treat all vulnerabilities, regardless of the time which were reported, as equally important to make choices. 
+The first strategy, called \gls{cvcs}, is based on raw data collected over a considerable interval, and is the most straightforward approach for selecting \gls{os} pairs. 
+It should be used when one wants to treat all vulnerabilities, regardless of the time which they were reported, as equally important to make choices. 
 The second strategy, \gls{cvis}, uses the \gls{cvi} described in the previous section to select \gls{os} pairs taking into account the incidence of common vulnerabilities over the years. 
-It is indicated when one wants to give greater importance to more recent vulnerabilities, because it is a weighted sum. 
+It is indicated when one wants to give greater importance to more recent vulnerabilities because it is a weighted sum. 
 The third strategy, \gls{irts}, follows a different approach from the previous ones, focusing not so much on common vulnerabilities directly, but on the frequency in which vulnerabilities appear in the two OSes. If one wants to give more importance to the time interval between successive reports of common vulnerabilities, this is the best strategy. 
 Since this last criterion complements the previous two, one could explore strategies \gls{cvcs} and \gls{cvis} in conjunction with \gls{irts}.
 
@@ -325,27 +319,28 @@ As a cautious note, one should take into account that Ubuntu and Windows2008 wer
 Windows2000 is presented in the tables because there are published vulnerabilities until 2010, although it has been gradually replaced by Windows2003 and Windows2008 in the organizations. Consequently, we do not use Windows2000 when choosing the \gls{os} sets. 
 We have excluded OpenSolaris from the study because there is data available for only a limited period. 
 In each strategy and configuration we present two sets: \emph{setCon} is more conservative, since it does not contain Ubuntu and Windows2008; and \emph{setUpdt} is more up-to-date because it can include Ubuntu and Windows2008. 
-When looking at these two sets, one should keep in mind that setCon is selected from a group of \glspl{os} for which there is a large amount of \gls{nvd} data, which contributes for a higher confidence on the result. 
+When looking at these two sets, one should keep in mind that setCon is selected from a group of \glspl{os} for which there is a significant amount of \gls{nvd} data, which contributes for higher confidence on the result. 
 On the other hand, setUpdt uses \glspl{os} with different amounts of \gls{nvd} data, which can cause small levels of inaccuracy when making comparisons (e.g., in the \gls{cvcs}, any \gls{os} pair featuring Windows2008 has zero common vulnerabilities until 2007). 
-One way to address this would be to only consider vulnerabilities that appear later than 2007 when choosing setUpdt. 
+One way to address this would be only to consider vulnerabilities that appear later than 2007 when choosing setUpdt. 
 We opted not to follow this approach because it has the drawback of discarding too much data.
 
 
-\subsection*{Common Vulnerability Count (CVCst)} 
+\subsection{Common Vulnerability Count (CVCst)} 
 
 The results from the previous section give a strong indication that it should be possible to choose groups of \glspl{os} with few common vulnerabilities over reasonable intervals of time. 
 However, we would like to understand if the data from the \gls{nvd} database is effective at suggesting these groups of \glspl{os}. 
-To address this point, we divided the data in two subsets: the \emph{history period}, comprising the data for the interval 2000 to 2009, and the \emph{observed period}, from 2010 to 2011. 
-The objective is to employ the history period to pick the sets of \glspl{os} to use on the replicated system (as if the choice was made at the beginning of 2010), and then use the data for the observed period to verify if these choices would have been adequate, that is, if they have a small (preferably the smallest) number of common vulnerabilities in this period.
+To address this point, we divided the data into two subsets: the \emph{history period}, comprising the data for the interval between 2000 to 2009, and the \emph{observed period}, from 2010 to 2011. 
+The objective is to employ the historical period to pick the sets of \glspl{os} to use on the replicated system (as if the choice was made at the beginning of 2010). Then we use the data for the observed period to verify if these choices would have been adequate, i.e., if they have a small (preferably the smallest) number of common vulnerabilities in this period.
 
-\gls{cvcs} makes decisions based directly on the empirical data for the  number of common vulnerabilities across all \gls{os} pairs. 
+\gls{cvcs} makes decisions based directly on the empirical data for the number of common vulnerabilities across all \gls{os} pairs. 
 This data is displayed in Table \ref{tab:strat_i} for \glspl{os} with a Fat Server configuration. 
 Numbers to the right and above the diagonal line represent the history period, while numbers to the left and below the line stand for the observed period. 
 For example, the entry corresponding to OpenBSD-Red Hat to the right of the diagonal line has the number 10, which means that these \glspl{os} shared 10 vulnerabilities between 2000 and 2009. 
 The equivalent entry, but to the left of the diagonal line, is 0 because they had no common flaws reported in 2010 and 2011. 
 As expected, \gls{os} pairs from the same family had the highest counts of common vulnerabilities. 
-The only case where there were more vulnerabilities in the observed period than the history period is for the Windows2008--Windows2003 pair, which is explained by the recent release date of Windows2008. 
+The only case where there were more vulnerabilities in the observed period than the historical period is for the Windows2008--Windows2003 pair, which is explained by the recent release date of Windows2008. 
 It is interesting to notice, however, that most pairs had zero common vulnerabilities in the observed period.
+
 
 \begin{table}[!ht]
 \begin{center}
@@ -381,8 +376,9 @@ Win2008 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 38 & 229 & -	& \multicolumn{1}{|c}{}  \\ \
 \end{center}
 \end{table}
 
+
 The strategy for building sets of \glspl{os} is based on a simple cost function. 
-Given any potential \gls{os} pair A and B that could be added to the set, one can perform a lookup in Table \ref{tab:strat_i} to determine the pair's number of common vulnerabilities in the history period. 
+Given any potential \gls{os} pair A and B that could be added to the set, one can perform a lookup in Table \ref{tab:strat_i} to determine the pair's number of common vulnerabilities in the historical period. 
 This number corresponds to the cost of adding this \gls{os} pair to the group. 
 Similarly, when including a third \gls{os} C, it is possible to find in the table the entries for A--C and B--C and take their sum as the cost of integrating C in the group. 
 When building a set with $n$ \glspl{os}, the total cost is the addition of each individual cost for all combinations of \gls{os} pairs.
@@ -390,15 +386,17 @@ The sets that lead to smaller values of total cost are considered the best choic
 Accordingly, based on the table, the best groups of four \glspl{os} are:
 
 \begin{itemize}
+  \setlength\itemsep{0em}
 \item setCon = \{\emph{OpenBSD, Solaris, Debian, Windows2003}\}, with a total cost of 23;
 \item setUpdt = \{\emph{NetBSD, Solaris, Ubuntu, Windows2008}\}, with a total cost of 12.%, but one vulnerability affects more than two \glspl{os} simultaneously, hence two pairs.
 \end{itemize}
 
-One however should keep in mind that sometimes the total cost may be only an approximation of the actual number of shared vulnerabilities among the \glspl{os} in the set, as certain vulnerabilities might be counted more than once. 
-This will likely not be a problem, since overcounting vulnerabilities provides a conservative estimate, or an estimate worse than reality. 
+
+One, however, should keep in mind that sometimes the total cost may be only an approximation of the actual number of shared vulnerabilities among the \glspl{os} in the set, as specific vulnerabilities might be counted more than once. 
+This will likely not be a problem since overcounting vulnerabilities provides a conservative estimate, or an estimate worse than reality. 
 For example, setUpdt only has 11 shared vulnerabilities for a total cost of 12, since one of the vulnerabilities appears in three of the \glspl{os} (and is therefore included in two table entries).
 
-Next we can check to what extent our choice of the best group of four \glspl{os} that we would pick from the history period (2000--2009), as prescribed by \gls{cvc} cost calculation, remains consistent with the choice of best group of four \glspl{os} from the observed period (2010--2011). 
+Next we can check to what extent our choice of the best group of four \glspl{os} that we would pick from the historical period (2000--2009), as prescribed by \gls{cvc} cost calculation, remains consistent with the choice of the best group of four \glspl{os} from the observed period (2010--2011). 
 We see that both setCon and setUpdt have only two shared vulnerabilities. 
 They are not the best sets in the observed period (2010--2011), since there are groups of \glspl{os} with zero common vulnerabilities in the observed period (e.g., by replacing Solaris with Red Hat), though they do exhibit a high level of diversity. 
 A graphical representation of the sets as Venn diagrams is available in Figures~\ref{fig-venn}(a) and~\ref{fig-venn}(b). 
@@ -442,7 +440,7 @@ Win2008 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 & 26 & - & \multicolumn{1}{|c}{}  \\ \cl
 
 
 Table \ref{tab:strat_i_iso} presents the common vulnerabilities with the Isolated Thin Server configuration data. This configuration represents a class of servers that have a dedicated function and are protected against physical intruders. 
-The same approach can be applied as above: first, we choose the best pairs based on the history period to build a set of four \glspl{os}; next, we evaluate the sets by comparing the results with the values for the observed period. 
+The same approach can be applied as above: first, we choose the best pairs based on the historical period to build a set of four \glspl{os}; next, we evaluate the sets by comparing the results with the values for the observed period. 
 The history period provides two candidate sets: 
 
 \begin{itemize}
@@ -454,7 +452,7 @@ In the observed period, setCon and setUpdt have no common vulnerabilities, showi
 
 \begin{figure}[!ht]
  \centering
- \includegraphics[scale=0.55]{images/images/grayscale_ven_dia_one_fig_update.pdf}
+ \includegraphics[scale=0.7]{images/images/grayscale_ven_dia_one_fig_update.pdf}
  \caption{Venn diagrams for vulnerabilities in setCon and setUpdt for strategies CVCst and CVIst in Fat Server and Isolated Thin Server configurations. The first four diagrams (a, b, c and d) represent the results for CVC, and the last four \glspl{os} (e, f, g and h) represent the results for CVI.}
  \label{fig-venn}
 \end{figure}
@@ -467,12 +465,13 @@ Therefore, besides taking advantage of the available data on total counts of sha
 \gls{cvis} is applied by executing the following method, which is based on minimizing a cost function. 
 For a given year and time span, the \gls{cvi} value is calculated for each of the \gls{os} pairs. 
 Typically, one should use the most recent year for which there is available data. 
-The time span should cover a reasonable interval, so that the indicator reflects the trend on discovered vulnerabilities. 
+The time span should cover a reasonable interval so that the indicator reflects the trend of discovered vulnerabilities. 
 In some cases, however, one may have to resort to smaller time spans due to lack of data, namely with \glspl{os} released recently. 
 In this case, the indicator will give a higher weight to the vulnerabilities reported in the last year. 
 In \gls{cvis} the cost of creating a group with two \glspl{os} A and B is $\mathit{CVI}(A,B)$. 
 Extending this idea to a group of $n$ \glspl{os}, the total cost becomes the sum of the individual \gls{cvi} for all combinations of \gls{os} pairs.
 In order to choose the best groups, the strategy searches for sets of \glspl{os} that together have the smallest total cost.
+
 
 \begin{table}[!ht]
 \begin{center}
@@ -508,7 +507,7 @@ Win2008 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 38 & 229 & - &\multicolumn{1}{|c}{}  \\ \c
 \end{center}
 \end{table}
 
-To evaluate this strategy, we split the time in two intervals as we did for \gls{cvcs}. 
+To evaluate this strategy, we split the time into two intervals as we did for \gls{cvcs}. 
 Table~\ref{tab:strat_ii} presents in the cells for the history period the $\mathit{CVI}_{2009}(A,B)$ for a time span of 10 years in a Fat Server configuration\footnote{In some cases, we had to use smaller time spans due to the more recent release date of the \glspl{os} (e.g., Ubuntu and Windows 2008). When this happened, the CVI value was calculated using the maximum time span that is allowed by the available data.}. 
 The cells at left and bottom of the diagonal line correspond to the observed period, and they count as before the number of shared vulnerabilities in 2010 and 2011. After applying \gls{cvis}, the following sets are the best with four \glspl{os}:
 
@@ -561,14 +560,14 @@ Win2008 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 3 & 26 & -&\multicolumn{1}{|c}{}  \\ \clin
 
 Table \ref{tab:strat_ii_iso} provides the data for applying CVIst in Isolated Thin Server configurations. 
 It is possible to observe that \gls{cvi} values have significantly decreased when compared to the previous table. 
-The best groups of four \glspl{os} in the history period are:
+The best groups of four \glspl{os} in the historical period are:
  
 \begin{itemize}
 \item setCon = \{\emph{NetBSD, Solaris, Debian, Windows2003}\}, with a total cost of $4.5$;
 \item setUpdt = \{\emph{Solaris, Debian, Ubuntu, Windows2008}\}, with a total cost of $1.9$.
 \end{itemize}
 
-By checking the data for the observed period one can see that both sets do not share a single vulnerability, which indicates that the strategy would have made a good selection of \glspl{os} (see also the Venn diagrams in Figures~\ref{fig-venn}(g) and~\ref{fig-venn}(h)).
+By checking the data for the observed period, one can see that both sets do not share a single vulnerability, which indicates that the strategy would have made a good selection of \glspl{os} (see also the Venn diagrams in Figures~\ref{fig-venn}(g) and~\ref{fig-venn}(h)).
 
 %TABLE VII
 
@@ -633,7 +632,7 @@ Win2003-Win2008 & 222 & 16 & 41 & 2 & 0 \\ \hline
 
 \subsubsection*{Inter-Reporting Times Strategy (IRTst)} \label{IRT} 
 This strategy is mainly concerned with the \emph{\gls{irt}}, i.e., the number of days between successive reports of common vulnerabilities in different \gls{os} pairs, rather than vulnerability counts. 
-The assumption underlying this strategy is that lower inter-reporting times suggest greater similarity between \glspl{os}, and thus it would be advisable, from a diversity standpoint, to select \glspl{os} with higher \gls{irt}.
+The assumption underlying this strategy is that lower inter-reporting times suggest a greater similarity between \glspl{os}, and thus it would be advisable, from a diversity standpoint, to select \glspl{os} with higher \gls{irt}.
 
 Table \ref{tab:pairs_irt} presents the number of vulnerabilities for each pair of \glspl{os} in five \gls{irt} intervals, from 0 to 10000 days.
 The values in the table were obtained in the following manner: first, for a given \gls{os} pair A and B, we collected the dates for common vulnerabilities; next, we calculated the \gls{irt} in days of every two consecutive vulnerabilities; and then, we counted the number of vulnerabilities that were within each interval.
@@ -642,7 +641,7 @@ Therefore, each horizontal line separates groups of \gls{os} pairs that have pos
 From a diversity perspective, it is interesting to notice that in the table there are $29\%$ of the pairs that do not have two consecutive vulnerabilities, and that $11\%$ only have consecutive vulnerabilities from $1000$ days on (last column).
 
 The \gls{irts} strategy allows the selection of \glspl{os} with longer \gls{irt}. 
-This criteria is important if one wants to deploy a system that has a short lifetime, e.g., a batching process, which ideally would only be in operation between the discovery of common vulnerabilities. 
+This criteria is essential if one wants to deploy a system that has a short lifetime, e.g., a batching process, which ideally would only be in operation between the discovery of common vulnerabilities. 
 \gls{irts} tries first to select \gls{os} pair with zero common vulnerabilities; when this is not possible, it chooses next pair whose common vulnerabilities appear in the rightmost columns. 
 By inspecting the table, we can see that the best two sets of four \glspl{os} are:
 
@@ -653,7 +652,7 @@ By inspecting the table, we can see that the best two sets of four \glspl{os} ar
 
 
 Table \ref{tab:pairs_irt_iso} presents the \gls{irt} for an Isolated Thin Server configuration. 
-Since each \gls{os} pair has less common vulnerabilities, this translates often in larger \gls{irt}.  
+Since each \gls{os} pair has less common vulnerabilities, this often translates to larger \gls{irt}.  
 The percentage of lines with zero \gls{irt} in all intervals is higher, $51\%$, but remained the same for the \gls{os} pairs that share vulnerabilities with longer \gls{irt} ($11\%$). 
 When applying the strategy to this table, the best sets of \glspl{os} are: 
 
@@ -725,13 +724,13 @@ The three strategies explore distinct characteristics of the data to pick the \g
 Qualitatively they differ in the method of selection, and potentially the result of applying them to our data could lead to distinct sets being chosen.
 On the other hand, they all try to find \glspl{os} that when placed together in the same system have a low probability of experiencing common vulnerabilities in the future. 
 Therefore, if there is a small collection of \gls{os} sets with this property, then all strategies should elect one of these sets as the best choice. 
-This is exactly what we observed with the \gls{nvd} data, and consequently, the selected best sets are not too different from each other.
-Only when one needs to find many \gls{os} sets with good levels of diversity, such as with the implementation of proactive recovery mechanisms in intrusion-tolerant systems \cite{Castro:2002,Sousa:2010}, then the distinctions among the strategies start to become apparent.
+This is precisely what we observed with the \gls{nvd} data, and consequently, the selected best sets are not too different from each other.
+Only when one needs to find many \gls{os} sets with reasonable levels of diversity, such as with the implementation of proactive recovery mechanisms in intrusion-tolerant systems \cite{Castro:2002,Sousa:2010}, then the distinctions among the strategies start to become apparent.
 We leave it as future work a more refined study on the comparison of the strategies with larger groups of \gls{os} sets.
 
-The \gls{os} sets that resulted from the execution of the strategies achieved good levels of diversity when evaluated in the observed period (years 2010 and 2011). 
-As expected from our analysis in Section~\ref{study}, several of the best sets contained an \gls{os} from each of the families. 
-The exception to this rule occurred with the Linux family, where in a few cases it had two representatives (Debian and Ubuntu) because these \glspl{os} had very few vulnerabilities reported in the last three years. 
+The \gls{os} sets that resulted from the execution of the strategies achieved reasonable levels of diversity when evaluated in the observed period (years 2010 and 2011). 
+As expected from our analysis, several of the best sets contained an \gls{os} from each of the families. 
+The exception to this rule occurred with the Linux family, wherein a few cases it had two representatives (Debian and Ubuntu) because these \glspl{os} had very few vulnerabilities reported in the last three years. 
 Even though the BSD family also had a small number of recent vulnerabilities, since these occasionally affected more \glspl{os}, the strategies opted for including just one of the BSD \glspl{os}.
 
 In the next section, we will look into \gls{os} versions as a way to increase diversity. 
@@ -739,17 +738,17 @@ For this study, we will use the set that was most selected by the different stra
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Exploring Diversity Across OS Releases}
+\subsection{Exploring Diversity Across OS Releases}
 \label{releases}
 
 If one wants to build systems capable of tolerating a few intrusions, our results show that it is possible to select \glspl{os} for the replicas with a small collection of common vulnerabilities. 
-It is hard, however, to support critical services that need to remain correct with higher numbers of compromised replicas or to use some Byzantine fault-tolerant algorithms that trade off performance for extra replicas (e.g., \cite{Abd-El-Malek:2005,Kotla:2010,Serafini:2010}). 
+It is hard, however, to support critical services that need to remain correct with higher numbers of compromised replicas or to use some \gls{bft} algorithms that trade off performance for extra replicas (e.g., \cite{Abd-El-Malek:2005,Kotla:2010,Serafini:2010}). 
 The number of available \glspl{os} is limited, and consequently, one rapidly runs out of different \glspl{os} (e.g., 13 distinct \glspl{os} are needed to tolerate $f=4$ faults in a $3f+1$ system). 
-On the other hand, our experiments are relatively pessimistic in the sense that they are based on long periods of time and no distinctions are made between \gls{os} releases.
+On the other hand, our experiments are relatively pessimistic in the sense that they are based on long periods of time, and no distinctions are made between \gls{os} releases.
 
-Newer releases of an \gls{os} can contain important code changes, and therefore, old vulnerabilities may disappear and/or new vulnerabilities may be introduced. 
+Newer releases of an \gls{os} can contain essential code changes, and therefore, old vulnerabilities may disappear and/or new vulnerabilities may be introduced. 
 As a result, if we consider (OS, release) pairs, one may augment the number of different systems that do not share vulnerabilities. 
-Nevertheless, one should keep in mind that the use of older \gls{os} releases does not come without a cost, namely there might be incompatibilities with the current hardware and some older software packages might be difficult to find.
+Nevertheless, one should keep in mind that the use of older \gls{os} releases does not come without a cost. Namely, there might be incompatibilities with the current hardware, and some older software packages might be challenging to find.
 
 In the next two sections we explore \emph{n-diverse} sets, where we extend the OS, as an element in the set, to the \gls{os} release. 
 First we study a \emph{4-diverse} set, and then a \emph{2-diverse} set built with only two \glspl{os}. 
@@ -758,10 +757,10 @@ We will concentrate on Isolated Thin Server configurations because they correspo
 
 \subsubsection*{4-diverse sets}
 Here we analyze in more detail the vulnerabilities for the set \{\emph{OpenBSD, Debian, Solaris, Windows2003}\} across their releases between 2000 and 2011. 
-Despite of the year of the release, since some vulnerabilities can be inherited from older versions of the code, we will include all vulnerabilities no matter the published date (i.e., even the flaws prior to 2000).
+Despite the year of the release, since some vulnerabilities can be inherited from older versions of the code, we will include all vulnerabilities no matter the published date (i.e., even the flaws before 2000).
 
-From all releases available for our 4-version replicated system\footnote[1]{OpenBSD~2.7, OpenBSD~2.8, OpenBSD~2.9, OpenBSD~3.0, OpenBSD~3.1, OpenBSD~3.2, OpenBSD~3.3, OpenBSD~3.4, OpenBSD~3.5, OpenBSD~3.6, OpenBSD~3.7, OpenBSD~3.8 OpenBSD~3.9, OpenBSD~4.0, OpenBSD~4.1, OpenBSD~4.2, OpenBSD~4.3, OpenBSD~4.4,   Solaris~10.0, Solaris~11.0, Solaris~8.0, Solaris~8.1, Solaris~8.2, Solaris~9.0, Solaris~9.1, Debian~2.2, Debian~2.3, Debian~3.0,   Debian~3.1, Debian~4.0, Debian~6.0, Debian~6.2, and Windows~2003.}, we looked at the major releases that had non-zero vulnerabilities. 
-Since OpenBSD follows a fixed six-month release cycle, in this case, we selected one version every three years, which is reasonable given our 12-year time span (taking all 18 releases into consideration would require 154 entries in the table). 
+From all releases available for our 4-version replicated system,\footnote[1]{OpenBSD~2.7, OpenBSD~2.8, OpenBSD~2.9, OpenBSD~3.0, OpenBSD~3.1, OpenBSD~3.2, OpenBSD~3.3, OpenBSD~3.4, OpenBSD~3.5, OpenBSD~3.6, OpenBSD~3.7, OpenBSD~3.8 OpenBSD~3.9, OpenBSD~4.0, OpenBSD~4.1, OpenBSD~4.2, OpenBSD~4.3, OpenBSD~4.4,   Solaris~10.0, Solaris~11.0, Solaris~8.0, Solaris~8.1, Solaris~8.2, Solaris~9.0, Solaris~9.1, Debian~2.2, Debian~2.3, Debian~3.0,   Debian~3.1, Debian~4.0, Debian~6.0, Debian~6.2, and Windows~2003.} we looked at the major releases that had non-zero vulnerabilities. 
+Since OpenBSD follows a fixed six-month release cycle, in this case, we selected one version every three years, which is reasonable given our 12-year time span (considering all 18 releases would require 154 entries in the table). 
 Therefore, the \gls{os} releases that are taken into the study are: OpenBSD 5.0, OpenBSD 4.4, OpenBSD 3.8, OpenBSD 3.2, Solaris 8.0, Solaris 9.0, Solaris 10.0, Solaris 11.0, Debian 2.2, Debian 3.0, Debian 4.0, Debian 5.0, Debian 6.0 and Windows2003.
 
 \begin{table}[!ht]
@@ -796,7 +795,7 @@ Second, these shared bugs occur more often between releases of the same \gls{os}
 This is anticipated because more code is re-used within the same \gls{os}.
 Additionally, one can notice that releases of the same \gls{os} typically have less shared vulnerabilities when comparing older and newer versions. 
 This is particularly evident for the OpenBSD and Debian releases. 
-This result is quite promising because it supports our thesis that one should be able to explore diversity across releases, as way to increase the number of available candidates for the construction of the diverse \gls{os} sets.
+This result is quite promising because it supports our thesis that one should be able to explore diversity across releases, as a way to increase the number of available candidates for the construction of the diverse \gls{os} sets.
 
 
 \subsubsection*{2-diverse sets} 
@@ -833,65 +832,40 @@ Red Hat 7.1 - Red Hat 8.0 & 2 &  Red Hat 4 - Red Hat 5 & 1  \\\hline
 
 The table only shows $14.7\%$ of the \gls{os} releases combinations, which means $85.3\%$ of the \gls{os} pairs are free from common flaws. 
 Debian has very few vulnerabilities that are shared between versions. 
-Moreover, accordingly to \gls{nvd}, these few vulnerabilities only affect two releases, i.e., there is no vulnerability that had an impact over a large period of time. 
+Moreover, accordingly to \gls{nvd}, these few vulnerabilities only affect two releases, i.e., no vulnerability had an impact over an extensive period. 
 There are two vulnerabilities, CVE-2003-0248 and CVE-2003-0364, that appear in five Red Hat releases (from Red Hat 7.1 to Red Hat 9.0). 
 The first is a vulnerability in the \emph{mxcsr} kernel code which lets attackers modify CPU state registers via a malformed address. 
-This is a critical vulnerability because it has impact on availability, confidentiality and integrity. 
+This is a critical vulnerability because it has an impact on availability, confidentiality, and integrity. 
 The second one is in the Red Hat TCP/IP implementation, and allows a \gls{dos} by CPU consumption. 
 Three vulnerabilities occur in Red Hat 7.2, 7.3 and 8.0, all related to particular versions and configurations of the OpenSSL cryptographic toolkit. 
 When exploited, they cause a \gls{dos} (CVE-2004-0079, CVE-2004-0081 and CVE-2004-0112).
+%Again, we can observe that few high impact vulnerabilities cross many versions of the same \gls{os}. 
 
-Again, we can observe that there are few high impact vulnerabilities that cross many versions of the same \gls{os}. 
-These results demonstrate that with a careful selection of the Debian and Red Hat releases, it is possible to avoid most of the common vulnerabilities, and apparently it becomes viable to build an intrusion-tolerant replicated system based on only two \glspl{os}.
+These results demonstrate that with a careful selection of the Debian and Red Hat releases, it is possible to avoid most of the common vulnerabilities, and apparently, it becomes viable to build an intrusion-tolerant replicated system based on only two \glspl{os}.
 
 
 \section{Decisions about deploying diversity}\label{decisions}
 We have underscored that these results are only \textit{prima facie} evidence for the usefulness of diversity. 
 On average, we would expect our estimates to be conservative as we analyzed aggregated vulnerabilities across releases: common vulnerabilities could be much smaller in a ``specific set'' of diverse \gls{os} releases. 
-But, there are limitations on what can be claimed from the analysis of the \gls{nvd} data alone without further manual analysis (other than what we have done, e.g., developing/finding and running exploit scripts on every \gls{os} for each vulnerability).
-A better analysis would be obtained if the \gls{nvd} vulnerability reports were combined with the exploit reports (including exploit counts), and even better if they also had indications about the users' usage profile.
-However, vendors are often wary of sharing such detailed dependability and security information with their customers.
-There are partial exploit reports available from other sites (e.g., \cite{cvedetails}), but they are incomplete and a significant amount of manual analysis is required to match the vulnerabilities with exploits for each \gls{os}.
+However, there are limitations on what can be claimed from the analysis of the \gls{nvd} data alone without further manual analysis (other than what we have done, e.g., developing/finding and running exploit scripts on every \gls{os} for each vulnerability).
+A better analysis would be obtained if the \gls{nvd} vulnerability reports were combined with the exploit reports (including exploiting counts), and even better if they also had indications about the users' usage profile.
+Moreover, we have seen that \gls{nvd} has some limitations, as we have found that some of the vulnerabilites were not reported in the \gls{nvd}, but several security advisory websites have reported those vulnerabilities.
+%However, vendors are often wary of sharing such detailed dependability and security information with their customers.
+Additionaly, there are partial exploit reports available from other sites (e.g., \cite{cvedetails}).
 
 
 Given these limitations, \emph{how can individual user organizations decide whether diversity is a suitable option for them, with their specific requirements and usage profiles?}
-The cost is reasonably easy to assess: costs of the software products, the required middleware (if any), added complexity of management, difficulties with client applications that require vendor-specific features, hardware costs, run-time cost of the synchronization and consistency enforcing mechanisms, and possibly more complex recovery after some failures.
+The cost is reasonably easy to assess: costs of the software products, the required middleware (if any), added the complexity of management, difficulties with client applications that require vendor-specific features, hardware costs, run-time cost of the synchronization and consistency enforcing mechanisms, and possibly more complex recovery after some failures.
 The gains in improved security (from some tolerance to zero-day vulnerabilities and easier recovery from some exploits, set against possible extra vulnerabilities due to the increased complexity of the system) are difficult to predict except empirically. 
+
 
 The first step onto adopting diversity as a dependable mechanism is done. 
 The other limitations will be addressed in the rest of this thesis. 
-%This uncertainty will be compounded, for many user organizations, by the lack of trustworthy estimates of their baseline security.
-%We note that, for some users, the evidence we have presented would already indicate that diversity to be a reasonable and relatively cheap precautionary choice, even without highly accurate predictions of its effects.
-%These are users who have serious concerns about security (e.g., high costs for interruptions of service or undetected exploits), and applications which can run on multiple \glspl{os}.
 
 
 \section{Final Remmarks}
 
 In this chapter we presented results from an analysis of 18 years (1994--2011) of vulnerability reports from the \gls{nvd}  database. 
-We analysed 2270 vulnerabilities of eleven \gls{os} distributions. 
-We enriched the dataset with manual fixes and further classification of vulnerabilities, depending on which part of the \gls{os} they affected, into kernel, driver, system software, and applications. The enriched dataset allowed us to perform various analysis to answer the main question that drove our research for this thesis: \emph{what are the potential security gains that could be attained from using diverse \glspl{os} in a replicated intrusion-tolerant system?}
+We analyzed 2270 vulnerabilities of eleven \gls{os} distributions. 
+We enriched the dataset with manual fixes and further classification of vulnerabilities, depending on which part of the \gls{os} they affected, into the kernel, driver, system software, and applications. The enriched dataset allowed us to perform various analysis to answer the main question that drove our research for this thesis: \emph{what are the potential security gains that could be attained from using diverse \glspl{os} in a replicated intrusion-tolerant system?}
  
-
-The main results could be summarized as follows:
-\begin{enumerate}
-\item In most diverse \gls{os} configurations, significant  benefits in security could be observed: a low number of vulnerabilities were found to affect more than one \gls{os};
-
-\item The number of vulnerabilities that affect more than one \gls{os} depends on how diverse the configuration is: they are higher for OSes from the same family (e.g., BSD) but very low (and in many cases zero) in OSes from different families (e.g., BSD and Windows);
-
-\item We presented several strategies for system designers to choose most diverse \glspl{os} using \gls{nvd} data depending on whether they: consider all common vulnerabilities as being of equal importance; place greater emphasis on more recent common vulnerabilities (and hence wish to minimise the number of those); are primarily interested in the common vulnerabilities being reported less frequently in calendar time (which would allow them more time to respond to them). Surprisingly, for our dataset all three strategies delivered the same best combination of four \glspl{os} for an intrusion-tolerant configuration (four being the usual number of systems needed to tolerate a Byzantine failure in a replicated system), which is: \textit{\{OpenBSD, Debian, Solaris, Windows2003\}}.
-
-\end{enumerate}
-
-%We discussed in detail that there are limits to the claims we can make on the potential benefits of diversity with \glspl{os} using \gls{nvd} data alone. However for some users that have severe security concerns and applications that are readily portable between \gls{os} platforms the results presented here provide a good case towards employing diversity in their configurations.
-
-%There are several strands of further work that are possible:
-%\begin{enumerate}
-%\item Enrich the \gls{nvd} dataset with information from exploit databases and patch information from \gls{os} vendors. This would give us far richer information on the vulnerability lifecycle (from reporting to exploitation and patching). However this task requires significant effort to reconcile the differences in the reporting formats of the databases, and the results are likely to remain imperfect due to missing data.
-
-%\item Further research on the extent to which we can reason about the benefits of diversity for security from using vulnerability data alone (especially if significant progress on the item above is not forthcoming). This work is currently under way.
-
-%\item Analyze the distributions of inter reporting times and enrich them, where possible, with information about \gls{os} usage (say from download rates of these products). This might enable us to reason more accurately about how we can translate these inter-reporting times into vulnerability-free operating time.
-
-%\item Examine the diversity that exists between these systems (at least the open source ones) at the source code level. This would then enable analysis of the correlation between the metrics: amount of shared code and number of common vulnerabilities. One would expect the correlation to be strongly positive, but it is difficult to confirm this except with empirical studies.
-
-%\end{enumerate}

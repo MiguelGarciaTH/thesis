@@ -6,6 +6,19 @@
 Our work focuses on two fundamental issues: how to select the best replicas to run together given the current threat landscape, and what is the performance overhead of running a diverse BFT system in practice.
 Our results open many avenues for future work on this topic.
 
+\paragraph{OS vulnerability Study}
+The main results could be summarized as follows:
+\begin{enumerate}
+\item In most diverse \gls{os} configurations, significant  benefits in security could be observed: a low number of vulnerabilities were found to affect more than one \gls{os};
+
+\item The number of vulnerabilities that affect more than one \gls{os} depends on how diverse the configuration is: they are higher for OSes from the same family (e.g., BSD) but very low (and in many cases zero) in OSes from different families (e.g., BSD and Windows);
+
+\item We presented several strategies for system designers to choose most diverse \glspl{os} using \gls{nvd} data depending on whether they: consider all common vulnerabilities as being of equal importance; place greater emphasis on more recent common vulnerabilities (and hence wish to minimise the number of those); are primarily interested in the common vulnerabilities being reported less frequently in calendar time (which would allow them more time to respond to them). Surprisingly, for our dataset, all three strategies delivered the same best combination of four \glspl{os} for an intrusion-tolerant configuration (four being the usual number of systems needed to tolerate a Byzantine failure in a replicated system), which is: \textit{\{OpenBSD, Debian, Solaris, Windows2003\}}.
+
+\end{enumerate}
+
+
+
 \section{Future Work}
 
 \textbf{Virtualization technology:}

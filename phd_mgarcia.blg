@@ -15,17 +15,8 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-Repeated entry---line 790 of file chapters/references/references.bib
- : @inproceedings{Snow:2013
- :                         ,
-I'm skipping whatever remains of this entry
-Unbalanced braces---line 1307 of file chapters/references/references.bib
- :  howpublished = "{\http://www.netfilter.org/}
- :                                              }"
-I'm skipping whatever remains of this entry
 Warning--entry type for "Chauhan:2011" isn't style-file defined
---line 1391 of file chapters/references/references.bib
-Warning--I didn't find a database entry for "Deswarte:1999"
+--line 1467 of file chapters/references/references.bib
 Warning--I didn't find a database entry for "Bessani2014"
 Warning--to sort, need author or key in juniper
 Warning--to sort, need author or key in paloalto
@@ -41,45 +32,45 @@ Warning--empty booktitle in Vianello:2013
 Warning--empty booktitle in Vigna:2003
 Warning--empty year in Vigna:2003
 Warning--empty year in Zhao:2010
-You've used 126 entries,
+You've used 144 entries,
             2118 wiz_defined-function locations,
-            1217 strings with 26320 characters,
-and the built_in function-call counts, 41309 in all, are:
-= -- 3692
-> -- 2370
+            1305 strings with 29680 characters,
+and the built_in function-call counts, 47640 in all, are:
+= -- 4231
+> -- 2797
 < -- 18
-+ -- 940
-- -- 811
-* -- 2773
-:= -- 6893
-add.period$ -- 389
-call.type$ -- 126
-change.case$ -- 778
++ -- 1111
+- -- 961
+* -- 3240
+:= -- 7980
+add.period$ -- 444
+call.type$ -- 144
+change.case$ -- 907
 chr.to.int$ -- 0
-cite$ -- 140
-duplicate$ -- 1564
-empty$ -- 3364
-format.name$ -- 811
-if$ -- 8660
+cite$ -- 158
+duplicate$ -- 1800
+empty$ -- 3854
+format.name$ -- 961
+if$ -- 9943
 int.to.chr$ -- 0
-int.to.str$ -- 126
-missing$ -- 101
-newline$ -- 642
-num.names$ -- 248
-pop$ -- 1106
+int.to.str$ -- 144
+missing$ -- 119
+newline$ -- 733
+num.names$ -- 284
+pop$ -- 1276
 preamble$ -- 1
-purify$ -- 655
+purify$ -- 766
 quote$ -- 0
-skip$ -- 1036
+skip$ -- 1163
 stack$ -- 0
-substring$ -- 1476
-swap$ -- 298
+substring$ -- 1665
+swap$ -- 329
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 494
+type$ -- 566
 warning$ -- 14
-while$ -- 314
-width$ -- 129
-write$ -- 1322
-(There were 2 error messages)
+while$ -- 357
+width$ -- 147
+write$ -- 1509
+(There were 16 warnings)

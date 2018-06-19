@@ -1,7 +1,8 @@
 @string{tiss    	= "ACM Transactions on Information and System Security"}
 @string{ATC		= "Proceedings of the Annual Conference on USENIX Annual Technical Conference"}
 @string{USS 		= "Proceedings of the {USENIX} Security Symposium"}
-@string{DSN 		= "Proceedings of the {IEEE/IFIP} International Conference on Dependable Systems and Networks"}   
+@string{DSN 		= "Proceedings of the {IEEE/IFIP} International Conference on Dependable Systems and Networks"}
+@string{CSS 		= "{Proceedings of the ACM Conference on Computer and Communications Security}"}      
 @string{SOSP 		= "Proceedings of the {ACM} Symposium on Operating Systems Principles"} 
 @string{PRDC 		= "Proceedings of the {IEEE} Pacific Rim International Symposium on Dependable Computing"}
 @string{SP 		= "Proceedings of the {IEEE} Symposium on Security and Privacy"}
@@ -37,6 +38,15 @@
 	pages = {267--276}
 }
 
+@Article{randell:1975,
+	author =	 {Brian Randell},
+	title =	 {{System Structure for Software Fault Tolerance}},
+	journal =	 {IEEE Transactions on Software Engineering},
+	year =	 1975,
+	volume =	 {1},
+	number =	 {2},
+}
+
 @article{Knuth:1977,
 	author = {Donald Knuth and James Morris and Vaughan Pratt},
 	title = {Fast Pattern Matching in Strings},
@@ -53,6 +63,17 @@
 	booktitle =	 {Proceedings. of the IEEE Computer Software and Applications},
 	year =	 1977,
 }
+
+@article{Lamport:1982,
+	author = {Lamport, Leslie and Shostak, Robert and Pease, Marshall},
+	title = {The Byzantine Generals Problem},
+	journal = {ACM Transactions Programming Languages Systems},
+	volume = {4},
+	number = {3},
+	month = jul,
+	year = {1982},
+	pages = {382--401},
+} 
 
 @article{Lamport:1984,
 	author = {Lamport, Leslie},
@@ -78,13 +99,13 @@
 } 
 
 @article{Knight:1986,
- author = {Knight, J. C. and Leveson, N. G.},
- title = {{An Experimental Evaluation of the Assumption of Independence in Multiversion Programming}},
- journal = {IEEE Transactions on Software Engineering},
- volume = {12},
- number = {1},
- month = jan,
- year = {1986},
+	author = {Knight, J. C. and Leveson, N. G.},
+	title = {{An Experimental Evaluation of the Assumption of Independence in Multiversion Programming}},
+	journal = {IEEE Transactions on Software Engineering},
+	volume = {12},
+	number = {1},
+	month = jan,
+	year = {1986},
 
 } 
 
@@ -332,7 +353,7 @@
 
 @inproceedings{Frei:2006,
 	author = {Frei, S. and May, M. and Fiedler, U. and Plattner, B.},
-	title = { 6Large-scale Vulnerability Analysis}},
+	title = {Large-scale Vulnerability Analysis}},
 	booktitle = {{Proceedings of the SIGCOMM Workshop on Large-scale Attack Defense}[,
 	year = {2006},
 } 
@@ -412,7 +433,7 @@
 @Inbook{Han:2009,
 	author="Han, Jin and Gao, Debin and Deng, Robert H.",
 	title={{On the Effectiveness of Software Diversity: A Systematic Study on Real-World Vulnerabilities}},
-	bookTitle="Proceedings International Conference Conference on Detection of Intrusions and Malware & Vulnerability Assessment",
+	bookTitle="{Proceedings International Conference Conference on Detection of Intrusions and Malware \& Vulnerability Assessment}",
 	year="2009",
 	publisher="Springer Berlin Heidelberg",
 	address="Berlin, Heidelberg",
@@ -671,10 +692,24 @@
 	month={June},
 }
 
+@INPROCEEDINGS{Garcia:2012b,
+	title={DIVERSYS: DIVErse Rejuvenation SYStem},
+	author={Garcia, Miguel and Neves, Nuno and Bessani, Alysson},
+	booktitle={{Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)},	
+	year={2012}
+}
+
+@INPROCEEDINGS{Shahzad:2012, 
+	author={M. Shahzad and M. Z. Shafiq and A. X. Liu}, 
+	booktitle={Proceedings of the International Conference on Software Engineering}, 
+	title={A large scale exploratory analysis of software vulnerability life cycles}, 
+	year={2012}, 
+}
+
 @inproceedings{Bilge:2012,
 	 author = {Bilge, Leyla and Dumitras, Tudor},
 	 title = {{Before We Knew It: An Empirical Study of Zero-day Attacks in the Real World}},
-	 booktitle = {Proceedings of the ACM Conference on Computer and Communications Security},
+	 booktitle = CSS,
 	 year = {2012},
 	 pages = {833--844},
 	 publisher = {ACM},
@@ -691,11 +726,17 @@
 	pages="477--495",
 }
 
+@INPROCEEDINGS{Melo:2013, 
+	author={M. Melo and P. Maciel and J. Araujo and R. Matos and C. Araújo}, 
+	booktitle=DSN, 
+	title={Availability study on cloud computing environments: Live migration as a rejuvenation mechanism}, 
+	year={2013}, 
+}
 
 @inproceedings{Martins:2013,
 	author="Martins, Rolando and Gandhi, Rajeev and Narasimhan, Priya and Pertet, Soila and Casimiro, Ant{\'o}nio and Kreutz, Diego and Ver{\'i}ssimo, Paulo", 
 	title="Experiences with Fault-Injection in a Byzantine Fault-Tolerant Protocol",
-	 booktitle = {{Proceedings of the ACM/IFIP/USENIX International Conference on Middleware}},
+	booktitle = {{Proceedings of the ACM/IFIP/USENIX International Conference on Middleware}},
 	year="2013",
 }
 
@@ -716,7 +757,7 @@
 }
 
 @inproceedings{Bessani:2013,
-	author = {Alysson Bessani and Marcel Santos and Jo\E3o F\'elix and Nuno Neves and Miguel Correia},
+	author = {Alysson Bessani and Marcel Santos and Jo\~{a}o F\'elix and Nuno Neves and Miguel Correia},
 	title = {On the Efficiency of Durable State Machine Replication},
 	booktitle = {Proceedings of the USENIX Annual Technical Conference},
 	month = jun,
@@ -787,12 +828,12 @@
 	year={2013}, 
 }
 
-@INPROCEEDINGS{Snow:2013, 
-	author={K. Z. Snow and F. Monrose and L. Davi and A. Dmitrienko and C. Liebchen and A. R. Sadeghi}, 
-	booktitle=SPriv,
-	title={{Just-In-Time Code Reuse: On the Effectiveness of Fine-Grained Address Space Layout Randomization}}, 
-	year={2013}, 
-}
+@inproceedings{Zhai:2014,
+	author = {Zhai, Ennan and Chen, Ruichuan and Wolinsky, David Isaac and Ford, Bryan},
+	title = {Heading off Correlated Failures Through Independence-as-a-service},
+	booktitle = OSDI,
+	year = {2014},
+} 
 
 @ARTICLE{Kirsch:2014,
 	author={Kirsch, J. and Goose, S. and Amir, Y. and Dong Wei and Skare, P.},
@@ -802,6 +843,17 @@
 	volume={5},
 	number={1},
 	pages={60-70},
+	month={Jan},
+}
+
+@ARTICLE{Holm:2014, 
+	author={H. Holm}, 
+	journal={IEEE Transactions on Dependable and Secure Computing}, 
+	title={A Large-Scale Study of the Time Required to Compromise a Computer System}, 
+	year={2014}, 
+	volume={11}, 
+	number={1}, 
+	pages={2-15}, 
 	month={Jan},
 }
 
@@ -849,6 +901,18 @@
 	number={2}, 
 	pages={16-26}, 
 }
+
+@Article{Mu:2014,
+	author="Mu, Chengpo and Yu, Meng and Li, Yingjiu and Zang, Wanyu",
+	title="Risk balance defense approach against intrusions for network server",
+	journal="International Journal of Information Security",
+	year="2014",
+	month="Jun",
+	volume="13",
+	number="3",
+	pages="255--269",
+}
+
 
 @article{Allodi:2014,
 	author = {Allodi, L. and Massacci, F.},
@@ -925,6 +989,13 @@
 	number={1}, 
 	pages={30-44}, 
 	month={Jan},
+}
+
+@INPROCEEDINGS{Nappa:2015, 
+	author={A. Nappa and R. Johnson and L. Bilge and J. Caballero and T. Dumitras}, 
+	booktitle=SP, 
+	title={{The Attack of the Clones: A Study of the Impact of Shared Code on Vulnerability Patching}}, 
+	year={2015}, 
 }
 
 @inproceedings{Hawblitzel:2015,
@@ -1068,7 +1139,7 @@
 @inproceedings{Liao:2016,
 	title={{Acing the {IoC} game: Toward automatic discovery and analysis of open-source cyber threat intelligence}},
 	author={Liao, X. and Yuan, K. and Wang, X. and Li, Z. and Xing, L. and Beyah, R.},
-	booktitle={Proceedings of the ACM SIGSAC Conference on Computer and Communications Security},
+	booktitle=CSS,
 	year={2016},
 }
 
@@ -1124,6 +1195,13 @@
 	year = {2016}
 }
 
+@INPROCEEDINGS{Xiao:2017, 
+	author={G. Xiao and Z. Zheng and B. Yin and K. S. Trivedi and X. Du and K. Cai}, 
+	booktitle={Proceedings of the IEEE International Symposium on Software Reliability Engineering}, 
+	title={Experience Report: Fault Triggers in Linux Operating System: from Evolution Perspective}, 
+	year={2017}, 
+}
+
 @inproceedings{Behl:2017,
 	author = {Behl, J. and Distler, T. and Kapitza, R.},
 	title = {{Hybrids on Steroids: SGX-Based High Performance BFT}},
@@ -1136,11 +1214,10 @@
 	booktitle={Proceedings of the International Symposium on Software Reliability Engineering}, 
 	title={{Experience Report: Study of Vulnerabilities of Enterprise Operating Systems}}, 
 	year={2017}, 
-	volume={}, 
 }
 
 @misc{Kaspersky:2017,
-	author        = "\relax Kaspersky Lab",
+	author        = "Kaspersky Lab",
 	title         = "{{The State of Industrial Cybersecurity 2017}}",
 	howpublished	= "https://go.kaspersky.com/rs/802-IJN-240/images/ICS%20WHITE%20PAPER.pdf",
 	year          = "2017"
@@ -1231,7 +1308,7 @@
 }
 
 @misc{weka,
-	author ={\relax Machine Learning Group at the University of Waikato},
+	author ={Machine Learning Group at the University of Waikato},
 	title  = {{WEKA}},
 	howpublished   = "\url{http://www.cs.waikato.ac.nz/ml/weka/}",
 	year = 2018,
@@ -1279,7 +1356,7 @@
 }
 
 @misc{virtualbox,
-	author={\relax Oracle VirtualBox},
+	author={Oracle VirtualBox},
 	title =	 {{VirtualBox}},
 	howpublished = "{\url{https://www.virtualbox.org/}}",
 	year = 2018,
@@ -1304,7 +1381,7 @@
 	author = {Netfilter},
 	title = {The netfilter.org project},
 	note=DATE,
-	howpublished = "{\http://www.netfilter.org/}}"
+	howpublished = "{\url{http://www.netfilter.org/}}"
 }
 
 @misc{vagrant,
@@ -1386,7 +1463,6 @@
 	year = {2012},
 	url = {http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm}
 }
-
 
 @report{Chauhan:2011,
 	title = {{Is Firewall and Antivirus Hacker's Best Friend?}},

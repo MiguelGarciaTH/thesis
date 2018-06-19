@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [TeX Live 2016] (kpathsea + Thai support).
 Scanning style file ./phd_mgarcia.ist.............................done (29 attributes redefined, 0 ignored).
-Scanning input file phd_mgarcia.glo....done (515 entries accepted, 0 rejected).
-Sorting entries.......done (5200 comparisons).
-Generating output file phd_mgarcia.gls....done (184 lines written, 0 warnings).
+Scanning input file phd_mgarcia.glo....done (647 entries accepted, 0 rejected).
+Sorting entries........done (6730 comparisons).
+Generating output file phd_mgarcia.gls....done (249 lines written, 0 warnings).
 Output written in phd_mgarcia.gls.
 Transcript written in phd_mgarcia.glg.

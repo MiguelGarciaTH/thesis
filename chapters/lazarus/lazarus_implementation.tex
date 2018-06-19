@@ -1,4 +1,4 @@
-\chapter{\system Implementation}
+\chapter{\system}
 \label{chap:lazarus_implementation}
 This chapter presents \system iplementation, these mechanisms were implemented to be fully automated, removing the human from the loop.
 The current implementation of \system manages 17 \gls{os} versions, supporting the \gls{bft} replication of a set of representative applications.
@@ -7,14 +7,14 @@ We conducted two sets of experiments, one demonstrates that \system risk managem
 %These results open avenues for many future works in the area. 
 
 
-\section{\system Implementation}
+\section{Implementation}
 \label{sec:implementation}
 
 This section details the implementation of each component of \system. 
 It also briefly presents other aspects of our prototype.% like the management of replicas running in a virtualized environment.
 
 
-\subsection*{Control Plane}
+\subsection{Control Plane}
 \label{sec:lazarus}
 
 Figure~\ref{fig:arch1} shows \system control plane with its four main modules, described below.
@@ -115,7 +115,7 @@ We developed an API on top of Vagrant, another level of abstraction made to mana
 \circled{4} \textbf{LTUs.} Each node that hosts a replica has a Vagrant daemon (see details in next section) running on its trusted domain.
 This component is isolated from the internet and communicates only with the \system controller through \gls{tls} channels.
 
-\subsection*{Additional Details}
+\subsection{Additional Details}
 \label{sec:details}
 
 \textbf{Vulnerability Clustering.}
@@ -132,7 +132,7 @@ Then, the K-means algorithm is applied to build the clusters~\cite{Jain:2010}, w
 We used the open-source machine learning library Weka~\cite{weka} to build the clusters. 
 
 
-\subsection*{Clustering}\label{sec:clustering}
+\subsection{Clustering}\label{sec:clustering}
 Clustering is the process of aggregating elements into similar groups, named clusters. 
 For example, two elements from the same cluster have a higher probability of being similar than two elements from different clusters. 
 We apply this technique to build clusters of similar vulnerabilities.
@@ -230,6 +230,9 @@ In our implementation, we resort to the Vagrant~\cite{vagrant} provisioning tool
 Vagrant supports several virtualization providers, e.g., VMware and Docker. 
 From the available alternatives, we chose VirtualBox~\cite{virtualbox} because it offers more diversity opportunities, i.e., it supports a more extensive set of different guests \glspl{os}.
 %The VMs are available in the Vagrant Cloud~\cite{vagrantcloud}.
+
+\subsection{Descentralized \system Version}
+
 \section{Performance Evaluation}
 \label{sec:overhead}
 
@@ -285,7 +288,7 @@ OB61 & OpenBSD 6.1 & 1 & Openjdk 1.8.0\_121 & 1GB \\ \hline
 \end{table}
 
 
-\subsection*{Homogeneous Replicas Throughput}
+\subsection{Homogeneous Replicas Throughput}
 
 
 We start by running the BFT-SMaRt microbenchmark using the \emph{same \gls{os} version} in all replicas.
@@ -314,7 +317,7 @@ These results show that the virtualization platform limitations on supporting di
 \end{center}
 \end{figure}
 
-\subsection*{Diverse Replicas Throughput}
+\subsection{Diverse Replicas Throughput}
 \label{sec:performancediversity}
 
 The previous results show the performance of BFT-SMaRt when running on top of different \glspl{os}, but with all replicas running in the same environment.
@@ -338,7 +341,7 @@ The set with \glspl{os} from different families is very close to the slowest set
 These results show that running \system with current virtualization technology results in a significant performance variation, depending on the configurations selected by the system.
 This opens interesting avenues for future work on protocols that consider such performance diversity, as will be discussed in Section~\ref{sec:discussion}.
 
-\subsection*{Performance During Reconfiguration}
+\subsection{Performance During Reconfiguration}
 \label{sec:reconfiguration}
 
 
@@ -369,7 +372,7 @@ These types of performance perturbations, which become more severe with bigger s
 The figure shows that the reconfigurations take around $10$ seconds for these setups, and did not change significantly with states of approx. $30$ and $60$ MBs.
 Regarding diversity, the figure shows no noticeable disruption when changing Ubuntu 17 to Fedora 26 and Fedora 25 to Fedora 24, but the replacement of a Debian 8 by an OpenSuse 42 replica significantly decreases the performance, which is consistent with the results from Figure~\ref{fig:bftsmart}.
 
-\subsection*{Booting time}
+\subsection{Booting time}
 
 Before triggering a reconfiguration, \system needs to start the new \gls{vm}, boot the \glspl{os}, and launch the BFT-SMaRt replica.
 Therefore, the total time to replace a ``risky'' replica roughly comprises the time required to boot the new OS plus the reconfiguration time (discussed in the previous section).
@@ -389,7 +392,7 @@ Figure~\ref{fig:boot} shows the average boot time of $20$ executions boot for ea
 As can be seen, most \glspl{os} take less than 40s to boot, with exceptions of Fedora 24 (50s), FreeBSD 10.3 (59s), and Solaris 11.2 (91s).
 In any case, these results together with the reconfiguration times of the previous section show that \system can react to a new threat in less than two minutes (in the worst case).
 
-\subsection*{Application Benchmarks}
+\subsection{Application Benchmarks}
 Our last set of experiments aims to measure the throughput of three existing \gls{bft} services built on top of BFT-SMaRt when running in \system.
 The considered applications and workloads are:
 

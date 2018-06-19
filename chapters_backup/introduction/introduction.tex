@@ -150,6 +150,32 @@ the diversity of \gls{bft} systems:
 \begin{enumerate}
 
 \item \textbf{Traffic dissemination:} 
+
+
+Most generic firewall solutions suffer from two inherent problems: 
+First, they have vulnerabilities as any other system, and as a consequence, they can also be the target of advanced attacks. 
+For example, the \gls{nvd}~\cite{nvd} shows that there have been many security issues in commonly used firewalls. 
+\gls{nvd}'s reports present the following numbers of security issues between 2010 and 2015: 157 for the Cisco Adaptive Security Appliance; 109 in Juniper Networks solutions; 29 for the Sonicwall firewall; and 24 related to iptables/netfilter. 
+Common protection solutions often have been the target of malicious actions as part of a wider scale attack (e.g., anti-virus software~\cite{Chauhan:2011}, \gls{ids}~\cite{Anderson:2001} or firewalls~\cite{Kamara:2003,Surisetty:2010,cisco1,cisco2}).
+Second, firewalls are typically a single point of failure, which means that when they crash, the ability of the protected system to communicate may be compromised, at least momentarily.
+Therefore, ensuring the correct operation of the firewall under a wide range of failure scenarios becomes imperative.
+To tolerate faults, one typically resorts to the replication of the components.
+
+In the last decade, several important advances occurred in the development of intrusion-tolerant systems.
+However, to the best of our knowledge, very few works proposed intrusion-tolerant protection devices, such as firewalls.
+Performance reasons might explain this, as \gls{bft} replication protocols are usually associated with significant overheads and limited scalability.
+Additionally, achieving complete transparency to the rest of the system can be challenging to reconcile with the objective of having fast message filtering under attack.
+
+
+we propose a new protection system called \sieveq that mixes the firewall paradigm with a message queue service, with the goal of improving the state-of-the-art approaches under accidental failures and/or attacks.
+The solution has a fault- and intrusion-tolerant architecture that applies filtering operations in two stages acting like a sieve.
+The first stage, called \emph{pre-filtering}, performs lightweight checks, making it efficient to detect and discard malicious messages from external adversaries.
+In particular, messages are only allowed to go through if they come from a pre-defined set of authenticated senders.
+\gls{dos} traffic from external sources is immediately dropped, preventing those messages from overloading the next stage.
+The second stage, named \emph{filtering}, enforces more refined application level policies, which can require the inspection of some message fields or need the enforcement of specific ordering rules.
+
+
+
 Typical \gls{bft} protocols use one of the two following approaches to disseminate messages to the replicas: (1) traffic replicator before the replicas or (2) a leader is responsible to dessiminate the messages to the other replicas. 
 The dissemination of a message to all replicas can be detrimental to the proper operation of the replicated service.
 For example, a traffic replicator device (e.g., hub) can be placed at the entry of the system to transparently reproduce all messages~\cite{Sousa:2010,Roeder:2010}. 
@@ -157,6 +183,11 @@ The effect is an attack amplification caused by the replicator device.
 Alternatively, a leader replica could receive the traffic and then disseminate the messages to the others~\cite{Amir:2011}.
 The drawback is that the leader becomes a natural bottleneck, especially when under attack (instead of dispersing the attack load over all replicas).
 %Then, new architectures can be designed to accommodate external attacks in a resourceful and resilient manner.
+
+In \sieveq, we explore a different design for replicated protection devices, where we trade some transparency on senders and receivers for a more efficient and resilient firewall solution.
+In particular, we propose an architecture in which critical services and devices can only be accessed through a message queue and implement the application-level filtering in this queue.
+It is assumed that these services have a limited number of senders, which can be appropriately configured to ensure that only they are authorized to communicate through \sieveq.
+
 
 \item \textbf{Finding evidence for supporting diversity:} 
 The current solutions that vouch for diversity as a way to guarantee failure independence, either lack of supporting evidence, or use evidence that is limited to some extent.
