@@ -107,14 +107,14 @@ However, we also show that if naive configurations are avoided, \gls{bft} applic
 
 \section{Diversity of Replicas}
 \label{sec:diversityofreplicas}
-\note{citar survey \cite{Baudry:2015}}
+
 %BFT-replicated services running on \system are composed by $n$ replicas.
 For our purposes, each \replica is composed of a stack of software, including an OS (kernel plus other software contained in an \gls{os} distribution), execution support (e.g., \gls{jvm}, \gls{dbms}), a \gls{bft} library, and the service that is provided by the system.
 %(see Figure~\ref{fig:arch1}).
 The set of $n$ replicas is called a \configuration.
 
 It is possible to improve the \replicas fault independence by resorting to different \gls{ots} components in the software stack~\cite{Deswarte:1998}. 
-For example, it has been shown that using distinct \glspl{os}~\cite{Garcia:2014}, filesystems~\cite{Rodrigues:2001,Bairavasundaram:2009}, and databases~\cite{Gashi:2007}, can yield important benefits in terms of fault independence. In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
+For example, it has been shown that using distinct \glspl{os}~\cite{Garcia:2014}, filesystems~\cite{Rodrigues:2001,Bairavasundaram:2009,Alagappan:2016}, and databases~\cite{Gashi:2007}, can yield important benefits in terms of fault independence. In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
 
 Although \system can exploit automatic techniques, in this paper we center our attention on diverse \gls{ots} components. 
 In particular, \system monitors the disclosed vulnerabilities of all elements of the software stacks of the replicas to assess which of them may contain common vulnerabilities.  
@@ -185,9 +185,9 @@ As discussed before, each vulnerability in \gls{nvd} has an associated \gls{cvss
 Therefore, a straw man solution for measuring risk would be to sum the \gls{cvss} scores of all common vulnerabilities in the software stack of two replicas to get an estimate of how dangerous are their shared weaknesses.
 However, \gls{cvss} has some limitations that make it unsuitable for managing the risk of replicated systems:
 (1) In practice, it has been shown that there is no correlation between the \gls{cvss} exploitability score and the existence of real exploits for the vulnerability~\cite{Bozorgi:2010}; 
-(2) \gls{cvss} does not provide information about vulnerabilities exploiting and patching times; 
+(2) \gls{cvss} does not provide information about vulnerabilities exploiting and patching times~\cite{Nappa:2015}; 
 (3) \gls{cvss} does not account for the vulnerability age, which means that severity remains the same over the years~\cite{Frei:2006,Melo:2013}; 
-and (4) some studies show that \gls{cvss} may overestimate  severity~\cite{Sabottke:2015}, as for example larger scores do not correspond to higher prices in the vulnerabilities' black markets~\cite{Allodi:2014}.
+and (4) some studies show that \gls{cvss} may overestimate severity~\cite{Sabottke:2015}, as for example larger scores do not correspond to higher prices in the vulnerabilities' black markets~\cite{Allodi:2014,Allodi:2017}.
 
 Given these limitations, we derive a novel, more refined, metric to measure the risk of a \gls{bft} system being affected by common vulnerabilities.
 In our particular context, we are mostly interested in capturing information that relates to the window of exposure that vulnerabilities have, mainly when they are correlated among \replicas.

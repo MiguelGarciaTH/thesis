@@ -224,7 +224,7 @@ More specifically, to manage the \replicas, we need the ability to add first a n
 Therefore, we employ BFT-SMaRt~\cite{Bessani:2014}, a stable \gls{bft} library that provides reconfigurations on the \replicas set.
 
 \textbf{Replica Virtualization.}
-\glspl{vm} can be used to implement replicated systems, leveraging on the isolation between the untrusted and the trusted domains~\cite{Sousa:2010,Platania:2014,Distler:2011}.
+\glspl{vm} can be used to implement replicated systems, leveraging on the isolation between the untrusted and the trusted domains~\cite{Sousa:2010,Platania:2014,Distler:2011,Dettoni:2013}.
 Recovery triggering can be initiated from the isolated domain in a synchronous manner, reducing the downtime of the service during the reconfigurations. 
 In our implementation, we resort to the Vagrant~\cite{vagrant} provisioning tool to do fast deployment of ready-to-use \glspl{os} and applications on \glspl{vm}. 
 Vagrant supports several virtualization providers, e.g., VMware and Docker. 
@@ -347,7 +347,7 @@ This opens interesting avenues for future work on protocols that consider such p
 
 
 In this experiment, we show how \system-triggered reconfigurations affect the replicas' performance.
-Reconfigurations, in this case, subsumes to the addition of a new replica and the removal of the old one, using the BFT-SMaRt reconfiguration protocols~\cite{Bessani2014}. 
+Reconfigurations, in this case, subsumes to the addition of a new replica and the removal of the old one, using the BFT-SMaRt reconfiguration protocols~\cite{Bessani:2014}. 
 We execute this experiment with an in-memory \gls{kvs} service that comes with the BFT-SMaRT library.
 %This service mimics the basic ``BFT Zookeeper'' application benchmark shown in recent BFT papers~\cite{Liu16,Behl:2017}.
 

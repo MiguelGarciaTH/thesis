@@ -15,62 +15,77 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
+Repeated entry---line 133 of file chapters/references/references.bib
+ : @article{Avizienis:1985
+ :                        ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 961 of file chapters/references/references.bib
+ :  
+ :  title={A Large-Scale Study of the Time Required to Compromise a Computer System},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--string name "ccs" is undefined
+--line 1260 of file chapters/references/references.bib
+Warning--string name "ccs" is undefined
+--line 1375 of file chapters/references/references.bib
 Warning--entry type for "Chauhan:2011" isn't style-file defined
---line 1467 of file chapters/references/references.bib
-Warning--I didn't find a database entry for "Bessani2014"
+--line 1649 of file chapters/references/references.bib
 Warning--to sort, need author or key in juniper
 Warning--to sort, need author or key in paloalto
 Warning--to sort, need author or key in sonicwall
+Warning--empty booktitle in Allodi:2017
 Warning--empty booktitle in Bhatkar:2003
 Warning--empty year in Bhatkar:2003
 Warning--can't use both volume and number fields in Fraga:1985
 Warning--empty booktitle in Frei:2006
 Warning--empty year in Frei:2006
+Warning--empty title in Holm:2014
+Warning--empty year in Holm:2014
+Warning--empty booktitle in Jang:2016
 Warning--empty publisher in Nist:2012
 Warning--empty chapter and pages in Verissimo:2003
 Warning--empty booktitle in Vianello:2013
 Warning--empty booktitle in Vigna:2003
 Warning--empty year in Vigna:2003
-Warning--empty year in Zhao:2010
-You've used 144 entries,
+You've used 168 entries,
             2118 wiz_defined-function locations,
-            1305 strings with 29680 characters,
-and the built_in function-call counts, 47640 in all, are:
-= -- 4231
-> -- 2797
-< -- 18
-+ -- 1111
-- -- 961
-* -- 3240
-:= -- 7980
-add.period$ -- 444
-call.type$ -- 144
-change.case$ -- 907
+            1417 strings with 34750 characters,
+and the built_in function-call counts, 57519 in all, are:
+= -- 5060
+> -- 3533
+< -- 21
++ -- 1402
+- -- 1227
+* -- 3992
+:= -- 9652
+add.period$ -- 516
+call.type$ -- 168
+change.case$ -- 1113
 chr.to.int$ -- 0
-cite$ -- 158
-duplicate$ -- 1800
-empty$ -- 3854
-format.name$ -- 961
-if$ -- 9943
+cite$ -- 185
+duplicate$ -- 2145
+empty$ -- 4553
+format.name$ -- 1227
+if$ -- 11944
 int.to.chr$ -- 0
-int.to.str$ -- 144
-missing$ -- 119
-newline$ -- 733
-num.names$ -- 284
-pop$ -- 1276
+int.to.str$ -- 168
+missing$ -- 143
+newline$ -- 852
+num.names$ -- 332
+pop$ -- 1557
 preamble$ -- 1
-purify$ -- 766
+purify$ -- 949
 quote$ -- 0
-skip$ -- 1163
+skip$ -- 1369
 stack$ -- 0
-substring$ -- 1665
-swap$ -- 329
-text.length$ -- 18
+substring$ -- 1974
+swap$ -- 396
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 566
-warning$ -- 14
-while$ -- 357
-width$ -- 147
-write$ -- 1509
-(There were 16 warnings)
+type$ -- 662
+warning$ -- 17
+while$ -- 417
+width$ -- 171
+write$ -- 1752
+(There were 2 error messages)

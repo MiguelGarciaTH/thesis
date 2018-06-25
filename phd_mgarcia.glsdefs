@@ -1678,6 +1678,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{wine}{}%
+{%
+\gls@defglossaryentry{wine}%
+{%
+name={WINE},%
+sort={WINE},%
+type={main},%
+first={Wordlwide Intelligence Network Environmnet\glsspace (WINE)},%
+firstplural={Wordlwide Intelligence Network Environmnets\glsspace (WINEs)},%
+text={WINE},%
+plural={WINEs},%
+description={Wordlwide Intelligence Network Environmnet},%
+descriptionplural={Wordlwide Intelligence Network Environmnet\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Wordlwide Intelligence Network Environmnet},%
+longplural={Wordlwide Intelligence Network Environmnets},%
+short={WINE},%
+shortplural={WINEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{vm}{}%
 {%
 \gls@defglossaryentry{vm}%

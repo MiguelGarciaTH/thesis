@@ -29,6 +29,18 @@ D.~Adrian, K.~Bhargavan, Z.~Durumeric, P.~Gaudry, M.~Green, J.~Halderman,
 \newblock {Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice}.
 \newblock Technical report, Weakdh, 05 2015.
 
+\bibitem{Alagappan:2016}
+R.~Alagappan, A.~Ganesan, Y.~Patel, T.~S. Pillai, A.~C. Arpaci-Dusseau, and
+  R.~H. Arpaci-Dusseau.
+\newblock Correlated crash vulnerabilities.
+\newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
+  Design and Implementation}, 2016.
+
+\bibitem{Allodi:2017}
+L.~Allodi.
+\newblock Economic factors of vulnerability trade and exploitation.
+\newblock 2017.
+
 \bibitem{Allodi:2014}
 L.~Allodi and F.~Massacci.
 \newblock {Comparing Vulnerability Severity and Exploits Using Case-Control
@@ -58,6 +70,13 @@ E.~Androulaki, A.~Barger, V.~Bortnikov, C.~Cachin, K.~Christidis, A.~De~Caro,
 \newblock In {\em Proceedings of the ACM European Conference on Computer
   Systems}, 2018.
 
+\bibitem{Arsenault:2007}
+D.~Arsenault, A.~Sood, and Y.~Huang.
+\newblock Secure, resilient computing clusters: Self-cleansing intrusion
+  tolerance with hardware enforced security (scit/hes).
+\newblock In {\em Availability, Reliability and Security, 2007. ARES 2007. The
+  Second International Conference on}, April 2007.
+
 \bibitem{weka}
 M.~L.~G. at~the University~of Waikato.
 \newblock {WEKA}.
@@ -73,7 +92,7 @@ P.~Aublin, R.~Guerraoui, N.~Kne\v{z}evi\'{c}, V.~Qu{\'e}ma, and M.~Vukoli\'{c}.
 A.~Avizienis and L.~Chen.
 \newblock {On the Implementation of {N}-Version Programming for Software Fault
   Tolerance During Execution}.
-\newblock In {\em Proceedings. of the IEEE Computer Software and Applications},
+\newblock In {\em Proceedings of the IEEE Computer Software and Applications},
   1977.
 
 \bibitem{Bairavasundaram:2009}
@@ -130,11 +149,24 @@ E.~Bhatkar, D.~C. Duvarney, and R.~Sekar.
 \newblock Address obfuscation: an efficient approach to combat a broad range of
   memory error exploits.
 
+\bibitem{Bilge:2012}
+L.~Bilge and T.~Dumitras.
+\newblock {Before We Knew It: An Empirical Study of Zero-day Attacks in the
+  Real World}.
+\newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
+  Communications Security}}, pages 833--844. ACM, 2012.
+
 \bibitem{Bittau:2014}
 A.~Bittau, A.~Belay, A.~Mashtizadeh, D.~Mazi\`{e}res, and D.~Boneh.
 \newblock {Hacking Blind}.
 \newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
   2014.
+
+\bibitem{Bopche:2015}
+G.~S. Bopche and B.~M. Mehtre.
+\newblock Exploiting curse of diversity for improved network security.
+\newblock In {\em International Conference on Advances in Computing,
+  Communications and Informatics}, 2015.
 
 \bibitem{Bozorgi:2010}
 M.~Bozorgi, L.~Saul, S.~Savage, and G.~Voelker.
@@ -143,8 +175,17 @@ M.~Bozorgi, L.~Saul, S.~Savage, and G.~Voelker.
 \newblock In {\em Proceedings of the ACM International Conference on Knowledge
   Discovery and Data Mining}, 2010.
 
+\bibitem{Brumley:2008}
+D.~Brumley, P.~Poosankam, D.~Song, and J.~Zheng.
+\newblock Automatic patch-based exploit generation is possible: Techniques and
+  implications.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2008.
+
 \bibitem{Calder:2011}
-B.~Calder et~al.
+B.~Calder, J.~Wang, A.~Ogus, N.~Nilakantan, A.~Skjolsvold, S.~Mckelvie, Y.~Xu,
+  S.~Srivastav, J.~Wu, H.~Simitci, J.~Haridas, C.~Uddaraju, H.~Khatri,
+  M.~Mcnett, S.~Sankaran, K.~Manivannan, and L.~Rigas.
 \newblock {Windows Azure Storage: A Highly Available Cloud Storage Service with
   Strong Consistency}.
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
@@ -199,7 +240,10 @@ B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears.
 \newblock In {\em Proceedings of the ACM Symposium on Cloud Computing}, 2010.
 
 \bibitem{Corbett:2013}
-J.~Corbett et~al.
+J.~C. Corbett, J.~Dean, M.~Epstein, A.~Fikes, C.~Frost, J.~Furman, S.~Ghemawat,
+  A.~Gubarev, C.~Heiser, P.~Hochschild, W.~Hsieh, S.~Kanthak, E.~Kogan, H.~Li,
+  A.~Lloyd, S.~Melnik, D.~Mwaura, D.~Nagle, S.~Quinlan, R.~Rao, L.~Rolig,
+  Y.~Saito, M.~Szymaniak, C.~Taylor, R.~Wang, and D.~Woodford.
 \newblock {Spanner: Google's Globally Distributed Database}.
 \newblock {\em ACM Transactions on Computer Systems}, 31(3), 2013.
 
@@ -232,6 +276,12 @@ C.~Details.
 \newblock {CVE Details Website}.
 \newblock \url{http://www.cvedetails.com/}, 2018.
 \newblock Accessed: 2018-4-26.
+
+\bibitem{Dettoni:2013}
+F.~Dettoni, L.~C. Lung, M.~Correia, and A.~F. Luiz.
+\newblock Byzantine fault-tolerant state machine replication with twin virtual
+  machines.
+\newblock In {\em 2013 IEEE Symposium on Computers and Communications}, 2013.
 
 \bibitem{Distler:2011}
 T.~Distler, R.~Kapitza, I.~Popov, H.~Reiser, and W.~Schr\"{o}der-Preikschat.
@@ -276,6 +326,12 @@ B.~Freeman.
 S.~Frei, M.~May, U.~Fiedler, and B.~Plattner.
 \newblock Large-scale vulnerability analysis.
 
+\bibitem{Frei:2010}
+S.~Frei, D.~Schatzmann, B.~Plattner, and B.~Trammell.
+\newblock {Modeling the Security Ecosystem - The Dynamics of (In)Security}.
+\newblock In {\em Economics of Information Security and Privacy}, pages
+  79--106, 2010.
+
 \bibitem{Garcia:2016b}
 M.~Garcia and A.~B. amd N.~Neves.
 \newblock {Towards an Execution Environment for Intrusion-Tolerant systems}.
@@ -317,6 +373,12 @@ I.~Gashi, P.~Popov, and L.~Strigini.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing},
   4(4):280--294, Oct 2007.
 
+\bibitem{George:2015}
+C.~George and S.~Vadhiyar.
+\newblock Fault tolerance on large scale systems using adaptive process
+  replication.
+\newblock {\em IEEE Transactions on Computers}, 64(8):2213--2225, 2015.
+
 \bibitem{Giuffrida:2013}
 C.~Giuffrida, L.~Cavallaro, and A.~S. Tanenbaum.
 \newblock {Practical automated vulnerability monitoring using program state
@@ -336,6 +398,13 @@ A.~Gorbenko, V.~Kharchenko, O.~Tarasyuk, and A.~Romanovsky.
   intrusions}.
 \newblock In {\em Proceedings of the International Conference on Software
   Engineering for Resilient Systems}, 2011.
+
+\bibitem{Gorbenko:2017}
+A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
+\newblock {Experience Report: Study of Vulnerabilities of Enterprise Operating
+  Systems}.
+\newblock In {\em Proceedings of the International Symposium on Software
+  Reliability Engineering}, 2017.
 
 \bibitem{Guo:2014}
 M.~Guo and P.~Bhattacharya.
@@ -375,16 +444,25 @@ C.~Hawblitzel, J.~Howell, M.~Kapritsos, J.~Lorch, B.~Parno, M.~L. Roberts,
 
 \bibitem{Holm:2014}
 H.~Holm.
-\newblock A large-scale study of the time required to compromise a computer
-  system.
-\newblock {\em IEEE Transactions on Dependable and Secure Computing},
-  11(1):2--15, Jan 2014.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing}.
 
 \bibitem{Homescu:2013}
 A.~Homescu, S.~Neisius, P.~Larsen, S.~Brunthaler, and M.~Franz.
 \newblock {Profile-guided automated software diversity}.
 \newblock In {\em Proceedings of the IEEE/ACM International Symposium on Code
   Generation and Optimization}, 2013.
+
+\bibitem{Hong:2015}
+J.~Hong and D.Kim.
+\newblock {Assessing the Effectiveness of Moving Target Defenses Using Security
+  Models}.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing}, 13(2),
+  Mar. 2016.
+
+\bibitem{Hu:2015}
+H.~Hu, Z.~L. Chua, S.~Adrian, P.~Saxena, and Z.~Liang.
+\newblock Automatic generation of data-oriented exploits.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, 2015.
 
 \bibitem{Huang:1993}
 Y.~Huang and C.~Kintala.
@@ -418,6 +496,17 @@ A.~K. Jain.
 \newblock {Data clustering: 50 years beyond K-means}.
 \newblock {\em Pattern Recognition Letters}, 31(8):651 -- 666, 2010.
 
+\bibitem{Jang:2016}
+Y.~Jang, S.~Lee, and T.~Kim.
+\newblock Breaking kernel address space layout randomization with intel tsx.
+\newblock 2016.
+
+\bibitem{Joshi:2013}
+A.~Joshi, R.~Lal, T.~Finin, and A.~Joshi.
+\newblock Extracting cybersecurity related linked data from text.
+\newblock In {\em 2013 IEEE Seventh International Conference on Semantic
+  Computing}, 2013.
+
 \bibitem{Jumratjaroenvanit:2008}
 A.~Jumratjaroenvanit and Y.~Teng-amnuay.
 \newblock {Probability of Attack Based on System Vulnerability Life Cycle}.
@@ -441,10 +530,24 @@ A.~D. Keromytis and V.~Prevelakis.
 \newblock In C.~Douligeris, editor, {\em {Network Security: Current Status and
   Future Directions}}, chapter~3, pages 33--49. John Wiley \& Sons, Inc., 2006.
 
+\bibitem{Kim:2017}
+S.~Kim, S.~Woo, H.~Lee, and H.~Oh.
+\newblock Vuddy: A scalable approach for vulnerable code clone discovery.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2017.
+
 \bibitem{Kirsch:2014}
 J.~Kirsch, S.~Goose, Y.~Amir, D.~Wei, and P.~Skare.
 \newblock Survivable scada via intrusion-tolerant replication.
 \newblock {\em IEEE Transactions on Smart Grid}, 5(1):60--70, Jan 2014.
+
+\bibitem{Klein:2009}
+G.~Klein, K.~Elphinstone, G.~Heiser, J.~Andronick, D.~Cock, P.~Derrin,
+  D.~Elkaduwe, K.~Engelhardt, R.~Kolanski, M.~Norrish, T.~Sewell, H.~Tuch, and
+  S.~Winwood.
+\newblock sel4: Formal verification of an os kernel.
+\newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
+  Principles}, 2009.
 
 \bibitem{Knight:1986}
 J.~C. Knight and N.~G. Leveson.
@@ -481,15 +584,16 @@ L.~Lamport, R.~Shostak, and M.~Pease.
 \newblock {\em ACM Transactions Programming Languages Systems}, 4(3):382--401,
   July 1982.
 
-\bibitem{Larsen:2014}
-P.~Larsen, S.~Brunthaler, and M.~Franz.
-\newblock {Security through Diversity: Are We There Yet?}
-\newblock {\em IEEE Security \& Privacy}, 12(2):28--35, Mar 2014.
-
 \bibitem{Larsen:2015}
 P.~Larsen, S.~Brunthaler, and M.~Franz.
 \newblock {Automatic Software Diversity}.
 \newblock {\em IEEE Security \& Privacy}, 13(2):30--37, Mar 2015.
+
+\bibitem{Larsen:2014}
+P.~Larsen, A.~Homescu, S.~Brunthaler, and M.~Franz.
+\newblock Sok: Automated software diversity.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2014.
 
 \bibitem{Lee:2015}
 C.-L. Lee, Y.-S. Lin, and Y.-C. Chen.
@@ -508,7 +612,7 @@ H.~Lee, J.~Seibert, E.~Hoque, C.~Killian, and C.~Nita-Rotaru.
 X.~Liao, K.~Yuan, X.~Wang, Z.~Li, L.~Xing, and R.~Beyah.
 \newblock {Acing the {IoC} game: Toward automatic discovery and analysis of
   open-source cyber threat intelligence}.
-\newblock In {\em {Proceedings of the ACM Conference on Computer and
+\newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
   Communications Security}}, 2016.
 
 \bibitem{Liu:2016}
@@ -588,12 +692,6 @@ J.~Moscola, J.~Lockwood, R.~Loui, and M.~Pachos.
 \newblock In {\em Proceedings of the Annual IEEE Symposium on
   Field-Programmable Custom Computing Machines}, 2003.
 
-\bibitem{Mu:2014}
-C.~Mu, M.~Yu, Y.~Li, and W.~Zang.
-\newblock Risk balance defense approach against intrusions for network server.
-\newblock {\em International Journal of Information Security}, 13(3):255--269,
-  Jun 2014.
-
 \bibitem{Nappa:2015}
 A.~Nappa, R.~Johnson, L.~Bilge, J.~Caballero, and T.~Dumitras.
 \newblock {The Attack of the Clones: A Study of the Impact of Shared Code on
@@ -605,6 +703,19 @@ A.~Nappa, R.~Johnson, L.~Bilge, J.~Caballero, and T.~Dumitras.
 {National Institute of Standards and Technology}.
 \newblock {\em {{Guide for Conducting Risk Assessments}}}.
 \newblock 2012.
+
+\bibitem{Nayak:2014}
+K.~Nayak, D.~Marino, P.~Efstathopoulos, and T.~Dumitra{\c{s}}.
+\newblock Some vulnerabilities are different than others.
+\newblock In {\em Research in Attacks, Intrusions and Defenses}, pages
+  426--446, 2014.
+
+\bibitem{Nelson:2017}
+L.~Nelson, H.~Sigurbjarnarson, K.~Zhang, D.~Johnson, J.~Bornholt, E.~Torlak,
+  and X.~Wang.
+\newblock Hyperkernel: Push-button verification of an os kernel.
+\newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
+  Principles}, 2017.
 
 \bibitem{iptables}
 Netfilter.
@@ -723,6 +834,12 @@ M.~Shahzad, M.~Z. Shafiq, and A.~X. Liu.
 \newblock In {\em Proceedings of the International Conference on Software
   Engineering}, 2012.
 
+\bibitem{Shue:2013}
+C.~A. Shue and A.~J. Kalafut.
+\newblock Resolvers revealed: Characterizing dns resolvers and their clients.
+\newblock {\em ACM Transactions on Internet Technology}, 12(4):14:1--14:17,
+  July 2013.
+
 \bibitem{snort}
 Snort.
 \newblock {Network Intrusion Detection \& Prevention System}.
@@ -769,6 +886,12 @@ N.~Stephens, J.~Grosen, C.~Salls, A.~Dutcher, R.~Wang, J.~Corbetta,
 \newblock {Driller: Augmenting Fuzzing Through Selective Symbolic Execution}.
 \newblock In {\em USENIX Network and Distributed System Security Symposium},
   page 21–24, February 2013.
+
+\bibitem{Avizienis:1985}
+L.~Strigini and A.~Avizienis.
+\newblock Software fault-tolerance and design diversity: Past experience and
+  future evolution.
+\newblock {\em IFAC Proceedings Volumes}, 18(12):167 -- 172, 1985.
 
 \bibitem{Surisetty:2010}
 S.~Surisetty and S.~Kumar.
@@ -821,13 +944,20 @@ V.~Vianello, V.~Gulisano, R.~Jimenez-Peris, M.~Patino-Martinez, R.~Torres,
 
 \bibitem{Vigna:2003}
 G.~Vigna, W.~Robertson, V.~Kher, and R.~A. Kemmerer.
-\newblock 6a stateful intrusion detection system for world-wide web servers.
+\newblock A stateful intrusion detection system for world-wide web servers.
 
 \bibitem{virtualbox}
 O.~VirtualBox.
 \newblock {VirtualBox}.
 \newblock {\url{https://www.virtualbox.org/}}, 2018.
 \newblock Accessed: 2018-4-26.
+
+\bibitem{Wang:2003}
+F.~Wang and R.~Upppalli.
+\newblock Sitar: a scalable intrusion-tolerant architecture for distributed
+  services - a technology summary.
+\newblock In {\em Proceedings DARPA Information Survivability Conference and
+  Exposition}, 2003.
 
 \bibitem{Wang:2014}
 L.~Wang, S.~Jajodia, A.~Singhal, P.~Cheng, and S.~Noel.
@@ -843,12 +973,25 @@ D.~Williams-King, G.~Gobieski, K.~Williams-King, J.~P. Blake, X.~Yuan, P.~Colp,
 \newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
   Design and Implementation}, 2016.
 
+\bibitem{Wood:2011}
+T.~Wood, R.~Singh, A.~Venkataramani, P.~Shenoy, and E.~Cecchet.
+\newblock Zz and the art of practical bft execution.
+\newblock In {\em Proceedings of the ACM European Conference on Computer
+  Systems}, 2011.
+
 \bibitem{Xiao:2017}
 G.~Xiao, Z.~Zheng, B.~Yin, K.~S. Trivedi, X.~Du, and K.~Cai.
 \newblock Experience report: Fault triggers in linux operating system: from
   evolution perspective.
 \newblock In {\em Proceedings of the IEEE International Symposium on Software
   Reliability Engineering}, 2017.
+
+\bibitem{Yamaguchi:2015}
+F.~Yamaguchi, A.~Maier, H.~Gascon, and K.~Rieck.
+\newblock Automatic inference of search patterns for taint-style
+  vulnerabilities.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2015.
 
 \bibitem{Yeh:2004}
 Y.~Yeh.
@@ -864,17 +1007,30 @@ J.~Yin, J.~Martin, A.~Venkataramani, L.~Alvisi, and M.~Dahlin.
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
   Principles}, 2003.
 
+\bibitem{Yuan:2014}
+E.~Yuan, N.~Esfahani, and S.~Malek.
+\newblock A systematic survey of self-protecting software systems.
+\newblock {\em ACM Transactions on Autonous Adaptative Systems},
+  8(4):17:1--17:41, Jan. 2014.
+
 \bibitem{Zhai:2014}
 E.~Zhai, R.~Chen, D.~I. Wolinsky, and B.~Ford.
 \newblock Heading off correlated failures through independence-as-a-service.
 \newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
   Design and Implementation}, 2014.
 
+\bibitem{Zhang:2016}
+M.~Zhang, L.~Wang, S.~Jajodia, A.~Singhal, and M.~Albanese.
+\newblock Network diversity: A security metric for evaluating the resilience of
+  networks against zero-day attacks.
+\newblock {\em IEEE Transactions on Information Forensics and Security},
+  11(5):1071--1086, 2016.
+
 \bibitem{Zhao:2010}
 F.~Zhao, M.~Li, W.~Qiang, H.~Jin, D.~Zou, and Q.~Zhang.
 \newblock {Proactive recovery approach for intrusion tolerance with dynamic
   configuration of physical and virtual replicas}.
-\newblock {\em Security and Communication Networks}, 5(10):1169--1180.
+\newblock {\em Security and Communication Networks}, 5(10):1169--1180, 2012.
 
 \bibitem{Zhou:2002}
 L.~Zhou, F.~B. Schneider, and R.~Van~Renesse.

@@ -13,15 +13,18 @@ One of the primary techniques is to try to avoid that vulnerabilities persist in
 One way to do that is to detect and remove vulnerabilities during the development and testing stages.
 There are three main categories: static, dynamic, and concolic analysis.
 A few examples of static analysis are source code verification and validation. 
-However, the most common techniques typically over-simplify the protocols to make them formally verifiable. 
-Moreover, this process consumes much time, and it is expensive for most of the companies making this method difficult to scale to complex systems~\cite{Giuffrida:2013}.
+However, the most common techniques typically over-simplify the protocols to make them formally verifiable or use very specific versions~\cite{Klein:2009,Nelson:2017} to verify. 
+Moreover, this process consumes much time~\cite{Klein:2009}, and it is expensive for most of the companies making this method difficult to scale to complex systems~\cite{Giuffrida:2013}.
 
 Fuzzing is one dynamic technique and its success in finding vulnerabilities or bugs outcomes from a good set of input test cases.
 These can be built manually and tuned for a particular application, or randomly generated and then they are likely to fail on triggering more complex vulnerabilities.
 Another dynamic technique, which is used in information security, is taint analysis.
 In this technique, any variable that can be modified by a user is seen as a vulnerability trigger. 
 Then, when it is accessed, it becomes tainted for further inspection.
-The main limitation of taint analysis is that the vulnerabilities are detected only for the execution paths that have been explored by the user/tester.
+The main limitation of taint analysis is that the vulnerabilities are detected only for the execution paths that have been explored by the user/tester (e.g., dynamic calls)~\cite{Yamaguchi:2015}.
+%ver limitations de taint analysis no paper cite{Yamaguchi:2015}
+
+TESTING, Regression Testes~\cite{Xiao:2017}
 
 Finally, concolic testing is a technique that performs symbolic execution along with a concrete execution path. 
 Therefore, it is more accurate than fuzzing, but it tends to succumb to path explosion.
@@ -29,6 +32,8 @@ Some of these techniques can be combined to take the best of some of the approac
 
 
 \subsection{Detection and removal}
+prevention thecniques works offline, i.e., we need to run the techniques before the system is online.
+
 A more complex approach tries to cope with the existence of vulnerabilities that can be exploited.
 This approach works when an intrusion is detected, and then a recovery mechanism is triggered to clear its effects. 
 Since some attacks use a combination of different vulnerabilities, which isolated would be harmless, it is hard to detect them when the system is already in production. 
@@ -109,10 +114,10 @@ This level of performance encouraged the use of \gls{bft} in common systems, and
 Since the PBFT proposal, some work has been dedicated to improve \gls{bft} protocols (see Table~\ref{tab:bft}):
 
 
-\begin{table}[!t]
+\begin{table}[h]
 \begin{center}
 {\footnotesize
-\begin{tabular}{ p{2.5cm}  p{11cm}  }\hline
+\begin{tabular}{ p{2.5cm}  p{10.5cm}  }\hline
 Zyzzyva~\cite{Kotla:2010}  & Introduces speculation to avoid the expensive three phase commit before processing the requests. This might introduce some inconsistency in the state of the replicas when speculation fails, and the client needs to help replicas to fix the servers’ inconsistency. \\ \hline			
 Upright~\cite{Clement:2009} & It provides a straightforward way to also add BFT to crash fault tolerant systems (CFT); \\ \hline	
 Aardvark~\cite{Clement:2009b} & Shifts the paradigm to a new design. This design improves the performance under faulty scenarios trading some performance on the normal case; \\ \hline
@@ -189,7 +194,7 @@ However, our solution will implement a different (from~\cite{Sousa:2010}) algori
 
 
 \section{Diversity}
-
+\note{orgnize}
 In some of the works presented before, the correctness is ensured under the assumption that replicas fail independently. 
 Often the authors assume that fault independence is achieved using diversity~\cite{Castro:2002,Sousa:2010}. 
 Diversity can be implemented in different ways~\cite{Deswarte:1998,Obelheiro:2006}, which may differ in the mean and the amount of diversity generated, but the goal is the same: to create different attack surfaces. 
@@ -199,8 +204,10 @@ We present at least three different ways to generate diversity:
 (ii) Randomization implements different memory schemes; 
 and (iii) Off-the-shelf diversity comprises the use of different products with the same functionality but taking advantage of implementations that are already available.
 
+\note{citar survey \cite{Baudry:2015}}
+
 \paragraph{N-version programming}
-N-version programming is a technique used to create diverse software components~\cite{Randell:1975,Avizienis:1977,Knight:1986,Chen:1995}.
+N-version programming is a technique used to create diverse software components~\cite{Randell:1975,Avizienis:1977,Avizienis:1985,Knight:1986,Chen:1995}.
 The main idea behind this mechanism is to develop N different implementations of the same specification. 
 These implementations can be implemented by N different developers or using translators to N different programming languages.
 
@@ -208,15 +215,18 @@ These implementations can be implemented by N different developers or using tran
 Forrest~\cite{Forrest:1997} suggested randomized program transformations to introduce application diversity. 
 They have made modifications on the gcc, a C compiler, in such a way that during the compiling time gcc inserts random padding
 into each stack frame. 
-Linger presented stochastic diversification tool to swap code structures~\cite{Bairavasundaram:2009,Larsen:2014}. 
+%Linger presented stochastic diversification tool to swap code structures
 The diverse versions are generated during the source code compilation. 
 The main idea of these works is to make the intruder’s work more difficult when exploiting buffer overflow vulnerabilities.
 Bhatkar~\etal{}~\cite{Bhatkar:2003} proposed a solution based on memory address obfuscation (i.e., \gls{aslr}). 
+%Cox~\etal{}~\cite{Cox:2006} present N-variant system that uses automated diversity 
 Their solution transforms object files and executables at the link-time and load-time, without kernel or compiler modifications. 
 The goal is to ensure that an attack that succeeds in one target will not succeed on the other targets. 
 Each time the program is executed its virtual addresses and data are randomized, and therefore the attacker needs to find new ways to exploit memory errors, like buffer overflows. 
-However, a recent work proved that solutions like ASLR are vulnerable to attacks~\cite{Bittau:2014}.
+However, a recent work proved that solutions like ASLR are vulnerable to attacks~\cite{Bittau:2014,Jang:2016}.
 A few works propose the usage of compilers that generate different executables~\cite{Platania:2014,Roeder:2010,King:2016}.
+
+
 
 
 \paragraph{Off-the-shelf diversity.}
@@ -239,6 +249,7 @@ They have found few cases of a single bug affecting more than one server.
 In fact, there were no coincident failures in more than two of the servers.
 The conclusion is that \gls{ots} database servers’ diversity is an effective mean to improve system's reliability. 
 However, the authors recognize the need for SQL translators, to increase the interoperability between servers in the replicated scenario.
+
 Han~\etal{}. made a systematic analysis of the effectiveness of using \gls{ots} diversity to improve system's security~\cite{Han:2009}. 
 First, the authors found if there were \gls{ots} software substitutes to provide the same functionality. 
 Then, they determined if the \gls{ots} software shared the same vulnerabilities.
@@ -273,8 +284,43 @@ The paper explains in detail what to diversify, from single instructions to an e
 They also explain the three types of security impacts when diversity is applied: entropy analysis, attack-specific code analysis, and logical argument. 
 However, they also point that there is no consensus on how to evaluate the efficacy of diversity. 
 
-Independece as a service~\cite{Zhai:2014}
 
+Zhai~\etal{}~\cite{Zhai:2014} propose a system that looks for independece failures from the reliability standpoint on the cloud.
+The system collecs and audits data from the system components to evaluate its components' independence identifying potetianl correlated failures.
+The authors collect information on networkd, hardware, and software data.
+Then, the different configuration dependency are analyzed and ranked in risk groups as a way to see how the different dependencies may make the system fail.
+The main limitation of this work is the motivation that clouds may not have to join such system, i.e., provide private data to be analyzed for extenral agents.
+The experimental evaluation is concerned to the time that it takes to analyze all the data and creating the dependency graphs.
+CITAR COM ESTE~\cite{George:2015}
+
+EnvyFS -- reliability with N-version
+Bairavasundaram and Sundararaman~\cite{Bairavasundaram:2009} implemented EnvyFS a filesystem that uses N-version filesystems implemenations to guarantee the reliability of stored data.
+Their solution is able to tolerate filesystem mistakes (e.g., crash, integrity).
+To keep the system simple, the authors used a virtual filesystem layer that abstract the specific filesystems underneeth, therefore some challenges arise from the differnet implementations details.
+Another challenges, was to avoid the need for multiple storage as it uses N-variants of filesystems. 
+However, they solved this by using the only one storage layer and the different filesystems in between. 
+Then, after each filesystem executes the commands a voter collects the majority of outputs to store.
+The results show that EnvyFS is able to improve the reliability by leveraging on multiple filesystems.
+However, the performance results show that EnvyFS pays the price of executing in multiple filesystems and waiting for a majority of them. 
+In most of the time it takes the sum of the three filesystems used.
+
+
+%Network diversity 
+Newell~\etal{} ~\cite{Newell:2015} presented a solution to assign diversity variants among network nodes to increase the network's resiliency (in particular its connectivity).
+The authors present this as a Diversity Assignment Problem, although it is an NP-hard problem the authors show that for medium-size random networks graphs it is feasible.
+For medium-sized networks they use mixed-integer programming and for larger networks propose a fast greedy approach.
+For the first one the achieve optimality, and the latter an approximation of the optimal.
+One of the results that the authors show is that random diversity assignment is far worse than an criteria assignment (as they propose).
+Despite the different results that show improvements of diversity on the connectivity (i.e., resiliency), the models did not used realistic data, thus the authors assumed that the compromise values are known and independent with each other.
+
+
+Zhang~\etal{}~\cite{Zhang:2016} propose a metric to evaluate the resilience of networks.
+The idea is to define what is the least attacking effort to compromise some important assets of the networks (i.e., this work is focus on distributed yet not replicated systems).
+Therefore, they measure the weakest path to target and compromise the main asset. 
+The authors proposed three metrics which where evaluated in a simulated environment.
+None of the three metrics uses vulnerability data to correlate the existence of common weakness, on contrary, the metrics use data about the topology, services installed, etc.
+Nevertheless, the results show that increasing the diversity on the nodes reduces the number of simulated worms.
+ 
 
 \paragraph{Summary.}
 We presented three different techniques that support diversity as a fault-tolerant mechanism. 
@@ -287,9 +333,25 @@ For example, how to measure diversity in such a way that failure independence ca
 
 
 
-\section{Risk Management}
+\section{Vulnerability Analysis and Risk Management}
 
+Bilge and Dumitras\cite{Bilge:2012} made a systematic study on zero-day attacks between 2008-2011.
+In their study, the main dataset is \gls{wine} (developed by Symantec), it sample and aggreates data from several hosts running Symantec products (e.g., Norton Antivirus).
+The \gls{wine} data is correlate with \gls{osvdb} and Symantec's Threat Explorer for attack/exploit information.
+Their method allowed them to measre the duration of zero-day attacks, the average attack lasts ten months. 
+Moreover, they have found that some of the vulnerabilities exploited during the Stuxnet attack have been employed two years before Stuxnet in another attack.
+One of the main conclusions of this work is the evidence that the disclosure of zero-day vulnerabilities increases the risk, up to five orders of magnitude, of users being attacked.
+The vendors are responsible to prioritize the disclosure of such vulneraiblities and prepare a patch as soon as possible. 
 
+Nappa~\etal{}~\cite{Nappa:2015} analyzed the patch deployment process over 10 popular client applications on a 5-year period, in some cases, wich applications share libraries, the patching process takes different time to the same vulnerable shared code. 
+The authors have found that there is a strong correlation between the vulnerability disclosed and the start patching process among vendors, for 77\% of the studied vulnerabilities it occuers within seven days. 
+The performed a \emph{survival anylisis} (inspired in medice nad biology to measure the mortality rates associated with diseases) to measure the probability a vulnerable host will remain vulnerable beyond a specific time.
+The vulnerability ''dies`` once a patch is installed or a non-vulnerable software is installed.
+The experimental results show that using real-wordl WINE exploits still compromise 50\% of the vulnerable hosts (after vulnerabilties discloser). 
+The median percentage of hosts that have been patched before the exploit is released is at most 14\%.
+Together with the number of shared vulnerable code with different patching delays, these values motivate attackers to re-used already know exploits or to create patched-based exploits~\cite{Brumley:2008}.
+The authors also show evidence to support the natural intuition that silent or automatic updades reduce the survivavility of vulnerabilties. 
+They also, performed an analysis on three different user profiles that show that security analysts are more cureful on patching software than software developer or normal users.
 
 Jumratjaroenvanit and Teng-amnuay~\cite{Jumratjaroenvanit:2008} described vulnerability life-cycles presenting their different stages. 
 The authors goal was to understand how different dates can be useful to estimate the probability of an attack. 
@@ -301,6 +363,52 @@ The most influential variables were the code that was scrutinized by a the teste
 On the contrary, results showed that language safety was the less influent factor. 
 The main result of the study was that two weeks of work were enough to have a 50\% chance of finding a zero-day vulnerability. 
 Sometimes, 53 hours were enough to find one vulnerability with more than 95\% of probability.
+
+
+Frei~\etal{}~\cite{Frei:2010} made a quantitive analysis of 27K vulnerabilities disclosed in the last decade.
+The authors propose a model that describe the main players in a vulnerability lifecycle.
+All the dates associated with the vulnerability lifecycle are described in details before the analysis.
+They used a few public vulnerability databases (e.g., \gls{nvd} and \gls{osvdb}) to collect the different data attributes.
+The results show that the number of patches increase after vulnerability disclosure.  
+One interesting result is the \emph{the gap of insecurity} measurment, where they compare the patch availability vs the exploit availability. 
+The results show that exploits are always ahead of patches, in some cases after 30 days of disclosure the number of exploits exceeds 90\% the number of patches.
+
+
+Bozorgi~\etal{}~\cite{Bozorgi:2010} used machine learning techniques to classify existent vulnerabilites and predict future exploits.
+Their results show that their trained classifiers outperform current exploitability measures like \gls{cvss} exploitability subscore.
+They have built a dataset with two public databases Mitre' \gls{cve} (which is subpart of \gls{nvd}) and \gls{osvdb}.
+They used the bag-of-words, a machine learning technique, to extact the textual attributes that are more relevant to analyse.
+They used \gls{svm} to train the model, to conduct two types of experiments: an offline and an online.
+In the offline setting, which they train and evaluate data in a static fashion, they achieve an accuracy of 90\% of correct predictions.
+In the online settting, the results show that after a small period the model stablizes and reduces the overall error by 14\%.
+In an online setting they were able to make preditions up to two days before the exploit with an accuracy of 75-80\%.
+The main result, for the interest of this thesis, is the comparison between their model and the \gls{cvss} as a measure of indication of how a vulnreability is likely to be exploited.
+The \gls{cvss} attributes high scores to vulnerabilities that were not exploited. 
+
+Allodi and Massacci~\cite{Allodi:2014} made a in depth analysis of four security databases (e.g., \gls{nvd}, Exploit-DB, SYM, and EKITS). 
+The authors made a in deph \emph{break down} of \gls{cvss} on its several attributes, for example, exploitability the subscore \emph{resembles more a constant than a variable}, thus not have a real impact on the \gls{cvss} score.
+They used a randomized case-control study, which is applied to different study domains.
+Is used to assess the effectiveness of a treatment over a sample of subjects.
+In this study in particular the want to measure how \gls{cvss} influences the \emph{risk factor} of the studyie cases.
+A result that is worth of note is that fixing vulnerabilities based on their \gls{cvss} is statistically equivalent to picking a random vulnerability to fix, from the security relevance standpoint.
+On contrary, the authors suggest that it is more important to fix vulnerabilities that appear in the black market of vulnerabilities.
+Their results indicate that the inclusion this information as a \emph{risk factor} can increase the risk redcution up to 80\%.
+The authors point that EKITS datasource may be a threat to the validity of the study, as it is unstructured data and therefore it requires manually anaylsis.
+
+Sabote~\etal{}~\cite{Sabottke:2015} presented a study that used non-common vulnerability data sources, i.e., Twitter data (e.g., specific words, the number of retweets, and replies, information about
+the users posting these messages), to find exploit data. 
+The authors made a quantitative and qualitative exploration of the vulnerability-related information disseminated on Twitter.
+They developed a Twitter-based exploit detector to provide an adequate response in a such short time frame. 
+This allows the security community to foresee the exploit activity before the information reaches the de facto disclosure data sources like \gls{nvd} and ExploitDB.
+However, to complement and strength their information results they also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories and Symantec WINE. 
+The authors distinguished the real-world exploits from the proof-of-concept exploits, as the latter are by products of the disclosure process. 
+The real-world exploits typically are not known until a critical zero-day attack occurs. 
+The authors used \gls{svm} to classify exploits in the social media and tested how robust it was to attacks, i.e., if a powerful attack could manipulate the information on Twitter with a false account and false data. 
+The results showed that with their proposal they could be confident with the predictions. 
+For example, the \gls{svm} classifier set to a precision of 25\% could detect the Heartbleed exploits within 10 minutes of its first appearance on Twitter. 
+They also showed that organizations like \gls{nvd} overestimate the severity of some vulnerabilities that never become in fact exploited.
+However, their work did not focus on the discovery of the zero-day vulnerabilities, which is relevant for our research.
+
 
 
 Shahzad~\etal{}~\cite{Shahzad:2012} obtained data between 1988 to 2011 from three data sources: \gls{nvd}, \gls{osvdb}, and the data from~\cite{Frei:2006}. 
@@ -320,7 +428,26 @@ Nevertheless, the closed-source vendors are more efficient to patch vulnerabilit
 Another conclusion is that it is easier to exploit opensource code vulnerabilities than in closed-source – this conclusion may seem obvious, but no one had showed it previously with statistical tests.
 
 
-Large Scale Study of the time required to Compromise a computer system~\cite{Holm:2014}
+Holm~\cite{Holm:2014} made an analysis malware alarms to verify if there is a statistical distribution to model the number of intrusions or the time to compromise a computer system.
+The author collected information from different software configurations from 2009 to 2012 from an IT enterprise.
+The enterprise had a total of 697 \glspl{os} versions.
+Each computer is equipped with an anti-malware software, when a malware is detected it sends the data to a central database.
+The author's methodoly applied a few filters to reduce the size of the data by removing redudant information (e.g., a single malware can generate several alarms in the systems).
+The results show that the Pareto distribution is the one that best fits for the time of the first compromise.
+Another interesting result is that the more the system is intruded the more vulnerable it is. 
+The authors present some hypothesis for this result, for example, once the system is broken it can no longer be trusted, but it seems odd to conclude something about how vulnerable the system is. 
+A more plausible one is that the security awarness in only temporary increased as a result of the intrusion, and then it is again neglected.
+Most of the malware considered in this study were not result of targeted attacks but rather automatic ones, this is probably due to the type of enterprise. 
+This may change the results if applyied to targeted attacks as they require a different strategy to penetrate the system,.
+
+
+%data analysis
+Massacci and Nguyen~\cite{Massacci:2010} made an analysis of several datasources that provide data about vulnerabilities, exploits and patches. 
+The authors raise some limitations on the datasources, namely the difficulty to map some of the listed sources. 
+However, it is possible to use the \gls{nvd} mappings that provide code mappings for \gls{cve} and the respectevily ID from the other datasource.
+
+
+%% MOVING TARGET ATTACKS
 
 Okhravi~\etal{} presented TALENT a framework for live migration of critical infrastructures across heterogeneous platforms~\cite{Okhravi:2014,Okhravi:2009}. 
 The idea was to create a moving target that difficult the success of advanced targeted attacks. 
@@ -337,6 +464,9 @@ Therefore, the migration was made seamless to the application.
 TALENT also had a risk assessment, called operation assessment, which monitored and adjusted the diverse components using vulnerability information. 
 However, there was almost no details on how the risk was measured and on how to adapt to the threats in an efficient manner.
 
+Moving target \cite{Hong:2015}
+
+
 Guo and Bhattacharya addressed the problem of \gls{bft} replicas fault independence~\cite{Guo:2014}.
 The authors proposed different replicas configurations using OTS OSes to increase the diversity among the replicas. 
 There was a set of different configurations that could build a replicated system. 
@@ -344,30 +474,25 @@ Each configuration was composed of different \gls{os}.
 The authors proposed a formalization of the virtual replica diversification problem. 
 They used a game-theory approach to find an optimal diversification strategy for the defender's side. 
 The authors validated their model with the \gls{nvd} data used in~\cite{Garcia:2012}.
+
 Wang~\etal{} proposed a different approach to measure the risk~\cite{Wang:2014}. 
-The study explored how many zero-day vulnerabilities were required to compromise a network. 
-They assumed that zero-day vulnerabilities typically do not occur at the same time, however the solution did not depend on any statistical model. 
-The reasoning behind the proposal was novel, e.g., on the method to find the complexity of multiple zero-day vulnerabilities in a N-node network.
+Contrary to the most common approaches that attempt to measure the vulnerability state of the syste, the authors explored how many zero-day vulnerabilities were required to compromise a network. 
+They address diversity, however, as replication is not considered the use of diversity in a ''chained`` archictecture will no enhance the system's security.
+One of the limitations of this approach is that it considers all zero day vulnerabilities equally likely to happen.
+Moreover, the metric's calculatation is complex and no evaluation is provided to hint the reader on how long can it take to calculate.
+A similar work is proposed in~\cite{Bopche:2015}.
 
-Similar to ours, but very weak.... need to read and show how it fails~\cite{Mu:2014}
-
-Newell~\etal{} ~\cite{Newell:2015} presented a solution to assign diversity variants among network nodes to increase the network's resiliency.
-
-Sabote~\etal{}~\cite{Sabottke:2015} presented a study that used non-common vulnerability data sources, i.e., Twitter data (e.g., specific words, the number of retweets, and replies, information about
-the users posting these messages), to find exploit data. 
-The authors made a quantitative and qualitative exploration of the vulnerability-related information disseminated on Twitter.
-They developed a Twitter-based exploit detector to provide an adequate response in a such short time frame. 
-This allows the security community to foresee the exploit activity before the information reaches the de facto disclosure data sources like \gls{nvd} and ExploitDB.
-However, to complement and strength their information results they also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories and Symantec WINE. 
-The authors distinguished the real-world exploits from the proof-of-concept exploits, as the latter are by products of the disclosure process. 
-The real-world exploits typically are not known until a critical zero-day attack occurs. 
-The authors used \gls{svm} to classify exploits in the social media and tested how robust it was to attacks, i.e., if a powerful attack could manipulate the information on Twitter with a false account and false data. 
-The results showed that with their proposal they could be confident with the predictions. 
-For example, the \gls{svm} classifier set to a precision of 25\% could detect the Heartbleed exploits within 10 minutes of its first appearance on Twitter. 
-They also showed that organizations like \gls{nvd} overestimate the severity of some vulnerabilities that never become in fact exploited.
-However, their work did not focus on the discovery of the zero-day vulnerabilities, which is relevant for our research.
+%Similar to ours, but very weak.... need to read and show how it fails~\cite{Mu:2014}
 
 
+Gorbenko~\etal{}~\cite{Gorbenko:2017} used \gls{cve} and \gls{nvd} databases to study vulnerability life-cycles of differnet \glspl{os}.
+The authors made a particular effort to analyze the relation between vulnerabilities' discovery and their fix, more precisely the time it takes to vendors patch the vulnerable software.
+Moreover, they also studied the existent of common vulnerabilities among different \glspl{os}.
+The resuls of their study show between 2012 and 2016 most of \glspl{os} used in their study patched every vulnerability that was disclosed in that period, with the exception of Ubuntu Server 12.04.
+Another interesting result are the results for \emph{forever-day vulnerability} (i.e., vulnerabilities that are publicly disclosed but not yeat patched). 
+They show that, for the analyzed period, Ubuntu never had a single day free from vulnerabilities, and Windows and Red Hat had  only 12 and 10, respectevily.
+However, the most important results is the implications of \gls{cvss} on the \emph{days-of-gray-risk} (i.e., the number of days it takes to a vendor releases a patch). 
+The authors show that there is no obvious implication on the level of severity and the time it takes to a vendor develop a patch.
 
 
 \paragraph{Summary.} We presented several works that carry out for risk assessment in a way to prevent exploits or to take action upon vulnerability detection. 
@@ -376,10 +501,18 @@ There is a lot of relevant free information available to address the security an
 In a replicated context this information is even more relevant. 
 First, to react upon vulnerability/exploit disclosures, and second to select what configurations are less vulnerable to common weakness. 
 We want to explore the free available data to improve, the dependability and security of intrusion-tolerant systems, by ensuring the assumption of failure independence with evidence supported by  relevant data.
+A few works in different goals than ours did analyze vulnerability textual data~\cite{Joshi:2013} -- citar mais tarde
 
 
 
 \section{Pratical BFT Systems with Diversity}
+
+
+
+(see ~\cite{Yuan:2014} for a survey)
+SITAR~\cite{Wang:2003}
+
+SCIT maybe the first one~\cite{Arsenault:2007}
 
 
 In the last two decades there were a number of \gls{bft} protocols and systems deemed ``practical'' (e.g.,~\cite{Castro:2002,Kotla:2010,Veronese:2013,Aublin:2015,Behl:2015,Behl:2017,Liu:2016,Yin:2003}).

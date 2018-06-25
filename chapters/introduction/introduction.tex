@@ -3,9 +3,12 @@
 
 \section{Context and Motivation}
 \gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (subject) with Byzantine fault-tolerant (adjetive) using the same acronym BFT for both.} is a well-established area of research that aims to guarantee safety on replicated systems even in the presence of some (Byzantine) faulty nodes.
-It was first proposed in 1982 by Lamport~\etal{}~\cite{Lamport:1982}, but it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}.
+In a nutshell, \gls{bft} protocols guarantee that replicas agree on the order of the message execution, and thus, working as a replicated state machine.
+This, works assuming that only a subpart $f$ out of $n$ is faulty, therefore there is always a correct number of replicas to execute correclty.
 
-In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
+
+\gls{bft} was first proposed in 1982 by Lamport~\etal{}~\cite{Lamport:1982}, but it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}. 
+In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
 However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that the replica nodes fail independtly. 
 This assumption guarantees that the fault theshold is extended in time as it is more time consuming to compromise different replicas than compromise replicas that are equal, thus share the same weaknesses.
 Neverthesless, a few works rely on some orthogonal mechanism (e.g.,~\cite{Roeder:2010,Chen:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their ystem models.
@@ -15,11 +18,11 @@ A few works on the proactive recovery of \gls{bft} systems~\cite{Castro:2002,Sou
 However, a common limitation of these works is that they assume that these weaknesses will be cleaned after the recovery.
 In practice, this will not happen unless the replica changes its software (e.g., via the previously described techniques) after its recovery.
 
-RELER~\cite{Xiao:2017}
+
 
 
 In practice, diversity has shown that it is a fundamental building block of dependable services.
-For example, in avionics~\cite{Yeh:2004}, military systems~\cite{rhimes}, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} (three essential applications of \gls{bft}), and the \gls{dns}.~\footnote{\url{https://secure64.com/dns-diversity/}}. 
+For example, in avionics~\cite{Yeh:2004}, military systems~\cite{rhimes}, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} (three essential applications of \gls{bft}), and the \gls{dns}~\cite{Shue:2013}.~\footnote{\url{https://secure64.com/dns-diversity/}}. 
 AUMENTAR A EXPLICACAO DE CADA UM 
 
 
@@ -39,7 +42,7 @@ RISK!!
 
 DEFINE THE GENERIC OBJECTIVES OF THE THESIS 
 
-\subsection{Finding evidence for the diversity argument}% Diversity Study on Off-the-Shelf Operating Systems}
+\subsection{Finding evidence to support diversity}% Diversity Study on Off-the-Shelf Operating Systems}
 The current solutions that vouch for diversity as a way to guarantee failure independence, either lack of supporting evidence, or use evidence that is limited to some extent.
 Therefore, some of the results may provide false conclusions.
 We identify a need for finding \emph{accurate} sources for supporting sound evidence of the benefits diversity as a dependable mechanism.
@@ -55,7 +58,7 @@ Moreover, we observed that using different \gls{os} releases of the same \gls{os
 
 
 
-\subsection{Control Planes for BFT systems}
+\subsection{Applying diversity on BFT systems}
 %{\system, a Diversity and Recovery Manager for BFT systems}
 
 A few works consider the diversity of replicas as a way to achieve such failure independence, however, it is mostly taken for granted.
@@ -69,8 +72,8 @@ We identify a need for finding \emph{accurate} sources for supporting sound evid
 A few works use automatic and artificial diversity (e.g.,~\cite{Roeder:2010,Amir:2011}). 
 However, they lack evidence to support the failure of independence through diversity. 
 Moreover, some studies show that these techniques fail to provide real diversity~\cite{Snow:2013,Bittau:2014}. 
-Additionally, the existent systems that implement time-triggered recoveries assume that it takes the same time to compromise each replica. 
-This assumption is unrealistic, especially when the diversity of replicas is considered. 
+Additionally, the existent systems that implement time-triggered recoveries assume that it takes the same time to compromise each replica, by assuming that vuleranbilies are all the same. 
+This assumption is unrealistic, especially when the diversity of replicas is considered~\cite{Nayak:2014}. 
 Therefore, it is required tailored methods to evaluate the risk of a replicated system becoming compromised.
 
 
@@ -91,6 +94,10 @@ The solution continuously collects data from the online sources and monitors the
 We developed these contributions in a solution named \system, and it is the first system that manages \gls{bft} replicated systems (e.g., \sieveq) in a dependable and automatic way.
 \system experimental evaluation shows that its strategy reduces the number of executions where the system becomes compromised and that our prototype supports the execution of full-fledged \gls{bft} systems in diverse configurations with 17 \gls{os} versions, reaching a performance close to a homogeneous bare metal setup. 
 
+
+Patches take time to apply~\cite{Frei:2010}
+
+MAking exploit from patches that were not yet released!!!\cite{Brumley:2008}
 THE NEED FOR AUTOMATIC PATCHING~\cite{Nappa:2015} --shared code, one takes the patch and the other no
 
 

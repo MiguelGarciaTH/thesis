@@ -255,7 +255,8 @@ e pelo Prof. Doutor \CoOrientador \\
 
 
 \pagenumbering{roman}			% roman page numbing (invisible for empty page style)
-\pagestyle{empty}				% no header or footers
+\setcounter{page}{1}			% set page counter
+\pagestyle{empty}
 
 \cleardoublepage
 
@@ -289,7 +290,7 @@ e pelo Prof. Doutor \CoOrientador \\
 
 %Lista de figuras
 \listoffigures
-\addcontentsline {toc} {chapter} {List of Figures}
+%\addcontentsline {toc} {chapter} {List of Figures}
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -297,7 +298,7 @@ e pelo Prof. Doutor \CoOrientador \\
 
 %Lista de tabelas
 \listoftables
-\addcontentsline {toc} {chapter} {List of Tables}
+%\addcontentsline {toc} {chapter} {List of Tables}
 \newpage
 \thispagestyle{empty} \mbox{}
 \newpage
