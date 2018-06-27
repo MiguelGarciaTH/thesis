@@ -1258,6 +1258,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{mtd}{}%
+{%
+\gls@defglossaryentry{mtd}%
+{%
+name={MTD},%
+sort={MTD},%
+type={main},%
+first={Moving Target Defense\glsspace (MTD)},%
+firstplural={Moving Target Defenses\glsspace (MTDs)},%
+text={MTD},%
+plural={MTDs},%
+description={Moving Target Defense},%
+descriptionplural={Moving Target Defense\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Moving Target Defense},%
+longplural={Moving Target Defenses},%
+short={MTD},%
+shortplural={MTDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{po}{}%
 {%
 \gls@defglossaryentry{po}%
@@ -1613,6 +1643,36 @@ long={Support Vector Machines},%
 longplural={Support Vector Machiness},%
 short={SVM},%
 shortplural={SVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{scit}{}%
+{%
+\gls@defglossaryentry{scit}%
+{%
+name={SCIT},%
+sort={SCIT},%
+type={main},%
+first={Self-Cleaning Intrusion Tolerance\glsspace (SCIT)},%
+firstplural={Self-Cleaning Intrusion Tolerances\glsspace (SCITs)},%
+text={SCIT},%
+plural={SCITs},%
+description={Self-Cleaning Intrusion Tolerance},%
+descriptionplural={Self-Cleaning Intrusion Tolerance\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Self-Cleaning Intrusion Tolerance},%
+longplural={Self-Cleaning Intrusion Tolerances},%
+short={SCIT},%
+shortplural={SCITs},%
 counter={page},%
 parent={},%
 %

@@ -206,12 +206,12 @@ M.~Castro and B.~Liskov.
 J.~Chauhan and R.~Roy.
 \newblock {Is Firewall and Antivirus Hacker's Best Friend?}, Jan 2011.
 
-\bibitem{Chen:1995}
+\bibitem{Chen:1978}
 L.~Chen and A.~Avizienis.
-\newblock {N-version programming: A fault tolerance approach to reliabiltiy of
+\newblock {N-version programming: A fault-tolerance approach to reliability of
   software operation}.
-\newblock In {\em International Symposium on Fault-Tolerant Computing}, Jun
-  1995.
+\newblock In {\em Proceedings of the IEEE Symposium on Fault-Tolerant
+  Computing}, 1977.
 
 \bibitem{cisco1}
 Cisco.
@@ -442,6 +442,13 @@ C.~Hawblitzel, J.~Howell, M.~Kapritsos, J.~Lorch, B.~Parno, M.~L. Roberts,
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
   Principles}, 2015.
 
+\bibitem{Seondong:2017}
+S.~HEO, S.~LEE, B.~JANG, and H.~YOON.
+\newblock {Designing and Implementing a Diversity Policy for Intrusion-Tolerant
+  Systems}.
+\newblock {\em IEICE Transactions on Information and Systems},
+  E100.D(1):118--129, 2017.
+
 \bibitem{Holm:2014}
 H.~Holm.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing}.
@@ -458,6 +465,12 @@ J.~Hong and D.Kim.
   Models}.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing}, 13(2),
   Mar. 2016.
+
+\bibitem{Hosek:2015}
+P.~Hosek and C.~Cadar.
+\newblock Varan the unbelievable: An efficient n-version execution framework.
+\newblock In {\em Proceedings of the International Conference on Architectural
+  Support for Programming Languages and Operating Systems}, 2015.
 
 \bibitem{Hu:2015}
 H.~Hu, Z.~L. Chua, S.~Adrian, P.~Saxena, and Z.~Liang.
@@ -548,12 +561,6 @@ G.~Klein, K.~Elphinstone, G.~Heiser, J.~Andronick, D.~Cock, P.~Derrin,
 \newblock sel4: Formal verification of an os kernel.
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
   Principles}, 2009.
-
-\bibitem{Knight:1986}
-J.~C. Knight and N.~G. Leveson.
-\newblock {An Experimental Evaluation of the Assumption of Independence in
-  Multiversion Programming}.
-\newblock {\em IEEE Transactions on Software Engineering}, 12(1), Jan. 1986.
 
 \bibitem{Knuth:1977}
 D.~Knuth, J.~Morris, and V.~Pratt.
@@ -747,7 +754,7 @@ R.~R. Obelheiro, A.~N. Bessani, L.~C. Lung, and M.~Correia.
 \newblock {How practical are intrusion-tolerant distributed systems?}
 \newblock Technical Report TR 06–15, Department of Informatics, 2006.
 
-\bibitem{Okhravi:2009}
+\bibitem{Okhravi:2012}
 H.~Okhravi, A.~Comella, E.~Robinson, and J.~Haines.
 \newblock Creating a cyber moving target for critical infrastructure
   applications using platform diversity.
@@ -765,6 +772,12 @@ M.~Platania, D.~Obenshain, T.~Tantillo, R.~Sharma, and Y.~Amir.
   System}.
 \newblock In {\em Proceedings of the {IEEE} Symposium on Reliable Distributed
   Systems}, pages 242--252, Oct 2014.
+
+\bibitem{Poolsappasit:2012}
+N.~Poolsappasit, R.~Dewri, and I.~Ray.
+\newblock Dynamic security risk management using bayesian attack graphs.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  9(1):61--74, Jan 2012.
 
 \bibitem{Prabha:2014}
 K.~Prabha and S.~Sukumaran.
@@ -784,15 +797,8 @@ V.~Rahli, I.~Vukotic, M.~Volp, and P.~Verissimo.
 \newblock {Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}.
 \newblock In {\em Proceedings of the European Symposium on Programming}, 2018.
 
-\bibitem{Randell:1975}
-B.~Randell.
-\newblock {System Structure for Software Fault Tolerance}.
-\newblock {\em IEEE Transactions on Software Engineering}, 1(2), 1975.
-
 \bibitem{Reiser:2007}
 H.~P. Reiser and R.~Kapitza.
-\newblock {VM-FIT: supporting intrusion tolerance with virtualisation
-  technology}.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, 2007.
 
@@ -887,12 +893,6 @@ N.~Stephens, J.~Grosen, C.~Salls, A.~Dutcher, R.~Wang, J.~Corbetta,
 \newblock In {\em USENIX Network and Distributed System Security Symposium},
   page 21–24, February 2013.
 
-\bibitem{Avizienis:1985}
-L.~Strigini and A.~Avizienis.
-\newblock Software fault-tolerance and design diversity: Past experience and
-  future evolution.
-\newblock {\em IFAC Proceedings Volumes}, 18(12):167 -- 172, 1985.
-
 \bibitem{Surisetty:2010}
 S.~Surisetty and S.~Kumar.
 \newblock {Is McAfee SecurityCenter/Firewall Software Providing Complete
@@ -954,10 +954,10 @@ O.~VirtualBox.
 
 \bibitem{Wang:2003}
 F.~Wang and R.~Upppalli.
-\newblock Sitar: a scalable intrusion-tolerant architecture for distributed
-  services - a technology summary.
-\newblock In {\em Proceedings DARPA Information Survivability Conference and
-  Exposition}, 2003.
+\newblock {SITAR: a scalable intrusion-tolerant architecture for distributed
+  services - a technology summary}.
+\newblock In {\em {Proceedings of the DARPA Information Survivability
+  Conference and Exposition}}, 2003.
 
 \bibitem{Wang:2014}
 L.~Wang, S.~Jajodia, A.~Singhal, P.~Cheng, and S.~Noel.
@@ -979,12 +979,10 @@ T.~Wood, R.~Singh, A.~Venkataramani, P.~Shenoy, and E.~Cecchet.
 \newblock In {\em Proceedings of the ACM European Conference on Computer
   Systems}, 2011.
 
-\bibitem{Xiao:2017}
-G.~Xiao, Z.~Zheng, B.~Yin, K.~S. Trivedi, X.~Du, and K.~Cai.
-\newblock Experience report: Fault triggers in linux operating system: from
-  evolution perspective.
-\newblock In {\em Proceedings of the IEEE International Symposium on Software
-  Reliability Engineering}, 2017.
+\bibitem{Xu:2017}
+M.~Xu and T.~Kim.
+\newblock Platpal: Detecting malicious documents with platform diversity.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, 2017.
 
 \bibitem{Yamaguchi:2015}
 F.~Yamaguchi, A.~Maier, H.~Gascon, and K.~Rieck.
@@ -1026,7 +1024,7 @@ M.~Zhang, L.~Wang, S.~Jajodia, A.~Singhal, and M.~Albanese.
 \newblock {\em IEEE Transactions on Information Forensics and Security},
   11(5):1071--1086, 2016.
 
-\bibitem{Zhao:2010}
+\bibitem{Zhao:2012}
 F.~Zhao, M.~Li, W.~Qiang, H.~Jin, D.~Zou, and Q.~Zhang.
 \newblock {Proactive recovery approach for intrusion tolerance with dynamic
   configuration of physical and virtual replicas}.
