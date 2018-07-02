@@ -15,22 +15,28 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-I was expecting a `,' or a `}'---line 971 of file chapters/references/references.bib
+Warning--string name "g." is undefined
+--line 487 of file chapters/references/references.bib
+I was expecting a `,' or a `}'---line 487 of file chapters/references/references.bib
+ :  author = g. 
+ :              Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, P. Derrin, D. Elkaduwe, K. Engelhardt, R. Kolanski, M. Norrish, T. Sewell, H. Tuch, and S. Winwood
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 986 of file chapters/references/references.bib
  :  
  :  title={A Large-Scale Study of the Time Required to Compromise a Computer System},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--string name "ccs" is undefined
---line 1277 of file chapters/references/references.bib
-Warning--string name "ccs" is undefined
---line 1409 of file chapters/references/references.bib
 Warning--entry type for "Chauhan:2011" isn't style-file defined
---line 1683 of file chapters/references/references.bib
+--line 1710 of file chapters/references/references.bib
 Warning--I didn't find a database entry for "Chen:1995"
+Warning--to sort, need author or key in Klein:2009
 Warning--to sort, need author or key in juniper
 Warning--to sort, need author or key in paloalto
 Warning--to sort, need author or key in sonicwall
-Warning--empty booktitle in Allodi:2017
+Warning--empty author in Klein:2009
+Warning--empty title in Klein:2009
+Warning--empty booktitle in Klein:2009
+Warning--empty year in Klein:2009
 Warning--empty booktitle in Bhatkar:2003
 Warning--empty year in Bhatkar:2003
 Warning--can't use both volume and number fields in Fraga:1985
@@ -38,7 +44,6 @@ Warning--empty booktitle in Frei:2006
 Warning--empty year in Frei:2006
 Warning--empty title in Holm:2014
 Warning--empty year in Holm:2014
-Warning--empty booktitle in Jang:2016
 Warning--empty publisher in Nist:2012
 Warning--empty title in Reiser:2007
 Warning--empty chapter and pages in Verissimo:2003
@@ -47,43 +52,43 @@ Warning--empty booktitle in Vigna:2003
 Warning--empty year in Vigna:2003
 You've used 168 entries,
             2118 wiz_defined-function locations,
-            1415 strings with 34704 characters,
-and the built_in function-call counts, 57578 in all, are:
-= -- 5062
-> -- 3534
-< -- 21
-+ -- 1402
-- -- 1227
-* -- 3996
-:= -- 9653
-add.period$ -- 515
+            1408 strings with 34176 characters,
+and the built_in function-call counts, 56999 in all, are:
+= -- 5004
+> -- 3461
+< -- 20
++ -- 1375
+- -- 1199
+* -- 3934
+:= -- 9533
+add.period$ -- 512
 call.type$ -- 168
-change.case$ -- 1112
+change.case$ -- 1097
 chr.to.int$ -- 0
-cite$ -- 186
-duplicate$ -- 2150
-empty$ -- 4568
-format.name$ -- 1227
-if$ -- 11963
+cite$ -- 189
+duplicate$ -- 2154
+empty$ -- 4566
+format.name$ -- 1199
+if$ -- 11858
 int.to.chr$ -- 0
 int.to.str$ -- 168
-missing$ -- 143
-newline$ -- 851
-num.names$ -- 332
-pop$ -- 1565
+missing$ -- 144
+newline$ -- 849
+num.names$ -- 330
+pop$ -- 1561
 preamble$ -- 1
-purify$ -- 949
+purify$ -- 935
 quote$ -- 0
-skip$ -- 1366
+skip$ -- 1370
 stack$ -- 0
-substring$ -- 1983
-swap$ -- 397
-text.length$ -- 21
+substring$ -- 1942
+swap$ -- 399
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 662
-warning$ -- 18
-while$ -- 418
+warning$ -- 21
+while$ -- 414
 width$ -- 171
-write$ -- 1749
-(There was 1 error message)
+write$ -- 1743
+(There were 2 error messages)

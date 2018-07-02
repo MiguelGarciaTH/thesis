@@ -12,7 +12,7 @@ This section presents the methodology adopted in this study, with a particular f
 
 %\subsection{Object of the study}
 
-\subsection{Data source}
+\subsection{Data Source}
 We have analyzed \gls{os} vulnerability data from the \gls{nvd} database~\cite{nvd}. 
 According to \gls{nist} a vulnerability is defined as follows:
 %\gls{nvd} uses the \gls{cve} definition of vulnerability \cite{cveterm}, which is given below:
@@ -35,7 +35,7 @@ The \gls{cvss}~\cite{cvss} calculates the vulnerability severity considering sev
 
 We developed a program that collects, parses and inserts the \gls{xml} data feeds into an SQL database, deployed with a custom schema to group vulnerabilities by affected products and versions.
 
-\subsection{Data selection}
+\subsection{Data Selection}
 Despite the vast amount of information about each vulnerability available in \gls{nvd}, for this study, we are only interested in the name, publication date, summary (description), type of exploit (local or remote), and list of affected products.
 We have collected vulnerabilities reported for 64 \gls{cpe}~\cite{cpe}.
 Each one of these describes a system, i.e., a stack of software/hardware components in which the vulnerability may be exploited.
@@ -312,7 +312,7 @@ Since this last criterion complements the previous two, one could explore strate
 
 For every strategy, we present example \gls{os} sets for the Fat Server and Isolated Thin Server configurations. 
 Fat Server configurations can be pessimistic in the sense that they may account for common vulnerabilities in applications that are not present in the servers, while Isolated Thin Server configurations reflect more accurately the expected setup of dedicated servers in a replicated system. 
-An intrusion-tolerant system usually requires $3f+1$ replicas to tolerate $f$ intrusions (e.g., \cite{Verissimo:2003,Castro:2002,Bessani:2008,Moniz:2011}). 
+An intrusion-tolerant system usually requires $3f+1$ replicas to tolerate $f$ intrusions (e.g., \cite{Castro:2002}). 
 Therefore, we will focus on sets with four \glspl{os} to deploy a hypothetical replicated system with four replicas, which allows one fault to be tolerated.
 
 As a cautious note, one should take into account that Ubuntu and Windows2008 were first released in 2004 and 2008 respectively, so the data for these two \glspl{os} was collected for a smaller number of years. 
@@ -533,7 +533,7 @@ The Venn diagrams for these two sets are shown in Figures~\ref{fig-venn}(e) and~
 \begin{sideways}\vspace{2mm}\parbox{2mm}Debian\end{sideways}&
 \begin{sideways}\vspace{2mm}\parbox{2mm}Ubuntu \end{sideways}&
 \begin{sideways}\vspace{2mm}\parbox{2mm}Red Hat\end{sideways}&
-\begin{sideways}\vspace{2mm}\parbox{3mm}Win2000 \end{sideways}&ven
+\begin{sideways}\vspace{2mm}\parbox{3mm}Win2000 \end{sideways}&
 \begin{sideways}\vspace{2mm}\parbox{3mm}Win2003 \end{sideways}&
 \begin{sideways}\vspace{2mm}\parbox{3mm}Win2008  \end{sideways}&
 \multicolumn{2}{|c}{} \\ \cline{1-11}  \cline{1-12}
@@ -844,7 +844,7 @@ When exploited, they cause a \gls{dos} (CVE-2004-0079, CVE-2004-0081 and CVE-200
 These results demonstrate that with a careful selection of the Debian and Red Hat releases, it is possible to avoid most of the common vulnerabilities, and apparently, it becomes viable to build an intrusion-tolerant replicated system based on only two \glspl{os}.
 
 
-\section{Decisions about deploying diversity}\label{decisions}
+\section{Decisions About Deploying Diversity}\label{decisions}
 We have underscored that these results are only \textit{prima facie} evidence for the usefulness of diversity. 
 On average, we would expect our estimates to be conservative as we analyzed aggregated vulnerabilities across releases: common vulnerabilities could be much smaller in a ``specific set'' of diverse \gls{os} releases. 
 However, there are limitations on what can be claimed from the analysis of the \gls{nvd} data alone without further manual analysis (other than what we have done, e.g., developing/finding and running exploit scripts on every \gls{os} for each vulnerability).
@@ -867,5 +867,6 @@ The other limitations will be addressed in the rest of this thesis.
 
 In this chapter we presented results from an analysis of 18 years (1994--2011) of vulnerability reports from the \gls{nvd}  database. 
 We analyzed 2270 vulnerabilities of eleven \gls{os} distributions. 
-We enriched the dataset with manual fixes and further classification of vulnerabilities, depending on which part of the \gls{os} they affected, into the kernel, driver, system software, and applications. The enriched dataset allowed us to perform various analysis to answer the main question that drove our research for this thesis: \emph{what are the potential security gains that could be attained from using diverse \glspl{os} in a replicated intrusion-tolerant system?}
+We enriched the dataset with manual fixes and further classification of vulnerabilities, depending on which part of the \gls{os} they affected, into the kernel, driver, system software, and applications. The enriched dataset allowed us to perform various analysis to answer the main questions that drove our research for this thesis: 
+\emph{what are the potential security gains that could be attained from using diverse \glspl{os} in a replicated intrusion-tolerant system?}
  

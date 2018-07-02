@@ -2,7 +2,7 @@
 @string{ATC		= "Proceedings of the Annual Conference on USENIX Annual Technical Conference"}
 @string{USS 		= "Proceedings of the {USENIX} Security Symposium"}
 @string{DSN 		= "Proceedings of the {IEEE/IFIP} International Conference on Dependable Systems and Networks"}
-@string{CSS 		= "{Proceedings of the ACM SIGSAC Conference on Computer and Communications Security}"}      
+@string{CCS 		= "{Proceedings of the ACM SIGSAC Conference on Computer and Communications Security}"}      
 @string{SOSP 		= "Proceedings of the {ACM} Symposium on Operating Systems Principles"} 
 @string{PRDC 		= "Proceedings of the {IEEE} Pacific Rim International Symposium on Dependable Computing"}
 @string{SP 		= "Proceedings of the {IEEE} Symposium on Security and Privacy"}
@@ -166,7 +166,7 @@
 @InProceedings{Huang:1993,
 	author={Y. Huang and C. Kintala},
 	title={{Software implemented fault tolerance: Technologies and experience}},
-	booktitle={Proceedings International Symposium on Fault Tolerant Computing},
+	booktitle={Proceedings of the International Symposium on Fault-Tolerant Computing},
 	year={1993},
 }
 
@@ -207,7 +207,6 @@
 	year = {1998},
 } 
 
-%BFT 
 @inproceedings{Castro:1999,
 	author = {Castro, Miguel and Liskov, Barbara},
 	title = {{Practical Byzantine Fault Tolerance}},
@@ -241,6 +240,13 @@
 	pages = {15--28},
 } 
 
+@INPROCEEDINGS{Reynolds:2002, 
+	author={J. Reynolds and J. Just and E. Lawson and L. Clough and R. Maglich and K. Levitt}, 
+	booktitle=DSN,
+	title={The design and implementation of an intrusion tolerant system}, 
+	year={2002}, 
+}
+
 @article{Zhou:2002,
 	author = {Zhou, Lidong and Schneider, Fred B. and Van Renesse, Robbert},
 	title = {{COCA: A Secure Distributed Online Certification Authority}},
@@ -255,7 +261,7 @@
 @article{Castro:2002,
 	author = {Castro, Miguel and Liskov, Barbara},
 	title = {{Practical Byzantine Fault Tolerance and Proactive Recovery}},
-	journal = {ACM Transactions Computer Systems},
+	journal = TOCS,
 	volume = {20},
 	number = {4},
 	year = {2002},
@@ -374,7 +380,7 @@
 	booktitle = {Proceedings of the Large Installation System Administration Conference},
 	year = 2006,
 }
-
+ 
 @inproceedings{Frei:2006,
 	author = {Frei, S. and May, M. and Fiedler, U. and Plattner, B.},
 	title = {Large-scale Vulnerability Analysis}},
@@ -423,15 +429,24 @@
 
 @INPROCEEDINGS{Arsenault:2007, 
 	author={D. Arsenault and A. Sood and Y. Huang}, 
-	booktitle={Availability, Reliability and Security, 2007. ARES 2007. The Second International Conference on}, 
+	booktitle={Prooceedings in the International Conference on Availability, Reliability and Security}, 
 	title={Secure, Resilient Computing Clusters: Self-Cleansing Intrusion Tolerance with Hardware Enforced Security (SCIT/HES)}, 
 	year={2007}, 
 	month={April},
 }
 
+@inproceedings{Sousa:2007,
+	author = {Sousa, Paulo and Neves, Nuno Ferreira and Verissimo, Paulo},
+	title = {Hidden Problems of Asynchronous Proactive Recovery},
+	booktitle = {Proceedings of the Workshop on on Hot Topics in System Dependability},
+	year = {2007},
+	
+} 
+
+
 @ARTICLE{Gashi:2007, 
 	author={I. Gashi and P. Popov and L. Strigini}, 
-	journal={IEEE Transactions on Dependable and Secure Computing}, 
+	journal=TDSC, 
 	title={{Fault Tolerance via Diversity for Off-the-Shelf Products: A Study with SQL Database Servers}}, 
 	year={2007}, 
 	volume={4}, 
@@ -469,16 +484,17 @@
 } 
 
 @inproceedings{Klein:2009,
-	author = {Klein, Gerwin and Elphinstone, Kevin and Heiser, Gernot and Andronick, June and Cock, David and Derrin, Philip and Elkaduwe, Dhammika and Engelhardt, Kai and Kolanski, Rafal and Norrish, Michael and Sewell, Thomas and Tuch, Harvey and Winwood, Simon},
-	title = {seL4: Formal Verification of an OS Kernel},
+	author = G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, P. Derrin, D. Elkaduwe, K. Engelhardt, R. Kolanski, M. Norrish, T. Sewell, H. Tuch, and S. Winwood
+	title = {{sel4: Formal verification of an os kernel}},
 	booktitle = SOSP,
 	year = {2009},
-} 
+}
+
 
 @Inbook{Han:2009,
 	author="Han, Jin and Gao, Debin and Deng, Robert H.",
 	title={{On the Effectiveness of Software Diversity: A Systematic Study on Real-World Vulnerabilities}},
-	bookTitle="{Proceedings International Conference Conference on Detection of Intrusions and Malware \& Vulnerability Assessment}",
+	bookTitle="{Proceedings International Conference on Detection of Intrusions and Malware \& Vulnerability Assessment}",
 	year="2009",
 	publisher="Springer Berlin Heidelberg",
 	address="Berlin, Heidelberg",
@@ -496,7 +512,7 @@
 @inproceedings{Clement:2009b,
 	author = {Clement, A. and Wong, E. and Alvisi, L. and Dahlin, M. and Marchetti, M.},
 	title = {{Making Byzantine Fault Tolerant Systems Tolerate Byzantine Faults}},
-	booktitle = {Proceedings of the USENIX Symposium on Networked Systems Design and Implementation},
+	booktitle = NSDI,
 	year = {2009},
 } 
 
@@ -514,7 +530,6 @@
 	year="2010",
 	pages="79--106",
 }
-
 
 @inproceedings{Cooper:2010,
 	author = {Cooper, B. F. and Silberstein, A. and Tam, E. and Ramakrishnan, R. and Sears, R.},
@@ -591,7 +606,7 @@
 
 @ARTICLE{Sousa:2010, 
 	author={P. Sousa and A. N. Bessani and M. Correia and N. F. Neves and P. Verissimo}, 
-	journal={IEEE Transactions on Parallel and Distributed Systems}, 
+	journal=TPDS,
 	title={{Highly Available Intrusion-Tolerant Services with Proactive-Reactive Recovery}}, 
 	year={2010}, 
 	volume={21}, 
@@ -783,7 +798,7 @@
 @inproceedings{Bilge:2012,
 	 author = {Bilge, Leyla and Dumitras, Tudor},
 	 title = {{Before We Knew It: An Empirical Study of Zero-day Attacks in the Real World}},
-	 booktitle = CSS,
+	 booktitle = CCS,
 	 year = {2012},
 	 pages = {833--844},
 	 publisher = {ACM},
@@ -809,7 +824,7 @@
 
 @INPROCEEDINGS{Joshi:2013, 
 	author={A. Joshi and R. Lal and T. Finin and A. Joshi}, 
-	booktitle={2013 IEEE Seventh International Conference on Semantic Computing}, 
+	booktitle={IEEE International Conference on Semantic Computing}, 
 	title={Extracting Cybersecurity Related Linked Data from Text}, 
 	year={2013}, 
 }
@@ -1080,6 +1095,14 @@
 	month={Oct},
 }
 
+@inproceedings{Zhuang:2014,
+	author = {Zhuang, Rui and DeLoach, Scott A. and Ou, Xinming},
+	title = {Towards a Theory of Moving Target Defense},
+	booktitle = {Proceedings of the ACM Workshop on Moving Target Defense},
+	year = {2014},
+} 
+
+
 @inproceedings{Guo:2014,
 	author = {Guo, M. and Bhattacharya, P.},
 	title = {{Diverse Virtual Replicas for Improving Intrusion Tolerance in Cloud}},
@@ -1118,6 +1141,13 @@
 	booktitle=SP, 
 	title={{The Attack of the Clones: A Study of the Impact of Shared Code on Vulnerability Patching}}, 
 	year={2015}, 
+}
+
+@INPROCEEDINGS{Yamaguchi:2015, 
+	author={F. Yamaguchi and A. Maier and H. Gascon and K. Rieck}, 
+	booktitle=SP, 
+	title={Automatic Inference of Search Patterns for Taint-Style Vulnerabilities}, 
+	year={2015}, 	
 }
 
 @inproceedings{Hawblitzel:2015,
@@ -1186,7 +1216,7 @@
 
 @ARTICLE{Newell:2015, 
 	author={A. Newell and D. Obenshain and T. Tantillo and C. Nita-Rotaru and Y. Amir}, 
-	journal={IEEE Transactions on Dependable and Secure Computing}, 
+	journal=TDSC, 
 	title={{Increasing Network Resiliency by Optimally Assigning Diverse Variants to Routing Nodes}}, 
 	year={2015}, 
 	volume={12}, 
@@ -1222,9 +1252,6 @@
 	month = sep,
 	year = {2015},
 	pages = {16:1--16:26},
-	numpages = {26},
-	acmid = {2807593},
-	publisher = {ACM},
 } 
 
 @techreport{David:2015,
@@ -1264,11 +1291,11 @@
 	pages={2213-2225}, 
 }
 
-@INPROCEEDINGS{Yamaguchi:2015, 
-	author={F. Yamaguchi and A. Maier and H. Gascon and K. Rieck}, 
+@INPROCEEDINGS{Huang:2016, 
+	author={Z. Huang and M. DAngelo and D. Miyani and D. Lie}, 
 	booktitle=SP, 
-	title={Automatic Inference of Search Patterns for Taint-Style Vulnerabilities}, 
-	year={2015}, 
+	title={Talos: Neutralizing Vulnerabilities with Security Workarounds for Rapid Response}, 
+	year={2016}, 
 }
 
 @inproceedings{Jang:2016,
@@ -1303,14 +1330,13 @@
 	year = {2016},
 	pages = {17:1--17:4},
 	numpages = {4},
-	acmid = {2897805},
 	publisher = {ACM},
 } 
 
 @inproceedings{Liao:2016,
 	title={{Acing the {IoC} game: Toward automatic discovery and analysis of open-source cyber threat intelligence}},
 	author={Liao, X. and Yuan, K. and Wang, X. and Li, Z. and Xing, L. and Beyah, R.},
-	booktitle=CSS,
+	booktitle=CCS,
 	year={2016},
 }
 
@@ -1371,6 +1397,7 @@
 	booktitle = OSDI,
 	year = {2016}
 }
+
 
 @inproceedings {Xu:2017,
 	author = {Meng Xu and Taesoo Kim},

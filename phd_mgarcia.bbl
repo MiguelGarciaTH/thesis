@@ -1,5 +1,8 @@
 \begin{thebibliography}{100}
 
+\bibitem{Klein:2009}
+
+
 \bibitem{juniper}
 {Juniper Networks Security}.
 \newblock \url{http://www.juniper.net/us/en/products-services/security/}.
@@ -39,7 +42,8 @@ R.~Alagappan, A.~Ganesan, Y.~Patel, T.~S. Pillai, A.~C. Arpaci-Dusseau, and
 \bibitem{Allodi:2017}
 L.~Allodi.
 \newblock Economic factors of vulnerability trade and exploitation.
-\newblock 2017.
+\newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
+  Communications Security}}, 2017.
 
 \bibitem{Allodi:2014}
 L.~Allodi and F.~Massacci.
@@ -74,8 +78,8 @@ E.~Androulaki, A.~Barger, V.~Bortnikov, C.~Cachin, K.~Christidis, A.~De~Caro,
 D.~Arsenault, A.~Sood, and Y.~Huang.
 \newblock Secure, resilient computing clusters: Self-cleansing intrusion
   tolerance with hardware enforced security (scit/hes).
-\newblock In {\em Availability, Reliability and Security, 2007. ARES 2007. The
-  Second International Conference on}, April 2007.
+\newblock In {\em Prooceedings in the International Conference on Availability,
+  Reliability and Security}, April 2007.
 
 \bibitem{weka}
 M.~L.~G. at~the University~of Waikato.
@@ -200,7 +204,7 @@ M.~Castro and B.~Liskov.
 \bibitem{Castro:2002}
 M.~Castro and B.~Liskov.
 \newblock {Practical Byzantine Fault Tolerance and Proactive Recovery}.
-\newblock {\em ACM Transactions Computer Systems}, 20(4):398--461, 2002.
+\newblock {\em ACM Transactions on Computer Systems}, 20(4):398--461, 2002.
 
 \bibitem{Chauhan:2011}
 J.~Chauhan and R.~Roy.
@@ -231,8 +235,8 @@ A.~Clement, M.~Kapritsos, S.~Lee, Y.~Wang, L.~Alvisi, M.~Dahlin, and T.~Riche.
 \bibitem{Clement:2009b}
 A.~Clement, E.~Wong, L.~Alvisi, M.~Dahlin, and M.~Marchetti.
 \newblock {Making Byzantine Fault Tolerant Systems Tolerate Byzantine Faults}.
-\newblock In {\em Proceedings of the USENIX Symposium on Networked Systems
-  Design and Implementation}, 2009.
+\newblock In {\em Proceedings of the {USENIX} Symposium on Networked Design and
+  Implementation}, 2009.
 
 \bibitem{Cooper:2010}
 B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears.
@@ -373,12 +377,6 @@ I.~Gashi, P.~Popov, and L.~Strigini.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing},
   4(4):280--294, Oct 2007.
 
-\bibitem{George:2015}
-C.~George and S.~Vadhiyar.
-\newblock Fault tolerance on large scale systems using adaptive process
-  replication.
-\newblock {\em IEEE Transactions on Computers}, 64(8):2213--2225, 2015.
-
 \bibitem{Giuffrida:2013}
 C.~Giuffrida, L.~Cavallaro, and A.~S. Tanenbaum.
 \newblock {Practical automated vulnerability monitoring using program state
@@ -405,13 +403,6 @@ A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
   Systems}.
 \newblock In {\em Proceedings of the International Symposium on Software
   Reliability Engineering}, 2017.
-
-\bibitem{Guo:2014}
-M.~Guo and P.~Bhattacharya.
-\newblock {Diverse Virtual Replicas for Improving Intrusion Tolerance in
-  Cloud}.
-\newblock In {\em Proceedings of the Annual Cyber and Information Security
-  Research Conference}. ACM, 2014.
 
 \bibitem{Han:2009}
 J.~Han, D.~Gao, and R.~H. Deng.
@@ -480,7 +471,7 @@ H.~Hu, Z.~L. Chua, S.~Adrian, P.~Saxena, and Z.~Liang.
 \bibitem{Huang:1993}
 Y.~Huang and C.~Kintala.
 \newblock {Software implemented fault tolerance: Technologies and experience}.
-\newblock In {\em Proceedings International Symposium on Fault Tolerant
+\newblock In {\em Proceedings of the International Symposium on Fault-Tolerant
   Computing}, 1993.
 
 \bibitem{Huang:1995}
@@ -488,6 +479,13 @@ Y.~Huang, C.~Kintala, N.~Kolettis, and N.~D. Fulton.
 \newblock {Software rejuvenation: analysis, module and applications}.
 \newblock In {\em Proceedings of the International Symposium on Fault-Tolerant
   Computing}, 1995.
+
+\bibitem{Huang:2016}
+Z.~Huang, M.~DAngelo, D.~Miyani, and D.~Lie.
+\newblock Talos: Neutralizing vulnerabilities with security workarounds for
+  rapid response.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2016.
 
 \bibitem{Hunt:2010}
 P.~Hunt, M.~Konar, F.~P. Junqueira, and B.~Reed.
@@ -512,13 +510,8 @@ A.~K. Jain.
 \bibitem{Jang:2016}
 Y.~Jang, S.~Lee, and T.~Kim.
 \newblock Breaking kernel address space layout randomization with intel tsx.
-\newblock 2016.
-
-\bibitem{Joshi:2013}
-A.~Joshi, R.~Lal, T.~Finin, and A.~Joshi.
-\newblock Extracting cybersecurity related linked data from text.
-\newblock In {\em 2013 IEEE Seventh International Conference on Semantic
-  Computing}, 2013.
+\newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
+  Communications Security}}, 2016.
 
 \bibitem{Jumratjaroenvanit:2008}
 A.~Jumratjaroenvanit and Y.~Teng-amnuay.
@@ -554,13 +547,11 @@ J.~Kirsch, S.~Goose, Y.~Amir, D.~Wei, and P.~Skare.
 \newblock Survivable scada via intrusion-tolerant replication.
 \newblock {\em IEEE Transactions on Smart Grid}, 5(1):60--70, Jan 2014.
 
-\bibitem{Klein:2009}
-G.~Klein, K.~Elphinstone, G.~Heiser, J.~Andronick, D.~Cock, P.~Derrin,
-  D.~Elkaduwe, K.~Engelhardt, R.~Kolanski, M.~Norrish, T.~Sewell, H.~Tuch, and
-  S.~Winwood.
-\newblock sel4: Formal verification of an os kernel.
-\newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
-  Principles}, 2009.
+\bibitem{Knight:1986}
+J.~C. Knight and N.~G. Leveson.
+\newblock {An Experimental Evaluation of the Assumption of Independence in
+  Multiversion Programming}.
+\newblock {\em IEEE Transactions on Software Engineering}, 12(1), Jan. 1986.
 
 \bibitem{Knuth:1977}
 D.~Knuth, J.~Morris, and V.~Pratt.
@@ -595,12 +586,6 @@ L.~Lamport, R.~Shostak, and M.~Pease.
 P.~Larsen, S.~Brunthaler, and M.~Franz.
 \newblock {Automatic Software Diversity}.
 \newblock {\em IEEE Security \& Privacy}, 13(2):30--37, Mar 2015.
-
-\bibitem{Larsen:2014}
-P.~Larsen, A.~Homescu, S.~Brunthaler, and M.~Franz.
-\newblock Sok: Automated software diversity.
-\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
-  2014.
 
 \bibitem{Lee:2015}
 C.-L. Lee, Y.-S. Lin, and Y.-C. Chen.
@@ -749,18 +734,6 @@ A.~Nogueira, M.~Garcia, A.~Bessani, and N.~Neves.
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, 2018.
 
-\bibitem{Obelheiro:2006}
-R.~R. Obelheiro, A.~N. Bessani, L.~C. Lung, and M.~Correia.
-\newblock {How practical are intrusion-tolerant distributed systems?}
-\newblock Technical Report TR 06–15, Department of Informatics, 2006.
-
-\bibitem{Okhravi:2012}
-H.~Okhravi, A.~Comella, E.~Robinson, and J.~Haines.
-\newblock Creating a cyber moving target for critical infrastructure
-  applications using platform diversity.
-\newblock {\em International Journal of Critical Infrastructure Protection},
-  5(1):30--39, Mar. 2012.
-
 \bibitem{Okhravi:2014}
 H.~Okhravi, T.~Hobson, D.~Bigelow, and W.~Streilein.
 \newblock Finding focus in the blur of moving-target techniques.
@@ -797,10 +770,21 @@ V.~Rahli, I.~Vukotic, M.~Volp, and P.~Verissimo.
 \newblock {Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}.
 \newblock In {\em Proceedings of the European Symposium on Programming}, 2018.
 
+\bibitem{Randell:1975}
+B.~Randell.
+\newblock {System Structure for Software Fault Tolerance}.
+\newblock {\em IEEE Transactions on Software Engineering}, 1(2), 1975.
+
 \bibitem{Reiser:2007}
 H.~P. Reiser and R.~Kapitza.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, 2007.
+
+\bibitem{Reynolds:2002}
+J.~Reynolds, J.~Just, E.~Lawson, L.~Clough, R.~Maglich, and K.~Levitt.
+\newblock The design and implementation of an intrusion tolerant system.
+\newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
+  Dependable Systems and Networks}, 2002.
 
 \bibitem{Rodrigues:2001}
 R.~Rodrigues, M.~Castro, and B.~Liskov.
@@ -885,6 +869,12 @@ P.~Sousa, N.~F. Neves, and P.~Verissimo.
 \newblock {How resilient are distributed f fault/intrusion-tolerant systems?}
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, 2005.
+
+\bibitem{Sousa:2007}
+P.~Sousa, N.~F. Neves, and P.~Verissimo.
+\newblock Hidden problems of asynchronous proactive recovery.
+\newblock In {\em Proceedings of the Workshop on on Hot Topics in System
+  Dependability}, 2007.
 
 \bibitem{Stephens:2016}
 N.~Stephens, J.~Grosen, C.~Salls, A.~Dutcher, R.~Wang, J.~Corbetta,
@@ -1035,5 +1025,11 @@ L.~Zhou, F.~B. Schneider, and R.~Van~Renesse.
 \newblock {COCA: A Secure Distributed Online Certification Authority}.
 \newblock {\em ACM Transactions on Computer Systems}, 20(4):329--368, Nov.
   2002.
+
+\bibitem{Zhuang:2014}
+R.~Zhuang, S.~A. DeLoach, and X.~Ou.
+\newblock Towards a theory of moving target defense.
+\newblock In {\em Proceedings of the ACM Workshop on Moving Target Defense},
+  2014.
 
 \end{thebibliography}

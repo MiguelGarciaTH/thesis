@@ -1828,6 +1828,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{vpn}{}%
+{%
+\gls@defglossaryentry{vpn}%
+{%
+name={VPN},%
+sort={VPN},%
+type={main},%
+first={Virtual Private Network\glsspace (VPN)},%
+firstplural={Virtual Private Networks\glsspace (VPNs)},%
+text={VPN},%
+plural={VPNs},%
+description={Virtual Private Network},%
+descriptionplural={Virtual Private Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Private Network},%
+longplural={Virtual Private Networks},%
+short={VPN},%
+shortplural={VPNs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{xml}{}%
 {%
 \gls@defglossaryentry{xml}%

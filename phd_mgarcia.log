@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.3.5)  27 JUN 2018 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.3.5)  2 JUL 2018 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1939,7 +1939,7 @@ Package caption Info: End \AtBeginDocument code.
 
 \c@lstlisting=\count287
 ABD: EveryShipout initializing macros (./phd_mgarcia.glsdefs)
-<pic/logo_fcul_vertical.png, id=376, 330.7557pt x 397.485pt>
+<pic/logo_fcul_vertical.png, id=372, 330.7557pt x 397.485pt>
 File: pic/logo_fcul_vertical.png Graphic file (type png)
 
 <use pic/logo_fcul_vertical.png>
@@ -2127,24 +2127,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 
 Package natbib Warning: Citation `Chen:1995' on page 1 undefined on input line 
-13.
+16.
 
-
-Package natbib Warning: Citation `Chen:1995' on page 1 undefined on input line 
-21.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.27 
-      [1
-
-
-
-]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 26.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic settings for font family
@@ -2152,31 +2138,47 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 [][][][]$\T1/pcr/m/n/9 https : / / www . reddit . com / r / ethereum / comments
  / 55s085 / geth _ nodes _ under _
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+
+Underfull \vbox (badness 2452) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 
+l.28 
+      [1
+
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60 
       [2]pdfTeX warning (ext4): destination with the same identifier (name{page
 .3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 
-       [3]pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.4}) has been already used, duplicate ignored
+l.93 M
+      Aking exploit from patches that were not yet released!!!\cite{Brumley:...
+[3]
+Underfull \vbox (badness 1748) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 
+l.134 
        [4]
-Underfull \vbox (badness 1968) has occurred while \output is active []
+Underfull \vbox (badness 3849) has occurred while \output is active []
 
  [5]
-Overfull \hbox (11.02304pt too wide) in paragraph at lines 200--201
+Overfull \hbox (11.02304pt too wide) in paragraph at lines 185--186
 [][] 
  []
 
@@ -2190,44 +2192,722 @@ chapter 2.
 
 
 
-] [8] [9]
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning: pdflatex (file ./images/images/bft.pdf): PDF inclusion: found P
-DF version <1.7>, but at most version <1.5> allowed
-<images/images/bft.pdf, id=970, 609.27625pt x 286.06876pt>
-File: images/images/bft.pdf Graphic file (type pdf)
-
-<use images/images/bft.pdf>
-Package pdftex.def Info: images/images/bft.pdf used on input line 107.
-(pdftex.def)             Requested size: 197.7259pt x 92.83592pt.
- [10 <./images/images/bft.pdf>]
-Underfull \vbox (badness 4859) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 2608) has occurred while \output is active []
-
- [12]
-[13] [14] [15] [16] [17]
-Underfull \vbox (badness 1968) has occurred while \output is active []
-
- [18]
-[19] [20] [21] [22] [23] [24]
-LaTeX Font Info:    Try loading font information for U+mvs on input line 620.
-
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
+ [8]
+[9]
+LaTeX Font Info:    Try loading font information for U+mvs on input line 94.
+ (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-mvs.cfg
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 620--620
-[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) **NOT
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) OSDI
  []
 
-[25]) [26]
+
+
+pdfTeX warning: pdflatex (file ./images/images/bft.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/images/bft.pdf, id=958, 609.27625pt x 333.245pt>
+File: images/images/bft.pdf Graphic file (type pdf)
+
+<use images/images/bft.pdf>
+Package pdftex.def Info: images/images/bft.pdf used on input line 117.
+(pdftex.def)             Requested size: 197.7259pt x 108.1457pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+Underfull \hbox (badness 4341) in paragraph at lines 155--155
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Zyzzyva
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) Up-Right
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) SOSP 2009,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) Aard-vark
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) NSDI
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) 2009, BFT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) SMART
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) DSN 2014,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) COP Mid-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/10.95 (+20) dle-ware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) In-ter-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/ptm/m/n/10.95 (+20) na-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/ptm/m/n/10.95 (+20) Sym-po-sium
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/ptm/m/n/10.95 (+20) on Fault-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/ptm/m/n/10.95 (+20) Tolerant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/ptm/m/n/10.95 (+20) Com-put-ing
+ []
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TOCS
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./images/images/bft.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TOCS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Work-
+ []
+
+
+Underfull \hbox (badness 7504) in paragraph at lines 192--192
+\T1/ptm/m/n/10.95 (+20) shops 2007
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TPDS
+ []
+
+
+Overfull \hbox (2.05139pt too wide) in paragraph at lines 201--208
+[]\T1/ptm/m/n/10.95 (-20) Sousa [] [[]] im-proved the state-of-the-art re-cov-e
+ry al-go-rithms by in-tro-duc-ing [][]Proactive-
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Con-fer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) ence on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) Com-puter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) Se-cu-rity,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) De-pend-
+ []
+
+
+Underfull \hbox (badness 4699) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) abil-ity, and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) As-sur-ance:
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) Sec. Priv
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) Com-puter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+\T1/ptm/m/n/10.95 (+20) Sur-veys
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) IEEE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+\T1/ptm/m/n/10.95 (+20) Trans-ac-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+\T1/ptm/m/n/10.95 (+20) En-gi-neer-ing
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+[]\U/mvs/m/n/10.95 Z[]  \T1/ptm/m/n/10.95 (+20) IEEE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) Com-puter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) Ap-pli-ca-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) 77, IEEE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) Sym-po-sium
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) on Fault-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) Tolerant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+\T1/ptm/m/n/10.95 (+20) Com-put-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) IEEE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
+\T1/ptm/m/n/10.95 (+20) Trans-ac-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
+\T1/ptm/m/n/10.95 (+20) En-gi-neer-ing
+ []
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) SRDS
+ []
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Usenix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+\T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+
+Underfull \hbox (badness 8113) in paragraph at lines 261--261
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+\T1/ptm/m/n/10.95 (+20) Pri-vacy
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 261--261
+\T1/ptm/m/n/10.95 (+20) 2014, CCS
+ []
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 264--264
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Pro-ceed-
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) ings of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+17) In-ter-na-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) Con-fer-ence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) for Pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) gram-ming
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) Lan-guages
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 264--264
+\T1/ptm/m/n/10.95 (+20) and Op-er-at-
+ []
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 309--309
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) DSN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) OSDI
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) IEEE
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 344--344
+\T1/ptm/m/n/10.95 (+20) Trans. on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+\T1/ptm/m/n/10.95 (+20) In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+\T1/ptm/m/n/10.95 (+20) Foren-sics
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/ptm/m/n/10.95 (+20) on Re-cent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/ptm/m/n/10.95 (+20) Ad-vances
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 364--364
+\T1/ptm/m/n/10.95 (+20) in In-tru-sion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/ptm/m/n/10.95 (+20) De-tec-tion
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Usenix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+\T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) SOSP
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TOCS
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 442--442
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) In-ter-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+\T1/ptm/m/n/10.95 (+20) na-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+\T1/ptm/m/n/10.95 (+20) Sym-po-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+\T1/ptm/m/n/10.95 (+20) sium on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+\T1/ptm/m/n/10.95 (+20) Elec-tronic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+\T1/ptm/m/n/10.95 (+20) Com-merce
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Eco-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
+\T1/ptm/m/n/10.95 (+20) nomics of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
+\T1/ptm/m/n/10.95 (+20) In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 475--475
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Pro-ceed-
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 475--475
+\T1/ptm/m/n/10.95 (+20) ings of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
+\T1/ptm/m/n/10.95 (+17) In-ter-na-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
+\T1/ptm/m/n/10.95 (+20) Con-fer-ence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
+\T1/ptm/m/n/10.95 (+20) En-gi-neer-ing
+ []
+
+
+Underfull \hbox (badness 8113) in paragraph at lines 492--492
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 492--492
+\T1/ptm/m/n/10.95 (+20) and Pri-vacy
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \hbox (badness 10000) in paragraph at lines 503--503
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) KDD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) ACM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+\T1/ptm/m/n/10.95 (+20) Trans-ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+\T1/ptm/m/n/10.95 (+20) tions on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+\T1/ptm/m/n/10.95 (+20) In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 515--515
+\T1/ptm/m/n/10.95 (+20) and Sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
+\T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Usenix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+\T1/ptm/m/n/10.95 (+20) Se-cu-rity
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 557--557
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--566
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) IS-SRE
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 593--593
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) DSN
+ []
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 602--602
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Pro-ceed-
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) ings of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) DARPA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+11) Sur-viv-abil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) Con-fer-ence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) and Ex-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+\T1/ptm/m/n/10.95 (+20) po-si-tion
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+20) ings in the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+17) In-ter-na-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+20) Con-fer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+20) ence on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+20) Avail-abil-ity,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--612
+\T1/ptm/m/n/10.95 (+20) Re-li-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--618
+[]\U/mvs/m/n/10.95 Z[]  \T1/ptm/m/n/10.95 (+20) ATC
+ []
+
+[25]
+Underfull \hbox (badness 1371) in paragraph at lines 631--631
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) ** NOT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--631
+\T1/ptm/m/n/10.95 (+20) TOP **
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--631
+\T1/ptm/m/n/10.95 (+20) ac-tions on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--631
+\T1/ptm/m/n/10.95 (+20) In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) Trans.
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 643--643
+\T1/ptm/m/n/10.95 (+20) Sec. Priv
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
+[]\U/mvs/m/n/10.95 Z[] \T1/ptm/m/n/10.95 (+20) TDSC
+ []
+
+[27]) [28]
 \openout2 = `chapters/datasource/datasource.aux'.
 
  (./chapters/datasource/datasource.tex
 chapter 3.
-[27
+[29
 
 
 
@@ -2235,11 +2915,11 @@ chapter 3.
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
+ [30]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-[30] <images/gnuplot/spe/top/top.pdf, id=1488, 361.35pt x 126.4725pt>
+ [31]
+[32] <images/gnuplot/spe/top/top.pdf, id=1494, 361.35pt x 126.4725pt>
 File: images/gnuplot/spe/top/top.pdf Graphic file (type pdf)
 
 <use images/gnuplot/spe/top/top.pdf>
@@ -2250,14 +2930,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
- [31 <./images/gnuplot/spe/top/top.pdf>]
+ [33 <./images/gnuplot/spe/top/top.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32]
+ [34]
 Underfull \vbox (badness 1112) has occurred while \output is active []
 
- [33]
-[34] [35]
+ [35]
+[36] [37]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 350--350
 []\T1/ptm/m/n/9 (-20) O 
  []
@@ -2282,7 +2962,7 @@ Overfull \hbox (3.45462pt too wide) in paragraph at lines 361--361
 []|[]|  
  []
 
-[36]
+[38]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 412--412
 []\T1/ptm/m/n/9 (-20) O 
  []
@@ -2307,8 +2987,8 @@ Overfull \hbox (3.45462pt too wide) in paragraph at lines 423--423
 []|[]|  
  []
 
-[37]
-<images/images/grayscale_ven_dia_one_fig_update.pdf, id=1655, 542.025pt x 839.5
+[39]
+<images/images/grayscale_ven_dia_one_fig_update.pdf, id=1656, 542.025pt x 839.5
 3653pt>
 File: images/images/grayscale_ven_dia_one_fig_update.pdf Graphic file (type pdf
 )
@@ -2316,14 +2996,14 @@ File: images/images/grayscale_ven_dia_one_fig_update.pdf Graphic file (type pdf
 Package pdftex.def Info: images/images/grayscale_ven_dia_one_fig_update.pdf use
 d on input line 455.
 (pdftex.def)             Requested size: 379.4149pt x 587.67157pt.
- [38]
+ [40]
 
-LaTeX Warning: Text page 39 contains only floats.
+LaTeX Warning: Text page 41 contains only floats.
 
 
 Underfull \vbox (badness 1354) has occurred while \output is active []
 
- [39 <./images/images/grayscale_ven_dia_one_fig_update.pdf>]
+ [41 <./images/images/grayscale_ven_dia_one_fig_update.pdf>]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 481--481
 []\T1/ptm/m/n/9 (-20) O 
  []
@@ -2383,22 +3063,22 @@ Overfull \hbox (4.99763pt too wide) in paragraph at lines 540--540
 []|[]|  
  []
 
-[40] [41] [42]
+[42] [43] [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-[44] [45] [46] [47]) [48]
+ [45]
+[46] [47] [48] [49]) [50]
 \openout2 = `chapters/lazarus/lazarus_design.aux'.
 
  (./chapters/lazarus/lazarus_design.tex
 chapter 4.
 
-LaTeX Warning: Reference `sec:design' on page 49 undefined on input line 27.
+LaTeX Warning: Reference `sec:design' on page 51 undefined on input line 27.
 
 
 Underfull \vbox (badness 1259) has occurred while \output is active []
 
- [49
+ [51
 
 
 
@@ -2410,11 +3090,11 @@ File: images/images/overview.pdf Graphic file (type pdf)
 <use images/images/overview.pdf>
 Package pdftex.def Info: images/images/overview.pdf used on input line 47.
 (pdftex.def)             Requested size: 276.81505pt x 94.99185pt.
- [50 <./images/images/overview.pdf>]
+ [52 <./images/images/overview.pdf>]
 
-LaTeX Warning: Reference `' on page 51 undefined on input line 72.
+LaTeX Warning: Reference `' on page 53 undefined on input line 72.
 
-[51] [52]
+[53] [54]
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
 [][][][]$\T1/pcr/m/n/9 https : / / www . oracle . com / technetwork / topics / 
 security /
@@ -2435,24 +3115,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--164
 []|\T1/ptm/m/n/8 CVE-2016-4428
  []
 
-[53]
+
+LaTeX Warning: Reference `sec:details' on page 55 undefined on input line 176.
+
+[55] [56]
 Overfull \hbox (12.0pt too wide) in paragraph at lines 204--232
  [] 
  []
 
-
-Underfull \vbox (badness 4479) has occurred while \output is active []
-
- [54]
-[55]
+[57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
+ [58]
 
-LaTeX Warning: Reference `sec:replica' on page 57 undefined on input line 389.
+LaTeX Warning: Reference `sec:replica' on page 59 undefined on input line 389.
 
-[57]
-<images/gnuplot/executions_new/execution.pdf, id=2274, 361.35pt x 126.4725pt>
+[59]
+<images/gnuplot/executions_new/execution.pdf, id=2278, 361.35pt x 126.4725pt>
 File: images/gnuplot/executions_new/execution.pdf Graphic file (type pdf)
 
 <use images/gnuplot/executions_new/execution.pdf>
@@ -2463,8 +3142,8 @@ put line 439.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58]
-<images/gnuplot/score/score_random_all.pdf, id=2286, 361.35pt x 100.375pt>
+[60]
+<images/gnuplot/score/score_random_all.pdf, id=2289, 361.35pt x 100.375pt>
 File: images/gnuplot/score/score_random_all.pdf Graphic file (type pdf)
 
 <use images/gnuplot/score/score_random_all.pdf>
@@ -2472,7 +3151,7 @@ Package pdftex.def Info: images/gnuplot/score/score_random_all.pdf used on inpu
 t line 463.
 (pdftex.def)             Requested size: 197.7259pt x 54.92459pt.
 
-<images/gnuplot/score/score_final_all.pdf, id=2287, 361.35pt x 100.375pt>
+<images/gnuplot/score/score_final_all.pdf, id=2290, 361.35pt x 100.375pt>
 File: images/gnuplot/score/score_final_all.pdf Graphic file (type pdf)
 
 <use images/gnuplot/score/score_final_all.pdf>
@@ -2484,7 +3163,7 @@ Overfull \hbox (16.30687pt too wide) in paragraph at lines 463--466
 [][]  [][] 
  []
 
-[59 <./images/gnuplot/executions_new/execution.pdf> <./images/gnuplot/score/sco
+[61 <./images/gnuplot/executions_new/execution.pdf> <./images/gnuplot/score/sco
 re_random_all.pdf> <./images/gnuplot/score/score_final_all.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 521--521
 [][][]\T1/ptm/m/n/9 (+20) https://securityintelligence.com/wannacry-ransomware-
@@ -2492,7 +3171,7 @@ spreads-across-the-globe-makes-organizations-
  []
 
 
-<images/gnuplot/special_vulns/execution-special.pdf, id=2325, 361.35pt x 126.47
+<images/gnuplot/special_vulns/execution-special.pdf, id=2328, 361.35pt x 126.47
 25pt>
 File: images/gnuplot/special_vulns/execution-special.pdf Graphic file (type pdf
 )
@@ -2503,129 +3182,128 @@ d on input line 530.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60])
-[61 <./images/gnuplot/special_vulns/execution-special.pdf>]
+ [62])
+[63 <./images/gnuplot/special_vulns/execution-special.pdf>]
 \openout2 = `chapters/lazarus/lazarus_implementation.aux'.
 
 
-(./chapters/lazarus/lazarus_implementation.tex [62
+(./chapters/lazarus/lazarus_implementation.tex [64
 
 
 
 
 ]
 chapter 5.
-<images/images/architecture_new.pdf, id=2362, 568.1225pt x 279.0425pt>
+<images/images/architecture_new.pdf, id=2366, 568.1225pt x 279.0425pt>
 File: images/images/architecture_new.pdf Graphic file (type pdf)
 
 <use images/images/architecture_new.pdf>
 Package pdftex.def Info: images/images/architecture_new.pdf used on input line 
 24.
 (pdftex.def)             Requested size: 355.9042pt x 174.81413pt.
- [63 <./images/images/architecture_new.pdf>]
+ [65 <./images/images/architecture_new.pdf>]
+
+LaTeX Warning: Reference `sec:details' on page 66 undefined on input line 50.
+
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
- [64]
+[66]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 70.
- [65] [66] [67] [68]
+ [67] [68] [69] [70]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
- [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [71]
+Underfull \vbox (badness 2717) has occurred while \output is active []
 
- [70]
-<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=2937, 361.35pt x 75.281
+ [72]
+<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=2938, 361.35pt x 75.281
 25pt>
 File: images/gnuplot/vagrant/runs_new_new/throughput.pdf Graphic file (type pdf
 )
  <use images/gnuplot/vagrant/runs_new_new/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_new_new/throughput.pdf use
-d on input line 314.
+d on input line 306.
 (pdftex.def)             Requested size: 395.45181pt x 82.38689pt.
 
-<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=2942, 361.35pt x 126.
+<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=2943, 361.35pt x 126.
 4725pt>
 File: images/gnuplot/vagrant/runs_diversity/throughput.pdf Graphic file (type p
 df)
  <use images/gnuplot/vagrant/runs_diversity/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_diversity/throughput.pdf u
-sed on input line 329.
+sed on input line 321.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:discussion' on page 71 undefined on input line 34
-2.
+LaTeX Warning: Reference `sec:discussion' on page 73 undefined on input line 33
+4.
 
-[71 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf>]
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf, id=2964
+[73 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf>]
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf, id=2965
 , 180.675pt x 25.09375pt>
 File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf Gra
 phic file (type pdf)
 
 <use images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state10mbs.pdf used on input line 358.
+_state10mbs.pdf used on input line 350.
 (pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
 
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf, id=2965
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf, id=2966
 , 180.675pt x 25.09375pt>
 File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf Gra
 phic file (type pdf)
 
 <use images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state50mbs.pdf used on input line 359.
+_state50mbs.pdf used on input line 352.
 (pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
 
-Overfull \hbox (395.45181pt too wide) in paragraph at lines 358--360
-[][][][] 
- []
-
-[72 <./images/gnuplot/vagrant/runs_diversity/throughput.pdf> <./images/gnuplot/
+[74 <./images/gnuplot/vagrant/runs_diversity/throughput.pdf> <./images/gnuplot/
 vagrant/reconfiguration/reconfiguration_state10mbs.pdf> <./images/gnuplot/vagra
 nt/reconfiguration/reconfiguration_state50mbs.pdf>]
-<images/gnuplot/vagrant/updown/boot.pdf, id=3004, 361.35pt x 163.61125pt>
+<images/gnuplot/vagrant/updown/boot.pdf, id=3005, 361.35pt x 163.61125pt>
 File: images/gnuplot/vagrant/updown/boot.pdf Graphic file (type pdf)
 
 <use images/gnuplot/vagrant/updown/boot.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/updown/boot.pdf used on input l
-ine 383.
+ine 376.
 (pdftex.def)             Requested size: 316.36266pt x 143.24187pt.
 
 Underfull \vbox (badness 4108) has occurred while \output is active []
 
- [73 <./images/gnuplot/vagrant/updown/boot.pdf>] [74]
-<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3044, 361.35pt x 100.375pt
+ [75 <./images/gnuplot/vagrant/updown/boot.pdf>] [76]
+<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3046, 361.35pt x 100.375pt
 >
 File: images/gnuplot/vagrant/runs_apps/throughput.pdf Graphic file (type pdf)
  <use images/gnuplot/vagrant/runs_apps/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_apps/throughput.pdf used o
-n input line 436.
+n input line 429.
 (pdftex.def)             Requested size: 395.45181pt x 109.8492pt.
-) [75 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]
+) [77 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]
 \openout2 = `chapters/sieveq/sieveq.aux'.
 
- (./chapters/sieveq/sieveq.tex [76
+ (./chapters/sieveq/sieveq.tex [78
 
 
 
 
 ]
 chapter 6.
-[77] <images/images/arch_traditional.pdf, id=3102, 647.41875pt x 199.24437pt>
+[79] <images/images/arch_traditional.pdf, id=3102, 647.41875pt x 199.24437pt>
 File: images/images/arch_traditional.pdf Graphic file (type pdf)
 
 <use images/images/arch_traditional.pdf>
 Package pdftex.def Info: images/images/arch_traditional.pdf used on input line 
 82.
 (pdftex.def)             Requested size: 316.36266pt x 97.36002pt.
- [78] [79 <./images/images/arch_traditional.pdf>]
+ [80] [81 <./images/images/arch_traditional.pdf>]
 <images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf, id=3134, 433.62pt
  x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf Graphic file 
@@ -2649,47 +3327,43 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
 
-[80 <./images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf> <./images/g
-nuplot/sieveq/plots/server_throughput_traditional_attack.pdf>] [81]
-<images/images/arch.pdf, id=3165, 714.16812pt x 218.8175pt>
+[82 <./images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf> <./images/g
+nuplot/sieveq/plots/server_throughput_traditional_attack.pdf>] [83]
+<images/images/arch.pdf, id=3166, 714.16812pt x 218.8175pt>
 File: images/images/arch.pdf Graphic file (type pdf)
 
 <use images/images/arch.pdf>
 Package pdftex.def Info: images/images/arch.pdf used on input line 178.
 (pdftex.def)             Requested size: 355.9042pt x 109.04787pt.
- [82 <./images/images/arch.pdf>] [83] [84]
+ [84 <./images/images/arch.pdf>] [85] [86]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
+ [87]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
+ [88]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 334.
 
-[87] <images/images/filtering_steps_1.pdf, id=3231, 344.28625pt x 531.48563pt>
+[89] <images/images/filtering_steps_1.pdf, id=3232, 344.28625pt x 531.48563pt>
 File: images/images/filtering_steps_1.pdf Graphic file (type pdf)
 
 <use images/images/filtering_steps_1.pdf>
 Package pdftex.def Info: images/images/filtering_steps_1.pdf used on input line
  376.
 (pdftex.def)             Requested size: 172.1427pt x 265.74216pt.
- [88 <./images/images/filtering_steps_1.pdf>] [89]
+ [90 <./images/images/filtering_steps_1.pdf>] [91]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 522.
 
 Underfull \vbox (badness 5302) has occurred while \output is active []
 
- [90]
+ [92]
 
-LaTeX Warning: Reference `sec:repseivefiltering' on page 91 undefined on input 
+LaTeX Warning: Reference `sec:repseivefiltering' on page 93 undefined on input 
 line 543.
 
-[91] [92]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [93]
-[94]
+[93] [94]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [95]
@@ -2698,18 +3372,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [97]
 [98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+[100]
 
 pdfTeX warning: pdflatex (file ./images/images/testbed1.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<images/images/testbed1.pdf, id=3373, 428.82208pt x 190.57799pt>
+<images/images/testbed1.pdf, id=3374, 428.82208pt x 190.57799pt>
 File: images/images/testbed1.pdf Graphic file (type pdf)
 
 <use images/images/testbed1.pdf>
 Package pdftex.def Info: images/images/testbed1.pdf used on input line 793.
 (pdftex.def)             Requested size: 316.36266pt x 140.60092pt.
- [99 <./images/images/testbed1.pdf, page is rotated 90 degrees>]
+ [101 <./images/images/testbed1.pdf, page is rotated 90 degrees>]
 <images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf, id
-=3439, 578.16pt x 151.56625pt>
+=3440, 578.16pt x 151.56625pt>
 File: images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pd
 f Graphic file (type pdf)
 
@@ -2722,8 +3400,8 @@ encyVSthroughput.pdf used on input line 837.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[100 <./images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.
-pdf>] [101]
+[102 <./images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.
+pdf>] [103]
 <images/gnuplot/sieveq/new_plot_fw/fw.pdf, id=3479, 361.35pt x 126.4725pt>
 File: images/gnuplot/sieveq/new_plot_fw/fw.pdf Graphic file (type pdf)
 
@@ -2753,7 +3431,7 @@ df used on input line 919.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[102 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
+[104 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
 <images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=350
 5, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf Gr
@@ -2799,7 +3477,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 6641) has occurred while \output is active []
 
- [103 <./images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf> <./images/g
+ [105 <./images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf> <./images/g
 nuplot/sieveq/plots/server_throughput_normal.pdf> <./images/gnuplot/sieveq/plot
 s/latency_normal_t1000_s500_under_attack.pdf> <./images/gnuplot/sieveq/plots/se
 rver_throughput_attack.pdf>]
@@ -2824,19 +3502,19 @@ licas_dos.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_internal_recovery/server_thr
 oughput_recovery_replicas_dos.pdf used on input line 975.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
- [104 <./images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
+ [106 <./images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
  <./images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf> <./im
 ages/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replica
 s_dos.pdf> <./images/gnuplot/sieveq/new_internal_recovery/server_throughput_rec
 overy_replicas_dos.pdf>]
-<images/images/SIEM.pdf, id=3585, 663.47874pt x 278.03876pt>
+<images/images/SIEM.pdf, id=3586, 663.47874pt x 278.03876pt>
 File: images/images/SIEM.pdf Graphic file (type pdf)
 
 <use images/images/SIEM.pdf>
 Package pdftex.def Info: images/images/SIEM.pdf used on input line 993.
 (pdftex.def)             Requested size: 257.04126pt x 107.71344pt.
 
-<images/gnuplot/sieveq/new_massif/massif.pdf, id=3590, 361.35pt x 100.375pt>
+<images/gnuplot/sieveq/new_massif/massif.pdf, id=3591, 361.35pt x 100.375pt>
 File: images/gnuplot/sieveq/new_massif/massif.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_massif/massif.pdf>
@@ -2850,21 +3528,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [105 <./images/images/SIEM.pdf>]
+ [107 <./images/images/SIEM.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [106 <./images/gnuplot/sieveq/new_massif/massif.pdf>]) [107]
+ [108 <./images/gnuplot/sieveq/new_massif/massif.pdf>]) [109]
 \openout2 = `chapters/conclusion/conclusion.aux'.
 
 
-(./chapters/conclusion/conclusion.tex [108
+(./chapters/conclusion/conclusion.tex [110
 
 
 
 
 ]
 chapter 7.
-[109]) [110] [111
+[111]) [112] [113
 
 ]
 \openout2 = `acronimos.aux'.
@@ -2873,111 +3551,103 @@ chapter 7.
 \@gls@deffile=\write11
 \openout11 = `phd_mgarcia.glsdefs'.
 
-) (./phd_mgarcia.gls [112
+) (./phd_mgarcia.gls [114
 
 
 
 
-] [113
+] [115
 
 
-] [114]
-[115]) [116] (./phd_mgarcia.bbl [117] [118
+] [116]
+[117]) [118] (./phd_mgarcia.bbl [119] [120
 
 
 ]
 chapter without number
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
 []\T1/ptm/m/n/10.95 (+20) Juniper Net-works Se-cu-rity.  []$\T1/pcr/m/n/10.95 h
 ttp : / / www . juniper . net / us / en /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--18
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 []\T1/ptm/m/n/10.95 (+20) Sonicwall.  []$\T1/pcr/m/n/10.95 http : / / www . son
 icwall . com / us / en / products /
  []
 
-[119]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [120]
-[121] [122]
-Underfull \hbox (badness 10000) in paragraph at lines 299--304
+[121] [122] [123] [124]
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 []\T1/ptm/m/n/10.95 (+20) N. Fal-liere.  Ex-plor-ing Stuxnet's PLC In-fec-tion 
 Pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--304
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 \T1/ptm/m/n/10.95 (+20) cess.  []$\T1/pcr/m/n/10.95 http : / / www . symantec .
  com / connect / blogs /
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 318--324
+Underfull \hbox (badness 3646) in paragraph at lines 322--328
 []\T1/ptm/m/n/10.95 (+20) B. Free-man.  A New De-fense for Navy Ships: Pro-tec-
 tion from Cy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--324
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 \T1/ptm/m/n/10.95 (+20) ber At-tacks.  []$\T1/pcr/m/n/10.95 https : / / www . o
 nr . navy . mil / en / Media-[]Center /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--324
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 \T1/pcr/m/n/10.95 Press-[]Releases / 2015 / RHIMES-[]Cyber-[]Attack-[]Protectio
 n . aspx$[]\T1/ptm/m/n/10.95 (+20) ,
  []
 
-[123] [124]
-Underfull \hbox (badness 1603) in paragraph at lines 433--437
+[125] [126]
+Underfull \hbox (badness 1603) in paragraph at lines 424--428
 []\T1/ptm/m/n/10.95 (+20) HashiCorp.  Va-grant Cloud.  []$\T1/pcr/m/n/10.95 htt
 ps : / / app . vagrantup . com / boxes /
  []
 
-[125]
-Underfull \hbox (badness 1968) in paragraph at lines 499--506
+[127]
+Underfull \hbox (badness 1968) in paragraph at lines 497--504
 \T1/ptm/m/n/10.95 (+20) Ser-vices.  []$\T1/pcr/m/n/10.95 https : / / software .
  intel . com / sites / default / files /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--506
+Underfull \hbox (badness 10000) in paragraph at lines 497--504
 \T1/pcr/m/n/10.95 managed / ac / 40 / 2016 % 20WW10 % 20sgx % 20provisioning % 
 20and %
  []
 
-[126] [127] [128] [129]
-Underfull \vbox (badness 2922) has occurred while \output is active []
-
- [130]
-[131]
-Underfull \hbox (badness 1442) in paragraph at lines 904--909
+[128] [129] [130] [131] [132] [133]
+Underfull \hbox (badness 1442) in paragraph at lines 894--899
 []\T1/ptm/m/n/10.95 (+20) Symantec.  Drag-on-fly: Cy-beres-pi-onage At-tacks Ag
 ainst En-ergy Sup-pli-ers.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--909
+Underfull \hbox (badness 10000) in paragraph at lines 894--899
 []$\T1/pcr/m/n/10.95 http : / / www . symantec . com / content / en / us / ente
 rprise / media /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--909
+Underfull \hbox (badness 10000) in paragraph at lines 894--899
 \T1/pcr/m/n/10.95 security _ response / whitepapers / Dragonfly _ Threat _ Agai
 nst _
  []
 
-[132] [133])
+[134] [135])
 
 Package natbib Warning: There were undefined citations.
 
-AED: lastpage setting LastPage [134]
+AED: lastpage setting LastPage [136]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 352.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 352.
  (./phd_mgarcia.aux
@@ -2990,15 +3660,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 352.
 (./chapters/conclusion/conclusion.aux) (./acronimos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 352.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 352.
+Package rerunfilecheck Info: File `phd_mgarcia.out' has not changed.
+(rerunfilecheck)             Checksum: 18EC7E6779702F3959431B16861C7AD3;6209.
 
-
-Package rerunfilecheck Warning: File `phd_mgarcia.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `phd_mgarcia.out':
-(rerunfilecheck)             Before: 09019A30A6FC6A02B4DC11F729E4356F;6279
-(rerunfilecheck)             After:  C123D27D3DCFC65FA4789E1F492BB8AA;6280.
 
 LaTeX Warning: There were undefined references.
 
@@ -3008,20 +3672,23 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 352.
  ) 
 Here is how much of TeX's memory you used:
- 38801 strings out of 494925
- 680920 string characters out of 6180252
- 955696 words of memory out of 5000000
- 39960 multiletter control sequences out of 15000+600000
+ 38833 strings out of 494925
+ 681366 string characters out of 6180252
+ 956819 words of memory out of 5000000
+ 39989 multiletter control sequences out of 15000+600000
  253758 words of font info for 611 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  65i,23n,106p,8822b,1997s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:mtd} has been referenced but does not exist, 
 replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:wine} has been referenced but does not exist, r
+pdfTeX warning (dest): name{glo:scit} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{glo:scit} has been referenced but does not exist, r
+pdfTeX warning (dest): name{glo:vpn} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:wine} has been referenced but does not exist, r
 eplaced by a fixed one
 
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texlive/texmf-d
@@ -3043,10 +3710,10 @@ mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on phd_mgarcia.pdf (161 pages, 5792386 bytes).
+Output written on phd_mgarcia.pdf (163 pages, 5838915 bytes).
 PDF statistics:
- 4258 PDF objects out of 4296 (max. 8388607)
- 3773 compressed objects within 38 object streams
- 703 named destinations out of 1000 (max. 500000)
- 100247 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 4259 PDF objects out of 4296 (max. 8388607)
+ 3772 compressed objects within 38 object streams
+ 706 named destinations out of 1000 (max. 500000)
+ 100239 words of extra memory for PDF output out of 106986 (max. 10000000)
 

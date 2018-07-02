@@ -115,24 +115,16 @@ We developed an API on top of Vagrant, another level of abstraction made to mana
 \circled{4} \textbf{LTUs.} Each node that hosts a replica has a Vagrant daemon (see details in next section) running on its trusted domain.
 This component is isolated from the internet and communicates only with the \system controller through \gls{tls} channels.
 
-\subsection{Additional Details}
-\label{sec:details}
 
-\textbf{Vulnerability Clustering.}
+
+\subsection{Clustering}\label{sec:clustering}
+
 A few steps are carried out to create the vulnerability clusters. 
 First, the vulnerability description needs to be transformed into a vector, where a numerical value is associated with the most relevant words (up to 200 words). 
 This operation entails, for example, converting all words to a canonical form and calculating their frequency (less frequent words are given higher weights).
 Then, the K-means algorithm is applied to build the clusters~\cite{Jain:2010}, where the number of clusters to be formed is determined by the elbow method~\cite{Thorndike:1953}. 
-%Currently, it is set $K=200$.
-%The algorithm assigns each vulnerability to the cluster with the minimum distance to the cluster center. 
-%Then, it computes the cluster centroid, i.e., the average of each data attribute using only the members of a cluster. 
-%Next, it calculates the distance of every vulnerability to the centroid, potentially placing them in close clusters. 
-%The algorithm stops when there are no further exchanges between clusters.
-%We used the elbow method~\cite{Thorndike53whobelongs} to determine the number of clusters to be formed, in our case was $200$ clusters.
 We used the open-source machine learning library Weka~\cite{weka} to build the clusters. 
 
-
-\subsection{Clustering}\label{sec:clustering}
 Clustering is the process of aggregating elements into similar groups, named clusters. 
 For example, two elements from the same cluster have a higher probability of being similar than two elements from different clusters. 
 We apply this technique to build clusters of similar vulnerabilities.
@@ -233,7 +225,7 @@ From the available alternatives, we chose VirtualBox~\cite{virtualbox} because i
 
 \subsection{Descentralized \system Version}
 
-\section{Performance Evaluation}
+\section{Evaluation}
 \label{sec:overhead}
 
 In this section, we evaluate how \system' affects the performance of diverse replicated systems.
@@ -341,7 +333,7 @@ The set with \glspl{os} from different families is very close to the slowest set
 These results show that running \system with current virtualization technology results in a significant performance variation, depending on the configurations selected by the system.
 This opens interesting avenues for future work on protocols that consider such performance diversity, as will be discussed in Section~\ref{sec:discussion}.
 
-\subsection{Performance During Reconfiguration}
+\subsection{Performance During Replicas' Reconfiguration}
 \label{sec:reconfiguration}
 
 
@@ -356,6 +348,7 @@ We run this experiment for $400$ seconds, and reconfigure the set of replicas wi
 The initial \gls{os} configuration is the fastest OS set (i.e., UB17, UB16, FE24, OS42).
 \begin{figure}[h]
 \subfloat[KVS state size $\approx 30$MBs.]{\includegraphics[width=\textwidth]{images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf}\label{fig:s10mbs}}
+
 \subfloat[KVS state size $\approx 60$MBs.]{\includegraphics[width=\textwidth]{images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf}\label{fig:s50mbs}}
 \caption{KVS performance with \system-triggered reconfigurations on a 50/50 YCSB workload and 1kB-values.}
 \label{fig:reconfiguration}
@@ -372,7 +365,7 @@ These types of performance perturbations, which become more severe with bigger s
 The figure shows that the reconfigurations take around $10$ seconds for these setups, and did not change significantly with states of approx. $30$ and $60$ MBs.
 Regarding diversity, the figure shows no noticeable disruption when changing Ubuntu 17 to Fedora 26 and Fedora 25 to Fedora 24, but the replacement of a Debian 8 by an OpenSuse 42 replica significantly decreases the performance, which is consistent with the results from Figure~\ref{fig:bftsmart}.
 
-\subsection{Booting time}
+\subsection{Replicas' Booting Time}
 
 Before triggering a reconfiguration, \system needs to start the new \gls{vm}, boot the \glspl{os}, and launch the BFT-SMaRt replica.
 Therefore, the total time to replace a ``risky'' replica roughly comprises the time required to boot the new OS plus the reconfiguration time (discussed in the previous section).

@@ -63,9 +63,9 @@ More specifically, we consider a \emph{hybrid system model} composed of two plan
 \item \textbf{Execution Plane:} 
 This plane is componsed of replica processes that can be subject to Byzantine failures.
 Therefore, a Byzantine replica can try to mislead the other replicas or the clients.
-These replicas communicate through an asynchronous network that can delay, drop or modify messages, just like most \gls{bft} system models~\cite{Castro:1999,Kotla:2010,Bessani:2014,Aublin:2015}.
+These replicas communicate through an asynchronous network that can delay, drop or modify messages, just like most \gls{bft} system models~\cite{Castro:2002,Kotla:2010,Bessani:2014,Aublin:2015}.
 This plane hosts $n$ replicas from which at most $f$ can be compromised at any given moment.
-In this paper, we consider the typical scenario in which $n=3f+1$~\cite{Castro:2002,Kotla:2010,Aublin:2015}.  
+In this paper, we consider the typical scenario in which $n=3f+1$~\cite{Castro:2002,Bessani:2008,Moniz:2011,Kotla:2010,Aublin:2015}.  
 
 \item \textbf{Control Plane:}  
 For simplicity, we will address this component as a logical-centralized controller, which requires stronger assumptions. 
@@ -178,7 +178,7 @@ For example, the vulnerabilities in Table~\ref{tab:missing_products} will be pla
 
 It is worth to remark that by using clusters to find similar vulnerabilities, we conservatively increase the chances of capturing shared weaknesses contributing to the score of a pair of replicas.
 
-\subsection{Measuring risk}
+\subsection{Measuring Risk}
 \label{sec:measurerisk}
 
 As discussed before, each vulnerability in \gls{nvd} has an associated \gls{cvss} severity score. 
@@ -382,7 +382,7 @@ In addition, this function is only called if the risk exceeds the threshold.
 }
 
 
-\section{Evaluation of Replica Set Risk}
+\section{Evaluation}
 \label{sec:diversity}
 
 This section evaluates how \system performs on the selection of dependable \replica configurations.
@@ -451,7 +451,7 @@ Interestingly, and contrary to intuition, changing \glspl{os} every day with no 
 Therefore, it is paramount to have selection strategies like the ones we use in \system.
 \note{Add all the months we already have}
 
-\subsection{Risk evaluation}
+\subsection{Risk Evaluation}
 
 
 In order to better understand how \system performed, we isolated one of the $5000$ runs to observe the risk evolution over time. 

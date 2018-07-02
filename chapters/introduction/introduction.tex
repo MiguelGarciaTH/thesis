@@ -4,21 +4,16 @@
 \section{Context and Motivation}
 \gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (subject) with Byzantine fault-tolerant (adjetive) using the same acronym BFT for both.} is a well-established area of research that aims to guarantee safety on replicated systems even in the presence of some (Byzantine) faulty nodes.
 In a nutshell, \gls{bft} protocols guarantee that replicas agree on the order of the message execution, and thus, working as a replicated state machine.
-This, works assuming that only a subpart $f$ out of $n$ is faulty, therefore there is always a correct number of replicas to execute correclty.
+This holds even if a subpart $f$ out of $n$ is faulty, then there is always a sufficient number of correct nodes to execute correclty.
+Although not explicit, this assumption leverages on the strict condition that the nodes (must) fail independly.
+Otherwise, compromising $f+1$ is virtually the same than compromising $f$.
 
 
 \gls{bft} was first proposed in 1982 by Lamport~\etal{}~\cite{Lamport:1982}, but it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}. 
-
-In the last two decades there were a number of \gls{bft} protocols and systems deemed ``practical'' (e.g.,~\cite{Castro:2002,Kotla:2010,Veronese:2013,Aublin:2015,Behl:2015,Behl:2017,Liu:2016,Yin:2003}).
-Most of these systems either ignore the issue of fault independence or simply assume it is solved in some way (e.g., N-version programming~\cite{Chen:1995} or \gls{ots} diversity~\cite{Gashi:2007,Garcia:2014}).
-In principle, \system can support the execution of all these systems/protocols, as long as they support, or are extended to support, replica group reconfigurations, just like BFT-SMaRt~\cite{Bessani:2014}.
-In this section, we discuss the few previous works that address the issue of diversity in \gls{bft} systems. 
-
-
 In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
 However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that the replica nodes fail independtly. 
-This assumption guarantees that the fault theshold is extended in time as it is more time consuming to compromise different replicas than compromise replicas that are equal, thus share the same weaknesses.
-Neverthesless, a few works rely on some orthogonal mechanism (e.g.,~\cite{Roeder:2010,Chen:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their ystem models.
+This assumption guarantees that the fault threshold is extended in time as it is more time consuming to compromise different replicas than compromise replicas that are equal, thus share the same weaknesses.
+Nevertheless, a few works rely on some orthogonal mechanism (e.g.,~\cite{Roeder:2010,Chen:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their ystem models.
 Moreover, a few works have implemented and experimented with such mechanisms~\cite{Rodrigues:2001,Roeder:2010,Amir:2011}, but in a very limited way.
 Even if considering an initial set of $n$ diverse replicas (i.e., to the assumption), long-running services need to be cleaned from possible failures and intrusions.
 A few works on the proactive recovery of \gls{bft} systems~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011} periodically restart their replicas to clean undetected faulty states introduced by a stealth attacker. 
@@ -27,29 +22,20 @@ In practice, this will not happen unless the replica changes its software (e.g.,
 
 
 
-
 In practice, diversity has shown that it is a fundamental building block of dependable services.
 For example, in avionics~\cite{Yeh:2004}, military systems~\cite{rhimes}, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} (three essential applications of \gls{bft}), and the \gls{dns}~\cite{Shue:2013}.~\footnote{\url{https://secure64.com/dns-diversity/}}. 
 AUMENTAR A EXPLICACAO DE CADA UM 
 
 
-
-Despite the amount of great workd that the distributed system community have been doing, we indentify some problems that may damage 
-
-
-Diverse \gls{bft} systems lack of evidence to support their claims, need mechanisms that manage the diversity and recoveries in a assessed way, and need to be automatic as a way to avoid human intervation and management. 
-
-Another common assumption, which results from the fist assumption, is to assume that it takes the same amount of effort to compromise the necessary number of replicas that exceed the faul theshold of the system.
-RISK!!
+Despite the maturity of \gls{bft} solutions, no one addressed the challenge of building dependable \gls{bft} systems that consider evidence supported decisions on diversity and 
 
 
 
-%%%%%%%%%%%%%%%%
 \section{Objectives and Contributions}
 
 DEFINE THE GENERIC OBJECTIVES OF THE THESIS 
 
-\subsection{Finding evidence to support diversity}% Diversity Study on Off-the-Shelf Operating Systems}
+\subsection{Evidence for Supporting Diversity}% Diversity Study on Off-the-Shelf Operating Systems}
 The current solutions that vouch for diversity as a way to guarantee failure independence, either lack of supporting evidence, or use evidence that is limited to some extent.
 Therefore, some of the results may provide false conclusions.
 We identify a need for finding \emph{accurate} sources for supporting sound evidence of the benefits diversity as a dependable mechanism.
@@ -65,7 +51,7 @@ Moreover, we observed that using different \gls{os} releases of the same \gls{os
 
 
 
-\subsection{Applying diversity on BFT systems}
+\subsection{Applying Diversity on BFT Systems}
 %{\system, a Diversity and Recovery Manager for BFT systems}
 
 A few works consider the diversity of replicas as a way to achieve such failure independence, however, it is mostly taken for granted.
@@ -123,8 +109,7 @@ The contributions of this work resulted in the following publications:
 \end{enumerate}
 
 
-\subsection{Multi-layered BFT resiliency} 
-
+\subsection{BFT Multi-layer Resiliency} 
 Most generic firewall solutions suffer from two inherent problems: 
 First, they have vulnerabilities as any other system, and as a consequence, they can also be the target of advanced attacks. 
 For example, the \gls{nvd}~\cite{nvd} shows that there have been many security issues in commonly used firewalls. 
