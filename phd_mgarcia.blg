@@ -6,20 +6,13 @@ A level-1 auxiliary file: chapters/abstract/resumo_pt.aux
 A level-1 auxiliary file: chapters/abstract/resumo_estendido_pt.aux
 A level-1 auxiliary file: chapters/acks/agradecimentos.aux
 A level-1 auxiliary file: chapters/introduction/introduction.aux
-A level-1 auxiliary file: chapters/relatedwork/related_work.aux
-A level-1 auxiliary file: chapters/datasource/datasource.aux
-A level-1 auxiliary file: chapters/lazarus/lazarus_design.aux
-A level-1 auxiliary file: chapters/lazarus/lazarus_implementation.aux
-A level-1 auxiliary file: chapters/sieveq/sieveq.aux
-A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-Warning--string name "g." is undefined
---line 487 of file chapters/references/references.bib
-I was expecting a `,' or a `}'---line 487 of file chapters/references/references.bib
- :  author = g. 
- :              Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, P. Derrin, D. Elkaduwe, K. Engelhardt, R. Kolanski, M. Norrish, T. Sewell, H. Tuch, and S. Winwood
+I was expecting a `,' or a `}'---line 488 of file chapters/references/references.bib
+ :  
+ :  title = {{sel4: Formal verification of an os kernel}},
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 986 of file chapters/references/references.bib
  :  
@@ -29,66 +22,45 @@ I'm skipping whatever remains of this entry
 Warning--entry type for "Chauhan:2011" isn't style-file defined
 --line 1710 of file chapters/references/references.bib
 Warning--I didn't find a database entry for "Chen:1995"
-Warning--to sort, need author or key in Klein:2009
-Warning--to sort, need author or key in juniper
-Warning--to sort, need author or key in paloalto
-Warning--to sort, need author or key in sonicwall
-Warning--empty author in Klein:2009
-Warning--empty title in Klein:2009
-Warning--empty booktitle in Klein:2009
-Warning--empty year in Klein:2009
-Warning--empty booktitle in Bhatkar:2003
-Warning--empty year in Bhatkar:2003
-Warning--can't use both volume and number fields in Fraga:1985
-Warning--empty booktitle in Frei:2006
-Warning--empty year in Frei:2006
-Warning--empty title in Holm:2014
-Warning--empty year in Holm:2014
-Warning--empty publisher in Nist:2012
-Warning--empty title in Reiser:2007
-Warning--empty chapter and pages in Verissimo:2003
-Warning--empty booktitle in Vianello:2013
-Warning--empty booktitle in Vigna:2003
-Warning--empty year in Vigna:2003
-You've used 168 entries,
+You've used 43 entries,
             2118 wiz_defined-function locations,
-            1408 strings with 34176 characters,
-and the built_in function-call counts, 56999 in all, are:
-= -- 5004
-> -- 3461
-< -- 20
-+ -- 1375
-- -- 1199
-* -- 3934
-:= -- 9533
-add.period$ -- 512
-call.type$ -- 168
-change.case$ -- 1097
+            798 strings with 12165 characters,
+and the built_in function-call counts, 15239 in all, are:
+= -- 1367
+> -- 873
+< -- 8
++ -- 344
+- -- 300
+* -- 1067
+:= -- 2511
+add.period$ -- 128
+call.type$ -- 43
+change.case$ -- 279
 chr.to.int$ -- 0
-cite$ -- 189
-duplicate$ -- 2154
-empty$ -- 4566
-format.name$ -- 1199
-if$ -- 11858
+cite$ -- 43
+duplicate$ -- 587
+empty$ -- 1228
+format.name$ -- 300
+if$ -- 3201
 int.to.chr$ -- 0
-int.to.str$ -- 168
-missing$ -- 144
-newline$ -- 849
-num.names$ -- 330
-pop$ -- 1561
+int.to.str$ -- 43
+missing$ -- 39
+newline$ -- 217
+num.names$ -- 86
+pop$ -- 373
 preamble$ -- 1
-purify$ -- 935
+purify$ -- 236
 quote$ -- 0
-skip$ -- 1370
+skip$ -- 395
 stack$ -- 0
-substring$ -- 1942
-swap$ -- 399
-text.length$ -- 20
+substring$ -- 647
+swap$ -- 128
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 662
-warning$ -- 21
-while$ -- 414
-width$ -- 171
-write$ -- 1743
+type$ -- 170
+warning$ -- 0
+while$ -- 121
+width$ -- 45
+write$ -- 451
 (There were 2 error messages)
