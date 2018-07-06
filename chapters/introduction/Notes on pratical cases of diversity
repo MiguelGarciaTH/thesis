@@ -1,0 +1,12 @@
+%o the root server operators work under contract to ICANN?
+%No, but the role is far from informal. The operators of F, K, M, and I have exchanged letters of understanding with ICANN (using the same language in the case of all but F). All the operators follow the IETF standards and are guided by common principles. And they coordinate closely, most notably through the RSSAC, which advises the ICANN community and board, and which has published a draft describing what service and performance the Internet community should expect of root server operators. But the specifics of how the operators provide that service are up to the discretion of each operator. A strength of this approach is that it allows for great operational diversity. That means, for example, that a single software or firmware bug cannot bring down the entire system.
+
+%Q: Yes but what if there is a software bug?
+%A: There is significant software diversity across the root name servers. There are at least three major DNS implementations being used: bind8, bind9 and NSD. The servers also run on very diverse hardware and operating system platforms. Actually maintaining this diversity is a major part of the coordination going on between root name server operators.
+%https://www.isoc.org/briefings/020/
+
+%ethereum
+%https://www.coindesk.com/so-ethereums-blockchain-is-still-under-attack/
+%In practice, diversity has shown that it is a fundamental building block of dependable services.
+%For example, in avionics~\cite{Yeh:2004}, military systems, and even in recent blockchain platforms such as Ethereum\footnote{\url{https://www.reddit.com/r/ethereum/comments/55s085/geth_nodes_under_attack_again_we_are_actively/}} (three essential applications of \gls{bft}), and the .~\footnote{\url{https://secure64.com/dns-diversity/}}. 
+%AUMENTAR A EXPLICACAO DE CADA UM 

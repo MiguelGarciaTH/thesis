@@ -1,7 +1,10 @@
 \chapter{BFT Diversity Management}
 \label{chap:lazarus_design}
 
- \note{We need to clarify that \system is proactive and \sieveq is reactive, they can be used together. E.g., when there is a problem the controller increases the risk}
+\note{We need to clarify that \system is proactive and \sieveq is reactive, they can be used together. E.g., when there is a problem the controller increases the risk}
+\note{patches:Patches take time to apply~\cite{Frei:2010}
+MAking exploit from patches that were not yet released!!!\cite{Brumley:2008}
+THE NEED FOR AUTOMATIC PATCHING~\cite{Nappa:2015} --shared code, one takes the patch and the other no}
 \section{Introduction}
 
 
@@ -109,19 +112,14 @@ However, we also show that if naive configurations are avoided, \gls{bft} applic
 \label{sec:diversityofreplicas}
 
 %BFT-replicated services running on \system are composed by $n$ replicas.
-For our purposes, each \replica is composed of a stack of software, including an OS (kernel plus other software contained in an \gls{os} distribution), execution support (e.g., \gls{jvm}, \gls{dbms}), a \gls{bft} library, and the service that is provided by the system.
+For our purposes, each \replica is composed of a stack of software, including an \gls{os} (kernel plus other software contained in an \gls{os} distribution), execution support (e.g., \gls{jvm}, \gls{dbms}), a \gls{bft} library, and the service that is provided by the system.
 %(see Figure~\ref{fig:arch1}).
 The set of $n$ replicas is called a \configuration.
 
 It is possible to improve the \replicas fault independence by resorting to different \gls{ots} components in the software stack~\cite{Deswarte:1998}. 
-For example, it has been shown that using distinct \glspl{os}~\cite{Garcia:2014}, filesystems~\cite{Rodrigues:2001,Bairavasundaram:2009,Alagappan:2016}, and databases~\cite{Gashi:2007}, can yield important benefits in terms of fault independence. In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
+For example, it has been shown that using distinct \glspl{os}~\cite{Garcia:2014}, filesystems~\cite{Castro:2003,Bairavasundaram:2009,Alagappan:2016}, and databases~\cite{Gashi:2007}, can yield important benefits in terms of fault independence. In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
 
-Although \system can exploit automatic techniques, in this paper we center our attention on diverse \gls{ots} components. 
-In particular, \system monitors the disclosed vulnerabilities of all elements of the software stacks of the replicas to assess which of them may contain common vulnerabilities.  
-
-However, in the experimental evaluation, we focus on the diversity of OSes (not only the kernel, but the whole product) for three fundamental reasons: (1) by far, most of the replica’s code is the \gls{os}; (2) such size and importance, make \glspl{os} a valuable target, with new vulnerabilities and exploits being discovered every day; and (3) there are many options of OSes that can be used.
-The two last factors are particularly important to enrich the validity of our analysis.
-
+In Chapter~\ref{chap:data_source} we explained why we focoused on \gls{os} diversity. 
 Moreover, we do not explicitly consider the diversity of the \gls{bft} library (i.e., the protocol implementation) or the service code implemented on top of it.
 Four facts justify this decision: (1) N-version programming is too costly for this~\cite{Avizienis:1977}; (2) there have been some works showing that such protocol implementations can be generated from formally verified specifications~\cite{Hawblitzel:2015,Rahli:2018}; (3) the relatively small size of such components (e.g., a key-value store on top of BFT-SMaRt has less than 15k lines of code~\cite{Bessani:2014}) make them relatively simple to test and assess with some confidence~\cite{Martins:2013,Lee:2014};  and (4) there are no reported vulnerabilities about these system to support our study.
 Notice that, although we do not explicitly consider the diversity of \gls{bft} libraries, nothing prevents \system from monitoring them (when several alternatives become available). 

@@ -378,7 +378,7 @@ There are some limitations, namely, it fails to detect attacks that need some hu
 Although \textsc{PlatPal} is proposed to detect malicious payloads on files, it vouches (indirectly) for diversity as it shows that an attacker needs to deploy multiple payloads to compromise the system with the same attack (for the majority of the malware samples used).
 
 \paragraph{Diversity on BFT.}
-\textsc{Base}~\cite{Rodrigues:2001} is an extension of PBFT~\cite{Castro:1999} that explores opportunistic \gls{ots} diversity in \gls{bft} replication. \side{SOSP 2001}
+\textsc{Base}~\cite{Castro:2003} is an extension of PBFT~\cite{Castro:1999} that explores opportunistic \gls{ots} diversity in \gls{bft} replication. \side{SOSP 2001}
 The system provides an abstraction layer for running diverse service codebases on top of the PBFT library.
 The key issue addressed by \textsc{Base} is how to deal with different representations of the replica's state, allowing a replica that recovers from a failure to rebuild its state from other replicas. 
 \textsc{Base} was evaluated considering four different \glspl{os} and their native \gls{nfs} implementations: Linux, OpenBSD, Solaris, and FreeBSD.
@@ -667,7 +667,7 @@ However, these results are not surprising if only two \glspl{os} are considered.
 \paragraph{Summary.}
 We presented a few works that propose control systems that manage nodes that are potentially vulnerable and exploitable.
 Some of the works that we presented in other sections (e.g., Sousa~\etal{}~\cite{Sousa:2010} introduce reactive recovery upon detection of faulty behavior) already partially combined these mechanisms. 
-However, only a few have implemented or discussed the real implications of using diversity (with the exceptions like BASE~\cite{Rodrigues:2001} that implemented \gls{ots} diversity and assessed its performance overhead).
+However, only a few have implemented or discussed the real implications of using diversity (with the exceptions like BASE~\cite{Castro:2003} that implemented \gls{ots} diversity and assessed its performance overhead).
 
 
 \section{Final Remarks}
