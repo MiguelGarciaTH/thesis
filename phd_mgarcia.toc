@@ -59,11 +59,11 @@
 \contentsline {section}{\numberline {3.2}OS Diversity Study}{34}{section*.40}
 \contentsline {section}{\numberline {3.3}Strategies for OS Diversity Selection}{36}{section*.43}
 \contentsline {subsection}{Common Vulnerability Indicator}{37}{section*.44}
-\contentsline {subsection}{Building Replicated Systems with Diversity}{38}{section*.46}
+\contentsline {subsection}{Building Replicated Systems with Diversity}{39}{section*.46}
 \contentsline {subsection}{Common Vulnerability Count (CVCst)}{40}{section*.47}
-\contentsline {subsection}{Exploring Diversity Across OS Releases}{48}{section*.55}
-\contentsline {section}{\numberline {3.4}Decisions About Deploying Diversity}{51}{section*.58}
-\contentsline {section}{\numberline {3.5}Final Remmarks}{52}{section*.59}
+\contentsline {subsection}{Exploring Diversity Across OS Releases}{48}{section*.56}
+\contentsline {section}{\numberline {3.4}Decisions About Deploying Diversity}{50}{section*.58}
+\contentsline {section}{\numberline {3.5}Final Remmarks}{51}{section*.59}
 \contentsline {chapter}{\numberline {4}BFT Diversity Management}{53}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{53}{section*.61}
 \contentsline {section}{\numberline {4.2}System Model}{54}{section*.63}
@@ -104,6 +104,11 @@
 \contentsline {section}{\numberline {6.3}Overview of \textsc {SieveQ}\xspace }{84}{section*.106}
 \contentsline {subsection}{Design Principles}{85}{section*.107}
 \contentsline {subsection}{\textsc {SieveQ}\xspace Architecture}{85}{section*.108}
+\contentsline {paragraph}{\emph {Sender-SQ}\xspace .}{86}{figure.caption.109}
+\contentsline {paragraph}{\emph {Pre-SQ}\xspace .}{86}{figure.caption.109}
+\contentsline {paragraph}{\emph {Replica-SQ}\xspace .}{87}{figure.caption.109}
+\contentsline {paragraph}{\emph {Post-SQ}\xspace .}{87}{figure.caption.109}
+\contentsline {paragraph}{Controller.}{87}{figure.caption.109}
 \contentsline {subsection}{Resilience Mechanisms}{87}{section*.110}
 \contentsline {subsection}{System and Threat Model}{88}{section*.111}
 \contentsline {subsection}{Resilience Mechanisms}{89}{section*.112}
@@ -126,12 +131,11 @@
 \contentsline {subsection}{Performance in Failure-free Executions}{104}{section*.123}
 \contentsline {subsection}{Effect of Filtering Rules Complexity}{105}{section*.126}
 \contentsline {subsection}{\textsc {SieveQ}\xspace Under Attack}{106}{section*.128}
-\contentsline {subsection}{Use Case: \textsc {SieveQ}\xspace to Protect a SIEM System}{108}{section*.133}
+\contentsline {subsection}{\textsc {SieveQ}\xspace to Protect a SIEM System}{109}{section*.133}
 \contentsline {section}{\numberline {6.7}Discussion}{110}{section*.136}
 \contentsline {section}{\numberline {6.8}Final Remarks}{111}{section*.137}
 \contentsline {chapter}{\numberline {7}Conclusion and Future Research Directions}{113}{chapter.7}
-\contentsline {section}{\numberline {7.1}Summary of the Results}{113}{section*.139}
-\contentsline {paragraph}{OS vulnerability Study}{113}{section*.139}
+\contentsline {section}{\numberline {7.1}Conclusions}{113}{section*.139}
 \contentsline {section}{\numberline {7.2}Future Work}{114}{section*.140}
-\contentsline {chapter}{Acronyms}{120}{section*.143}
-\contentsline {chapter}{\nonumberline Bibliography}{123}{chapter*.144}
+\contentsline {chapter}{Acronyms}{122}{section*.143}
+\contentsline {chapter}{\nonumberline Bibliography}{125}{chapter*.144}

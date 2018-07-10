@@ -15,7 +15,8 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Byzantine Fault Tolerance protocol overview.\relax }}{13}{figure.caption.23}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Common vulnerabilities for $n$ different OSes (with Isolated Thin Servers).\relax }}{35}{figure.caption.41}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Venn diagrams for vulnerabilities in setCon and setUpdt for strategies CVCst and CVIst in Fat Server and Isolated Thin Server configurations. The first four diagrams (a, b, c and d) represent the results for CVC, and the last four \glspl {os} (e, f, g and h) represent the results for CVI.\relax }}{43}{figure.caption.50}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Venn diagrams for vulnerabilities in setCon and setUpdt for strategies CVCst in Fat Server and Isolated Thin Server configurations.\relax }}{43}{figure.caption.50}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Venn diagrams for vulnerabilities in setCon and setUpdt for strategies CVIst in Fat Server and Isolated Thin Server configurations.\relax }}{46}{figure.caption.54}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces \textsc {Lazarus}\xspace overview.\relax }}{54}{figure.caption.62}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Compromised system runs over 2 month slots.\relax }}{63}{figure.caption.75}
@@ -40,16 +41,16 @@
 \contentsline {figure}{\numberline {6.5}{\ignorespaces The \textsc {SieveQ}\xspace testbed architecture used in the experiments.\relax }}{103}{figure.caption.121}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces \textsc {SieveQ}\xspace latency for each workload (message size and transmission rate).\relax }}{104}{figure.caption.124}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Comparison of the \textsc {SieveQ}\xspace 's latency between the baseline and adding the filtering rules.\relax }}{106}{figure.caption.127}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Performance of \textsc {SieveQ}\xspace under different attack conditions.\relax }}{107}{figure.caption.129}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Performance of \textsc {SieveQ}\xspace in fault-free executions.\relax }}{107}{figure.caption.129}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Baseline latency.}}}{107}{subfigure.8.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Baseline throughput.}}}{107}{subfigure.8.2}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Performance of \textsc {SieveQ}\xspace under different attack conditions.\relax }}{107}{figure.caption.130}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions.\relax }}{107}{figure.caption.130}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ no recovery.}}}{107}{subfigure.9.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ no recovery.}}}{107}{subfigure.9.2}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces \relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \add@extra@listi {sml}Performance of \textsc {SieveQ}\xspace under different attack conditions.\relax }}{108}{figure.caption.131}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions with recovery.\relax }}{108}{figure.caption.131}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ recovery.}}}{108}{subfigure.10.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ recovery.}}}{108}{subfigure.10.2}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Performance of \textsc {SieveQ}\xspace under different attack conditions.\relax }}{108}{figure.caption.132}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Performance of \textsc {SieveQ}\xspace under internal DoS attack conditions without and with recovery.\relax }}{108}{figure.caption.132}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Internal DoS execution without recovery actions.}}}{108}{subfigure.11.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Internal DoS execution with recovery actions.}}}{108}{subfigure.11.2}
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \textsc {SieveQ}\xspace .\relax }}{109}{figure.caption.134}

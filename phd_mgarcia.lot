@@ -20,11 +20,10 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces History/observed period for CVCst with Fat Servers.\relax }}{41}{table.caption.48}
 \contentsline {table}{\numberline {3.5}{\ignorespaces History/observed period for strategy CVCst with Isolated Thin Servers.\relax }}{42}{table.caption.49}
 \contentsline {table}{\numberline {3.6}{\ignorespaces History/observed period for CVIst with Fat Servers.\relax }}{44}{table.caption.51}
-\contentsline {table}{\numberline {3.7}{\ignorespaces History/observed period for CVIst with Isolated Thin Servers.\relax }}{45}{table.caption.52}
-\contentsline {table}{\numberline {3.8}{\ignorespaces Number of two consecutive vulnerabilities occurring in each \gls {irt} period, between 2000 and 2011 (with Fat Servers).\relax }}{46}{table.caption.53}
-\contentsline {table}{\numberline {3.9}{\ignorespaces Number of two consecutive vulnerabilities occurring in each IRT period, between 2000 and 2011 (Isolated Thin Servers).\relax }}{47}{table.caption.54}
-\contentsline {table}{\numberline {3.10}{\ignorespaces Common vulnerabilities between OS releases.\relax }}{50}{table.caption.56}
-\contentsline {table}{\numberline {3.11}{\ignorespaces Common vulnerabilities between Debian and Red Hat releases.\relax }}{51}{table.caption.57}
+\contentsline {table}{\numberline {3.7}{\ignorespaces History/observed period for CVIst with Isolated Thin Servers.\relax }}{44}{table.caption.52}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Number of two consecutive vulnerabilities occurring in each \gls {irt} period, between 2000 and 2011 (with Fat Servers).\relax }}{45}{table.caption.53}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Number of two consecutive vulnerabilities occurring in each IRT period, between 2000 and 2011 (Isolated Thin Servers).\relax }}{48}{table.caption.55}
+\contentsline {table}{\numberline {3.10}{\ignorespaces Common vulnerabilities between OS releases.\relax }}{50}{table.caption.57}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Similar vulnerabilities affecting different OSes.\relax }}{57}{table.caption.69}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Notable attacks during 2017.\relax }}{64}{table.caption.79}

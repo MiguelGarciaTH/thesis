@@ -58,6 +58,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{apts}{}%
+{%
+\gls@defglossaryentry{apts}%
+{%
+name={APTs},%
+sort={APTs},%
+type={main},%
+first={Advanced Persistent Threats\glsspace (APTs)},%
+firstplural={Advanced Persistent Threatss\glsspace (APTss)},%
+text={APTs},%
+plural={APTss},%
+description={Advanced Persistent Threats},%
+descriptionplural={Advanced Persistent Threats\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Advanced Persistent Threats},%
+longplural={Advanced Persistent Threatss},%
+short={APTs},%
+shortplural={APTss},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{bft}{}%
 {%
 \gls@defglossaryentry{bft}%
@@ -353,6 +383,96 @@ long={Inter-Reporting Times Strategy},%
 longplural={Inter-Reporting Times Strategys},%
 short={IRTst},%
 shortplural={IRTsts},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ip}{}%
+{%
+\gls@defglossaryentry{ip}%
+{%
+name={IP},%
+sort={IP},%
+type={main},%
+first={Internet Protocol \glsspace (IP)},%
+firstplural={Internet Protocol s\glsspace (IPs)},%
+text={IP},%
+plural={IPs},%
+description={Internet Protocol},%
+descriptionplural={Internet Protocol \acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Protocol},%
+longplural={Internet Protocol s},%
+short={IP},%
+shortplural={IPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gpu}{}%
+{%
+\gls@defglossaryentry{gpu}%
+{%
+name={GPU},%
+sort={GPU},%
+type={main},%
+first={Graphics Processing Unit\glsspace (GPU)},%
+firstplural={Graphics Processing Units (GPUs)},%
+text={GPU},%
+plural={GPUs},%
+description={Graphics Processing Unit},%
+descriptionplural={Graphics Processing Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Graphics Processing Unit},%
+longplural={Graphics Processing Units},%
+short={GPU},%
+shortplural={GPUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fpga}{}%
+{%
+\gls@defglossaryentry{fpga}%
+{%
+name={FPGA},%
+sort={FPGA},%
+type={main},%
+first={Field-Programmable Gate Array\glsspace (FPGA)},%
+firstplural={Field-Programmable Gate Arrays (FPGAs)},%
+text={FPGA},%
+plural={FPGAs},%
+description={Field-Programmable Gate Array},%
+descriptionplural={Field-Programmable Gate Array\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Field-Programmable Gate Array},%
+longplural={Field-Programmable Gate Arrays},%
+short={FPGA},%
+shortplural={FPGAs},%
 counter={page},%
 parent={},%
 %
@@ -833,6 +953,36 @@ long={Intrusion Detection System},%
 longplural={Intrusion Detection Systems},%
 short={IDS},%
 shortplural={IDSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sql}{}%
+{%
+\gls@defglossaryentry{sql}%
+{%
+name={SQL},%
+sort={SQL},%
+type={main},%
+first={Structured Query Language\glsspace (SQL)},%
+firstplural={Structured Query Languages\glsspace (SQLs)},%
+text={SQL},%
+plural={SQLs},%
+description={Structured Query Language},%
+descriptionplural={Structured Query Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Structured Query Language},%
+longplural={Structured Query Languages},%
+short={SQL},%
+shortplural={SQLs},%
 counter={page},%
 parent={},%
 %

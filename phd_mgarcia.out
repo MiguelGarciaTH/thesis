@@ -31,7 +31,7 @@
 \BOOKMARK [2][-]{section*.44}{Common Vulnerability Indicator}{section*.43}% 31
 \BOOKMARK [2][-]{section*.46}{Building Replicated Systems with Diversity}{section*.43}% 32
 \BOOKMARK [2][-]{section*.47}{Common Vulnerability Count \(CVCst\)}{section*.43}% 33
-\BOOKMARK [2][-]{section*.55}{Exploring Diversity Across OS Releases}{section*.43}% 34
+\BOOKMARK [2][-]{section*.56}{Exploring Diversity Across OS Releases}{section*.43}% 34
 \BOOKMARK [1][-]{section*.58}{Decisions About Deploying Diversity}{chapter.3}% 35
 \BOOKMARK [1][-]{section*.59}{Final Remmarks}{chapter.3}% 36
 \BOOKMARK [0][-]{chapter.4}{BFT Diversity Management}{}% 37
@@ -81,11 +81,11 @@
 \BOOKMARK [2][-]{section*.123}{Performance in Failure-free Executions}{section*.119}% 81
 \BOOKMARK [2][-]{section*.126}{Effect of Filtering Rules Complexity}{section*.119}% 82
 \BOOKMARK [2][-]{section*.128}{SieveQ Under Attack}{section*.119}% 83
-\BOOKMARK [2][-]{section*.133}{Use Case: SieveQ to Protect a SIEM System}{section*.119}% 84
+\BOOKMARK [2][-]{section*.133}{SieveQ to Protect a SIEM System}{section*.119}% 84
 \BOOKMARK [1][-]{section*.136}{Discussion}{chapter.6}% 85
 \BOOKMARK [1][-]{section*.137}{Final Remarks}{chapter.6}% 86
 \BOOKMARK [0][-]{chapter.7}{Conclusion and Future Research Directions}{}% 87
-\BOOKMARK [1][-]{section*.139}{Summary of the Results}{chapter.7}% 88
+\BOOKMARK [1][-]{section*.139}{Conclusions}{chapter.7}% 88
 \BOOKMARK [1][-]{section*.140}{Future Work}{chapter.7}% 89
 \BOOKMARK [0][-]{section*.143}{Acronyms}{}% 90
 \BOOKMARK [0][-]{chapter*.144}{Bibliography}{}% 91
