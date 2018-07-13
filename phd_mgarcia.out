@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section*.16}{Thesis Overview}{chapter.1}% 8
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 9
 \BOOKMARK [1][-]{section*.18}{The Need for Intrusion Tolerance}{chapter.2}% 10
-\BOOKMARK [2][-]{section*.19}{Vulnerabilities Prevention}{section*.18}% 11
+\BOOKMARK [2][-]{section*.19}{Vulnerability Prevention}{section*.18}% 11
 \BOOKMARK [2][-]{section*.20}{Fault Detection and Removal}{section*.18}% 12
 \BOOKMARK [2][-]{section*.21}{Fault Tolerance and Masking}{section*.18}% 13
 \BOOKMARK [1][-]{section*.22}{Byzantine Fault Tolerance}{chapter.2}% 14
@@ -54,38 +54,38 @@
 \BOOKMARK [2][-]{section*.84}{Control Plane}{section*.83}% 54
 \BOOKMARK [2][-]{section*.86}{Clustering}{section*.83}% 55
 \BOOKMARK [2][-]{section*.87}{Descentralized Lazarus Version}{section*.83}% 56
-\BOOKMARK [1][-]{section*.88}{Evaluation}{chapter.5}% 57
-\BOOKMARK [2][-]{section*.90}{Homogeneous Replicas Throughput}{section*.88}% 58
-\BOOKMARK [2][-]{section*.92}{Diverse Replicas Throughput}{section*.88}% 59
-\BOOKMARK [2][-]{section*.94}{Performance During Replicas' Reconfiguration}{section*.88}% 60
-\BOOKMARK [2][-]{section*.96}{Replicas' Booting Time}{section*.88}% 61
-\BOOKMARK [2][-]{section*.98}{Application Benchmarks}{section*.88}% 62
-\BOOKMARK [1][-]{section*.100}{Final Remarks}{chapter.5}% 63
+\BOOKMARK [1][-]{section*.89}{Evaluation}{chapter.5}% 57
+\BOOKMARK [2][-]{section*.91}{Homogeneous Replicas Throughput}{section*.89}% 58
+\BOOKMARK [2][-]{section*.93}{Diverse Replicas Throughput}{section*.89}% 59
+\BOOKMARK [2][-]{section*.95}{Performance During Replicas' Reconfiguration}{section*.89}% 60
+\BOOKMARK [2][-]{section*.97}{Replicas' Booting Time}{section*.89}% 61
+\BOOKMARK [2][-]{section*.99}{Application Benchmarks}{section*.89}% 62
+\BOOKMARK [1][-]{section*.101}{Final Remarks}{chapter.5}% 63
 \BOOKMARK [0][-]{chapter.6}{SieveQ an Use Case}{}% 64
-\BOOKMARK [1][-]{section*.102}{Introduction}{chapter.6}% 65
-\BOOKMARK [1][-]{section*.103}{Intrusion-Tolerant Firewalls}{chapter.6}% 66
-\BOOKMARK [1][-]{section*.106}{Overview of SieveQ}{chapter.6}% 67
-\BOOKMARK [2][-]{section*.107}{Design Principles}{section*.106}% 68
-\BOOKMARK [2][-]{section*.108}{SieveQ Architecture}{section*.106}% 69
-\BOOKMARK [2][-]{section*.110}{Resilience Mechanisms}{section*.106}% 70
-\BOOKMARK [2][-]{section*.111}{System and Threat Model}{section*.106}% 71
-\BOOKMARK [2][-]{section*.112}{Resilience Mechanisms}{section*.106}% 72
-\BOOKMARK [1][-]{section*.113}{SieveQ Protocol}{chapter.6}% 73
-\BOOKMARK [2][-]{section*.114}{Properties}{section*.113}% 74
-\BOOKMARK [2][-]{section*.115}{Message Transmission}{section*.113}% 75
-\BOOKMARK [2][-]{section*.117}{Addressing Component Failures}{section*.113}% 76
-\BOOKMARK [1][-]{section*.118}{Implementation}{chapter.6}% 77
-\BOOKMARK [1][-]{section*.119}{Evaluation}{chapter.6}% 78
-\BOOKMARK [2][-]{section*.120}{Testbed Setup}{section*.119}% 79
-\BOOKMARK [2][-]{section*.122}{Methodology}{section*.119}% 80
-\BOOKMARK [2][-]{section*.123}{Performance in Failure-free Executions}{section*.119}% 81
-\BOOKMARK [2][-]{section*.126}{Effect of Filtering Rules Complexity}{section*.119}% 82
-\BOOKMARK [2][-]{section*.128}{SieveQ Under Attack}{section*.119}% 83
-\BOOKMARK [2][-]{section*.133}{SieveQ to Protect a SIEM System}{section*.119}% 84
-\BOOKMARK [1][-]{section*.136}{Discussion}{chapter.6}% 85
-\BOOKMARK [1][-]{section*.137}{Final Remarks}{chapter.6}% 86
+\BOOKMARK [1][-]{section*.103}{Introduction}{chapter.6}% 65
+\BOOKMARK [1][-]{section*.104}{Intrusion-Tolerant Firewalls}{chapter.6}% 66
+\BOOKMARK [1][-]{section*.107}{Overview of SieveQ}{chapter.6}% 67
+\BOOKMARK [2][-]{section*.108}{Design Principles}{section*.107}% 68
+\BOOKMARK [2][-]{section*.109}{SieveQ Architecture}{section*.107}% 69
+\BOOKMARK [2][-]{section*.111}{Resilience Mechanisms}{section*.107}% 70
+\BOOKMARK [2][-]{section*.112}{System and Threat Model}{section*.107}% 71
+\BOOKMARK [2][-]{section*.113}{Resilience Mechanisms}{section*.107}% 72
+\BOOKMARK [1][-]{section*.114}{SieveQ Protocol}{chapter.6}% 73
+\BOOKMARK [2][-]{section*.115}{Properties}{section*.114}% 74
+\BOOKMARK [2][-]{section*.116}{Message Transmission}{section*.114}% 75
+\BOOKMARK [2][-]{section*.118}{Addressing Component Failures}{section*.114}% 76
+\BOOKMARK [1][-]{section*.119}{Implementation}{chapter.6}% 77
+\BOOKMARK [1][-]{section*.120}{Evaluation}{chapter.6}% 78
+\BOOKMARK [2][-]{section*.121}{Testbed Setup}{section*.120}% 79
+\BOOKMARK [2][-]{section*.123}{Methodology}{section*.120}% 80
+\BOOKMARK [2][-]{section*.124}{Performance in Failure-free Executions}{section*.120}% 81
+\BOOKMARK [2][-]{section*.127}{Effect of Filtering Rules Complexity}{section*.120}% 82
+\BOOKMARK [2][-]{section*.129}{SieveQ Under Attack}{section*.120}% 83
+\BOOKMARK [2][-]{section*.134}{SieveQ to Protect a SIEM System}{section*.120}% 84
+\BOOKMARK [1][-]{section*.137}{Discussion}{chapter.6}% 85
+\BOOKMARK [1][-]{section*.138}{Final Remarks}{chapter.6}% 86
 \BOOKMARK [0][-]{chapter.7}{Conclusion and Future Research Directions}{}% 87
-\BOOKMARK [1][-]{section*.139}{Conclusions}{chapter.7}% 88
-\BOOKMARK [1][-]{section*.140}{Future Work}{chapter.7}% 89
-\BOOKMARK [0][-]{section*.143}{Acronyms}{}% 90
-\BOOKMARK [0][-]{chapter*.144}{Bibliography}{}% 91
+\BOOKMARK [1][-]{section*.140}{Conclusions}{chapter.7}% 88
+\BOOKMARK [1][-]{section*.141}{Future Work}{chapter.7}% 89
+\BOOKMARK [0][-]{section*.144}{Acronyms}{}% 90
+\BOOKMARK [0][-]{chapter*.145}{Bibliography}{}% 91

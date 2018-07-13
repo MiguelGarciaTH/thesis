@@ -26,34 +26,35 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Compromised runs with notable attacks.\relax }}{65}{figure.caption.80}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces \textsc {Lazarus}\xspace architecture.\relax }}{67}{figure.caption.85}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/replying) for homogeneous OSes configurations.\relax }}{75}{figure.caption.91}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/reply) for three diverse OS configurations.\relax }}{75}{figure.caption.93}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces KVS performance with \textsc {Lazarus}\xspace -triggered reconfigurations on a 50/50 YCSB workload and 1kB-values.\relax }}{76}{figure.caption.95}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KVS state size $\approx 30$MBs.}}}{76}{subfigure.4.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KVS state size $\approx 60$MBs.}}}{76}{subfigure.4.2}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces OSes boot times (seconds).\relax }}{77}{figure.caption.97}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Different BFT applications running in the bare metal, fastest and slowest OS configurations.\relax }}{79}{figure.caption.99}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Distributed \textsc {Lazarus}\xspace architecture.\relax }}{74}{figure.caption.88}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/replying) for homogeneous OSes configurations.\relax }}{77}{figure.caption.92}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/reply) for three diverse OS configurations.\relax }}{78}{figure.caption.94}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces KVS performance with \textsc {Lazarus}\xspace -triggered reconfigurations on a 50/50 YCSB workload and 1kB-values.\relax }}{79}{figure.caption.96}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KVS state size $\approx 30$MBs.}}}{79}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KVS state size $\approx 60$MBs.}}}{79}{subfigure.5.2}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces OSes boot times (seconds).\relax }}{80}{figure.caption.98}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Different BFT applications running in the bare metal, fastest and slowest OS configurations.\relax }}{81}{figure.caption.100}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Architecture of a state-of-the-art replicated firewall.\relax }}{83}{figure.caption.104}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Effect of a DoS attack (initiated at second 50) on the latency and throughput of the intrusion-tolerant firewall architecture displayed in Figure \ref {fig:traditional}.\relax }}{84}{figure.caption.105}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces \textsc {SieveQ}\xspace layered architecture.\relax }}{86}{figure.caption.109}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Filtering stages at the \textsc {SieveQ}\xspace .\relax }}{92}{figure.caption.116}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The \textsc {SieveQ}\xspace testbed architecture used in the experiments.\relax }}{103}{figure.caption.121}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces \textsc {SieveQ}\xspace latency for each workload (message size and transmission rate).\relax }}{104}{figure.caption.124}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Comparison of the \textsc {SieveQ}\xspace 's latency between the baseline and adding the filtering rules.\relax }}{106}{figure.caption.127}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Performance of \textsc {SieveQ}\xspace in fault-free executions.\relax }}{107}{figure.caption.129}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Baseline latency.}}}{107}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Baseline throughput.}}}{107}{subfigure.8.2}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions.\relax }}{107}{figure.caption.130}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ no recovery.}}}{107}{subfigure.9.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ no recovery.}}}{107}{subfigure.9.2}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions with recovery.\relax }}{108}{figure.caption.131}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ recovery.}}}{108}{subfigure.10.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ recovery.}}}{108}{subfigure.10.2}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Performance of \textsc {SieveQ}\xspace under internal DoS attack conditions without and with recovery.\relax }}{108}{figure.caption.132}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Internal DoS execution without recovery actions.}}}{108}{subfigure.11.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Internal DoS execution with recovery actions.}}}{108}{subfigure.11.2}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \textsc {SieveQ}\xspace .\relax }}{109}{figure.caption.134}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces \textsc {SieveQ}\xspace latency for the 2012 Summer Olympic Games scenario throughput requirement (127 events per second) and how the \textsc {SieveQ}\xspace scale, we doubled on each experiment the number of events.\relax }}{110}{figure.caption.135}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Architecture of a state-of-the-art replicated firewall.\relax }}{85}{figure.caption.105}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Effect of a DoS attack (initiated at second 50) on the latency and throughput of the intrusion-tolerant firewall architecture displayed in Figure \ref {fig:traditional}.\relax }}{86}{figure.caption.106}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \textsc {SieveQ}\xspace layered architecture.\relax }}{88}{figure.caption.110}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Filtering stages at the \textsc {SieveQ}\xspace .\relax }}{94}{figure.caption.117}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The \textsc {SieveQ}\xspace testbed architecture used in the experiments.\relax }}{105}{figure.caption.122}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textsc {SieveQ}\xspace latency for each workload (message size and transmission rate).\relax }}{106}{figure.caption.125}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Comparison of the \textsc {SieveQ}\xspace 's latency between the baseline and adding the filtering rules.\relax }}{108}{figure.caption.128}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Performance of \textsc {SieveQ}\xspace in fault-free executions.\relax }}{109}{figure.caption.130}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Baseline latency.}}}{109}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Baseline throughput.}}}{109}{subfigure.8.2}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions.\relax }}{109}{figure.caption.131}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ no recovery.}}}{109}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ no recovery.}}}{109}{subfigure.9.2}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Performance of \textsc {SieveQ}\xspace under DoS attack conditions with recovery.\relax }}{110}{figure.caption.132}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {DoS w/ recovery.}}}{110}{subfigure.10.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DoS w/ recovery.}}}{110}{subfigure.10.2}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Performance of \textsc {SieveQ}\xspace under internal DoS attack conditions without and with recovery.\relax }}{110}{figure.caption.133}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Internal DoS execution without recovery actions.}}}{110}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Internal DoS execution with recovery actions.}}}{110}{subfigure.11.2}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \textsc {SieveQ}\xspace .\relax }}{111}{figure.caption.135}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces \textsc {SieveQ}\xspace latency for the 2012 Summer Olympic Games scenario throughput requirement (127 events per second) and how the \textsc {SieveQ}\xspace scale, we doubled on each experiment the number of events.\relax }}{112}{figure.caption.136}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

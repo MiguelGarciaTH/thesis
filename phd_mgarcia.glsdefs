@@ -1138,6 +1138,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{ltu}{}%
+{%
+\gls@defglossaryentry{ltu}%
+{%
+name={LTU},%
+sort={LTU},%
+type={main},%
+first={Logical Trusted Unit\glsspace (LTU)},%
+firstplural={Logical Trusted Units\glsspace (LTUs)},%
+text={LTU},%
+plural={LTUs},%
+description={Logical Trusted Unit},%
+descriptionplural={Logical Trusted Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Trusted Unit},%
+longplural={Logical Trusted Units},%
+short={LTU},%
+shortplural={LTUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{scada}{}%
 {%
 \gls@defglossaryentry{scada}%

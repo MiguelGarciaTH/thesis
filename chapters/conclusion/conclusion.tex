@@ -2,47 +2,46 @@
 \label{chap:conclusion}
 
 \section{Conclusions}
-The correctness of \gls{bft} systems is tied to the guarantee that replicas fail independtly. 
-Otherwise, once a replica is compromised the next $f+1$ replicas would be compromised virtually within the same time or effort.
-In this thesis, we addresses the long-standing open problem of many works on the past 20 years of \gls{bft} replication research: evaluate, select, and manage the failure independence (through diversity) of a \gls{bft} system to make it resilient to malicious adversaries.
-That said, we developed a control plane that maximizes the failure inpdenpence of \gls{bft} replicated nodes in a practical and effective way.
+The correctness of \gls{bft} systems is tied to the assumption that replicas fail independently. 
+Otherwise, once a replica is compromised, the next $f+1$ replicas would be compromised within virtually the same time or effort.
+In this thesis, we addressed the long-standing open problem of many works over the past 20 years of \gls{bft} replication research: evaluate, select, and manage the failure independence (through diversity) of \gls{bft} systems.
+That said, we developed a control plane that maximizes the failure independence of \gls{bft} replicated nodes practically and effectively to make them more resilient to malicious adversaries.
 
 
-The first step to achieve this objective was, following the line of the masters thesis, to validate the diversity hypothesis.  
-To this end, we levarage on the study using \gls{nvd} data about the shared vulnerabilities among \glspl{os} and conducted and analysis more focused on the deciding which \glspl{os} provide a dependable set for replicated systems.
-In particular, we presented several strategies to choose most diverse \glspl{os}.
-These strategies comprise different approaches data depending on whether one (i) considers all common vulnerabilities as being of equal importance; (ii) place greater emphasis on more recent common vulnerabilities; and (iii) are primarily interested in the common vulnerabilities being reported less frequently in calendar time.
-All strategies delivered the same best conbination of \glspl{os}, this emphasizes the importance of carefully select \glspl{os} that minimize the number of common weaknesses.
+The first step to achieve this objective was, following the line of prior work to this thesis, to validate the diversity hypothesis.  
+To this end, we leverage on the study using \gls{nvd} data about the shared vulnerabilities among \glspl{os} and conducted an analysis more focused on the deciding which \glspl{os} provide a dependable configuration sets for replicated systems.
+In particular, we presented several strategies to choose the most diverse \glspl{os}.
+These strategies comprise different approaches data depending on whether one (i) considers all common vulnerabilities as being of equal importance; (ii) place greater emphasis on more recent common vulnerabilities; and (iii) is primarily interested in the common vulnerabilities being reported less frequently in calendar time.
+All strategies delivered the same best combination of \glspl{os}, and this emphasizes the importance of carefully select \glspl{os} that minimize the number of common weaknesses.
 
 
-
-Despite the results that we have achieved in the previous contribution, we have identified some problems that leads us to pursue on further analysis.
-Namely, we have identified that our (and several other) work(s) that used \gls{nvd} as a source of vulnerability studies were missing important data. 
-In particular, not all products vulnerable to a certain vulnerability were reported as affected in \gls{nvd}.
-We addressed this issue by using clustering techcniques to group similar vulnerabilities.
+Despite the results that we have achieved in the previous contribution, we have identified some problems that lead us to pursue further analysis.
+Namely, our and a few other works that used \gls{nvd} as a primary data source were missing essential data. 
+In particular, not all products vulnerable to a particular vulnerability were reported as affected in \gls{nvd}.
+We addressed this issue by using clustering techniques to group similar vulnerabilities.
 Moreover, we add other data sources with other relevant data (that \gls{nvd} does not provide) to enrich our data.
-We devise a new metric that uses the vulnerabilities attributes provided by \gls{nvd}, \gls{cvss}, and the the ones that we added. 
-This metric is used in an algorithm that builds and reconfigures replica sets on \gls{bft} systems.
-The algorithm decides when and which replica should be replaced by estimating the risk of the \gls{bft} being vulnerable and potentially compromised.
+We devise a new metric that uses the vulnerability attributes provided by \gls{nvd} and \gls{cvss}, and others added from additional \gls{osint} sources. 
+This metric is used by an algorithm that builds and reconfigures replica sets on \gls{bft} systems.
+The algorithm decides when and which replica should be replaced by estimating the risk of the \gls{bft} system being vulnerable and potentially compromised.
 The results show that our algorithm supports better decisions when selecting \glspl{os} to run in the replicated system. 
-For example, for the evaluated time it \emph{compromised rate} varies between 2\%-5\% while a random selection varies between 98\%-99\%.
+For example, for the evaluated time it \emph{compromised rate} varies between 2\%-5\% of the total of executions while a random selection varies between 98\%-99\%.
  
 
-Besides the lack of proof for supporting diversity, most of works did not address diversity in a practical manner.
-We have implemented \system to assess the limitations that diversity could introduce in \gls{bft} systems.
-\system uses the algorithm previously described to manage real \gls{bft} systems. 
+Besides the lack of proof for supporting diversity, most of the works did not address diversity in a practical manner.
+We implemented \system to manage \gls{bft} systems according to security data available online that is then analyzed to trigger replicas' recoveries.
 We conducted an extensive evaluation of the costs of using real \gls{os} diversity in \gls{bft} systems.
-In the experiements, we have found a major limitation on the virtualization technology, which forced us to limit our evalution by reconfiguring the bare metal machines to use fewer resources.
-Therefore, we manage to make a fair comparison (for some of the cases) between a bare metal configuration with a virtualized (yet limited) solution that accomates \system.
-Although most of the results show a non-negligible overhead, we have shown that for \gls{os} that did not suffer virtualization limitations the overhead is minimal.
+In the experiments, we have found a significant limitation on the virtualization technology, which forced us to limit our evaluation setup by reconfiguring the bare metal machines to use fewer resources (e.g., limit the number of CPUs).
+Therefore, we manage to make a fair comparison (for some of the cases) between a bare metal configuration with a virtualized (yet limited) solution that accommodates \system.
+Although most of the results show a non-negligible overhead, we have shown that for \glspl{os} that did not suffer virtualization limitations the overhead is minimal.
 In these cases, the performance of the replicated system managed by \system is 86\%-94\% of the bare metal, which runs a replicated non-virtualized homogenous \gls{os} configuration.
 
 One of the \gls{bft} systems used in the \system evaluation, is \sieveq. 
-It is multi-layer firewall-like application that was designed to absorb most of the external and itnernal attacks with additional resilient mechanisms.
-Firewalls represent one of the most critical roles in infrastrucres, as they controll which packets go in and out of the network.
-The main improvement of the multi-layered architecture, when compared with previous systems, is the separation of message filtering in several components that carry on verifications progressively more costly and complex.
+It is a multi-layer firewall-like application that was designed to absorb most of the external and internal attacks with additional resilient mechanisms.
+Firewalls represent one of the most critical roles in infrastructures, as they control which packets go in and out of the network.
+The main improvement of the \sieveq multi-layered architecture, when compared with previous systems, is the separation of message filtering in several components that carry on verifications progressively more costly and complex.
 This allows the proposed system to be more efficient than the state-of-the-art replicated firewalls under attack.
-\sieveq also includes several resilience mechanisms that allow the creation, removal and recovery of components in a dynamic way, to effectively respond to evolving threats against the system. Experimental results show that such resilience mechanisms can significantly reduce the effects of \gls{dos} attacks against the system.
+\sieveq also includes several resilience mechanisms that allow the creation, removal, and recovery of components in a dynamic way, to respond to evolving threats against the system adequately. Experimental results show that such resilience mechanisms can significantly reduce the effects of \gls{dos} attacks against the system.
+
 
 
 \section{Future Work}
@@ -52,48 +51,45 @@ The results of this thesis open many avenues for future work on this research to
 
 \textbf{Integration of prevention techniques:}
 In Chapter~\ref{chap:related_work}, we have briefly described a few prevention techniques.
-Although we did not address them in this thesis, we initiate the discussion on how to integrate such techniques in \system.
-The \system replicas have two phases were they are dormant, when they are in quarantine or before they are deployed in the execution plane.
-Thus, this time could be used to apply a battery of automatic procedures (e.g., vulnerability detectors) that would (1) detect additional weaknesses, which could be reported, and (2) remediate those weakness with automatic mechanisms like automatic patching~\cite{Huang:2016}.
+Although we did not address them in this thesis, here, we initiate the discussion on how to integrate such techniques in \system.
+The \system replicas have two states were they are dormant when they are in quarantine or before they are deployed in the execution plane.
+Thus, this time could be used to apply a battery of automatic procedures (e.g., vulnerability detectors) that would (1) detect additional weaknesses, which could be reported to \gls{nvd}, and (2) remediate these weaknesses with automatic mechanisms like automatic patching~\cite{Huang:2016}.
 Such mechanisms would decrease the vulnerability surface, especially if common vulnerabilities are detected.
-
-Additionally, use automatic attacks~\cite{Hu:2015} to exploit common vulnerabilities in differnet replicas. 
-Although we are most concern with \gls{apts}, using automatic attacks could activate some common vulnerabilities that would trigger the algorithm to adjust the risk associated with such replicas.
-
-
-\textbf{Extending the \system sources:}
+Although we are most concern with more complex attacks (e.g., \gls{apts}), using automatic attacks~\cite{Hu:2015} could activate some common vulnerabilities before the replicas deployment.
+These would trigger the algorithm to adjust the risk associated with such replicas avoiding postponing selection.
 
 
-\textbf{Use vulnerable clone decttors on Opens source software to aggravete pairs with more clones} with dependcy graphs and autidting tools~\cite{Kim:2017}
-
-
-\textbf{Vulnreabilities in the black market as a inditicar of severity}~\cite{Allodi:2014}.
-
-
-\textbf{Integration with other sensors:}
-\system monitors only five security data feeds on the internet looking for vulnerabilities, exploits, and patches in the OSes it manages, but it could be extended to monitor other indicators of compromise (e.g., IP black lists) extracted from a much richer set of sources~\cite{Liao:2016,Sabottke:2015}.
-Similarly, \system can be extended to additionally use the outputs of IDSes to assess the BFT system behavior and trigger replica reconfigurations in case of need.
-
+\textbf{Extending the \system source types and sensors:}
+\system monitors five security data feeds on the internet to collect data about vulnerabilities, exploits, and patches for the \glspl{os} it manages.
+However, it could be extended to monitor other indicators of compromise (e.g., \gls{ip} blacklists) extracted from a much richer set of sources~\cite{Liao:2016,Sabottke:2015}.
+Similarly, \system could additionally use the outputs of \glspl{ids} to assess the \gls{bft} system behavior and trigger replica's reconfigurations in case of need.
+Moreover, although limited to open source products, it could use vulnerable code clone detectors, that would indicate potentially shared vulnerabilities~\cite{Kim:2017}.
+Finally, and exploring a different domain it could be interesting to mine black market data sources to discover new threats that could compromise several replicas~\cite{Allodi:2014}.
 
 
 \textbf{Virtualization technology:}
 \system paid a performance penalty due to the limitations of the virtualization platform we used (VirtualBox).
-VirtualBox was selected because it was the platform we could run more OSes.
-Therefore its use enabled \system to support 17 different OSes for running BFT systems.
-It would be great to have a VM technology capable of supporting all existing OSes without the resource limitations we experienced.
+VirtualBox was selected because it is the platform where we could run more \glspl{os}.
+Therefore its use enabled \system to support 17 different \glspl{os} for running \gls{bft} systems.
+It would be great to have a \gls{vm} technology capable of supporting all existing \glspl{os} without the resource limitations we experienced.
+The idea of replacing VirtualBox with an alternative solution would reduce the opportunities available to create diversity.
+However, it could be interesting to use different \glspl{vmm} by taking the most of each one. 
+For example, \glspl{os} that have CPU limitations on VirtualBox would run in the alternative \gls{vmm} (e.g., Xen).
+Although this solution seems promising, as it also creates another level of diversity, by the knowledge we have so far, the \glspl{os} that have limitations in VirtualBox have fewer compatibilities with other \glspl{vmm} like Xen.
 
-\textbf{Distributed control plane:}
-As in previous works~\cite{Roeder:2010,Platania:2014}, our current design for \system considers a centralized trusted control plane that analyzes OSINT and orchestrates replica set reconfigurations.
-It would be desirable to have a distributed version of such control plane, not only for improving its dependability but also to support the existence of multi-domain applications, such as blockchain platforms.
+\textbf{Diversity-aware replication:}
+In the same line, the evaluation of \textsc{BFT-SMaRt} on top of \system shows that different replica set configurations can impact on the performance of applications, mostly due to the performance heterogeneity of the different \glspl{os}.
+It would be interesting to consider protocols in which this heterogeneity is taken into account.
+For example, the leader could be allocated in the fastest replica, or weighted-replication protocols such as WHEAT~\cite{Sousa:2015} could be used to assign higher weights to the replicas running in faster replicas.
+These approaches would reduce the impact of running \glspl{os} that suffer from resource limitations.
+
 
 \textbf{Trusted components:}
+\note{Discutir isto}
 Our prototype implements the LTU as a trusted component isolated from the rest of the replica in a VM, as many works on hybrid BFT~\cite{Veronese:2013,Roeder:2010,Platania:2014,Sousa:2010,Distler:2011}.
 The recent popularization of trusted computing technologies such as Intel SGX~\cite{sgx}, and its use for implementing efficient BFT replication~\cite{Behl:2017}, open interesting possibilities for using novel hardware to support services like \system on bare metal.
 
 
 
-\textbf{Diversity-aware replication:}
-The evaluation of BFT-SMaRt on top of \system shows that different replica set configurations can impact on the performance of applications, mostly due to the performance heterogeneity of the different OSes.
-It would be interesting to consider protocols in which this heterogeneity is taken into account.
-For example, the leader could be allocated in the fastest replica, or weighted-replication protocols such as WHEAT~\cite{Sousa:2015} could be used to assign higher weights to the replicas running in faster replicas.
+
 

@@ -309,6 +309,11 @@ T.~Distler, R.~Kapitza, and H.~P. Reiser.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, 2008.
 
+\bibitem{eclipsescada}
+Eclipse.
+\newblock {{NeoSCADA}}.
+\newblock \url{https://www.eclipse.org/eclipsescada/}, 2017.
+
 \bibitem{stuxnet:2010}
 N.~Falliere.
 \newblock {Exploring Stuxnet's PLC Infection Process}.
@@ -911,6 +916,13 @@ Symantec.
 \newblock
   \url{http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/Dragonfly_Threat_Against_Western_Energy_Suppliers.pdf},
   July 2014.
+
+\bibitem{Syta:2017}
+E.~Syta, P.~Jovanovic, E.~K. Kogias, N.~Gailly, L.~Gasser, I.~Khoffi, M.~J.
+  Fischer, and B.~Ford.
+\newblock Scalable bias-resistant distributed randomness.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  2017.
 
 \bibitem{Thorndike:1953}
 R.~L. Thorndike.

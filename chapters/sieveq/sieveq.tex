@@ -1,8 +1,8 @@
 \chapter{\sieveq an Use Case}
 \label{chap:sieveq}
 
-In the previous chapter, we presented \system a data-plane controller for \gls{bft} systems. 
-Although we have introduced \sieveq in the evaluation of \system, we will detail \sieveq contributions in this chapter.
+In the previous chapter, we presented a data-plane controller for \gls{bft} systems, named \system. 
+Although we have already introduced \sieveq in the evaluation of \system, we will detail \sieveq contributions in this chapter.
 \sieveq a message queue service that protects and regulates the access to critical systems, in a way similar to an application-level firewall.
 The solution provides fault and intrusion tolerance by employing an architecture based on two filtering layers, enabling efficient removal of invalid messages at early stages and decreasing the costs associated with \gls{bft} replication of previous solutions.
 
@@ -1006,7 +1006,7 @@ During the 2012 Olympic Games, the workload was approximately 11 million events 
 Figure~\ref{fig:massif} shows the latency imposed by \sieveq for this workload, and when it is scaled up from 2 to 16 times more. 
 As can be observed, the latency is in the order of 4 milliseconds for the emulated scenario.
 Even with the highest load (16 times), the observed values had a latency below $70$ milliseconds.
-This means that \sieveq could potentially deliver on average 176 million events per day, which is more than enough to accommodate the expected growth in the number of events for the next Olympic Games\footnote{In 2016 the Rio's Olympic Games the number of events per second was approximated 174, source:https://diginomica.com/2016/11/24/securing-the-olympics-lessons-for-enterprise-cyber-security/}.
+This means that \sieveq could potentially deliver on average 176 million events per day, which is more than enough to accommodate the expected growth in the number of events for the next Olympic Games\footnote{In 2016 the Rio's Olympic Games the number of events per second was approximated 174, source: \url{https://diginomica.com/2016/11/24/securing-the-olympics-lessons-for-enterprise-cyber-security/}}.
 
 \begin{figure}[!h]
 \centering

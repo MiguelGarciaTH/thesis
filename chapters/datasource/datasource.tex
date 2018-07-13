@@ -1,10 +1,10 @@
 \chapter{A Study on Common Vulnerabilities}
 \label{chap:datasource}
 
-In this chapter, we answer the following question: \emph{What are the security gains from using diverse \glspl{os} on a replicated intrusion-tolerant system?}
-To answer this question, we have analyzed to what extent different \glspl{os} share common vulnerabilities.
-We made this analysis using a well-established database and devise three strategies to build diverse sets of \glspl{os}.
+In this chapter, present some strategies to select different \glspl{os} to be part of \gls{bft} replicated system.
+These strategies are build from the data that is available on vulnerability database developed in a previous work.
 The promising results confirm the intuition that applying diversity implies vulnerability independence to some extent.
+In this contribution, it should be clear what are the security gains from using different \glspl{os} on a replicated intrusion-tolerant system.
 
 \section{Methodology}
 
@@ -203,7 +203,7 @@ CVE-2008-4609  &  6  & TCP implementation allows a DoS via multiple vectors that
 \end{table}
 
 
-The remaining three vulnerabilities are related to the \gls{tcp}/\gls{ip} protocol stack. 
+The remaining three vulnerabilities are related to the  protocol stack of \gls{tcp}/\gls{ip}. 
 All of them affect system availability, allowing different forms of \gls{dos} attacks. 
 CVE-2008-4609 is the vulnerability that affects more \glspl{os}, according to the \gls{nvd} database. 
 Given that \gls{tcp}/\gls{ip} stack code is often reused across \glspl{os}, we checked the websites of the other \glspl{os} for reports related to this vulnerability. 
@@ -456,7 +456,7 @@ The history period provides two candidate sets:
 \item setUpdt = \{\emph{Solaris, Debian, Ubuntu, Windows2008}\}, with a total cost of 2.
 \end{itemize}
 
-In the observed period, setCon and setUpdt have no common vulnerabilities, showing that the strategy would have chosen sufficiently diverse groups of \glspl{os}. A graphical representation of the sets is displayed in Figures~\ref{fig-venn}(c) and~\ref{fig-venn}(d).
+In the observed period, setCon and setUpdt have no common vulnerabilities, showing that the strategy would have chosen sufficiently diverse groups of \glspl{os}. A graphical representation of the sets is displayed in Figures~\ref{fig-venn_a}(c) and~\ref{fig-venn_a}(d).
 
 \begin{figure}[!ht]
  \centering
@@ -575,7 +575,7 @@ The best groups of four \glspl{os} in the historical period are:
 \item setUpdt = \{\emph{Solaris, Debian, Ubuntu, Windows2008}\}, with a total cost of $1.9$.
 \end{itemize}
 
-By checking the data for the observed period, one can see that both sets do not share a single vulnerability, which indicates that the strategy would have made a good selection of \glspl{os} (see also the Venn diagrams in Figures~\ref{fig-venn}(g) and~\ref{fig-venn}(h)).
+By checking the data for the observed period, one can see that both sets do not share a single vulnerability, which indicates that the strategy would have made a good selection of \glspl{os} (see also the Venn diagrams in Figures~\ref{fig-venn_b}(g) and~\ref{fig-venn_b}(h)).
 
 %TABLE VII
 
