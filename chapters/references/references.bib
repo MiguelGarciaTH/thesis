@@ -1,5 +1,5 @@
 @string{tiss    	= "ACM Transactions on Information and System Security"}
-@string{ATC		= "Proceedings of the Annual Conference on USENIX Annual Technical Conference"}
+@string{ATC		= "Proceedings of {USENIX} Annual Technical Conference"}
 @string{USS 		= "Proceedings of the {USENIX} Security Symposium"}
 @string{DSN 		= "Proceedings of the {IEEE/IFIP} International Conference on Dependable Systems and Networks"}
 @string{CCS 		= "{Proceedings of the ACM SIGSAC Conference on Computer and Communications Security}"}      
@@ -31,20 +31,21 @@
 @string{DATE 		= "Accessed: 2018-4-26"} 
 
 @ARTICLE{Thorndike:1953,
-	author = {R. L. Thorndike},
+	author = {R. Thorndike},
 	title = {{Who belongs in the family}},
 	journal = {Psychometrika},
 	year = {1953},
-	pages = {267--276}
+	pages = {267--276},
+	volume= {18},
+	number={4},
 }
 
-@Article{randell:1975,
+@InProceedings{Randell:1975,
 	author =	 {Brian Randell},
 	title =	 {{System Structure for Software Fault Tolerance}},
-	journal =	 {IEEE Transactions on Software Engineering},
-	year =	 1975,
-	volume =	 {1},
-	number =	 {2},
+	booktitle = {Proceedings of the International Conference on Reliable Software},
+	year = {1975},
+	month=apr,
 }
 
 @article{Knuth:1977,
@@ -53,27 +54,29 @@
 	journal = {SIAM Journal on Computing},
 	volume = {6},
 	number = {2},
-	pages = {323-350},
+	pages = {323--350},
 	year = {1977},
+	month=aug,
 }
 
 @InProceedings{Avizienis:1977,
-	author =	 {Algirdas Avizienis and L. Chen},
-	title =	 {{On the Implementation of {N}-Version Programming for Software Fault Tolerance During Execution}},
-	booktitle =	 {Proceedings of the IEEE Computer Software and Applications},
-	year =	 1977,
+	author =	{Algirdas Avizienis and L. Chen},
+	title =	 	{{On the Implementation of {N}-Version Programming for Software Fault Tolerance During Execution}},
+	booktitle =	{Proceedings of the Annual International Computer Software and Applications Conference},
+	year =	 	1977,
+	month = 	nov,
 }
 
 @InProceedings{Chen:1978,
 	author =	 {L. Chen and Algirdas Avizienis},
-	title =	 {{N-version programming: A fault-tolerance approach to reliability of software operation}},
+	title =	 {{N-version Programming: A Fault-Tolerance Approach to Reliability of Software Operation}},
 	booktitle =	 {Proceedings of the IEEE Symposium on Fault-Tolerant Computing},
-	year =	 1977,
+	year =	 1978,
 }
 
 @article{Lamport:1982,
 	author = {Lamport, Leslie and Shostak, Robert and Pease, Marshall},
-	title = {The Byzantine Generals Problem},
+	title = {{The Byzantine Generals Problem}},
 	journal = {ACM Transactions Programming Languages Systems},
 	volume = {4},
 	number = {3},
@@ -84,7 +87,7 @@
 
 @article{Lamport:1984,
 	author = {Lamport, Leslie},
-	title = {Using Time Instead of Timeout for Fault-Tolerant Distributed Systems},
+	title = {{Using Time Instead of Timeout for Fault-Tolerant Distributed Systems}},
 	journal = {ACM Transactions Programming Languages Systems},
 	volume = {6},
 	number = {2},
@@ -116,10 +119,11 @@
 } 
 
 @article{Knight:1986,
-	author = {Knight, J. C. and Leveson, N. G.},
+	author = {Knight, J. and Leveson, N.},
 	title = {{An Experimental Evaluation of the Assumption of Independence in Multiversion Programming}},
 	journal = {IEEE Transactions on Software Engineering},
 	volume = {12},
+	pages={96--109}, 
 	number = {1},
 	month = jan,
 	year = {1986},
@@ -128,13 +132,12 @@
 
 %%% Intro Motivation
 @inproceedings{Fraga:1985,
-	title={{A fault-and intrusion-tolerant file system}},
+	title={{A Fault-and Intrusion-tolerant File System}},
 	author={Fraga, Joni and Powell, David},
 	booktitle={Proceedings of the International Conference on Computer Security},
-	volume={203},
-	number={218},
-	pages={2--s2},
-	year={1985}
+	year={1985},
+	month=sep,
+
 }
 
 @article{Avizienis:1985,
@@ -165,9 +168,10 @@
 
 @InProceedings{Huang:1993,
 	author={Y. Huang and C. Kintala},
-	title={{Software implemented fault tolerance: Technologies and experience}},
+	title={{Software Implemented Fault Tolerance: Technologies and Experience}},
 	booktitle={Proceedings of the International Symposium on Fault-Tolerant Computing},
 	year={1993},
+	month=jun,
 }
 
 %%% Security Metrics
@@ -182,30 +186,31 @@
 	pages = {3--13},
 } 
 
-@INPROCEEDINGS{Chen:1995, 
-	author={L. Chen and Avizienis, A.}, 
-	booktitle={International Symposium on Fault-Tolerant Computing}, 
-	title={{N-version programming: A fault tolerance approach to reliabiltiy of software operation}},
+@article{Avizienis:1995, 
+	author = {A. Avizienis},
+	title={{The Methodology of N-version Programming}},
+	journal={Software Fault Tolerance}, 
 	year={1995}, 
+	volume={3},
+	pages={23--46},
+	month=jan,
 }
 
 
 @INPROCEEDINGS{Huang:1995, 
-	author={Y. Huang and C. Kintala and N. Kolettis and N. D. Fulton}, 
+	author={Y. Huang and C. Kintala and N. Kolettis and N. Fulton}, 
 	booktitle={Proceedings of the International Symposium on Fault-Tolerant Computing}, 
-	title={{Software rejuvenation: analysis, module and applications}}, 
+	title={{Software Rejuvenation: Analysis, Module and Applications}}, 
 	year={1995}, 
+	month=jun,
 }
 
 @INPROCEEDINGS{Forrest:1997, 
-	author={S. Forrest and A. Somayaji and D. H. Ackley}, 
+	author={S. Forrest and A. Somayaji and D. Ackley}, 
 	booktitle={Proceedings of Workshop on Hot Topics in Operating Systems}, 
-	title={{Building diverse computer systems}}, 
+	title={{Building Diverse Computer Systems}}, 
 	year={1997}, 
-	volume={}, 
-	number={}, 
-	pages={67-72}, 
-	month={May},
+	month=may,
 }
 
 @inproceedings{Deswarte:1998,
@@ -213,6 +218,7 @@
 	title = {{Diversity Against Accidental and Deliberate Faults}},
 	booktitle = {Proceedings of the Conference on Computer Security, Dependability, and Assurance: From Needs to Solutions},
 	year = {1998},
+	month=jul,
 } 
 
 @inproceedings{Castro:1999,
@@ -220,7 +226,7 @@
 	title = {{Practical Byzantine Fault Tolerance}},
 	booktitle = OSDI,
 	year = {1999},
-	pages = {173--186},
+	month=oct,
 } 
 
 @INPROCEEDINGS{Yeh:2001, 
@@ -242,28 +248,29 @@
 	title = {{Security Engineering: A Guide to Building Dependable Distributed Systems}},
 	year = {2001},
 	isbn = {978-0-471-38922-4},
-	edition = {First},
-	pages     = {387–388},
+	edition = {1st},
+	pages     = {387--388},
 	publisher = {John Wiley \& Sons, Inc.},
 }
 
-@inproceedings{Rodrigues:2001,
-	author = {Rodrigues, Rodrigo and Castro, Miguel and Liskov, Barbara},
-	title = {{BASE: Using Abstraction to Improve Fault Tolerance}},
-	booktitle = SOSP,
-	year = {2001},
-	pages = {15--28},
-} 
+%@inproceedings{Rodrigues:2001,
+%	author = {Rodrigues, Rodrigo and Castro, Miguel and Liskov, Barbara},
+%	title = {{BASE: Using Abstraction to Improve Fault Tolerance}},
+%	booktitle = SOSP,
+%	year = {2001},
+%	pages = {15--28},
+%} 
 
 @INPROCEEDINGS{Reynolds:2002, 
 	author={J. Reynolds and J. Just and E. Lawson and L. Clough and R. Maglich and K. Levitt}, 
 	booktitle=DSN,
-	title={The design and implementation of an intrusion tolerant system}, 
+	title={{The Design and Implementation of an Intrusion Tolerant System}}, 
 	year={2002}, 
+	month=jun,
 }
 
 @article{Zhou:2002,
-	author = {Zhou, Lidong and Schneider, Fred B. and Van Renesse, Robbert},
+	author = {Zhou, Lidong and Schneider, Fred and Renesse, Robbert},
 	title = {{COCA: A Secure Distributed Online Certification Authority}},
 	journal = TOCS,
 	volume = {20},
@@ -280,15 +287,16 @@
 	volume = {20},
 	number = {4},
 	year = {2002},
+	month=nov,
 	pages = {398--461},
-	publisher = {ACM},
 }
 
 @INPROCEEDINGS{Wang:2003, 
 	author={Feiyi Wang and R. Upppalli}, 
 	booktitle={{Proceedings of the DARPA Information Survivability Conference and Exposition}}, 
-	title={{SITAR: a scalable intrusion-tolerant architecture for distributed services - a technology summary}}, 
+	title={{SITAR: A Scalable Intrusion-tolerant Architecture for Distributed Services - a technology summary}}, 
 	year={2003}, 
+	month=apr,
 }
 
 @article{Castro:2003,
@@ -304,34 +312,38 @@
 
 
 @INPROCEEDINGS{Moscola:2003,
-	author={Moscola, J. and Lockwood, J. and Loui, R.P. and Pachos, M.},
+	author={Moscola, J. and Lockwood, J. and Loui, R. and Pachos, M.},
 	booktitle={Proceedings of the Annual IEEE Symposium on Field-Programmable Custom Computing Machines},
-	title={Implementation of a content-scanning module for an Internet firewall},
+	title={{Implementation of a Content-scanning Module for an Internet Firewall}},
 	year={2003},
+	month=apr,
 }
 
 @article{Kamara:2003,
 	author    = {Kamara, S. and Fahmy, S. and Schultz, E. and Kerschbaum, F. and Frantzen, M.},
-	title     = {Analysis of vulnerabilities in {Internet} firewalls},
+	title     = {{Analysis of Vulnerabilities in {Internet} Firewalls}},
 	journal   = {Computers {\&} Security},
 	volume    = {22},
 	number    = {3},
 	year      = {2003},
-	pages     = {214-232},
+	pages     = {214--232},
+	month=apr,
 }
 
 @inproceedings{Vigna:2003,
 	author = {Vigna, Giovanni and Robertson, William and Kher, Vishal and Kemmerer, Richard A.},
-	title = {A Stateful Intrusion Detection System for World-Wide Web Servers}},
+	title = {{A Stateful Intrusion Detection System for World-Wide Web Servers}},
 	booktitle = {Proceedings of the Annual Computer Security Applications Conference},
 	year = {2003},
+	month=dec,
 } 
 
 @INPROCEEDINGS{Bhatkar:2003,
-	author = {Eep Bhatkar and Daniel C. Duvarney and R. Sekar},
-	title = {Address obfuscation: an efficient approach to combat a broad range of memory error exploits}},
+	author = {Eep Bhatkar and Daniel Duvarney and R. Sekar},
+	title = {{Address Obfuscation: An Efficient Approach to Combat a Broad Range of Memory Error Exploits}},
 	booktitle = USS,
-	year = {2003},
+	year = {2003},	
+	month=jun,
 }
 
 @InProceedings{Yin:2003,
@@ -339,6 +351,7 @@
 	title = {{Separating Agreement form Execution for {B}yzantine Fault Tolerant Services}},
 	booktitle = SOSP,
 	year = 2003,
+	month=oct,
 }
 
 @Inbook{Verissimo:2003,
@@ -352,24 +365,26 @@
 
 @inproceedings{Yeh:2004,
 	author    = {Y. Yeh},
-	title     = {{Unique dependability issues for commercial airplane fly by wire systems}},
+	title     = {{Unique Dependability Issues for Commercial Airplane Fly by Wire Systems}},
 	booktitle = {{IFIP} World Computer Congress: Building the Information Society},
 	year      = {2004},
 }
 
 @InProceedings{Correia:2004,
 	author = "M. Correia and N. Neves and P. Ver\'{\i}ssimo",
-	title = "How to Tolerate Half Less One {B}yzantine Nodes in Practical Distributed Systems",
+	title = "{How to Tolerate Half Less One {B}yzantine Nodes in Practical Distributed Systems}",
 	booktitle = SRDS,
 	year = "2004",
+	month=oct,
 }
 
 
 @inproceedings{Abd-El-Malek:2005,
-	author = {Abd-El-Malek, Michael and Ganger, Gregory R. and Goodson, Garth R. and Reiter, Michael K. and Wylie, Jay J.},
+	author = {Abd-El-Malek, Michael and Ganger, Gregory and Goodson, Garth and Reiter, Michael and Wylie, Jay},
 	title = {Fault-scalable {Byzantine} fault-tolerant services},
 	booktitle = SOSP,
 	year = {2005},
+	month =oct,
 } 
 
 @inproceedings{Totel:2005,
@@ -380,10 +395,11 @@
 } 
 
 @inproceedings{Junqueira:2005,
-	author = {Junqueira, F. and Bhagwan, R. and Hevia, A. and Marzullo, K. and Voelker, G. M.},
+	author = {Junqueira, F. and Bhagwan, R. and Hevia, A. and Marzullo, K. and Voelker, G.},
 	title = {{Surviving Internet Catastrophes}},
 	booktitle = ATC,
 	year = {2005},
+	month=apr,
 } 
 
 @INPROCEEDINGS{Newsome:2005,
@@ -394,10 +410,11 @@
 }
 
 @INPROCEEDINGS{Sousa:2005, 
-	author={P. Sousa and N. F. Neves and P. Verissimo}, 
+	author={P. Sousa and N. Neves and P. Verissimo}, 
 	booktitle=DSN, 
-	title={{How resilient are distributed f fault/intrusion-tolerant systems?}}, 
+	title={{How Resilient are Distributed f Fault/Intrusion-tolerant Systems?}}, 
 	year={2005}, 
+	month=jun,
 }
 
 @inproceedings{Cox:2006,
@@ -417,25 +434,26 @@
  
 @inproceedings{Frei:2006,
 	author = {Frei, S. and May, M. and Fiedler, U. and Plattner, B.},
-	title = {Large-scale Vulnerability Analysis}},
-	booktitle = {{Proceedings of the SIGCOMM Workshop on Large-scale Attack Defense}[,
+	title = {{Large-scale Vulnerability Analysis}},
+	booktitle = {{Proceedings of the SIGCOMM Workshop on Large-scale Attack Defense}},
 	year = {2006},
+	month=sep,
 } 
 
 
-@incollection{Keromytis:2006,
-	author      = "Angelos D. Keromytis and Vassilis Prevelakis",
+@inbook{Keromytis:2006,
+	author      = "Angelos Keromytis and Vassilis Prevelakis",
 	title       = {{Designing Firewalls: A Survey}},
-	editor      = "Christos Douligeris",
 	booktitle   = {{Network Security: Current Status and Future Directions}},
 	publisher   = {John Wiley \& Sons, Inc.},
 	year        = 2006,
 	pages       = {33--49},
 	chapter     = 3,
+	month = jun,
 }
 
 @TECHREPORT{Obelheiro:2006,
-	author = {R. R. Obelheiro and A. N. Bessani and L. C. Lung and M. Correia},
+	author = {R. Obelheiro and A. Bessani and L. Lung and M. Correia},
 	title = {{How practical are intrusion-tolerant distributed systems?}},
 	institution = {Department of Informatics},
 	number ={TR 06–15},
@@ -456,27 +474,28 @@
 }
 
 @inproceedings{Reiser:2007,
-	author = {Reiser, Hans P and Kapitza, R\"{u}diger},
+	author = {Reiser, Hans and Kapitza, R\"{u}diger},
+	title={{VM-FIT: Supporting Intrusion Tolerance with Virtualisation Technology}},
 	booktitle = {Proceedings of the Workshop on Recent Advances on Intrusiton-tolerant Systems},
 	year = {2007},
+	month=may,
 } 
 
 @INPROCEEDINGS{Arsenault:2007, 
 	author={D. Arsenault and A. Sood and Y. Huang}, 
-	booktitle={Prooceedings in the International Conference on Availability, Reliability and Security}, 
-	title={Secure, Resilient Computing Clusters: Self-Cleansing Intrusion Tolerance with Hardware Enforced Security (SCIT/HES)}, 
+	booktitle={Proceedings of the International Conference on Availability, Reliability and Security}, 
+	title={{Secure, Resilient Computing Clusters: Self-Cleansing Intrusion Tolerance with Hardware Enforced Security (SCIT/HES)}}, 
 	year={2007}, 
-	month={April},
+	month=apr,
 }
 
 @inproceedings{Sousa:2007,
-	author = {Sousa, Paulo and Neves, Nuno Ferreira and Verissimo, Paulo},
-	title = {Hidden Problems of Asynchronous Proactive Recovery},
-	booktitle = {Proceedings of the Workshop on on Hot Topics in System Dependability},
-	year = {2007},
-	
+	author = {Sousa, Paulo and Neves, Nuno and Verissimo, Paulo},
+	title = {{Hidden Problems of Asynchronous Proactive Recovery}},
+	booktitle = {Proceedings of the Workshop on Hot Topics in System Dependability},
+	year = {2007},	
+	month = jun,
 } 
-
 
 @ARTICLE{Gashi:2007, 
 	author={I. Gashi and P. Popov and L. Strigini}, 
@@ -492,15 +511,17 @@
 @INPROCEEDINGS{Brumley:2008, 
 	author={D. Brumley and P. Poosankam and D. Song and J. Zheng}, 
 	booktitle=SP, 
-	title={Automatic Patch-Based Exploit Generation is Possible: Techniques and Implications}, 
+	title={{Automatic Patch-Based Exploit Generation is Possible: Techniques and Implications}}, 
 	year={2008}, 
+	month=may,
 }
 
 @inproceedings{Bessani:2008,
-	author = {Bessani, Alysson and Alchieri, Eduardo Pelison and Correia, Miguel and Fraga, Joni},
-	title = {{DepSpace}: a {B}yzantine fault-tolerant coordination service},
+	author = {Bessani, Alysson and Alchieri, Eduardo and Correia, Miguel and Fraga, Joni},
+	title = {{DepSpace: A Byzantine Fault-tolerant Coordination Service}},
 	booktitle = EUROSYS,
 	year = {2008},
+	month=apr,
 } 
 
 @INPROCEEDINGS{Jumratjaroenvanit:2008, 
@@ -508,32 +529,33 @@
 	booktitle={Proceedings on the International Symposium on Electronic Commerce and Security}, 
 	title={{Probability of Attack Based on System Vulnerability Life Cycle}}, 
 	year={2008},
+	month=aug,
 } 
 
 @inproceedings{Distler:2008,
-	author = {Distler, Tobias and Kapitza, R\"{u}diger and Reiser, Hans P.},
+	author = {Distler, Tobias and Kapitza, R\"{u}diger and Reiser, Hans},
 	title = {{Efficient State Transfer for Hypervisor-based Proactive Recovery}},
 	booktitle = {Proceedings of the Workshop on Recent Advances on Intrusiton-tolerant Systems},
 	year = {2008},
+	month=apr,
 } 
 
 @inproceedings{Klein:2009,
-	author ={G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, P. Derrin, D. Elkaduwe, K. Engelhardt, R. Kolanski, M. Norrish, T. Sewell, H. Tuch, and S. Winwood}
-	title = {{sel4: Formal verification of an os kernel}},
+	author ={G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood},
+	title = {{sel4: Formal Verification of an OS Kernel}},
 	booktitle = SOSP,
 	year = {2009},
+	month=oct,
 }
 
 
-@Inbook{Han:2009,
-	author="Han, Jin and Gao, Debin and Deng, Robert H.",
+@inproceedings{Han:2009,
+	author="Han, Jin and Gao, Debin and Deng, Robert",
 	title={{On the Effectiveness of Software Diversity: A Systematic Study on Real-World Vulnerabilities}},
-	bookTitle="{Proceedings International Conference on Detection of Intrusions and Malware \& Vulnerability Assessment}",
+	bookTitle="{Proceedings of the International Conference on Detection of Intrusions and Malware \& Vulnerability Assessment}",
 	year="2009",
-	publisher="Springer Berlin Heidelberg",
-	address="Berlin, Heidelberg",
-	pages="127--146",
-	doi="10.1007/978-3-642-02918-9_8",
+	month=jul,
+
 }
 
 @inproceedings{Clement:2009,
@@ -541,6 +563,7 @@
 	title = {{Upright Cluster Services}},
 	booktitle = SOSP,
 	year = {2009},
+	month=oct,
 } 
 
 @inproceedings{Clement:2009b,
@@ -548,35 +571,39 @@
 	title = {{Making Byzantine Fault Tolerant Systems Tolerate Byzantine Faults}},
 	booktitle = NSDI,
 	year = {2009},
+	month=apr,
 } 
 
 @inproceedings{Bairavasundaram:2009,
-	author = {Bairavasundaram, Lakshmi N. and Sundararaman, Swaminathan and Arpaci-Dusseau, Andrea C. and Arpaci-Dusseau, Remzi H.},
+	author = {Bairavasundaram, Lakshmi and Sundararaman, Swaminathan and Arpaci-Dusseau, Andrea and Arpaci-Dusseau, Remzi},
 	title = {{Tolerating File-system Mistakes with EnvyFS}},
 	booktitle = ATC,
 	year = {2009},
+	month=jun,
 }
 
 @InProceedings{Frei:2010,
 	author="Frei, Stefan and Schatzmann, Dominik and Plattner, Bernhard and Trammell, Brian",
 	title="{Modeling the Security Ecosystem - The Dynamics of (In)Security}",
-	booktitle="Economics of Information Security and Privacy",
+	booktitle="Procedings of the Workshop on the Economics of Information Security and Privacy",
 	year="2010",
-	pages="79--106",
+	month=jul,		
 }
 
 @inproceedings{Cooper:2010,
-	author = {Cooper, B. F. and Silberstein, A. and Tam, E. and Ramakrishnan, R. and Sears, R.},
+	author = {Cooper, B. and Silberstein, A. and Tam, E. and Ramakrishnan, R. and Sears, R.},
 	title = {{Benchmarking Cloud Serving Systems with YCSB}},
 	booktitle = {Proceedings of the ACM Symposium on Cloud Computing},
 	year = {2010},
+	month=jun,
 }
 
 @inproceedings{Massacci:2010,
-	author = {Massacci, F. and Nguyen, Viet H.},
+	author = {Massacci, F. and Nguyen, Viet},
 	title = {{Which is the Right Source for Vulnerability Studies?: An Empirical Analysis on Mozilla Firefox}},
 	booktitle = {Proceedings of the International Workshop on Security Measurements and Metrics},
 	year = {2010},
+	month=sep,
 } 
 
 @article{Walfish:2010,
@@ -592,9 +619,11 @@
 @book{Miller:2010,
 	title={Security Information and Event Management (SIEM) Implementation},
 	author={D. Miller and Z. Payton and A. Harper and C. Blask and S. VanDyke},
-	sbn={9780071701082},
 	year={2010},
-	publisher={McGraw-Hill Education}
+	ISBN   = {0071701095},
+	publisher={McGraw-Hill Education},
+	month=oct,
+	
 }
 
 @inproceedings{Serafini:2010,
@@ -602,6 +631,7 @@
 	title = {{Scrooge: Reducing the Costs of Fast {B}yzantine Replication in Presence of Unresponsive Replicas}},
 	booktitle = DSN,
 	year = 2010,
+	month=jun,
 }
 
 @article{Kotla:2010,
@@ -612,19 +642,22 @@
 	number = {4},
 	month = jan,
 	year = {2010},
+	pages = {1--39},
 } 
 
 @INPROCEEDINGS{Surisetty:2010,
 	author={Surisetty, S. and Kumar, S.},
-	booktitle={Proceedings. of the International Conference on Digital Society},
+	booktitle={Proceedings of the International Conference on Digital Society},
 	title={{Is McAfee SecurityCenter/Firewall Software Providing Complete Security for Your Computer?}},
 	year={2010},
+	month=feb,
 }
 @inproceedings{Bozorgi:2010,
 	author = {Bozorgi, M. and Saul, L. and Savage, S. and Voelker, G.},
 	title = {{Beyond Heuristics: Learning to Classify Vulnerabilities and Predict Exploits}},
 	booktitle = {Proceedings of the ACM International Conference on Knowledge Discovery and Data Mining},
 	year = {2010},
+	month=jan,
 } 
 
 @INPROCEEDINGS{Sommer:2010, 
@@ -639,14 +672,14 @@
 }
 
 @ARTICLE{Sousa:2010, 
-	author={P. Sousa and A. N. Bessani and M. Correia and N. F. Neves and P. Verissimo}, 
+	author={P. Sousa and A. Bessani and M. Correia and N. Neves and P. Verissimo}, 
 	journal=TPDS,
 	title={{Highly Available Intrusion-Tolerant Services with Proactive-Reactive Recovery}}, 
 	year={2010}, 
 	volume={21}, 
 	number={4}, 
-	pages={452-465}, 
-	month={April},
+	pages={452--465}, 
+	month=apr,
 }
 
 @misc{stuxnet:2010,
@@ -659,10 +692,11 @@
 }
 
 @inproceedings{Hunt:2010,
-	author = {Hunt, Patrick and Konar, Mahadev and Junqueira, Flavio P. and Reed, Benjamin},
+	author = {Hunt, Patrick and Konar, Mahadev and Junqueira, Flavio and Reed, Benjamin},
 	title = {{ZooKeeper: Wait-free Coordination for Internet-scale Systems}},
 	booktitle = ATC,
 	year = {2010},
+	month=jun,
 } 
 
 % Vulnerabilities are difficult to predict prevent
@@ -674,17 +708,18 @@
 }
 
 @article{Jain:2010,
-	title = {{Data clustering: 50 years beyond K-means}},
+	title = {{Data Clustering: 50 Years Beyond K-means}},
 	journal = "Pattern Recognition Letters",
 	volume = "31",
 	number = "8",
-	pages = "651 - 666",
+	pages = {651--666},
 	year = "2010",
-	author = "A. K. Jain",
+	author = "A. Jain",
+	month=jun,
 }
 
 @article{Roeder:2010,
-	author = {Roeder, Tom and Schneider, Fred B.},
+	author = {Roeder, Tom and Schneider, Fred},
 	title = {{Proactive Obfuscation}},
 	journal = TOCS,
 	volume = {28},
@@ -697,37 +732,40 @@
 
 @article{Moniz:2011,
 	author={Moniz, H. and Neves, N. and Correia, M. and Verissimo, P.}, 
-	title = {{RITAS}: Services for Randomized Intrusion Tolerance},
+	title = {{RITAS: Services for Randomized Intrusion Tolerance}},
 	journal =TDSC,
 	volume    = {8},
 	number    = {1},
 	pages     = {122-136},
 	year = {2011},
+	month=dec,
 }
 
 @inproceedings{Mishra:2011,
 	author={Mishra, A. and Gupta, B. and Joshi, R.},
-	booktitle={Proceedings. of the Intelligence and Security Informatics Conference},
-	title={A Comparative Study of Distributed Denial of Service Attacks, Intrusion Tolerance and Mitigation Techniques},
+	booktitle={Proceedings of the Intelligence and Security Informatics Conference},
+	title={{A Comparative Study of Distributed Denial of Service Attacks, Intrusion Tolerance and Mitigation Techniques}},
 	year= {2011},
+	month=sep,
 }
 
 @ARTICLE{Amir:2011,
 	author={Amir, Y. and Coan, B. and Kirsch, J. and Lane, J.},
 	journal=TDSC,
-	title={{Prime: {Byzantine} Replication under Attack}},
+	title={{Prime: {Byzantine} Replication Under Attack}},
 	volume={8},
 	number={4},
 	year      = {2011},
+	month = dec,
 	pages={564-577},
-	ISSN={1545-5971},
 }
 
 @inproceedings{Distler:2011,
 	author = {T. Distler and R. Kapitza and I. Popov and H. Reiser and W. Schr\"{o}der-Preikschat},
 	title = {{SPARE: Replicas on Hold}},
 	booktitle = {Proceedings of the Network and Distributed System Security Symposium},
-	year = {2011}
+	year = {2011},
+	month=feb,	
 }
 
 
@@ -736,67 +774,70 @@
 	title = {{Windows Azure Storage: A Highly Available Cloud Storage Service with Strong Consistency}},
 	booktitle = SOSP,
 	year = {2011},
+	month=oct,
 } 
 
 @inproceedings{Gorbenko:2011,
 	author = {Gorbenko, A. and Kharchenko, V. and Tarasyuk, O. and Romanovsky, A.},
-	title = {{Using diversity in cloud-based deployment environment to avoid intrusions}},
+	title = {{Using Diversity in Coud-based Deployment Environment to Avoid Intrusions}},
 	booktitle = {Proceedings of the International Conference on Software Engineering for Resilient Systems}, 
 	year = {2011},
+	month=oct,
 } 
 
 
 @INPROCEEDINGS{Bessani:2011, 
 	author={A. Bessani}, 
 	booktitle=DSN, 
-	title={{From Byzantine fault tolerance to intrusion tolerance (a position paper)}}, 
+	title={{From Byzantine Fault Tolerance to Intrusion Tolerance (a position paper)}}, 
 	year={2011}, 
-	volume={}, 
-	number={}, 
-	pages={15-18}, 
-	month={June},
+	month=jun,
 }
 
 @inproceedings{Kapitza:2012,
-	author = {R\"{u}diger Kapitza and Johannes Behl and Christian Cachin and Tobias Distler and Simon Kuhnle and Seyed Vahid Mohammadi and Wolfgang Schr\"{o}der-Preikschat and Klaus Stengel},
-	title = {{CheapBFT}: Resource-efficient {Byzantine} Fault Tolerance},
+	author = {R\"{u}diger Kapitza and Johannes Behl and Christian Cachin and Tobias Distler and Simon Kuhnle and Seyed Mohammadi and Wolfgang Schr\"{o}der-Preikschat and Klaus Stengel},
+	title = {{CheapBFT: Resource-efficient Byzantine Fault Tolerance}},
 	booktitle = EUROSYS,
 	year = {2012},
+	month=apr,
 }
 
-@book{Nist:2012,
+@misc{Nist:2012,
 	author        = "{National Institute of Standards and Technology}",
 	title         = "{{Guide for Conducting Risk Assessments}}",
-	howpublished	= "http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf",
+	howpublished	= {\url{http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf}},
 	year = 2012,
+	month=sep,
 }
 
 @inproceedings{Wood:2011,
 	author = {Wood, Timothy and Singh, Rahul and Venkataramani, Arun and Shenoy, Prashant and Cecchet, Emmanuel},
-	title = {ZZ and the Art of Practical BFT Execution},
+	title = {{ZZ and the Art of Practical BFT Execution}},
 	booktitle =EUROSYS,
 	year = {2011},
+	month=apr,
 } 
 
 @ARTICLE{Poolsappasit:2012, 
 	author={N. Poolsappasit and R. Dewri and I. Ray}, 
 	journal=TDSC, 
-	title={Dynamic Security Risk Management Using Bayesian Attack Graphs}, 
+	title={{Dynamic Security Risk Management Using Bayesian Attack Graphs}}, 
 	year={2012}, 
 	volume={9}, 
 	number={1}, 
-	pages={61-74}, 
-	month={Jan},
+	pages={61--74}, 
+	month=jan,
 }
 
 @article{Zhao:2012,
 	author = {Feng Zhao and Min Li and Weizhong Qiang and Hai Jin and Deqing Zou and Qin Zhang},
-	title = {{Proactive recovery approach for intrusion tolerance with dynamic configuration of physical and virtual replicas}},
+	title = {{Proactive Recovery Approach for Intrusion Tolerance with Dynamic Configuration of Physical and Virtual Replicas}},
 	journal = {Security and Communication Networks},
 	volume = {5},
 	number = {10},
-	pages = {1169-1180},
+	pages = {1169--1180},
 	year= 2012,
+	month=mar,
 }
 
 
@@ -805,7 +846,7 @@
 	journal = {International Journal of Critical Infrastructure Protection},
 	number = {1},
 	pages = {30-39},
-	title = {Creating a cyber moving target for critical infrastructure applications using platform diversity},
+	title = {{Creating a Cyber Moving Target for Critical Infrastructure Applications Using Platform Diversity}},
 	volume = {5},
 	month=mar,
 	year = {2012},
@@ -814,35 +855,33 @@
 @INPROCEEDINGS{Garcia:2012, 
 	author={M. Garcia and A. Bessani and I. Gashi and N. Neves and R. Obelheiro}, 
 	booktitle=DSN, 
-	title={{OS diversity for intrusion tolerance: Myth or reality?}}, 
+	title={{OS Diversity for Intrusion Tolerance: Myth or Reality?}}, 
 	year={2011}, 
-	volume={}, 
-	number={}, 
-	pages={383-394}, 
-	month={June},
+	month=jun,
 }
 
 @INPROCEEDINGS{Garcia:2012b,
-	title={DIVERSYS: DIVErse Rejuvenation SYStem},
+	title={{DIVERSYS: DIVErse Rejuvenation SYStem}},
 	author={Garcia, Miguel and Neves, Nuno and Bessani, Alysson},
 	booktitle={{Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)},	
 	year={2012}
+	month=sep,
 }
 
 @INPROCEEDINGS{Shahzad:2012, 
-	author={M. Shahzad and M. Z. Shafiq and A. X. Liu}, 
+	author={M. Shahzad and M. Shafiq and A. Liu}, 
 	booktitle={Proceedings of the International Conference on Software Engineering}, 
-	title={A large scale exploratory analysis of software vulnerability life cycles}, 
+	title={{A Large Scale Exploratory Analysis of Software Vulnerability Life Cycles}}, 
 	year={2012}, 
+	month=jun,
 }
 
 @inproceedings{Bilge:2012,
-	 author = {Bilge, Leyla and Dumitras, Tudor},
-	 title = {{Before We Knew It: An Empirical Study of Zero-day Attacks in the Real World}},
-	 booktitle = CCS,
-	 year = {2012},
-	 pages = {833--844},
-	 publisher = {ACM},
+	author = {Bilge, Leyla and Dumitras, Tudor},
+	title = {{Before We Knew It: An Empirical Study of Zero-day Attacks in the Real World}},
+	booktitle = CCS,
+	year = {2012},
+	month=oct,
 } 
 
 @Article{Schaefer:2012,
@@ -857,10 +896,11 @@
 }
 
 @INPROCEEDINGS{Dettoni:2013, 
-	author={F. Dettoni and L. C. Lung and M. Correia and A. F. Luiz}, 
-	booktitle={2013 IEEE Symposium on Computers and Communications}, 
-	title={Byzantine fault-tolerant state machine replication with twin virtual machines}, 
+	author={F. Dettoni and L. Lung and M. Correia and A. Luiz}, 
+	booktitle={Proceedings of the IEEE Symposium on Computers and Communications}, 
+	title={{Byzantine Fault-tolerant Sate Mmachine Replication with Twin Virtual Machines}}, 
 	year={2013}, 
+	month=mar,
 }
 
 @INPROCEEDINGS{Joshi:2013, 
@@ -885,15 +925,17 @@
 @INPROCEEDINGS{Melo:2013, 
 	author={M. Melo and P. Maciel and J. Araujo and R. Matos and C. Araújo}, 
 	booktitle=DSN, 
-	title={Availability study on cloud computing environments: Live migration as a rejuvenation mechanism}, 
+	title={{Availability Study on Cloud Computing Environments: Live Migration as a Rejuvenation Mechanism}}, 
 	year={2013}, 
+	month=jun,
 }
 
 @inproceedings{Martins:2013,
 	author="Martins, Rolando and Gandhi, Rajeev and Narasimhan, Priya and Pertet, Soila and Casimiro, Ant{\'o}nio and Kreutz, Diego and Ver{\'i}ssimo, Paulo", 
-	title="Experiences with Fault-Injection in a Byzantine Fault-Tolerant Protocol",
+	title={{Experiences with Fault-Injection in a Byzantine Fault-Tolerant Protocol}},
 	booktitle = {{Proceedings of the ACM/IFIP/USENIX International Conference on Middleware}},
 	year="2013",
+	month=dec,
 }
 
 @ARTICLE{Zargar:2013,
@@ -910,64 +952,63 @@
 	title = {{A Scalable {SIEM} Correlation Engine and Its Application to the Olympic Games IT Infrastructure}},
 	journal ={Proceedings of the International Conference on Availability, Reliability and Security},
 	year = {2013},
+	month=sep,
 }
 
 @inproceedings{Bessani:2013,
-	author = {Alysson Bessani and Marcel Santos and Jo\~{a}o F\'elix and Nuno Neves and Miguel Correia},
-	title = {On the Efficiency of Durable State Machine Replication},
+	author = {Alysson Bessani and Marcel Santos and J. F\'elix and Nuno Neves and Miguel Correia},
+	title = {{On the Efficiency of Durable State Machine Replication}},
 	booktitle = {Proceedings of the USENIX Annual Technical Conference},
 	month = jun,
 	year = 2013,
 }
 
 @INPROCEEDINGS{Snow:2013, 
-	author={K. Z. Snow and F. Monrose and L. Davi and A. Dmitrienko and C. Liebchen and A. R. Sadeghi}, 
+	author={K. Snow and F. Monrose and L. Davi and A. Dmitrienko and C. Liebchen and A. Sadeghi}, 
 	booktitle=SP,
 	title={{Just-In-Time Code Reuse: On the Effectiveness of Fine-Grained Address Space Layout Randomization}}, 
 	year={2013}, 
+	month=may,
 }
 
 @article{Corbett:2013,
-	author = {James C. Corbett and Jeffrey Dean and Michael Epstein and Andrew Fikes and Christopher Frost and JJ Furman and Sanjay Ghemawat and Andrey Gubarev and Christopher Heiser and Peter Hochschild and Wilson Hsieh and Sebastian Kanthak and Eugene Kogan and Hongyi Li and Alexander Lloyd and Sergey Melnik and David Mwaura and David Nagle and Sean Quinlan and Rajesh Rao and Lindsay Rolig and Yasushi Saito and Michal Szymaniak and Christopher Taylor and Ruth Wang and Dale Woodford},
+	author = {James Corbett and Jeffrey Dean and Michael Epstein and Andrew Fikes and Christopher Frost and JJ Furman and Sanjay Ghemawat and Andrey Gubarev and Christopher Heiser and Peter Hochschild and Wilson Hsieh and Sebastian Kanthak and Eugene Kogan and Hongyi Li and Alexander Lloyd and Sergey Melnik and David Mwaura and David Nagle and Sean Quinlan and Rajesh Rao and Lindsay Rolig and Yasushi Saito and Michal Szymaniak and Christopher Taylor and Ruth Wang and Dale Woodford},
 	title = {{Spanner: Google's Globally Distributed Database}},
 	journal = TOCS,
 	volume = {31},
 	number = {3},
 	year = {2013},
+	pages = {261--264},
+	month=aug,
 } 
 % pages = {8:1--8:22},
 % author = {Corbett, J. and Dean, J. and Epstein, M. and Fikes, A. and Frost, C. and Furman, J. and Ghemawat, S. and Gubarev, A. and Heiser, C. and Hochschild, P. and Hsieh, W. and Kanthak, S. and Kogan, E. and Li, H. and Lloyd, A. and Melnik, S. and Mwaura, D. and Nagle, D. and Quinlan, S. and Rao, R. and Rolig, L. and Saito, Y. and Szymaniak, M. and Taylor, C. and Wang, R. and Woodford, D.},
 
 @INPROCEEDINGS{Garcia:2013, 
 	author={M. Garcia and N. Neves and A. Bessani}, 
-	booktitle=DSN # " (Workshop)", 
-	title={{An intrusion-tolerant firewall design for protecting SIEM systems}}, 
+	booktitle={Proceedings of the Workshop on Systems Resilience}, 
+	title={{An Intrusion-Tolerant Firewall Design for Protecting SIEM Systems}}, 
 	year={2013}, 
-	volume={}, 
-	number={}, 
-	pages={1-7}, 
-	month={June},
+	month=jun,
 }
 
 @INPROCEEDINGS{Giuffrida:2013, 
-	author={C. Giuffrida and L. Cavallaro and A. S. Tanenbaum}, 
+	author={C. Giuffrida and L. Cavallaro and A. Tanenbaum}, 
 	booktitle=DSN, 
-	title={{Practical automated vulnerability monitoring using program state invariants}}, 
+	title={{Practical Automated Vulnerability Monitoring Using Program State Invariants}}, 
 	year={2013}, 
-	volume={}, 
-	number={}, 
-	pages={1-12}, 
-	month={June},
+	month=jun,
 }
 
 @ARTICLE{Veronese:2013,
-	author={Veronese, G.S. and Correia, M. and Bessani, A.N. and Lau Cheuk Lung and Verissimo, P.},
+	author={Veronese, G. and Correia, M. and Bessani, A. and Lau Lung and Verissimo, P.},
 	journal={IEEE Transactions on Computers},
 	title={{Efficient {B}yzantine Fault-Tolerance}},
 	year={2013},
 	volume={62},
 	number={1},
-	pages={16-30}
+	pages={16--30},
+	month=nov,
 }
 
 @inproceedings{Kreutz:2013,
@@ -980,96 +1021,99 @@
 @INPROCEEDINGS{Homescu:2013, 
 	author={A. Homescu and S. Neisius and P. Larsen and S. Brunthaler and M. Franz}, 
 	booktitle={Proceedings of the IEEE/ACM International Symposium on Code Generation and Optimization}, 
-	title={{Profile-guided automated software diversity}}, 
+	title={{Profile-guided Automated Software Diversity}}, 
 	year={2013}, 
+	month=feb,
 }
 
 @InProceedings{Nayak:2014,
  	author="Nayak, Kartik and Marino, Daniel and Efstathopoulos, Petros and Dumitra{\c{s}}, Tudor",
-	title="Some Vulnerabilities Are Different Than Others",
+	title={{Some Vulnerabilities Are Different Than Others}},
 	booktitle="Research in Attacks, Intrusions and Defenses",
 	year="2014",
-	pages="426--446",
+	month=sep,
 }
 
 @article{Yuan:2014,
 	author = {Yuan, Eric and Esfahani, Naeem and Malek, Sam},
-	title = {A Systematic Survey of Self-Protecting Software Systems},
+	title = {{A Systematic Survey of Self-Protecting Software Systems}},
 	journal = {ACM Transactions on Autonous Adaptative Systems},
 	volume = {8},
 	number = {4},
 	month = jan,
 	year = {2014},
-	pages = {17:1--17:41},
+	pages = {1--41},
 } 
 
 @inproceedings{Zhai:2014,
-	author = {Zhai, Ennan and Chen, Ruichuan and Wolinsky, David Isaac and Ford, Bryan},
-	title = {Heading off Correlated Failures Through Independence-as-a-service},
+	author = {Zhai, Ennan and Chen, Ruichuan and Wolinsky, David and Ford, Bryan},
+	title = {{Heading off Correlated Failures Through Independence-as-a-service}},
 	booktitle = OSDI,
 	year = {2014},
+	month=oct,
 } 
 
 @ARTICLE{Kirsch:2014,
 	author={Kirsch, J. and Goose, S. and Amir, Y. and Dong Wei and Skare, P.},
 	journal={IEEE Transactions on Smart Grid},
-	title={Survivable SCADA Via Intrusion-Tolerant Replication},
+	title={{Survivable SCADA Via Intrusion-Tolerant Replication}},
 	year={2014},
 	volume={5},
 	number={1},
-	pages={60-70},
-	month={Jan},
+	pages={60--70},
+	month=jan,
 }
 
 @ARTICLE{Holm:2014, 
 	author={H. Holm}, 
-	journal=TDSC
-	title={A Large-Scale Study of the Time Required to Compromise a Computer System}, 
+	journal=TDSC,
+	title={{A Large-Scale Study of the Time Required to Compromise a Computer System}}, 
 	year={2014}, 
 	volume={11}, 
 	number={1}, 
-	pages={2-15}, 
-	month={Jan},
+	pages={2--15}, 
+	month=jan,
 }
 
 @INPROCEEDINGS{Lee:2014, 
 	author={H. Lee and J. Seibert and E. Hoque and C. Killian and C. Nita-Rotaru}, 
 	booktitle={Proceedings of the IEEE International Conference on Distributed Computing Systems}, 
-	title={Turret: A Platform for Automated Attack Finding in Unmodified Distributed System Implementations}, 
+	title={{Turret: A Platform for Automated Attack Finding in Unmodified Distributed System Implementations}}, 
 	year={2014}, 
+	month=jul,
 }
 
 @inproceedings{Jia:2014,
 	author = {Q. Jia and H. Wang and D. Fleck and F. Li and A. Stavrou and W. Powell},
 	title = {{Catch Me If You Can: A Cloud-Enabled DDoS Defense}},
 	booktitle =DSN,
-	year = {2014}
+	year = {2014},
+	month=jun,
 }
 
 @article{Prabha:2014,
 	author = {K. Prabha and S. Sukumaran},
-	title = {Improved Single Keyword Pattern Matching Algorithm for Intrusion Detection System},
+	title = {{Improved Single Keyword Pattern Matching Algorithm for Intrusion Detection System}},
 	journal = {International Journal of Computer Applications},
 	year = {2014},
 	volume = {90},
 	number = {9},
-	pages = {26-30},
-	month = {March}
+	pages = {26--30},
+	month = mar,
 }
 
 @inproceedings{Kreutz:2014,
 	author={Kreutz, D. and Bessani, A. and Feitosa, E. and Cunha, H.},
 	booktitle=PRDC,
-	title={Towards Secure and Dependable Authentication and Authorization Infrastructures},
+	title={{Towards Secure and Dependable Authentication and Authorization Infrastructures}},
 	year={2014},
-	month={Nov},
-	pages={43-52},
+	month=nov,
 }
 
 @ARTICLE{Okhravi:2014, 
 	author={Okhravi, H. and Hobson, T. and Bigelow, D. and Streilein, W.}, 
 	journal=TSP, 
-	title={Finding Focus in the Blur of Moving-Target Techniques}, 
+	title={{Finding Focus in the Blur of Moving-Target Techniques}}, 
 	year={2014}, 
 	month={Mar}, 
 	volume={12}, 
@@ -1106,6 +1150,7 @@
 	title = {{Hacking Blind}},
 	booktitle = SP,
 	year = {2014},
+	month=may,
 }
 
 @inproceedings{Bessani:2014,
@@ -1113,6 +1158,7 @@
 	title = {{State Machine Replication for the Masses with BFT-SMaRt}},
 	booktitle = DSN,
 	year = {2014},
+	month=jun,
 } 
 
 @article {Garcia:2014,
@@ -1130,19 +1176,16 @@
 	booktitle=SRDS, 
 	title={{Towards a Practical Survivable Intrusion Tolerant Replication System}}, 
 	year={2014}, 
-	volume={}, 
-	number={}, 
-	pages={242-252}, 
-	month={Oct},
+	month=oct,
 }
 
 @inproceedings{Zhuang:2014,
-	author = {Zhuang, Rui and DeLoach, Scott A. and Ou, Xinming},
-	title = {Towards a Theory of Moving Target Defense},
+	author = {Zhuang, Rui and DeLoach, Scott. and Ou, Xinming},
+	title = {{Towards a Theory of Moving Target Defense}},
 	booktitle = {Proceedings of the ACM Workshop on Moving Target Defense},
 	year = {2014},
+	month=nov,
 } 
-
 
 @inproceedings{Guo:2014,
 	author = {Guo, M. and Bhattacharya, P.},
@@ -1154,9 +1197,10 @@
 
 @inproceedings{Larsen:2014,
 	author = {Larsen, Per and Homescu, Andrei and Brunthaler, Stefan and Franz, Michael},
-	title = {SoK: Automated Software Diversity},
+	title = {{SoK: Automated Software Diversity}},
 	booktitle = SP,
 	year = {2014},
+	month=may,
 }
 
 @ARTICLE{Wang:2014, 
@@ -1172,9 +1216,10 @@
 
 @inproceedings{Hosek:2015,
 	author = {Hosek, Petr and Cadar, Cristian},
-	title = {VARAN the Unbelievable: An Efficient N-version Execution Framework},
+	title = {{VARAN the Unbelievable: An Efficient N-version Execution Framework}},
 	booktitle = {Proceedings of the International Conference on Architectural Support for Programming Languages and Operating Systems},
 	year = {2015},
+	month=mar,
 } 
 
 @INPROCEEDINGS{Nappa:2015, 
@@ -1182,31 +1227,34 @@
 	booktitle=SP, 
 	title={{The Attack of the Clones: A Study of the Impact of Shared Code on Vulnerability Patching}}, 
 	year={2015}, 
+	month=may,
 }
 
 @INPROCEEDINGS{Yamaguchi:2015, 
 	author={F. Yamaguchi and A. Maier and H. Gascon and K. Rieck}, 
 	booktitle=SP, 
-	title={Automatic Inference of Search Patterns for Taint-Style Vulnerabilities}, 
+	title={{Automatic Inference of Search Patterns for Taint-Style Vulnerabilities}}, 
 	year={2015}, 	
+	month=may,
 }
 
 @inproceedings{Hawblitzel:2015,
-	author = {Hawblitzel, Chris and Howell, Jon and Kapritsos, Manos and Lorch, Jay and Parno, Bryan and Roberts, Michael Lowell and Setty, Srinath and Zill, Brian},
+	author = {Hawblitzel, Chris and Howell, Jon and Kapritsos, Manos and Lorch, Jay and Parno, Bryan and Roberts, Michael and Setty, Srinath and Zill, Brian},
 	title = {{IronFleet: Proving Practical Distributed Systems Correct}},
 	booktitle = SOSP,
 	year = {2015},
+	month=oct,
 }
 
 @article{Lee:2015,
-	author = {Lee, Chun-Liang AND Lin, Yi-Shan AND Chen, Yaw-Chung},
+	author = {Lee, Chun AND Lin, Yi AND Chen, Yaw},
 	journal = {{PLoS ONE}},
 	publisher = {Public Library of Science},
 	title = {{A Hybrid CPU/GPU Pattern-Matching Algorithm for Deep Packet Inspection}},
 	year = {2015},
-	month = {10},
 	volume = {10},
 	number = {10},
+	month=oct,
 }
 
 @article{Aublin:2015,
@@ -1220,17 +1268,19 @@
 }
 
 @inproceedings{Liu:2015,
-	title={{Cloudy with a chance of breach: Forecasting cyber security incidents}},
+	title={{Cloudy with a Chance of Breach: Forecasting Cyber Security Incidents}},
 	author={Liu, Y. and Sarabi, Armin and Zhang, Jing and Naghizadeh, P. and Karir, M. and Bailey, M. and Liu, M.},
 	booktitle=USS,
-	year={2015}
+	year={2015},
+	month=aug,
 }
 
 @inproceedings{Behl:2015,
 	author = {Behl, J. and Distler, T. and Kapitza, R.},
 	title = {{Consensus-Oriented Parallelization: How to Earn Your First Million}},
-	booktitle = {Proceedings of the Middleware Conference},
+	booktitle = {{Proceedings of the ACM/IFIP/USENIX International Conference on Middleware}},
 	year = {2015},
+	month= dec,
 } 
 
 @INPROCEEDINGS{Bopche:2015, 
@@ -1295,15 +1345,13 @@
 	pages = {16:1--16:26},
 } 
 
-@techreport{David:2015,
-	title = {{Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice}},
-	author = {Adrian, David and Bhargavan, Karthikeyan and Durumeric, Zakir and Gaudry, Pierrick and Green, Matthew and Halderman, J. and Heninger, Nadia and Springall, Drew and Thom\'e, Emmanuel and Valenta, Luke and VanderSloot, Benjamin and Wustrow, Eric and Zanella-B\'eguelin, Santiago and Zimmermann, Paul},
-	group = {weakdh},
+@inproceedings{David:2015,
+	author = {Adrian, David and Bhargavan, Karthikeyan and Durumeric, Zakir and Gaudry, Pierrick and Green, Matthew and Halderman, J. and Heninger, Nadia and Springall, Drew and Thom{\'e}, Emmanuel and Valenta, Luke and VanderSloot, Benjamin and Wustrow, Eric and Zanella-B{\'e}guelin, Santiago and Zimmermann, Paul},
+	title =  {{Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice}},
+	booktitle = CCS,
 	year = {2015},
-	institution = {Weakdh},
-	month = {05},
-	url = {https://weakdh.org/imperfect-forward-secrecy.pdf}
-}
+	month = oct,
+} 
 
 @ARTICLE{Hong:2015, 
 	author={J. Hong and D.Kim}, 
@@ -1313,14 +1361,24 @@
 	volume={13}, 
 	number={2}, 
 	month=mar,
+	pages={163--177},
 }
 
 @inproceedings{Hu:2015,
-	author = {Hong Hu and Zheng Leong Chua and Sendroiu Adrian and Prateek Saxena and Zhenkai Liang},
-	title = {Automatic Generation of Data-Oriented Exploits},
+	author = {Hong Hu and Zheng Chua and Sendroiu Adrian and Prateek Saxena and Zhenkai Liang},
+	title = {{Automatic Generation of Data-Oriented Exploits}},
 	booktitle = USS,
 	year = {2015},
+	month=aug,
 }
+
+@inproceedings{Chen:2015,
+	author = {Chen, Haogang and Ziegler, Daniel and Chajed, Tej and Chlipala, Adam and Kaashoek, M. and Zeldovich, Nickolai},
+	title = {{Using Crash Hoare Logic for Certifying the FSCQ File System}},
+	booktitle = SOSP,
+	year = {2015},	
+	month=oct,
+} 
 
 @ARTICLE{George:2015, 
 	author={C. George and S. Vadhiyar}, 
@@ -1335,33 +1393,37 @@
 @INPROCEEDINGS{Huang:2016, 
 	author={Z. Huang and M. DAngelo and D. Miyani and D. Lie}, 
 	booktitle=SP, 
-	title={Talos: Neutralizing Vulnerabilities with Security Workarounds for Rapid Response}, 
+	title={{Talos: Neutralizing Vulnerabilities with Security Workarounds for Rapid Response}}, 
 	year={2016}, 
+	month=aug,
 }
 
 @inproceedings{Jang:2016,
 	author = {Jang, Yeongjin and Lee, Sangho and Kim, Taesoo},
-	title = {Breaking Kernel Address Space Layout Randomization with Intel TSX},
+	title = {{Breaking Kernel Address Space Layout Randomization with Intel TSX}},
 	booktitle = CCS,
 	year = {2016},
+	month=oct,
 } 
 
 @ARTICLE{Zhang:2016, 
 	author={M. Zhang and L. Wang and S. Jajodia and A. Singhal and M. Albanese}, 
 	journal={IEEE Transactions on Information Forensics and Security}, 
-	title={Network Diversity: A Security Metric for Evaluating the Resilience of Networks Against Zero-Day Attacks}, 
+	title={{Network Diversity: A Security Metric for Evaluating the Resilience of Networks Against Zero-Day Attacks}}, 
 	year={2016}, 
 	volume={11}, 
 	number={5}, 
-	pages={1071-1086}, 
+	pages={1071--1086}, 
+	month=jan,
 }
 
 
 @inproceedings{King:2016,
-	author = {Williams-King, David and Gobieski, Graham and Williams-King, Kent and Blake, James P. and Yuan, Xinhao and Colp, Patrick and Zheng, Michelle and Kemerlis, Vasileios P. and Yang, 		Junfeng and Aiello, William},
+	author = {Williams-King, David and Gobieski, Graham and Williams-King, Kent and Blake, James and Yuan, Xinhao and Colp, Patrick and Zheng, Michelle and Kemerlis, Vasileios and Yang, 		Junfeng and Aiello, William},
 	title = {{Shuffler: Fast and Deployable Continuous Code Re-randomization}},
 	booktitle = OSDI,
 	year=2016,
+	mont=nov,
 } 
 
 @inproceedings{Co:2016,
@@ -1375,17 +1437,19 @@
 } 
 
 @inproceedings{Liao:2016,
-	title={{Acing the {IoC} game: Toward automatic discovery and analysis of open-source cyber threat intelligence}},
+	title={{Acing the IOC Game: Toward Automatic Discovery and Analysis of Open-source Cyber Threat Intelligence}},
 	author={Liao, X. and Yuan, K. and Wang, X. and Li, Z. and Xing, L. and Beyah, R.},
 	booktitle=CCS,
 	year={2016},
+	month=oct,
 }
 
 @inproceedings{Alagappan:2016,
-	author = {Ramnatthan Alagappan and Aishwarya Ganesan and Yuvraj Patel and Thanumalayan Sankaranarayana Pillai and Andrea C. Arpaci-Dusseau and Remzi H. Arpaci-Dusseau},
-	title = {Correlated Crash Vulnerabilities},
+	author = {Ramnatthan Alagappan and Aishwarya Ganesan and Yuvraj Patel and Thanumalayan Pillai and Andrea Arpaci-Dusseau and Remzi Arpaci-Dusseau},
+	title = {{Correlated Crash Vulnerabilities}},
 	booktitle = OSDI,
 	year = {2016},
+	month =nov,
 }
 
 @ARTICLE{Garcia:2016, 
@@ -1396,29 +1460,23 @@
 	volume={15}, 
 	number={3}, 
 	pages={511-525}, 
-	month={},
+	month=may,
 }
 
 @INPROCEEDINGS{Garcia:2016b, 
-	author={M. Garcia and A. Bessani amd N. Neves}, 
-	booktitle= EUROSYS # "Poster session", 
-	title={{Towards an Execution Environment for Intrusion-Tolerant systems}}, 
+	author={M. Garcia and A. Bessani and N. Neves}, 
+	booktitle= "Poster session in " # EUROSYS, 
+	title={{Towards an Execution Environment for Intrusion-Tolerant Systems}}, 
 	year={2016}, 
-	volume={}, 
-	number={}, 
-	pages={1-7}, 
-	month={June},
+	month=jun,
 }
 
 @INPROCEEDINGS{Stephens:2016, 
 	author={N. Stephens and J. Grosen and C. Salls and A. Dutcher and R. Wang and J. Corbetta and Y. Shoshitaishvili and C. Kruegel and G. Vigna}, 
-	booktitle={USENIX Network and Distributed System Security Symposium}, 
+	booktitle={{Proceedings of the USENIX Network and Distributed System Security Symposium}}, 
 	title={{Driller: Augmenting Fuzzing Through Selective Symbolic Execution}}, 
 	year={2013}, 
-	volume={}, 
-	number={}, 
-	pages={21–24}, 
-	month={February},
+	month=feb,
 }
 
 @ARTICLE{Knight:2016, 
@@ -1432,57 +1490,112 @@
 	month={Apr},
 }
 
-@inproceedings {Liu:2016,
-	author = {S. Liu and P. Viotti and C. Cachin and V. Quema and M. Vukolic},
-	title = {{XFT: Practical Fault Tolerance beyond Crashes}},
+@inproceedings {Xu:2016,
+	author = {Tianyin Xu and Xinxin Jin and Peng Huang and Yuanyuan Zhou and Shan Lu and Long Jin and Shankar Pasupathy},
+	title = {{Early Detection of Configuration Errors to Reduce Failure Damage}},
 	booktitle = OSDI,
-	year = {2016}
+	year = {2016},
+	month=nov,
 }
 
+@inproceedings {Liu:2016,
+	author = {S. Liu and P. Viotti and C. Cachin and V. Quema and M. Vukolic},
+	title = {{XFT: Practical Fault Tolerance Beyond Crashes}},
+	booktitle = OSDI,
+	year = {2016},
+	month=nov,
+}
+
+@inproceedings{Bilge:2017,
+	author = {Bilge, Leyla and Han, Yufei and Dell'Amico, Matteo},
+	title = {{RiskTeller: Predicting the Risk of Cyber Incidents}},
+	booktitle = CCS,
+	year = {2017},
+	month=oct,
+} 
+
+@inproceedings{vanderVeen:2017,
+	author = {van der Veen, Victor and Andriesse, Dennis and Stamatogiannakis, Manolis and Chen, Xi and Bos, Herbert and Giuffrdia, Cristiano},
+	title = {{The Dynamics of Innocent Flesh on the Bone: Code Reuse Ten Years Later}},
+	booktitle = CCS,
+	year = {2017},
+	month=oct,
+} 
+
+@inproceedings {Xu:2017,
+	author = {Meng Xu and Kangjie Lu and Taesoo Kim and Wenke Lee},
+	title = {{Bunshin: Compositing Security Mechanisms through Diversification}},
+	booktitle = ATC,
+	year = {2017},
+	month=jul,
+}
+
+@inproceedings{Allodi:2017,
+	author = {Allodi, Luca},
+	title = {{Economic Factors of Vulnerability Trade and Exploitation}},
+	booktitle = CCS,
+	year = {2017},
+	month=oct,
+} 
+
+@inproceedings{Xu:2017,
+	author = {Xu, Xiaojun and Liu, Chang and Feng, Qian and Yin, Heng and Song, Le and Song, Dawn},
+	title = {{Neural Network-based Graph Embedding for Cross-Platform Binary Code Similarity Detection}},
+	booktitle = CCS,
+	year = {2017},
+	month=oct,
+} 
+
 @INPROCEEDINGS{Syta:2017, 
-	author={E. Syta and P. Jovanovic and E. K. Kogias and N. Gailly and L. Gasser and I. Khoffi and M. J. Fischer and B. Ford}, 
+	author={E. Syta and P. Jovanovic and E. Kogias and N. Gailly and L. Gasser and I. Khoffi and M. Fischer and B. Ford}, 
 	booktitle=SP, 
-	title={Scalable Bias-Resistant Distributed Randomness}, 
+	title={{Scalable Bias-Resistant Distributed Randomness}}, 
 	year={2017}, 
+	month=may,
 }
 
 
 @inproceedings {Xu:2017,
 	author = {Meng Xu and Taesoo Kim},
-	title = {PlatPal: Detecting Malicious Documents with Platform Diversity},
+	title = {{PlatPal: Detecting Malicious Documents with Platform Diversity}},
 	booktitle =USS,
 	year = {2017},
+	month=aug,
 }
 
 @article{Seondong:2017,
 	title={{Designing and Implementing a Diversity Policy for Intrusion-Tolerant Systems}},
-	author={Seondong HEO and Soojin LEE and Bumsoon JANG and Hyunsoo YOON},
+	author={Seondong Heo and Soojin Lee and Bumsoon Jang and Hyunsoo Yoon},
 	journal={IEICE Transactions on Information and Systems},
 	volume={E100.D},
 	number={1},
 	pages={118-129},
 	year={2017},
+	month=jan,
 }
 
 @INPROCEEDINGS{Kim:2017, 
 	author={S. Kim and S. Woo and H. Lee and H. Oh}, 
 	booktitle=SP, 
-	title={VUDDY: A Scalable Approach for Vulnerable Code Clone Discovery}, 
+	title={{VUDDY: A Scalable Approach for Vulnerable Code Clone Discovery}}, 
 	year={2017},
+	month=may,
 }
 
 @inproceedings{Nelson:2017,
 	author = {Nelson, Luke and Sigurbjarnarson, Helgi and Zhang, Kaiyuan and Johnson, Dylan and Bornholt, James and Torlak, Emina and Wang, Xi},
-	title = {Hyperkernel: Push-Button Verification of an OS Kernel},
+	title = {{Hyperkernel: Push-Button Verification of an OS Kernel}},
 	booktitle = SOSP,
 	year = {2017},
+	month =oct,
 } 
 
 @inproceedings{Allodi:2017,
 	author = {Allodi, Luca},
-	title = {Economic Factors of Vulnerability Trade and Exploitation},
+	title = {{Economic Factors of Vulnerability Trade and Exploitation}},
 	booktitle = CCS,
 	year = {2017},
+	month =oct,
 }
 
 
@@ -1498,6 +1611,7 @@
 	title = {{Hybrids on Steroids: SGX-Based High Performance BFT}},
 	booktitle = EUROSYS,
 	year = {2017},
+	month=apr,
 } 
 
 @INPROCEEDINGS{Gorbenko:2017, 
@@ -1530,7 +1644,7 @@
 	issn="1958-9395",
 }
 
-@inproceedings {Breindenbach:2018,
+@inproceedings{Breindenbach:2018,
 	author = {Lorenz Breindenbach and Phil Daian and Florian Tram{\`e}r and Ari Juels},
 	title = {{Enter the Hydra: Towards Principled Bug Bounties and Exploit-Resistant Smart Contracts}},
 	booktitle = USS,
@@ -1539,9 +1653,10 @@
 
 @Inproceedings{Nogueira:2018,
 	author = {A. Nogueira and M. Garcia and A. Bessani and N. Neves}, 
-	title = {On the Challenges of Building a BFT SCADA,}, 
+	title =  {{On the Challenges of Building a BFT SCADA}}, 
 	booktitle = DSN, 
 	year = {2018}, 
+	month=jun,
 }
 
 @inproceedings{Rahli:2018,
@@ -1549,6 +1664,7 @@
 	title = {{Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}},
 	booktitle = {Proceedings of the European Symposium on Programming},
 	year = {2018},
+	month=apr,
 } 
 
 @inproceedings{Sousa:2018,
@@ -1556,21 +1672,54 @@
 	title = {{A Byzantine Fault-Tolerant Ordering Service for the Hyperledger Fabric Blockchain Platform}},
 	booktitle = DSN,
 	year = 2018,
+	month=jun,
 }
 
 @inproceedings{Androulaki:2018,
-	author = {Androulaki, Elli and Barger, Artem and Bortnikov, Vita and Cachin, Christian and Christidis, Konstantinos and De Caro, Angelo and Enyeart, David and Ferris, Christopher and Laventman, Gennady and Manevich, Yacov and Muralidharan, Srinivasan and Murthy, Chet and Nguyen, Binh and Sethi, Manish and Singh, Gari and Smith, Keith and Sorniotti, Alessandro and Stathakopoulou, Chrysoula and Vukoli\'{c}, Marko and Cocco, Sharon Weed and Yellick, Jason},
+	author = {Androulaki, Elli and Barger, Artem and Bortnikov, Vita and Cachin, Christian and Christidis, Konstantinos and De Caro, Angelo and Enyeart, David and Ferris, Christopher and Laventman, Gennady and Manevich, Yacov and Muralidharan, Srinivasan and Murthy, Chet and Nguyen, Binh and Sethi, Manish and Singh, Gari and Smith, Keith and Sorniotti, Alessandro and Stathakopoulou, Chrysoula and Vukoli\'{c}, Marko and Cocco, Sharon and Yellick, Jason},
 	title = {{Hyperledger Fabric: A Distributed Operating System for Permissioned Blockchains}},
 	booktitle = EUROSYS,
 	year = {2018},
+	month = may,
 } 
+
+
+@INPROCEEDINGS{Gan:2018,
+	author = {S. Gan and C. Zhang and X. Qin and X. Tu and K. Li and Z. Pei and Z. Chen},
+	booktitle = SP,
+	title = {{CollAFL: Path Sensitive Fuzzing}},
+	year = {2018},
+	month=may,
+}
+
+
+@INPROCEEDINGS{Votipka:2018,
+	author = {D. Votipka and R. Stevens and E. Redmiles and J. Hu and M. Mazurek},
+	booktitle = SP,
+	title = {{Hackers vs. Testers: A Comparison of Software Vulnerability Discovery Processes}},
+	year = 2018,
+	month=may,
+}
+
+@INPROCEEDINGS{Koo:2018,
+	author = {H. Koo and Y. Chen and L. Lu and V. Kemerlis and M. Polychronakis},
+	booktitle =SP,
+	title = {{Compiler-assisted Code Randomization}},
+	year = {2018},
+	month=may,
+}
+
+
 
 %%%	MISC	%%%%
 @misc{Harkins:1998,
 	author = {D. Harkins and D. Carrel},
 	title = {The {Internet Key Exchange}},
 	year = {1998},
-	url = {http://tools.ietf.org/rfc/rfc2409.txt}
+	url = {http://tools.ietf.org/rfc/rfc2409.txt},
+	month=nov,
+   	HOWPUBLISHED = {Requests for Comments (RFC)},
+
 }
 
 @misc{nvd,
@@ -1606,7 +1755,7 @@
 }
 
 @misc{weka,
-	author ={Machine Learning Group at the University of Waikato},
+	author ={\relax Machine Learning Group at the University of Waikato},
 	title  = {{WEKA}},
 	howpublished   = "\url{http://www.cs.waikato.ac.nz/ml/weka/}",
 	year = 2018,
@@ -1654,7 +1803,7 @@
 }
 
 @misc{virtualbox,
-	author={Oracle VirtualBox},
+	author={\relax Oracle VirtualBox},
 	title =	 {{VirtualBox}},
 	howpublished = "{\url{https://www.virtualbox.org/}}",
 	year = 2018,
@@ -1748,18 +1897,18 @@
 
 @misc{cisco1,
 	author = {Cisco},
-	title = {Multiple Vulnerabilities in Firewall Services Module},
+	title = {{Multiple Vulnerabilities in Firewall Services Module}},
 	month = Feb,
 	year = {2007},
-	url = {http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070214-fwsm}
+	howpublished = "\url{http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20070214-fwsm}"
 }
 
 @misc{cisco2,
 	author = {Cisco},
-	title = {Multiple Vulnerabilities in {Cisco} Firewall Services Module},
+	title = {{Multiple Vulnerabilities in {Cisco} Firewall Services Module}},
 	month = oct,
 	year = {2012},
-	url = {http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm}
+	howpublished = "\url{http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20121010-fwsm}"
 }
 
 @report{Chauhan:2011,
@@ -1768,7 +1917,8 @@
 	group = {iViZ},
 	year = {2011},
 	institution = {iViZ Techno Solutions Pvt Ltd},
-	month = {Jan},
+	month = jan,
+	howpublished="{\url{http://www.ivizsecurity.com/blog/wp-content/uploads/2011/02/Vulnerability-Trends-in-Security-Products-upto-Year-2010.pdf}}"
 }
 
 @misc{eclipsescada,
@@ -1784,6 +1934,5 @@
 	title =	 {{A New Defense for Navy Ships: Protection from Cyber Attacks}},
 	howpublished = "{\url{https://www.onr.navy.mil/en/Media-Center/Press-Releases/2015/RHIMES-Cyber-Attack-Protection.aspx}}",
 	year ="2015",
-	month="September",
-	note = {Accessed: 2017-10-17}
+	month=sep,
 }

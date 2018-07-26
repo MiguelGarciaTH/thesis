@@ -13,8 +13,8 @@ Otherwise, compromising $f$ replicas is virtually the same as compromising $f+1$
 In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
 However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that the replica nodes fail independently. 
 This assumption extends the fault threshold as it considers that it takes more time/effort to compromise replicas that do not share vulnerabilities.
-Nevertheless, a few works rely on some orthogonal mechanisms (e.g.,~\cite{Roeder:2010,Chen:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their system models.
-Moreover, a few works have implemented and experimented with such mechanisms (e.g.,~\cite{Rodrigues:2001,Roeder:2010,Amir:2011}), but in a very limited way.
+Nevertheless, a few works rely on some orthogonal mechanisms (e.g.,~\cite{Roeder:2010,Avizienis:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their system models.
+Moreover, a few works have implemented and experimented with such mechanisms (e.g.,~\cite{Castro:2003,Roeder:2010,Amir:2011}), but in a very limited way.
 
 
 In practice, a few dependable applications take advantage of diversity mechanism. 
@@ -64,7 +64,7 @@ The described contributions (together with the ones published during the MSc~\ci
 
 \subsection{Applying Diversity on BFT Systems}
 In our first attempt to validate diversity, we presented substantial evidence to claim that using different \glspl{os} guarantees failure independence to some extent.
-However, this preliminary analysis suffer from some limitations as other works using \gls{nvd} database (e.g.,~\cite{Gorbenko:2011,Han:2009,Frei:2010,Shahzad:2012,Bozorgi:2010,Allodi:2014,Gorbenko:2017}).
+However, this preliminary analysis suffer from some limitations as other works using \gls{nvd} database (e.g.,~\cite{Han:2009,Frei:2010,Shahzad:2012,Bozorgi:2010,Allodi:2014,Gorbenko:2017}).
 It is possible to find vulnerabilities in \gls{nvd} that are not reported to all affected \glspl{os}.
 We have found these missing vulnerabilities reported on other sources (e.g., the vendors' security advisories).
 Therefore, some of the results of \gls{nvd}-based studies may provide less accurate conclusions about selecting different software based on common vulnerabilities.
