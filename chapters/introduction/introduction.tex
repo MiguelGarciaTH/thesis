@@ -2,43 +2,63 @@
 \label{chap:introduction}
 
 \section{Context and Motivation}
-\gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (subject) with Byzantine fault-tolerant (adjective) using the same acronym BFT for both.} is a well-established area of research that aims to guarantee safety on replicated systems even in the presence of some (Byzantine) faulty nodes.
+\paragraph{Intrusion Tolerance.}
+\gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (\emph{noun}) with Byzantine fault-tolerant (\emph{adjective}) using the BFT acronym for both.} is a well-established area of research that aims to guarantee the safety of replicated systems even in the presence of some (Byzantine) faulty nodes.
 In a nutshell, \gls{bft} protocols guarantee that replicas agree on the order of the message execution, and thus, the replicas work as a replicated state machine.
-The overall \gls{bft} safety holds even if a subpart of replicas, typically $f$ out of $n$, is faulty, leaving a sufficient number of correct nodes that execute correctly.
+The \gls{bft} safety holds even if a subpart of the replicas, typically $f$ out of $n$, is faulty, the remaining replicas are assumed as correct and thus execute correctly.
 Although not explicit, this assumption leverages on the strict condition that nodes (must) fail independently.
 Otherwise, compromising $f$ replicas is virtually the same as compromising $f+1$.
 
 
 \gls{bft} was first proposed in 1982 by Lamport~\etal{}~\cite{Lamport:1982}, but it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}. 
 In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
-However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that the replica nodes fail independently. 
-This assumption extends the fault threshold as it considers that it takes more time/effort to compromise replicas that do not share vulnerabilities.
+However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that replicas fail independently. 
+This assumption implies that it takes more time to compromise the system (i.e., $f+1$ replicas) if the nodes do not share weaknesses. 
 Nevertheless, a few works rely on some orthogonal mechanisms (e.g.,~\cite{Roeder:2010,Avizienis:1995}) to avoid these common weaknesses, or rule out the possibility of malicious failures from their system models.
-Moreover, a few works have implemented and experimented with such mechanisms (e.g.,~\cite{Castro:2003,Roeder:2010,Amir:2011}), but in a very limited way.
+Moreover, a few works have implemented and experimented with such diversity mechanisms (e.g.,~\cite{Castro:2003,Roeder:2010,Amir:2011}), but in a very limited way.
 
 
-In practice, a few dependable applications take advantage of diversity mechanism. 
+In practice, a few dependable applications take advantage of diversity mechanisms. 
 Nevertheless, in these cases, diversity is applied \emph{intuitively}.
-For example, in avionics engineering, a few aircraft solutions embrace the diversity of components to avoid accidental failures~\cite{Yeh:2004}.
-Moreover, in 2014, the U.S. Navy developed the Resilient Hull, Mechanical, and Electrical Security (\textsc{Rhimes}), it introduces diversity through a \emph{slightly different implementation} for each programmable logic controller~\cite{rhimes}.
+For example, in avionics engineering, a few aircraft solutions embraced the diversity of components to avoid accidental failures~\cite{Yeh:2004}.
+Moreover, in 2014, the U.S. Navy developed the Resilient Hull, Mechanical, and Electrical Security (\textsc{Rhimes}) which introduced diversity through a \emph{slightly different implementation} for each programmable logic controller~\cite{rhimes}.
 Another example of a critical system that naturally adopted diversity are the \gls{dns} root servers. 
-According to Lars-Johan Liman (the technical lead of one of the \gls{dns} root servers),\footnote{https://www.netnod.se/dns/dns-root-server-faq} each operator has its own configurations, as ``\emph{it allows for great operational diversity. That means, for example, that a single software or firmware bug cannot bring down the entire system}.''
-\textbf{FIX THIS} On the contrary, the growing blockchain technology implements \gls{bft} in a large and dispersed network.
-The proof-of-work~\cite{} solutions do not need a strictly bounded fault threshold, as their threshold is bounded by 51\% of the network is correct.
+According to Lars-Johan Liman (chair of the Root Server System Advisory Committee),\footnote{https://www.netnod.se/dns/dns-root-server-faq} each operator has its own configurations, as ``\emph{it allows for great operational diversity}''. The goal is to avoid that a single software bug cannot bring down all servers.
+The blockchain growing technology implements a \gls{bft} network in a large and dispersed way.
+Therefore, it shares the same limitations of the enumerated \gls{bft} works, i.e., the network nodes may share common weakness.
+Nevertheless, Ethereum stats show that there are a few \glspl{os} among the nodes~\cite{Ethstats,Ethernodes} which can deter attacks from exploiting common mode failures.
 
 
 Despite the adoption of (naive) diversity in practical systems, other variables must be considered to make systems dependable and secure.
 For example, even considering an initial set of $n$ diverse replicas, long-running services need to be cleaned from possible failures and intrusions.
 A few works on the proactive recovery of \gls{bft} systems~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011} periodically restart their replicas to clean undetected faulty states introduced by a stealth attacker. 
 However, these works (i) assume replicas failure independence, (ii) do not provide proof to support their diversity decisions or (iii) use limited solutions (e.g., memory randomization).
-Therefore, unless careful selection of diversity is introduced during recoveries, the replicas do not change, thus keeping the same vulnerabilities.
+Therefore, unless careful diversity choices are introduced on recoveries, the replicas do not change, thus keeping the same weaknesses.
 
 
-Finally and despite the already established maturity of \gls{bft} solutions, no one debated how to apply diversity in a dependable (i.e., which software configurations are more dependable) and when should these configurations be changed (e.g., recovering replicas with different software).
+Finally, contrary to the already established maturity of \gls{bft} solutions, no one debated how to apply diversity in a dependable (i.e., which software configurations are more dependable) and when should these configurations be changed (e.g., recovering replicas with different software).
+
+\paragraph{Vulnerabilities.}
+The reason why \gls{bft} solutions need to make stronger assumptions on the replicas failure independence is due to the existence of replicas' vulnerabilities.
+Vulnerabilities are weaknesses in the code that can be exploited by a malicious agent to compromise some security properties (e.g., integrity and availability).
+Zero-day vulnerabilities are a particular type of vulnerabilities, which are especially critical as their disclosure occurs only when the attack is already (being) done.
+On the contrary, if a vulnerability is discovered by a vendor or by a third-party software analyst, the vendor releases a patch as soon as possible. 
+Moreover, such vulnerabilities are traded on the black market as a highly paid service~\cite{Symantec:2017,Allodi:2017}.
+For example, big companies and organizations are promoting bug bounty programs to try to find zero-day vulnerabilities before the hackers (e.g., Google Vulnerability Reward Program,\footnote{https://www.google.com/about/appsecurity/reward-program/index.html} Facebook Bug Bounty Program,\footnote{https://www.facebook.com/whitehat} Microsoft Bounty,\footnote{https://technet.microsoft.com/en-us/library/dn425036.aspx} DARPA VET,\footnote{https://www.darpa.mil/program/vetting-commodity-it-software-and-firmware} and DARPA Cyber Grand Challenge\footnote{https://www.darpa.mil/program/cyber-grand-challenge}).
+
+
+
+Applying this information to the \gls{bft} context, an attacker can compromise a replica once it finds vulnerabilities in it.
+If the replicas are equal, they share the same vulnerabilities, once the attacker discovers a zero-day vulnerability, he or she will eventually exploit it on $f+1$ replicas.
+The rationale behind diversity on \gls{bft} is that different replicas do not share the same vulnerabilities. 
+Therefore, to discover and exploit vulnerabilities to compromise $f+1$ replicas is more difficult than to compromise $f$ replicas.
+
+
+
 
 \section{Objectives and Contributions}
 
-In the past, several researchers developed and improved techniques to make intrusion tolerance a cornerstone of security and dependability.
+In the past, several researchers developed and improved techniques that made intrusion tolerance a cornerstone of security and dependability.
 Nevertheless, a few problems were left open and still lack effective answers.
 This thesis aims to push forward intrusion tolerance to more accurate and practical grounds.
 The main contributions of this thesis are summarized into the following points, along with the related publications.
@@ -47,9 +67,9 @@ The main contributions of this thesis are summarized into the following points, 
 \subsection{Evidence for Implementing Diversity}% Diversity Study on Off-the-Shelf Operating Systems}
 
 
-The results achieved during the MSc thesis encouraged us to extend the work on the diversity of \gls{ots} \glspl{os}~\cite{Garcia:2012}.
+The results achieved during the author's MSc thesis encouraged us to extend the work on the diversity of \gls{ots} \glspl{os}~\cite{Garcia:2012}.
 This first step towards the design and development of dependable \gls{bft} systems is to assess how accurate were the implicit or explicit assumptions on diversity (e.g.,~\cite{Abd-El-Malek:2005,Bessani:2008,Castro:2002,Castro:2003,Clement:2009,Correia:2004,Kapitza:2012,Kotla:2010,Moniz:2011,Yin:2003}).
-In that previous work, we studied the vulnerability data from the \gls{nvd}~\cite{nvd} the most complete vulnerability database available to answer, with arguments to support, to the question:
+In that previous work, we studied the vulnerability data from the \gls{nvd}~\cite{nvd} the most complete vulnerability database available to answer to the question:
 \emph{What are the dependability gains from using diverse \glspl{os} on a replicated  intrusion-tolerant system?} 
 Nevertheless, we have made some extensions to that work, which are presented in this thesis.
 In particular, we devised three manual strategies for selecting diverse software components to minimize the incidence of common vulnerabilities in replicated systems.
@@ -65,26 +85,29 @@ The described contributions (together with the ones published during the MSc~\ci
 \subsection{Applying Diversity on BFT Systems}
 In our first attempt to validate diversity, we presented substantial evidence to claim that using different \glspl{os} guarantees failure independence to some extent.
 However, this preliminary analysis suffer from some limitations as other works using \gls{nvd} database (e.g.,~\cite{Han:2009,Frei:2010,Shahzad:2012,Bozorgi:2010,Allodi:2014,Gorbenko:2017}).
-It is possible to find vulnerabilities in \gls{nvd} that are not reported to all affected \glspl{os}.
+It is possible to find vulnerabilities in \gls{nvd} that were not reported to all affected \glspl{os}.
 We have found these missing vulnerabilities reported on other sources (e.g., the vendors' security advisories).
 Therefore, some of the results of \gls{nvd}-based studies may provide less accurate conclusions about selecting different software based on common vulnerabilities.
 Moreover, \gls{nvd} lacks from some relevant data concerning exploits and patches that are relevant when considering vulnerabilities life-cycle.
-An alternative way to \gls{ots} diversity is to generate diversity through automatic mechanisms (e.g.,~\cite{Roeder:2010,Amir:2011}).
+
+An alternative way to data-based diversity selection (e.g., \gls{ots} diversity) is to generate diversity through automatic mechanisms (e.g.,~\cite{Roeder:2010,Amir:2011}).
 However, these mechanisms lack of evidence to claim that these techniques create real vulnerability independence~\cite{Snow:2013,Bittau:2014}. 
+
 Finally, the existent systems that implement time-triggered recoveries assume that it takes the same time/effort to compromise each replica, by assuming that vulnerabilities are all the same. 
 This assumption is unrealistic, especially when the replicas' diversity is considered~\cite{Nayak:2014}. 
 Therefore, tailored methods are required to evaluate the risk of a replicated system becoming vulnerable (i.e., $f+1$ replicas suffer from the same weaknesses).
 
 
 In this thesis, we address these problems from both a theoretical and practical perspective.
-We address the problems of \emph{finding evidence for supporting diversity}, \emph{manage diversity in a dependable way}, and \emph{support diversity practical mechanisms} in the thesis main contribution.
+We address the problems of \emph{finding evidence for supporting diversity}, \emph{manage diversity in a dependable way}, and \emph{support diversity practical mechanisms}.
 First, suppress the limitations of \gls{nvd} using clustering techniques, that group similar vulnerabilities, which potentially can be affected by (variations of) the same exploit.
 Moreover, we add additional \gls{osint} data sources to build a complete knowledge base about the possible vulnerabilities, exploits, and patches related to the systems of interest. 
 The clusters and the collected data are used to assess the risk of a \gls{bft} system becoming compromised by the existence of common vulnerabilities.
 Once the risk increases, the system replaces the potentially vulnerable replica by another one, to maximize the failure independence of the replicated service.
 The solution continuously collects data from the online sources and monitors the risk of the \gls{bft} in such a way that removes the human from the loop.
 
-We have implemented these contributions in \system, and it is the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
+We have implemented these contributions in \system.
+To the best of our knowledge, it is the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
 \system continuously collects security data from several \gls{osint} feeds to build a vulnerability knowledge base.
 This data is used to create clusters of similar vulnerabilities.
 These clusters and other collected attributes are used to analyze the risk of the \gls{bft} system becoming compromised. 
@@ -135,7 +158,7 @@ However, to the best of our knowledge, very few works proposed intrusion-toleran
 Performance reasons might explain this, as \gls{bft} replication protocols are usually associated with significant overheads and limited scalability.
 Additionally, achieving complete transparency to the rest of the system can be challenging to reconcile with the objective of having fast message filtering under attack.
 In \sieveq, we explore a different design for replicated protection devices, where we trade some transparency on senders and receivers for a more efficient and resilient firewall solution.
-In particular, we propose an architecture in which critical services and devices can only be accessed through a message queue and implement the application-level filtering in this queue.
+In particular, we propose an architecture in which critical services and devices can only be accessed through a message queue where application-level filtering is implemented.
 It is assumed that these services have a limited number of senders, which can be appropriately configured to ensure that only they are authorized to communicate through \sieveq.
 The solution has a fault- and intrusion-tolerant architecture that applies filtering operations in two stages acting like a sieve.
 The first stage, called \emph{pre-filtering}, performs lightweight checks, making it efficient to detect and discard malicious messages from external adversaries.
@@ -156,7 +179,7 @@ The contributions of this work resulted in the following publications:
 To conclude, a collaboration with a colleague resulted in a work on \gls{scada} system enhanced with \gls{bft} techniques. 
 We documented the challenges of building such system from a ``traditional'' non-\gls{bft} solution.
 This effort resulted in a prototype, implemented by the colleague, that integrates the Eclipse NeoSCADA~\cite{eclipsescada} and the \textsc{BFT-SMaRt}~\cite{Bessani:2014} open-source projects.
-Although this contribution is out of the scope of the thesis, it is easy to envision the integration of the prototype with \system:
+Although this contribution is out of the scope of the thesis, it is easy to envision the integration of the prototype with \system.
 
 
 \begin{enumerate}
@@ -182,7 +205,7 @@ Additionally, it is possible to continuously manage these systems while monitori
 This chapter provides a background overview of intrusion tolerance history. 
 It also presents the most relevant and related works on the different areas comprised by intrusion tolerance.
 In particular, it is focused on its main areas: Byzantine Fault Tolerance, replica rejuvenations, and diversity.
-Then, it identifies several works that implemented diversity guided by \emph{intuition}, then it covers the works that analyzed vulnerabilities, and finally, presents some systems that manage intrusion-tolerant systems.
+Then, it identifies several works that implemented diversity guided by \emph{intuition}, then it covers the works that analyzed vulnerabilities, and finally, presents some solutions that manage intrusion-tolerant systems.
 
 
 \paragraph{Chapter~\ref{chap:datasource}: \nameref{chap:datasource}.}
@@ -190,13 +213,13 @@ The preliminary evidence that diversity could improve systems' dependability was
 However, we have made a few additional contributions which are presented in this chapter. 
 The extended work provides more substantial evidence to support the diversity adoption.
 Moreover, it shows that with advised choices one can build dependable systems.
-Although some solutions are (now recognized by us as) naive, they were a significant contribution to hint us on the pursuit of building dependable systems with diversity.
+Although some solutions are (now recognized by us as) naive, they were a significant contribution to push us towards building dependable systems with diversity.
 
 
 \paragraph{Chapter~\ref{chap:lazarus_design}: \nameref{chap:lazarus_design}.}
-This chapter describes the design solution that we propose to solve a few intrusion tolerance open problems.
-In particular, we show how to solve data-source limitations that affected several works in the past, and we present a new metric to assess the risk of \gls{bft} systems becoming vulnerable by a  vulnerability that affects $f+1$ replicas.
-Moreover, we present an algorithm that minimizes the risk of replicas configurations being vulnerable.
+This chapter describes the solution's design that we propose to solve a few of the existing open problems of intrusion tolerance.
+In particular, we show how to solve data source limitations that affected several works in the past.
+Moreover, we present a new metric that is used by an algorithm to minimize the risk of \gls{bft} replicas becoming vulnerable by common mode failures.
 In the end, we evaluate the efficacy of our metric and algorithm by executing the algorithm against different configuration strategies that have been used in related works.
 
 

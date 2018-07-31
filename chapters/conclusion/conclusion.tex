@@ -3,24 +3,24 @@
 
 \section{Conclusions}
 The correctness of \gls{bft} systems is tied to the assumption that replicas fail independently. 
-Otherwise, once a replica is compromised, the next $f+1$ replicas would be compromised within virtually the same time or effort.
+Otherwise, once a replica is compromised, the next $f+1$ replicas would be compromised within virtually the same time.
 In this thesis, we addressed the long-standing open problem of many works over the past 20 years of \gls{bft} replication research: evaluate, select, and manage the failure independence (through diversity) of \gls{bft} systems.
 That said, we developed a control plane that maximizes the failure independence of \gls{bft} replicated nodes practically and effectively to make them more resilient to malicious adversaries.
 
 
 The first step to achieve this objective was, following the line of prior work to this thesis, to validate the diversity hypothesis.  
-To this end, we leverage on the study using \gls{nvd} data about the shared vulnerabilities among \glspl{os} and conducted an analysis more focused on the deciding which \glspl{os} provide a dependable configuration sets for replicated systems.
+To this end, we leverage on the study using \gls{nvd} data about the shared vulnerabilities among \glspl{os} and conducted an analysis more focused on the deciding which \glspl{os} provide dependable configuration sets for replicated systems.
 In particular, we presented several strategies to choose the most diverse \glspl{os}.
-These strategies comprise different approaches data depending on whether one (i) considers all common vulnerabilities as being of equal importance; (ii) place greater emphasis on more recent common vulnerabilities; and (iii) is primarily interested in the common vulnerabilities being reported less frequently in calendar time.
+These strategies comprise different approaches to the data depending on whether one (i) considers all common vulnerabilities as being of equal importance; (ii) place greater emphasis on more recent common vulnerabilities; or (iii) is primarily interested in the common vulnerabilities being reported less frequently in calendar time.
 All strategies delivered the same best combination of \glspl{os}, and this emphasizes the importance of carefully select \glspl{os} that minimize the number of common weaknesses.
 
 
-Despite the results that we have achieved in the previous contribution, we have identified some problems that lead us to pursue further analysis.
+Despite the good results that we have achieved in the previous contribution, we have identified some problems that lead us to pursue further analysis.
 Namely, our and a few other works that used \gls{nvd} as a primary data source were missing essential data. 
-In particular, not all products vulnerable to a particular vulnerability were reported as affected in \gls{nvd}.
+In particular, \gls{nvd} does not report all producs that are affected by a particular vulnerability.
 We addressed this issue by using clustering techniques to group similar vulnerabilities.
-Moreover, we add other data sources with other relevant data (that \gls{nvd} does not provide) to enrich our data.
-We devise a new metric that uses the vulnerability attributes provided by \gls{nvd} and \gls{cvss}, and others added from additional \gls{osint} sources. 
+Moreover, we added other data sources with other relevant data (that \gls{nvd} does not provide) to enrich our data.
+We devised a new metric that uses the vulnerability attributes provided by \gls{nvd} and \gls{cvss}, and other attributes added from additional \gls{osint} sources. 
 This metric is used by an algorithm that builds and reconfigures replica sets on \gls{bft} systems.
 The algorithm decides when and which replica should be replaced by estimating the risk of the \gls{bft} system being vulnerable and potentially compromised.
 The results show that our algorithm supports better decisions when selecting \glspl{os} to run in the replicated system. 
@@ -30,7 +30,7 @@ For example, for the evaluated time it \emph{compromised rate} varies between 2\
 Besides the lack of proof for supporting diversity, most of the works did not address diversity in a practical manner.
 We implemented \system to manage \gls{bft} systems according to security data available online that is then analyzed to trigger replicas' recoveries.
 We conducted an extensive evaluation of the costs of using real \gls{os} diversity in \gls{bft} systems.
-In the experiments, we have found a significant limitation on the virtualization technology, which forced us to limit our evaluation setup by reconfiguring the bare metal machines to use fewer resources (e.g., limit the number of CPUs).
+In the experiments, we have found a significant limitation on the virtualization technology, forcing us to limit the evaluation setup by reconfiguring the bare metal machines (e.g., limit the number of CPUs).
 Therefore, we manage to make a fair comparison (for some of the cases) between a bare metal configuration with a virtualized (yet limited) solution that accommodates \system.
 Although most of the results show a non-negligible overhead, we have shown that for \glspl{os} that did not suffer virtualization limitations the overhead is minimal.
 In these cases, the performance of the replicated system managed by \system is 86\%-94\% of the bare metal, which runs a replicated non-virtualized homogenous \gls{os} configuration.
@@ -45,7 +45,6 @@ This allows the proposed system to be more efficient than the state-of-the-art r
 
 
 \section{Future Work}
-This thesis addresses the long-standing open problems of diversity in \gls{bft} system.
 The results of this thesis open many avenues for future work on this research topic, which we address in the following topics:
 
 
@@ -54,16 +53,16 @@ In Chapter~\ref{chap:related_work}, we have briefly described a few prevention t
 Although we did not address them in this thesis, here, we initiate the discussion on how to integrate such techniques in \system.
 The \system replicas have two states were they are dormant when they are in quarantine or before they are deployed in the execution plane.
 Thus, this time could be used to apply a battery of automatic procedures (e.g., vulnerability detectors) that would (1) detect additional weaknesses, which could be reported to \gls{nvd}, and (2) remediate these weaknesses with automatic mechanisms like automatic patching~\cite{Huang:2016}.
+Moreover, although limited to open source products, it could use vulnerable code clone detectors, that would indicate potentially shared vulnerabilities~\cite{Kim:2017,Xu:2017}.
 Such mechanisms would decrease the vulnerability surface, especially if common vulnerabilities are detected.
 Although we are most concern with more complex attacks (e.g., \gls{apts}), using automatic attacks~\cite{Hu:2015} could activate some common vulnerabilities before the replicas deployment.
-These would trigger the algorithm to adjust the risk associated with such replicas avoiding postponing selection.
+These would trigger the algorithm to adjust the risk associated with such replicas avoiding their selection.
 
 
 \textbf{Extending the \system source types and sensors:}
 \system monitors five security data feeds on the internet to collect data about vulnerabilities, exploits, and patches for the \glspl{os} it manages.
 However, it could be extended to monitor other indicators of compromise (e.g., \gls{ip} blacklists) extracted from a much richer set of sources~\cite{Liao:2016,Sabottke:2015}.
 Similarly, \system could additionally use the outputs of \glspl{ids} to assess the \gls{bft} system behavior and trigger replica's reconfigurations in case of need.
-Moreover, although limited to open source products, it could use vulnerable code clone detectors, that would indicate potentially shared vulnerabilities~\cite{Kim:2017,Xu:2017}.
 Finally, and exploring a different domain it could be interesting to mine black market data sources to discover new threats that could compromise several replicas~\cite{Allodi:2014}.
 
 

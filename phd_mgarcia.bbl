@@ -82,7 +82,7 @@ D.~Arsenault, A.~Sood, and Y.~Huang.
 \bibitem{Aublin:2015}
 P.~Aublin, R.~Guerraoui, N.~Kne\v{z}evi\'{c}, V.~Qu{\'e}ma, and M.~Vukoli\'{c}.
 \newblock {The Next 700 BFT Protocols}.
-\newblock {\em ACM Transactions on Computer Systems}, 32(4), Jan. 2015.
+\newblock {\em ACM Transactions on Computer Systems}, 32(4):1--45, Jan. 2015.
 
 \bibitem{Avizienis:1995}
 A.~Avizienis.
@@ -106,7 +106,7 @@ L.~Bairavasundaram, S.~Sundararaman, A.~Arpaci-Dusseau, and R.~Arpaci-Dusseau.
 B.~Baudry and M.~Monperrus.
 \newblock {The Multiple Facets of Software Diversity: Recent Developments in
   Year 2000 and Beyond}.
-\newblock {\em ACM Computer Surveys}, 48(1):16:1--16:26, Sept. 2015.
+\newblock {\em ACM Computer Surveys}, 48(1):1--26, Sept. 2015.
 
 \bibitem{Behl:2015}
 J.~Behl, T.~Distler, and R.~Kapitza.
@@ -333,6 +333,18 @@ Eclipse.
 \newblock {{NeoSCADA}}.
 \newblock \url{https://www.eclipse.org/eclipsescada/}, 2017.
 
+\bibitem{Ethernodes}
+Ethernodes.org.
+\newblock {The Ethereum Nodes Explorer}.
+\newblock \url{https://www.ethernodes.org}, 2018.
+\newblock Accessed: 2018-4-26.
+
+\bibitem{Ethstats}
+Ethstats.
+\newblock {Ethereum Stats}.
+\newblock \url{https://ethstats.net/}, 2018.
+\newblock Accessed: 2018-4-26.
+
 \bibitem{stuxnet:2010}
 N.~Falliere.
 \newblock {Exploring Stuxnet's PLC Infection Process}.
@@ -397,7 +409,8 @@ M.~Garcia, A.~Bessani, and N.~Neves.
 \bibitem{Garcia:2012b}
 M.~Garcia, N.~Neves, and A.~Bessani.
 \newblock {DIVERSYS: DIVErse Rejuvenation SYStem}.
-\newblock In {\em {Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)}, 2012.
+\newblock In {\em {Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)}, Sept.
+  2012.
 
 \bibitem{Garcia:2013}
 M.~Garcia, N.~Neves, and A.~Bessani.
@@ -436,7 +449,7 @@ A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
 \newblock {Experience Report: Study of Vulnerabilities of Enterprise Operating
   Systems}.
 \newblock In {\em Proceedings of the International Symposium on Software
-  Reliability Engineering}, 2017.
+  Reliability Engineering}, Oct. 2017.
 
 \bibitem{Han:2009}
 J.~Han, D.~Gao, and R.~Deng.
@@ -582,10 +595,11 @@ A.~Keromytis and V.~Prevelakis.
 \newblock John Wiley \& Sons, Inc., June 2006.
 
 \bibitem{Kim:2017}
-S.~Kim, S.~Woo, H.~Lee, and H.~Oh.
-\newblock {VUDDY: A Scalable Approach for Vulnerable Code Clone Discovery}.
-\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
-  May 2017.
+S.~Kim, S.~Lee, I.~Yun, W.~Xu, B.~Lee, Y.~Yun, and T.~Kim.
+\newblock {CAB-Fuzz: Practical Concolic Testing Techniques for {COTS} Operating
+  Systems}.
+\newblock In {\em Proceedings of {USENIX} Annual Technical Conference}, July
+  2017.
 
 \bibitem{Kirsch:2014}
 J.~Kirsch, S.~Goose, Y.~Amir, D.~Wei, and P.~Skare.
@@ -763,7 +777,8 @@ A.~Nappa, R.~Johnson, L.~Bilge, J.~Caballero, and T.~Dumitras.
 \bibitem{Nayak:2014}
 K.~Nayak, D.~Marino, P.~Efstathopoulos, and T.~Dumitra{\c{s}}.
 \newblock {Some Vulnerabilities Are Different Than Others}.
-\newblock In {\em Research in Attacks, Intrusions and Defenses}, Sept. 2014.
+\newblock In {\em International Symposium on Research in Attacks, Intrusions,
+  and Defenses}, Sept. 2014.
 
 \bibitem{Nelson:2017}
 L.~Nelson, H.~Sigurbjarnarson, K.~Zhang, D.~Johnson, J.~Bornholt, E.~Torlak,
@@ -868,14 +883,13 @@ J.~Reynolds, J.~Just, E.~Lawson, L.~Clough, R.~Maglich, and K.~Levitt.
 \bibitem{Roeder:2010}
 T.~Roeder and F.~Schneider.
 \newblock {Proactive Obfuscation}.
-\newblock {\em ACM Transactions on Computer Systems}, 28(2):4:1--4:54, July
-  2010.
+\newblock {\em ACM Transactions on Computer Systems}, 28(2):1--54, July 2010.
 
 \bibitem{Sabottke:2015}
 C.~Sabottke, O.~Suciu, and T.~Dumitras.
 \newblock {Vulnerability Disclosure in the Age of Social Media: Exploiting
   Twitter for Predicting Real-World Exploits}.
-\newblock In {\em Proceedings of the {USENIX} Security Symposium}, 2015.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, Aug. 2015.
 
 \bibitem{Schneider:1990}
 F.~Schneider.
@@ -915,7 +929,7 @@ J.~Sousa and A.~Bessani.
 \newblock {Separating the {WHEAT} from the Chaff: An Empirical Design for
   Geo-Replicated State Machines}.
 \newblock In {\em Proceedings of the {IEEE} Symposium on Reliable Distributed
-  Systems}, Sept 2015.
+  Systems}, Sept. 2015.
 
 \bibitem{Sousa:2018}
 J.~{Sousa}, A.~{Bessani}, and M.~{Vukoli{\'c}}.
@@ -963,6 +977,13 @@ Symantec.
 \newblock
   \url{http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/Dragonfly_Threat_Against_Western_Energy_Suppliers.pdf},
   July 2014.
+
+\bibitem{Symantec:2017}
+Symantec.
+\newblock {{Internet Security Threat Report}}.
+\newblock
+  https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf,
+  2017.
 
 \bibitem{Syta:2017}
 E.~Syta, P.~Jovanovic, E.~Kogias, N.~Gailly, L.~Gasser, I.~Khoffi, M.~Fischer,

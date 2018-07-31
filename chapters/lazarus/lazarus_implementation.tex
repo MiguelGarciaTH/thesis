@@ -1,4 +1,5 @@
 \chapter{\system}
+\textbf{*************TO IGNORE*********** jump to Descentralized Lazarus Version}
 \label{chap:lazarus_implementation}
 This chapter presents \system iplementation, these mechanisms were implemented to be fully automated, removing the human from the loop.
 The current implementation of \system manages 17 \gls{os} versions, supporting the \gls{bft} replication of a set of representative applications.
@@ -234,7 +235,7 @@ This version introduces some significant modifications to the system model and a
 This version \system shares some similarities with the centralized version.
 For instance, the \emph{Execution Plane} remains practically unmodified.
 On the contrary, the \emph{Control Plane} suffers some changes.
-The new \emph{Control Plane} is composed of replica processes that can be subject to Byzantine failures.
+The new \emph{Control Plane} is composed of replica processes, named \emph{Controller replicas}, which can be subject to Byzantine failures.
 Therefore, a Byzantine \emph{Controller replica} can try to mislead the other replicas.
 This plane hosts $n$ replicas from which at most $f$ can be compromised at any given moment.
 Each replica has a \gls{ltu} co-allocated that is assumed as trusted. 
@@ -242,15 +243,15 @@ This component actions cannot deviate from their correct intention, this is espe
 
 
 \paragraph{Architecture.}
-We have designed a new architecture for replicated \system (Figure~\ref{fig:lazarus_distributed}). 
+We have designed a new architecture for replicated \system, an overview of the architecture is shown in the Figure~\ref{fig:lazarus_distributed}. 
 In this new architecture, we have two instances of \gls{smr}.
-One runs in the \emph{Execution plane}, and it was already presented.
-The second, run in the place of the single-node controller in the \emph{Control Plane}.
-In this version, \system is replicated, in \emph{Controller Replicas}, as a \gls{bft} \gls{smr}.
+The first one runs a specific service in the \emph{Execution Plane}, and it was already presented in Chapter~\ref{chap:lazarus_design}.
+The second one runs in the \emph{Control Plane}, that was assumed as a trusted and centralized component before.
+In this version, \system is replicated as a \gls{bft} \gls{smr}.
 \emph{Controller Replicas} are coordinated to manage the \emph{Service Replicas} in the other plane.
-Both, \emph{Service Replicas} and \emph{Controller Replicas} have a \gls{ltu} for each one.
-In the \emph{Service Replicas}, the \gls{ltu} runs a \gls{bft} library client (i.e., \textsc{BFT-SMaRt} client) that communicates with the \emph{Controller Replicas} via \textsc{BFT-SMaRt} primitives and vice-versa.
-The \emph{Controller Replicas}' \gls{ltu} also run a \textsc{BFT-SMaRt} client.
+Both, types of replicas have a \gls{ltu} co-allocated with each replica.
+Each \gls{ltu} run a \gls{bft} library client (i.e., \textsc{BFT-SMaRt} client). 
+These clients communicate with the library server that runs on \emph{Controller Replicas}.
 
 
 \begin{figure}[h]
@@ -264,7 +265,7 @@ The \emph{Controller Replicas}' \gls{ltu} also run a \textsc{BFT-SMaRt} client.
  
 \paragraph{Recovery Protocol.}
 The communication between \glspl{ltu} and \emph{Controller Replicas} is made via \textsc{BFT-SMaRt} and it is solely to trigger recoveries both on \emph{Controller Replicas} and \emph{Service Replicas}.
-Each \glspl{ltu} runs a \emph{Controller Proxy} that can invoke \emph{Controller Replicas} commands in a coordinated way, and it receives messages from \emph{Controller Replicas}.
+Each \gls{ltu} runs a \emph{Controller Proxy} that can invoke \emph{Controller Replicas} commands in a coordinated way, and it receives messages from \emph{Controller Replicas}.
 It has to wait for $f+1$ matching messages as to know that the message is correct. 
 Therefore, the \emph{Controller Proxy} is ready to trigger a recovery on a \emph{Service Replica} or on a \emph{Controller Replica}.
 Contrary to the usual request-response of \gls{smr}, here, the \emph{Controller Proxy} receives ``responses'' without a prior request. 
@@ -272,11 +273,11 @@ Contrary to the usual request-response of \gls{smr}, here, the \emph{Controller 
 
 \paragraph{Replica Synchronization Protocol.}
 In the centralized version, \system takes decisions alone.
-For example, it decides when it is time to crawl \gls{osint} sources to look for new data, or when it is the time to start recoveries.
+For example, it decides when it is time to contact \gls{osint} sources to look for new data, or when it is the time to start recoveries.
 On the contrary, in a \gls{smr} setting the replicas must be coordinated to execute the same command \emph{at the same time}.
-One way to do that is to assume that replicas have synchronous clocks, and then, the all the requests are synchronized.
-However, we want to make the few timely assumptions.
-Moreover, by using the internet to communicate with \gls{osint} sources, \system is subject to different levels of delays.
+One way to do that is to assume that replicas have synchronous clocks, and then, all the requests are synchronized.
+However, we want to make the few timely assumptions as possible.
+Moreover, by using the internet to communicate with \gls{osint} sources, \system communication is subject to different levels of delays.
 Therefore, we propose a solution that uses a logical timeout protocol to (logically) synchronize replicas.
 This protocol was proposed by Kirsch~\etal{}~\cite{Kirsch:2014} to coordinate replicas to poll requests to a sensor in the context of \gls{scada} systems.
 The authors named this protocol as Logical Time Out protocol, and it can be briefly described as:
@@ -285,27 +286,24 @@ This message is used to inform other replicas of the current timeouts that a rep
 Each replica will set their own timeouts by setting up a timeout \texttt{T$_x$} with the local time \emph{c$_i$} and the local expiration time \emph{$d$} to a replica \emph{i}.
 Then, it communicates to the others the \texttt{T$_x$} sending the \emph{$c_i$} and \emph{$d$} within a \texttt{SYNC} message.
 This allows every replica to update their own list of timeouts, and each replica sets the expiration time as \emph{$c_i + d$} for \texttt{T$_x$}.
-When a \texttt{SYNC} message from $i$ says that the local clock is greater than \emph{$c_i + d$}, then the timeout \texttt{T$_x$} is expired.
+When a \texttt{SYNC} message from $i$ says that the local clock is greater than \emph{$c_i + d$}, then the timeout \texttt{T$_x$} was expired.
 When a logical timeout is triggered concerning $f+1$ different replicas the timeout \texttt{T$_x$} is delivered to the application.
 This way, it is guaranteed that replicas will trigger some action only when $f+1$ replicas had \texttt{T$_x$} expired.
  
 
 
-\paragraph{Distributed Random Protocol.}
-As it was explained in Chapter~\ref{chap:lazarus_design}, \system algorithm uses random configuration selection to avoid guessing attacks.
-In the centralized version of \system, it is simple to select a random configuration, however, distributed random number generation is a challenge on distributed systems.
+\paragraph{Distributed Random Generation Protocol.}
+As it was explained in Chapter~\ref{chap:lazarus_design}, \system algorithm selects random configurations to prevent attackers from guessing which will be the next configuration.
+In the centralized version of \system, it is simple to select a random configuration.
+However, distributed random number generation is a challenge on distributed systems.
 In particular, to determine a random value among the replicas without prior knowledge of anyone and guaranteeing that random value is not biased, i.e., that a malicious replica is not influencing the final value.
-We adopt the recent solution of Syta~\etal{}~\cite{Syta:2017} named RandShare.
-RandShare is a randomness protocol that guarantees unbiasability, unpredictability, and availability.
-The protocol was developed in such a way that after a barrier point, honest peers will eventually output the previously decided value despite the adversary's behavior.
+We adopted the Syta~\etal{}~\cite{Syta:2017} soltuion named \textsc{RandShare}, as it guarantees unbiasability, unpredictability, and availability on random number generation.
+The protocol was developed in such a way that after a protocol barrier, honest peers will eventually output the previously decided value despite the adversary's behavior.
 The protocol uses secret sharing and polynomial commitments to create shares of a local random number and distributed them among the peers.
 With the polynomial commitment, a peer is able to verify if the share is valid without revealing information of the secret.
 When all their verifications are made each peer sends that information to the others, at the end of this phase, each peer should know all the validations done by the others.
 After this stage, all nodes can recover the secrets via Lagrange interpolation.
 Finally, the random number is generated through a \texttt{xor} operation with the different recovered secrets.
-
-%We can use this algorithm to decide in a secure and distributed way which random configuration will replace other.
-
 
 
 \paragraph{Distributed Storage.}
@@ -313,9 +311,21 @@ The last major modification that we have identified is the storage location.
 In a centralized way, the storage is a single database that is accessed by the controller.
 A strawman solution would use full replication of the pool and each \emph{Controller Proxy} would wait for $f+1$ responses (the actual replica image and a cryptographic hash of the image to verify).
 However, this solution is not resource efficient as it requires that all replica images be replicated on all \emph{Controller Replicas}.
-A more sophisticated solution would take advantage of erasure codes with secret sharing, this approach minimizes the use of resources, as each \emph{Controller Replica} would store only parts of the complete image.
+A more sophisticated solution would take advantage of erasure codes with secret sharing.
+This approach would minimize the use of resources, as each \emph{Controller Replica} would store only parts of the complete.
 Moreover, it would simplify the recovery of these replicas as they would only need to recover parts of the original pool instead of the complete pool.
-Nevertheless, this approach complicates the \emph{Controller Proxy} as it needs to rebuild the blocks and verify them.
+Nevertheless, this approach implies additional complexity on the \emph{Controller Proxy} as it needs to rebuild the blocks and verify them.
+
+
+\paragraph{Deterministic Image Patching.}
+One of the main problems that the replicated solution brings is to guarantee that the images are loaded in a deterministic way.
+\gls{smr} requires that the replicas start from the same state and apply the same operations to the state in such a way that the replicas reply with the same answers to the clients.
+That said, a problem is raised as it is a challenge to create \gls{vm} images that are equal.
+A primary approach would be to guarantee that in a setup phase all the \emph{Controller replicas} have a copy of the \gls{vm} images distributed in a secure way. 
+However, once a replica is patched in the background it becomes difficult to guarantee that the images remain equal across the \emph{Controller replicas}.
+Therefore, once a \emph{Controller proxy} that is responsible to load a \gls{vm} (in the \emph{Execution plane}) cannot vote which image is correct as they are different among the (even correct) \emph{Controller replicas} due to the patches.
+
+
 
 
 \section{Evaluation}

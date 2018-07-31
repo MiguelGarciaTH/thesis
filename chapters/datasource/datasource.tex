@@ -36,8 +36,8 @@ The \gls{cvss}~\cite{cvss} calculates the vulnerability severity considering sev
 We developed a program that collects, parses and inserts the \gls{xml} data feeds into an \gls{sql} database, deployed with a custom schema to group vulnerabilities by affected products and versions.
 
 \paragraph{Chosen Products.}
-In this thesis, we are mostly interested in \gls{ots} components as they allow us to understand the correlation between vulnerabilities and products. 
-Contrary to automatic diversity mechanisms that need testing to assess the vulnerability correlation.
+In this thesis, we are mostly interested in \gls{ots} components. 
+Contrary to automatic diversity mechanisms that needs testing to assess the vulnerability correlation, \gls{ots} diversity can be supported by data evidence to understand the correlation between vulnerabilities and products. 
 In particular, we focus on the diversity of \glspl{os} (not only the kernel but the whole product) for three fundamental reasons: (1) by far, most of the replica’s code is the \gls{os}; (2) such size and importance, make \glspl{os} a valuable target, with new vulnerabilities and exploits being discovered every day; and (3) there are many options of \glspl{os} that can be used.
 
 

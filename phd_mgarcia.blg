@@ -15,36 +15,36 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-You're missing a field name---line 257 of file chapters/references/references.bib
+You're missing a field name---line 254 of file chapters/references/references.bib
  : 
  : % author = {Rodrigues, Rodrigo and Castro, Miguel and Liskov, Barbara},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 868 of file chapters/references/references.bib
- :  
- :  month=sep,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 1541 of file chapters/references/references.bib
+Warning--string name "sept" is undefined
+--line 392 of file chapters/references/references.bib
+Repeated entry---line 1548 of file chapters/references/references.bib
  : @inproceedings{Xu:2017
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1558 of file chapters/references/references.bib
+Repeated entry---line 1565 of file chapters/references/references.bib
  : @inproceedings {Xu:2017
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1593 of file chapters/references/references.bib
+Repeated entry---line 1584 of file chapters/references/references.bib
+ : @inproceedings{Kim:2017
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1600 of file chapters/references/references.bib
  : @inproceedings{Allodi:2017
  :                           ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "Chauhan:2011" isn't style-file defined
---line 1914 of file chapters/references/references.bib
-I was expecting a `,' or a `}'---line 1929 of file chapters/references/references.bib
+--line 1947 of file chapters/references/references.bib
+I was expecting a `,' or a `}'---line 1962 of file chapters/references/references.bib
  :  
  :  note = {Accessed: 2017-10-17}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
 Name 1 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
 while executing---line 1049 of file abbrv.bst
 Name 2 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
@@ -98,45 +98,45 @@ Name 12 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D
 while executing---line 1090 of file abbrv.bst
 Warning--empty chapter and pages in Verissimo:2003
 Warning--empty booktitle in Vianello:2013
-You've used 177 entries,
+You've used 180 entries,
             2118 wiz_defined-function locations,
-            1430 strings with 36017 characters,
-and the built_in function-call counts, 59259 in all, are:
-= -- 5100
-> -- 3824
+            1443 strings with 36402 characters,
+and the built_in function-call counts, 59967 in all, are:
+= -- 5168
+> -- 3860
 < -- 2
-+ -- 1513
-- -- 1334
-* -- 4341
-:= -- 10090
-add.period$ -- 547
-call.type$ -- 177
-change.case$ -- 1195
++ -- 1528
+- -- 1346
+* -- 4374
+:= -- 10213
+add.period$ -- 558
+call.type$ -- 180
+change.case$ -- 1210
 chr.to.int$ -- 0
-cite$ -- 182
-duplicate$ -- 2150
-empty$ -- 4693
-format.name$ -- 1334
-if$ -- 12078
+cite$ -- 185
+duplicate$ -- 2172
+empty$ -- 4755
+format.name$ -- 1346
+if$ -- 12227
 int.to.chr$ -- 0
-int.to.str$ -- 177
+int.to.str$ -- 180
 missing$ -- 151
-newline$ -- 904
-num.names$ -- 348
-pop$ -- 1686
+newline$ -- 921
+num.names$ -- 354
+pop$ -- 1713
 preamble$ -- 1
-purify$ -- 1021
+purify$ -- 1033
 quote$ -- 0
-skip$ -- 1243
+skip$ -- 1261
 stack$ -- 0
-substring$ -- 1737
-swap$ -- 288
+substring$ -- 1738
+swap$ -- 291
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 700
+type$ -- 712
 warning$ -- 5
-while$ -- 416
-width$ -- 180
-write$ -- 1840
+while$ -- 424
+width$ -- 183
+write$ -- 1874
 (There were 30 error messages)

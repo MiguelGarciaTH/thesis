@@ -27,13 +27,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces \textsc {Lazarus}\xspace architecture.\relax }}{69}{figure.caption.85}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Distributed \textsc {Lazarus}\xspace architecture.\relax }}{76}{figure.caption.88}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/replying) for homogeneous OSes configurations.\relax }}{79}{figure.caption.92}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/replying) for homogeneous OSes configurations.\relax }}{80}{figure.caption.92}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Microbenchmark for 0/0 and 1024/1024 (request/reply) for three diverse OS configurations.\relax }}{80}{figure.caption.94}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces KVS performance with \textsc {Lazarus}\xspace -triggered reconfigurations on a 50/50 YCSB workload and 1kB-values.\relax }}{81}{figure.caption.96}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KVS state size $\approx 30$MBs.}}}{81}{subfigure.5.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KVS state size $\approx 60$MBs.}}}{81}{subfigure.5.2}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces OSes boot times (seconds).\relax }}{82}{figure.caption.98}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Different BFT applications running in the bare metal, fastest and slowest OS configurations.\relax }}{83}{figure.caption.100}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Different BFT applications running in the bare metal, fastest and slowest OS configurations.\relax }}{84}{figure.caption.100}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Architecture of a state-of-the-art replicated firewall.\relax }}{87}{figure.caption.105}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Effect of a DoS attack (initiated at second 50) on the latency and throughput of the intrusion-tolerant firewall architecture displayed in Figure \ref {fig:traditional}.\relax }}{88}{figure.caption.106}

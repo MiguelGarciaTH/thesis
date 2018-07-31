@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.3.5)  26 JUL 2018 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.3.5)  30 JUL 2018 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2119,16 +2119,16 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface .
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 
+l.30 
       [1
 
 
@@ -2137,37 +2137,33 @@ l.28
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 
-      [2]pdfTeX warning (ext4): destination with the same identifier (name{page
-.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.86 
-      [3]
-Underfull \vbox (badness 1603) has occurred while \output is active []
+l.55 
+      [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.129 
+l.92 
+      [3]pdfTeX warning (ext4): destination with the same identifier (name{page
+.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.123 
        [4] [5]
-Overfull \hbox (11.02304pt too wide) in paragraph at lines 178--179
-[][] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
+Overfull \hbox (11.02304pt too wide) in paragraph at lines 201--202
+[][] 
+ []
+
+[7]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/b/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-)
-Underfull \vbox (badness 3989) has occurred while \output is active []
-
- [7]
-[8]
+) [8]
 \openout2 = `chapters/relatedwork/related_work.aux'.
 
  (./chapters/relatedwork/related_work.tex
@@ -2190,7 +2186,7 @@ Underfull \vbox (badness 1728) has occurred while \output is active []
 
 pdfTeX warning: pdflatex (file ./images/images/bft.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<images/images/bft.pdf, id=1034, 609.27625pt x 333.245pt>
+<images/images/bft.pdf, id=1059, 609.27625pt x 333.245pt>
 File: images/images/bft.pdf Graphic file (type pdf)
 
 <use images/images/bft.pdf>
@@ -2211,11 +2207,11 @@ Package microtype Info: Loading generic settings for font family
 Underfull \vbox (badness 7777) has occurred while \output is active []
 
  [22]
-[23] [24] [25] [26]
+[23] [24] [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-[28] [29] [30]) [31]
+ [26]
+[27] [28] [29] [30]) [31]
 \openout2 = `chapters/datasource/datasource.aux'.
 
  (./chapters/datasource/datasource.tex [32
@@ -2225,11 +2221,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 chapter 3.
-[33] [34] [35]
-Underfull \vbox (badness 1281) has occurred while \output is active []
-
- [36]
-<images/gnuplot/spe/top/top.pdf, id=1570, 361.35pt x 126.4725pt>
+[33] [34] [35] [36]
+<images/gnuplot/spe/top/top.pdf, id=1598, 361.35pt x 126.4725pt>
 File: images/gnuplot/spe/top/top.pdf Graphic file (type pdf)
 
 <use images/gnuplot/spe/top/top.pdf>
@@ -2302,7 +2295,7 @@ Overfull \hbox (3.45462pt too wide) in paragraph at lines 431--431
  []
 
 
-<images/images/grayscale_ven_dia_one_fig_update_a.pdf, id=1743, 540.5796pt x 41
+<images/images/grayscale_ven_dia_one_fig_update_a.pdf, id=1770, 540.5796pt x 41
 6.2752pt>
 File: images/images/grayscale_ven_dia_one_fig_update_a.pdf Graphic file (type p
 df)
@@ -2374,7 +2367,7 @@ Overfull \hbox (4.99763pt too wide) in paragraph at lines 548--548
  []
 
 [46]
-<images/images/grayscale_ven_dia_one_fig_update_b.pdf, id=1797, 539.85693pt x 4
+<images/images/grayscale_ven_dia_one_fig_update_b.pdf, id=1824, 539.85693pt x 4
 20.6114pt>
 File: images/images/grayscale_ven_dia_one_fig_update_b.pdf Graphic file (type p
 df)
@@ -2402,25 +2395,25 @@ chapter 4.
 
 LaTeX Warning: Reference `sec:design' on page 55 undefined on input line 30.
 
-[55] <images/images/overview.pdf, id=1945, 646.415pt x 221.82875pt>
+[55] <images/images/overview.pdf, id=1972, 646.415pt x 221.82875pt>
 File: images/images/overview.pdf Graphic file (type pdf)
 
 <use images/images/overview.pdf>
 Package pdftex.def Info: images/images/overview.pdf used on input line 50.
 (pdftex.def)             Requested size: 276.81505pt x 94.99185pt.
+ [56 <./images/images/overview.pdf>]
 
+LaTeX Warning: Reference `' on page 57 undefined on input line 75.
 
-LaTeX Warning: Reference `' on page 56 undefined on input line 75.
-
-
-Underfull \vbox (badness 1648) has occurred while \output is active []
-
- [56 <./images/images/overview.pdf>] [57]
+[57]
 
 LaTeX Warning: Reference `chap:data_source' on page 58 undefined on input line 
 122.
 
-[58]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
 Underfull \hbox (badness 10000) in paragraph at lines 153--153
 [][][][]$\T1/pcr/m/n/9 https : / / www . oracle . com / technetwork / topics / 
 security /
@@ -2450,12 +2443,9 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 202--230
  []
 
 
-Underfull \vbox (badness 2671) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [60]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
+[60] [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62]
@@ -2463,7 +2453,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: Reference `sec:replica' on page 63 undefined on input line 387.
 
 [63]
-<images/gnuplot/executions_new/execution.pdf, id=2348, 361.35pt x 126.4725pt>
+<images/gnuplot/executions_new/execution.pdf, id=2374, 361.35pt x 126.4725pt>
 File: images/gnuplot/executions_new/execution.pdf Graphic file (type pdf)
 
 <use images/gnuplot/executions_new/execution.pdf>
@@ -2475,7 +2465,7 @@ put line 437.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [64]
-<images/gnuplot/score/score_random_all.pdf, id=2360, 361.35pt x 100.375pt>
+<images/gnuplot/score/score_random_all.pdf, id=2387, 361.35pt x 100.375pt>
 File: images/gnuplot/score/score_random_all.pdf Graphic file (type pdf)
 
 <use images/gnuplot/score/score_random_all.pdf>
@@ -2483,7 +2473,7 @@ Package pdftex.def Info: images/gnuplot/score/score_random_all.pdf used on inpu
 t line 461.
 (pdftex.def)             Requested size: 197.7259pt x 54.92459pt.
 
-<images/gnuplot/score/score_final_all.pdf, id=2361, 361.35pt x 100.375pt>
+<images/gnuplot/score/score_final_all.pdf, id=2388, 361.35pt x 100.375pt>
 File: images/gnuplot/score/score_final_all.pdf Graphic file (type pdf)
 
 <use images/gnuplot/score/score_final_all.pdf>
@@ -2503,7 +2493,7 @@ spreads-across-the-globe-makes-organizations-
  []
 
 
-<images/gnuplot/special_vulns/execution-special.pdf, id=2400, 361.35pt x 126.47
+<images/gnuplot/special_vulns/execution-special.pdf, id=2426, 361.35pt x 126.47
 25pt>
 File: images/gnuplot/special_vulns/execution-special.pdf Graphic file (type pdf
 )
@@ -2526,114 +2516,114 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 chapter 5.
-<images/images/architecture_new.pdf, id=2436, 568.1225pt x 279.0425pt>
+<images/images/architecture_new.pdf, id=2462, 568.1225pt x 279.0425pt>
 File: images/images/architecture_new.pdf Graphic file (type pdf)
 
 <use images/images/architecture_new.pdf>
 Package pdftex.def Info: images/images/architecture_new.pdf used on input line 
-24.
+25.
 (pdftex.def)             Requested size: 355.9042pt x 174.81413pt.
+
+Underfull \vbox (badness 1831) has occurred while \output is active []
+
  [69 <./images/images/architecture_new.pdf>]
 
-LaTeX Warning: Reference `sec:details' on page 70 undefined on input line 50.
+LaTeX Warning: Reference `sec:details' on page 70 undefined on input line 51.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
 [70]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 70.
+nput line 71.
  [71] [72] [73] [74]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
+
+Underfull \vbox (badness 4084) has occurred while \output is active []
+
  [75]
-<images/images/lazarus_distributed.pdf, id=2986, 515.9275pt x 311.1625pt>
+<images/images/lazarus_distributed.pdf, id=3013, 515.9275pt x 311.1625pt>
 File: images/images/lazarus_distributed.pdf Graphic file (type pdf)
 
 <use images/images/lazarus_distributed.pdf>
 Package pdftex.def Info: images/images/lazarus_distributed.pdf used on input li
-ne 258.
+ne 259.
 (pdftex.def)             Requested size: 276.81505pt x 166.95695pt.
- [76 <./images/images/lazarus_distributed.pdf>]
+ [76 <./images/images/lazarus_distributed.pdf>] [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77]
-Underfull \vbox (badness 2828) has occurred while \output is active []
-
  [78]
-<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=3141, 361.35pt x 75.281
+<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=3171, 361.35pt x 75.281
 25pt>
 File: images/gnuplot/vagrant/runs_new_new/throughput.pdf Graphic file (type pdf
 )
  <use images/gnuplot/vagrant/runs_new_new/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_new_new/throughput.pdf use
-d on input line 399.
+d on input line 409.
 (pdftex.def)             Requested size: 395.45181pt x 82.38689pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf>]
-<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=3156, 361.35pt x 126.
+ [79]
+<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=3180, 361.35pt x 126.
 4725pt>
 File: images/gnuplot/vagrant/runs_diversity/throughput.pdf Graphic file (type p
 df)
  <use images/gnuplot/vagrant/runs_diversity/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_diversity/throughput.pdf u
-sed on input line 414.
+sed on input line 424.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 
-LaTeX Warning: Reference `sec:discussion' on page 80 undefined on input line 42
+LaTeX Warning: Reference `sec:discussion' on page 80 undefined on input line 43
 7.
 
-
-Underfull \vbox (badness 1688) has occurred while \output is active []
-
- [80 <./images/gnuplot/vagrant/runs_diversity/throughput.pdf>]
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf, id=3181
+[80 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf> <./images/gnuplot/va
+grant/runs_diversity/throughput.pdf>]
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf, id=3211
 , 180.675pt x 25.09375pt>
 File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf Gra
 phic file (type pdf)
 
 <use images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state10mbs.pdf used on input line 443.
+_state10mbs.pdf used on input line 453.
 (pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
 
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf, id=3182
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf, id=3212
 , 180.675pt x 25.09375pt>
 File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf Gra
 phic file (type pdf)
 
 <use images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state50mbs.pdf used on input line 445.
+_state50mbs.pdf used on input line 455.
 (pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
 
-<images/gnuplot/vagrant/updown/boot.pdf, id=3191, 361.35pt x 163.61125pt>
+[81 <./images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf> <
+./images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>]
+<images/gnuplot/vagrant/updown/boot.pdf, id=3244, 361.35pt x 163.61125pt>
 File: images/gnuplot/vagrant/updown/boot.pdf Graphic file (type pdf)
 
 <use images/gnuplot/vagrant/updown/boot.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/updown/boot.pdf used on input l
-ine 469.
+ine 479.
 (pdftex.def)             Requested size: 316.36266pt x 143.24187pt.
- [81 <./images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf> 
-<./images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>]
-Underfull \vbox (badness 1590) has occurred while \output is active []
-
  [82 <./images/gnuplot/vagrant/updown/boot.pdf>]
-<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3248, 361.35pt x 100.375pt
+<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3278, 361.35pt x 100.375pt
 >
 File: images/gnuplot/vagrant/runs_apps/throughput.pdf Graphic file (type pdf)
  <use images/gnuplot/vagrant/runs_apps/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_apps/throughput.pdf used o
-n input line 522.
+n input line 532.
 (pdftex.def)             Requested size: 395.45181pt x 109.8492pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2573) has occurred while \output is active []
 
- [83 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]) [84]
+ [83])
+[84 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]
 \openout2 = `chapters/sieveq/sieveq.aux'.
 
 
@@ -2644,7 +2634,7 @@ chapter 6.
 
 
 
-] <images/images/arch_traditional.pdf, id=3304, 647.41875pt x 199.24437pt>
+] <images/images/arch_traditional.pdf, id=3334, 647.41875pt x 199.24437pt>
 File: images/images/arch_traditional.pdf Graphic file (type pdf)
 
 <use images/images/arch_traditional.pdf>
@@ -2652,7 +2642,7 @@ Package pdftex.def Info: images/images/arch_traditional.pdf used on input line
 81.
 (pdftex.def)             Requested size: 316.36266pt x 97.36002pt.
  [86] [87 <./images/images/arch_traditional.pdf>]
-<images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf, id=3337, 433.62pt
+<images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf, id=3367, 433.62pt
  x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf Graphic file 
 (type pdf)
@@ -2662,7 +2652,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_tradiotional_attac
 k.pdf used on input line 118.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf, id=3338,
+<images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf, id=3368,
  433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf Grap
 hic file (type pdf)
@@ -2677,7 +2667,7 @@ Package microtype Info: Character `029' is missing
 
 [88 <./images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf> <./images/g
 nuplot/sieveq/plots/server_throughput_traditional_attack.pdf>] [89]
-<images/images/arch.pdf, id=3369, 714.16812pt x 218.8175pt>
+<images/images/arch.pdf, id=3399, 714.16812pt x 218.8175pt>
 File: images/images/arch.pdf Graphic file (type pdf)
 
 <use images/images/arch.pdf>
@@ -2697,7 +2687,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 331.
 
-[95] <images/images/filtering_steps_1.pdf, id=3437, 344.28625pt x 531.48563pt>
+[95] <images/images/filtering_steps_1.pdf, id=3468, 344.28625pt x 531.48563pt>
 File: images/images/filtering_steps_1.pdf Graphic file (type pdf)
 
 <use images/images/filtering_steps_1.pdf>
@@ -2723,7 +2713,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning: pdflatex (file ./images/images/testbed1.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<images/images/testbed1.pdf, id=3571, 428.82208pt x 190.57799pt>
+<images/images/testbed1.pdf, id=3601, 428.82208pt x 190.57799pt>
 File: images/images/testbed1.pdf Graphic file (type pdf)
 
 <use images/images/testbed1.pdf>
@@ -2735,7 +2725,7 @@ Underfull \vbox (badness 1270) has occurred while \output is active []
  [106]
 [107 <./images/images/testbed1.pdf, page is rotated 90 degrees>]
 <images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf, id
-=3647, 578.16pt x 151.56625pt>
+=3677, 578.16pt x 151.56625pt>
 File: images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pd
 f Graphic file (type pdf)
 
@@ -2750,7 +2740,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [108 <./images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.
 pdf>] [109]
-<images/gnuplot/sieveq/new_plot_fw/fw.pdf, id=3688, 361.35pt x 126.4725pt>
+<images/gnuplot/sieveq/new_plot_fw/fw.pdf, id=3719, 361.35pt x 126.4725pt>
 File: images/gnuplot/sieveq/new_plot_fw/fw.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_plot_fw/fw.pdf>
@@ -2758,7 +2748,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/new_plot_fw/fw.pdf used on input
  line 894.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
-<images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf, id=3695, 433.62pt x
+<images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf, id=3726, 433.62pt x
  252.945pt>
 File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf Graphic file (t
 ype pdf)
@@ -2767,7 +2757,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.
 pdf used on input line 914.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_normal.pdf, id=3696, 433.62pt x 
+<images/gnuplot/sieveq/plots/server_throughput_normal.pdf, id=3727, 433.62pt x 
 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_normal.pdf Graphic file (ty
 pe pdf)
@@ -2780,8 +2770,8 @@ df used on input line 916.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [110 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
-<images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=371
-5, 433.62pt x 252.945pt>
+<images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=374
+6, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf Gr
 aphic file (type pdf)
 
@@ -2790,7 +2780,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_
 under_attack.pdf used on input line 932.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_attack.pdf, id=3716, 433.62pt x 
+<images/gnuplot/sieveq/plots/server_throughput_attack.pdf, id=3747, 433.62pt x 
 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_attack.pdf Graphic file (ty
 pe pdf)
@@ -2799,7 +2789,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_attack.p
 df used on input line 934.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf, id=3720
+<images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf, id=3751
 , 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf Gra
 phic file (type pdf)
@@ -2809,7 +2799,7 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_t1000_s500_change_
 with_attack.pdf used on input line 951.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf, id=3721,
+<images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf, id=3752,
  433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf Grap
 hic file (type pdf)
@@ -2830,7 +2820,7 @@ nuplot/sieveq/plots/server_throughput_normal.pdf> <./images/gnuplot/sieveq/plot
 s/latency_normal_t1000_s500_under_attack.pdf> <./images/gnuplot/sieveq/plots/se
 rver_throughput_attack.pdf>]
 <images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_repl
-icas_dos.pdf, id=3757, 433.62pt x 252.945pt>
+icas_dos.pdf, id=3787, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery
 _replicas_dos.pdf Graphic file (type pdf)
 
@@ -2841,7 +2831,7 @@ oughput_no_recovery_replicas_dos.pdf used on input line 975.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_replica
-s_dos.pdf, id=3758, 433.62pt x 252.945pt>
+s_dos.pdf, id=3788, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_re
 plicas_dos.pdf Graphic file (type pdf)
 
@@ -2857,7 +2847,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  <./images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf> <./im
 ages/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replica
 s_dos.pdf> <./images/gnuplot/sieveq/new_internal_recovery/server_throughput_rec
-overy_replicas_dos.pdf>] <images/images/SIEM.pdf, id=3796, 663.47874pt x 278.03
+overy_replicas_dos.pdf>] <images/images/SIEM.pdf, id=3826, 663.47874pt x 278.03
 876pt>
 File: images/images/SIEM.pdf Graphic file (type pdf)
 
@@ -2876,7 +2866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
 iginomica . com / 2016 / 11 / 24 /
  []
 
-<images/gnuplot/sieveq/new_massif/massif.pdf, id=3803, 361.35pt x 100.375pt>
+<images/gnuplot/sieveq/new_massif/massif.pdf, id=3833, 361.35pt x 100.375pt>
 File: images/gnuplot/sieveq/new_massif/massif.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_massif/massif.pdf>
@@ -2979,52 +2969,49 @@ Underfull \vbox (badness 4001) has occurred while \output is active []
 
  [132]
 [133]
-Underfull \hbox (badness 10000) in paragraph at lines 337--342
+Underfull \hbox (badness 10000) in paragraph at lines 349--354
 []\T1/ptm/m/n/10.95 (+20) N. Fal-liere.  Ex-plor-ing Stuxnet's PLC In-fec-tion 
 Pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--342
+Underfull \hbox (badness 10000) in paragraph at lines 349--354
 \T1/ptm/m/n/10.95 (+20) cess.  []$\T1/pcr/m/n/10.95 http : / / www . symantec .
  com / connect / blogs /
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 356--361
+Underfull \hbox (badness 3646) in paragraph at lines 368--373
 []\T1/ptm/m/n/10.95 (+20) B. Free-man.  A New De-fense for Navy Ships: Pro-tec-
 tion from Cy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--361
+Underfull \hbox (badness 10000) in paragraph at lines 368--373
 \T1/ptm/m/n/10.95 (+20) ber At-tacks.  []$\T1/pcr/m/n/10.95 https : / / www . o
 nr . navy . mil / en / Media-[]Center /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--361
+Underfull \hbox (badness 10000) in paragraph at lines 368--373
 \T1/pcr/m/n/10.95 Press-[]Releases / 2015 / RHIMES-[]Cyber-[]Attack-[]Protectio
 n . aspx$[]\T1/ptm/m/n/10.95 (+20) ,
  []
 
-
-Underfull \vbox (badness 2922) has occurred while \output is active []
-
- [134]
-Underfull \hbox (badness 1603) in paragraph at lines 460--464
+[134] [135]
+Underfull \hbox (badness 1603) in paragraph at lines 473--477
 []\T1/ptm/m/n/10.95 (+20) HashiCorp.  Va-grant Cloud.  []$\T1/pcr/m/n/10.95 htt
 ps : / / app . vagrantup . com / boxes /
  []
 
-[135] [136]
-Underfull \hbox (badness 1968) in paragraph at lines 536--543
+[136]
+Underfull \hbox (badness 1968) in paragraph at lines 549--556
 \T1/ptm/m/n/10.95 (+20) Ser-vices.  []$\T1/pcr/m/n/10.95 https : / / software .
  intel . com / sites / default / files /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--543
+Underfull \hbox (badness 10000) in paragraph at lines 549--556
 \T1/pcr/m/n/10.95 managed / ac / 40 / 2016 % 20WW10 % 20sgx % 20provisioning % 
 20and %
  []
@@ -3033,34 +3020,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 536--543
 Underfull \vbox (badness 1231) has occurred while \output is active []
 
  [139]
-Underfull \hbox (badness 2894) in paragraph at lines 757--762
+Underfull \hbox (badness 2894) in paragraph at lines 771--776
 []\T1/ptm/m/n/10.95 (+20) National In-sti-tute of Stan-dards and Tech-nol-ogy. 
  Guide for Con-duct-ing
  []
 
-[140] [141]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [142]
-Underfull \hbox (badness 1442) in paragraph at lines 961--966
+[140] [141] [142]
+Underfull \hbox (badness 1442) in paragraph at lines 975--980
 []\T1/ptm/m/n/10.95 (+20) Symantec.  Drag-on-fly: Cy-beres-pi-onage At-tacks Ag
 ainst En-ergy Sup-pli-ers.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--966
+Underfull \hbox (badness 10000) in paragraph at lines 975--980
 []$\T1/pcr/m/n/10.95 http : / / www . symantec . com / content / en / us / ente
 rprise / media /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--966
+Underfull \hbox (badness 10000) in paragraph at lines 975--980
 \T1/pcr/m/n/10.95 security _ response / whitepapers / Dragonfly _ Threat _ Agai
 nst _
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--987
+[]\T1/ptm/m/n/10.95 (+20) Symantec.  In-ter-net Se-cu-rity Threat Re-port.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--987
+\T1/ptm/m/n/10.95 (+20) https://www.symantec.com/content/dam/symantec/docs/repo
+rts/istr-22-2017-
+ []
+
 [143]
-Underfull \vbox (badness 1231) has occurred while \output is active []
+Underfull \vbox (badness 4001) has occurred while \output is active []
 
  [144])
 AED: lastpage setting LastPage [145]
@@ -3088,11 +3083,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 354.
  ) 
 Here is how much of TeX's memory you used:
- 39024 strings out of 494925
- 684112 string characters out of 6180252
- 957325 words of memory out of 5000000
- 40145 multiletter control sequences out of 15000+600000
- 256734 words of font info for 624 fonts, out of 8000000 for 9000
+ 39051 strings out of 494925
+ 684470 string characters out of 6180252
+ 957377 words of memory out of 5000000
+ 40154 multiletter control sequences out of 15000+600000
+ 257322 words of font info for 631 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  65i,23n,106p,8822b,1999s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
@@ -3113,10 +3108,10 @@ xlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on phd_mgarcia.pdf (172 pages, 5810046 bytes).
+Output written on phd_mgarcia.pdf (172 pages, 5815567 bytes).
 PDF statistics:
- 4585 PDF objects out of 5155 (max. 8388607)
- 4070 compressed objects within 41 object streams
- 727 named destinations out of 1000 (max. 500000)
+ 4618 PDF objects out of 5155 (max. 8388607)
+ 4102 compressed objects within 42 object streams
+ 735 named destinations out of 1000 (max. 500000)
  98713 words of extra memory for PDF output out of 106986 (max. 10000000)
 
