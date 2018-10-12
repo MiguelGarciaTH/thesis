@@ -27,7 +27,7 @@ The accuracy of the solution depends on how well the inputs cover all the behavi
 Model checking is another approach, which abstracts the software code and formally verifies the program invariants.
 However, the most common techniques typically over-simplify the protocols to make them formally verifiable or just use very particular version to verify~\cite{Klein:2009,Chen:2015,Nelson:2017}. 
 Moreover, this process consumes much time, and it is expensive for most of the companies, which makes this method difficult to scale to complex systems~\cite{Giuffrida:2013}.
-For example, an \gls{os} kernel was formally verified~\cite{Klein:2009}, but contrary to the Linux kernel that has more than 20 million lines of code\footnote{Source: https://www.linuxcounter.net/statistics/kernel on 2nd July 2018} this only has 10k lines of code.
+For example, an \gls{os} kernel was formally verified~\cite{Klein:2009}, but contrary to the Linux kernel that has more than 20 million lines of code~\cite{linux_kernel} this only has 10k lines of code.
 
 
 One way to find pieces of code that could harm the correctness of the software is to resort to static vulnerability analyzers.
@@ -47,7 +47,7 @@ The main limitation of fuzzing is the time it takes to perform, as it tries mult
 
 
 There are also solutions that combine some of the previously described techniques like taint analysis and fuzzing.
-For example, concolic testing is a technique that performs symbolic execution along with a concrete execution path~\cite{Kim:2017}. 
+For example, concolic testing is a technique that performs symbolic execution along with a particular execution path~\cite{Kim:2017b}. 
 Therefore, it is more accurate than fuzzing, but it tends to succumb to path explosion.
 Some of these techniques can be combined to take the best of some of the approaches described before~\cite{Stephens:2016}.
 
@@ -122,6 +122,14 @@ The correctness of a \gls{bft} service arises from the existence of a quorum of 
 To tolerate a single replica failure, this sort of system typically must have four replicas. 
 This property holds even in asynchronous systems such as the internet. 
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.7\columnwidth]{images/images/bft.pdf}
+\caption{Byzantine Fault Tolerance protocol overview, where \emph{C} represents a client of a replicated service enumerated by replicas \emph{Ri}.}
+\label{fig:bft}
+\end{center}
+\end{figure}
+
 \textsc{Pbft} implemented a \gls{smr}, therefore, it guarantees that each correct replica executes the same commands, in the same order, and then it produces the same output. 
 In Figure~\ref{fig:bft}, we present an overview of the \textsc{Pbft} protocol that can be summarized as follows:
 A client \emph{(c)} sends a message to all the replicas \emph{(R1-R4)} requesting the execution of some service (or operation).
@@ -139,13 +147,7 @@ Then, each replica verifies its own \gls{mac}.
 The authors validated this \gls{bft} library implementing a Byzantine fault-tolerant file system. 
 The results show that when the workload increases the throughput and latency is nearly the same as a non-replicated system. 
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=.7\columnwidth]{images/images/bft.pdf}
-\caption{Byzantine Fault Tolerance protocol overview, where \emph{C} represents a client of a replicated service enumerated by replicas \emph{Ri}.}
-\label{fig:bft}
-\end{center}
-\end{figure}
+
 
 \textsc{Pbft} good performance encouraged the use of \gls{bft} in common systems, and to develop optimizations to improve \gls{bft} protocols. 
 Since the \textsc{Pbft} proposal, many solutions have been dedicated to improve \gls{bft} protocols in a different manner. 
@@ -201,10 +203,10 @@ In particular, a \emph{state transfer} protocol, which allows that recovered rep
 Additional assumptions were needed to guarantee the \textsc{Pbft} liveness and safety during the recoveries: 
 (i) each replica contains a trusted chip to store its private key, and it can sign and decrypt messages without revealing the key; 
 (ii) the replicas' public keys are stored in a read-only memory, which needs physical access to be modified; 
-and (iii) a watchdog timer is used to avoid human interaction to restart replicas. 
+and (iii) a watchdog timer is used to avoid human interaction to restart replicas.
 The watchdog hands the execution to the recovery monitor, which cannot be interrupted.
 
-An alternative way to \gls{smr} to implement \gls{bft} systems is to resort to quorum systems.
+An alternative way to implement \gls{bft} systems with \gls{smr} is to resort to quorum systems.
 Zhou~\etal{}~\cite{Zhou:2002} presented \textsc{Coca}, a fault-tolerant online certification authority to be deployed both in a local area network and on the internet.
 It also employed proactive recovery to rejuvenate replicas' state including the capacity to refresh the private keys of the replicas.
 The adoption of quorum systems does not require timing assumptions and, contrary to \textsc{Pbft}, \textsc{Coca} did not rely on trusted components.
@@ -254,7 +256,7 @@ Diversity can be implemented in different manners~\cite{Deswarte:1998,Larsen:201
 In particular, it decreases the chances of finding a vulnerability that compromises $f+1$ replicas at the same time~\cite{Castro:2002}.
 In other words, diversity would contribute to avoiding common vulnerabilities among replicas. 
 We present three different approaches to attain diversity: 
-(i) N-version programming consists of designing and/or implementing  different versions from the same specification; 
+(i) N-version programming consists of designing and/or implementing  different versions of the same specification; 
 (ii) Automatic diversity by implementing different memory organization schemes and compiling distinct binary executables (from the same source); 
 and (iii) \gls{ots} diversity comprises the use of different products with similar functionality, but taking advantage of the various implementations that are already available.
 
@@ -289,7 +291,7 @@ Nevertheless, the results show that some system calls when executed in \textsc{V
 The authors also scale out the number of followers, which, as expected, increases the overhead as they are added. 
 Although \textsc{Varan} was purposed for reliability, some principles could be adopted in the security domain after solving some challenges, namely the use of the same address space that would allow return-oriented programming attacks.
 
-\textsc{Bunshin} by Xu~\etal{} works as classic N-version systems, the N variants receive the input execute it and then a voter checks for divergences in the output.
+\textsc{Bunshin} by Xu~\etal{}~\cite{Xu:2017c} works as classic N-version systems, the N variants receive the input execute it and then a voter checks for divergences in the output.
 However, \textsc{Bunshin} does not create real N-versions, in fact, it splits the program into parts, and each part (of each variant) executes some security check. 
 In this way, they can reduce the overheads of typical N-variant solutions as the code is very practically the same while creating different checks that should capture faulty behavior.
 Most of the overhead introduced is due to the variants synchronization before the output voting.
@@ -310,7 +312,7 @@ Moreover, to evaluate automatic diversity is time-consuming and it tends to over
 
 
 \subsection{Off-the-shelf Diversity}
-The previous approaches generate diversity before software’s distribution. 
+The previous approaches generate diversity before the software’s distribution. 
 On the contrary, \gls{ots} diversity does not need pre-distribution of diverse mechanisms. 
 It relies on the existence of different software components that are ready to be used.
 There are plenty of products that provide the same functionality and were developed by distinct vendors. 
@@ -404,7 +406,7 @@ However, \textsc{EnvyFS} performance pays a performance penalty due to waiting f
 In most of the times, it took the sum of the time of the three file systems used.
 
 Diversity has also been adopted to build a malware detector. 
-Xu and Kim~\cite{Xu:2017} introduced \textsc{PlatPal} that analyzes the behavioral discrepancies of malicious document files on different platforms (e.g.,Windows or Macintosh).
+Xu and Kim~\cite{Xu:2017a} introduced \textsc{PlatPal} that analyzes the behavioral discrepancies of malicious document files on different platforms (e.g.,Windows or Macintosh).
 \textsc{PlatPal} loads a file in both systems and monitors the execution traces or crashes. 
 In the end, both systems compare the outputs, and an attack is signaled if divergences are observed.
 The authors focused on a particular application, the Adobe Acrobat Reader.
@@ -437,7 +439,7 @@ In this setting, each replica executed in a Linux \gls{vm}, the recovery watchdo
 
 \paragraph{Summary.} 
 Diversity is becoming one of the building blocks of intrusion tolerance, alongside with \gls{bft} and rejuvenations. 
-We presented few works that already used in some manner diversity in intrusion-tolerant settings. 
+We presented a few works that already used in some manner diversity in intrusion-tolerant settings. 
 Although we do not discard the possibility of employing other diversity techniques, such as randomization, we are more interested in \gls{cots} diversity.
 \gls{cots} diversity allows us to use data that is freely available, to estimate a risk value that measures how vulnerable is each component. 
 
@@ -480,7 +482,7 @@ In some cases, after 30 days of the disclosure, the exploits outnumbered the num
 
 
 A study conducted, by Shahzad~\etal{}~\cite{Shahzad:2012}, analyzed data between 1988 to 2011 from three sources: \gls{nvd}, \gls{osvdb}, and the dataset from Frei and colleagues~\cite{Frei:2006}.
-They collected vulnerabilities that affected popular applications like Internet Explorer, Firefox, and Chrome, and popular \glspl{os} such as Windows, Mac OS X, Solaris and several Linux distributions. 
+They collected vulnerabilities that affected popular applications like Internet Explorer, Firefox, and Chrome, and popular \glspl{os} such as Windows, Mac OS X, Solaris, and several Linux distributions. 
 It was found that 2006 was the peak year for vulnerability disclosures, and since then there was a decrease even with more software products available. 
 However, the complexity of the disclosed vulnerabilities has increased, based on the score of the \gls{cvss}. 
 From their dataset, 2.8\% vulnerabilities have an exploit released before the public disclosure. 
@@ -542,7 +544,7 @@ The experimental results showed that real-world WINE exploits still compromised 
 The median percentage of hosts that have been patched before the exploit was released was at most 14\%.
 Together with the number of shared vulnerable code with different patching delays, these values motivate attackers to re-used already known exploits or to create patched-based exploits~\cite{Brumley:2008}.
 The authors also showed evidence to support the natural intuition that silent or automatic updates reduce the survivability of vulnerabilities. 
-They also performed an analysis on three different user profiles, which showed that security analysts were more careful on patching software than software developers or regular users.
+They also performed an analysis of three different user profiles, which showed that security analysts were more careful on patching software than software developers or regular users.
 
 
 Machine-learning techniques were employed, by Bozorgi~\etal{}~\cite{Bozorgi:2010}, to classify vulnerabilities and predict future exploits.
@@ -573,7 +575,7 @@ In the different and unusual data sources, Sabottke~\etal{}~\cite{Sabottke:2015}
 A quantitative and qualitative exploration was carried out over the vulnerability-related information disseminated on Twitter.
 A Twitter-based exploit detector was developed to provide an adequate response in a such short time frame. 
 This allows the security community to foresee the exploit activity before the information reaches the \emph{de facto} disclosure data sources, like \gls{nvd} and ExploitDB.
-However, to complement and strengthen their information results, the paper also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories and Symantec WINE. 
+However, to complement and strengthen their information results, the paper also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories, and Symantec WINE. 
 Real-world exploits were distinguished from the proof-of-concept exploits, as the latter are by-products of the disclosure process. 
 The real-world exploits typically are not known until a critical zero-day attack occurs. 
 The authors used \gls{svm} to classify exploits in the social media and tested their robustness to attacks, i.e., if a powerful attack could manipulate the information on Twitter with false accounts and false data. 
@@ -665,7 +667,7 @@ The system collected and audited data from the system components to evaluate the
 Then, the different configuration dependencies were analyzed and ranked in risk groups as a way to see how the different dependencies made the system fail.
 The main limitation of this work was that it depended on the will of cloud providers to share private data to be analyzed by external agents.
 The authors evaluated the efficacy of their solution on finding the minimal risk groups (with fewer dependencies) on sampling data to make faster decisions while losing some accuracy.
-The work's main focus was the reliability of cloud systems, thus no evaluation was done on vulnerabilities of such systems.
+The work's main focus was the reliability of cloud systems, thus no evaluation was done on the vulnerabilities of such systems.
 
 Seondong~\etal{}~\cite{Seondong:2017} described a system that used data from \gls{nvd} to select the best configuration of diverse \glspl{os} and web servers.
 The algorithm minimized the \gls{cvss} of shared vulnerabilities among the various software components.

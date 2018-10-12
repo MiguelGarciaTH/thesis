@@ -82,28 +82,27 @@
 \newcommand{\configurationClean}{System configuration}
 
 
-\newcommand{\systemformula}{risk\xspace}
-\newcommand{\pairformula}{common\xspace}
-\newcommand{\vulnerabilityformula}{score\xspace}
-
-
 \SetKwData{RS}{\texttt{POOL}}
 \SetKwData{ES}{\texttt{CONFIG}}
+\SetKwData{SC}{\texttt{RAND\_CONFIG}}
 \SetKwData{PS}{\texttt{CANDIDATES}}
 \SetKwData{RM}{\texttt{REMOVABLES}}
 \SetKwData{QS}{\texttt{QUARANTINE}}
+\SetKwData{COMB}{\texttt{COMB}}
+\SetKwData{COMBS}{\texttt{COMBINATIONS}}
 \SetKwData{MAX}{\texttt{MAXIMALS}}
 \SetKwData{N}{\texttt{N}}
 \SetKwData{r}{\texttt{r}}
 \SetKwData{K}{\texttt{K}}
 \SetKwData{toRemove}{\texttt{toRemove}}
+\SetKwData{toJoin}{\texttt{toJoin}}
 \SetKwFunction{Rand}{rand}
-\SetKwFunction{Size}{size}
-\SetKwFunction{Remove}{rm}
+\SetKwFunction{Monitor}{Monitor}
+\SetKwFunction{reset}{resetSets}
+\SetKwFunction{patched}{isPatched}
+\SetKwFunction{score}{score}
+\SetKwFunction{updatepool}{updatePool}
+\SetKwFunction{oldestVulnerability}{scoreAVG}
 \SetKwFunction{Risk}{risk}
-\SetKwFunction{Common}{common}
-\SetKwFunction{Older}{older}
-\SetKwFunction{healing}{init\_healing}
-\SetKwFunction{Inc}{increment}
-\SetKwFunction{Dec}{decrement}
+\SetKwFunction{Replace}{updateSets}
 \SetKwProg{Fn}{Function}{}{}

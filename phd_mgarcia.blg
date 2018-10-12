@@ -15,128 +15,44 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-You're missing a field name---line 254 of file chapters/references/references.bib
- : 
- : % author = {Rodrigues, Rodrigo and Castro, Miguel and Liskov, Barbara},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--string name "sept" is undefined
---line 392 of file chapters/references/references.bib
-Repeated entry---line 1548 of file chapters/references/references.bib
- : @inproceedings{Xu:2017
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1565 of file chapters/references/references.bib
- : @inproceedings {Xu:2017
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1584 of file chapters/references/references.bib
- : @inproceedings{Kim:2017
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1600 of file chapters/references/references.bib
- : @inproceedings{Allodi:2017
- :                           ,
-I'm skipping whatever remains of this entry
-Warning--entry type for "Chauhan:2011" isn't style-file defined
---line 1947 of file chapters/references/references.bib
-I was expecting a `,' or a `}'---line 1962 of file chapters/references/references.bib
- :  
- :  note = {Accessed: 2017-10-17}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Name 1 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 2 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 3 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 4 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 5 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 6 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 7 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 8 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 9 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 10 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 11 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Name 12 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1049 of file abbrv.bst
-Warning--to sort, need author or key in juniper
-Warning--to sort, need author or key in paloalto
-Warning--to sort, need author or key in sonicwall
-Name 1 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 2 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 3 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 4 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 5 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 6 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 7 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 8 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 9 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 10 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 11 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Name 12 in "G. Klein, and K. Elphinstone, and G. Heiser, and J. Andronick, and D. Cock, and P. Derrin, and D. Elkaduwe, and K. Engelhardt, and R. Kolanski, and M. Norrish, and T. Sewell, and H. Tuch, and S. Winwood" has a comma at the end for entry Klein:2009
-while executing---line 1090 of file abbrv.bst
-Warning--empty chapter and pages in Verissimo:2003
-Warning--empty booktitle in Vianello:2013
-You've used 180 entries,
+You've used 198 entries,
             2118 wiz_defined-function locations,
-            1443 strings with 36402 characters,
-and the built_in function-call counts, 59967 in all, are:
-= -- 5168
-> -- 3860
-< -- 2
-+ -- 1528
-- -- 1346
-* -- 4374
-:= -- 10213
-add.period$ -- 558
-call.type$ -- 180
-change.case$ -- 1210
+            1525 strings with 39003 characters,
+and the built_in function-call counts, 63981 in all, are:
+= -- 5553
+> -- 4005
+< -- 3
++ -- 1588
+- -- 1388
+* -- 4449
+:= -- 10910
+add.period$ -- 637
+call.type$ -- 198
+change.case$ -- 1285
 chr.to.int$ -- 0
-cite$ -- 185
-duplicate$ -- 2172
-empty$ -- 4755
-format.name$ -- 1346
-if$ -- 12227
+cite$ -- 198
+duplicate$ -- 2308
+empty$ -- 5163
+format.name$ -- 1388
+if$ -- 13101
 int.to.chr$ -- 0
-int.to.str$ -- 180
-missing$ -- 151
-newline$ -- 921
-num.names$ -- 354
-pop$ -- 1713
+int.to.str$ -- 198
+missing$ -- 152
+newline$ -- 1036
+num.names$ -- 396
+pop$ -- 1933
 preamble$ -- 1
-purify$ -- 1033
+purify$ -- 1090
 quote$ -- 0
-skip$ -- 1261
+skip$ -- 1327
 stack$ -- 0
-substring$ -- 1738
-swap$ -- 291
-text.length$ -- 2
+substring$ -- 1840
+swap$ -- 312
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 712
-warning$ -- 5
-while$ -- 424
-width$ -- 183
-write$ -- 1874
-(There were 30 error messages)
+type$ -- 784
+warning$ -- 0
+while$ -- 467
+width$ -- 201
+write$ -- 2067

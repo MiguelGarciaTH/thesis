@@ -4,7 +4,7 @@
 \section{Conclusions}
 The correctness of \gls{bft} systems is tied to the assumption that replicas fail independently. 
 Otherwise, once a replica is compromised, the next $f+1$ replicas would be compromised within virtually the same time.
-In this thesis, we addressed the long-standing open problem of many works over the past 20 years of \gls{bft} replication research: evaluate, select, and manage the failure independence (through diversity) of \gls{bft} systems.
+In this thesis, we addressed the long-standing open problem of many works over the past 20 years of \gls{bft} replication research: evaluate, select, and manage the failure independence (through diversity) of \gls{bft} replicas.
 That said, we developed a control plane that maximizes the failure independence of \gls{bft} replicated nodes practically and effectively to make them more resilient to malicious adversaries.
 
 
@@ -17,7 +17,7 @@ All strategies delivered the same best combination of \glspl{os}, and this empha
 
 Despite the good results that we have achieved in the previous contribution, we have identified some problems that lead us to pursue further analysis.
 Namely, our and a few other works that used \gls{nvd} as a primary data source were missing essential data. 
-In particular, \gls{nvd} does not report all producs that are affected by a particular vulnerability.
+In particular, \gls{nvd} does not report all products that are affected by a particular vulnerability.
 We addressed this issue by using clustering techniques to group similar vulnerabilities.
 Moreover, we added other data sources with other relevant data (that \gls{nvd} does not provide) to enrich our data.
 We devised a new metric that uses the vulnerability attributes provided by \gls{nvd} and \gls{cvss}, and other attributes added from additional \gls{osint} sources. 
@@ -53,7 +53,7 @@ In Chapter~\ref{chap:related_work}, we have briefly described a few prevention t
 Although we did not address them in this thesis, here, we initiate the discussion on how to integrate such techniques in \system.
 The \system replicas have two states were they are dormant when they are in quarantine or before they are deployed in the execution plane.
 Thus, this time could be used to apply a battery of automatic procedures (e.g., vulnerability detectors) that would (1) detect additional weaknesses, which could be reported to \gls{nvd}, and (2) remediate these weaknesses with automatic mechanisms like automatic patching~\cite{Huang:2016}.
-Moreover, although limited to open source products, it could use vulnerable code clone detectors, that would indicate potentially shared vulnerabilities~\cite{Kim:2017,Xu:2017}.
+Moreover, although limited to open source products, it could use vulnerable code clone detectors, that would indicate potentially shared vulnerabilities~\cite{Kim:2017a,Xu:2017b}.
 Such mechanisms would decrease the vulnerability surface, especially if common vulnerabilities are detected.
 Although we are most concern with more complex attacks (e.g., \gls{apts}), using automatic attacks~\cite{Hu:2015} could activate some common vulnerabilities before the replicas deployment.
 These would trigger the algorithm to adjust the risk associated with such replicas avoiding their selection.
@@ -64,7 +64,7 @@ These would trigger the algorithm to adjust the risk associated with such replic
 However, it could be extended to monitor other indicators of compromise (e.g., \gls{ip} blacklists) extracted from a much richer set of sources~\cite{Liao:2016,Sabottke:2015}.
 Similarly, \system could additionally use the outputs of \glspl{ids} to assess the \gls{bft} system behavior and trigger replica's reconfigurations in case of need.
 Finally, and exploring a different domain it could be interesting to mine black market data sources to discover new threats that could compromise several replicas~\cite{Allodi:2014}.
-
+However, exploring this path would require natural language processing techniques, and thus which is an entirely different area of research.
 
 \textbf{Virtualization technology:}
 \system paid a performance penalty due to the limitations of the virtualization platform we used (VirtualBox).
@@ -87,6 +87,9 @@ These approaches would reduce the impact of running \glspl{os} that suffer from 
 \note{Discutir isto}
 Our prototype implements the LTU as a trusted component isolated from the rest of the replica in a VM, as many works on hybrid BFT~\cite{Veronese:2013,Roeder:2010,Platania:2014,Sousa:2010,Distler:2011}.
 The recent popularization of trusted computing technologies such as Intel SGX~\cite{sgx}, and its use for implementing efficient BFT replication~\cite{Behl:2017}, open interesting possibilities for using novel hardware to support services like \system on bare metal.
+An alternative solution would be to leverage on the existent rack-server firmware (e.g., Dell's iDRAC~\cite{idrac}) to implement \system in bare metal.
+Nevertheless, the controller firmware will be the local trusted component.
+Such solution would also improve \system performance as it would elimnate the virtualization limitations.
 
 
 

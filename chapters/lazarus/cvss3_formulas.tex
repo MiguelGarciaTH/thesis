@@ -1,0 +1,65 @@
+
+
+\begin{table}[h]
+\begin{center}
+%{\footnotesize
+\begin{tabular}{ c }\hline
+
+\vbox{
+\begin{equation}
+\text{BaseScore} = \begin{cases}
+        0, & \text{if Impact sub score $\leq$ 0} \\
+        \lceil Min(Impact+Exploitability, 10) \rceil, & \text{Scope Unchanged}\\
+        \lceil Min(1.08\times(Impact+Exploitability), 10) \rceil, & \text{Scope Changed}\\
+\end{cases}
+\label{eq:basescore}
+\end{equation}
+}
+\\
+\vbox{
+\begin{equation}
+\text{Impact} = \begin{cases}
+        6.42 \times ISC_{Base}, & \text{Scope Unchanged}\\
+        7.52 \times (ISC_{Base} - 0.029) - 3.25 \times (ISC_{Base} - 0.02), & \text{Scope Changed}\\
+\end{cases}
+\label{eq:impact}
+\end{equation}
+}
+\\
+
+\vbox{
+\begin{equation}
+\text{ISC$_{Base}$} = 1 - ((1 - Impact_{Conf}) \times (1 - Impact_{Integ}) \times (1 - Impact_{Avail}))
+\label{eq:isc}
+\end{equation}
+}
+\\
+
+\vbox{
+\begin{equation}
+\begin{split}
+\text{Exploitability} =\\ 8.22 \times AttackVector \times AttackComplexity \times PrivilegeRequired \times UserInteraction
+\end{split}
+\label{eq:exploitability}
+\end{equation}
+}
+\\
+
+\vbox{
+\begin{equation}
+\text{Temporal} = \lceil BaseScore \times ExploitCodeMaturity \times RemediationLevel \times ReportConfidence \rceil
+\label{eq:exploitability}
+\end{equation}
+}
+\\
+
+
+
+\\ \hline
+\end{tabular}
+%}
+\end{center}
+\end{table}
+
+
+

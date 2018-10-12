@@ -16,7 +16,7 @@
 \contentsline {paragraph}{Vulnerabilities.}{2}{section*.10}
 \contentsline {section}{\numberline {1.2}Objectives and Contributions}{3}{section*.11}
 \contentsline {subsection}{Evidence for Implementing Diversity}{3}{section*.12}
-\contentsline {subsection}{Applying Diversity on BFT Systems}{4}{section*.13}
+\contentsline {subsection}{Applying Diversity on BFT Systems}{3}{section*.13}
 \contentsline {subsection}{BFT Multi-layer Resiliency}{5}{section*.14}
 \contentsline {paragraph}{Non-related contributions.}{7}{section*.14}
 \contentsline {subsection}{Thesis Statement}{7}{section*.15}
@@ -61,90 +61,89 @@
 \contentsline {section}{\numberline {3.2}OS Diversity Study}{36}{section*.40}
 \contentsline {section}{\numberline {3.3}Strategies for OS Diversity Selection}{38}{section*.43}
 \contentsline {subsection}{Common Vulnerability Indicator}{39}{section*.44}
-\contentsline {subsection}{Building Replicated Systems with Diversity}{41}{section*.46}
+\contentsline {subsection}{Building Replicated Systems with Diversity}{40}{section*.46}
 \contentsline {subsection}{Common Vulnerability Count (CVCst)}{42}{section*.47}
 \contentsline {subsection}{Exploring Diversity Across OS Releases}{50}{section*.56}
 \contentsline {section}{\numberline {3.4}Decisions About Deploying Diversity}{52}{section*.58}
 \contentsline {section}{\numberline {3.5}Final Remmarks}{53}{section*.59}
 \contentsline {chapter}{\numberline {4}BFT Diversity Management}{55}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{55}{section*.61}
+\contentsline {section}{\numberline {4.1}Overview}{55}{section*.61}
 \contentsline {section}{\numberline {4.2}System Model}{56}{section*.63}
-\contentsline {section}{\numberline {4.3}Execution Plane}{57}{section*.64}
-\contentsline {section}{\numberline {4.4}Control Plane}{57}{section*.65}
-\contentsline {section}{\numberline {4.5}Diversity of Replicas}{58}{section*.66}
-\contentsline {section}{\numberline {4.6}Diversity-aware Reconfigurations}{59}{section*.67}
-\contentsline {subsection}{Finding Common Vulnerabilities}{59}{section*.68}
-\contentsline {subsection}{Measuring Risk}{60}{section*.70}
-\contentsline {subsection}{Selecting Configurations}{61}{section*.72}
-\contentsline {section}{\numberline {4.7}Evaluation}{63}{section*.73}
-\contentsline {subsection}{Diversity vs Vulnerabilities}{64}{section*.74}
-\contentsline {subsection}{Risk Evaluation}{65}{section*.76}
-\contentsline {subsection}{Diversity vs Attacks}{66}{section*.78}
-\contentsline {section}{\numberline {4.8}Final Remarks}{67}{section*.81}
+\contentsline {section}{\numberline {4.3}Diversity of Replicas}{57}{section*.64}
+\contentsline {section}{\numberline {4.4}Diversity-aware Reconfigurations}{57}{section*.65}
+\contentsline {subsection}{Finding Common Vulnerabilities}{57}{section*.66}
+\contentsline {subsection}{Measuring Risk}{58}{section*.68}
+\contentsline {subsection}{Measuring Configurations Risk}{61}{section*.73}
+\contentsline {subsection}{Selecting Configurations}{62}{section*.75}
+\contentsline {section}{\numberline {4.5}Evaluation}{64}{section*.77}
+\contentsline {subsection}{Diversity vs Vulnerabilities}{65}{section*.78}
+\contentsline {subsection}{Diversity vs Attacks}{66}{section*.80}
+\contentsline {section}{\numberline {4.6}Final Remarks}{68}{section*.83}
 \contentsline {chapter}{\numberline {5}\textsc {Lazarus}\xspace }{69}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementation}{69}{section*.83}
-\contentsline {subsection}{Control Plane}{69}{section*.84}
-\contentsline {paragraph}{Setup.}{70}{figure.caption.85}
-\contentsline {paragraph}{Download.}{71}{lstnumber.5.1.17}
-\contentsline {paragraph}{Deploy and provision.}{71}{lstnumber.5.1.17}
-\contentsline {paragraph}{Command and Control.}{71}{lstnumber.5.1.17}
-\contentsline {subsection}{Clustering}{72}{section*.86}
-\contentsline {paragraph}{1) Data representation}{72}{section*.86}
-\contentsline {paragraph}{2) Data preparation}{73}{lstnumber.5.2.7}
-\contentsline {paragraph}{3) Making clusters}{74}{lstnumber.5.2.7}
-\contentsline {subsection}{Descentralized \textsc {Lazarus}\xspace Version}{75}{section*.87}
-\contentsline {paragraph}{System Model.}{75}{section*.87}
-\contentsline {paragraph}{Architecture.}{76}{section*.87}
-\contentsline {paragraph}{Recovery Protocol.}{76}{figure.caption.88}
-\contentsline {paragraph}{Replica Synchronization Protocol.}{76}{figure.caption.88}
-\contentsline {paragraph}{Distributed Random Generation Protocol.}{77}{figure.caption.88}
-\contentsline {paragraph}{Distributed Storage.}{77}{figure.caption.88}
-\contentsline {paragraph}{Deterministic Image Patching.}{78}{figure.caption.88}
-\contentsline {section}{\numberline {5.2}Evaluation}{78}{section*.89}
-\contentsline {subsection}{Homogeneous Replicas Throughput}{79}{section*.91}
-\contentsline {subsection}{Diverse Replicas Throughput}{80}{section*.93}
-\contentsline {subsection}{Performance During Replicas' Reconfiguration}{81}{section*.95}
-\contentsline {subsection}{Replicas' Booting Time}{82}{section*.97}
-\contentsline {subsection}{Application Benchmarks}{82}{section*.99}
-\contentsline {section}{\numberline {5.3}Final Remarks}{84}{section*.101}
-\contentsline {chapter}{\numberline {6}\textsc {SieveQ}\xspace an Use Case}{85}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{85}{section*.103}
-\contentsline {section}{\numberline {6.2}Intrusion-Tolerant Firewalls}{86}{section*.104}
-\contentsline {section}{\numberline {6.3}Overview of \textsc {SieveQ}\xspace }{88}{section*.107}
-\contentsline {subsection}{Design Principles}{89}{section*.108}
-\contentsline {subsection}{\textsc {SieveQ}\xspace Architecture}{89}{section*.109}
-\contentsline {paragraph}{\emph {Sender-SQ}\xspace .}{90}{figure.caption.110}
-\contentsline {paragraph}{\emph {Pre-SQ}\xspace .}{90}{figure.caption.110}
-\contentsline {paragraph}{\emph {Replica-SQ}\xspace .}{91}{figure.caption.110}
-\contentsline {paragraph}{\emph {Post-SQ}\xspace .}{91}{figure.caption.110}
-\contentsline {paragraph}{Controller.}{91}{figure.caption.110}
-\contentsline {subsection}{Resilience Mechanisms}{91}{section*.111}
-\contentsline {subsection}{System and Threat Model}{92}{section*.112}
-\contentsline {subsection}{Resilience Mechanisms}{93}{section*.113}
-\contentsline {section}{\numberline {6.4}\textsc {SieveQ}\xspace Protocol}{94}{section*.114}
-\contentsline {subsection}{Properties}{95}{section*.115}
-\contentsline {subsection}{Message Transmission}{95}{section*.116}
-\contentsline {paragraph}{\emph {Sender-SQ}\xspace processing}{95}{section*.116}
-\contentsline {paragraph}{\emph {Pre-SQ}\xspace filtering}{96}{figure.caption.117}
-\contentsline {paragraph}{\emph {Replica-SQ}\xspace filtering}{97}{figure.caption.117}
-\contentsline {paragraph}{\emph {Post-SQ}\xspace processing}{98}{equation.6.4.2}
-\contentsline {subsubsection}{Correctness Argument}{99}{AlgoLine.2.13}
-\contentsline {subsection}{Addressing Component Failures}{100}{section*.118}
-\contentsline {subsubsection}{Faulty \emph {Sender-SQ}\xspace }{101}{section*.118}
-\contentsline {subsubsection}{Faulty \emph {Pre-SQ}\xspace }{102}{section*.118}
-\contentsline {subsubsection}{Faulty \emph {Replica-SQ}\xspace }{104}{Item.14}
-\contentsline {section}{\numberline {6.5}Implementation}{105}{section*.119}
-\contentsline {section}{\numberline {6.6}Evaluation}{106}{section*.120}
-\contentsline {subsection}{Testbed Setup}{106}{section*.121}
-\contentsline {subsection}{Methodology}{107}{section*.123}
-\contentsline {subsection}{Performance in Failure-free Executions}{108}{section*.124}
-\contentsline {subsection}{Effect of Filtering Rules Complexity}{109}{section*.127}
-\contentsline {subsection}{\textsc {SieveQ}\xspace Under Attack}{110}{section*.129}
-\contentsline {subsection}{\textsc {SieveQ}\xspace to Protect a SIEM System}{113}{section*.134}
-\contentsline {section}{\numberline {6.7}Discussion}{114}{section*.137}
-\contentsline {section}{\numberline {6.8}Final Remarks}{115}{section*.138}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Research Directions}{117}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{117}{section*.140}
-\contentsline {section}{\numberline {7.2}Future Work}{118}{section*.141}
-\contentsline {chapter}{Acronyms}{126}{section*.144}
-\contentsline {chapter}{\nonumberline Bibliography}{129}{chapter*.145}
+\contentsline {section}{\numberline {5.1}Implementation}{69}{section*.85}
+\contentsline {subsection}{Control Plane}{69}{section*.86}
+\contentsline {subsection}{Clustering}{71}{section*.88}
+\contentsline {paragraph}{1) Data representation}{71}{section*.88}
+\contentsline {paragraph}{2) Data preparation}{72}{lstnumber.5.1.7}
+\contentsline {paragraph}{3) Making clusters}{73}{lstnumber.5.1.7}
+\contentsline {subsection}{Replica Virtualization and Provision}{73}{section*.89}
+\contentsline {paragraph}{Setup.}{73}{section*.89}
+\contentsline {paragraph}{Download.}{74}{lstnumber.5.2.17}
+\contentsline {paragraph}{Deploy and provision.}{74}{lstnumber.5.2.17}
+\contentsline {paragraph}{Command and Control.}{74}{lstnumber.5.2.17}
+\contentsline {subsection}{BFT replication}{75}{section*.90}
+\contentsline {subsection}{Descentralized \textsc {Lazarus}\xspace Version}{75}{section*.91}
+\contentsline {paragraph}{System Model.}{75}{section*.91}
+\contentsline {paragraph}{Architecture.}{76}{section*.91}
+\contentsline {paragraph}{Recovery Protocol.}{76}{figure.caption.92}
+\contentsline {paragraph}{Replica Synchronization Protocol.}{77}{figure.caption.92}
+\contentsline {paragraph}{Distributed Random Generation Protocol.}{77}{figure.caption.92}
+\contentsline {paragraph}{Distributed Storage.}{78}{figure.caption.92}
+\contentsline {paragraph}{Deterministic Image Patching.}{78}{figure.caption.92}
+\contentsline {section}{\numberline {5.2}Evaluation}{78}{section*.93}
+\contentsline {subsection}{Homogeneous Replicas Throughput}{79}{section*.95}
+\contentsline {subsection}{Diverse Replicas Throughput}{80}{section*.97}
+\contentsline {subsection}{Performance During Replicas' Reconfiguration}{81}{section*.99}
+\contentsline {subsection}{Application Benchmarks}{83}{section*.103}
+\contentsline {section}{\numberline {5.3}Final Remarks}{85}{section*.105}
+\contentsline {chapter}{\numberline {6}\textsc {SieveQ}\xspace : A Use Case}{87}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{87}{section*.107}
+\contentsline {section}{\numberline {6.2}Intrusion-Tolerant Firewalls}{88}{section*.108}
+\contentsline {section}{\numberline {6.3}Overview of \textsc {SieveQ}\xspace }{90}{section*.111}
+\contentsline {subsection}{Design Principles}{91}{section*.112}
+\contentsline {subsection}{\textsc {SieveQ}\xspace Architecture}{91}{section*.113}
+\contentsline {paragraph}{\emph {Sender-SQ}\xspace .}{92}{figure.caption.114}
+\contentsline {paragraph}{\emph {Pre-SQ}\xspace .}{92}{figure.caption.114}
+\contentsline {paragraph}{\emph {Replica-SQ}\xspace .}{93}{figure.caption.114}
+\contentsline {paragraph}{\emph {Post-SQ}\xspace .}{93}{figure.caption.114}
+\contentsline {paragraph}{Controller.}{93}{figure.caption.114}
+\contentsline {subsection}{Resilience Mechanisms}{93}{section*.115}
+\contentsline {subsection}{System and Threat Model}{94}{section*.116}
+\contentsline {subsection}{Resilience Mechanisms}{95}{section*.117}
+\contentsline {section}{\numberline {6.4}\textsc {SieveQ}\xspace Protocol}{96}{section*.118}
+\contentsline {subsection}{Properties}{97}{section*.119}
+\contentsline {subsection}{Message Transmission}{97}{section*.120}
+\contentsline {paragraph}{\emph {Sender-SQ}\xspace processing}{97}{section*.120}
+\contentsline {paragraph}{\emph {Pre-SQ}\xspace filtering}{98}{figure.caption.121}
+\contentsline {paragraph}{\emph {Replica-SQ}\xspace filtering}{99}{figure.caption.121}
+\contentsline {paragraph}{\emph {Post-SQ}\xspace processing}{100}{equation.6.4.2}
+\contentsline {subsubsection}{Correctness Argument}{101}{AlgoLine.2.13}
+\contentsline {subsection}{Addressing Component Failures}{102}{section*.122}
+\contentsline {subsubsection}{Faulty \emph {Sender-SQ}\xspace }{103}{section*.122}
+\contentsline {subsubsection}{Faulty \emph {Pre-SQ}\xspace }{104}{section*.122}
+\contentsline {subsubsection}{Faulty \emph {Replica-SQ}\xspace }{106}{Item.10}
+\contentsline {section}{\numberline {6.5}Implementation}{107}{section*.123}
+\contentsline {section}{\numberline {6.6}Evaluation}{108}{section*.124}
+\contentsline {subsection}{Testbed Setup}{108}{section*.125}
+\contentsline {subsection}{Methodology}{109}{section*.127}
+\contentsline {subsection}{Performance in Failure-free Executions}{110}{section*.128}
+\contentsline {subsection}{Effect of Filtering Rules Complexity}{111}{section*.131}
+\contentsline {subsection}{\textsc {SieveQ}\xspace Under Attack}{112}{section*.133}
+\contentsline {subsection}{\textsc {SieveQ}\xspace to Protect a SIEM System}{114}{section*.138}
+\contentsline {section}{\numberline {6.7}Discussion}{116}{section*.141}
+\contentsline {section}{\numberline {6.8}Final Remarks}{117}{section*.142}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Research Directions}{119}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{119}{section*.144}
+\contentsline {section}{\numberline {7.2}Future Work}{120}{section*.145}
+\contentsline {chapter}{Acronyms}{128}{section*.148}
+\contentsline {chapter}{\nonumberline Bibliography}{131}{chapter*.149}

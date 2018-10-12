@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.3.5)  30 JUL 2018 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.23)  11 OCT 2018 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,12 +1138,7 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (./chato-notes.sty
-Package: chato-notes 2009/08/19 ChaTo notes
-
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/marvosym.sty
-Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
-))
+)
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip112
@@ -1204,12 +1199,70 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count146
 \algocf@algoframe=\box38
 \algocf@algobox=\box39
-) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count147
+\c@ALC@line=\count148
+\c@ALC@rem=\count149
+\c@ALC@depth=\count150
+\ALC@tlm=\skip132
+\algorithmicindent=\skip133
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip132
-\multirow@cntb=\count147
-\multirow@dima=\skip133
+\multirow@colwidth=\skip134
+\multirow@cntb=\count151
+\multirow@dima=\skip135
 \bigstrutjot=\dimen154
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count152
+\mult@box=\box40
+\multicol@leftmargin=\dimen155
+\c@unbalance=\count153
+\c@collectmore=\count154
+\doublecol@number=\count155
+\multicoltolerance=\count156
+\multicolpretolerance=\count157
+\full@width=\dimen156
+\page@free=\dimen157
+\premulticols=\dimen158
+\postmulticols=\dimen159
+\multicolsep=\skip136
+\multicolbaselineskip=\skip137
+\partial@page=\box41
+\last@line=\box42
+\maxbalancingoverflow=\dimen160
+\mult@rightbox=\box43
+\mult@grightbox=\box44
+\mult@gfirstbox=\box45
+\mult@firstbox=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\c@columnbadness=\count158
+\c@finalcolumnbadness=\count159
+\last@try=\dimen161
+\multicolovershoot=\dimen162
+\multicolundershoot=\dimen163
+\mult@nat@firstbox=\box64
+\colbreak@box=\box65
+\mc@col@check@num=\count160
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
@@ -1247,29 +1300,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/lmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/moreverb/moreverb.sty
-Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
-\verbatim@in@stream=\read1
-)
-\tab@position=\count148
-\tab@size=\count149
-\listing@line=\count150
-)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count151
-\rotFPtop=\skip134
-\rotFPbot=\skip135
-\rot@float@box=\box40
-\rot@mess@toks=\toks38
+\c@r@tfl@t=\count161
+\rotFPtop=\skip138
+\rotFPbot=\skip139
+\rot@float@box=\box66
+\rot@mess@toks=\toks36
 ) (./lastpage.sty
 Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number
  (JPG)
@@ -1279,27 +1319,27 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count152
+\c@section@level=\count162
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count153
-\lst@gtempboxa=\box41
-\lst@token=\toks39
-\lst@length=\count154
-\lst@currlwidth=\dimen155
-\lst@column=\count155
-\lst@pos=\count156
-\lst@lostspace=\dimen156
-\lst@width=\dimen157
-\lst@newlines=\count157
-\lst@lineno=\count158
-\lst@maxwidth=\dimen158
+\lst@mode=\count163
+\lst@gtempboxa=\box67
+\lst@token=\toks37
+\lst@length=\count164
+\lst@currlwidth=\dimen164
+\lst@column=\count165
+\lst@pos=\count166
+\lst@lostspace=\dimen165
+\lst@width=\dimen166
+\lst@newlines=\count167
+\lst@lineno=\count168
+\lst@maxwidth=\dimen167
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count159
-\lst@skipnumbers=\count160
-\lst@framebox=\box42
+\c@lstnumber=\count169
+\lst@skipnumbers=\count170
+\lst@framebox=\box68
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1308,29 +1348,29 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count161
-\sf@farskip=\skip136
-\sf@captopadj=\dimen159
-\sf@capskip=\skip137
-\sf@nearskip=\skip138
-\c@subfigure=\count162
-\c@subfigure@save=\count163
-\c@subtable=\count164
-\c@subtable@save=\count165
-\sf@top=\skip139
-\sf@bottom=\skip140
+\c@KVtest=\count171
+\sf@farskip=\skip140
+\sf@captopadj=\dimen168
+\sf@capskip=\skip141
+\sf@nearskip=\skip142
+\c@subfigure=\count172
+\c@subfigure@save=\count173
+\c@subtable=\count174
+\c@subtable@save=\count175
+\sf@top=\skip143
+\sf@bottom=\skip144
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks40
-\pgfutil@tempdima=\dimen160
-\pgfutil@tempdimb=\dimen161
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen169
+\pgfutil@tempdimb=\dimen170
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box43
+\pgfutil@abb=\box69
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1345,30 +1385,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks41
-\pgfkeys@temptoks=\toks42
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks43
+\pgfkeys@tmptoks=\toks41
 ))
-\pgf@x=\dimen162
-\pgf@y=\dimen163
-\pgf@xa=\dimen164
-\pgf@ya=\dimen165
-\pgf@xb=\dimen166
-\pgf@yb=\dimen167
-\pgf@xc=\dimen168
-\pgf@yc=\dimen169
+\pgf@x=\dimen171
+\pgf@y=\dimen172
+\pgf@xa=\dimen173
+\pgf@ya=\dimen174
+\pgf@xb=\dimen175
+\pgf@yb=\dimen176
+\pgf@xc=\dimen177
+\pgf@yc=\dimen178
 \w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count166
-\c@pgf@countb=\count167
-\c@pgf@countc=\count168
-\c@pgf@countd=\count169
-\t@pgf@toka=\toks44
-\t@pgf@tokb=\toks45
-\t@pgf@tokc=\toks46
+\r@pgf@reada=\read1
+\c@pgf@counta=\count176
+\c@pgf@countb=\count177
+\c@pgf@countc=\count178
+\c@pgf@countd=\count179
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1384,8 +1424,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count170
-\pgfsyssoftpath@bigbuffer@items=\count171
+\pgfsyssoftpath@smallbuffer@items=\count180
+\pgfsyssoftpath@bigbuffer@items=\count181
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1398,12 +1438,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen170
-\pgfmath@count=\count172
-\pgfmath@box=\box44
-\pgfmath@toks=\toks47
-\pgfmath@stack@operand=\toks48
-\pgfmath@stack@operation=\toks49
+\pgfmath@dimen=\dimen179
+\pgfmath@count=\count182
+\pgfmath@box=\box70
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -1423,57 +1463,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count173
+\c@pgfmathroundto@lastzeros=\count183
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen171
-\pgf@picmaxx=\dimen172
-\pgf@picminy=\dimen173
-\pgf@picmaxy=\dimen174
-\pgf@pathminx=\dimen175
-\pgf@pathmaxx=\dimen176
-\pgf@pathminy=\dimen177
-\pgf@pathmaxy=\dimen178
-\pgf@xx=\dimen179
-\pgf@xy=\dimen180
-\pgf@yx=\dimen181
-\pgf@yy=\dimen182
-\pgf@zx=\dimen183
-\pgf@zy=\dimen184
+\pgf@picminx=\dimen180
+\pgf@picmaxx=\dimen181
+\pgf@picminy=\dimen182
+\pgf@picmaxy=\dimen183
+\pgf@pathminx=\dimen184
+\pgf@pathmaxx=\dimen185
+\pgf@pathminy=\dimen186
+\pgf@pathmaxy=\dimen187
+\pgf@xx=\dimen188
+\pgf@xy=\dimen189
+\pgf@yx=\dimen190
+\pgf@yy=\dimen191
+\pgf@zx=\dimen192
+\pgf@zy=\dimen193
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen185
-\pgf@path@lasty=\dimen186
+\pgf@path@lastx=\dimen194
+\pgf@path@lasty=\dimen195
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen187
-\pgf@shorten@start@additional=\dimen188
+\pgf@shorten@end@additional=\dimen196
+\pgf@shorten@start@additional=\dimen197
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box45
-\pgf@hbox=\box46
-\pgf@layerbox@main=\box47
-\pgf@picture@serial@count=\count174
+\pgfpic=\box71
+\pgf@hbox=\box72
+\pgf@layerbox@main=\box73
+\pgf@picture@serial@count=\count184
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen189
+\pgflinewidth=\dimen198
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen190
-\pgf@pt@y=\dimen191
-\pgf@pt@temp=\dimen192
+\pgf@pt@x=\dimen199
+\pgf@pt@y=\dimen256
+\pgf@pt@temp=\dimen257
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1489,12 +1529,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen193
+\pgfarrowsep=\dimen258
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen194
-\pgf@sys@shading@range@num=\count175
+\pgf@max=\dimen259
+\pgf@sys@shading@range@num=\count185
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1502,7 +1542,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box48
+\pgfexternal@startupbox=\box74
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -1518,15 +1558,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box49
+\pgfnodeparttextbox=\box75
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen195
-\pgf@nodesepend=\dimen196
+\pgf@nodesepstart=\dimen260
+\pgf@nodesepend=\dimen261
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1540,10 +1580,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen197
-\pgffor@skip=\dimen198
-\pgffor@stack=\toks50
-\pgffor@toks=\toks51
+\pgffor@iter=\dimen262
+\pgffor@skip=\dimen263
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1551,31 +1591,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count176
-\pgfplotmarksize=\dimen199
+\pgf@plot@mark@count=\count186
+\pgfplotmarksize=\dimen264
 )
-\tikz@lastx=\dimen256
-\tikz@lasty=\dimen257
-\tikz@lastxsaved=\dimen258
-\tikz@lastysaved=\dimen259
-\tikzleveldistance=\dimen260
-\tikzsiblingdistance=\dimen261
-\tikz@figbox=\box50
-\tikz@figbox@bg=\box51
-\tikz@tempbox=\box52
-\tikz@tempbox@bg=\box53
-\tikztreelevel=\count177
-\tikznumberofchildren=\count178
-\tikznumberofcurrentchild=\count179
-\tikz@fig@count=\count180
+\tikz@lastx=\dimen265
+\tikz@lasty=\dimen266
+\tikz@lastxsaved=\dimen267
+\tikz@lastysaved=\dimen268
+\tikzleveldistance=\dimen269
+\tikzsiblingdistance=\dimen270
+\tikz@figbox=\box76
+\tikz@figbox@bg=\box77
+\tikz@tempbox=\box78
+\tikz@tempbox@bg=\box79
+\tikztreelevel=\count187
+\tikznumberofchildren=\count188
+\tikznumberofcurrentchild=\count189
+\tikz@fig@count=\count190
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count181
-\pgfmatrixcurrentcolumn=\count182
-\pgf@matrix@numberofcolumns=\count183
+\pgfmatrixcurrentrow=\count191
+\pgfmatrixcurrentcolumn=\count192
+\pgf@matrix@numberofcolumns=\count193
 )
-\tikz@expandcount=\count184
+\tikz@expandcount=\count194
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1584,29 +1624,72 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen271
+\epsfysize=\dimen272
+)
+(./chato-notes.sty
+Package: chato-notes 2009/08/19 ChaTo notes
+
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+))
+(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2016/10/21 v1.2a non floating margin notes for LaTeX
+\c@mn@abspage=\count195
+)
+(/usr/share/texlive/texmf-dist/tex/latex/sttools/flushend.sty
+Package: flushend 2016/06/21 v3.2 Balancing columns in twocolumn mode
+\flushend@@lastskip@a=\skip145
+\flushend@@lastskip@b=\skip146
+\flushend@@lastskip@c=\skip147
+\flushend@@penalty@a=\count196
+\flushend@@lastkern@a=\dimen273
+\var@@temp@spread=\dimen274
+\var@@temp@a=\dimen275
+\flushend@@page@rule=\dimen276
+\flushend@@varbox@a=\box80
+\flushend@@varbox@c=\box81
+\flushend@@tempbox@a=\box82
+\flushend@@tempbox@c=\box83
+\@viper=\box84
+\hold@viper=\box85
+\atColsBreak=\toks50
+\atColsEnd=\toks51
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count197
+))
+(/usr/share/texlive/texmf-dist/tex/latex/breakurl/breakurl.sty
+Package: breakurl 2013/04/10 v1.40 Breakable hyperref URLs
+
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
+)
 \@input{vars.aux}
 \openout2 = `vars.aux'.
 
 (./vars.tex
-\c@definition=\count185
-\c@assumption=\count186
+\c@definition=\count198
+\c@assumption=\count199
 )
 \@indexfile=\write4
 \openout4 = `phd_mgarcia.idx'.
 
 
 Writing index file phd_mgarcia.idx
-\c@defn=\count187
+\c@defn=\count266
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2017/01/19 v4.29 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2016/07/31 v2.04 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count188
-)
 \@glsmfirst=\toks52
 \@glsmrest=\toks53
 )
@@ -1621,7 +1704,7 @@ Package: datatool-base 2016/07/28 v2.27 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count189
+\c@su@anzahl=\count267
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2016/07/28 v2.27 (NLCT)
@@ -1632,19 +1715,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count190
+\actioncount=\count268
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count191
-\FP@xia=\count192
-\FP@xib=\count193
-\FP@xfa=\count194
-\FP@xfb=\count195
-\FP@rega=\count196
-\FP@regb=\count197
-\FP@regs=\count198
-\FP@times=\count199
+\FP@xs=\count269
+\FP@xia=\count270
+\FP@xib=\count271
+\FP@xfa=\count272
+\FP@xfb=\count273
+\FP@rega=\count274
+\FP@regb=\count275
+\FP@regs=\count276
+\FP@times=\count277
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1663,7 +1746,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count266
+\FPseed=\count278
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1675,14 +1758,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks54
-\@dtl@tmpcount=\count267
-\dtl@tmplength=\skip141
-\dtl@sortresult=\count268
-\@dtl@numgrpsepcount=\count269
-\@dtl@datatype=\count270
-\dtl@codeA=\count271
-\dtl@codeB=\count272
-\@dtl@foreach@level=\count273
+\@dtl@tmpcount=\count279
+\dtl@tmplength=\skip148
+\dtl@sortresult=\count280
+\@dtl@numgrpsepcount=\count281
+\@dtl@datatype=\count282
+\dtl@codeA=\count283
+\dtl@codeB=\count284
+\@dtl@foreach@level=\count285
 )
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-
 307.sty
@@ -1706,9 +1789,9 @@ File: glossaries-portuges.ldf 2014/11/23 v1.0
 
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries-portuges/glossaries-portuge
 s-utf8.ldf))
-\gls@level=\count274
+\gls@level=\count286
 \@gls@tmpb=\toks55
-\gls@tmplen=\skip142
+\gls@tmplen=\skip149
 \glskeylisttok=\toks56
 \glslabeltok=\toks57
 \glsshorttok=\toks58
@@ -1719,134 +1802,114 @@ y
 Package: glossary-hypernav 2017/01/19 v4.29 (NLCT)
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2017/01/19 v4.29 (NLCT)
-\glslistdottedwidth=\skip143
+\glslistdottedwidth=\skip150
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2017/01/19 v4.29 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip144
-\LTright=\skip145
-\LTpre=\skip146
-\LTpost=\skip147
-\LTchunksize=\count275
-\LTcapwidth=\dimen262
-\LT@head=\box54
-\LT@firsthead=\box55
-\LT@foot=\box56
-\LT@lastfoot=\box57
-\LT@cols=\count276
-\LT@rows=\count277
-\c@LT@tables=\count278
-\c@LT@chunks=\count279
+\LTleft=\skip151
+\LTright=\skip152
+\LTpre=\skip153
+\LTpost=\skip154
+\LTchunksize=\count287
+\LTcapwidth=\dimen277
+\LT@head=\box86
+\LT@firsthead=\box87
+\LT@foot=\box88
+\LT@lastfoot=\box89
+\LT@cols=\count288
+\LT@rows=\count289
+\c@LT@tables=\count290
+\c@LT@chunks=\count291
 \LT@p@ftn=\toks60
 )
 Class scrreprt Info: longtable captions redefined on input line 43.
-\glsdescwidth=\skip148
-\glspagelistwidth=\skip149
+\glsdescwidth=\skip155
+\glspagelistwidth=\skip156
 )
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2017/01/19 v4.29 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count280
-\ST@wd=\dimen263
-\ST@rightskip=\skip150
-\ST@leftskip=\skip151
-\ST@parfillskip=\skip152
-\ST@pageleft=\dimen264
-\ST@headht=\dimen265
-\ST@tailht=\dimen266
-\ST@pagesofar=\dimen267
-\ST@pboxht=\dimen268
-\ST@lineht=\dimen269
-\ST@stretchht=\dimen270
-\ST@prevht=\dimen271
-\ST@toadd=\dimen272
-\ST@dimen=\dimen273
-\ST@pbox=\box58
+\c@tracingst=\count292
+\ST@wd=\dimen278
+\ST@rightskip=\skip157
+\ST@leftskip=\skip158
+\ST@parfillskip=\skip159
+\ST@pageleft=\dimen279
+\ST@headht=\dimen280
+\ST@tailht=\dimen281
+\ST@pagesofar=\dimen282
+\ST@pboxht=\dimen283
+\ST@lineht=\dimen284
+\ST@stretchht=\dimen285
+\ST@prevht=\dimen286
+\ST@toadd=\dimen287
+\ST@dimen=\dimen288
+\ST@pbox=\box90
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2017/01/19 v4.29 (NLCT)
-\glstreeindent=\skip153
+\glstreeindent=\skip160
 ))
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `phd_mgarcia.glo'.
 
-Package glossaries Info: Writing glossary file phd_mgarcia.glo on input line 14
-4.
+Package glossaries Info: Writing glossary file phd_mgarcia.glo on input line 15
+3.
 
 (./phd_mgarcia.aux (./chapters/abstract/resumo_ing.aux)
 (./chapters/abstract/resumo_pt.aux)
-(./chapters/abstract/resumo_estendido_pt.aux
-
-LaTeX Warning: Label `chapter:abstract_pt' multiply defined.
-
-) (./chapters/acks/agradecimentos.aux)
-(./chapters/introduction/introduction.aux)
+(./chapters/abstract/resumo_estendido_pt.aux)
+(./chapters/acks/agradecimentos.aux) (./chapters/introduction/introduction.aux)
 (./chapters/relatedwork/related_work.aux) (./chapters/datasource/datasource.aux
 ) (./chapters/lazarus/lazarus_design.aux)
-(./chapters/lazarus/lazarus_implementation.aux
-
-LaTeX Warning: Label `sec:finalremarkslazarus' multiply defined.
-
-) (./chapters/sieveq/sieveq.aux
-
-LaTeX Warning: Label `evaluation' multiply defined.
-
-
-LaTeX Warning: Label `fig:performance_attacks' multiply defined.
-
-
-LaTeX Warning: Label `fig:performance_attacks' multiply defined.
-
-
-LaTeX Warning: Label `fig:performance_attacks' multiply defined.
-
-) (./chapters/conclusion/conclusion.aux) (./acronimos.aux))
+(./chapters/lazarus/lazarus_implementation.aux) (./chapters/sieveq/sieveq.aux)
+(./chapters/conclusion/conclusion.aux) (./acronimos.aux))
 \openout1 = `phd_mgarcia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 155.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 155.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 146.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 155.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen274
-\scratchbox=\box59
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\scratchcounter=\count293
+\scratchdimen=\dimen289
+\scratchbox=\box91
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks61
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen275
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen290
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks62
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1865,7 +1928,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 146.
+LaTeX Info: Redefining \microtypecontext on input line 155.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1879,11 +1942,11 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-\AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 146.
-LaTeX Info: Redefining \ref on input line 146.
-LaTeX Info: Redefining \pageref on input line 146.
-LaTeX Info: Redefining \nameref on input line 146.
+\AtBeginShipoutBox=\box92
+Package hyperref Info: Link coloring OFF on input line 155.
+LaTeX Info: Redefining \ref on input line 155.
+LaTeX Info: Redefining \pageref on input line 155.
+LaTeX Info: Redefining \nameref on input line 155.
 
 (./phd_mgarcia.out) (./phd_mgarcia.out)
 \@outlinefile=\write7
@@ -1936,13 +1999,17 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count287
-ABD: EveryShipout initializing macros (./phd_mgarcia.glsdefs)
-<pic/logo_fcul_vertical.png, id=372, 330.7557pt x 397.485pt>
+\c@lstlisting=\count299
+ABD: EveryShipout initializing macros
+Package marginnote Info: \pdfoutput not 0 or unimportant and
+(marginnote)             \pdflastxpos or \lastxpos available.
+(marginnote)             Extended position detection mode activated.
+ (./phd_mgarcia.glsdefs)
+<pic/logo_fcul_vertical.png, id=368, 330.7557pt x 397.485pt>
 File: pic/logo_fcul_vertical.png Graphic file (type png)
 
 <use pic/logo_fcul_vertical.png>
-Package pdftex.def Info: pic/logo_fcul_vertical.png used on input line 155.
+Package pdftex.def Info: pic/logo_fcul_vertical.png used on input line 164.
 (pdftex.def)             Requested size: 148.83868pt x 178.8666pt.
  [1
 
@@ -1954,9 +2021,9 @@ Package pdftex.def Info: pic/logo_fcul_vertical.png used on input line 155.
 ng>] [2]
 File: pic/logo_fcul_vertical.png Graphic file (type png)
  <use pic/logo_fcul_vertical.png>
-Package pdftex.def Info: pic/logo_fcul_vertical.png used on input line 194.
+Package pdftex.def Info: pic/logo_fcul_vertical.png used on input line 203.
 (pdftex.def)             Requested size: 148.83868pt x 178.8666pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 226.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 235.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -2128,7 +2195,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 
+l.32 
       [1
 
 
@@ -2137,25 +2204,23 @@ l.30
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 
-      [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
+l.61 \section{Objectives and Contributions}
+                                            [2]pdfTeX warning (ext4): destinati
+on with the same identifier (name{page.3}) has been already used, duplicate ign
+ored
 <to be read again> 
                    \relax 
-l.92 
+l.94 
       [3]pdfTeX warning (ext4): destination with the same identifier (name{page
 .4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.123 
+l.124 
        [4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-Overfull \hbox (11.02304pt too wide) in paragraph at lines 201--202
+Overfull \hbox (11.02304pt too wide) in paragraph at lines 210--211
 [][] 
  []
 
@@ -2173,27 +2238,21 @@ chapter 2.
 
 
 
-]
-Underfull \vbox (badness 2285) has occurred while \output is active []
-
- [10]
+] [10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [12]
 
 pdfTeX warning: pdflatex (file ./images/images/bft.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<images/images/bft.pdf, id=1059, 609.27625pt x 333.245pt>
+<images/images/bft.pdf, id=1058, 609.27625pt x 333.245pt>
 File: images/images/bft.pdf Graphic file (type pdf)
 
 <use images/images/bft.pdf>
-Package pdftex.def Info: images/images/bft.pdf used on input line 144.
+Package pdftex.def Info: images/images/bft.pdf used on input line 127.
 (pdftex.def)             Requested size: 276.81505pt x 151.40805pt.
  [13 <./images/images/bft.pdf>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 188.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 190.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -2222,7 +2281,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 chapter 3.
 [33] [34] [35] [36]
-<images/gnuplot/spe/top/top.pdf, id=1598, 361.35pt x 126.4725pt>
+<images/gnuplot/spe/top/top.pdf, id=1605, 361.35pt x 126.4725pt>
 File: images/gnuplot/spe/top/top.pdf Graphic file (type pdf)
 
 <use images/gnuplot/spe/top/top.pdf>
@@ -2233,11 +2292,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 172.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 172.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [37 <./images/gnuplot/spe/top/top.pdf>]
-Underfull \vbox (badness 1024) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1112) has occurred while \output is active []
 
  [39]
 [40] [41]
@@ -2265,11 +2327,7 @@ Overfull \hbox (3.45462pt too wide) in paragraph at lines 369--369
 []|[]|  
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-[43]
+[42]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 420--420
 []\T1/ptm/m/n/9 (-20) O 
  []
@@ -2294,8 +2352,8 @@ Overfull \hbox (3.45462pt too wide) in paragraph at lines 431--431
 []|[]|  
  []
 
-
-<images/images/grayscale_ven_dia_one_fig_update_a.pdf, id=1770, 540.5796pt x 41
+[43]
+<images/images/grayscale_ven_dia_one_fig_update_a.pdf, id=1773, 540.5796pt x 41
 6.2752pt>
 File: images/images/grayscale_ven_dia_one_fig_update_a.pdf Graphic file (type p
 df)
@@ -2303,7 +2361,11 @@ df)
 Package pdftex.def Info: images/images/grayscale_ven_dia_one_fig_update_a.pdf u
 sed on input line 463.
 (pdftex.def)             Requested size: 378.40314pt x 291.39066pt.
- [44]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[44]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 489--489
 []\T1/ptm/m/n/9 (-20) O 
  []
@@ -2334,7 +2396,7 @@ Overfull \hbox (4.99763pt too wide) in paragraph at lines 500--500
  []
 
 
-Underfull \vbox (badness 2245) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45 <./images/images/grayscale_ven_dia_one_fig_update_a.pdf>]
 Overfull \hbox (0.67747pt too wide) in paragraph at lines 537--537
@@ -2366,20 +2428,22 @@ Overfull \hbox (4.99763pt too wide) in paragraph at lines 548--548
 []|[]|  
  []
 
-[46]
-<images/images/grayscale_ven_dia_one_fig_update_b.pdf, id=1824, 539.85693pt x 4
+
+<images/images/grayscale_ven_dia_one_fig_update_b.pdf, id=1820, 539.85693pt x 4
 20.6114pt>
 File: images/images/grayscale_ven_dia_one_fig_update_b.pdf Graphic file (type p
 df)
  <use images/images/grayscale_ven_dia_one_fig_update_b.pdf>
 Package pdftex.def Info: images/images/grayscale_ven_dia_one_fig_update_b.pdf u
-sed on input line 641.
+sed on input line 581.
 (pdftex.def)             Requested size: 377.89728pt x 294.42598pt.
- [47]
-Underfull \vbox (badness 1163) has occurred while \output is active []
+ [46]
+[47 <./images/images/grayscale_ven_dia_one_fig_update_b.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./images/images/grayscale_ven_dia_one_fig_update_b.pdf>] [49] [50] [51]
-Underfull \vbox (badness 4492) has occurred while \output is active []
+ [48]
+[49] [50] [51]
+Underfull \vbox (badness 6016) has occurred while \output is active []
 
  [52])
 [53]
@@ -2392,504 +2456,674 @@ Underfull \vbox (badness 4492) has occurred while \output is active []
 
 ]
 chapter 4.
-
-LaTeX Warning: Reference `sec:design' on page 55 undefined on input line 30.
-
-[55] <images/images/overview.pdf, id=1972, 646.415pt x 221.82875pt>
+<images/images/overview.pdf, id=1954, 646.415pt x 221.82875pt>
 File: images/images/overview.pdf Graphic file (type pdf)
 
 <use images/images/overview.pdf>
-Package pdftex.def Info: images/images/overview.pdf used on input line 50.
+Package pdftex.def Info: images/images/overview.pdf used on input line 41.
 (pdftex.def)             Requested size: 276.81505pt x 94.99185pt.
- [56 <./images/images/overview.pdf>]
 
-LaTeX Warning: Reference `' on page 57 undefined on input line 75.
 
-[57]
-
-LaTeX Warning: Reference `chap:data_source' on page 58 undefined on input line 
-122.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [55]
+Underfull \vbox (badness 4846) has occurred while \output is active []
+
+ [56 <./images/images/overview.pdf>] [57]
 Underfull \hbox (badness 10000) in paragraph at lines 153--153
-[][][][]$\T1/pcr/m/n/9 https : / / www . oracle . com / technetwork / topics / 
-security /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
 []|\T1/ptm/m/n/8 CVE-2014-0157
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\T1/ptm/m/n/8 CVE-2015-3988
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 []|\T1/ptm/m/n/8 CVE-2016-4428
  []
 
+[58]
 
-LaTeX Warning: Reference `sec:details' on page 59 undefined on input line 174.
+pdfTeX warning: pdflatex (file ./images/images/scale.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<images/images/scale.pdf, id=2259, 449.68pt x 88.33pt>
+File: images/images/scale.pdf Graphic file (type pdf)
 
-[59]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 202--230
+<use images/images/scale.pdf>
+Package pdftex.def Info: images/images/scale.pdf used on input line 233.
+(pdftex.def)             Requested size: 276.81505pt x 54.37585pt.
+ [59]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 253--294
  [] 
  []
 
+[60 <./images/images/scale.pdf>]
+<images/images/NE.pdf, id=2304, 476.78125pt x 329.23pt>
+File: images/images/NE.pdf Graphic file (type pdf)
+
+<use images/images/NE.pdf>
+Package pdftex.def Info: images/images/NE.pdf used on input line 309.
+(pdftex.def)             Requested size: 138.41054pt x 95.57472pt.
+
+<images/images/OP.pdf, id=2305, 476.78125pt x 329.23pt>
+File: images/images/OP.pdf Graphic file (type pdf)
+
+<use images/images/OP.pdf>
+Package pdftex.def Info: images/images/OP.pdf used on input line 310.
+(pdftex.def)             Requested size: 138.41054pt x 95.57472pt.
+
+<images/images/NPE.pdf, id=2306, 476.78125pt x 329.23pt>
+File: images/images/NPE.pdf Graphic file (type pdf)
+
+<use images/images/NPE.pdf>
+Package pdftex.def Info: images/images/NPE.pdf used on input line 311.
+(pdftex.def)             Requested size: 138.41054pt x 95.57472pt.
+
+Overfull \hbox (19.7798pt too wide) in paragraph at lines 309--312
+[][][][][][] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 335--348
+ [] 
+ []
+
+[61 <./images/images/NE.pdf> <./images/images/OP.pdf
+
+pdfTeX warning: pdflatex (file ./images/images/OP.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/images/NPE.pdf
+
+pdfTeX warning: pdflatex (file ./images/images/NPE.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 393.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 394.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 395.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 396.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 441.
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 441.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 448.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 448.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 448.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 448.
+
+
+Package relsize Warning: Font size 5.55556pt is too small.
+(relsize)                Using 6.0pt instead on input line 448.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60] [61]
+[62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `sec:replica' on page 63 undefined on input line 387.
+ [64]
+<images/gnuplot/executions/execution.pdf, id=2556, 361.35pt x 126.4725pt>
+File: images/gnuplot/executions/execution.pdf Graphic file (type pdf)
 
-[63]
-<images/gnuplot/executions_new/execution.pdf, id=2374, 361.35pt x 126.4725pt>
-File: images/gnuplot/executions_new/execution.pdf Graphic file (type pdf)
-
-<use images/gnuplot/executions_new/execution.pdf>
-Package pdftex.def Info: images/gnuplot/executions_new/execution.pdf used on in
-put line 437.
+<use images/gnuplot/executions/execution.pdf>
+Package pdftex.def Info: images/gnuplot/executions/execution.pdf used on input 
+line 538.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[64]
-<images/gnuplot/score/score_random_all.pdf, id=2387, 361.35pt x 100.375pt>
-File: images/gnuplot/score/score_random_all.pdf Graphic file (type pdf)
+[65] [66 <./images/gnuplot/executions/execution.pdf>]
+<images/gnuplot/attacks/attacks.pdf, id=2583, 361.35pt x 126.4725pt>
+File: images/gnuplot/attacks/attacks.pdf Graphic file (type pdf)
 
-<use images/gnuplot/score/score_random_all.pdf>
-Package pdftex.def Info: images/gnuplot/score/score_random_all.pdf used on inpu
-t line 461.
-(pdftex.def)             Requested size: 197.7259pt x 54.92459pt.
-
-<images/gnuplot/score/score_final_all.pdf, id=2388, 361.35pt x 100.375pt>
-File: images/gnuplot/score/score_final_all.pdf Graphic file (type pdf)
-
-<use images/gnuplot/score/score_final_all.pdf>
-Package pdftex.def Info: images/gnuplot/score/score_final_all.pdf used on input
- line 463.
-(pdftex.def)             Requested size: 197.7259pt x 54.92459pt.
-
-Overfull \hbox (16.30687pt too wide) in paragraph at lines 461--464
-[][]  [][] 
- []
-
-[65 <./images/gnuplot/executions_new/execution.pdf> <./images/gnuplot/score/sco
-re_random_all.pdf> <./images/gnuplot/score/score_final_all.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 519--519
-[][][]\T1/ptm/m/n/9 (+20) https://securityintelligence.com/wannacry-ransomware-
-spreads-across-the-globe-makes-organizations-
- []
-
-
-<images/gnuplot/special_vulns/execution-special.pdf, id=2426, 361.35pt x 126.47
-25pt>
-File: images/gnuplot/special_vulns/execution-special.pdf Graphic file (type pdf
-)
- <use images/gnuplot/special_vulns/execution-special.pdf>
-Package pdftex.def Info: images/gnuplot/special_vulns/execution-special.pdf use
-d on input line 528.
+<use images/gnuplot/attacks/attacks.pdf>
+Package pdftex.def Info: images/gnuplot/attacks/attacks.pdf used on input line 
+610.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66])
-[67 <./images/gnuplot/special_vulns/execution-special.pdf>]
+ [67 <./images/gnuplot/attacks/attacks.pdf>]) [68]
 \openout2 = `chapters/lazarus/lazarus_implementation.aux'.
 
 
-(./chapters/lazarus/lazarus_implementation.tex [68
-
-
-
-
-]
+(./chapters/lazarus/lazarus_implementation.tex
 chapter 5.
-<images/images/architecture_new.pdf, id=2462, 568.1225pt x 279.0425pt>
+<images/images/architecture_new.pdf, id=2610, 568.1225pt x 279.0425pt>
 File: images/images/architecture_new.pdf Graphic file (type pdf)
 
 <use images/images/architecture_new.pdf>
 Package pdftex.def Info: images/images/architecture_new.pdf used on input line 
-25.
+24.
 (pdftex.def)             Requested size: 355.9042pt x 174.81413pt.
+ [69
 
-Underfull \vbox (badness 1831) has occurred while \output is active []
 
- [69 <./images/images/architecture_new.pdf>]
 
-LaTeX Warning: Reference `sec:details' on page 70 undefined on input line 51.
+
+ <./images/images/architecture_new.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
-[70]
+ [70]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 71.
- [71] [72] [73] [74]
+nput line 92.
+
+[71] [72] [73] [74]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
-
-Underfull \vbox (badness 4084) has occurred while \output is active []
-
  [75]
-<images/images/lazarus_distributed.pdf, id=3013, 515.9275pt x 311.1625pt>
+<images/images/lazarus_distributed.pdf, id=3164, 515.9275pt x 311.1625pt>
 File: images/images/lazarus_distributed.pdf Graphic file (type pdf)
 
 <use images/images/lazarus_distributed.pdf>
 Package pdftex.def Info: images/images/lazarus_distributed.pdf used on input li
-ne 259.
+ne 270.
 (pdftex.def)             Requested size: 276.81505pt x 166.95695pt.
- [76 <./images/images/lazarus_distributed.pdf>] [77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [76 <./images/images/lazarus_distributed.pdf>]
+Underfull \vbox (badness 4048) has occurred while \output is active []
 
- [78]
-<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=3171, 361.35pt x 75.281
+ [77]
+[78]
+<images/gnuplot/vagrant/runs_new_new/throughput.pdf, id=3317, 361.35pt x 126.47
 25pt>
 File: images/gnuplot/vagrant/runs_new_new/throughput.pdf Graphic file (type pdf
 )
  <use images/gnuplot/vagrant/runs_new_new/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_new_new/throughput.pdf use
-d on input line 409.
-(pdftex.def)             Requested size: 395.45181pt x 82.38689pt.
+d on input line 411.
+(pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [79]
-<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=3180, 361.35pt x 126.
+<images/gnuplot/vagrant/runs_diversity/throughput.pdf, id=3333, 361.35pt x 126.
 4725pt>
 File: images/gnuplot/vagrant/runs_diversity/throughput.pdf Graphic file (type p
 df)
  <use images/gnuplot/vagrant/runs_diversity/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_diversity/throughput.pdf u
-sed on input line 424.
+sed on input line 440.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 
-LaTeX Warning: Reference `sec:discussion' on page 80 undefined on input line 43
-7.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[80 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf> <./images/gnuplot/va
-grant/runs_diversity/throughput.pdf>]
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf, id=3211
-, 180.675pt x 25.09375pt>
-File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf Gra
-phic file (type pdf)
+[80 <./images/gnuplot/vagrant/runs_new_new/throughput.pdf>]
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_bm.pdf, id=3355, 180.67
+5pt x 32.12pt>
+File: images/gnuplot/vagrant/reconfiguration/reconfiguration_bm.pdf Graphic fil
+e (type pdf)
 
-<use images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf>
+<use images/gnuplot/vagrant/reconfiguration/reconfiguration_bm.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state10mbs.pdf used on input line 453.
-(pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
+_bm.pdf used on input line 471.
+(pdftex.def)             Requested size: 395.45181pt x 70.30933pt.
+ [81 <./images/gnuplot/vagrant/runs_diversity/throughput.pdf>]
+<images/gnuplot/vagrant/reconfiguration/reconfiguration_vm.pdf, id=3373, 180.67
+5pt x 32.12pt>
+File: images/gnuplot/vagrant/reconfiguration/reconfiguration_vm.pdf Graphic fil
+e (type pdf)
 
-<images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf, id=3212
-, 180.675pt x 25.09375pt>
-File: images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf Gra
-phic file (type pdf)
-
-<use images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>
+<use images/gnuplot/vagrant/reconfiguration/reconfiguration_vm.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/reconfiguration/reconfiguration
-_state50mbs.pdf used on input line 455.
-(pdftex.def)             Requested size: 395.45181pt x 54.92917pt.
+_vm.pdf used on input line 479.
+(pdftex.def)             Requested size: 395.45181pt x 70.30933pt.
 
-[81 <./images/gnuplot/vagrant/reconfiguration/reconfiguration_state10mbs.pdf> <
-./images/gnuplot/vagrant/reconfiguration/reconfiguration_state50mbs.pdf>]
-<images/gnuplot/vagrant/updown/boot.pdf, id=3244, 361.35pt x 163.61125pt>
+<images/gnuplot/vagrant/updown/boot.pdf, id=3382, 361.35pt x 163.61125pt>
 File: images/gnuplot/vagrant/updown/boot.pdf Graphic file (type pdf)
 
 <use images/gnuplot/vagrant/updown/boot.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/updown/boot.pdf used on input l
-ine 479.
+ine 505.
 (pdftex.def)             Requested size: 316.36266pt x 143.24187pt.
- [82 <./images/gnuplot/vagrant/updown/boot.pdf>]
-<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3278, 361.35pt x 100.375pt
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[82 <./images/gnuplot/vagrant/reconfiguration/reconfiguration_bm.pdf> <./images
+/gnuplot/vagrant/reconfiguration/reconfiguration_vm.pdf>] [83 <./images/gnuplot
+/vagrant/updown/boot.pdf>]
+<images/gnuplot/vagrant/runs_apps/throughput.pdf, id=3434, 361.35pt x 100.375pt
 >
 File: images/gnuplot/vagrant/runs_apps/throughput.pdf Graphic file (type pdf)
  <use images/gnuplot/vagrant/runs_apps/throughput.pdf>
 Package pdftex.def Info: images/gnuplot/vagrant/runs_apps/throughput.pdf used o
-n input line 532.
+n input line 560.
 (pdftex.def)             Requested size: 395.45181pt x 109.8492pt.
 
-Underfull \vbox (badness 2573) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83])
-[84 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]
+ [84 <./images/gnuplot/vagrant/runs_apps/throughput.pdf>]) [85]
 \openout2 = `chapters/sieveq/sieveq.aux'.
 
 
-(./chapters/sieveq/sieveq.tex
+(./chapters/sieveq/sieveq.tex [86
+
+
+
+
+]
 chapter 6.
-[85
-
-
-
-
-] <images/images/arch_traditional.pdf, id=3334, 647.41875pt x 199.24437pt>
+[87] <images/images/arch_traditional.pdf, id=3492, 647.41875pt x 199.24437pt>
 File: images/images/arch_traditional.pdf Graphic file (type pdf)
 
 <use images/images/arch_traditional.pdf>
 Package pdftex.def Info: images/images/arch_traditional.pdf used on input line 
-81.
+72.
 (pdftex.def)             Requested size: 316.36266pt x 97.36002pt.
- [86] [87 <./images/images/arch_traditional.pdf>]
-<images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf, id=3367, 433.62pt
+ [88 <./images/images/arch_traditional.pdf>]
+<images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf, id=3516, 433.62pt
  x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf Graphic file 
 (type pdf)
 
 <use images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_tradiotional_attac
-k.pdf used on input line 118.
+k.pdf used on input line 112.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf, id=3368,
+<images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf, id=3517,
  433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf Grap
 hic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_traditio
-nal_attack.pdf used on input line 120.
+nal_attack.pdf used on input line 114.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[89]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
-
-[88 <./images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf> <./images/g
-nuplot/sieveq/plots/server_throughput_traditional_attack.pdf>] [89]
-<images/images/arch.pdf, id=3399, 714.16812pt x 218.8175pt>
+ [90 <./images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf> <./images/
+gnuplot/sieveq/plots/server_throughput_traditional_attack.pdf>]
+<images/images/arch.pdf, id=3554, 714.16812pt x 218.8175pt>
 File: images/images/arch.pdf Graphic file (type pdf)
 
 <use images/images/arch.pdf>
-Package pdftex.def Info: images/images/arch.pdf used on input line 177.
+Package pdftex.def Info: images/images/arch.pdf used on input line 171.
 (pdftex.def)             Requested size: 355.9042pt x 109.04787pt.
- [90 <./images/images/arch.pdf>]
-Underfull \vbox (badness 1577) has occurred while \output is active []
 
- [91]
-[92]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[91] [92 <./images/images/arch.pdf>] [93]
+Underfull \vbox (badness 1325) has occurred while \output is active []
 
  [94]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 331.
+[95]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[95] <images/images/filtering_steps_1.pdf, id=3468, 344.28625pt x 531.48563pt>
+ [96]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 336.
+
+[97] <images/images/filtering_steps_1.pdf, id=3627, 344.28625pt x 531.48563pt>
 File: images/images/filtering_steps_1.pdf Graphic file (type pdf)
 
 <use images/images/filtering_steps_1.pdf>
 Package pdftex.def Info: images/images/filtering_steps_1.pdf used on input line
- 373.
+ 378.
 (pdftex.def)             Requested size: 172.1427pt x 265.74216pt.
- [96 <./images/images/filtering_steps_1.pdf>] [97]
+ [98 <./images/images/filtering_steps_1.pdf>] [99]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 521.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 526.
 
 Underfull \vbox (badness 5302) has occurred while \output is active []
 
- [98]
-[99] [100]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [101]
-[102]
+ [100]
+[101] [102]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [103]
-[104] [105]
+[104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+[106] [107]
 
 pdfTeX warning: pdflatex (file ./images/images/testbed1.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<images/images/testbed1.pdf, id=3601, 428.82208pt x 190.57799pt>
+<images/images/testbed1.pdf, id=3762, 428.82208pt x 190.57799pt>
 File: images/images/testbed1.pdf Graphic file (type pdf)
 
 <use images/images/testbed1.pdf>
-Package pdftex.def Info: images/images/testbed1.pdf used on input line 789.
+Package pdftex.def Info: images/images/testbed1.pdf used on input line 794.
 (pdftex.def)             Requested size: 316.36266pt x 140.60092pt.
-
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [106]
-[107 <./images/images/testbed1.pdf, page is rotated 90 degrees>]
+ [108] [109 <./images/images/testbed1.pdf, page is rotated 90 degrees>]
 <images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf, id
-=3677, 578.16pt x 151.56625pt>
+=3835, 578.16pt x 151.56625pt>
 File: images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pd
 f Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf
 >
 Package pdftex.def Info: images/gnuplot/sieveq/new_plot_latencyvsthroughput/lat
-encyVSthroughput.pdf used on input line 834.
+encyVSthroughput.pdf used on input line 839.
 (pdftex.def)             Requested size: 395.45181pt x 103.6673pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[108 <./images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.
-pdf>] [109]
-<images/gnuplot/sieveq/new_plot_fw/fw.pdf, id=3719, 361.35pt x 126.4725pt>
+ [110 <./images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput
+.pdf>] [111]
+<images/gnuplot/sieveq/new_plot_fw/fw.pdf, id=3876, 361.35pt x 126.4725pt>
 File: images/gnuplot/sieveq/new_plot_fw/fw.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_plot_fw/fw.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_plot_fw/fw.pdf used on input
- line 894.
+ line 900.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
-<images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf, id=3726, 433.62pt x
+<images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf, id=3883, 433.62pt x
  252.945pt>
 File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf Graphic file (t
 ype pdf)
  <use images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.
-pdf used on input line 914.
+pdf used on input line 920.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_normal.pdf, id=3727, 433.62pt x 
+<images/gnuplot/sieveq/plots/server_throughput_normal.pdf, id=3884, 433.62pt x 
 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_normal.pdf Graphic file (ty
 pe pdf)
  <use images/gnuplot/sieveq/plots/server_throughput_normal.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_normal.p
-df used on input line 916.
+df used on input line 922.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[110 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
-<images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=374
-6, 433.62pt x 252.945pt>
+
+<images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=389
+0, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf Gr
 aphic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_
-under_attack.pdf used on input line 932.
+under_attack.pdf used on input line 938.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_attack.pdf, id=3747, 433.62pt x 
+<images/gnuplot/sieveq/plots/server_throughput_attack.pdf, id=3891, 433.62pt x 
 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_attack.pdf Graphic file (ty
 pe pdf)
  <use images/gnuplot/sieveq/plots/server_throughput_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_attack.p
-df used on input line 934.
+df used on input line 940.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf, id=3751
+[112 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
+<images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf, id=3910
 , 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf Gra
 phic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_t1000_s500_change_
-with_attack.pdf used on input line 951.
+with_attack.pdf used on input line 957.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-<images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf, id=3752,
+<images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf, id=3911,
  433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf Grap
 hic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_with_att
-ack_change.pdf used on input line 953.
+ack_change.pdf used on input line 959.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 6641) has occurred while \output is active []
-
- [111 <./images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf> <./images/g
-nuplot/sieveq/plots/server_throughput_normal.pdf> <./images/gnuplot/sieveq/plot
-s/latency_normal_t1000_s500_under_attack.pdf> <./images/gnuplot/sieveq/plots/se
-rver_throughput_attack.pdf>]
+[113 <./images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf> <./images/gn
+uplot/sieveq/plots/server_throughput_normal.pdf> <./images/gnuplot/sieveq/plots
+/latency_normal_t1000_s500_under_attack.pdf> <./images/gnuplot/sieveq/plots/ser
+ver_throughput_attack.pdf>]
 <images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_repl
-icas_dos.pdf, id=3787, 433.62pt x 252.945pt>
+icas_dos.pdf, id=3948, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery
 _replicas_dos.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_
 replicas_dos.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_internal_recovery/server_thr
-oughput_no_recovery_replicas_dos.pdf used on input line 975.
+oughput_no_recovery_replicas_dos.pdf used on input line 981.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_replica
-s_dos.pdf, id=3788, 433.62pt x 252.945pt>
+s_dos.pdf, id=3949, 433.62pt x 252.945pt>
 File: images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_re
 plicas_dos.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_rep
 licas_dos.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_internal_recovery/server_thr
-oughput_recovery_replicas_dos.pdf used on input line 976.
+oughput_recovery_replicas_dos.pdf used on input line 982.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1286) has occurred while \output is active []
 
- [112 <./images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
+ [114 <./images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
  <./images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf> <./im
 ages/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replica
 s_dos.pdf> <./images/gnuplot/sieveq/new_internal_recovery/server_throughput_rec
-overy_replicas_dos.pdf>] <images/images/SIEM.pdf, id=3826, 663.47874pt x 278.03
+overy_replicas_dos.pdf>] <images/images/SIEM.pdf, id=3985, 663.47874pt x 278.03
 876pt>
 File: images/images/SIEM.pdf Graphic file (type pdf)
 
 <use images/images/SIEM.pdf>
-Package pdftex.def Info: images/images/SIEM.pdf used on input line 994.
+Package pdftex.def Info: images/images/SIEM.pdf used on input line 1000.
 (pdftex.def)             Requested size: 257.04126pt x 107.71344pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
+Underfull \hbox (badness 2310) in paragraph at lines 1015--1015
 [][][]\T1/ptm/m/n/9 (+20) In 2016 the Rio's Olympic Games the num-ber of events
- per sec-ond was
+ per sec-ond was ap-prox-i-mated 174,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\T1/ptm/m/n/9 (+20) ap-prox-i-mated 174, source: []$\T1/pcr/m/n/9 https : / / d
-iginomica . com / 2016 / 11 / 24 /
+Underfull \hbox (badness 6141) in paragraph at lines 1015--1015
+\T1/ptm/m/n/9 (+20) source: []$\T1/pcr/m/n/9 https : / / diginomica\OML/ztmcm/m
+/it/9 :\T1/pcr/m/n/9 com / 2016 / 11 / 24 / securing -[] the -[] olympics -[] l
+essons -[]
  []
 
-<images/gnuplot/sieveq/new_massif/massif.pdf, id=3833, 361.35pt x 100.375pt>
+<images/gnuplot/sieveq/new_massif/massif.pdf, id=3992, 361.35pt x 100.375pt>
 File: images/gnuplot/sieveq/new_massif/massif.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_massif/massif.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_massif/massif.pdf used on in
-put line 1013.
+put line 1019.
 (pdftex.def)             Requested size: 395.45181pt x 109.8492pt.
- [113 <./images/images/SIEM.pdf>] [114 <./images/gnuplot/sieveq/new_massif/mass
-if.pdf>]) [115]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[115 <./images/images/SIEM.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116 <./images/gnuplot/sieveq/new_massif/massif.pdf>]) [117]
 \openout2 = `chapters/conclusion/conclusion.aux'.
 
 
-(./chapters/conclusion/conclusion.tex [116
+(./chapters/conclusion/conclusion.tex [118
 
 
 
 
 ]
 chapter 7.
-[117] [118]
-Underfull \vbox (badness 4673) has occurred while \output is active []
-
- [119])
-[120] [121
+[119] [120] [121]) [122] [123
 
 ]
 \openout2 = `acronimos.aux'.
@@ -2898,169 +3132,285 @@ Underfull \vbox (badness 4673) has occurred while \output is active []
 \@gls@deffile=\write11
 \openout11 = `phd_mgarcia.glsdefs'.
 
-) (./phd_mgarcia.gls [122
+) (./phd_mgarcia.gls [124
 
 
 
 
-] [123
+]
+[125
 
 
-] [124] [125])
-[126] (./phd_mgarcia.bbl [127] [128
+] [126] [127]) [128] (./phd_mgarcia.bbl [129] [130
 
 
 ]
 chapter without number
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-[]\T1/ptm/m/n/10.95 (+20) Juniper Net-works Se-cu-rity.  []$\T1/pcr/m/n/10.95 h
-ttp : / / www . juniper . net / us / en /
+[131] [132]
+Underfull \hbox (badness 5652) in paragraph at lines 145--150
+[]\T1/ptm/m/n/10.95 (+20) Bill Bren-ner.  Stack Clash Linux vul-ner-a-bil-ity: 
+you need to patch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--18
-[]\T1/ptm/m/n/10.95 (+20) Sonicwall.  []$\T1/pcr/m/n/10.95 http : / / www . son
-icwall . com / us / en / products /
- []
-
-[129]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [130]
-[131]
-Underfull \hbox (badness 10000) in paragraph at lines 215--220
-\T1/pcr/m/n/10.95 / / www . ivizsecurity . com / blog / wp-[]content / uploads 
-/ 2011 / 02 /
+Underfull \hbox (badness 7238) in paragraph at lines 145--150
+\T1/ptm/m/n/10.95 (+20) now.  []$\T1/pcr/m/n/10.95 https : / / nakedsecurity\OM
+L/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 sophos\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/
+10.95 com / 2017 / 06 / 20 / stack -[]
  []
 
 
-Overfull \hbox (6.80281pt too wide) in paragraph at lines 215--220
-\T1/pcr/m/n/10.95 Vulnerability-[]Trends-[]in-[]Security-[]Products-[]upto-[]Ye
-ar-[]2010 .
+Underfull \vbox (badness 1231) has occurred while \output is active []
+
+ [133]
+Underfull \hbox (badness 10000) in paragraph at lines 199--204
+[]$\T1/pcr/m/n/10.95 http : / / www\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 ivi
+zsecurity\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com / blog / wp -[] content /
+ uploads /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--240
-[]\T1/ptm/m/n/10.95 (+20) Cisco.  Mul-ti-ple Vul-ner-a-bil-i-ties in Fire-wall 
-Ser-vices Mod-ule.
+Underfull \hbox (badness 10000) in paragraph at lines 199--204
+\T1/pcr/m/n/10.95 2011 / 02 / Vulnerability -[] Trends -[] in -[] Security -[] 
+Products -[] upto -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--240
-[]$\T1/pcr/m/n/10.95 http : / / tools . cisco . com / security / center / conte
-nt /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--247
+Underfull \hbox (badness 10000) in paragraph at lines 219--224
 []\T1/ptm/m/n/10.95 (+20) Cisco.  Mul-ti-ple Vul-ner-a-bil-i-ties in Cisco Fire
 -wall Ser-vices Mod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--247
-\T1/ptm/m/n/10.95 (+20) ule.  []$\T1/pcr/m/n/10.95 http : / / tools . cisco . c
-om / security / center / content /
+Underfull \hbox (badness 10000) in paragraph at lines 219--224
+\T1/ptm/m/n/10.95 (+20) ule.  []$\T1/pcr/m/n/10.95 http : / / tools\OML/ztmcm/m
+/it/10.95 :\T1/pcr/m/n/10.95 cisco\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com 
+/ security / center / content /
  []
 
 
-Underfull \vbox (badness 4001) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 226--231
+[]\T1/ptm/m/n/10.95 (+20) Cisco.  Mul-ti-ple Vul-ner-a-bil-i-ties in Fire-wall 
+Ser-vices Mod-ule.
+ []
 
- [132]
-[133]
-Underfull \hbox (badness 10000) in paragraph at lines 349--354
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--231
+[]$\T1/pcr/m/n/10.95 http : / / tools\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 c
+isco\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com / security / center / content 
+/
+ []
+
+[134]
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
+[]\T1/ptm/m/n/10.95 (+20) Debian.  De-bian Se-cu-rity Tracker.  []$\T1/pcr/m/n/
+10.95 https : / / security -[]
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 311--315
+[]\T1/ptm/m/n/10.95 (+20) Dell.  Son-icwall.  []$\T1/pcr/m/n/10.95 http : / / w
+ww\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 sonicwall\OML/ztmcm/m/it/10.95 :\T1/
+pcr/m/n/10.95 com / us / en / products /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--322
+\T1/pcr/m/n/10.95 support / contents / us / en / 04 / article / product -[] sup
+port /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--322
+\T1/pcr/m/n/10.95 self -[] support -[] knowledgebase / enterprise -[] resource 
+-[] center /
+ []
+
+[135]
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+[]\T1/ptm/m/n/10.95 (+20) Ethernodes.org.  The Ethereum Nodes Ex-plorer.  []$\T
+1/pcr/m/n/10.95 https : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--378
 []\T1/ptm/m/n/10.95 (+20) N. Fal-liere.  Ex-plor-ing Stuxnet's PLC In-fec-tion 
-Pro-
+Pro-cess.  []$\T1/pcr/m/n/10.95 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--354
-\T1/ptm/m/n/10.95 (+20) cess.  []$\T1/pcr/m/n/10.95 http : / / www . symantec .
- com / connect / blogs /
+Underfull \hbox (badness 10000) in paragraph at lines 373--378
+\T1/pcr/m/n/10.95 / / www\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 symantec\OML/
+ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com / connect / blogs / exploring -[] stuxn
+et -[] s -[]
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 368--373
+Underfull \hbox (badness 3646) in paragraph at lines 398--403
 []\T1/ptm/m/n/10.95 (+20) B. Free-man.  A New De-fense for Navy Ships: Pro-tec-
 tion from Cy-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--373
-\T1/ptm/m/n/10.95 (+20) ber At-tacks.  []$\T1/pcr/m/n/10.95 https : / / www . o
-nr . navy . mil / en / Media-[]Center /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--373
-\T1/pcr/m/n/10.95 Press-[]Releases / 2015 / RHIMES-[]Cyber-[]Attack-[]Protectio
-n . aspx$[]\T1/ptm/m/n/10.95 (+20) ,
- []
-
-[134] [135]
-Underfull \hbox (badness 1603) in paragraph at lines 473--477
-[]\T1/ptm/m/n/10.95 (+20) HashiCorp.  Va-grant Cloud.  []$\T1/pcr/m/n/10.95 htt
-ps : / / app . vagrantup . com / boxes /
- []
-
 [136]
-Underfull \hbox (badness 1968) in paragraph at lines 549--556
-\T1/ptm/m/n/10.95 (+20) Ser-vices.  []$\T1/pcr/m/n/10.95 https : / / software .
- intel . com / sites / default / files /
+Underfull \hbox (badness 10000) in paragraph at lines 472--477
+[]\T1/ptm/m/n/10.95 (+20) Google.  Google Vul-ner-a-bil-ity Re-ward Pro-gram Ru
+les.  []$\T1/pcr/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--556
+Underfull \hbox (badness 10000) in paragraph at lines 472--477
+\T1/pcr/m/n/10.95 / / www\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 google\OML/zt
+mcm/m/it/10.95 :\T1/pcr/m/n/10.95 com / about / appsecurity / reward -[] progra
+m /
+ []
+
+[137]
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+ [138]
+Underfull \hbox (badness 6625) in paragraph at lines 586--592
+\T1/ptm/m/n/10.95 (+20) Ser-vices.  []$\T1/pcr/m/n/10.95 https : / / software\O
+ML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 intel\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/
+10.95 com / sites / default / files /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--592
 \T1/pcr/m/n/10.95 managed / ac / 40 / 2016 % 20WW10 % 20sgx % 20provisioning % 
 20and %
  []
 
-[137] [138]
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--610
+[]$\T1/pcr/m/n/10.95 https : / / motherboard\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/
+10.95 vice\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com / amp / en[]us / article
+ / qvakp3 / a -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--610
+\T1/pcr/m/n/10.95 major -[] bug -[] in -[] bitcoin -[] software -[] could -[] h
+ave -[] crashed -[] the -[]
+ []
+
+[139]
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+ [140]
+Underfull \hbox (badness 8189) in paragraph at lines 741--747
+[]\T1/ptm/m/n/10.95 (+20) Limor Kessem.  Wan-naCry Ran-somware Spreads Across t
+he Globe,
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 741--747
+\T1/ptm/m/n/10.95 (+20) Makes Or-ga-ni-za-tions Wanna Cry About Mi-crosoft Vul-
+ner-a-bil-ity.  []$\T1/pcr/m/n/10.95 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--747
+\T1/pcr/m/n/10.95 / / securityintelligence\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10
+.95 com / wannacry -[] ransomware -[] spreads -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--747
+\T1/pcr/m/n/10.95 across -[] the -[] globe -[] makes -[] organizations -[] wann
+a -[] cry -[] about -[]
+ []
+
+[141]
+Underfull \hbox (badness 10000) in paragraph at lines 782--786
+[]\T1/ptm/m/n/10.95 (+20) Microsoft.  Mi-crosoft Bug Bounty Pro-gram.  []$\T1/p
+cr/m/n/10.95 https : / /
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 788--792
+[]\T1/ptm/m/n/10.95 (+20) Microsoft.  Mi-crosoft Se-cu-rity Ad-vi-sories and Bu
+l-letins.  []$\T1/pcr/m/n/10.95 https : / /
+ []
+
+
 Underfull \vbox (badness 1231) has occurred while \output is active []
 
- [139]
-Underfull \hbox (badness 2894) in paragraph at lines 771--776
+ [142]
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
+[]\T1/ptm/m/n/10.95 (+20) Mitre.  CVE Ter-mi-nol-ogy.  []$\T1/pcr/m/n/10.95 htt
+p : / / cve\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 mitre\OML/ztmcm/m/it/10.95 
+:\T1/pcr/m/n/10.95 org / about /
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 845--850
 []\T1/ptm/m/n/10.95 (+20) National In-sti-tute of Stan-dards and Tech-nol-ogy. 
  Guide for Con-duct-ing
  []
 
-[140] [141] [142]
-Underfull \hbox (badness 1442) in paragraph at lines 975--980
+[143]
+Underfull \hbox (badness 3179) in paragraph at lines 895--900
+[]\T1/ptm/m/n/10.95 (+20) Oracle.  Map of cve to ad-vi-so-ry/alert.  []$\T1/pcr
+/m/n/10.95 https : / / www\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 oracle\OML/z
+tmcm/m/it/10.95 :\T1/pcr/m/n/10.95 com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--900
+\T1/pcr/m/n/10.95 technetwork / topics / security / public -[] vuln -[] to -[] 
+advisory -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--907
+\T1/pcr/m/n/10.95 technetwork / topics / security / bulletinjul2016 -[] 3090568
+\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/10.95 html$[]\T1/ptm/m/n/10.95 (+20) .
+ []
+
+[144]
+Underfull \hbox (badness 2065) in paragraph at lines 1022--1026
+[]\T1/ptm/m/n/10.95 (+20) Snort.  Net-work In-tru-sion De-tec-tion & Pre-ven-ti
+on Sys-tem.  []$\T1/pcr/m/n/10.95 https : / /
+ []
+
+[145]
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
 []\T1/ptm/m/n/10.95 (+20) Symantec.  Drag-on-fly: Cy-beres-pi-onage At-tacks Ag
-ainst En-ergy Sup-pli-ers.
+ainst En-ergy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--980
-[]$\T1/pcr/m/n/10.95 http : / / www . symantec . com / content / en / us / ente
-rprise / media /
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
+\T1/ptm/m/n/10.95 (+20) Sup-pli-ers.  []$\T1/pcr/m/n/10.95 http : / / www\OML/z
+tmcm/m/it/10.95 :\T1/pcr/m/n/10.95 symantec\OML/ztmcm/m/it/10.95 :\T1/pcr/m/n/1
+0.95 com / content / en / us /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--980
-\T1/pcr/m/n/10.95 security _ response / whitepapers / Dragonfly _ Threat _ Agai
-nst _
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
+\T1/pcr/m/n/10.95 enterprise / media / security[]response / whitepapers /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--987
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1087
+\T1/pcr/m/n/10.95 Dragonfly[]Threat[]Against[]Western[]Energy[]Suppliers\OML/zt
+mcm/m/it/10.95 :\T1/pcr/m/n/10.95 pdf$[]\T1/ptm/m/n/10.95 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1094
 []\T1/ptm/m/n/10.95 (+20) Symantec.  In-ter-net Se-cu-rity Threat Re-port.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--987
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1094
 \T1/ptm/m/n/10.95 (+20) https://www.symantec.com/content/dam/symantec/docs/repo
 rts/istr-22-2017-
  []
 
-[143]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [144])
-AED: lastpage setting LastPage [145]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 354.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
+[146] [147] [148]) AED: lastpage setting LastPage [149]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
  (./phd_mgarcia.aux
 (./chapters/abstract/resumo_ing.aux) (./chapters/abstract/resumo_pt.aux)
 (./chapters/abstract/resumo_estendido_pt.aux)
@@ -3069,49 +3419,45 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
 ) (./chapters/lazarus/lazarus_design.aux)
 (./chapters/lazarus/lazarus_implementation.aux) (./chapters/sieveq/sieveq.aux)
 (./chapters/conclusion/conclusion.aux) (./acronimos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
 Package rerunfilecheck Info: File `phd_mgarcia.out' has not changed.
-(rerunfilecheck)             Checksum: FDE4B12D670F041CA60A1CC07DB062A3;6219.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 354.
+(rerunfilecheck)             Checksum: A03555BB0BFC0AB76BC0CEFDAC06F862;6186.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 39051 strings out of 494925
- 684470 string characters out of 6180252
- 957377 words of memory out of 5000000
- 40154 multiletter control sequences out of 15000+600000
- 257322 words of font info for 631 fonts, out of 8000000 for 9000
+ 39449 strings out of 494925
+ 690256 string characters out of 6180251
+ 969595 words of memory out of 5000000
+ 40504 multiletter control sequences out of 15000+600000
+ 246343 words of font info for 618 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 65i,23n,106p,8822b,1999s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-
-ec-sc.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
-/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/q
-hvbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
-ic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on phd_mgarcia.pdf (172 pages, 5815567 bytes).
+ 65i,32n,106p,8822b,1345s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{glo:db} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc
+/dvips/tex-gyre/q-ec-sc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/t
+ype1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhv
+bi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on phd_mgarcia.pdf (176 pages, 5753254 bytes).
 PDF statistics:
- 4618 PDF objects out of 5155 (max. 8388607)
- 4102 compressed objects within 42 object streams
- 735 named destinations out of 1000 (max. 500000)
- 98713 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 4835 PDF objects out of 5155 (max. 8388607)
+ 4254 compressed objects within 43 object streams
+ 756 named destinations out of 1000 (max. 500000)
+ 91547 words of extra memory for PDF output out of 106986 (max. 10000000)
 
