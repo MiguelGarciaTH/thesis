@@ -739,7 +739,7 @@ Then, \system proceeds with the recovery of the faulty replica.
 
 We implemented a prototype of \sieveq following the specification of the previous section to validate our design.
 The \sender and \postsieve were developed as libraries that are linked with the sender and receiver applications. 
-The libraries offer an interface similar to the \gls{tcp} sockets, to simplify the integration and minimize changes both in the client and server applications. 
+The libraries offer an interface similar to the TCP sockets, to simplify the integration and minimize changes both in the client and server applications. 
 A sender can provide a buffer to be transmitted, and the receiver can indicate a buffer where the received data is to be stored.
 Internally, the \sender library adds a \gls{mac} and a signature to each message. 
 The \gls{mac} is created using \gls{hmac} with the \gls{sha}-256 hash function and a 256-bit key, and the signature employs \gls{rsa} with 512-bit keys. 
@@ -818,8 +818,8 @@ Consequently, the server can calculate the number of messages delivered every se
 The throughput is computed as the average value of the individual measurements collected over a period of time (in our case, 5 minutes after the steady state was reached).
 
 In some experiments, we wanted to assess the behavior of \sieveq under a \gls{dos} attack. 
-The attack was made using \texttt{PyLoris}~\cite{pyloris}, a tool built to exploit vulnerabilities on \gls{tcp} connection handling.
-The tool implements the Slowloris attack method, which opens many \gls{tcp} connections and keeps them open.
+The attack was made using \texttt{PyLoris}~\cite{pyloris}, a tool built to exploit vulnerabilities on TCP connection handling.
+The tool implements the Slowloris attack method, which opens many TCP connections and keeps them open.
 The tool allows the user to define parameters like group size of attack threads, the maximum number of connections, and the time interval between connections among others.
 In our setup, \texttt{PyLoris} was configured to perform an unlimited number of connections, with $0.1$ milliseconds between each connection.
 
@@ -929,7 +929,7 @@ It is possible to observe some momentary spikes in the latency and throughput, w
 
 The behavior of the \sieveq during a \gls{dos} attack is displayed in Figure~\ref{fig:latency_attack} and Figure~\ref{fig:throughput_attack}.
 In this scenario, we have disabled the \sieveq capability of replacing \presieves at runtime.
-The attack consists in stressing the \gls{tcp} socket interface of the \presieves by creating many \gls{tcp} connections, which consumes network bandwidth and wastes resources at system and application levels. When the attack is started, it executes for 50 seconds. The latency graph displays a reasonable impact regarding an increase in the delays for message delivery. 
+The attack consists in stressing the TCP socket interface of the \presieves by creating many TCP connections, which consumes network bandwidth and wastes resources at system and application levels. When the attack is started, it executes for 50 seconds. The latency graph displays a reasonable impact regarding an increase in the delays for message delivery. 
 In some cases, the latency is not too affected, but in others, there is a drastic delay, with some messages taking more than 3 seconds.
 The attack also has consequences on the throughput as it is possible to observe an oscillation between 0 to 4000 messages per second (which correspond to the situation when the \postsieve processes a batch of messages that have been accumulated).
 

@@ -1,0 +1,193 @@
+Special Publication 800-39 
+Managing Information Security Risk Organization, Mission, and Information System View
+https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=908030
+________________________________________________________________________________________________ 
+
+1. Managing risk is a complex, multifaceted activity that requires the involvement of the entire
+organization—from senior leaders/executives providing the strategic vision and top-level goals
+and objectives for the organization; to mid-level leaders planning, executing, and managing
+projects; to individuals on the front lines operating the information systems supporting the
+organization’s missions/business functions. Risk management is a comprehensive process that
+requires organizations to: (i) frame risk (i.e., establish the context for risk-based decisions); (ii)
+assess risk; (iii) respond to risk once determined; and (iv) monitor risk on an ongoing basis using
+effective organizational communications and a feedback loop for continuous improvement in the
+risk-related activities of organizations. Risk management is carried out as a holistic, organizationwide
+activity that addresses risk from the strategic level to the tactical level, ensuring that riskbased
+decision making is integrated into every aspect of the organization.13 The following
+sections briefly describe each of the four risk management components. 
+
+2. Establishing a realistic and credible
+risk frame requires that organizations identify: (i) risk assumptions (e.g., assumptions about the
+threats, vulnerabilities, consequences/impact, and likelihood of occurrence that affect how risk is
+assessed, responded to, and monitored over time); (ii) risk constraints (e.g., constraints on the risk
+assessment, response, and monitoring alternatives under consideration); (iii) risk tolerance (e.g.,
+levels of risk, types of risk, and degree of risk uncertainty that are acceptable); and (iv) priorities
+and trade-offs (e.g., the relative importance of missions/business functions, trade-offs among
+different types of risk that organizations face, time frames in which organizations must address
+risk, and any factors of uncertainty that organizations consider in risk responses). The risk
+framing component and the associated risk management strategy also include any strategic-level
+decisions on how risk to organizational operations and assets, individuals, other organizations,
+and the Nation, is to be managed by senior leaders/executives. 
+
+3. The purpose of the risk assessment component is to
+identify: (i) threats to organizations (i.e., operations, assets, or individuals) or threats directed
+through organizations against other organizations or the Nation; (ii) vulnerabilities internal and
+external to organizations;14 (iii) the harm (i.e., consequences/impact) to organizations that may
+occur given the potential for threats exploiting vulnerabilities; and (iv) the likelihood that harm
+will occur. The end result is a determination of risk (i.e., the degree of harm and likelihood of
+harm occurring). To support the risk assessment component, organizations identify: (i) the tools,
+techniques, and methodologies that are used to assess risk; (ii) the assumptions related to risk
+assessments; (iii) the constraints that may affect risk assessments; (iv) roles and responsibilities;
+(v) how risk assessment information is collected, processed, and communicated throughout
+organizations; (vi) how risk assessments are conducted within organizations; (vii) the frequency
+of risk assessments; and (viii) how threat information is obtained (i.e., sources and methods). 
+
+4. The third component of risk management addresses how organizations respond to risk once that
+risk is determined based on the results of risk assessments. The purpose of the risk response
+component is to provide a consistent, organization-wide, response to risk in accordance with the
+organizational risk frame by: (i) developing alternative courses of action for responding to risk;
+(ii) evaluating the alternative courses of action; (iii) determining appropriate courses of action
+consistent with organizational risk tolerance; and (iv) implementing risk responses based on
+selected courses of action. To support the risk response component, organizations describe the
+types of risk responses that can be implemented (i.e., accepting, avoiding, mitigating, sharing, or
+transferring risk). Organizations also identify the tools, techniques, and methodologies used to
+develop courses of action for responding to risk, how courses of action are evaluated, and how
+risk responses are communicated across organizations and as appropriate, to external entities
+(e.g., external service providers, supply chain partners).15
+
+5. The fourth component of risk management addresses how organizations monitor risk over time.
+The purpose of the risk monitoring component is to: (i) verify that planned risk response
+measures are implemented and information security requirements derived from/traceable to
+organizational missions/business functions, federal legislation, directives, regulations, policies,
+and standards, and guidelines, are satisfied; (ii) determine the ongoing effectiveness of risk
+response measures following implementation; and (iii) identify risk-impacting changes to
+organizational information systems and the environments in which the systems operate.16 To
+support the risk monitoring component, organizations describe how compliance is verified and
+how the ongoing effectiveness of risk responses is determined (e.g., the types of tools, techniques,
+and methodologies used to determine the sufficiency/correctness of risk responses and if risk
+mitigation measures are implemented correctly, operating as intended, and producing the desired
+effect with regard to reducing risk). In addition, organizations describe how changes that may
+impact the ongoing effectiveness of risk responses are monitored. 
+
+6. Likelihood
+Organizations can employ a variety of approaches for determining the likelihood of threat events. Some organizations
+treat the likelihood that a threat event will occur and the likelihood that, if it occurs, it will result in adverse effects as
+separate factors, while other organizations assess threat likelihood as a combination of these factors. In addition, some
+organizations prefer quantitative risk assessments while other organizations, particularly when the assessment involves
+a high degree of uncertainty, prefer qualitative risk assessments. Likelihood determinations can be based on either
+threat assumptions or actual threat data (e.g., historical data on cyber attacks, historical data on earthquakes, or specific
+information on adversary capabilities, intentions, and targeting). When specific and credible threat data is available
+(e.g., types of cyber attacks, cyber attack trends, frequencies of attacks), organizations can use the empirical data and
+statistical analyses to determine more specific probabilities of threat events occurring. Organizations select a method
+consistent with organizational culture and risk tolerance. Organizations can also make explicit assumptions concerning
+the likelihood that a threat event will result in adverse effects as follows: (i) worst case (i.e., attack will be successful
+unless strong, objective reasons to presume otherwise); (ii) best case (i.e., attack will not be successful unless specific,
+credible information to the contrary); or (iii) something in between best and worst cases (e.g., the most probable case).
+Organizations document any overarching assumptions. Organizations can use empirical data and statistical analyses to
+help inform any of the approaches used to determine the likelihood of threat events occurring. Organizations select a
+method consistent with organizational culture, understanding of the operational environment, and risk tolerance. 
+
+7. RISK TOLERANCE --- THIS IS IMPORTANT BECAUSE OF THE THRESHOLD AND (the next topic) WAYS TO CLEAN QUARANTINE TRADEOFF
+TASK 1-3: Identify the level of risk tolerance for the organization.
+Supplemental Guidance: Risk tolerance is the level of risk that organizations are willing to accept in pursuit of strategic
+goals and objectives. Organizations define information security-related risk tolerance organization-wide considering all
+missions/business functions. Organizations can use a variety of techniques for identifying information security risk
+tolerance (e.g., by establishing zones in a likelihood-impact trade space or by using a set of representative scenarios).
+Organizations also define tolerance for other types of organizational and operational risks (e.g., financial, risk, safety
+risk, compliance risk, or reputation risk). At Tier 2, mission/business owners may have different risk tolerances from
+the organization as a whole. The risk executive (function) provides organizations with ways to resolve such differences
+in risk tolerances at Tier 2. The level of residual risk accepted by authorizing officials for information systems or
+inherited common controls is within the organizational risk tolerance, and not the individual risk tolerances of those
+authorizing officials. In addition, organizations provide to Tier 2 and Tier 3, guidance on evaluating risk for specific
+mission/business processes or information systems and a focus on near-term mission/business effectiveness with the
+longer-term, strategic focus of the organizational risk tolerance. See Section 2.3.3 for additional information on risk
+tolerance.
+PRIORITIES AND TRADE-OFFS
+TASK 1-4: Identify priorities and trade-offs considered by the organization in managing risk.
+Supplemental Guidance: Risk is experienced at different levels, in different forms, and in different time frames. At Tier
+1, organizations make trade-offs among and establish priorities for responding to such risks. Organizations tend to have
+multiple priorities that at times conflict, which generates potential risk. Approaches employed by organizations for
+managing portfolios of risks reflect organizational culture, risk tolerance, as well as risk-related assumptions and
+constraints. These approaches are typically embodied in the strategic plans, policies, and roadmaps of organizations
+which may indicate preferences for different forms of risk response. For example, organizations may be willing to
+accept short-term risk of slightly degraded operations to achieve long-term reduction in information security risk.
+However, this trade-off could be unacceptable for one particularly critical mission/business function (e.g., real-time
+requirements in many industrial/process control systems). For that high-priority area, a different approach to improving
+security may be required including the application of compensating security controls. 
+
+8. Risk Determination and Uncertainty
+Risk determinations require analysis of threat, vulnerability, likelihood, and impact-related information. Organizations
+also need to examine mission/business vulnerabilities and threats where safeguards and/or countermeasures do not
+exist. The nature of the inputs provided to this step (e.g., general, specific, strategic, tactical) directly affects the type of
+outputs or risk determinations made. The reliability and accuracy of risk determinations are dependent on the currency,
+accuracy, completeness, and integrity of information collected to support the risk assessment process. In addition, the
+components of risk assessment results that affect reliability and accuracy of risk determinations also affect the amount
+of uncertainty associated with those risk determinations and subsequent determinations. Organizations also consider
+additional insights related to the anticipated time frames associated with particular risks. Time horizons associated with
+potential threats can shape future risk responses (e.g., risk may not be a concern if the time horizon for the risk is in the
+distant future). 
+
+9. Risk Mitigation
+Risk mitigation, or risk reduction, is the appropriate risk response for that portion of risk that cannot be accepted,
+avoided, shared, or transferred. The alternatives to mitigate risk depend on: (i) the risk management tier and the scope 
+of risk response decisions assigned or delegated to organizational officials at that tier (defined by the organizational
+governance structures); and (ii) the organizational risk management strategy and associated risk response strategies.
+The means used by organizations to mitigate risk can involve a combination of risk response measures across the three
+tiers. For example, risk mitigation can include common security controls at Tier 1, process re-engineering at Tier 2,
+and/or new or enhanced management, operational, or technical safeguards or countermeasures (or some combination of
+all three) at Tier 3. Another example of a potential risk requiring mitigation can be illustrated when adversaries gain
+access to mobile devices (e.g., laptop computers or personal digital assistants) while users are traveling. Possible risk
+mitigation measures include, for example, organizational policies prohibiting transport of mobile devices to certain
+areas of the world or procedures for users to obtain a clean mobile device that is never allowed to connect to the
+organizational networks. 
+
+10.
+3.4 MONITORING RISK
+Risk monitoring provides organizations with the means to: (i) verify compliance;
+64 (ii) determine
+the ongoing effectiveness of risk response measures; and (iii) identify risk-impacting changes to
+organizational information systems and environments of operation. Analyzing monitoring results
+gives organizations the capability to maintain awareness of the risk being incurred, highlight the
+need to revisit other steps in the risk management process, and initiate process improvement
+activities as needed.65 Organizations employ risk monitoring tools, techniques, and procedures to
+increase risk awareness, helping senior leaders/executives develop a better understanding of the
+ongoing risk to organizational operations and assets, individuals, other organizations, and the
+Nation. Organizations can implement risk monitoring at any of the risk management tiers with
+different objectives and utility of information produced. For example, Tier 1 monitoring activities
+might include ongoing threat assessments and how changes in the threat space may affect Tier 2
+and Tier 3 activities, including enterprise architectures (with embedded information security
+architectures) and organizational information systems. Tier 2 monitoring activities might include,
+for example, analyses of new or current technologies either in use or considered for future use by
+organizations to identify exploitable weaknesses and/or deficiencies in those technologies that
+may affect mission/business success. Tier 3 monitoring activities focus on information systems
+and might include, for example, automated monitoring of standard configuration settings for
+information technology products, vulnerability scanning, and ongoing assessments of security
+controls. In addition to deciding on appropriate monitoring activities across the risk management
+tiers, organizations also decide how monitoring is to be conducted (e.g., automated or manual
+approaches) and the frequency of monitoring activities based on, for example, the frequency with
+which deployed security controls change, critical items on plans of action and milestones, and
+risk tolerance. 
+
+11. Frequency of Monitoring
+The frequency of risk monitoring (whether automated or manual) is driven by organizational missions/business
+functions and the ability of organizations to use the monitoring results to facilitate greater situational awareness. An
+increased level of situational awareness of the security state of organizational information systems and environments of
+operation helps organizations develop a better understanding of risk. Monitoring frequency is also driven by other
+factors, for example: (i) the anticipated frequency of changes in organizational information systems and operating
+environments; (ii) the potential impact of risk if not properly addressed through appropriate response measures; and
+(iii) the degree to which the threat space is changing. The frequency of monitoring can also be affected by the type of
+monitoring conducted (i.e., automated versus procedural approaches). Depending on the frequency of monitoring 
+required by organizations, in most situations, monitoring is most efficient and cost-effective when automation is
+employed. Monitoring can provide significant benefits, especially in situations where such monitoring limits the
+opportunities for adversaries to gain a foothold within organizations (either through information systems or the
+environments in which those systems operate). When manual monitoring is employed by organizations, it is generally
+not efficient to perform the monitoring with the frequency that automation allows. In some instances, infrequent
+monitoring is not a major issue. For example, missions/business functions, facilities, legislation, policies, and
+technologies tend to change on a more gradual basis and as such, do not lend themselves to frequent monitoring.
+Instead, these types of changes are better suited to condition/event-based monitoring (e.g., if missions and/or business
+functions change, then monitoring of such changes is appropriate to determine if the changes have any impact on risk). 
+
+
+
+
+

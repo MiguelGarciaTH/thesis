@@ -3,14 +3,15 @@
 
 \section{Context and Motivation}
 \paragraph{Intrusion Tolerance.}
-\gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (\emph{noun}) with Byzantine fault-tolerant (\emph{adjective}) using the BFT acronym for both.} is a well-established area of research that aims to guarantee the safety of replicated systems even in the presence of some (Byzantine) faulty nodes.
+\gls{bft}\footnote{In this thesis we interchange Byzantine fault tolerance (\emph{noun}) with Byzantine fault-tolerant (\emph{adjective}) using the BFT acronym for both.} is a well-established area of research that aims to guarantee the safety of replicated systems even in the presence of some faulty nodes that arbitrarily deviate from their specification.
 In a nutshell, \gls{bft} protocols guarantee that replicas agree on the order of the message execution, and thus, the replicas work as a replicated state machine.
-The \gls{bft} safety holds even if a subpart of the replicas (typically $f$ out of $n$) is faulty, thus remaining replicas, assumed as correct, execute correctly.
+The \gls{bft} safety holds even if a subpart of the replicas is faulty (typically $f$ out of $n$), thus remaining replicas, assumed as correct, execute correctly.
 Although not explicit, this assumption leverages on the strict condition that nodes (must) fail independently.
 Otherwise, compromising $f$ replicas is virtually the same as compromising $f+1$.
 
 
-\gls{bft} was first proposed in 1982 by Lamport~\etal{}~\cite{Lamport:1982}, but it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}. 
+\gls{bft} was first proposed in 1980 by Pease~\etal{}~\cite{Pease:1980}, in the following years a few works were made on this subject~\cite{Reiter:1994,Kihlstrom:1998}.
+However, it only as awaken the distributed systems research community to its relevancy in 1999 due to Castro and Liskov's Practical \gls{bft}~\cite{Castro:1999}. 
 In the last twenty years of active research on \gls{bft} replication, there were made great advances on the performance (e.g.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), use of resources (e.g.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), and robustness (e.g.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) of \gls{bft} systems.
 However, \gls{bft} in general and these works in particular, assume, either implicitly or explicitly, that replicas fail independently. 
 This assumption implies that it takes more time to compromise the system (i.e., $f+1$ replicas) if the nodes do not share weaknesses. 
@@ -25,7 +26,7 @@ Moreover, in 2014, the U.S. Navy developed the Resilient Hull, Mechanical, and E
 Another example of a critical system that naturally adopted diversity are the \gls{dns} root servers. 
 According to Lars-Johan Liman (chair of the Root Server System Advisory Committee) each operator has its own configurations, as ``\emph{it allows for great operational diversity}''~\cite{dns_root}. 
 The goal is to avoid that a single software bug cannot bring down all servers.
-The blockchain growing technology implements a \gls{bft} network in a large and dispersed way.
+The blockchain growing technology implements a \gls{bft} network in a large and decentralized way.
 Therefore, it shares the same limitations of the enumerated \gls{bft} works, i.e., the network nodes may share common weakness.
 There is already evidence that Bitcoin~\cite{bitcoin} suffer from this problem.
 Moreover, Ethereum stats show that there are a few \glspl{os} among the nodes~\cite{Ethstats,Ethernodes} which can deter attacks from exploiting common mode failures.
@@ -45,8 +46,8 @@ The reason why \gls{bft} solutions need to make stronger assumptions on the repl
 Vulnerabilities are weaknesses in the code that can be exploited by a malicious agent to compromise some security properties (i.e., integrity, confidentiality, and availability).
 Zero-day vulnerabilities are a particular type of vulnerabilities, which are especially critical as their disclosure occurs only when the attack is already (being) done.
 On the contrary, if a vulnerability is discovered by a vendor or by a third-party software analyst, the vendor releases a patch as soon as possible. 
-Moreover, such vulnerabilities are traded on the black market as a highly paid service~\cite{Symantec:2017,Allodi:2017}.
-For example, big companies and organizations are promoting bug bounty programs to try to find zero-day vulnerabilities before the hackers (e.g., Google Vulnerability Reward Program~\cite{google_reward}, Facebook Bug Bounty Program~\cite{facebook_whitehat}, Microsoft Bounty~\cite{microsoft_bounty}, and DARPA Cyber Grand Challenge (2016)~\cite{darpa}).
+Moreover, such vulnerabilities are traded on the black market at high prices~\cite{Symantec:2017,Allodi:2017}.
+For example, big companies and organizations are promoting bug bounty programs as an attempt to find zero-day vulnerabilities before the hackers (e.g., Google Vulnerability Reward Program~\cite{google_reward}, Facebook Bug Bounty Program~\cite{facebook_whitehat}, Microsoft Bounty~\cite{microsoft_bounty}, and DARPA Cyber Grand Challenge (2016)~\cite{darpa}).
 
 
 
@@ -79,7 +80,7 @@ Moreover, we observed that using different \gls{os} releases of the same \gls{os
 The described contributions (together with the ones published during the MSc~\cite{Garcia:2012}) are reported in the following publication:
 
 \begin{enumerate}
-\item[1.] \textbf{Analysis of Operating System Diversity for Intrusion Tolerance}, Miguel Garcia, Alysson Bessani, Ilir Gashi Nuno Neves, and Rafael Obelheiro, in \emph{Software: Practice and Experience, 2014}~\cite{Garcia:2014}.
+\item[1.] \textbf{Analysis of Operating System Diversity for Intrusion Tolerance}, Miguel Garcia, Alysson Bessani, Ilir Gashi, Nuno Neves, and Rafael Obelheiro, in \emph{Software: Practice and Experience, 2014}~\cite{Garcia:2014}.
 \end{enumerate}
 
 
@@ -90,10 +91,10 @@ However, this preliminary analysis suffer from some limitations as other works u
 It is possible to find vulnerabilities in \gls{nvd} that were not reported to all affected \glspl{os}.
 We have found these missing vulnerabilities reported on other sources (e.g., the vendors' security advisories).
 Therefore, some of the results of \gls{nvd}-based studies may provide less accurate conclusions about selecting different software based on common vulnerabilities.
-Moreover, \gls{nvd} lacks from some relevant data concerning exploits and patches that are relevant when considering vulnerabilities life-cycle.
+Moreover, \gls{nvd} lacks some relevant data concerning exploits and patches that are relevant when considering vulnerabilities life-cycle.
 
-An alternative way to data-based diversity selection (e.g., \gls{ots} diversity) is to generate diversity through automatic mechanisms (e.g.,~\cite{Roeder:2010,Amir:2011}).
-However, these mechanisms lack of evidence to claim that these techniques create real vulnerability independence~\cite{Snow:2013,Bittau:2014}. 
+An alternative (or complementary) way to \gls{ots} diversity is to generate diversity through automatic mechanisms (e.g.,~\cite{Roeder:2010,Amir:2011}).
+However, their produced vulnerability independence is difficult to substantiate~\cite{Snow:2013,Bittau:2014}. 
 
 Finally, the existent systems that implement time-triggered recoveries assume that it takes the same time/effort to compromise each replica, by assuming that vulnerabilities are all the same. 
 This assumption is unrealistic, especially when the replicas' diversity is considered~\cite{Nayak:2014}. 
@@ -108,8 +109,7 @@ The clusters and the collected data are used to assess the risk of a \gls{bft} s
 Once the risk increases, the system replaces the potentially vulnerable replica by another one, to maximize the failure independence of the replicated service.
 The solution continuously collects data from the online sources and monitors the risk of the \gls{bft} in such a way that removes the human from the loop.
 
-We have implemented these contributions in \system.
-To the best of our knowledge, it is the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
+We have implemented these contributions in \system, the first system that automatically changes the attack surface of a \gls{bft} system in a dependable way.
 \system continuously collects security data from several \gls{osint} feeds to build a vulnerability knowledge base.
 This data is used to create clusters of similar vulnerabilities.
 These clusters and other collected attributes are used to analyze the risk of the \gls{bft} system becoming compromised by replacing replicas before risk increases too much. 
@@ -119,7 +119,7 @@ Moreover, the current implementation of \system manages 17 \gls{os} versions, su
 The replicas run in \glspl{vm}, allowing provisioning mechanisms to configure them. 
 We conducted two sets of experiments: The first one demonstrates that \system risk management can prevent a group of replicas from sharing vulnerabilities over time; 
 The second one, reveals the potential negative impact that virtualization and diversity can have on performance. 
-In this experiment, we evaluated \system with three \gls{bft} use case applications: (1) a Key-Value Store application, (2) \sieveq an application-like firewall (this contribution is presented in the next section), and (3) a \gls{bft} ordering service for Hyperledger Fabric a blockchain application.
+In this experiment, we evaluated \system with three \gls{bft} use case applications: (1) a Key-Value Store application, (2) \sieveq an application-like firewall (see next section), and (3) a \gls{bft} ordering service for the Hyperledger Fabric blockchain platform.
 The overall results show that if naive configurations are avoided, \gls{bft} applications in diverse configurations can perform close to our homogeneous bare metal setup.
 
 The contributions of this work resulted in the following publications:
@@ -152,7 +152,7 @@ Second, firewalls are typically a single point of failure, which means that when
 Therefore, ensuring the correct operation of the firewall under a wide range of failure scenarios becomes imperative.
 
 
-This last contribution addresses the previously described problems with a new protection system, called \sieveq.
+The last contribution of this thesis addresses the previously described problems with a new protection system, called \sieveq.
 This system mixes the firewall paradigm with a message queue service.
 In the last decade, several significant advances occurred in the development of intrusion-tolerant systems.
 However, to the best of our knowledge, very few works proposed intrusion-tolerant protection devices, such as firewalls.
@@ -161,7 +161,7 @@ Additionally, achieving complete transparency to the rest of the system can be c
 In \sieveq, we explore a different design for replicated protection devices, where we trade some transparency on senders and receivers for a more efficient and resilient firewall solution.
 In particular, we propose an architecture in which critical services and devices can only be accessed through a message queue where application-level filtering is implemented.
 It is assumed that these services have a limited number of senders, which can be appropriately configured to ensure that only they are authorized to communicate through \sieveq.
-The solution has a fault- and intrusion-tolerant architecture that applies filtering operations in two stages acting like a sieve.
+The solution has a fault- and intrusion-tolerant architecture that applies filtering operations in two stages, acting like a sieve.
 The first stage, called \emph{pre-filtering}, performs lightweight checks, making it efficient to detect and discard malicious messages from external adversaries.
 In particular, messages are only allowed to go through if they come from a pre-defined set of authenticated senders.
 \gls{dos} traffic from external sources is immediately dropped, preventing those messages from overloading the next stage.
@@ -178,13 +178,13 @@ The experiments demonstrate that \sieveq can handle a workload up to sixteen tim
 The contributions of this work resulted in the following publications:
 
 \begin{enumerate}
-\item[5.] \textbf{An Intrusion-Tolerant Firewall Design for Protecting SIEM Systems}, Miguel Garcia, Nuno Neves, Alysson Bessani, in the \emph{Workshop on Systems Resilience in conjunction with the IEEE/IFIP International Conference on Dependable Systems and Networks, 2013}~\cite{Garcia:2013}.
+\item[5.] \textbf{An Intrusion-Tolerant Firewall Design for Protecting SIEM Systems}, Miguel Garcia, Nuno Neves, and Alysson Bessani, in the \emph{Workshop on Systems Resilience in conjunction with the IEEE/IFIP International Conference on Dependable Systems and Networks, 2013}~\cite{Garcia:2013}.
 
 \item[6.] \textbf{\sieveq: A Layered BFT Protection System for Critical Services}, Miguel Garcia, Nuno Neves, and Alysson Bessani, in \emph{IEEE Transactions on Dependable and Secure Computing, 2018}~\cite{Garcia:2016}.
 \end{enumerate}
 
 
-\paragraph{Non-related contributions.}
+\paragraph{Additional contributions.}
 A collaboration with a colleague resulted in a work on \gls{scada} system enhanced with \gls{bft} techniques. 
 We documented the challenges of building such a system from a ``traditional'' non-\gls{bft} solution.
 This effort resulted in a prototype, implemented by the colleague, that integrates the Eclipse NeoSCADA~\cite{eclipsescada} and the \textsc{BFT-SMaRt}~\cite{Bessani:2014} open-source projects.
@@ -211,8 +211,8 @@ Additionally, it is possible to continuously manage these systems while monitori
 
 \section{Thesis Overview}
 \paragraph{Chapter~\ref{chap:related_work}: \nameref{chap:related_work}.}
-This chapter provides a background overview of intrusion tolerance history. 
-It also presents the most relevant and related works on the different areas of intrusion tolerance.
+This chapter provides a background overview of intrusion tolerance. 
+It also presents the most relevant related works on the different areas of intrusion tolerance.
 In particular, it is focused on its main areas: Byzantine Fault Tolerance, replica rejuvenations, and diversity.
 Then, it identifies several works that implemented diversity guided by \emph{intuition}, then it covers the works that analyzed vulnerabilities, and finally, presents some solutions that manage intrusion-tolerant systems.
 
@@ -241,11 +241,11 @@ In particular, we evaluate the performance of three real \gls{bft} applications,
 \paragraph{Chapter~\ref{chap:sieveq}: \nameref{chap:sieveq}.}
 This chapter presents \sieveq, a firewall-like replicated application that implements a new architecture paradigm.
 The \sieveq architecture provides additional resilient mechanisms when compared with state-of-the-art solutions.
-To conclude the chapter, we present an evaluation where we show the resilient mechanism performance when \sieveq is attacked.
+To conclude the chapter, we present an evaluation showing the performance and resilience of \sieveq when attacked.
 
 
 
 \paragraph{Chapter~\ref{chap:conclusion}: \nameref{chap:conclusion}.}
 This chapter summarizes the results that we achieved within this thesis.
-Additionally, we identify and briefly describe the directions of the work that can be pursued in future research.   
+Additionally, we identify and briefly describe the possible directions for future research.   
 

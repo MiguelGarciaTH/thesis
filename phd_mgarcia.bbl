@@ -73,6 +73,12 @@ A.~Avizienis and L.~Chen.
 \newblock In {\em Proceedings of the Annual International Computer Software and
   Applications Conference}, Nov. 1977.
 
+\bibitem{Avizienis:2004}
+A.~Avizienis, J.~Laprie, B.~Randell, and C.~Landwehr.
+\newblock Basic concepts and taxonomy of dependable and secure computing.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  1(1):11--33, Jan. 2004.
+
 \bibitem{Bairavasundaram:2009}
 L.~Bairavasundaram, S.~Sundararaman, A.~Arpaci-Dusseau, and R.~Arpaci-Dusseau.
 \newblock {Tolerating File-system Mistakes with EnvyFS}.
@@ -345,6 +351,12 @@ T.~Distler, R.~Kapitza, and H.~Reiser.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, Apr. 2008.
 
+\bibitem{Doudou:1999}
+A.~Doudou, B.~Garbinato, R.~Guerraoui, and A.~Schiper.
+\newblock Muteness failure detectors: Specification and implementation.
+\newblock In {\em Proceedings of the European Dependable Computing Conference
+  on Dependable Computing}, Sept. 1999.
+
 \bibitem{eclipsescada}
 Eclipse.
 \newblock {{NeoSCADA}}.
@@ -487,6 +499,12 @@ A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
   Systems}.
 \newblock In {\em Proceedings of the International Symposium on Software
   Reliability Engineering}, Oct. 2017.
+
+\bibitem{Goues:2012}
+C.~L. Goues, T.~Nguyen, S.~Forrest, and W.~Weimer.
+\newblock {GenProg: A Generic Method for Automatic Software Repair}.
+\newblock {\em IEEE Transactions on Software Engineering}, 38(1):54--72, Jan.
+  2012.
 
 \bibitem{Han:2009}
 J.~Han, D.~Gao, and R.~Deng.
@@ -643,6 +661,12 @@ A.~Keromytis and V.~Prevelakis.
 \newblock {\em {Designing Firewalls: A Survey}}, chapter~3, pages 33--49.
 \newblock John Wiley \& Sons, Inc., June 2006.
 
+\bibitem{Kihlstrom:1998}
+K.~P. Kihlstrom, L.~E. Moser, and P.~M. Melliar-Smith.
+\newblock The securering protocols for securing group communication.
+\newblock In {\em Proceedings of the Annual Hawaii International Conference on
+  System Sciences}, Jan. 1998.
+
 \bibitem{Kim:2017b}
 S.~Kim, S.~Lee, I.~Yun, W.~Xu, B.~Lee, Y.~Yun, and T.~Kim.
 \newblock {CAB-Fuzz: Practical Concolic Testing Techniques for {COTS} Operating
@@ -699,18 +723,10 @@ D.~Kreutz, A.~Bessani, E.~Feitosa, and H.~Cunha.
 \newblock In {\em Proceedings of the {IEEE} Pacific Rim International Symposium
   on Dependable Computing}, Nov. 2014.
 
-\bibitem{Lamport:1984}
+\bibitem{Lamport:1979}
 L.~Lamport.
-\newblock {Using Time Instead of Timeout for Fault-Tolerant Distributed
-  Systems}.
-\newblock {\em ACM Transactions Programming Languages Systems}, 6(2):254--280,
-  Apr. 1984.
-
-\bibitem{Lamport:1982}
-L.~Lamport, R.~Shostak, and M.~Pease.
-\newblock {The Byzantine Generals Problem}.
-\newblock {\em ACM Transactions Programming Languages Systems}, 4(3):382--401,
-  July 1982.
+\newblock Time, clocks, and the ordering of events in a distributed system.
+\newblock {\em Communications of ACM}, 21(7):558--565, July 1978.
 
 \bibitem{Larsen:2015}
 P.~Larsen, S.~Brunthaler, and M.~Franz.
@@ -770,13 +786,6 @@ R.~Martins, R.~Gandhi, P.~Narasimhan, S.~Pertet, A.~Casimiro, D.~Kreutz, and
   Protocol}.
 \newblock In {\em {Proceedings of the ACM/IFIP/USENIX International Conference
   on Middleware}}, Dec. 2013.
-
-\bibitem{Massacci:2010}
-F.~Massacci and V.~Nguyen.
-\newblock {Which is the Right Source for Vulnerability Studies?: An Empirical
-  Analysis on Mozilla Firefox}.
-\newblock In {\em Proceedings of the International Workshop on Security
-  Measurements and Metrics}, Sept. 2010.
 
 \bibitem{microsoft_bounty}
 {Microsoft}.
@@ -912,6 +921,12 @@ Oracle.
   \url{http://www.paloaltonetworks.com/products/platforms/PA-5000\_Series.html}.
 \newblock Accessed: 2018-4-26.
 
+\bibitem{Pease:1980}
+M.~Pease, R.~Shostak, and L.~Lamport.
+\newblock Reaching agreement in the presence of faults.
+\newblock {\em Journal of the Association for Computing Machinery},
+  27(2):228--234, Apr. 1980.
+
 \bibitem{Platania:2014}
 M.~Platania, D.~Obenshain, T.~Tantillo, R.~Sharma, and Y.~Amir.
 \newblock {Towards a Practical Survivable Intrusion Tolerant Replication
@@ -962,6 +977,12 @@ H.~Reiser and R.~Kapitza.
   Technology}.
 \newblock In {\em Proceedings of the Workshop on Recent Advances on
   Intrusiton-tolerant Systems}, May 2007.
+
+\bibitem{Reiter:1994}
+M.~K. Reiter.
+\newblock The rampart toolkit for building high-integrity services.
+\newblock In {\em Proceedings of the International Workshop on Theory and
+  Practice in Distributed Systems}, Sept. 1995.
 
 \bibitem{weka}
 \relax Machine Learning Group at the University~of Waikato.
@@ -1030,6 +1051,13 @@ K.~Snow, F.~Monrose, L.~Davi, A.~Dmitrienko, C.~Liebchen, and A.~Sadeghi.
   Address Space Layout Randomization}.
 \newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
   May 2013.
+
+\bibitem{Sommer:2010}
+R.~Sommer and V.~Paxson.
+\newblock {Outside the Closed World: On Using Machine Learning for Network
+  Intrusion Detection}.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
+  May 2010.
 
 \bibitem{Sousa:2015}
 J.~Sousa and A.~Bessani.
@@ -1164,12 +1192,10 @@ F.~Wang and R.~Upppalli.
 \newblock In {\em {Proceedings of the DARPA Information Survivability
   Conference and Exposition}}, Apr. 2003.
 
-\bibitem{Wang:2014}
-L.~Wang, S.~Jajodia, A.~Singhal, P.~Cheng, and S.~Noel.
-\newblock {k-Zero Day Safety: A Network Security Metric for Measuring the Risk
-  of Unknown Vulnerabilities}.
-\newblock {\em IEEE Transactions on Dependable and Secure Computing},
-  11(1):30--44, Jan 2014.
+\bibitem{Wilfredo:2000}
+T.~Wilfredo.
+\newblock {Software Fault Tolerance: A Tutorial}.
+\newblock Technical report, 2000.
 
 \bibitem{King:2016}
 D.~Williams-King, G.~Gobieski, K.~Williams-King, J.~Blake, X.~Yuan, P.~Colp,

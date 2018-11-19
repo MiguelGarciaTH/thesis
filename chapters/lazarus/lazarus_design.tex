@@ -1,7 +1,7 @@
-\chapter{BFT Diversity Management}
+\chapter{Diversity Management for BFT Systems} 
 \label{chap:lazarus_design}
 
-This chapter presents the design of a control plane, named \system, to manage the diversity on \gls{bft} services.
+This chapter presents the design of a control plane, named \system, to manage the diversity in \gls{bft} services.
 The design improves the work presented in the previous chapter with new data and clustering techniques, introduces a new metric to evaluate vulnerabilities severity, and propose a strategy to minimize the risk of having common failure modes in replicated systems.
 In the end, we validate this proposal against other strategies.
 
@@ -32,14 +32,13 @@ Then, the replaced node is put on quarantine and updated with the available patc
 
 
 In a nutshell, as displayed in~Figure~\ref{fig:overview}, \system provides a distributed operating system for \gls{bft}-replicated services.
-The system manages in its execution plane a set of nodes that run \emph{unmodified replicas} (encapsulated in \glspl{vm} or containers). 
+The system manages a set of nodes that run \emph{unmodified replicas} (encapsulated in \glspl{vm} or containers) in its execution plane. 
 Each node must have a small \gls{ltu} that allows the activation and deactivation of replicas as demanded by the \system \emph{Controller}, in the control plane.
 The controller decides which software should run at any given time by monitoring the vulnerabilities that potentially exist in the pool of replicas, aiming to minimize the risk of having several nodes being compromised by the same attack.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.7\columnwidth]{images/images/overview.pdf}
-\vspace{-5mm}
+\includegraphics[width=0.8\columnwidth]{images/images/overview.pdf}
 \caption{\system overview.}
 \label{fig:overview}
 \end{center}
@@ -59,14 +58,14 @@ This plane is composed of replica processes that can be subject to Byzantine fai
 Therefore, a Byzantine replica can try to mislead the other replicas or the clients.
 These replicas communicate through an asynchronous network that can delay, drop or modify messages, just like most \gls{bft} system models~\cite{Castro:2002,Kotla:2010,Bessani:2014,Aublin:2015}.
 This plane hosts $n$ replicas from which at most $f$ can be compromised at any given moment.
-We consider the typical scenario in which $n=3f+1$~\cite{Castro:2002,Bessani:2008,Moniz:2011,Kotla:2010,Aublin:2015}.  
+We consider the typical scenario in which $n=3f+1$~\cite{Castro:2002,Kotla:2010,Moniz:2011,Bessani:2014,Aublin:2015}, but the exact resiliency bound is ortogonal to our design.
 
 \item \textbf{Control Plane:}  
 In this plane, we assume that each component can only fail by crashing. 
 Each \emph{node} hosting processes contains a \gls{ltu}, and there is a logically-centralized controller to reconfigure the system, just like what has been used in several previous works on proactive recovery (e.g.,~\cite{Roeder:2010,Platania:2014,Sousa:2010}).
 The failures of such components do not compromise the liveness and safety of the service as long as the control plane is recovered before $f$ replicas fail.
 For simplicity, in this chapter, we address this component as a logical-centralized controller, which requires stronger assumptions. 
-However, in Chapter~\ref{chap:lazarus_implementation} we introduce and discuss a \gls{bft}-control plane version, which requires weaker assumptions.
+However, in Chapter~\ref{chap:lazarus_implementation} we introduce and discuss a \gls{bft} control plane version.
 
 
 \end{itemize}
@@ -110,10 +109,10 @@ The set of $n$ replicas is called a \configuration.
 
 The fault independence of the replicas is improved when different \gls{ots} components are employed in the software stack~\cite{Deswarte:1998}. 
 For example, it has been shown that using distinct \glspl{db}~\cite{Gashi:2007}, \glspl{os}~\cite{Garcia:2013}, and filesystems~\cite{Castro:2003,Bairavasundaram:2009}, can yield important benefits in terms of fault independence. 
-In addition, automatic techniques could enhance diversity, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}.
+In addition, automatic techniques, like randomization/obfuscation of \glspl{os}~\cite{Roeder:2010} and applications~\cite{King:2016}, could enhance diversity.
 Although \system can also exploit these automatic techniques, we center our attention on diverse \gls{ots} components. 
 In particular, \system monitors the disclosed vulnerabilities of all elements of the replicas' software stacks to assess which of them may contain common vulnerabilities.  
-In Chapter~\ref{chap:datasource} we explained why we focoused on \gls{os} diversity. 
+As in Chapter~\ref{chap:datasource}, we focous on \gls{os} diversity here. 
 Moreover, we do not explicitly consider the diversity of the \gls{bft} library (i.e., the protocol implementation) or the service code implemented on top of it.
 Four facts justify this decision: (1) N-version programming is too costly for this~\cite{Avizienis:1977}; (2) there have been some works showing that such protocol implementations can be generated from formally verified specifications~\cite{Hawblitzel:2015,Rahli:2018}; (3) the relatively small size of such components (e.g., a key-value store on top of BFT-SMaRt has less than 15k lines of code~\cite{Bessani:2014}) make them relatively simple to test and assess with some confidence~\cite{Martins:2013,Lee:2014}; and (4) there are no reported vulnerabilities about these systems to support our study.
 Notice that, although we do not explicitly consider the diversity of \gls{bft} libraries, nothing prevents \system from monitoring them (when several alternatives become available). 
@@ -147,12 +146,12 @@ Moreover, we checked this resemblance by searching for additional information on
 
 \begin{table}[!t]
 \begin{center}
-{\scriptsize
-\begin{tabular}{| p{2.3cm} | p{10cm} | }\hline
+{\small
+\begin{tabular}{| p{2.8cm} | p{10.0cm} | }\hline
 \textbf{CVE (affected OS)} & \textbf{Description} \\\hline\hline
-CVE-2014-0157 (Opensuse 13) & \scriptsize \gls{xss} vulnerability in the Horizon Orchestration dashboard in OpenStack Dashboard (aka Horizon) 2013.2 before 2013.2.4 and icehouse before icehouse-rc2 allows remote attackers to inject arbitrary web script or HTML via the description field of a Heat template. \\ \hline
-CVE-2015-3988 (Solaris 11.2) & \scriptsize Multiple \gls{xss} vulnerabilities in OpenStack Dashboard (Horizon) 2015.1.0 allow remote authenticated users to inject arbitrary web script or HTML via the metadata to a (1) Glance image, (2) Nova flavor or (3) Host Aggregate. \\ \hline
-CVE-2016-4428 (Debian 8.0) & \scriptsize \gls{xss} vulnerability in OpenStack Dashboard (Horizon) 8.0.1 and earlier and 9.0.0 through 9.0.1 allows remote authenticated users to inject arbitrary web script or HTML by injecting an AngularJS template in a dashboard form. \\ \hline
+CVE-2014-0157 (Opensuse 13) & \small \gls{xss} vulnerability in the Horizon Orchestration dashboard in OpenStack Dashboard (aka Horizon) 2013.2 before 2013.2.4 and icehouse before icehouse-rc2 allows remote attackers to inject arbitrary web script or HTML via the description field of a Heat template. \\ \hline
+CVE-2015-3988 (Solaris 11.2) & \small Multiple \gls{xss} vulnerabilities in OpenStack Dashboard (Horizon) 2015.1.0 allow remote authenticated users to inject arbitrary web script or HTML via the metadata to a (1) Glance image, (2) Nova flavor or (3) Host Aggregate. \\ \hline
+CVE-2016-4428 (Debian 8.0) & \small \gls{xss} vulnerability in OpenStack Dashboard (Horizon) 8.0.1 and earlier and 9.0.0 through 9.0.1 allows remote authenticated users to inject arbitrary web script or HTML by injecting an AngularJS template in a dashboard form. \\ \hline
 \end{tabular}
 }
 \caption{Similar vulnerabilities affecting different OSes.}
@@ -177,14 +176,14 @@ It is worth to remark that by using clusters to find similar vulnerabilities, we
 Once the set of common vulnerabilities is found, \system needs to assign a score to each one of these vulnerabilities based on their severity.
 
 As presented in Chapter~\ref{chap:datasource}, each vulnerability in \gls{nvd} has associated a few \gls{cvss} severity scores and metrics (two versions are currently offered, v2~\cite{cvssv2} and v3~\cite{cvssv3}). 
-The scores provide a way to marshal several vulnerability attributes in a value reflecting various aspects that impact security. 
+The scores provide a way to unify several vulnerability attributes in a value reflecting various aspects that impact security. 
 The value can also be translated into a qualitative representation to assist on the vulnerability management process. 
 For example, the \gls{cvss} base score categorizes a vulnerability in a severity scale as presented in Table~\ref{tab:cvss_scale}.
 
 
-\begin{table}[h]
+\begin{table}[t]
 \begin{center}
-%{\scriptsize
+{\small
 \begin{tabular}{| c | c | }\hline
 \textbf{Rating} & \textbf{CVSS Score} \\\hline\hline
 \texttt{NONE} & 0.0 \\
@@ -193,13 +192,13 @@ For example, the \gls{cvss} base score categorizes a vulnerability in a severity
 \texttt{HIGH} & 7.0-8.9 \\
 \texttt{CRITICAL} & 9.0-10.0 \\ \hline
 \end{tabular}
-%}
+}
 \caption{Qualititative CVSS severity rating scale.}
 \label{tab:cvss_scale}
 \end{center}
 \end{table}
 
-There are some differneces between \gls{cvss} v2 and \gls{cvss} v3.
+There are some differneces between \gls{cvss} v2 and v3.
 In particular, the latter introduces extra metrics that allow more granularity when assessing the vulnerability characteristics (e.g., it includes \emph{User Interaction}, specifying whether the exploitation of a given vulnerability requires human intervention).
 
 
@@ -212,7 +211,7 @@ and (3) \gls{cvss} does not account for the vulnerability age, which means that 
 Additionally, both \gls{cvss} specifications support temporal metrics, i.e., Temporal Metric Group. 
 However, this metric group is made to be \emph{updated} by security teams of each asset. 
 Therefore, it is not provided in the \gls{nvd} feeds. 
-Moreover, the specification shows that \gls{cvss} does not account for increasing the base score once there is information about an existent exploit. 
+Moreover, the specification shows that \gls{cvss} does not account for increasing the base score once there is information about existent exploits. 
 For example, the score of a vulnerability with a known exploit (i.e., Exploit Code Maturity as High) has the same score as a vulnerability with no information about an exploit (i.e., Exploit Code Maturity as Not defined). 
 
 %One of the reasons for such shortcomings is related with the fact that (both versions of) the CVSS base score is mostly static, not evolving increasing its value when exploits become widely distributed. 
@@ -224,11 +223,11 @@ For example, the score of a vulnerability with a known exploit (i.e., Exploit Co
 Given these shortcomings, we propose a more refined metric that is adapted to measure the risk of a \gls{bft} system configuration having replicas with shared vulnerabilities.
 The metric is mostly focused on differentiating vulnerabilities by their current \emph{potential exploitability}, aiming to surpass the limitations identified above.
 In this process, (1) and (2) were addressed by using additional \gls{osint} sources that provide information about exploits and dates. 
-We collect data from sources like Exploit-DB~\cite{edb} for exploits, CVE-details~\cite{cvedetails} and vendor websites to get details about the patches, such as Ubuntu Security Notices~\cite{ubuntu}, Debian Security Tracker~\cite{debian}, Solaris~\cite{solaris}, Redhat~\cite{redhat}, FreeBSD~\cite{freebsd}, and Microsoft Security Advisories and Bulletins~\cite{microsoft}. In fact, often vendor sites also give additional product versions compromised by the vulnerability, thus improving the accuracy of the analysis. 
+We collect data from sources like Exploit-DB~\cite{edb} for exploits, CVE-details~\cite{cvedetails} and vendor websites to get details about the patches, such as Ubuntu Security Notices~\cite{ubuntu}, Debian Security Tracker~\cite{debian}, Solaris~\cite{solaris}, Redhat~\cite{redhat}, FreeBSD~\cite{freebsd}, and Microsoft Security Advisories and Bulletins~\cite{microsoft}. In fact, often vendor sites also give additional product versions affected by the vulnerability, thus improving the accuracy of the analysis. 
 Limitation (3) is settled by decreasing the criticality of a vulnerability gradually through time.
 
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.7\columnwidth]{images/images/scale.pdf}
 \caption{Scoring system of vulnerabilities based on age, patch, and exploit.}
@@ -240,11 +239,22 @@ Limitation (3) is settled by decreasing the criticality of a vulnerability gradu
 Our novel metric uses four factors that together contribute to the overall score. 
 The starting factor is the \gls{cvss} v3 core score, as it is a reasonable basis that takes into consideration several attributes of the vulnerability.
 The other three factors adjust the score taking into account the age and the availability of a patch and an exploit. 
-The rationale is to allow the ranking of vulnerabilities according to their possible exploitation at a given moment in time.
+The rationale is to rank vulnerabilities according to their possible exploitation at a given moment in time.
 The resulting scale is represented in Figure~\ref{fig:scale}.
 The worst scenario (higher severity score) corresponds to a vulnerability that is new (N) (i.e., recently published), for which there is an exploit already being distributed (E), and that is not yet patched -- called NE.
-The best scenario (lowest score) is when a vulnerability is old (O), and there is a patch (P), and apparently, no viable exploit has been crafted -- named OP. 
+The best scenario (lowest score) is when a vulnerability is old (O), there is a patch (P), and apparently, no viable exploit has been crafted -- named OP. 
 Between these two extremes, several cases of vulnerabilities are considered and their score calculated accordingly.
+
+The metric is defined in Equation~\ref{eq:score}.
+It is a multiplication of the \gls{cvss} v3 core score (as specified in~\cite{cvssv3}) with the three adjusting factors. 
+The first is \emph{Oldness}, which causes criticality to decrease over time. 
+It is harmonized by the \emph{Oldness Threshold} and the interval\footnote{\textit{Oldness Threshold} is set to 365 in our calculations; \textit{now()} and $v_i.published\_date$ return the current day and the day when the vulnerability was published, respectively.} that has passed since the vulnerability publication (Equation~\ref{eq:oldness}). 
+In addition, this factor is bounded by a minimum value that impedes it from reaching zero (which would cause the vulnerability to be left unnoticed).
+The second is \emph{Patched}, which reduces the severity by half when a patch is available (Equation~\ref{eq:patched}; $v_{i}.patched$ is a on/off flag).
+Finally, the \emph{Exploited} factor grows severity by a quarter when an exploit is made available (Equation~\ref{eq:exploited}; $v_{i}.exploited$ is again a on/off flag).
+The constants in these equations were defined to ensure the aggregated modifiers corresponds to Figure~\ref{fig:scale}.
+Overall, the range of our metric is from $0.0$ to $12.5$ (similar to \gls{cvss} score $[0.0-10.0]$).
+
 
 
 \begin{table}[h]
@@ -294,24 +304,15 @@ Between these two extremes, several cases of vulnerabilities are considered and 
 \end{center}
 \end{table}
 
-The metric is defined in Equation~\ref{eq:score}.
-It is a multiplication of the \gls{cvss} v3 core score (as specified in~\cite{cvssv3}) with the three adjusting factors. 
-The first is \emph{Oldness}, which causes criticality to decrease over time. 
-It is harmonized by the \emph{Oldness Threshold} and the interval\footnote{\textit{Oldness Threshold} is set to 365 in our calculations; \textit{now()} and $v_i.published\_date$ return the current day and the day when the vulnerability was published, respectively.} that has passed since the vulnerability publication (Equation~\ref{eq:oldness}). 
-In addition, this factor is bounded by a minimum value that impedes it from reaching zero (which would cause the vulnerability to be left unnoticed).
-The second is \emph{Patched}, which reduces the severity by half when a patch is available (Equation~\ref{eq:patched}; $v_{i}.patched$ is a on/off flag).
-Finally, the \emph{Exploited} factor grows severity by a quarter when an exploit is made available (Equation~\ref{eq:exploited}; $v_{i}.exploited$ is again a on/off flag).
-The constants in these equations were defined to ensure the aggregated modifiers corresponds to Figure~\ref{fig:scale}.
-Overall, the range of our metric is from $0.0$ to $12.5$ (similar to \gls{cvss} score $[0.0-10.0]$).
 
 
-\begin{figure*}[h]
-\subfloat[CVE-2018-8303.]{\includegraphics[width=0.35\columnwidth]{images/images/NE.pdf}\label{fig:ne}} %for Windows 10
-\subfloat[CVE-2016-7180.]{\includegraphics[width=0.35\columnwidth]{images/images/OP.pdf}\label{fig:op}}%Debian 9.0
-\subfloat[CVE-2018-8012.]{\includegraphics[width=0.35\columnwidth]{images/images/NPE.pdf}\label{fig:npe}} %Debian 9.0
+\begin{figure}[t]
+\subfloat[CVE-2018-8303.]{\includegraphics[width=0.34\columnwidth]{images/images/NE.pdf}\label{fig:ne}} %for Windows 10
+\subfloat[CVE-2016-7180.]{\includegraphics[width=0.34\columnwidth]{images/images/OP.pdf}\label{fig:op}}%Debian 9.0
+\subfloat[CVE-2018-8012.]{\includegraphics[width=0.34\columnwidth]{images/images/NPE.pdf}\label{fig:npe}} %Debian 9.0
 \caption{Examples of \emph{score(v$_i$)} for three vulnerabilities.}
 \label{fig:scoreplot}
-\end{figure*}
+\end{figure}
 
 
 Figure~\ref{fig:scoreplot} displays our score and \gls{cvss} v3 for three example vulnerabilities. 
@@ -326,8 +327,18 @@ First, the score is raised once the exploit starts to be distributed, next it de
 \subsection{Measuring Configurations Risk}
 \label{sec:risk}
 
-After discovering common vulnerabilities and assigning a dynamic score to them, the third step of our method is to calculate the \emph{risk of a set of replicas} to be compromised in the current threat landscape.
+After discovering common vulnerabilities and assigning a score to them, the third step of our method is to calculate the \emph{risk of a set of replicas} to be compromised by the same vulnerability in the current threat landscape.
 
+
+The risk associated with a \configuration (\ES) with $n$ replicas is given by Equation~\ref{eq:risk}. 
+It sums up the score (Equation~\ref{eq:score}) of the vulnerabilities that would allow an attack to compromise simultaneously a pair of replicas $r_i,r_j \in \ES$.
+%Function \emph{common()} employs our score, as it aggregates security features of a vulnerability, and other information collected from OSINT sources. To begin, the function gathers all the vulnerabilities that would allow an attack to compromise simultaneously a pair of replicas ($rc_i,rc_j$). 
+More precisely, the vulnerabilities in $\mathcal{V}(r_i,r_j)$ aggregate: (i) the vulnerabilities that affect the software running in both replicas as listed in \gls{nvd} (and other \gls{osint} data); and (ii) groups of vulnerabilities that are placed in the same cluster and affect each replica in the pair. 
+%The final score is normalized with function \emph{norm()} to generate a value between 0 and 1.
+%Next, the function calculates the score of each vulnerability, and returns the sum of all scores. 
+%The risk metric computes \emph{common()} for all combinations of replica pairs in the configuration and accumulates the values. 
+%\vspace{-3mm}
+%{\footnotesize
 
 \begin{table}[h]
 \begin{center}
@@ -349,19 +360,7 @@ After discovering common vulnerabilities and assigning a dynamic score to them, 
 \end{table}
 
 
-The risk associated with a \configuration (\ES) with $n$ replicas is given by Equation~\ref{eq:risk}. 
-It sums up the score (Equation~\ref{eq:score}) of the vulnerabilities that would allow an attack to compromise simultaneously a pair of replicas $r_i,r_j \in \ES$.
-%Function \emph{common()} employs our score, as it aggregates security features of a vulnerability, and other information collected from OSINT sources. To begin, the function gathers all the vulnerabilities that would allow an attack to compromise simultaneously a pair of replicas ($rc_i,rc_j$). 
-More precisely, the vulnerabilities in $\mathcal{V}(r_i,r_j)$ aggregate: (i) the vulnerabilities that affect the software running in both replicas as listed in \gls{nvd} (and other \gls{osint} sites); and (ii) groups of vulnerabilities that are placed in the same cluster and affect each replica in the pair. 
-%The final score is normalized with function \emph{norm()} to generate a value between 0 and 1.
-%Next, the function calculates the score of each vulnerability, and returns the sum of all scores. 
-%The risk metric computes \emph{common()} for all combinations of replica pairs in the configuration and accumulates the values. 
-%\vspace{-3mm}
-%{\footnotesize
-
-
-
-This metric penalizes configurations that include replica pairs containing more common weaknesses, as this is an indication that they are less fault-independent.
+This metric penalizes configurations that include replica pairs containing more common weaknesses, as this is an indication that they are less fault independent.
 In addition, the level of penalty is kept proportional to the severity of these vulnerabilities as observed at the time of the calculation. 
 Thus, for example, replicas that share weaknesses only in the distant past are considered less risky to run in a configuration than replicas that together had recently highly exploitable vulnerabilities.
 
@@ -376,7 +375,7 @@ Then, it selects the next $n$ elements by minimizing the risk of the \ES in cons
 After the initialization, the \ES is periodically monitored and reconfigured if needed, as detailed in Algorithm \ref{alg:algorithm2}.
 This is done by periodically evaluating the risk of the current \ES. 
 If the risk exceeds a predefined \emph{threshold}, a mechanism is triggered to replace replicas and reduce the overall risk.
-When this happens, the algorithm will pick a new replica, from \RS, to join \ES. 
+When this happens, the algorithm will pick a new replica from \RS to join \ES. 
 In addition, it removes the replica that will reduce the risk.
 The removed replica is set aside in a special group (\QS) to impede re-selection.
 While in \QS, the replicas wait for patches before they re-join \RS and be ready to be chosen again.
@@ -385,9 +384,9 @@ Otherwise, the algorithm favors configurations that have lower scores by keeping
 To avoid this problem, the algorithm looks for the unpatched vulnerabilities with higher score affecting singles replicas.
 This approach is conservative in the sense that it penalizes replicas expecting that such vulnerabilities can be unknown as common to other replicas.
 
-\begin{algorithm}[h]
-\begin{multicols}{2}
-\SetInd{0.3em}{0.2em}
+\begin{algorithm}[t]
+%\begin{multicols}{2}
+%\SetInd{0.3em}{0.2em}
 \caption{Replica Set Reconfiguration}\label{alg:algorithm2}
 {\scriptsize
 \ES: set replicas in the \configuration \;
@@ -446,7 +445,7 @@ $n$: number of replicas in \ES\;
 
 }
 }
-\end{multicols}
+%\end{multicols}
 \end{algorithm}
 
 
@@ -462,10 +461,10 @@ Then, the function \Rand selects a configuration randomly from the list of candi
 Although it is not present in the algorithm, it only selects configurations which are below the \emph{threshold} score. 
 Then the algorithm updates all the sets (line 15) using the function \Replace (lines 36-40). 
 To decide which element needs to be removed from \ES it makes the difference between the current \ES and \SC (line 37) and the contrary to select the element to join the \ES (line 38).
-Then, \toRemove is added to \QS (line 39), removed from \ES and the new element is added to the \ES (line 40).
+Then, \toRemove is added to \QS (line 39), removed from \ES, and the new element is added to the \ES (line 40).
  
 
-If the risk of \ES is less than the \emph{threshold} (line 16) we need to assess if the \ES needs a reconfiguration.
+If the risk of \ES is smaller than the \emph{threshold} (line 16) we need to assess if the \ES needs a reconfiguration.
 In this scenario, we start by initializing the variable \toRemove as empty (line 17) and \texttt{maxScore} with the value of the \gls{cvss} score rating \texttt{HIGH} (line 18).
 For each element of \ES (line 19) the algorithm calculates the average score of the vulnerabilities affecting \r using Equation~\ref{eq:score} (line 20).
 Then, if the average vulnerability score is equals or greater than \texttt{HIGH} (or \texttt{CRITICAL}) (line 21), the variable \toRemove is set to the element \r (line 22) and the value of \texttt{maxScore} with the \texttt{avgScore} (line 23).
@@ -475,11 +474,12 @@ Otherwise, the algorithm will select a new replica (line 24).
 First, the \texttt{candidate\_list} is set as empty (line 25).
 Next, for each element \r' in \RS (line 26) the algorithm tests a \ES' with \r' instead of \toRemove (line 27).
 Then, the score for this configuration is calculated (line 28) and together with the \ES' is stored in a list of configuration candidates (line 29).
-As already described, the function \Replace updates the elements of the sets (line 31).
+%As already described, the function \Replace updates the elements of the sets (line 31).
+In the end, one of the candidate configurations is randomly selected (lines 30-35).
 
-Finally, the \RS and \QS are updated. 
-For each \QS element (line 32) is checked if it is fully patched (line 33).
-In the affirmative case, the element is removed from \QS (line 34) and added to the \RS again (line 35).
+Finally, the \RS and \QS sets are updated. 
+Each \QS element (line 32) is checked if it is fully patched (line 33).
+In the affirmative case, the element is removed from \QS and added to the \RS again (lines 34-35).
 
 
 For the sake of simplicity we do not present two corner cases where a \emph{system admin} may need to intervene: if the \RS runs out of elements or \emph{rand()} cannot return a configuration that minimizes the risk of the system.
@@ -503,11 +503,11 @@ For example, to run the experiment in May the \emph{learning phase} starts on \e
 The goal is to create a knowledge base in the \emph{learning phase} that is used to assess \system' choices during each interval of the \emph{execution phase}. 
 A run starts on the first day of an interval and then progresses through each day of the interval until the end. 
 Every day, we check if the currently executing replica set could be compromised by an attack exploring the vulnerabilities that were published in that month. 
-We take the most pessimistic approach, which is to say that we consider the system to be broken if a single vulnerability comes out affecting at least two \glspl{os} that would be executing at that time.
-Therefore, if one of the \glspl{os} already has a patch for the tested vulnerability, it is not counted as compromised.
+We take the most pessimistic approach, which is to say that we consider the system to be broken if a single vulnerability comes out affecting at least two \glspl{os} that would be executing at that time and do not have a patch for it.
+%Therefore, if one of the \glspl{os} already has a patch for the tested vulnerability, it is not counted as compromised.
 
 
-Three additional strategies, inspired by previous works, were defined to be compared with \system (Section~\ref{sec:configurations}):
+Four additional strategies, inspired by previous works, were defined to be compared with \system (Section~\ref{sec:configurations}):
 
 \begin{itemize}
 
@@ -519,9 +519,9 @@ Here, compromising a replica would mean an opportunity to intrude the remaining 
 This solution represents a system with proactive recovery and diversity, but with no informed strategy for choosing the next \configuration.
 
 \item \textbf{Common:} This strategy is the straw man solution to prevent the existence of shared vulnerabilities among \glspl{os}. 
-This strategy minimizes the number of common vulnerabilities for each set and was introduced in previous vulnerability studies~\cite{Garcia:2013}.
+This strategy minimizes the number of common vulnerabilities for each set and was introduced in previous vulnerability studies~\cite{Garcia:2012}.
 
-\item \textbf{CVSS v3:} This strategy is very similar to ours as it tries different combinations to find the best one that minimizes the sum of \gls{cvss} v3 score.
+\item \textbf{CVSS v3:} This strategy is very similar to ours as it tries different combinations to find the best configuration that minimizes the sum of \gls{cvss} v3 score.
 
 
 \end{itemize}
@@ -533,7 +533,7 @@ Each strategy is analyzed over $1000$ runs throughout the execution phase in mon
 Different runs are initiated with distinct random number generator seeds, resulting in potentially different \gls{os} selections over the time slot. 
 On each day, we check if there is a vulnerability affecting more than one replica in the current \configuration, and in the affirmative case the execution is stopped.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\columnwidth]{images/gnuplot/executions/execution.pdf}
 \caption{Compromised system runs over eight months.}
@@ -555,48 +555,36 @@ There are also a set of vulnerabilities affecting several Windows releases (e.g.
 We also found a vulnerability (i.e., CVE-2018-1111) that affects few Fedora releases and one Redhat release that was repeatedly compromising the executions.
 We have made a more careful inspection of the dispersion of vulnerabilities across these months. 
 Although May is not the month with most vulnerabilities, it has on average $3.05$ \glspl{os} affected by a vulnerability, and it is the highest.
-This result was already observed in our previous work (see Figure~\ref{top}) where the number of shared vulnerabilities decreases drastically between three affected \glspl{os} to four, almost $50$ vulnerabilities affecting three \glspl{os} to less than ten affecting four \glspl{os}. 
+This result was already observed in our previous work (see Figure~\ref{top}, in Chapter~\ref{chap:datasource}) where the number of shared vulnerabilities decreases drastically between three affected \glspl{os} to four: almost $50$ vulnerabilities affecting three \glspl{os} and less than ten affects four \glspl{os}. 
 
-One of the outcomes of this experiment is that contrary to the intuition, not guided strategies will eventually create unsafe configurations.
+One of the outcomes of this experiment is that, contrary to the intuition, not guided strategies will eventually create unsafe configurations.
 %The most relevant result shows that contrary to intuition, changing \glspl{os} every day with no criteria will always create unsafe configurations.
 Therefore, it is paramount to have selection strategies like the ones we use in \system.
 
 \subsection{Diversity vs Attacks}
+
 
 This experiment evaluates the strategies when facing notable attacks/vulnerabilities that appeared in the last year. 
 Each attack potentially exploits several flaws, some of which affecting different OSes. 
 The attacks were selected by searching the security news sites for high impact problems, most of them related to more than one CVE. 
 As some of the CVEs include applications, we added more vulnerabilities to the database for this purpose. 
 We have considered the attacks described in Table~\ref{tab:special_vulns}: 
-WannaCry~\cite{wannacry}, Stackclash~\cite{stacklash}, and Petya~\cite{petya}.
 
+\begin{table}[t]
+{\scriptsize
 
- \begin{table}[h]
- \begin{center}
- {
-\small%
-% \scriptsize
- \begin{tabular}{ | p{0.96\columnwidth} | }\hline
- \textbf{WannaCry:} 
- \emph{On Friday, May 12, 2017, the world was alarmed to discover a widespread ransomware attack that hit organizations in more than 100 countries. Based on a vulnerability in Windows' SMB protocol (nicknamed EternalBlue), discovered by the NSA and leaked by Shadow Brokers.} \\
- %CVE-2017-0143, CVE-2017-0144, CVE-2017-0145, CVE-2017-0146, CVE-2017-0147, CVE-2017-0148 \\ 
- \hline
+\begin{tabular}{  | r  p{0.80\textwidth} | }\hline
+\textbf{WannaCry}~\cite{wannacry} & \emph{On Friday, May 12, 2017, the world was alarmed to discover a widespread ransomware attack that hit organizations in more than 100 countries. Based on a vulnerability in Windows' SMB protocol (nicknamed EternalBlue), discovered by the NSA and leaked by Shadow Brokers.} \\ \hline
 
- \textbf{StackClash:} 
- \emph{In its 2017 malware forecast, SophosLabs warned that attackers would increasingly target Linux. The flaw, discovered by researchers at Qualys, is in the memory management of several operating systems and affects Linux, OpenBSD, NetBSD, FreeBSD and Solaris.}\\
- %CVE-2017-1000365, CVE-2017-1000366, CVE-2017-1000367, CVE-2017-1000369, CVE-2017-1000370, CVE-2017-1000370, CVE-2017-1000371, CVE-2017-1000372, CVE-2017-1000373, CVE-2017-1000374, CVE-2017-1000375, CVE-2017-1000376, CVE-2017-1000379, CVE-2017-1083, CVE-2017-1084, CVE-2017-3629, CVE-2017-3630, CVE-2017-3631\\ 
- \hline
+\textbf{StackClash}~\cite{stacklash} & \emph{In its 2017 malware forecast, SophosLabs warned that attackers would increasingly target Linux. The flaw, discovered by researchers at Qualys, is in the memory management of several operating systems and affects Linux, OpenBSD, NetBSD, FreeBSD and Solaris.}\\ \hline
 
- \textbf{Petya:} 
- \emph{Another month, another global ransomware attack. [...] Just as it seemed that the threat of WannaCry has dissipated, organisations around the world are finding themselves under siege from a new threat. This cyberattack first hit targets in Ukraine, including its central bank, main international airport and even the Chernobyl nuclear facility before quickly spreading around the globe, infecting organisations across Europe, North America and even Australia. A day after the incident began, at least 2,000 attacks have been recored across at least 64 countries.}\\
- %CVE-2017-0199, CVE-2017-0204, CVE-2017-0207, CVE-2017-2605, CVE-2017-0197, CVE-2017-0195, CVE-2017-0194, CVE-2017-0106\\ 
- \hline
- \end{tabular}
- }
- \caption{Notable attacks during 2017.}
- \label{tab:special_vulns}
- \end{center}
- \end{table}
+\textbf{Petya}~\cite{petya} & \emph{Another month, another global ransomware attack. [...] Just as it seemed that the threat of WannaCry has dissipated, organisations around the world are finding themselves under siege from a new threat. This cyberattack first hit targets in Ukraine, including its central bank, main international airport and even the Chernobyl nuclear facility before quickly spreading around the globe, infecting organisations across Europe, North America and even Australia. A day after the incident began, at least 2,000 attacks have been recored across at least 64 countries.}\\ \hline
+\end{tabular}
+}
+
+\caption{Notable attacks during 2017.}
+\label{tab:special_vulns}
+\end{table}
 
 
 Since some of these attacks might have been prepared months before the vulnerabilities are publicly disclosed, we augmented the execution phase to the full eight months. 
@@ -605,7 +593,7 @@ The \emph{execution phase} period that starts on 2018 January and finishes on Au
 As before, the strategies are executed over $1000$ runs. 
 
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\columnwidth]{images/gnuplot/attacks/attacks.pdf}
 \caption{Compromised runs with notable attacks.}
@@ -626,5 +614,6 @@ Nevertheless, the results show that such strategies do improve the resilience to
 \label{sec:finalremarkslazarusdesign}
 
 \system addresses the long-standing open problem of evaluating, selecting, and managing the diversity of a \gls{bft} system to make it resilient to malicious adversaries.
-This thesis focuses on two fundamental issues: (1) how to select the best replicas to run together given the current threat landscape, which was presented in this chapter, and (2) what is the performance overhead of running a diverse \gls{bft} system in practice, which is presented in the next chapter.
+This chapter shows an approach to select the best replicas to run together given the current threat landscape and evaluate the proposed strategy.
+In the next chapter, we discuss how this strategy can be implemented and the overhead of using \gls{os} diversity.
 

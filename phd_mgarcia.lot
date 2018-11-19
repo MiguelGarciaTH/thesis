@@ -12,25 +12,25 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Brief overview of the most relevant BFT works.\relax }}{14}{table.caption.24}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Brief overview of some relevant BFT works.\relax }}{14}{table.caption.24}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Distribution of OS vulnerabilities in NVD.\relax }}{35}{table.caption.39}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Vulnerabilities that affect more than four OSes.\relax }}{38}{table.caption.42}
-\contentsline {table}{\numberline {3.3}{\ignorespaces CVI for the years 2009 to 2011, with $\mathit {tspan}$ of 10 years.\relax }}{40}{table.caption.45}
-\contentsline {table}{\numberline {3.4}{\ignorespaces History/observed period for CVCst with Fat Servers.\relax }}{43}{table.caption.48}
-\contentsline {table}{\numberline {3.5}{\ignorespaces History/observed period for strategy CVCst with Isolated Thin Servers.\relax }}{44}{table.caption.49}
-\contentsline {table}{\numberline {3.6}{\ignorespaces History/observed period for CVIst with Fat Servers.\relax }}{45}{table.caption.51}
-\contentsline {table}{\numberline {3.7}{\ignorespaces History/observed period for CVIst with Isolated Thin Servers.\relax }}{46}{table.caption.52}
-\contentsline {table}{\numberline {3.8}{\ignorespaces Number of two consecutive vulnerabilities occurring in each \gls {irt} period, between 2000 and 2011 (with Fat Servers).\relax }}{48}{table.caption.54}
-\contentsline {table}{\numberline {3.9}{\ignorespaces Number of two consecutive vulnerabilities occurring in each IRT period, between 2000 and 2011 (Isolated Thin Servers).\relax }}{50}{table.caption.55}
-\contentsline {table}{\numberline {3.10}{\ignorespaces Common vulnerabilities between OS releases.\relax }}{52}{table.caption.57}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Distribution of OS vulnerabilities in NVD.\relax }}{35}{table.caption.43}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Vulnerabilities that affect more than four OSes.\relax }}{38}{table.caption.46}
+\contentsline {table}{\numberline {3.3}{\ignorespaces CVI for the years 2009 to 2011, with $\mathit {tspan}$ of 10 years.\relax }}{40}{table.caption.49}
+\contentsline {table}{\numberline {3.4}{\ignorespaces History/observed period for CVCst with Fat Servers.\relax }}{43}{table.caption.52}
+\contentsline {table}{\numberline {3.5}{\ignorespaces History/observed period for strategy CVCst with Isolated Thin Servers.\relax }}{44}{table.caption.53}
+\contentsline {table}{\numberline {3.6}{\ignorespaces History/observed period for CVIst with Fat Servers.\relax }}{46}{table.caption.56}
+\contentsline {table}{\numberline {3.7}{\ignorespaces History/observed period for CVIst with Isolated Thin Servers.\relax }}{47}{table.caption.57}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Number of two consecutive vulnerabilities occurring in each \gls {irt} period, between 2000 and 2011 (with Fat Servers).\relax }}{49}{table.caption.60}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Number of two consecutive vulnerabilities occurring in each IRT period, between 2000 and 2011 (Isolated Thin Servers).\relax }}{50}{table.caption.61}
+\contentsline {table}{\numberline {3.10}{\ignorespaces Common vulnerabilities between OS releases.\relax }}{52}{table.caption.64}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Similar vulnerabilities affecting different OSes.\relax }}{58}{table.caption.67}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Qualititative CVSS severity rating scale.\relax }}{59}{table.caption.69}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Notable attacks during 2017.\relax }}{67}{table.caption.81}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Similar vulnerabilities affecting different OSes.\relax }}{58}{table.caption.74}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Qualititative CVSS severity rating scale.\relax }}{59}{table.caption.76}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Notable attacks during 2017.\relax }}{67}{table.caption.88}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces The different OSes used in the experiments and the configurations of their VMs and JVMs.\relax }}{79}{table.caption.94}
+\contentsline {table}{\numberline {5.1}{\ignorespaces The different OSes used in the experiments and the configurations of their VMs and JVMs.\relax }}{79}{table.caption.101}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Maximum load induced by the \emph {sender-SQ}\xspace library with various message sizes\relax }}{110}{table.caption.130}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Maximum load induced by the \emph {sender-SQ}\xspace library with various message sizes\relax }}{110}{table.caption.137}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

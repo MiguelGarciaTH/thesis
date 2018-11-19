@@ -15,44 +15,46 @@ A level-1 auxiliary file: chapters/conclusion/conclusion.aux
 A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
-You've used 198 entries,
+Warning--empty institution in Wilfredo:2000
+You've used 203 entries,
             2118 wiz_defined-function locations,
-            1525 strings with 39003 characters,
-and the built_in function-call counts, 63981 in all, are:
-= -- 5553
-> -- 4005
+            1552 strings with 39909 characters,
+and the built_in function-call counts, 65399 in all, are:
+= -- 5677
+> -- 4078
 < -- 3
-+ -- 1588
-- -- 1388
-* -- 4449
-:= -- 10910
-add.period$ -- 637
-call.type$ -- 198
-change.case$ -- 1285
++ -- 1619
+- -- 1412
+* -- 4543
+:= -- 11154
+add.period$ -- 652
+call.type$ -- 203
+change.case$ -- 1313
 chr.to.int$ -- 0
-cite$ -- 198
-duplicate$ -- 2308
-empty$ -- 5163
-format.name$ -- 1388
-if$ -- 13101
+cite$ -- 204
+duplicate$ -- 2369
+empty$ -- 5287
+format.name$ -- 1412
+if$ -- 13393
 int.to.chr$ -- 0
-int.to.str$ -- 198
-missing$ -- 152
-newline$ -- 1036
-num.names$ -- 396
-pop$ -- 1933
+int.to.str$ -- 203
+missing$ -- 156
+newline$ -- 1061
+num.names$ -- 406
+pop$ -- 1970
 preamble$ -- 1
-purify$ -- 1090
+purify$ -- 1112
 quote$ -- 0
-skip$ -- 1327
+skip$ -- 1360
 stack$ -- 0
-substring$ -- 1840
-swap$ -- 312
+substring$ -- 1882
+swap$ -- 319
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 784
-warning$ -- 0
-while$ -- 467
-width$ -- 201
-write$ -- 2067
+type$ -- 804
+warning$ -- 1
+while$ -- 478
+width$ -- 206
+write$ -- 2118
+(There was 1 warning)

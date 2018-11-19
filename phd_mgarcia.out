@@ -6,7 +6,7 @@
 \BOOKMARK [2][-]{section*.14}{BFT Multi-layer Resiliency}{section*.11}% 6
 \BOOKMARK [2][-]{section*.15}{Thesis Statement}{section*.11}% 7
 \BOOKMARK [1][-]{section*.16}{Thesis Overview}{chapter.1}% 8
-\BOOKMARK [0][-]{chapter.2}{Background}{}% 9
+\BOOKMARK [0][-]{chapter.2}{Background and Related Work}{}% 9
 \BOOKMARK [1][-]{section*.18}{The Need for Intrusion Tolerance}{chapter.2}% 10
 \BOOKMARK [2][-]{section*.19}{Vulnerability Prevention}{section*.18}% 11
 \BOOKMARK [2][-]{section*.20}{Fault Detection and Removal}{section*.18}% 12
@@ -18,73 +18,80 @@
 \BOOKMARK [2][-]{section*.28}{Automatic Diversity}{section*.26}% 18
 \BOOKMARK [2][-]{section*.29}{Off-the-shelf Diversity}{section*.26}% 19
 \BOOKMARK [1][-]{section*.30}{Practical Systems with Diversity}{chapter.2}% 20
-\BOOKMARK [1][-]{section*.31}{Vulnerability Analysis}{chapter.2}% 21
-\BOOKMARK [1][-]{section*.32}{Management of Vulnerable Systems}{chapter.2}% 22
-\BOOKMARK [1][-]{section*.33}{Final Remarks}{chapter.2}% 23
-\BOOKMARK [0][-]{chapter.3}{A Study on Common Vulnerabilities}{}% 24
-\BOOKMARK [1][-]{section*.35}{Methodology}{chapter.3}% 25
-\BOOKMARK [2][-]{section*.36}{Data Source}{section*.35}% 26
-\BOOKMARK [2][-]{section*.37}{Data Selection}{section*.35}% 27
-\BOOKMARK [2][-]{section*.38}{Filtering the Data}{section*.35}% 28
-\BOOKMARK [1][-]{section*.40}{OS Diversity Study}{chapter.3}% 29
-\BOOKMARK [1][-]{section*.43}{Strategies for OS Diversity Selection}{chapter.3}% 30
-\BOOKMARK [2][-]{section*.44}{Common Vulnerability Indicator}{section*.43}% 31
-\BOOKMARK [2][-]{section*.46}{Building Replicated Systems with Diversity}{section*.43}% 32
-\BOOKMARK [2][-]{section*.47}{Common Vulnerability Count \(CVCst\)}{section*.43}% 33
-\BOOKMARK [2][-]{section*.56}{Exploring Diversity Across OS Releases}{section*.43}% 34
-\BOOKMARK [1][-]{section*.58}{Decisions About Deploying Diversity}{chapter.3}% 35
-\BOOKMARK [1][-]{section*.59}{Final Remmarks}{chapter.3}% 36
-\BOOKMARK [0][-]{chapter.4}{BFT Diversity Management}{}% 37
-\BOOKMARK [1][-]{section*.61}{Overview}{chapter.4}% 38
-\BOOKMARK [1][-]{section*.63}{System Model}{chapter.4}% 39
-\BOOKMARK [1][-]{section*.64}{Diversity of Replicas}{chapter.4}% 40
-\BOOKMARK [1][-]{section*.65}{Diversity-aware Reconfigurations}{chapter.4}% 41
-\BOOKMARK [2][-]{section*.66}{Finding Common Vulnerabilities}{section*.65}% 42
-\BOOKMARK [2][-]{section*.68}{Measuring Risk}{section*.65}% 43
-\BOOKMARK [2][-]{section*.73}{Measuring Configurations Risk}{section*.65}% 44
-\BOOKMARK [2][-]{section*.75}{Selecting Configurations}{section*.65}% 45
-\BOOKMARK [1][-]{section*.77}{Evaluation}{chapter.4}% 46
-\BOOKMARK [2][-]{section*.78}{Diversity vs Vulnerabilities}{section*.77}% 47
-\BOOKMARK [2][-]{section*.80}{Diversity vs Attacks}{section*.77}% 48
-\BOOKMARK [1][-]{section*.83}{Final Remarks}{chapter.4}% 49
-\BOOKMARK [0][-]{chapter.5}{Lazarus}{}% 50
-\BOOKMARK [1][-]{section*.85}{Implementation}{chapter.5}% 51
-\BOOKMARK [2][-]{section*.86}{Control Plane}{section*.85}% 52
-\BOOKMARK [2][-]{section*.88}{Clustering}{section*.85}% 53
-\BOOKMARK [2][-]{section*.89}{Replica Virtualization and Provision}{section*.85}% 54
-\BOOKMARK [2][-]{section*.90}{BFT replication}{section*.85}% 55
-\BOOKMARK [2][-]{section*.91}{Descentralized Lazarus Version}{section*.85}% 56
-\BOOKMARK [1][-]{section*.93}{Evaluation}{chapter.5}% 57
-\BOOKMARK [2][-]{section*.95}{Homogeneous Replicas Throughput}{section*.93}% 58
-\BOOKMARK [2][-]{section*.97}{Diverse Replicas Throughput}{section*.93}% 59
-\BOOKMARK [2][-]{section*.99}{Performance During Replicas' Reconfiguration}{section*.93}% 60
-\BOOKMARK [2][-]{section*.103}{Application Benchmarks}{section*.93}% 61
-\BOOKMARK [1][-]{section*.105}{Final Remarks}{chapter.5}% 62
-\BOOKMARK [0][-]{chapter.6}{SieveQ: A Use Case}{}% 63
-\BOOKMARK [1][-]{section*.107}{Introduction}{chapter.6}% 64
-\BOOKMARK [1][-]{section*.108}{Intrusion-Tolerant Firewalls}{chapter.6}% 65
-\BOOKMARK [1][-]{section*.111}{Overview of SieveQ}{chapter.6}% 66
-\BOOKMARK [2][-]{section*.112}{Design Principles}{section*.111}% 67
-\BOOKMARK [2][-]{section*.113}{SieveQ Architecture}{section*.111}% 68
-\BOOKMARK [2][-]{section*.115}{Resilience Mechanisms}{section*.111}% 69
-\BOOKMARK [2][-]{section*.116}{System and Threat Model}{section*.111}% 70
-\BOOKMARK [2][-]{section*.117}{Resilience Mechanisms}{section*.111}% 71
-\BOOKMARK [1][-]{section*.118}{SieveQ Protocol}{chapter.6}% 72
-\BOOKMARK [2][-]{section*.119}{Properties}{section*.118}% 73
-\BOOKMARK [2][-]{section*.120}{Message Transmission}{section*.118}% 74
-\BOOKMARK [2][-]{section*.122}{Addressing Component Failures}{section*.118}% 75
-\BOOKMARK [1][-]{section*.123}{Implementation}{chapter.6}% 76
-\BOOKMARK [1][-]{section*.124}{Evaluation}{chapter.6}% 77
-\BOOKMARK [2][-]{section*.125}{Testbed Setup}{section*.124}% 78
-\BOOKMARK [2][-]{section*.127}{Methodology}{section*.124}% 79
-\BOOKMARK [2][-]{section*.128}{Performance in Failure-free Executions}{section*.124}% 80
-\BOOKMARK [2][-]{section*.131}{Effect of Filtering Rules Complexity}{section*.124}% 81
-\BOOKMARK [2][-]{section*.133}{SieveQ Under Attack}{section*.124}% 82
-\BOOKMARK [2][-]{section*.138}{SieveQ to Protect a SIEM System}{section*.124}% 83
-\BOOKMARK [1][-]{section*.141}{Discussion}{chapter.6}% 84
-\BOOKMARK [1][-]{section*.142}{Final Remarks}{chapter.6}% 85
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Research Directions}{}% 86
-\BOOKMARK [1][-]{section*.144}{Conclusions}{chapter.7}% 87
-\BOOKMARK [1][-]{section*.145}{Future Work}{chapter.7}% 88
-\BOOKMARK [0][-]{section*.148}{Acronyms}{}% 89
-\BOOKMARK [0][-]{chapter*.149}{Bibliography}{}% 90
+\BOOKMARK [2][-]{section*.31}{Diversity on Fault/Intrusion Detection}{section*.30}% 21
+\BOOKMARK [2][-]{section*.32}{Diversity on BFT}{section*.30}% 22
+\BOOKMARK [1][-]{section*.33}{Vulnerability Analysis}{chapter.2}% 23
+\BOOKMARK [2][-]{section*.34}{Vulnerability Life-cycle}{section*.33}% 24
+\BOOKMARK [2][-]{section*.35}{Metrics and Risk Management}{section*.33}% 25
+\BOOKMARK [1][-]{section*.36}{Management of Vulnerable Systems}{chapter.2}% 26
+\BOOKMARK [1][-]{section*.37}{Final Remarks}{chapter.2}% 27
+\BOOKMARK [0][-]{chapter.3}{A Study on Common OS Vulnerabilities}{}% 28
+\BOOKMARK [1][-]{section*.39}{Methodology}{chapter.3}% 29
+\BOOKMARK [2][-]{section*.40}{Data Source}{section*.39}% 30
+\BOOKMARK [2][-]{section*.41}{Data Selection}{section*.39}% 31
+\BOOKMARK [2][-]{section*.42}{Filtering the Data}{section*.39}% 32
+\BOOKMARK [1][-]{section*.44}{OS Diversity Study}{chapter.3}% 33
+\BOOKMARK [1][-]{section*.47}{Strategies for OS Diversity Selection}{chapter.3}% 34
+\BOOKMARK [2][-]{section*.48}{Common Vulnerability Indicator}{section*.47}% 35
+\BOOKMARK [2][-]{section*.50}{Building Replicated Systems with Diversity}{section*.47}% 36
+\BOOKMARK [2][-]{section*.51}{Common Vulnerability Count \(CVCst\)}{section*.47}% 37
+\BOOKMARK [2][-]{section*.55}{Common Vulnerability Indicator Strategy \(CVIst\)}{section*.47}% 38
+\BOOKMARK [2][-]{section*.59}{Inter-Reporting Times Strategy \(IRTst\)}{section*.47}% 39
+\BOOKMARK [2][-]{section*.62}{Comparing the three strategies}{section*.47}% 40
+\BOOKMARK [2][-]{section*.63}{Exploring Diversity Across OS Releases}{section*.47}% 41
+\BOOKMARK [1][-]{section*.65}{Decisions About Deploying Diversity}{chapter.3}% 42
+\BOOKMARK [1][-]{section*.66}{Final Remmarks}{chapter.3}% 43
+\BOOKMARK [0][-]{chapter.4}{Diversity Management for BFT Systems}{}% 44
+\BOOKMARK [1][-]{section*.68}{Overview}{chapter.4}% 45
+\BOOKMARK [1][-]{section*.70}{System Model}{chapter.4}% 46
+\BOOKMARK [1][-]{section*.71}{Diversity of Replicas}{chapter.4}% 47
+\BOOKMARK [1][-]{section*.72}{Diversity-aware Reconfigurations}{chapter.4}% 48
+\BOOKMARK [2][-]{section*.73}{Finding Common Vulnerabilities}{section*.72}% 49
+\BOOKMARK [2][-]{section*.75}{Measuring Risk}{section*.72}% 50
+\BOOKMARK [2][-]{section*.80}{Measuring Configurations Risk}{section*.72}% 51
+\BOOKMARK [2][-]{section*.82}{Selecting Configurations}{section*.72}% 52
+\BOOKMARK [1][-]{section*.84}{Evaluation}{chapter.4}% 53
+\BOOKMARK [2][-]{section*.85}{Diversity vs Vulnerabilities}{section*.84}% 54
+\BOOKMARK [2][-]{section*.87}{Diversity vs Attacks}{section*.84}% 55
+\BOOKMARK [1][-]{section*.90}{Final Remarks}{chapter.4}% 56
+\BOOKMARK [0][-]{chapter.5}{Lazarus}{}% 57
+\BOOKMARK [1][-]{section*.92}{Implementation}{chapter.5}% 58
+\BOOKMARK [2][-]{section*.93}{Control Plane}{section*.92}% 59
+\BOOKMARK [2][-]{section*.95}{Clustering}{section*.92}% 60
+\BOOKMARK [2][-]{section*.96}{Replica Virtualization and Provision}{section*.92}% 61
+\BOOKMARK [2][-]{section*.97}{BFT replication}{section*.92}% 62
+\BOOKMARK [2][-]{section*.98}{Descentralized Lazarus Version}{section*.92}% 63
+\BOOKMARK [1][-]{section*.100}{Evaluation}{chapter.5}% 64
+\BOOKMARK [2][-]{section*.102}{Homogeneous Replicas Throughput}{section*.100}% 65
+\BOOKMARK [2][-]{section*.104}{Diverse Replicas Throughput}{section*.100}% 66
+\BOOKMARK [2][-]{section*.106}{Performance During Replicas' Reconfiguration}{section*.100}% 67
+\BOOKMARK [2][-]{section*.110}{Application Benchmarks}{section*.100}% 68
+\BOOKMARK [1][-]{section*.112}{Final Remarks}{chapter.5}% 69
+\BOOKMARK [0][-]{chapter.6}{SieveQ: A Use Case}{}% 70
+\BOOKMARK [1][-]{section*.114}{Introduction}{chapter.6}% 71
+\BOOKMARK [1][-]{section*.115}{Intrusion-Tolerant Firewalls}{chapter.6}% 72
+\BOOKMARK [1][-]{section*.118}{Overview of SieveQ}{chapter.6}% 73
+\BOOKMARK [2][-]{section*.119}{Design Principles}{section*.118}% 74
+\BOOKMARK [2][-]{section*.120}{SieveQ Architecture}{section*.118}% 75
+\BOOKMARK [2][-]{section*.122}{Resilience Mechanisms}{section*.118}% 76
+\BOOKMARK [2][-]{section*.123}{System and Threat Model}{section*.118}% 77
+\BOOKMARK [2][-]{section*.124}{Resilience Mechanisms}{section*.118}% 78
+\BOOKMARK [1][-]{section*.125}{SieveQ Protocol}{chapter.6}% 79
+\BOOKMARK [2][-]{section*.126}{Properties}{section*.125}% 80
+\BOOKMARK [2][-]{section*.127}{Message Transmission}{section*.125}% 81
+\BOOKMARK [2][-]{section*.129}{Addressing Component Failures}{section*.125}% 82
+\BOOKMARK [1][-]{section*.130}{Implementation}{chapter.6}% 83
+\BOOKMARK [1][-]{section*.131}{Evaluation}{chapter.6}% 84
+\BOOKMARK [2][-]{section*.132}{Testbed Setup}{section*.131}% 85
+\BOOKMARK [2][-]{section*.134}{Methodology}{section*.131}% 86
+\BOOKMARK [2][-]{section*.135}{Performance in Failure-free Executions}{section*.131}% 87
+\BOOKMARK [2][-]{section*.138}{Effect of Filtering Rules Complexity}{section*.131}% 88
+\BOOKMARK [2][-]{section*.140}{SieveQ Under Attack}{section*.131}% 89
+\BOOKMARK [2][-]{section*.145}{SieveQ to Protect a SIEM System}{section*.131}% 90
+\BOOKMARK [1][-]{section*.148}{Discussion}{chapter.6}% 91
+\BOOKMARK [1][-]{section*.149}{Final Remarks}{chapter.6}% 92
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Research Directions}{}% 93
+\BOOKMARK [1][-]{section*.151}{Conclusions}{chapter.7}% 94
+\BOOKMARK [1][-]{section*.152}{Future Work}{chapter.7}% 95
+\BOOKMARK [0][-]{section*.155}{Acronyms}{}% 96
+\BOOKMARK [0][-]{chapter*.156}{Bibliography}{}% 97

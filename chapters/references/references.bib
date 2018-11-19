@@ -67,11 +67,34 @@
 	month = 	nov,
 }
 
+@article{Lamport:1979,
+	author = {Lamport, Leslie},
+	title = {Time, Clocks, and the Ordering of Events in a Distributed System},
+	journal = {Communications of ACM},
+	volume = {21},
+	number = {7},
+	month = jul,
+	year = {1978},
+	pages = {558--565},
+} 
+
+
 @InProceedings{Chen:1978,
 	author =	 {L. Chen and Algirdas Avizienis},
 	title =	 {{N-version Programming: A Fault-Tolerance Approach to Reliability of Software Operation}},
 	booktitle =	 {Proceedings of the IEEE Symposium on Fault-Tolerant Computing},
 	year =	 1978,
+}
+
+@article{Pease:1980,
+	author = {Pease, M. and Shostak, R. and Lamport, L.},
+	title = {Reaching Agreement in the Presence of Faults},
+	journal = {Journal of the Association for Computing Machinery },
+	volume = {27},
+	number = {2},
+	month = apr,
+	year = {1980},
+	pages = {228--234},
 }
 
 @article{Lamport:1982,
@@ -171,6 +194,15 @@
 	month=jun,
 }
 
+@inproceedings{Reiter:1994,
+	author = {Reiter, Michael K.},
+	title = {The Rampart Toolkit for Building High-Integrity Services},
+	booktitle = {Proceedings of the International Workshop on Theory and Practice in Distributed Systems},
+	year = {1995},
+	month=sep,
+} 
+
+
 %%% Security Metrics
 @article{Foss:1995,
 	author = {Alves-Foss, Jim and Barbosa, Salvador},
@@ -210,6 +242,14 @@
 	month=may,
 }
 
+@inproceedings{Kihlstrom:1998,
+	author = {Kihlstrom, Kim Potter and Moser, L. E. and Melliar-Smith, P. M.},
+	title = {The SecureRing Protocols for Securing Group Communication},
+	booktitle = {Proceedings of the Annual Hawaii International Conference on System Sciences},
+	year = {1998},
+	month=jan,
+} 
+
 @inproceedings{Deswarte:1998,
 	author = {Deswarte, Y. and Kanoun, K. and Laprie, J.},
 	title = {{Diversity Against Accidental and Deliberate Faults}},
@@ -218,6 +258,14 @@
 	month=jul,
 } 
 
+@inproceedings{Doudou:1999,
+	author = {Doudou, Assia and Garbinato, Beno\^{\i}t and Guerraoui, Rachid and Schiper, Andr{\'e}},
+	title = {Muteness Failure Detectors: Specification and Implementation},
+	booktitle = {Proceedings of the European Dependable Computing Conference on Dependable Computing},
+	year = {1999},
+	month=sep,
+}
+
 @inproceedings{Castro:1999,
 	author = {Castro, Miguel and Liskov, Barbara},
 	title = {{Practical Byzantine Fault Tolerance}},
@@ -225,6 +273,15 @@
 	year = {1999},
 	month=oct,
 } 
+
+@techreport{Wilfredo:2000,
+	author = {Wilfredo, Torres},
+	title = {{Software Fault Tolerance: A Tutorial}},
+	year = {2000},
+	howpublished = "{\url{http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3ALTRS%3ANASA-2000-tm210616}}",
+	publisher = {{NASA Langley Technical Report Server}},
+} 
+
 
 @INPROCEEDINGS{Yeh:2001, 
 	author={Y. C. Yeh}, 
@@ -352,6 +409,17 @@
 }
 %pages="3--36",
 
+@ARTICLE{Avizienis:2004, 
+	author={A. Avizienis and J. Laprie and B. Randell and C. Landwehr}, 
+	journal=TDSC, 
+	title={Basic concepts and taxonomy of dependable and secure computing}, 
+	year={2004}, 
+	volume={1}, 
+	number={1}, 
+	pages={11-33}, 
+	month=jan,
+}
+
 @inproceedings{Yeh:2004,
 	author    = {Y. Yeh},
 	title     = {{Unique Dependability Issues for Commercial Airplane Fly by Wire Systems}},
@@ -394,7 +462,7 @@
 
 @INPROCEEDINGS{Newsome:2005,
 	author = {James Newsome and Dawn Song and James Newsome and Dawn Song},
-	title = {{Dynamic taint analysis: Automatic detection, analysis, and signature generation of exploit attacks on commodity software}},
+	title = {{Dynamic Taint Analysis: Automatic detection, Analysis, and Signature Generation of Exploit Attacks on Commodity Software}},
 	booktitle = {In Proceedings of the Network and Distributed Systems Security Symposium},
 	year = {2005}
 }
@@ -579,6 +647,14 @@
 	month=jul,		
 }
 
+@inproceedings{Sommer:2010,
+	author = {Sommer, R. and Paxson, V.},
+	title = {{Outside the Closed World: On Using Machine Learning for Network Intrusion Detection}},
+	booktitle = SP,
+	year = {2010},
+	month=may,
+}
+
 @inproceedings{Cooper:2010,
 	author = {Cooper, B. and Silberstein, A. and Tam, E. and Ramakrishnan, R. and Sears, R.},
 	title = {{Benchmarking Cloud Serving Systems with YCSB}},
@@ -649,16 +725,6 @@
 	month=jan,
 } 
 
-@INPROCEEDINGS{Sommer:2010, 
-	author={R. Sommer and V. Paxson}, 
-	booktitle=SP, 
-	title= {{Outside the Closed World: On Using Machine Learning for Network Intrusion Detection}}, 
-	year={2010}, 
-	volume={}, 
-	number={}, 
-	pages={305-316}, 
-	month={May},
-}
 
 @ARTICLE{Sousa:2010, 
 	author={P. Sousa and A. Bessani and M. Correia and N. Neves and P. Verissimo}, 
@@ -669,15 +735,6 @@
 	number={4}, 
 	pages={452--465}, 
 	month=apr,
-}
-
-@misc{stuxnet:2010,
-	author               = {Falliere, N.},
-	organization         = {Symantec},
-	publisher            = {Symantec},
-	title                = {{Exploring Stuxnet's PLC Infection Process}},
-	howpublished         = {\url{http://www.symantec.com/connect/blogs/exploring-stuxnet-s-plc-infection-process}},
-	year                 = {2010},
 }
 
 @inproceedings{Hunt:2010,
@@ -880,12 +937,23 @@
 	month=oct,
 } 
 
+@ARTICLE{Goues:2012, 
+	author={C. Le Goues and T. Nguyen and S. Forrest and W. Weimer}, 
+	journal={IEEE Transactions on Software Engineering}, 
+	title={{GenProg: A Generic Method for Automatic Software Repair}}, 
+	year={2012}, 
+	volume={38}, 
+	number={1}, 
+	pages={54-72}, 
+	month=jan,
+}
+
 @Article{Schaefer:2012,
 	author="Schaefer, Ina and Rabiser, Rick and Clarke, Dave and Bettini, Lorenzo and Benavides, David and Botterweck, Goetz and Pathak, Animesh and Trujillo, Salvador and Villela, Karina",
 	title={{Software diversity: state of the art and perspectives}},
 	journal="International Journal on Software Tools for Technology Transfer",
 	year="2012",
-	month="Oct",
+	month=oct,
 	volume="14",
 	number="5",
 	pages="477--495",
@@ -2030,7 +2098,13 @@
 	note = DATE,
 }
 
-
+@misc{stuxnet:2010,
+	author               = {Falliere, N.},
+	publisher            = {Symantec},
+	title                = {{Exploring Stuxnet's PLC Infection Process}},
+	howpublished         = {\url{http://www.symantec.com/connect/blogs/exploring-stuxnet-s-plc-infection-process}},
+	year                 = {2010},
+}
 
 @misc{linux_kernel,
 	title="{Lines of code of the Linux Kernel Versions}",
