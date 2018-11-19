@@ -67,7 +67,7 @@ However, to the best of our knowledge, very few works proposed intrusion-toleran
 Performance reasons might explain this, as \gls{bft} replication protocols are usually associated with significant overheads and limited scalability.
 Additionally, achieving complete transparency to the rest of the system can be challenging to reconcile with the objective of having fast message filtering under attack.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=.8\columnwidth]{images/images/arch_traditional.pdf}
 \caption{Architecture of a state-of-the-art replicated firewall.}
@@ -107,7 +107,7 @@ When building a firewall, it would be useful if a more straightforward approach 
 
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \subfloat{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_tradiotional_attack.pdf}}
 \hspace{-5mm}
@@ -166,7 +166,7 @@ A fundamental difference between the \sieveq architecture and the other replicat
 The rationale for this change is to gain flexibility in the filtering operations while ensuring better performance under attack, retaining the ability to tolerate intrusions.
 As observed previously, despite the significant improvements in state-of-the-art \gls{bft} implementations, there is an inherent trade-off between the benefits of \gls{bft} replication and its performance, namely due to the need to disseminate (and eventually authenticate) all messages at the replicas, which includes both valid and invalid messages.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{images/images/arch.pdf}
 \caption{\sieveq layered architecture.}
@@ -373,7 +373,7 @@ This \gls{mac} serves as an optimization to speed up checks~\cite{Clement:2009}.
 \label{msg}
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[scale=0.5]{images/images/filtering_steps_1.pdf}
 \caption{Filtering stages at the \sieveq.}
@@ -498,7 +498,7 @@ This allows \postsieve to deliver messages in order while there are messages wit
 \begin{algorithm}[H]
 \caption{\postsieve protocol}\label{algo:post_filter}
 {
-\footnotesize
+\small
 
   $Init:\ executed\ only\ once$\\
 	$\SeqNumberExp_{Si}, k \leftarrow 0$\;
@@ -790,7 +790,7 @@ Every machine had two Quad-core Intel Xeon $2.27$ GHz CPUs, with $32$ GB of memo
 All the machines were connected by a 1Gbps switched network and run Ubuntu $10.04$ $64$-bit LTS (kernel $2.6.32$-server) and Java $7$ ($1.7.0\_67$).
 
 
-\begin{figure}[ht!]
+\begin{figure}[t]
 \includegraphics[width=0.8\columnwidth]{images/images/testbed1.pdf}
 \caption{The \sieveq testbed architecture used in the experiments.}
 \label{fig:testbed}
@@ -834,7 +834,7 @@ It demonstrates the overall performance of \sieveq in different scenarios, gradu
 Measurements were collected after the system reached a steady state. 
 The experiments were repeated 10 times for every workload, and the average result is reported.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_plot_latencyvsthroughput/latencyVSthroughput.pdf}
 \caption{\sieveq latency for each workload (message size and transmission rate).}
@@ -849,8 +849,9 @@ This means that very high workloads can only be supported if applications have s
 Overall, the performance degrades gracefully when varying the message payload sizes, for rates under $7k$ messages per second.
 
 
-\begin{table}[h]
+\begin{table}[t]
 \begin{center}
+{\small
 \begin{tabular}{c c c}\hline\hline
 \textbf{Payload size } & \textbf{Non-optimized}  & \textbf{Optimized}   \\
 \textbf{$(bytes)$} & \textbf{$(msg/sec)$} & \textbf{$(msg/sec)$}  \\\hline
@@ -859,6 +860,7 @@ $500  $ & 1320 & 10618 \\
 $1000 $ & 1311 & 10332  \\
 \hline\hline
 \end{tabular}
+}
 \caption{Maximum load induced by the \sender library with various message sizes\label{tab:client_evaluation}}
 \end{center}
 \end{table}
@@ -895,7 +897,7 @@ This result is expected as the string matching is a slow operation and it needs 
 Implementations with hardware support (as mentioned before) could be integrated with \sieveq to reduce these delays significantly.
 
 
-\begin{figure}[!t]
+\begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_plot_fw/fw.pdf}
 \caption{Comparison of the \sieveq's latency between the baseline and adding the filtering rules.}
@@ -915,7 +917,7 @@ One can observe that latency stays on average around $3.4$ milliseconds.
 The throughput is approximately constant during the whole period.
 It is possible to observe some momentary spikes in the latency and throughput, which happens due to Java garbage collector and a queuing effect from the \gls{smr}.
 
-\begin{figure}[h]
+\begin{figure}[t]
 
 \subfloat[Baseline latency.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf}\label{fig:latency_normal}}
 \hspace{-5mm}
@@ -934,7 +936,7 @@ In some cases, the latency is not too affected, but in others, there is a drasti
 The attack also has consequences on the throughput as it is possible to observe an oscillation between 0 to 4000 messages per second (which correspond to the situation when the \postsieve processes a batch of messages that have been accumulated).
 
 
-\begin{figure}[h]
+\begin{figure}[t]
 \subfloat[DoS w/ no recovery.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf}\label{fig:latency_attack}}
 \hspace{-5mm}
 \subfloat[DoS w/ no recovery.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/server_throughput_attack.pdf}\label{fig:throughput_attack}}
@@ -953,7 +955,7 @@ In practice, the attack becomes ineffective because, although it continues to co
 An adversary could increase the attack sophistication and try to find a new \presieve target.
 However, even in this case, the attack has a limited effect because during an interval of time (while there is a search for a fresh target) the system can make progress.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \subfloat[DoS w/ recovery.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf}\label{fig:latency_attack_replacement}}
 \hspace{-5mm}
 \subfloat[DoS w/ recovery.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf}\label{fig:throughput_attack_replacement}}
@@ -977,7 +979,7 @@ This would take  $\mathit{(f_{rs}+1)} \times$ 3 seconds (in our setup) before th
 
 
 
-\begin{figure}[h]
+\begin{figure}[t]
 \subfloat[Internal DoS execution without recovery actions.]{\includegraphics[width=.5\columnwidth]{images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replicas_dos.pdf}\label{fig:replica_dos_no_recovery}}
 \subfloat[Internal DoS execution with recovery actions.]{\includegraphics[width=0.5\columnwidth]{images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_replicas_dos.pdf}\label{fig:replica_dos_recovery}}
 \caption{Performance of \sieveq under internal DoS attack conditions without and with recovery.}
@@ -995,7 +997,7 @@ A \gls{siem} operates by collecting data from the monitored network and applicat
 The engine performs an analysis of the stream of events and generates alarms and other information for post-processing by other \gls{siem} components.
 Examples of such components are an archival subsystem for the storage of data needed to support forensic investigations, or a communication subsystem to send alarms to the system administrators.
 
-\begin{figure}[!h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.65\columnwidth]{images/images/SIEM.pdf}
 \caption{Overview of a SIEM architecture, showing some of the core facility subsystems protected by the \sieveq.}
@@ -1014,7 +1016,7 @@ As can be observed, the latency is in the order of 4 milliseconds for the emulat
 Even with the highest load (16 times), the observed values had a latency below $70$ milliseconds.
 This means that \sieveq could potentially deliver on average 176 million events per day, which is more than enough to accommodate the expected growth in the number of events for the next Olympic Games\footnote{In 2016 the Rio's Olympic Games the number of events per second was approximated 174, source: \url{https://diginomica.com/2016/11/24/securing-the-olympics-lessons-for-enterprise-cyber-security/}}.
 
-\begin{figure}[!h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{images/gnuplot/sieveq/new_massif/massif.pdf}
 \caption{\sieveq latency for the 2012 Summer Olympic Games scenario throughput requirement (127 events per second) and how the \sieveq scale, we doubled on each experiment the number of events.}

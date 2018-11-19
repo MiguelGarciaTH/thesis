@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.23)  19 NOV 2018 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.23)  19 NOV 2018 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2933,9 +2933,6 @@ Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_traditio
 nal_attack.pdf used on input line 114.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [89]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qhv/m/sc/17.28'.
@@ -2948,11 +2945,7 @@ File: images/images/arch.pdf Graphic file (type pdf)
 <use images/images/arch.pdf>
 Package pdftex.def Info: images/images/arch.pdf used on input line 171.
 (pdftex.def)             Requested size: 355.9042pt x 109.04787pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[91] [92 <./images/images/arch.pdf>] [93]
+ [91] [92 <./images/images/arch.pdf>] [93]
 Underfull \vbox (badness 1325) has occurred while \output is active []
 
  [94]
@@ -2971,7 +2964,7 @@ Package pdftex.def Info: images/images/filtering_steps_1.pdf used on input line
  378.
 (pdftex.def)             Requested size: 172.1427pt x 265.74216pt.
  [98 <./images/images/filtering_steps_1.pdf>] [99]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 526.
 
 Underfull \vbox (badness 5302) has occurred while \output is active []
@@ -3013,7 +3006,7 @@ File: images/gnuplot/sieveq/new_plot_fw/fw.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_plot_fw/fw.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_plot_fw/fw.pdf used on input
- line 900.
+ line 902.
 (pdftex.def)             Requested size: 395.45181pt x 138.40999pt.
 
 <images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf, id=3991, 433.62pt x
@@ -3022,7 +3015,7 @@ File: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf Graphic file (t
 ype pdf)
  <use images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500.
-pdf used on input line 920.
+pdf used on input line 922.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/plots/server_throughput_normal.pdf, id=3992, 433.62pt x 
@@ -3031,12 +3024,8 @@ File: images/gnuplot/sieveq/plots/server_throughput_normal.pdf Graphic file (ty
 pe pdf)
  <use images/gnuplot/sieveq/plots/server_throughput_normal.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_normal.p
-df used on input line 922.
+df used on input line 924.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 <images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf, id=399
 6, 433.62pt x 252.945pt>
@@ -3045,7 +3034,7 @@ aphic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/latency_normal_t1000_s500_under_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_normal_t1000_s500_
-under_attack.pdf used on input line 938.
+under_attack.pdf used on input line 940.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/plots/server_throughput_attack.pdf, id=3997, 433.62pt x 
@@ -3054,7 +3043,7 @@ File: images/gnuplot/sieveq/plots/server_throughput_attack.pdf Graphic file (ty
 pe pdf)
  <use images/gnuplot/sieveq/plots/server_throughput_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_attack.p
-df used on input line 940.
+df used on input line 942.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 [112 <./images/gnuplot/sieveq/new_plot_fw/fw.pdf>]
@@ -3065,7 +3054,7 @@ phic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/latency_t1000_s500_change_
-with_attack.pdf used on input line 957.
+with_attack.pdf used on input line 959.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf, id=4017,
@@ -3075,11 +3064,8 @@ hic file (type pdf)
 
 <use images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/plots/server_throughput_with_att
-ack_change.pdf used on input line 959.
+ack_change.pdf used on input line 961.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [113 <./images/gnuplot/sieveq/plots/latency_normal_t1000_s500.pdf> <./images/gn
 uplot/sieveq/plots/server_throughput_normal.pdf> <./images/gnuplot/sieveq/plots
@@ -3093,7 +3079,7 @@ _replicas_dos.pdf Graphic file (type pdf)
 <use images/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_
 replicas_dos.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_internal_recovery/server_thr
-oughput_no_recovery_replicas_dos.pdf used on input line 981.
+oughput_no_recovery_replicas_dos.pdf used on input line 983.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
 
 <images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_replica
@@ -3104,30 +3090,27 @@ plicas_dos.pdf Graphic file (type pdf)
 <use images/gnuplot/sieveq/new_internal_recovery/server_throughput_recovery_rep
 licas_dos.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_internal_recovery/server_thr
-oughput_recovery_replicas_dos.pdf used on input line 982.
+oughput_recovery_replicas_dos.pdf used on input line 984.
 (pdftex.def)             Requested size: 197.7259pt x 115.34102pt.
-
-Underfull \vbox (badness 1286) has occurred while \output is active []
-
  [114 <./images/gnuplot/sieveq/plots/latency_t1000_s500_change_with_attack.pdf>
  <./images/gnuplot/sieveq/plots/server_throughput_with_attack_change.pdf> <./im
 ages/gnuplot/sieveq/new_internal_recovery/server_throughput_no_recovery_replica
 s_dos.pdf> <./images/gnuplot/sieveq/new_internal_recovery/server_throughput_rec
-overy_replicas_dos.pdf>] <images/images/SIEM.pdf, id=4093, 663.47874pt x 278.03
-876pt>
+overy_replicas_dos.pdf>]
+<images/images/SIEM.pdf, id=4093, 663.47874pt x 278.03876pt>
 File: images/images/SIEM.pdf Graphic file (type pdf)
 
 <use images/images/SIEM.pdf>
-Package pdftex.def Info: images/images/SIEM.pdf used on input line 1000.
+Package pdftex.def Info: images/images/SIEM.pdf used on input line 1002.
 (pdftex.def)             Requested size: 257.04126pt x 107.71344pt.
 
-Underfull \hbox (badness 2310) in paragraph at lines 1015--1015
+Underfull \hbox (badness 2310) in paragraph at lines 1017--1017
 [][][]\T1/ptm/m/n/9 (+20) In 2016 the Rio's Olympic Games the num-ber of events
  per sec-ond was ap-prox-i-mated 174,
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 1015--1015
+Underfull \hbox (badness 6141) in paragraph at lines 1017--1017
 \T1/ptm/m/n/9 (+20) source: []$\T1/pcr/m/n/9 https : / / diginomica\OML/ztmcm/m
 /it/9 :\T1/pcr/m/n/9 com / 2016 / 11 / 24 / securing -[] the -[] olympics -[] l
 essons -[]
@@ -3138,13 +3121,9 @@ File: images/gnuplot/sieveq/new_massif/massif.pdf Graphic file (type pdf)
 
 <use images/gnuplot/sieveq/new_massif/massif.pdf>
 Package pdftex.def Info: images/gnuplot/sieveq/new_massif/massif.pdf used on in
-put line 1019.
+put line 1021.
 (pdftex.def)             Requested size: 395.45181pt x 109.8492pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[115 <./images/images/SIEM.pdf>]
+ [115 <./images/images/SIEM.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [116 <./images/gnuplot/sieveq/new_massif/massif.pdf>]) [117]
@@ -3463,11 +3442,11 @@ Package rerunfilecheck Info: File `phd_mgarcia.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 39589 strings out of 494925
- 692257 string characters out of 6180251
+ 39598 strings out of 494925
+ 692407 string characters out of 6180251
  969946 words of memory out of 5000000
- 40533 multiletter control sequences out of 15000+600000
- 249893 words of font info for 646 fonts, out of 8000000 for 9000
+ 40539 multiletter control sequences out of 15000+600000
+ 255084 words of font info for 652 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  65i,32n,106p,8822b,1347s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:db} has been referenced but does not exist, r
@@ -3491,10 +3470,10 @@ ive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on phd_mgarcia.pdf (176 pages, 5574234 bytes).
+Output written on phd_mgarcia.pdf (176 pages, 5574197 bytes).
 PDF statistics:
  4961 PDF objects out of 5155 (max. 8388607)
  4375 compressed objects within 44 object streams
  830 named destinations out of 1000 (max. 500000)
- 92115 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 93651 words of extra memory for PDF output out of 106986 (max. 10000000)
 
