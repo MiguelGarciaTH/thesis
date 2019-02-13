@@ -1,0 +1,55 @@
+::::SieveQ::::::
+
+1) Can we determine the number of pre-SQ at deployment time? 
+Yes, cause we don't have unlimited resources to create pre-SQs
+
+
+2) What happens if an authorized compromised client sends its private key to an unauthorized client. The unauthorized client can exploit a compromised pre-filter to bypass the first filtering stage. Filters will validate messages from the unauthorized client because the stolen private key is legit. A solution to this problem could be extending the filters’ checking mechanism by including the white list check already performed by pre-filters.
+
+The attack being described corresponds to a collusion attack of a malicious sender-SQ, another malicious client node, and a malicious pre-SQ. If this is the case, either one of the nodes could generate messages that will arrive at the replica-SQ bypassing the pre-filter (assuming that due to the collusion they all share the necessary keys). For instance, the malicious pre-SQ could generate arbitrary messages in the name of the compromised sender-SQ. These messages could contain the correct sender address, and therefore, adding a white list check to the replica-SQ would not be helpful.
+The only way to detect these messages is if they violate the filtering rules implemented in the replica-SQ. In this case, the signature validation would check that the message is correctly signed by the expected sender (e.g., so the other malicious client node would still need to use the address of the original malicious sender-SQ to have the messages pass this check; but this also makes these messages indistinguishable from the messages of the original sender; therefore, only the application level filtering rules could detect these malicious messages).
+
+z
+3) The authors claim that a malicious pre-filter can’t generate fully authenticated messages because it lacks the required keys. As before, this is not true if a malicious client hands its private key off to a malicious pre-filter.]
+
+We need to separate the two attack scenarios. The first is when malicious pre-SQ acts alone, and in this case, it cannot generate fully authenticated messages. The second is when we have a malicious sender-SQ and a malicious pre-SQ that collude together. In this second case, as we explained above, the replica-SQ will reject the messages if they violate the filtering rules. Otherwise, the messages are seen as correct from the point of view of the SieveQ, as they are indistinguishable from correct messages. We have made these points clearer in Sections 3.3 and 4.4.
+
+
+4) Can a single compromised sender (with or without a colluding PreSQ) completely "bypass" the performance gains of the pre-filtering phase? It seems like such a sender could send authenticated traffic (valid or not, according to the application-level firewall rules) that must be agreed upon by the replicaSQs. Similarly, could a compromised sender transmit to multiple PreSQs, each of which will submit the message for TOM? If this is correct, the paper should acknowledge it.
+
+This kind of behavior can be captured with the detection mechanisms described in Section 4.4.1. Replica-SQs detect that a sender-SQ is sending messages to pre-SQs to which it was not assigned. We made this clear in Section 4.4.1.
+
+
+5) Why not applying software diversity also at Pre-SQ level?
+
+It is possible to apply automatic diversity (e.g., software obfuscation, stack randomization) to pre-SQs as it would not introduce much complexity. However, applying off-the-shelf diversity (e.g., changing OSs) would increase their management complexity and defeat the purpose of pre-SQs being “disposable”, i.e., almost trivial to replace. We clarified this in the second paragraph of Section 4.1.
+
+
+6) Along the same lines, the replicas perform a grant check based on the amount of received traffic. How does SieveQ guarantee that all replicas compute the incoming load in the same way? Is the mechanism based solely on the number of received bytes and not on time?  (This would seem to be insufficient...) If it is based on time, how do you guarantee that the computation is deterministic?
+
+VER--->> By using the same timestamp to account for the same message delivery, this can easily be done without violating determinism. As mentioned above, we added some discussion about determinism & timestamps in Section 7.
+
+
+::::Lazarus::::::
+
+1) This seems hardly the proper way to go about security, which is more about what vulnerabilies might _exist_ in an OS and not about what has been publicly reported in the NVD. Since we have no good way to measure the former, the safe course of action would be to simply use as many different OSes as is practical. Even after thinking about this for quite some time, I am still not sure I understand what the potential benefits of fiddling with the mix of OSes (or of using more than one replica with the same OS) would be.
+
+
+2) It's not clear to me how you choose which CVEs to consider. For instance, if a vulnerability is reported in the Samba service, but the Samba service never runs on server machines running BFT nodes, I can't tell if you count that vulnerability. An argument for counting it is that it shows correlation between that OS and another OS. An argument for not counting it is that the correlation doesn't exist between the OS *instances* you care about. Certainly you shouldn't count it in your metric for whether a BFT set fails; but, you might want Lazarus to count it when making decisions.
+
+
+3) System Model: Regarding "Control Plane: components can only fail by crashing.", you should clarify why, if you have such machines that are trusted and un-subvertible, you don't just run the service on them and completely obviate Byzantine fault tolerance in the first place.
+[ Pode ser pergunta do RR só para testar se patino | Ver PRRW ]
+
+
+4) Why a greedy approach here? Couldn't there be situations where a sudden discovery of a new vulnerability would require you to, say, throw out ALL of the Fedora replicas? If so, would the greedy replace-one-at-a-time approach find that solution, or could it get stuck in a local maximum?
+
+
+5) That said, I don’t know what is the practical significance of all this. As far as I can tell, Lazarus does not currently handle large-scale BFT deployments, like the ones that have been proposed for cryptocurrency schemes lately. Instead, it targets traditional BFT clusters with a small value of f (e.g. f=1 or f=2). Unfortunately, there aren’t many of those out there; and the ones that are don’t have much use for Lazarus. Google has lately been working on a practical BFT replication protocol, but the motivation behind it is quite different: this protocol will run across datacenters, in order to protect a single rogue administrator from bringing down critical services. Given that the paper is taking a practical approach to BFT, it would be made much stronger if it pointed out the practical significance of its approach.
+
+
+6) The contribution of Lazarus is only about replicas being compromised. BFT is about more than that, though. Replicas being compromised by a malicious attacker is the worst case scenario in the BFT world. There are several settings where replicas run in a more controlled environment (e.g. a datacenter) and are less likely to be externally compromised. In such settings, BFT can still be deployed as a countermeasure against hardware failures (e.g. NIC failures, memory bit flips, etc.).
+
+
+7) Lazarus mostly deals with attacks that compromise the OS on which the replica runs. While I appreciate the fact that the OS is an important attack surface, it is just one of the factors.
+

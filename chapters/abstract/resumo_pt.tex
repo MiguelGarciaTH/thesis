@@ -1,20 +1,41 @@
 %\pagestyle{empty}
-
+%1200 1500 palavras
 % ----------------------------------------------------------------------
 % Página do resumo em Português:
 \selectlanguage{portuguese}
+\inputencoding{latin1}
 \chapter*{Resumo}
-\label{chapter:abstract_pt_ext}
+\label{chapter:abstract_pt}
 \vspace*{-10mm}
+
+Ao longo dos últimos 20 anos, temos assistido a avanços incontestáveis no desenvolvimento de sistemas replicados tolerantes a faltas Bizantinas (BFT).
+Estes sistemas mantêm uma operação correcta enquanto apenas $f$ de um total de $n$ réplicas falharem simultaneamente.
+Por isso, para garantir a correcção do sistema é assumido que as réplicas não sofrem de falhas comuns, por outras palavras que as replicas falham de forma independente.
+Em situações adversariais, esta assumpção implica que as réplicas não contêm vulnerabilidades semelhantes, caso contrário um único ataque pode ser usado para comprometer uma parte significativa do sistema.
+Esta tese investiga a forma de substanciar esta assumpção na prática explorando diversidade nas configurações das réplicas.
+
+
+A tese começa com uma análise de um considerável conjunto de dados sobre vulnerabilidades para obter evidências de que a diversidade pode garantir independência nas falhas.
+Em particular, utilizámos dados de uma base de dados de vulnerabilidades para desenhar estratégias que constroem grupos de $n$ réplicas com Sistemas Operativos (SO) diferentes.
+Os resultados demonstram que é possível criar configurações confiáveis de SOs que não partilhem vulnerabilidades num período razoável de tempo (i.e., alguns anos).
+
+A tese propõe a um desenho de um serviço tipo antepara (do inglês \emph{firewall}) que protege e controla o acesso a sistemas críticos e que pode beneficiar da nossa gestão de diversidade. 
+A solução garante tolerância a faltas e intrusões através da implementação de uma arquitectura com filtros em duas camadas, permitindo descartar mensagens inválidas o quanto antes evitando os custos associados com a replicação BFT destas mensagens.
+
+A tese também apresenta uma solução nova para gestão da diversidade de réplicas.
+A solução recolhe e processa dados de várias fontes de dados para calcular continuamente uma métrica de risco.
+Uma vez que o risco aumente, réplicas potencialmente vulneráveis são substituídas por outras réplicas (diferentes) para tentar maximizar a independência das falhas no serviço replicado.
+Depois, as réplicas removidas são colocadas em quarentena e actualizadas com as correcções disponíveis para mais tarde serem reutilizadas.
+Realizámos várias experiências que mostram os ganhos de confiabilidade e o impacto de desempenho do nosso protótipo, incluindo testes padrão (do inglês \emph{benchmark}) e três aplicações BFT (uma aplicação de armazenamento chave-valor, o nosso serviço tipo antepara e uma blockchain).
 
 
 \vfill
 
 \begin{flushleft}
 \textbf{Palavras-chave:}
-Diversidade, Vulnerabilidades, Sistemas Operativos, Toler\^{a}ncia a Intrus\~{o}es, Recuper\c{c}\~{a}o Proactiva.
+Diversidade, Vulnerabilidades, Sistemas Operativos, Toler\^{a}ncia a Intrus\~{o}es, Rejuvenescimento.
 \end{flushleft}
-
-\LIMPA
+\inputencoding{utf8}
+%\LIMPA
 % Fim da página do resumo em Português
 % ----------------------------------------------------------------------

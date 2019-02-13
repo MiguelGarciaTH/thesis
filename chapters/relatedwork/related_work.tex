@@ -2,97 +2,106 @@
 \label{chap:related_work}
 
 
-This chapter presents the reasons why intrusion tolerance is needed, and then it describes the most relevant related works in the different areas within this topic.
-It covers mainly the state-of-the-art of \gls{bft} replication, the techniques to rejuvenate replicas, and the benefits of using software diversity on distributed and replicated systems.
-It also presents a few practical attempts to build systems that comprise these techniques.
-Finally, it describes some of the works on vulnerability analysis and how such analysis can be used to improve classical intrusion-tolerant systems.
+This chapter explains why intrusion tolerance is useful, and then it describes the most relevant related works within this topic.
+It covers mainly the state-of-the-art of \gls{bft} replication protocols, the techniques to rejuvenate replicas, and the benefits of using software diversity on distributed and replicated systems.
+It also presents a few practical attempts to build systems that explore these techniques.
+Finally, it describes some of the works on vulnerability analysis and how such analysis can improve classical intrusion-tolerant systems.
 
 
 \section{The Need for Intrusion Tolerance}
 A realistic way to provide security is to build mechanisms that protect potentially vulnerable systems from attackers.
 This is particularly important when considering critical systems that attract highly motivated attackers. 
-Here, the focus is on designing mechanisms to make systems safer and resilient despite their number of vulnerabilities and the attacker's power.
-In the following, we make an overview of the different approaches that can be combined to deal with the challenge of providing security and dependability~\cite{Avizienis:2004} for critical systems.
+Here, the focus is on designing mechanisms that make the systems safer despite their number of vulnerabilities and the attacker's power.
+In the following, we make an overview of the various approaches that can be combined to deal with the challenge of providing security and dependability~\cite{Avizienis:2004} for critical systems.
 
 \subsection{Vulnerability Prevention}
-One of the primary techniques to reduce the attackers' success is to avoid that software vulnerabilities persist throughout the development phases until the software is deployed in production. 
+One of the primary techniques to reduce the attackers' success is to avoid the introduction of vulnerabilities throughout the development phases until the software is deployed in production. 
 One way to do that is to detect and remove vulnerabilities during the development and testing stages.
-Here, we distinguish six different approaches that attempt to prevent software vulnerabilities. 
+Here, we distinguish seven different approaches that attempt to prevent software weaknesses. 
 
-First, the most basic approach is manual analysis, typically developers (named testers) or automatic tools perform a set of tests that validate program inputs and outputs.
+The most basic approach is manual analysis.
+Typically, developers (named testers) resort to automatic tools to perform a set of tests that validate program inputs and outputs.
 Often, in this type of analysis, the tester needs to check the results manually. 
-The accuracy of the solution depends on how well the inputs cover all the behavior of the software and if the tester detects the output violations after (a description of this process is presented~\cite{Votipka:2018}).
+The accuracy of the solution depends on how well the inputs cover all the behavior of the software and if the tester understands well the causes for the output violations (a description of this process is presented in~\cite{Votipka:2018}).
 
 
 Model checking is another approach, which abstracts the software code and formally verifies the program invariants.
 However, the most common techniques typically over-simplify the protocols to make them formally verifiable or just verify one or a few versions~\cite{Klein:2009,Chen:2015,Nelson:2017}. 
 Moreover, this process is time-consuming, and prohibitively expensive for most companies, which makes it difficult to scale to complex systems~\cite{Giuffrida:2013}.
-For example, an \gls{os} kernel was formally verified~\cite{Klein:2009}, but contrary to the Linux kernel that has more than 20 million lines of code~\cite{linux_kernel} this only has 10k lines of code.
+For example, an \gls{os} microkernel was formally verified~\cite{Klein:2009}, but contrary to the Linux kernel that has more than 20 million lines of code~\cite{linux_kernel}, this only had 10 thousand lines of code.
 
 
-One way to find pieces of code that could harm the correctness of the software is to resort to static vulnerability analyzers.
-This type of analysis is typically limited as it looks for small parts of the code that alone may not cause major alarm.
-Additionally, it is exhaustive and depends on the availability of the source code.
-On the contrary, in the software's reliability area, there are significant advances in automatic and efficient error detection~\cite{Xu:2016}.
-A particular technique used in security that tackles both coverage and code complexity is taint analysis.
+One way to find pieces of code that could harm the correctness of the software is to run static vulnerability analyzers. 
+Depending on the tool capabilities, this type of analysis can be limited as it looks for small parts of the code that alone may not cause major alarm.
+On the other hand, it is exhaustive but may require the availability of the source code.
+In the software's reliability area, there are significant advances in automatic and efficient error detection~\cite{Xu:2016}.
+A particular technique used in security that tackles both coverage and code complexity is taint analysis~\cite{Newsome:2005,Yamaguchi:2015,Ming:2015}.
 In this technique, any program variable that can be modified by a user is seen as a vulnerability trigger. 
-Then, when it is accessed, it becomes tainted for further inspection.
-The main limitations of taint analysis are that vulnerabilities are detected only for the execution paths that have been explored by the tester, and it is limited to call/return functions being challenging to cover shared memory or global variables~\cite{Yamaguchi:2015}.
+Then, when it is accessed, and copied to other variables, the taint propagates to other parts of the program.
+The main limitation of taint analysis is that it can make mistakes while deciding on the propagation of values, leaving bugs undetected or producing many false alarms.
 
 
 Another conventional solution to explore software bugs is fuzzing.
-Fuzzing is a dynamic technique, as it runs against executing software, and its success in finding vulnerabilities or bugs results from a good set of input test cases.
-These can be built manually and tuned for a particular application, or randomly generated, for the latter they are likely to fail on triggering more complex vulnerabilities.
-The main limitation of fuzzing is the time it takes trying multiple execution paths~\cite{Gan:2018}.
+This is a dynamic technique, as it runs against executing software, and its success in finding vulnerabilities results from a good set of input test cases.
+These can be built manually and tuned for a particular application, or randomly generated.
+For the latter they are likely to fail on triggering more complex vulnerabilities due to complex guard conditions~\cite{Gan:2018}.
 
 
-There are also solutions that combine some of the previously described techniques like taint analysis and fuzzing.
-For example, concolic testing is a technique that performs symbolic execution along with a particular execution path~\cite{Kim:2017b}. 
-Therefore, it is more accurate than fuzzing but it can, depending on the program size, exponentially explore execution paths.
-Some of these techniques can be combined to take the best of some of the approaches described before~\cite{Stephens:2016}.
+Symbolic execution is a technique that (statically) analyzes software code to generate path constraints and then creates test inputs to (symbolically) run the program~\cite{Cadar:2008}.
+However, this approach has some limitations that makes it difficult to scale, due to multiple path analysis.
+
+
+A few works combine the best characteristics of some of the approaches described before to overpass some of their limitations.
+For example, solutions that combine symbolic execution and fuzzing~\cite{Godefroid:2008,Stephens:2016,Kim:2017b} or symbolic execution with taint analysis~\cite{Haller:2013}.
+
+
+%There are also solutions that combine some of the previously described techniques, like taint analysis and fuzzing:
+%For example, concolic testing is a technique that performs symbolic execution along a particular execution path~\cite{Kim:2017b}. 
+%Therefore, it is more accurate than fuzzing but it can, depending on the program size, exponentially explore execution paths.
+%Some of these techniques can be combined to take the best characteristics of some of the approaches described before~\cite{Stephens:2016}.
 
 
 Finally, some works proposed workarounds that intended to minimize the window of vulnerability between the vulnerability disclosure and the patch release~\cite{Goues:2012,Huang:2016}.
 Typically, these solutions have two phases: first, the detection phase where they look for vulnerabilities in the source code, and a second one, where they instrument the code with a vulnerability workaround.
 Although they may have good coverage of the vulnerabilities, there are a few caveats on applying such solutions.
-For example, some workarounds may crash the application upon the vulnerability activation, or they may disable the main functions that clients use in the software~\cite{Huang:2016} compromising the availability. 
+For example, workarounds may crash the application upon the vulnerability activation, or they may disable the relevant functions that clients use in the software~\cite{Huang:2016} compromising the availability. 
 
 
-Although these techniques are steps towards more robust software, they all have limitations on coverage, either they fail to cover the whole code surface, or they fail to detect more complex and unknown vulnerabilities.
-Moreover, these techniques are especially useful to use before the vulnerable system is in production.
+Although these techniques are steps towards more robust software, they all have limitations on coverage, as either they fail to test the whole code, or they miss some more complex vulnerabilities.
+In any case, these techniques are very useful to employ before the vulnerable system is in production.
 
 
 \subsection{Fault Detection and Removal}
 Most of the previously described techniques work offline and are not complete. 
-Therefore, unknown vulnerabilities may arise when the system is already online, allowing the system to be compromised.
-Then, we need more complex approaches to cope with the existence of vulnerabilities that can be exploited.
-A possible solution is to detect intrusions at runtime and then trigger a recovery mechanism to clear the resulting effects. 
+Therefore, unknown vulnerabilities may arise when the application is already online, allowing the system to be compromised.
+Therefore, we need more complementary approaches to cope with the vulnerabilities that are left in the programs and that can be successfully exploited.
+A possible solution is to detect intrusions at runtime and then trigger recovery mechanisms to clear their effects. 
 
-Since some attacks employ a combination of different vulnerabilities (e.g.,~\cite{stuxnet:2010}), which isolated would be harmless, it is hard to detect them when the system is in production.
-We identify three problems on fault detection and removal: 
-First, perfect intrusion detectors are dependent of the application semantics~\cite{Doudou:1999}, and therefore, stealth attacks may remain active for long intervals; 
-Moreover, typically detection is based on attack signatures or anomaly detection~\cite{Sommer:2010}, therefore unknown attacks will not be detected so accurately.
-Second, the service can experience some periods of unavailability while the service is recovering~\cite{Wilfredo:2000}; 
-Finally, recovering a system might clean its faults, but the system remains vulnerable.
-Therefore, depending on the flow, it could be easy for an attacker to repeat the same procedure to compromise the system every time it recovers.
+Since some attacks exploit a combination of different vulnerabilities (e.g.,~\cite{stuxnet:2010}), which isolated would be harmless, it is hard to detect them when the system is in production.
+Three potential problems with fault detection and removal are: 
+First, perfect intrusion detectors are dependent on the application semantics~\cite{Doudou:1999}, and therefore, \gls{ots} detectors will necessarily be inaccurate; 
+Moreover, typically forms of detection are based on attack signatures~\cite{Sommer:2010} and consequently they will miss previously unknown attacks and the signatures databases can become outdated.
+Second, the application can experience some periods of unavailability while it is recovering~\cite{Wilfredo:2000}, thus preventing the users from benefiting from the offered service; 
+Finally, recovering a system might clean its faults, but the software remains vulnerable.
+Therefore, it might be easy for an attacker to repeat the same procedure to compromise the system every time it recovers.
 
 
 \subsection{Fault Tolerance and Masking}
-The previously described approaches assume that vulnerability removal can be achieved or that it is possible to detect all the attacks.
-However, these assumptions are unrealistic, and it is not advisable to trust the security and dependability of a sole approach, as it creates a single point-of-failure~\cite{Verissimo:2003}. 
+Previous approaches assume that vulnerability removal can be achieved or that it is possible to detect all the attacks against the system.
+However, these assumptions are unrealistic, and it is not advisable to trust the security and dependability to a sole approach, as it creates a single point-of-failure~\cite{Verissimo:2003}. 
 Thus, once the system becomes compromised the whole infrastructure becomes exposed to more attacks. 
 
-The established way to build a system with tolerance and masking properties is to base its implementation on a group of replicas, which execute equal commands in the same order. 
+One way to build a system with tolerance and masking capabilities is to utilize a group of application replicas that execute equal commands in the same order. 
 Primary-backup replication (i.e., $1 + 1$ replicas) would suffice if only crash faults are considered. 
 If one of the replicas stops executing, the other can replace it and still deliver the service correctly.
-However, if arbitrary faults are considered, this form of replication is not enough because compromised replicas could return arbitrary outputs to the clients, impeding the correct answer to be delivered.
+However, if arbitrary faults may occur, this form of replication is insufficient because compromised replicas could return arbitrary results to the users, impeding the correct answer to be delivered.
 
 \gls{smr}~\cite{Lamport:1979} is an approach that has been employed to ensure fault tolerance~\cite{Schneider:1990} of fundamental services in modern internet-scale infrastructures (e.g.,~\cite{Hunt:2010,Calder:2011,Corbett:2013}).
 \gls{smr} is achieved in distributed systems that run an agreement protocol that guarantees that all the replica nodes (i) start from the same state, (ii) process an equal sequence of messages, and (iii) execute the same state transitions. 
 These properties guarantee that a service runs in a similar manner in all replicas, and therefore, they all produce the same outputs.
 However, to address malicious (or sometimes called Byzantine) faults one needs to complement \gls{smr} with intrusion tolerance techniques~\cite{Verissimo:2003}.
 
-Intrusion tolerance was first proposed by Fraga and Powell~\cite{Fraga:1985} as a solution to address faults without compromising the security of a system. 
+Intrusion tolerance was first proposed by Fraga and Powell~\cite{Fraga:1985} as a way to build secure systems capable of maintaining its correctness despite the existence of faults.
 More formally, we adopt the following definition: 
 
 \begin{defn}
@@ -100,18 +109,19 @@ More formally, we adopt the following definition:
 \label{def:def2}
 \end{defn}
 
-It is necessary to employ \gls{bft} \gls{smr}, a particular case of \gls{smr}, to build a system capable of operating correctly even in the presence of compromised replicas.
-Since no single replica can be trusted completely, the system's correctness comes from the majority of correct nodes.
-For example, to tolerate a single fault (i.e., $f=1$) the system must have four replicas, where $n \geq 3f+1$~\cite{Castro:2002}.
-Although \gls{bft} protocols provide safety to a bound of $f$ faulty nodes, with sufficient time (i.e., greater than $T$), an adversary could eventually compromise $f+1$ nodes.
-Then, additional mechanisms are needed to clean the replicas' faulty state.
-For instance, to increase the time $T$ that takes to compromise $f+1$ replicas, one could employ periodic recoveries~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011}. 
-However, if a recovered node remains vulnerable to the same attack, the time to compromise $f+1$ replicas becomes smaller as the attacker already knows how to exploit the existing vulnerabilities.
-For this reason, several authors have built their systems assuming that nodes fail independently due to some mechanism that provides failure independence (e.g.,~\cite{Castro:2002,Bessani:2008,Veronese:2013,Sousa:2010}).
-Hence, to avoid reintroducing replicas with the same vulnerabilities in the system, the recovery should change the replica's code somehow.
-Finally, the recovery procedure needs to be managed carefully because otherwise, the decisions that are made with no criteria could lead to a decrease of $T$.
-If bad decisions are made, e.g., when $f+1$ replicas with the same shared weaknesses are deployed, an attacker can replicate the same attack on these replicas to compromise the whole system.
-Otherwise, an attacker needs to create $f+1$ different exploits and apply them to $f+1$ replicas before $T$. 
+\gls{bft} \gls{smr} allows a system to operate correctly even in the presence of compromised replicas.
+Since no single replica can be trusted completely, the system's correctness comes from the Byzantine majority of correct nodes.
+For example, to tolerate a single fault (i.e., $f=1$) the system must have four replicas (where $n \geq 3f+1$)~\cite{Castro:2002}.
+Although \gls{bft} protocols provide safety for a bounded number of faulty nodes, with sufficient time (i.e., greater than $T$) an adversary can compromise $f+1$ nodes.
+To address this issue, additional mechanisms are needed to clean the replicas' state.
+For instance, one may employ periodic recoveries~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011}. 
+
+If a recovered node remains vulnerable to the same attack, the time to compromise $f+1$ replicas becomes smaller as the attacker already knows how to exploit the existing weaknesses.
+For this reason, several authors have built their systems assuming that some mechanism is used to provide failure independence even when recoveries occur~\cite{Castro:2002,Bessani:2008,Veronese:2013,Sousa:2010}.
+Hence, to avoid reintroducing nodes with the same flaws in the system, the recovery should change the replica's code somehow.
+%Finally, the recovery procedure needs to be managed carefully because otherwise, the decisions that are made with no criteria could lead to a decrease of $T$.
+%If bad decisions are made, e.g., when $f+1$ replicas with the same shared weaknesses are deployed, an attacker can replicate the same attack on these replicas to compromise the whole system.
+%Otherwise, an attacker needs to create $f+1$ different exploits and apply them to $f+1$ replicas before $T$. 
 
 
 In the following sections, we present and describe several works on specific areas of intrusion tolerance, covering the various issues that we have just mentioned.
@@ -119,29 +129,31 @@ In the following sections, we present and describe several works on specific are
 
 \section{Byzantine Fault Tolerance}
 
-Castro and Liskov’s \textsc{Pbft}~\cite{Castro:1999} was the first practical \gls{bft} replicated system, and it was initially proposed as a solution to handle faults of both accidental and malicious nature.
-The correctness of a \gls{bft} service comes from the existence of a quorum of correct nodes capable of reaching consensus on the (total) order of messages to be delivered to the replicas.
-\textsc{Pbft} implements a \gls{smr} protocol that guarantees safety for up to $\lfloor\frac{n-1}{3}\rfloor$ faulty replicas out of a total of $n$. 
-To tolerate a single replica failure, this sort of system typically must have four replicas. 
-This property holds even in asynchronous systems such as the internet. 
+Castro and Liskov’s \textsc{Pbft}~\cite{Castro:1999} was the first approach for building a practical \gls{bft} replicated system.
+It was initially proposed as a solution to handle faults of both accidental and malicious nature.
+The correctness of a \gls{bft} service comes from a quorum of correct nodes capable of reaching consensus on the total order of messages to be processed by the replicas.
+\textsc{Pbft} implements a \gls{smr} protocol that guarantees safety even with up to $\lfloor\frac{n-1}{3}\rfloor$ faulty replicas out of a total of $n$. 
+To tolerate a single replica failure, this sort of solution typically requires four replicas. 
 
-\begin{figure}[h]
+
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=.7\columnwidth]{images/images/pbft.pdf}
-\caption{Byzantine Fault Tolerance protocol overview, where \emph{C} represents a client of a replicated service enumerated by replicas \emph{Ri}.}
+\caption{PBFT protocol overview, where \emph{C} represents a client of a service implemented by replicas \emph{Ri}.}
 \label{fig:bft}
 \end{center}
 \end{figure}
 
-\textsc{Pbft} implemented a \gls{smr}, therefore, it guarantees that each correct replica executes the same commands, in the same order, and then it produces the same output. 
-In Figure~\ref{fig:bft}, we present an overview of the \textsc{Pbft} protocol that can be summarized as follows:
-A client \emph{(c)} sends a \emph{request} to all the replicas \emph{(R1-R4)} to execute some service or operation.
-Then, the leader replica has to assign a sequence number to the request and multicasts a \emph{pre-prepare} message to the other replicas. 
-If the replicas agree with the leader, they send a \emph{prepare} message to each other. 
-At this phase of the protocol, every correct replica agrees on the ordering of the messages.  
+\textsc{Pbft} guarantees that each correct replica executes the same commands in the same order and then produces equal outputs. 
+Figure~\ref{fig:bft} illustrates an execution of the \textsc{Pbft} protocol and it can be summarized as follows.
+A client \emph{(C)} sends a \emph{request} to all the replicas \emph{(R1-R4)} to execute an operation of the service.
+Then, the leader replica assigns a sequence number to the request and multicasts a \emph{pre-prepare} message to the other replicas. 
+If the replicas agree with the leader, they multicast a \emph{prepare} message to each other. 
+At this phase of the protocol, every correct replica agrees on the ordering of the message.  
 Next, every replica multicasts a \emph{commit} message. 
-When correct replicas receive the \emph{commit} messages from a quorum, then they execute the request deterministically. 
-In the end, they \emph{reply} to the client, which waits for $f+1$ equal responses to guarantee that the correct response is delivered.
+After correct replicas receive the \emph{commit} messages from a quorum, they execute the request deterministically. 
+In the end, they \emph{reply} to the client with result of the operation.
+The client waits for $f+1$ equal responses to guarantee that the correct result is delivered.
 
 %Every replica shares a key with each other and with clients. 
 %These keys are used to authenticate messages with a \gls{mac}. 
@@ -152,36 +164,37 @@ In the end, they \emph{reply} to the client, which waits for $f+1$ equal respons
 
 
 
-\textsc{Pbft} good performance encouraged the use of \gls{bft} in common systems, and to develop optimizations to improve \gls{bft} protocols. 
-Since the \textsc{Pbft} proposal, many solutions have been dedicated to improve \gls{bft} protocols in a different manner. 
+\textsc{Pbft} good performance encouraged the development of other to improve \gls{bft} in different ways. 
 Table~\ref{tab:bft} gives an overview of a few of them.
 
 
-\begin{table}[h]
+\begin{table}[t]
 \begin{center}
 {\footnotesize
-\begin{tabular}{ p{2.4cm}  p{10.5cm}  }\hline
-\textsc{Zyzzyva}~\cite{Kotla:2010}  & Introduced speculation to avoid the expensive three-phase commit before processing the requests. This might introduce some inconsistency in the state of the replicas when speculation fails and then it needs the help from the client to fix the problem. \\ \hline            
-\textsc{Aardvark}~\cite{Clement:2009b} & Shifted the paradigm to a new design that improves the performance under faulty scenarios trading some performance on the normal case. The decision was to design a system that prefers safety over performance on gracious executions. Some counter-intuitive decisions on the architecture favored the overall execution on both gracious and fault scenarios. \\ \hline
-\textsc{Upright}~\cite{Clement:2009} & It provided a straightforward way to support crash fault-tolerant systems, without having to run as many replicas. It combined the protocol of \textsc{Zyzzyva} and the mechanisms of \textsc{Aardvark}. It did not require cryptographic signatures as it uses a \glspl{mac} matrix instead. \\ \hline    
+\begin{tabular}{ p{2.4cm}  p{11.5cm}  }\hline
+\textsc{Zyzzyva}~\cite{Kotla:2010}  & Introduced speculation to avoid the expensive three-phase commit before processing the requests. Since this may introduce some inconsistencies in the state of the replicas when speculation fails, it needs the help from the client to fix the problem. \\ \hline            
 
-\textsc{RITAS}~\cite{Moniz:2011} & It allows an alternative \gls{smr} implementation based on randomized protocols. More precisely, it uses a local coin toss algorithm to reach aggreament among the nodes. This work demonstrated that the \emph{acclaimed inefficiency} of randomized protocols is not verified in practice.  \\ \hline
+\textsc{Aardvark}~\cite{Clement:2009b} & Introduced a new design that improves the performance under faulty scenarios trading some performance on the normal case. The decision was to design a system that prefers robustness over performance on gracious executions. Some counter-intuitive decisions on the architecture favored the overall execution on both gracious and faulty scenarios. \\ \hline
 
-\textsc{Prime}~\cite{Amir:2011} & It introduced a new \emph{correctness criterion} that derives from bounded delays during a normal execution. They developed a protocol to detect malicious leaders that delay the execution to the limit of the (defined) time out. This protocol ensures that the (correct) non-leader replicas to bound the accepted \emph{delay} of the leader based on messages they receive from the clients. \\ \hline
+%\textsc{Upright}~\cite{Clement:2009} & Provided a straightforward way to support crash fault-tolerant systems, without having to run as many replicas. It combined the protocol of \textsc{Zyzzyva} and the mechanisms of \textsc{Aardvark}. It did not require cryptographic signatures as it uses a \glspl{mac} matrix instead. \\ \hline    
 
-\textsc{MinBFT}~\cite{Veronese:2013}  & Reduced the number $n$ from $3f+1$ to $2f+1$ by leveraging on trusted components. These components are deemed as trusted as it hardware is simple and thus verified. Additionally, this solution reduced one communication step compared to other \gls{bft} protocols. \\ \hline
+\textsc{RITAS}~\cite{Moniz:2011} & It allows an alternative \gls{smr} implementation based on randomized protocols. More precisely, it uses a local coin toss algorithm to reach agreement among the nodes. This work demonstrated that the \emph{claimed inefficiency} of randomized protocols is not verified in practice.  \\ \hline
 
-\textsc{BFT-SMaRt}~\cite{Bessani:2014} & It was developed to be a modular and multicore-aware. It also supports replica reconfiguration, as it allows that replicas leave and join the replica group. In this process, the joined replicas received the state from the correct replicas in order to be up to date. It also has a flexible programming interface that simplifies its use. \\ \hline
+\textsc{Prime}~\cite{Amir:2011} & It introduced a new \emph{correctness criterion} that derives from bounded delays during a normal execution. Uses a mechanism to detect malicious leaders that delay the execution to the limit of the (defined) time out. The protocol ensures that the (correct) non-leader replicas can bound the \emph{delay} of the leader based on messages they receive from the clients. \\ \hline
 
-\textsc{COP}~\cite{Behl:2015} & It is one of the most recent \gls{bft} implementations, having reached 2.4 million operations per second. This was achieved mostly due to \gls{bft} architecture changes, like the creation of \emph{consensus instances} which are assigned to a client or a group of clients. These (separated) \emph{consensus instances} are executed in parallel increasing the throughput of the system.\\  \hline  
+\textsc{MinBFT}~\cite{Veronese:2013}  & Reduced the number $n$ from $3f+1$ to $2f+1$ by leveraging on trusted components. These components are deemed trusted because they are based on simple hardware that can be verified. Additionally, this solution decreases one communication step when compared to other \gls{bft} protocols. \\ \hline
 
-\textsc{Abstract}~\cite{Aublin:2015} & It subsumes some of the works described before in a platform that works as a modular composite of \gls{bft} solutions. The main idea is to make use of the several optimizations made by each solution to solve particular problems.\\ \hline
+\textsc{BFT-SMaRt}~\cite{Bessani:2014} & It was developed to be a modular and multicore-aware. It supports replica reconfiguration, as it allows nodes to leave and join the replica group. It is one of the few BFT systems with a robust implementation available and being maintained.  \\ \hline
+
+\textsc{COP}~\cite{Behl:2015} & It is the fastest \gls{bft} implementations, having reached 2.4 million operations per second. This was achieved mostly due to \gls{bft} architecture changes, like the creation of \emph{consensus instances} which are assigned to a client or a group of clients. These (separated) \emph{consensus instances} are executed in parallel increasing the throughput of the system.\\  \hline  
+
+\textsc{Abstract}~\cite{Aublin:2015} & It subsumes some of the works described before in a platform that works as a modular composite of \gls{bft} solutions. The main idea is to make use of the several optimizations made by each solution, for example, it uses \textsc{Zyzzyva} protocol in best-case scenarios.\\ \hline
 
 
 \end{tabular}
 }
+\vspace{2mm}
 \caption{Brief overview of some relevant BFT works.}
-
 \label{tab:bft}
 \end{center}
 \end{table}
@@ -192,10 +205,9 @@ Table~\ref{tab:bft} gives an overview of a few of them.
 \paragraph{Relationship with this thesis.} 
 
 In this thesis, we propose a control plane for \gls{bft} systems.
-The goal is to guarantee that replicas execute correctly while tolerating malicious failures in a subset of them.
-The implementation of such \gls{bft} protocol is a complex task, namely if it supports mechanisms for state transfer and reconfiguration while ensuring good performance.
-Therefore, we prefer to rely on existent libraries than to build a new one.
-\footnote{Nevertheless, for some contributions (see Chapter~\ref{chap:sieveq}), we needed to perform some modifications on the chosen library.}
+The goal is to ensure that a service executes correctly while tolerating malicious failures in a subset of the replicas.
+The implementation of a \gls{bft} protocol is a complex task, namely if it supports mechanisms for state transfer and reconfiguration while ensuring good performance.
+Therefore, we will rely on existent libraries instead of building a new one.~\footnote{Nevertheless, for some of our contributions (see Chapter~\ref{chap:sieveq}) we had to perform some modifications on the chosen library.}
 
 
 
@@ -213,16 +225,16 @@ Some years later, proactive recovery was also adopted on \gls{bft} systems by Ca
 In order to support long-running services, the aim is to rejuvenate replicas periodically to eliminate the effects that an attacker could have caused on a faulty node. 
 This mechanism allows that the system remains correct as long as the adversary controls up to $f$ replicas before a recovery.
 Moreover, \textsc{Pbft} introduced additional mechanisms to guarantee that \gls{smr} properties are maintained even with recoveries.
-In particular, a \emph{state transfer} protocol, which allows that recovered replicas fetch a correct and up to date state from the other (correct) replicas.
+In particular, a state transfer protocol, which allows that recovered replicas fetch a correct and up to date state from the other (correct) replicas.
 Additional assumptions were needed to guarantee the \textsc{Pbft} liveness and safety during the recoveries: 
-(i) each replica contains a trusted chip to store its private key, and that can sign and decrypt messages without revealing this key; 
+(i) each replica contains a trusted chip to save its private key, which can sign and decrypt messages without revealing this key; 
 (ii) the replicas' public keys are stored in a read-only memory; 
 and (iii) a watchdog timer is used to avoid human interaction to restart replicas.
-The watchdog hands the execution to the recovery monitor, which cannot be interrupted.
+The watchdog hands the execution to a recovery monitor that cannot be interrupted.
 
-An alternative way to implement \gls{bft} systems with \gls{smr} is to resort to quorum systems.
-Zhou~\etal{}~\cite{Zhou:2002} presented \textsc{Coca}, a fault-tolerant online certification authority to be deployed both in a local area network and on the internet.
-Proactive recovery is also employed to rejuvenate replicas' state including the capacity to refresh the private keys of the replicas.
+An alternative way to implement \gls{bft} systems is to resort to quorum systems.
+Zhou~\etal{} \cite{Zhou:2002} presented \textsc{Coca}, a fault-tolerant online certification authority to be deployed both in a local area network and on the internet.
+Proactive recovery is also employed to rejuvenate replicas' state including the capacity to refresh the private keys of the nodes.
 The adoption of quorum systems does not require timing assumptions and, contrary to \textsc{Pbft}, \textsc{Coca} did not rely on trusted components.
 However, these options may compromise the safety (i.e., $f$ faulty nodes in-between recoveries) of asynchronous systems as shown by Sousa~\etal{}~\cite{Sousa:2007}. 
 More precisely, Sousa~\etal{} demonstrated the need for hybrid-systems that require some level of synchrony to guarantee safety and liveness of proactive recovery systems.
@@ -235,82 +247,84 @@ The intrusion-tolerant replicated system executes in the untrusted domain where 
 Virtualization provides isolation between the untrusted and the trusted domains. 
 Therefore, the trusted domain can trigger recoveries in a synchronous manner. 
 Moreover, virtualization reduces the service's downtime during recoveries and makes the state transfer between replicas more efficient. 
-The authors implemented this system using the Xen hypervisor.
-The trusted domain is placed in the hypervisor \texttt{Dom0}, and the replicas run in the untrusted \glspl{vm}, \texttt{DomUs}.
+The authors implemented this system using the Xen Hypervisor.
+The trusted domain is placed in the hypervisor (\texttt{Dom0}), and the replicas run in the untrusted \glspl{vm} (\texttt{DomUs}).
 
-Sousa~\etal{}~\cite{Sousa:2010} dealt with the presence of silent faults improving recovery mechanisms and introducing the \gls{prrw}. 
-It accelerated the rejuvenation process by detecting the faulty replicas behavior and forcing them to recover without sacrificing periodic rejuvenations. 
+Sousa~\etal{}~\cite{Sousa:2010} dealt with the presence of silent faults in the nodes and introduced the \gls{prrw}. 
+It forced the recovery of faulty replicas when they exhibit malicious behavior without sacrificing periodic rejuvenations. 
 This type of technique can only be implemented with synchrony assumptions as the rejuvenations are time triggered~\cite{Sousa:2005}. 
 To address this need, the authors proposed a hybrid system model: the payload was an any-synchrony subsystem where the replicas execute, and the wormhole was a synchronous subsystem. 
-The authors implemented this approach using the Xen hypervisor as the wormhole. 
+The authors implemented this approach using the Xen Hypervisor as the wormhole. 
 Zhao~\etal{}~\cite{Zhao:2012} improved \gls{prrw} with an algorithm to schedule the rejuvenations triggered by monitoring the network and CPU/memory usage.
 
 
 \paragraph{Relationship with this thesis.} 
 \gls{bft} replication with proactive recovery represents one of the cornerstones of intrusion tolerance. 
-Proactive recovery allows the system to reduce the replicas' vulnerability window by cleaning the faulty states, impeding the attacker to be successful at compromising more than $f$ replicas simultaneously. 
-Nevertheless, \gls{bft} replication with proactive recovery guarantees the system's correctness while replicas recover before $f+1$ replicas become faulty. 
+Proactive recovery allows the system to reduce the replicas' vulnerability window by cleaning the faulty states, preventing the attacker to be successful at compromising more than $f$ replicas simultaneously. 
+Nevertheless, \gls{bft} replication with proactive recovery only guarantees that the system is correct while nodes recover before $f+1$ replicas become faulty. 
 All works on \emph{safe} proactive recovery require the use of a trusted local component on each replica to trigger the periodic recoveries~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011}.
 Some of these works employed hardware timers while others resorted to virtualization to separate the execution domains. 
 In our proposal, we adopt an architecture inspired on~\cite{Distler:2008} and~\cite{Sousa:2010}. 
 %However, our solution implements a different (from~\cite{Sousa:2010}) algorithm to trigger recoveries.
-More importantly, most of these solutions assumed that replicas fail independently without addressing that issue, which is a topic central to our research.
-The following section reviews diversity as a way to overcome failure independence difficulties. 
+More importantly, most of these solutions just assumed that replicas fail independently without addressing that issue, which is a topic central to our research.
+The following section reviews diversity as a way to get failure independence. 
 
 
 
 
 \section{Diversity}
-In all works presented before, the correctness of the \gls{bft} system is ensured under the assumption that replicas fail independently.
-Therefore, it is assumed implicitly (or explicitly) that there is some mechanism that creates different vulnerable surfaces, which would increase substantially the effort to exploit each replica.
+The correctness of a \gls{bft} system is ensured under the assumption that replicas fail independently.
+Therefore, it is expected implicitly (or explicitly) that there is some mechanism that creates replicas with different vulnerabilities, which would increase substantially the effort to exploit each node.
 One practical way to achieve this is to build diverse replicas.
 
-Diversity can be implemented in different manners~\cite{Deswarte:1998,Larsen:2015}, which may differ in the mean and on the amount of diversity generated, but the goal is the same: to create different attack surfaces (details in the survey~\cite{Baudry:2015}).\side{Conference on Computer Security, Dependability, and Assurance: From Needs to Solutions 1998, Trans. Sec. Priv 2015, ACM Computer Surveys 2015}
-In particular, it decreases the chances of finding a vulnerability that compromises $f+1$ replicas at the same time~\cite{Castro:2002}.
-In other words, diversity would contribute to avoiding common vulnerabilities among replicas. 
+Diversity can be implemented in different manners~\cite{Deswarte:1998,Larsen:2015}, which may differ in the mean and on the amount of diversity generated, but the goal is always the same: to create different attack surfaces (details in the survey~\cite{Baudry:2015}).\side{Conference on Computer Security, Dependability, and Assurance: From Needs to Solutions 1998, Trans. Sec. Priv 2015, ACM Computer Surveys 2015}
+In particular, it decreases the chances of someone finding a bug that compromises $f+1$ replicas at the same time~\cite{Castro:2002}.
+In other words, diversity would contribute to avoid common weaknesses among replicas. 
 We present three different approaches to attain diversity: 
-(i) N-version programming consists of designing and/or implementing  different versions of the same specification; 
-(ii) Automatic diversity covers implementing different memory organization schemes and compiling distinct binary executables (from the same source); 
-and (iii) \gls{ots} diversity comprises the use of different products with similar functionality, but taking advantage of the various implementations that are already available.
+(i) N-version programming consists in designing and/or implementing distinct versions of the same specification; 
+(ii) Automatic diversity covers various memory organization schemes and compiling distinct binary executables (from the same source); 
+and (iii) \gls{ots} diversity comprises the use of different products with similar functionality, to take advantage of the many implementations that are already available.
 
 
 \subsection{N-version Programming}
 The first work on diversity was published in 1975 by Randell~\etal{}~\cite{Randell:1975}. 
-They introduced the idea of using different software designs and implementations as a way to achieve reliability. 
-The idea was to deploy additional and different replicas along the primary replica, and once the replicas have a mismatch result, a spare replica follows up as primary.
+They introduced the concept of using different software designs and implementations as a way to increase reliability. 
+The idea was to deploy additional spare replicas along the primary replica, and once there is a mismatch result among the nodes, a spare would substitute the current.
 
 
-Chen and Avizienis~\cite{Avizienis:1977,Chen:1978} defined the notion of N-version programming with the goal of achieving software reliability in redundant systems.
-The principle was to resort to $N$ teams that would develop $N$ versions of the same software specification that would be semantically equivalent.
+Chen and Avizienis~\cite{Avizienis:1977,Chen:1978} defined the notion of N-version programming with the goal of improving software reliability in redundant systems.
+The principle was to resort to $N$ teams that would develop $N$ versions of the same software specification, which would be semantically equivalent.
 Then, the N-version programs would execute and compare the outputs.
-If the outputs were equivalent, then the result was accepted.
-These works opened research avenues in the area of security and reliability.
-In any case, Knight and Leveson~\cite{Knight:1986} made an empirical study that concludes that N-version must be employed with particular care, as it is it may not provide increased reliability guarantees. 
+If the outputs are equivalent then the result is accepted.
+
+
+%These works server as inspiration for other works of security and reliability.
+Later on, Knight and Leveson~\cite{Knight:1986} made an empirical study that concluded that N-version must be employed with some care, as it may not provide increased reliability guarantees in certain scenarios. 
 
 \subsection{Automatic Diversity}  
-The idea of having $N$ different teams to develop $N$ software versions was not attractive from several perspectives (including the cost), and soon appeared automatic approaches for introducing diversity.
-Forrest~\etal{}~\cite{Forrest:1997} suggested randomized program transformations to introduce application diversity.
-They have made modifications to \texttt{gcc}, the GNU C Compiler, in such a way that at compiling time random padding is inserted into each stack frame. 
-The diverse versions are generated therefore during the source code compilation, and these works aim to make the intruder’s work more difficult when exploiting buffer overflow vulnerabilities.
+The idea of having $N$ different teams to develop $N$ software versions is not attractive from several perspectives (including the cost) and soon appeared automatic approaches for introducing diversity.
+Forrest~\etal{}~\cite{Forrest:1997} suggested randomized program transformations to generate application diversity.
+They made modifications to the \texttt{gcc} compiler to force random padding to be inserted into each stack frame. 
+Therefore, the diverse versions are generated during the source code compilation and the aim is to make the intruder’s work more difficult when exploiting buffer overflow bugs.
 More recently, a few other works propose the usage of diversity-based compilers to build different executables~\cite{Platania:2014,Roeder:2010,King:2016,Koo:2018}.
 
 
-Hosek and Cadar~\cite{Hosek:2015} proposed \textsc{Varan}, an N-version execution framework.
-\textsc{Varan} is composed of a leader replica and its followers that share a memory ring where they access in parallel.
+Hosek and Cadar~\cite{Hosek:2015} described \textsc{Varan}, a N-version execution framework.
+\textsc{Varan} is composed of a leader replica and a few followers that share a memory ring.
 These components are launched by a coordinator that orchestrates and setups the execution environment.
-Each follower runs a binary that has system calls rewritten differently.
+Each follower runs a binary that has system calls rewritten in a different manner.
 This optimization plays a significant performance improvement when compared with other solutions that rewrite the whole program.
-Another major improvement is the shared ring memory as it allows concurrent access by multiple producers and consumers.
-Nevertheless, the results show that some system calls when executed in \textsc{Varan} can introduce overheads (e.g., of 36\% for \texttt{close} and 240\% for \texttt{open}) when compared with a native setup.
-The authors also scale out the number of followers, which, as expected, increases the overhead as they are added. 
-Although \textsc{Varan} aims for reliability, some principles could be adopted in the security domain after solving some challenges, namely the use of the same address space that would allow return-oriented programming attacks.
+Another major improvement is achieved with the shared memory ring as it allows concurrent accesses by multiple producers and consumers.
+Nevertheless, the results show that \textsc{Varan} introduces overheads in some system calls (e.g., of 36\% for \texttt{close} and 240\% for \texttt{open}) when compared with a native setup.
+The experiments also scale out the number of followers, which, as expected, increases the overhead as more nodes are added. 
+Although \textsc{Varan} aims for reliability, a few principles could be adopted in the security domain after solving some challenges, namely the use of the same address space that allows return-oriented programming attacks~\cite{Snow:2013,Bittau:2014}.
 
 \textsc{Bunshin} by Xu~\etal{}~\cite{Xu:2017c} works as classic N-version systems, where the N variants receive the input, execute it, and then a voter checks for divergences in the output.
-However, \textsc{Bunshin} does not create real $N$ versions, in fact, it splits the program into parts, and each part (of each variant) executes some security check. 
-In this way, they can reduce the overheads of typical N-variant solutions as the code is practically the same while creating different checks that should capture faulty behavior.
+However, \textsc{Bunshin} does not create $N$ real versions and in fact it splits the program into parts where each part (of each variant) executes some security checks. 
+In this way, it is possible to reduce the overheads of typical N-variant solutions as the code is practically the same while creating different checks that should capture faulty behavior.
 Most of the overhead introduced is due to the variants synchronization before the output voting.
 Nevertheless, the security of the systems holds on the assumption that an attacker cannot easily overpass the sanity checks.
-Moreover, it is even more challenging to overpass them in all variants, which make sense for more straightforward attacks.
+%Moreover, it is even more challenging to overpass them in all variants, which make sense for more straightforward attacks.
 
 
 A different approach based on memory address obfuscation (i.e., \gls{aslr}) was proposed by Bhatkar~\etal{}~\cite{Bhatkar:2003}.
@@ -327,10 +341,9 @@ Another way to evaluate these solutions is to test them against real attacks, bu
 
 \subsection{Off-the-shelf Diversity}
 The previous approaches generate diversity before the software’s distribution. 
-\gls{ots} diversity, by the other hand, does not need pre-distribution of diverse mechanisms. 
-It relies on the existence of different software components that are ready to be used.
-There are plenty of products that provide the same functionality and were developed by distinct vendors. 
-In other words, \gls{cots} diversity is like opportunistic N-version programming.
+\gls{ots} diversity, by the other hand, relies on the existence of different software components that are ready to be used.
+There are plenty of products that provide the same functionality and that were developed by distinct vendors. 
+In other words, \gls{ots} diversity is like an opportunistic N-version programming.
 
 
 \subsubsection{Studies}
@@ -354,49 +367,48 @@ In fact, there were no coincident failures in more than two of the servers.
 The conclusion was that \gls{ots} database servers’ diversity is an effective mean to improve the system's reliability. 
 However, the authors recognize the need for \gls{sql} translators to increase the interoperability between servers in the replicated scenario.
 
-In the same line of the Gashi~\etal{}, Garcia~\etal{}~\cite{Garcia:2012} studied the vulnerabilities shared among \gls{ots} \glspl{os}.
-Similar to \cite{Han:2009}, this study was carried out taking as input the vulnerability feeds from \gls{nvd}. 
-However, this work was only focused on \glspl{os} and the dataset comprised 11-years of vulnerability reports. 
-Their goal was to find to what extent different \glspl{os} had common vulnerabilities. 
-To do that, they analyzed 2270 vulnerabilities entries manually and classified them into different categories. 
-Then, the authors defined three types of servers: (i) a server that contained most the packages/applications available (Fat server); (ii) a server that did not contain unnecessary applications to a particular service (Thin server); and (iii) a thin server but with physically controlled access (Isolated thin server). 
-They assumed that the third setting was the most advisable for critical systems because additional care is taken to install and setup its software. 
-For each configuration, they compared all the common vulnerabilities in pairs of \glspl{os}. 
+In the same line, Garcia~\etal{}~\cite{Garcia:2012} studied the vulnerabilities shared among \gls{ots} \glspl{os}.
+This study was carried out taking as input the vulnerability feeds from \gls{nvd}, for a period comprised of 11-years. 
+The goal was to find to what extent different \glspl{os} had common vulnerabilities. 
+To do that, 2270 vulnerabilities entries were analyzed manually and classified into different categories. 
+Then, three types of servers were defined: (i) a server that contained most the packages/applications available (Fat server); (ii) a server that did not contain unnecessary applications for a particular service (Thin server); and (iii) a thin server but with physically controlled access (Isolated thin server). 
+It was assumed that the third setting was the most advisable for critical systems because additional care is taken to install and setup software. 
+For each configuration it was found the number of vulnerabilities in pairs of \glspl{os}. 
 As expected, in the Isolated thin server, the number of common vulnerabilities was considerably less than in the other configurations. 
-There was only one vulnerability that was shared among six \glspl{os}, two that were shared among five \glspl{os}, and 130 that are shared between two \glspl{os}. 
-They went further in the study and looked for common vulnerabilities in different versions of the same \gls{os}. 
-Even if few \glspl{os} are employed, it is possible to achieve vulnerability independence just with different versions.
-The authors have found evidence that suggests that using OS diversity in a replicated system can improve its dependability. 
+There was only one vulnerability that was shared among six \glspl{os}, two that were found in five \glspl{os}, and 130 that were included in two \glspl{os}. 
+The study also looked for common vulnerabilities in different versions of the same \gls{os}. 
+It was observed that even if few \glspl{os} were employed, it is possible to achieve vulnerability independence just with different versions of the same \gls{os}.
+The authors found evidence that suggests that using \gls{os} diversity in a replicated system can improve its dependability. 
 
 
 
 \subsubsection{Network diversity}
 
-Diversity assignment was also used as a solution to increase the network's resiliency (in particular its connectivity).
-Newell~\etal{}~\cite{Newell:2015} presented their solution as a diversity assignment problem, that although it is an NP-hard to solve, the authors showed that for medium-sized random network graphs, it was feasible to find solutions within an acceptable time.
+Diversity assignment was also used as a solution to increase the network's resiliency (in particular in terms of connectivity).
+Newell~\etal{}~\cite{Newell:2015} presented their solution as a diversity assignment problem that although it is NP-hard to solve, it was showed that for medium-sized random network graphs, it was feasible to find solutions within an acceptable time.
 They used mixed-integer programming for medium-sized networks and for larger networks they proposed a fast greedy approach.
 For the first one, it was possible to achieve optimality, and for the latter an approximation of the optimal.
 One of the results showed that random diversity assignment is far worse than a criteria assignment (as the one they proposed).
-Their results showed improvements of diversity on the connectivity (i.e., resiliency).
-However, their models did not use realistic data, as the authors assumed that the expectancy values for the probability of node compromise were known and independent for each replica.
+Their results showed improvements of diversity on the connectivity.
+However, the models did not use realistic data, as it was assumed that the expectancy values for the probability of node compromise were known and independent for each replica.
 
 
 In the same line, Zhang~\etal{}~\cite{Zhang:2016} proposed a metric to evaluate the resilience of private networks.
 The idea was to define what is the least attacking effort to compromise some critical assets of the network (i.e., the work is focused on distributed yet not replicated systems).
-Therefore, they measured the weakest path to the target that compromises the main asset. 
+%Therefore, they measured the weakest path to the target that compromises the main asset. 
 The authors proposed three metrics which were evaluated in a simulated environment.
-None of these metrics used vulnerability data to correlate the existence of common weaknesses, and on the contrary, the metrics used data about the topology, services installed, etc.
-In the end, the authors made a simulated evaluation of generated graph networks and evaluated their metric against these graphs. 
-The results show that increasing the diversity on the nodes reduced the worm propagation on the network.
+None of these metrics used vulnerability data to correlate the existence of common weaknesses, but employed data about the topology, services installed, etc.
+In the end, the authors made a simulated evaluation of generated graph networks and evaluated their metrics against these graphs. 
+The results show that increasing the diversity on the nodes reduced the propagation of worms through the network.
  
 
 \paragraph{Relationship with this thesis.}
 We presented three different techniques that support diversity as a fault tolerance mechanism. 
-Classical N-version programming is the most costly since it needs different developers and additional programs to verify if the automatic translations work. 
-On the contrary, \gls{ots} and some automatic diversity (like randomization) are almost for free. 
-The first one can be obtained from components that are ready to be used. 
-The second one is automatic and already supported in most \glspl{os}. 
-The study findings are a good sign that diversity can improve a system’s dependability.
+N-version programming is the most costly since it needs different developers or software to validate the code versions if these are automatically generated.
+On the contrary, employing \gls{ots} and automatic diversity approaches (like randomization) is almost for free. 
+The first can be obtained from components that are ready to be used. 
+The second relies on some form of program modification and is supported at some level by most \glspl{os}. 
+Most studies give evidence that diversity can improve a system’s dependability.
 However, diversity still has some gaps that must be addressed to make it a useful building block of intrusion tolerance. 
 For example, how does one measure diversity as a contribution to increasing failure independence?
 
@@ -404,7 +416,7 @@ For example, how does one measure diversity as a contribution to increasing fail
 \section{Practical Systems with Diversity}
 
 \subsection{Diversity on Fault/Intrusion Detection}
-Despite the existence of several studies on vulnerabilities, a few works implemented diversity in their systems without evidence to support their diversity decisions.
+A few works implemented diversity in their systems without employing evidence about vulnerability data to support their decisions.
 Totel~\etal{}~\cite{Totel:2005} proposed an \gls{ids} based on design diversity.
 The authors described an architecture that uses a set of replicated \gls{cots} servers, a proxy, and an \gls{ids}. 
 The proxy is responsible for forwarding the requests from the client to every \gls{cots} server. 
@@ -414,7 +426,7 @@ Next, the proxy votes the responses and replies to the clients.
 The authors developed an algorithm to detect intrusions and tested their solutions against Snort~\cite{snort} and WebStat~\cite{Vigna:2003}. 
 The results showed that using a diverse-\gls{cots} service (e.g., HTTP) allows the \gls{ids} to deliver fewer alarms without missing the intrusions.
 
-Bairavasundaram and Sundararaman~\cite{Bairavasundaram:2009} implemented \textsc{EnvyFS}, a file system that uses N-version file systems to guarantee the reliability of stored data.
+Bairavasundaram and Sundararaman~\cite{Bairavasundaram:2009} implemented \textsc{EnvyFS}, an N-version file systems that improves the reliability of stored data.
 Their solution is able to tolerate file system mistakes (e.g., crash and integrity errors). 
 To keep the system simple, the authors used a virtual layer that abstract the specific file systems underneath, therefore some challenges arise from the different implementation details.
 Another challenge was to avoid the need for multiple storages as it uses $N$ variants of file systems. 
@@ -424,7 +436,7 @@ The results showed that \textsc{EnvyFS} is able to improve the reliability by le
 However, \textsc{EnvyFS} pays a performance penalty due to waiting for a majority of file systems responses. 
 In most of the times, it took the sum of the time of the three file systems used.
 
-Diversity has also been adopted to build a malware detector. 
+Diversity has also been employed for malware detector. 
 Xu and Kim~\cite{Xu:2017a} introduced \textsc{PlatPal} to analyze the behavioral discrepancies of malicious document files on different platforms (e.g.,Windows or Macintosh).
 \textsc{PlatPal} loads a file in both systems and monitors the execution traces or crashes. 
 In the end, both systems compare the outputs, and an attack is signaled if divergences are observed.
@@ -432,6 +444,13 @@ The authors focused on a particular application, the pdf Adobe Acrobat Reader.
 Therefore, besides the internal discrepancies, the correct executions should be very similar.
 There are some limitations, namely, it failed to detect attacks that needed some human interaction.
 Although \textsc{PlatPal} was proposed to detect malicious payloads on files, it vouched (indirectly) for diversity as it showed that an attacker needed to deploy multiple payloads to compromise a system with the same attack (for the majority of the malware samples used).
+
+
+Very recently, diversity has been applied to detect malicious web scrapping activities on the internet~\cite{Marques:2018}.
+The authors used a large data set, provided by a multi-national in the global travel industry, with traffic labeled as malicious and benign to investigate how diverse two tools perform. 
+One of these tools is an in-house tool called Arcaned and the other is a commercial tool (anonymized) referred to as CommTool.
+The results indicate that employing diverse tools may help to counteract to malicious scrapping.
+
 
 \subsection{Diversity on BFT}
 %\paragraph{Diversity on BFT.}
@@ -443,7 +462,7 @@ The key issue addressed by \textsc{Base} was how to deal with different represen
 The results showed that performance varied significantly when diversity was considered.
 Nevertheless, \textsc{Base} did not address the problem of selecting replicas nor the reconfiguration of the replica group.
 
-Roeder and Schneider~\cite{Roeder:2010} proposed a solution that combined an automatic diversity with rejuvenations, calling it \gls{po}.
+Roeder and Schneider~\cite{Roeder:2010} proposed a solution that combined automatic diversity with rejuvenations, calling it \gls{po}.
 The idea was to change the application and library code periodically, while preserving the original semantics by employing program transformations, i.e., system call obfuscation reordering, memory randomization, and functions return checks (through an IBM \texttt{gcc} patch that inserts and checks a random value after the functions return).
 Each replica generated its own obfuscated executable from a read-only device containing the ``master code'' based on time-triggered epochs that a controller initiates in a secure way through a trusted component.
 All obfuscation mechanisms were implemented and evaluated on OpenBSD 4.0, and their results showed that \gls{po} adds little extra overhead to the non-\gls{po} execution.
@@ -451,7 +470,7 @@ All obfuscation mechanisms were implemented and evaluated on OpenBSD 4.0, and th
 A similar approach by Platania~\etal{}~\cite{Platania:2014} adopted a compiler-based diversity for the \textsc{Prime} \gls{bft} library~\cite{Amir:2011} using the MultiCompiler tool~\cite{Homescu:2013}.
 This compiler was used to create diverse binaries from the same source code through randomization and padding techniques.
 The authors also proposed a theoretical rejuvenation model that received as input: the probability of a replica being correct over a year ($c$); the number of rejuvenations per day across the whole system ($r$); the number of replicas ($n$); and the system's lifetime. 
-Although operators can control only $r$ and $n$, the authors suggested (but did not show how) that $c$ would be estimated using \gls{osint} from the internet (CERT alerts, bug reports, and other historical data).
+Although operators can control only $r$ and $n$, the authors suggested (but did not show how) that $c$ would be estimated using \gls{osint} from the internet (e.g., CERT alerts, bug reports, and other historical data).
 The authors implemented their solution in two settings, including a virtualized environment provided by the Xen Hypervisor.
 In this setting, each replica executed in a Linux \gls{vm}, the recovery watchdog runs in a trusted domain of the same machine, and the proactive-recovery controller runs in another physical machine.
 
@@ -459,10 +478,10 @@ In this setting, each replica executed in a Linux \gls{vm}, the recovery watchdo
 \paragraph{Relationship with this thesis.} 
 Diversity is one of the building blocks of intrusion tolerance, alongside with \gls{bft} and rejuvenations. 
 We presented a few works that already used in some manner diversity in intrusion-tolerant systems. 
-Although we do not discard the possibility of employing other diversity techniques, such as randomization, we are more interested in \gls{cots} diversity.
+Although we do not discard the possibility of employing other diversity techniques, such as randomization, we are more interested in \gls{ots} diversity.
 This type of diversity allows us to use data that is freely available to estimate a risk value that measures how vulnerable is each component. 
 
-Previous works are still limited to the extent that are none or few concerns on how to create diversity to avoid common failures. 
+Previous works are still limited in terms of how to create diversity to avoid common failures. 
 They implement diversity assuming (unrealistically) complete fault independence. 
 For example, different \gls{ots} \glspl{os} can share the same weaknesses due to some shared libraries or kernel code. 
 There is a need to understand how diversity can be efficiently employed in a replicated system to make fault independence sound. 
@@ -473,32 +492,32 @@ Moreover, further work is still necessary to create automatic mechanisms that ab
 \section{Vulnerability Analysis}
 
 
-In another line of research, a few works were devoted to analyzing vulnerabilities life-cycle and evolution.
-Several studies analyzed several data sources that provide data about vulnerabilities, exploits, and patches.
+In another line of research, a few works analyzed the life-cycle and evolution of vulnerabilities.
+These studies looked for data sources that provide information about weaknesses, exploits, and patches.
 %These studies have some challenges and limitations~\cite{Massacci:2010}.
 %For example, that is difficult to integrate the different sources due to naming and ID differences across them.
-In the following, we present several studies on the usage of vulnerability data to measure and manage the security of computer systems.
+In the following, we present the main works on the usage of vulnerability data to measure and manage the security of computer systems.
 
 \subsection{Vulnerability Life-cycle}
 
 The different stages of vulnerability life-cycle were described by Jumratjaroenvanit and Teng-Amnuay~\cite{Jumratjaroenvanit:2008}.
 The authors' goal was to understand how the various life-cycle dates can be useful to estimate the probability of an attack. 
 The methodology was to collect and analyze data from public data sources on the discovery-, disclosure-, exploit-date and exploit-, and patch-availability. 
-Moreover, they considered five life-cycle types: (i) \gls{zda}, which typically is done by a black-hat, and is characterized by equal dates of disclosure and exploit; (ii) \gls{pzda}, which is a \gls{zda} but with a patch already available, but not applied; 
+Moreover, they considered five life-cycle types: (i) \gls{zda}, which typically is done by a black-hat and is characterized by equal dates of disclosure and exploit; (ii) \gls{pzda}, which is a \gls{zda} but with a patch already available, but not applied; 
 (iii) \gls{ppzda} is a \gls{pzda} but does not matter if the patch is available or not; 
 (iv) \gls{poa} is a zero-day vulnerability. 
 One of the results showed that the language safety level was the less influential factor on the number of accounted vulnerabilities.
-Thus, assumed safety languages do not impact so much on the number of vulnerabilities as expected.
+Thus, safety languages do not seem to impact so much on the number of vulnerabilities as expected.
 The study also demonstrated that two weeks of work were enough to have a 50\% chance of finding a zero-day vulnerability. 
-In some cases, 53 hours were enough to find one vulnerability with more than 95\% of probability.
+In some cases, 53 hours were sufficient to locate one vulnerability with more than 95\% of probability.
 
 
 Frei~\etal{}~\cite{Frei:2010} made a quantitative analysis of 27k vulnerabilities disclosed in the last decade.
 The authors proposed a model that explains the key factors in a vulnerability life-cycle.
-All the dates associated with the vulnerability life-cycle were described in detail before the analysis.
-A few public vulnerability databases (e.g., \gls{nvd} and \gls{osvdb}) were used to collect the different data attributes.
+All the dates associated with the life-cycle were described in detail before the analysis.
+A few public vulnerability databases (e.g., \gls{nvd} and \gls{osvdb}) were used to collect the various related attributes.
 The results showed that the number of patches increased after the vulnerability's disclosure.  
-One interesting result was the \emph{the gap of insecurity} measurement, where the patch availability was compared against the exploit availability. 
+One interesting result was the \emph{gap of insecurity} measurement, where the patch availability was compared against the exploit availability. 
 The data showed that exploits are always ahead of patches.
 In some cases, after 30 days of the disclosure, the exploits outnumbered the number of patches by 90\%.
 
@@ -510,30 +529,30 @@ More dramatic is the percentage of exploits that are released on the day of the 
 It was observed that 9.7\% of the vulnerabilities had exploits released after their disclosure.
 Microsoft and Apple had more exploits before the vulnerability disclosure than the other software providers. 
 This may primarily be because hackers find it more rewarding to exploit these products due to their broader market capitalization.
-To what concerns patching, the authors argue that 10\% of the vulnerabilities had a patch before their disclosure, and 62\% had a patch on its disclosure day. 
+To what concerns patching, the authors argue that 10\% of the vulnerabilities had a patch before their disclosure,
+ and 62\% had a patch on its disclosure day. 
 There was a considerable number of vulnerabilities (28\%) that were disclosed only after a patch was made available. 
 Another conclusion was that it is easier to exploit open-source code vulnerabilities than in closed-source – this conclusion may seem obvious, but no one had shown it previously with statistical tests.
 
-Zero-day vulnerabilities between 2008 to 2011 were part of a systematic study by Bilge and Dumitras~\cite{Bilge:2012}.
-The main dataset comes from the \gls{wine} developed by Symantec, which samples and aggregates data from several hosts running Symantec products (e.g., Norton Antivirus).
+Zero-day vulnerabilities that appeared in 2008 to 2011 were part of a systematic study by Bilge and Dumitras~\cite{Bilge:2012}.
+The main dataset comes from the \gls{wine} developed by Symantec, which samples and aggregates data from several hosts running its products (e.g., Norton Antivirus).
 The \gls{wine} data was correlated with \gls{osvdb} and Symantec's Threat Explorer for attack/exploit information, allowing the measurement of the duration of zero-day attacks.
-They conclude that a typical attack can last ten months. 
-Moreover, they found that the vulnerabilities exploited in Stuxnet were exploited in a different attack two years before.
-One of the main conclusions was that the disclosure of zero-day vulnerabilities increases the risk, up to five orders of magnitude, of users being attacked.
+It was observed that a typical attack can last ten months. 
+Moreover, they found that the vulnerabilities exploited in Stuxnet were used in a different attack two years before.
+One of the main conclusions was that the disclosure of zero-day vulnerabilities increases the risk up to five orders of magnitude of users being attacked.
 %Therefore, the vendors would be responsible for prioritizing the disclosure of such vulnerabilities and preparing a patch as soon as possible. 
 
 
-Holm~\cite{Holm:2014} made an analysis of malware alarms to verify if there is a statistical distribution to model the number of intrusions or the time to compromise a computer system.
-The author collected information from different software configurations from 2009 to 2012 from an IT company.
+Holm~\cite{Holm:2014} made an analysis of malware alarms to determine if there is a statistical distribution to model the number of intrusions or the time to compromise a computer system.
+The author collected information from different software configurations of an  IT company from 2009 to 2012.
 %During this period, the company had a total of 697 \glspl{os} and versions, which were considered in the evaluation.
-Each computer was equipped with anti-malware software, then upon malware detection related logging data is sent to a central database.
+Each computer was equipped with anti-malware software that stored logging data in a central database about malware detection events.
 The results showed that the Pareto distribution is the best to model the time of the first compromise.
 Another result was that the more the system is intruded, the more vulnerable it becomes. 
 The author presented a few hypotheses to justify this, for example, once a system was compromised it can no longer be trusted. 
-Another more plausible hypothesis is that security awareness only increased temporarily as a result of the intrusion, and then it is again neglected.
+Another more plausible hypothesis is that security awareness only was increased temporarily as a result of the intrusion, and then it was again neglected.
 Automatic attacks caused most of the malware considered in this study.
-This probably happens due to the type of company. 
-Conclusions may change if malware come due to targeted attacks as they require a different strategy to penetrate the system.
+This probably happened due to the type of company as conclusions may change if malware arrives due to a targeted attack as it requires a different strategy to penetrate the system.
 
 
 \subsection{Metrics and Risk Management}
@@ -548,124 +567,123 @@ Conclusions may change if malware come due to targeted attacks as they require a
 Poolsappasit~\etal{}~\cite{Poolsappasit:2012} described a security risk assessment method that incorporated the cause-effect relationships of the network states and the likelihood of exploiting such relationships.
 To do that, they measured the organizations' security risk using the \gls{cvss} metric.
 The authors generated a map of the network as an attack graph and collected its vulnerabilities and exposures. 
-This information helps the administrators to have an overview of the network weaknesses and the associate a cost to the assets.
-Then the administrator is able to build the countermeasures can be taken to avoid such weaknesses.
-The countermeasures are indicated by the system administrator that will link them to the attributes model.
-Then, the administrator assigns the damage costs to every attribute.
+This information helps the administrators to have an overview of the network weaknesses and the associate cost of the assets.
+Then, the administrator is able to build the countermeasures that can be taken to avoid such weaknesses, which will be linked as attributes to the model.
+Next, the administrator assigns the damage costs to every attribute.
 Finally, a genetic algorithm evolves the network for states where the cost of losing assets is minimal. 
-Their empirical results show the costs of being compromised can be minimized by assessing the security of the system and applying the most cost-efficient countermeasures.
-Nevertheless, and besides the manual setup that the system administrator needs to perform, an evaluation on the time the system reaction to detect attacks is missing.
+Their empirical results show that the costs of being compromised can be minimized by assessing the security of the system and applying the most cost-efficient countermeasures.
+Nevertheless, and besides the manual setup that the system administrator needs to perform, it is missing an evaluation on the time for the system to react to the detected attacks.
 
 
 The patch deployment process of ten popular client applications was analyzed over a five-year period by Nappa~\etal{}~\cite{Nappa:2015}.
 %In some cases, where a library is shared among different application it can take different time intervals as it may be dependent of the patching process of the application vendors.
-The authors have found that there was a strong correlation between the vulnerability disclosure and the beginning of the patching process among vendors.
+The authors have found that there was a strong correlation between the bug disclosure and the beginning of the patching process among vendors.
 It occurred within seven days for 77\% of the studied vulnerabilities.
-A \emph{survival analysis} (inspired in studies that measure the mortality rates associated with diseases) was performed to measure the probability that a vulnerable host remains vulnerable beyond a specific time.
+A \emph{survival analysis} (inspired in studies that measure the mortality rates associated with diseases) was performed to measure the probability that a host remains vulnerable beyond a specific time.
 %A vulnerability ``dies'' once a patch is installed.
-The experimental results showed that real-world WINE exploits still compromised 50\% of the vulnerable hosts (after vulnerabilities disclosure). 
+The experimental results showed that real-world WINE exploits still compromised 50\% of the hosts with weaknesses (after vulnerabilities disclosure). 
 The median percentage of hosts that have been patched before the exploit was released was at most 14\%.
 Together with the number of shared vulnerable code with different patching delays, these values motivate attackers to re-use already known exploits or to create patch-based exploits~\cite{Brumley:2008}.
 The authors also showed evidence to support the natural intuition that silent or automatic updates reduce the survivability of vulnerabilities. 
 %They also performed an analysis of three different user profiles, which showed that security analysts were more careful on patching software than software developers and regular users.
 
 
-Machine-learning techniques were employed by Bozorgi~\etal{}~\cite{Bozorgi:2010} to classify vulnerabilities and predict future exploits.
-Their results showed that their trained classifiers outperform current exploitability measures like \gls{cvss} exploitability subscore.
+Machine learning techniques were employed by Bozorgi~\etal{}~\cite{Bozorgi:2010} to classify vulnerabilities and predict future exploits.
+The results showed that their trained classifiers outperform current measures like \gls{cvss} exploitability subscore.
 They have built a dataset based on two public databases, the Mitre' \gls{cve} (which is a part of \gls{nvd}) and the \gls{osvdb}.
 The bag-of-words machine learning technique was utilized to extract the textual attributes that were more relevant to analyze.
 They also resorted to \gls{svm} to train the model and conduct offline and online experiments.
 In the offline setting, which they trained and evaluated data in a static fashion, they achieved an accuracy of 90\% of correct predictions.
-In the online setting, where they emulate a live execution with past data, the results showed that after a small period the model stabilizes showing a false negative rate of 9\% and a false positive rate
+In the online setting, where they emulated a live execution with past data, the results showed that after a small period the model stabilized showing a false negative rate of 9\% and a false positive rate
 of 5\%.
 Here, they were able to make predictions of up to two days before the exploit was released with an accuracy of 75-80\%.
-The main result, for the interest of this thesis, was the comparison between their model and the \gls{cvss} as an indicator of how much a vulnerability was likely to be exploited.
-The \gls{cvss} assigned high scores to vulnerabilities that did not become exploited. 
+The main result, of interest to this thesis, was the comparison between their model and \gls{cvss} as an indicator of how much a vulnerability was likely to be exploited.
+It was observed that the \gls{cvss} assigned high scores to weaknesses that were not exploited. 
 
 
-An in-depth analysis using \gls{nvd}, Exploit-DB, SYM, and EKITS conducted by Allodi and Massacci~\cite{Allodi:2014} \emph{breaks down} the \gls{cvss} on its several attributes.
+An in-depth analysis using \gls{nvd}, Exploit-DB, SYM, and EKITS \emph{breaks down} the \gls{cvss} metric on its several attributes~\cite{Allodi:2014}.
 From this analysis the authors concluded that the \gls{cvss} exploitability subscore \emph{resembled more a constant than a variable}, thus not having a real impact on the \gls{cvss} overall score.
 %It was used to assess the effectiveness of treatment over a randomized sample of subjects.
-In this study, they measured how \gls{cvss} influences the \emph{risk factor} of the study cases and assessed the effectiveness of treatment over a randomized sample of subjects.
-A result that is worthy of note was that fixing vulnerabilities based on their \gls{cvss} was statistically equivalent to picking a random vulnerability to fix from the security relevance standpoint.
-On the contrary, the authors suggest that it was more critical to fix vulnerabilities that appear in the black market of vulnerabilities (this was re-evaluated in a recent study by the same authors~\cite{Allodi:2017}).
-The results indicated that the inclusion of black market information as a \emph{risk factor} could increase the risk reduction by up to 80\%.
-However, the authors also pointed out that using the EKITS data source may be a threat to the validity of the study, as it is unstructured data and therefore it requires manual analysis.
+The study determined how \gls{cvss} influences the \emph{risk factor} of the use cases and assessed the effectiveness of treatment over a randomized sample of subjects.
+It was observed that from the security relevance standpoint correcting vulnerabilities based on their \gls{cvss} was statistically equivalent to picking a random vulnerability to fix.
+The authors suggest that it is more critical to eliminate bugs that appear in the black markets of vulnerabilities (this was re-evaluated in a recent study by the same authors~\cite{Allodi:2017}).
+In particular, it was indicated that the inclusion of black market information as a \emph{risk factor} could increase the risk reduction by up to 80\%.
+However, the authors also pointed out that using the EKITS data source may be a threat to the validity of the study, as it is unstructured and therefore it requires manual analysis.
 
 
 
 Using an alternative data source, Sabottke~\etal{}~\cite{Sabottke:2015} presented a study with Twitter data (e.g., specific words, the number of retweets, and information about the users posting these messages) to find information about exploits. 
-A quantitative and qualitative exploration was carried out over the vulnerability-related information disseminated on Twitter.
-A Twitter-based exploit detector was developed to provide an adequate response in a such short time frame. 
+A Twitter-based exploit detector was developed to provide an adequate response in a short time frame. 
 This allows the security community to foresee the exploit activity before the information reaches the \emph{de facto} disclosure data sources, like \gls{nvd} and ExploitDB.
-However, to complement and strengthen their information results, the paper also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories, and Symantec WINE. 
+However, to complement and strengthen the results, the paper also used sources like \gls{nvd}, \gls{osvdb}, Exploit-DB, Microsoft Security Advisories, and Symantec WINE. 
 Real-world exploits were distinguished from the proof-of-concept exploits, as the latter are by-products of the disclosure process. 
 The real-world exploits are typically not known until a critical zero-day attack occurs. 
 %The authors used \gls{svm} to classify exploits in the social media and tested their robustness to attacks, i.e., if a powerful attack could manipulate the information on Twitter with false accounts and false data. 
-The results showed that with their proposal there was a reasonable level of confidence about the predictions. 
-For example, the \gls{svm} classifier set to a precision of 25\% could detect the Heartbleed exploits within 10 minutes of their first appearance on Twitter. 
+The results showed that their proposal offered a reasonable level of confidence about the predictions. 
+For example, a \gls{svm} classifier set to a precision of 25\% could detect the Heartbleed exploits within 10 minutes of their first appearance on Twitter. 
 They also showed that organizations like \gls{nvd} overestimate the severity of some vulnerabilities (with \gls{cvss}) that never become in fact exploited.
 
 
 Gorbenko~\etal{}~\cite{Gorbenko:2017} resorted to the \gls{cve} and \gls{nvd} databases to study vulnerability life-cycles of different \glspl{os}.
-The authors made a particular effort to analyze the relationship between vulnerability discovery and fix, more precisely the time vendors took to patch the vulnerable software.
-Moreover, they also studied common vulnerabilities among different \glspl{os}.
-The results show that between 2012 and 2016 most of \glspl{os} were patched for every vulnerability that was disclosed in that period (the only exception was Ubuntu Server 12.04).
-Another interesting result was related to \emph{forever-day vulnerability} (i.e., vulnerabilities that are publicly disclosed but never patched). 
-They showed that, for the analyzed period, Ubuntu never had a single day free from vulnerabilities, and Windows and Red Hat had only 12 and 10, respectively.
+The authors made an effort to analyze the relationship between vulnerability discovery and fix, to estimate the time vendors take to patch the software.
+Moreover, they also studied common weaknesses among different \glspl{os}.
+The results show that between 2012 and 2016 most of \glspl{os} were patched for every vulnerability that was disclosed in that period.
+Another interesting result was related to \emph{forever-day vulnerability} (i.e., vulnerabilities that are publicly disclosed but not yet patched). 
+They showed that, for the analyzed period, Ubuntu never had a single day free from vulnerabilities, and Windows and Red Hat had only 12 and 10 days, respectively.
 However, the most important results were the implications of \gls{cvss} on the \emph{days-of-gray-risk} (i.e., the number of days it takes for a vendor to release a patch). 
-It was observed that there was no obvious implication on the level of \gls{cvss} severity and the time it took for a vendor to develop a patch.
+It was observed that there was no obvious relation between the level of \gls{cvss} severity and the time it took for a vendor to develop a patch.
 
 
-Other works, not focused on replicated systems dependability, worked on malware prediction. 
+Other works, studied malware prediction. 
 In particular, \textsc{RiskTeller}~\cite{Bilge:2017}, predicts the risk of a system becoming infected by some malware.
-In this work, the authors conducted a study that accounted for 600k machines belonging to 18 organizations.
+A total of 600k machines belonging to 18 organizations was used in the analysis.
 They collected the log data from all machines together with external data (e.g., from \gls{nvd}).
-They defined a dataset with 89 features, such as patching behavior, temporal patterns, application categories, and past threat history.
-\textsc{RiskTeller} was evaluated by using machine learning models to learn and classify the labeled software of each machine.
-The results show that it can make predictions on the risk of a system being attacked with an accuracy of 96\%. 
+A dataset with 89 features was defined, including patching behavior, temporal patterns, application categories, and past threat history.
+\textsc{RiskTeller} employed machine learning models to learn and classify the software of each machine.
+The results showed that it can make predictions on the risk of a system being attacked with an accuracy of 96\%. 
 
 
 \paragraph{Relationship with this thesis.} 
-We presented several works that carried out the risk management in a way to prevent exploits or to take action upon vulnerability detection. 
+We presented several works that carried out risk management in a way to prevent exploits or to take action upon vulnerability detection. 
 There is a lot of relevant information freely available to address the security and dependability of software. 
 In a replicated context this information is even more relevant. 
 First, to react upon vulnerability/exploit disclosures, and second to select what configurations are less vulnerable to common weaknesses. 
-We want to explore the free available data to improve the dependability and security of intrusion-tolerant systems by ensuring the assumption of failure independence with evidence supported by relevant and sound information.
+We want to explore the free available data to improve the dependability and security of intrusion-tolerant systems by ensuring the assumption of failure independence.
 %Additionally, some of the works proposed solutions to enhance the reliability and security of networks. 
 %In this thesis, we are concerned with the security and dependability of replicated systems. 
-More precisely, we are focused on assuring that no more than $f$ replicas become compromised within time \emph{T}.
+More precisely, our focus is on assuring that no more than $f$ replicas become compromised within time \emph{T}.
 
 
 \section{Management of Vulnerable Systems}
-In the previous sections, we presented a few approaches to support the recovery and diversity of replicas, several of which in \gls{bft} replicated systems.
+In the previous sections, we presented a few approaches that provide support for recovery and diversity of nodes, several of which for \gls{bft} replicated systems.
 In this section, we focus on some works that already combine, even if in a limited way, the idea of diversity and rejuvenations.
-We review a few works that introduce the idea of risk management (see~\cite{Yuan:2014} for a survey).
+We review a few mechanisms that explore the idea of risk management (see~\cite{Yuan:2014} for a survey).
 
 
-Reynolds~\etal{}~\cite{Reynolds:2002} presented the \textsc{Hacqit} fault-tolerant architecture.
-It was build to assure fault tolerance by resorting on backup replicas on separate LANs and allowing only authorized clients through a \gls{vpn}.
+Reynolds~\etal{}~\cite{Reynolds:2002} presented the \textsc{Hacqit} architecture.
+It was build to assure fault tolerance by resorting to backup replicas on separate LANs and allowing only authorized clients through a \gls{vpn}.
 Moreover, \textsc{Hacqit} employed redundancy and diversity to detect and mask errors in the system components.
-The same input is sent to identical nodes, and if the output is different, then some node is considered faulty. 
-Thus it is possible to vote outputs, and the result sent by the majority is considered correct.
-Moreover, it used a forensic agent that analyzed the logs of failed nodes to prevent bad requests in the future.
+The approach ensures that the same input is sent to the replicas for execution, and if their outputs are different, then a particular node is considered faulty. 
+%Thus it is possible to vote outputs, and the result sent by the majority is considered correct.
+It also used a forensic agent to analyze the logs of failed nodes to prevent bad requests in the future.
 Finally, it implemented a recovery mechanism that was triggered by the native security auditing of Windows NT/2000.
 Unfortunately, no experimental evaluation was presented.
-Nevertheless, \textsc{Hacqit} was one of the first systems to employ all these mechanisms together.
+%Nevertheless, \textsc{Hacqit} was one of the first systems to employ all these mechanisms together.
 
 
-Wang~\etal{}~\cite{Wang:2003} proposed an architecture, named \textsc{Sitar}, that aims to build intrusion-tolerant systems with diversity and dynamic reconfigurations.
+Wang~\etal{}~\cite{Wang:2003} described an architecture named \textsc{Sitar} that aims for supporting intrusion-tolerant systems with diversity and dynamic reconfigurations.
 \textsc{Sitar} defends a set of potentially vulnerable \gls{cots} servers. 
 The system was protected by an intrusion-tolerant multilayer architecture that used redundancy and security protocols to guarantee that all nodes agree on the decisions.
-It is composed of three main components: the proxy servers, the acceptor monitors, and the ballot monitors.
-The proxies receive the requests and audit them based on the current threat level, and then they propagate the messages to the \gls{cots} servers. 
-On the way back, the acceptance monitors validate the response and run an agreement protocol to select a final output from the \gls{cots} servers.
-There was also an adaptive reconfiguration module that monitors the other modules by receiving heartbeats and intrusion triggers to take action on removing compromised modules and starting new ones.
-Noteworthy that no results on diversity were shown.
+It was composed of three main components: the proxy servers, the acceptor monitors, and the ballot monitors.
+The proxies receive the requests and audit them based on the current threat level, before propagating the messages to the \gls{cots} servers. 
+On the way back, the acceptance monitors validate the responses and run an agreement protocol to select a final output from the \gls{cots} servers.
+There was also an adaptive reconfiguration module that monitors the other components by receiving heartbeats and intrusion triggers.
+It takes action by removing modules that are perceived as compromised and starting new ones.
+It is noteworthy that no results considering diversity were shown.
 
 
-The same type of solution was applied on cluster deployments.
-Arsenault~\etal{}~\cite{Arsenault:2007} presented \gls{scit}, a centralized architecture in which the goal was to recover the elements of a cluster without harming the availability of the overall service.
+The same kind of solution was also applied to cluster deployments.
+Arsenault~\etal{}~\cite{Arsenault:2007} presented the \gls{scit}, a centralized architecture in which the goal was to recover the elements of a cluster without harming the availability of the overall service.
 Recovering the cluster's nodes allows for resetting the state and avoiding huge windows of vulnerability.
 Nevertheless, the \gls{scit} service itself can be harmed. 
 Therefore, the authors leveraged on trusted hardware to offer additional guarantees to the system, namely predictable and continuous operation regardless of the presence of attacks.
@@ -676,43 +694,43 @@ It focused on the diversity of the components to avoid common pathogens that cou
 A new system model was adopted to map different attributes of a node. 
 These attributes represented characteristics that should be distinct on each node to avoid common failures.
 While modeling the system, some biases were introduced.
-For instance, the authors considered that two different services that used the same port were affected by the same vulnerability, or that the same service running with two different ports were not vulnerable.
+For instance, the authors considered that two different services that used the same port were affected by the same vulnerability, or that the same service running with two distinct ports was not vulnerable.
 A heuristic was proposed to build configurations in linear time.
-The goal was to distribute the \glspl{os} and applications in different configurations to minimize the number of common attributes that could be compromised.
-Two metrics were utilized to select \glspl{os} and applications: selecting both randomly and to choose them based on their popularity.
+The goal was to distribute the \glspl{os} and applications in various configurations to minimize the number of common attributes that could be compromised.
+Two metrics were utilized to choose \glspl{os} and applications: selecting randomly and based on their popularity.
 The results showed that their solution mitigated the number of pathogens that could compromise an entire configuration as its attributes were selected in order to maximize their difference.
 The heuristic guaranteed 99\% chances of data survival on an attack of single- and double-exploit pathogens, while needing only three and five copies respectively.
 
 
-More focused on reliability, Zhai~\etal{}~\cite{Zhai:2014} proposed a system that looks for failure independence on cloud nodes.
-The system collected and audited data from the nodes to evaluate their independence by identifying potential correlated failures.
+More focused on reliability, Zhai~\etal{}~\cite{Zhai:2014} presented a system that looks for failure independence on cloud nodes.
+The system collected audit data from the nodes to evaluate their independence by identifying potential correlated failures.
 Then, the different configuration dependencies were analyzed and ranked in risk groups as a way to see how the different dependencies made the system fail.
 The main limitation of this work was that it depended on the will of cloud providers to share private data to be analyzed by external agents.
-The authors evaluated the efficacy of their solution on finding the minimal risk groups (with fewer dependencies) on sampling data to make faster decisions while losing some accuracy.
-The work's main focus was the reliability of cloud systems, thus no evaluation was done on the vulnerabilities of such systems.
+The authors evaluated the efficacy of their solution to find the minimal risk groups (with fewer dependencies) on sampling data to make faster decisions while losing some accuracy.
+Since the main focus of the work was the reliability of cloud systems, no evaluation was done on the vulnerabilities of such systems.
 
 Seondong~\etal{}~\cite{Seondong:2017} described a system that used data from \gls{nvd} to select the best configuration of diverse \glspl{os} and web servers.
 The algorithm minimized the \gls{cvss} of shared vulnerabilities among the various software components.
 Although their experiments explored different configurations of software stacks, the decisions were based on the \gls{cvss}.
 All the experiments were done in a simulator (i.e., CSIM 20) which made it difficult to understand the performance of the solution in the real world.
 Moreover, the resilience of the system was evaluated against \gls{dos} attacks that affect particular vulnerabilities in the software.
-Depending on the type of the \gls{dos}, it can cause a performance decrease without exploiting any vulnerability.
+Depending on the type of the \gls{dos}, it can cause a performance degradation without exploiting any particular vulnerability.
 This, however, does not shed light on the ability of the system to prevent $f+1$ replicas from being compromised.
 In any case, this is the work that most resembles one of the main contributions of this thesis. 
 %However, it suffers some limitations that we will address in Chapter~\ref{chap:lazarus_design}.
 
 
-\subsubsection{Moving Target Defenses} 
-An emerging area, called \gls{mtd}, re-defines some of the already existing solutions with the goal of achieving a continuous change of the attack surfaces. 
+%\subsubsection*{Moving Target Defenses} 
+An emerging area, called \gls{mtd}, re-defines some of the already existing solutions with the goal of achieving a continuous change of the attack surface. 
 \gls{mtd} employs techniques like \gls{vm} migration, different types of diversity, etc.
 Some authors have made an effort to formalize this sub-area of intrusion tolerance~\cite{Zhuang:2014}.
 
 Okhravi~\etal{}~\cite{Okhravi:2014} presented \textsc{Talent}, a framework for live migration of critical infrastructures across heterogeneous platforms.
-The idea was to create a moving target that make advanced targeted attacks harder to succeed. 
+The idea was to create a moving target that would make advanced targeted attacks harder to succeed. 
 \textsc{Talent} implemented \gls{os}-level virtualization with containers, which allowed the system to migrate the \gls{os} between machines periodically or upon detection of malicious activity. 
 The virtualization was implemented with \texttt{OpenVZ} and \texttt{LXC} for Linux, \texttt{Virtuozzo} for Windows, and \texttt{Jail} for FreeBSD. 
 The network was also virtualized, more precisely, a second layer of virtualization was used to migrate the IP address from one container to another. 
-Even an established \texttt{ssh} session was preserved during the migration. 
+%Even an established \texttt{ssh} session was preserved dring the migration. 
 Additionally, the state of the application also had to be migrated by employing a checkpointing technique. 
 When all the programs were checkpointed, the state was saved and then was migrated by mirroring the file system. 
 %The file system synchronization took 98.7\% of the migration time. 
@@ -723,31 +741,31 @@ When all the programs were checkpointed, the state was saved and then was migrat
 However, there were almost no details on how the risk was measured and on how to adapt to the threats efficiently.
 
 
-Hong and Kim~\cite{Hong:2015} classified \gls{mtd} into three categories, shuffle, diversity and redundancy, and assessed the effectiveness of each one.
-The three categories were integrated in \textsc{Harm} and it was evaluated how each technique could improve the security of distributed systems.
-The solution was built on top of \glspl{vm}, as each one hosting a two to three \glspl{os} in it.
+Hong and Kim~\cite{Hong:2015} classified \gls{mtd} into three categories, shuffle, diversity and redundancy.
+The three categories were integrated in \textsc{Harm} and it was assessed how each technique could improve the security of distributed systems.
+The solution was built on top of \glspl{vm}, with each one hosting two or three \glspl{os} in it.
 The three techniques were evaluated separately, and only two \glspl{os} were considered in the diversity evaluation.
 The results show that deploying random diversity did not improve the risk level of the system. 
 In an ideal scenario each host would have at least one \gls{vm} with a diverse \gls{os}.
-On the other hand, having diverse \gls{os} across hosts decreased the connectivity, in case of some \gls{os} became compromised.
-However, these sort of results was not surprising as only two \glspl{os} were considered.
+On the other hand, having diverse \glspl{os} across hosts decreased the connectivity, in case of some \gls{os} became compromised.
+However, these results were not surprising as only two \glspl{os} were considered.
 On the contrary, with more \glspl{os} the system would maintain the level of connectivity while assuring the dependability of the hosts.
  
 
 \paragraph{Relationship with this thesis.}
 We presented a few control systems that manage diverse nodes that are potentially vulnerable and exploitable.
-Some of the works presented in other sections already combined a few of these mechanisms (e.g., Sousa~\etal{}~\cite{Sousa:2010} introduce reactive recovery upon detection of faulty behavior). 
+Some of the works described in other sections already combined a few of these mechanisms (e.g., Sousa~\etal{}~\cite{Sousa:2010} introduce reactive recovery upon detection of faulty behavior). 
 However, only a few have implemented or discussed the real implications of using diversity (with the exceptions like \textsc{Base}~\cite{Castro:2003} that implemented \gls{ots} diversity and assessed its performance overhead).
 Our thesis studies diversity in two domains: \emph{(i)} how it can improve the dependability of \gls{bft} systems and \emph{(ii)} what are the real overheads of implementing diversity on \gls{bft} systems.
 
 
 
 \section{Final Remarks}
-In this chapter, we described the most relevant works that are related to this thesis.
-We have made background revision of the intrusion tolerance area, and then we described the different topics that support intrusion-tolerant systems.
-Our main contributions are on \gls{bft} systems management, in particular, how to create diverse replicas that effectively are independent and when the replicas need to be recovered. 
+This chapter summarizes the most relevant works that are related to this thesis.
+We have made a background revision of the intrusion tolerance area, and then we described the different topics that support intrusion-tolerant systems.
+Our main contributions are to the management of \gls{bft} systems, in particular, on how to create diverse replicas that effectively are independent and on deciding when the replicas need to be recovered. 
 Although we could adopt solutions from artificial diversity, we are more interested in employing \gls{ots} diversity.
-The adoption of such diversity technique allow us to use data to make decisions on which diverse options work better together.
+The selection of such approach allow us to use data to make decisions on which diverse options work better together.
 
 
 

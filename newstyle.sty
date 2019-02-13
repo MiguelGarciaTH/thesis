@@ -269,7 +269,7 @@
 	includemp,						% 	- include side note space
 	bindingoffset=0.5cm,			% 	- binding correction
 	top=2.25cm,						% 	- total body: top margin
-	left=3.75cm,					% 	- total body: left margin (odd pages)
+	left=2.5cm,					% 	- total body: left margin (odd pages)
 	right=0.75cm,					% 	- total body: right margin (odd pages)
 	bottom=1.5cm,					% 	- total body: bottom margin
 	marginparwidth=1.75cm,			% 	- width for side note
@@ -286,7 +286,7 @@
 % **************************************************
 % Text Format
 % **************************************************
-\setstretch{1.2}					% value for line spacing, use \setstretch{} or \singlespacing or \onehalfspacing or \doublespacing
+\setstretch{1.25}					% value for line spacing, use \setstretch{} or \singlespacing or \onehalfspacing or \doublespacing
 \setlength{\parindent}{0em}			% value for paragraph indentation
 \clubpenalty = 10000				% prevent single lines at the beginning of a paragraph (Schusterjungen)
 \widowpenalty = 10000				% prevent single lines at the end of a paragraph (Hurenkinder)
@@ -473,8 +473,8 @@
 }
 
 % own font definitions
-\newcommand{\helv}{\fontfamily{phv}\fontsize{9}{11}\selectfont}
-\newcommand{\book}{\fontfamily{pbk}\fontseries{m}\fontsize{11}{13}\selectfont}
+\newcommand{\helv}{\fontfamily{phv}\fontsize{9}{12}\selectfont}
+\newcommand{\book}{\fontfamily{pbk}\fontseries{m}\fontsize{9}{12}\selectfont}
 \newcommand{\tgherosfont}{\fontfamily{qhv}\selectfont}
 
 
@@ -483,7 +483,8 @@
 \newcommand{\thesischapterfont}{\color{ctcolorblack}\huge \fontfamily{phv}\selectfont}
 %\newcommand{\thesissectionfont}{\color{ctcolormain}\LARGE\bfseries \tgherosfont}
 \newcommand{\thesissectionfont}{\color{ctcolorsection}\LARGE \tgherosfont}
-\newcommand{\thesissubsectionfont}{\color{ctcolorsubsection}\Large \tgherosfont}
+\newcommand{\thesissubsectionfont}{\color{ctcolorsection}\Large \tgherosfont}
+\newcommand{\thesissubsubsectionfont}{\color{ctcolorsection}\Large \tgherosfont}
 \newcommand{\thesisparagraphfont}{\color{ctcolorparagraph}\tgherosfont\small\bfseries}
 %
 % headings

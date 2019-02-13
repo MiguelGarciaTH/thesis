@@ -24,7 +24,7 @@ set bmargin 1.4
 set lmargin 7.2
 
 
-set ytics ("40K" 40000, "30K" 30000, "20K" 20000,  "15K" 15000, "10K" 10000, "5K" 5000, "0" 0 )
+set ytics ("40k" 40000, "30k" 30000, "20k" 20000,  "15k" 15000, "10k" 10000, "5k" 5000, "0" 0 )
 set xtics border in scale 0,0 nomirror autojustify
 set grid ytics y2tics
 set key inside l top vertical L reverse enhanced nobox maxrows 3 font ",20" samplen 2  width -4

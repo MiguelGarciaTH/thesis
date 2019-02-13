@@ -58,36 +58,6 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{apts}{}%
-{%
-\gls@defglossaryentry{apts}%
-{%
-name={APTs},%
-sort={APTs},%
-type={main},%
-first={Advanced Persistent Threats\glsspace (APTs)},%
-firstplural={Advanced Persistent Threatss\glsspace (APTss)},%
-text={APTs},%
-plural={APTss},%
-description={Advanced Persistent Threats},%
-descriptionplural={Advanced Persistent Threats\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={Advanced Persistent Threats},%
-longplural={Advanced Persistent Threatss},%
-short={APTs},%
-shortplural={APTss},%
-counter={page},%
-parent={},%
-%
-}%
-}%
 \ifglsentryexists{bft}{}%
 {%
 \gls@defglossaryentry{bft}%
@@ -395,12 +365,12 @@ parent={},%
 name={IP},%
 sort={IP},%
 type={main},%
-first={Internet Protocol \glsspace (IP)},%
-firstplural={Internet Protocol s\glsspace (IPs)},%
+first={Internet Protocol\glsspace (IP)},%
+firstplural={Internet Protocols\glsspace (IPs)},%
 text={IP},%
 plural={IPs},%
 description={Internet Protocol},%
-descriptionplural={Internet Protocol \acrpluralsuffix },%
+descriptionplural={Internet Protocol\acrpluralsuffix },%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -410,7 +380,7 @@ user4={},%
 user5={},%
 user6={},%
 long={Internet Protocol},%
-longplural={Internet Protocol s},%
+longplural={Internet Protocols},%
 short={IP},%
 shortplural={IPs},%
 counter={page},%
@@ -1138,36 +1108,6 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{ltu}{}%
-{%
-\gls@defglossaryentry{ltu}%
-{%
-name={LTU},%
-sort={LTU},%
-type={main},%
-first={Logical Trusted Unit\glsspace (LTU)},%
-firstplural={Logical Trusted Units\glsspace (LTUs)},%
-text={LTU},%
-plural={LTUs},%
-description={Logical Trusted Unit},%
-descriptionplural={Logical Trusted Unit\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={Logical Trusted Unit},%
-longplural={Logical Trusted Units},%
-short={LTU},%
-shortplural={LTUs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
 \ifglsentryexists{scada}{}%
 {%
 \gls@defglossaryentry{scada}%
@@ -1253,36 +1193,6 @@ long={Security Information and Event Management},%
 longplural={Security Information and Event Managements},%
 short={SIEM},%
 shortplural={SIEMs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{udp}{}%
-{%
-\gls@defglossaryentry{udp}%
-{%
-name={UDP},%
-sort={UDP},%
-type={main},%
-first={User Datagram Protocol\glsspace (UDP)},%
-firstplural={User Datagram Protocols\glsspace (UDPs)},%
-text={UDP},%
-plural={UDPs},%
-description={User Datagram Protocol},%
-descriptionplural={User Datagram Protocol\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={User Datagram Protocol},%
-longplural={User Datagram Protocols},%
-short={UDP},%
-shortplural={UDPs},%
 counter={page},%
 parent={},%
 %
@@ -1745,12 +1655,12 @@ parent={},%
 name={KVS},%
 sort={KVS},%
 type={main},%
-first={Key-Value Storage\glsspace (KVS)},%
-firstplural={Key-Value Storages\glsspace (KVSs)},%
+first={Key-Value Store\glsspace (KVS)},%
+firstplural={Key-Value Stores\glsspace (KVSs)},%
 text={KVS},%
 plural={KVSs},%
-description={Key-Value Storage},%
-descriptionplural={Key-Value Storage\acrpluralsuffix },%
+description={Key-Value Store},%
+descriptionplural={Key-Value Store\acrpluralsuffix },%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -1759,40 +1669,10 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={Key-Value Storage},%
-longplural={Key-Value Storages},%
+long={Key-Value Store},%
+longplural={Key-Value Stores},%
 short={KVS},%
 shortplural={KVSs},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{kmp}{}%
-{%
-\gls@defglossaryentry{kmp}%
-{%
-name={KMP},%
-sort={KMP},%
-type={main},%
-first={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratt\glsspace (KMP)},%
-firstplural={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratts\glsspace (KMPs)},%
-text={KMP},%
-plural={KMPs},%
-description={Knuth–Morris–Pratt},%
-descriptionplural={Knuth–Morris–Pratt\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratt},%
-longplural={Knuth\IeC {\textendash }Morris\IeC {\textendash }Pratts},%
-short={KMP},%
-shortplural={KMPs},%
 counter={page},%
 parent={},%
 %
@@ -1925,12 +1805,12 @@ parent={},%
 name={WINE},%
 sort={WINE},%
 type={main},%
-first={Worldlwide Intelligence Network Environmnet\glsspace (WINE)},%
-firstplural={Worldlwide Intelligence Network Environmnets\glsspace (WINEs)},%
+first={World Wide Intelligence Network Environment\glsspace (WINE)},%
+firstplural={World Wide Intelligence Network Environments\glsspace (WINEs)},%
 text={WINE},%
 plural={WINEs},%
-description={Worldlwide Intelligence Network Environmnet},%
-descriptionplural={Worldlwide Intelligence Network Environmnet\acrpluralsuffix },%
+description={World Wide Intelligence Network Environment},%
+descriptionplural={World Wide Intelligence Network Environment\acrpluralsuffix },%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -1939,8 +1819,8 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={Worldlwide Intelligence Network Environmnet},%
-longplural={Worldlwide Intelligence Network Environmnets},%
+long={World Wide Intelligence Network Environment},%
+longplural={World Wide Intelligence Network Environments},%
 short={WINE},%
 shortplural={WINEs},%
 counter={page},%

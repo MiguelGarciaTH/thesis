@@ -4,57 +4,56 @@ The top-level auxiliary file: phd_mgarcia.aux
 A level-1 auxiliary file: chapters/abstract/resumo_ing.aux
 A level-1 auxiliary file: chapters/abstract/resumo_pt.aux
 A level-1 auxiliary file: chapters/abstract/resumo_estendido_pt.aux
-A level-1 auxiliary file: chapters/acks/agradecimentos.aux
+A level-1 auxiliary file: acronimos.aux
 A level-1 auxiliary file: chapters/introduction/introduction.aux
 A level-1 auxiliary file: chapters/relatedwork/related_work.aux
 A level-1 auxiliary file: chapters/datasource/datasource.aux
+A level-1 auxiliary file: chapters/sieveq/sieveq.aux
 A level-1 auxiliary file: chapters/lazarus/lazarus_design.aux
 A level-1 auxiliary file: chapters/lazarus/lazarus_implementation.aux
-A level-1 auxiliary file: chapters/sieveq/sieveq.aux
 A level-1 auxiliary file: chapters/conclusion/conclusion.aux
-A level-1 auxiliary file: acronimos.aux
 The style file: abbrv.bst
 Database file #1: chapters/references/references.bib
 Warning--empty institution in Wilfredo:2000
-You've used 203 entries,
+You've used 205 entries,
             2118 wiz_defined-function locations,
-            1552 strings with 39909 characters,
-and the built_in function-call counts, 65399 in all, are:
-= -- 5677
-> -- 4078
+            1556 strings with 39552 characters,
+and the built_in function-call counts, 66161 in all, are:
+= -- 5741
+> -- 4125
 < -- 3
-+ -- 1619
-- -- 1412
-* -- 4543
-:= -- 11154
-add.period$ -- 652
-call.type$ -- 203
-change.case$ -- 1313
++ -- 1636
+- -- 1428
+* -- 4612
+:= -- 11283
+add.period$ -- 656
+call.type$ -- 205
+change.case$ -- 1325
 chr.to.int$ -- 0
-cite$ -- 204
-duplicate$ -- 2369
-empty$ -- 5287
-format.name$ -- 1412
-if$ -- 13393
+cite$ -- 206
+duplicate$ -- 2406
+empty$ -- 5348
+format.name$ -- 1428
+if$ -- 13546
 int.to.chr$ -- 0
-int.to.str$ -- 203
-missing$ -- 156
-newline$ -- 1061
-num.names$ -- 406
-pop$ -- 1970
+int.to.str$ -- 205
+missing$ -- 161
+newline$ -- 1069
+num.names$ -- 410
+pop$ -- 1981
 preamble$ -- 1
-purify$ -- 1112
+purify$ -- 1123
 quote$ -- 0
-skip$ -- 1360
+skip$ -- 1381
 stack$ -- 0
-substring$ -- 1882
-swap$ -- 319
+substring$ -- 1916
+swap$ -- 323
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 804
+type$ -- 810
 warning$ -- 1
-while$ -- 478
-width$ -- 206
-write$ -- 2118
+while$ -- 484
+width$ -- 208
+write$ -- 2137
 (There was 1 warning)

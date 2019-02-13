@@ -1,4 +1,3 @@
-@string{tiss    	= "ACM Transactions on Information and System Security"}
 @string{ATC		= "Proceedings of {USENIX} Annual Technical Conference"}
 @string{USS 		= "Proceedings of the {USENIX} Security Symposium"}
 @string{DSN 		= "Proceedings of the {IEEE/IFIP} International Conference on Dependable Systems and Networks"}
@@ -10,10 +9,8 @@
 @string{OSDI		= "Proceedings of the {USENIX} Symposium on Operating Systems Design and Implementation"}
 @string{NSDI		= "Proceedings of the {USENIX} Symposium on Networked Design and Implementation"}
 @string{EUROSYS 	= "Proceedings of the ACM European Conference on Computer Systems"}
-@string{ISFTC	 	= "Proceedings International Symposium on Fault Tolerant Computing"}    
-@string{AMCIS		= "Proceedings of the {ACM} Americas Conference on Information Systems"}
-@string{CSAC		= "Proceedings of the IEEE Computer Software and Applications Conference"}
-@string{AHICSS		= "Proceedings of the Annual Hawaii International Conference on Systems Sciences"}
+@string{NDSS		= "Proceedings of the Network and Distributed System Security Symposium"}
+
 %JOURNALS
 @string{TDSC    	= "IEEE Transactions on Dependable and Secure Computing"}  
 @string{TR 		= "IEEE Transactions on Reliability"}
@@ -28,7 +25,7 @@
 @string{spring  	= "Springer-Verlag"}
 @String{compsurv    = "ACM Computing Surveys"}
 
-@string{DATE 		= "Accessed: 2018-4-26"} 
+@string{DATE 		= "Accessed: 2019-2-11"} 
 
 @ARTICLE{Thorndike:1953,
 	author = {R. Thorndike},
@@ -39,6 +36,18 @@
 	volume= {18},
 	number={4},
 }
+
+@article{Reed:1960,
+	author = {Reed, I. and Solomon, G.},
+	number = {2},
+	pages = {300--304},
+	publisher = {SIAM},
+	title = {Polynomial {C}odes {O}ver {C}ertain {F}inite {F}ields},
+	volume = {8},
+	journal={Journal of the Society for Industrial and Applied Mathematics},
+	year = {1960}
+}
+
 
 @InProceedings{Randell:1975,
 	author =	 {Brian Randell},
@@ -69,7 +78,7 @@
 
 @article{Lamport:1979,
 	author = {Lamport, Leslie},
-	title = {Time, Clocks, and the Ordering of Events in a Distributed System},
+	title = {{Time, Clocks, and the Ordering of Events in a Distributed System}},
 	journal = {Communications of ACM},
 	volume = {21},
 	number = {7},
@@ -78,12 +87,24 @@
 	pages = {558--565},
 } 
 
+@article{Shamir:1979,
+	author = {Shamir, Adi},
+	title = {{How to Share a Secret}},
+	journal = {Communications of ACM},
+	volume = {22},
+	number = {11},
+	month = nov,
+	year = {1979},
+	pages = {612--613},
+} 
+
 
 @InProceedings{Chen:1978,
 	author =	 {L. Chen and Algirdas Avizienis},
 	title =	 {{N-version Programming: A Fault-Tolerance Approach to Reliability of Software Operation}},
 	booktitle =	 {Proceedings of the IEEE Symposium on Fault-Tolerant Computing},
 	year =	 1978,
+	month = jan,
 }
 
 @article{Pease:1980,
@@ -195,8 +216,8 @@
 }
 
 @inproceedings{Reiter:1994,
-	author = {Reiter, Michael K.},
-	title = {The Rampart Toolkit for Building High-Integrity Services},
+	author = {Reiter, Michael},
+	title = {{The Rampart Toolkit for Building High-Integrity Services}},
 	booktitle = {Proceedings of the International Workshop on Theory and Practice in Distributed Systems},
 	year = {1995},
 	month=sep,
@@ -243,7 +264,7 @@
 }
 
 @inproceedings{Kihlstrom:1998,
-	author = {Kihlstrom, Kim Potter and Moser, L. E. and Melliar-Smith, P. M.},
+	author = {K. Kihlstrom and L. Moser and P. Melliar-Smit},
 	title = {The SecureRing Protocols for Securing Group Communication},
 	booktitle = {Proceedings of the Annual Hawaii International Conference on System Sciences},
 	year = {1998},
@@ -278,6 +299,7 @@
 	author = {Wilfredo, Torres},
 	title = {{Software Fault Tolerance: A Tutorial}},
 	year = {2000},
+	month = oct,
 	howpublished = "{\url{http://www.ncstrl.org:8900/ncstrl/servlet/search?formname=detail\&id=oai%3ALTRS%3ANASA-2000-tm210616}}",
 	publisher = {{NASA Langley Technical Report Server}},
 } 
@@ -412,7 +434,7 @@
 @ARTICLE{Avizienis:2004, 
 	author={A. Avizienis and J. Laprie and B. Randell and C. Landwehr}, 
 	journal=TDSC, 
-	title={Basic concepts and taxonomy of dependable and secure computing}, 
+	title={{Basic Concepts and Taxonomy of Dependable and Secure Computing}}, 
 	year={2004}, 
 	volume={1}, 
 	number={1}, 
@@ -435,10 +457,18 @@
 	month=oct,
 }
 
+@inproceedings{Newsome:2005,
+	author = {Newsome, James and Song, Dawn},
+	title = {{Dynamic Taint Analysis for Automatic Detection, Analysis, and Signature Generation of Exploits on Commodity Software}},
+	booktitle = NDSS,
+	year = {2005},
+	month=feb,
+}
+
 
 @inproceedings{Abd-El-Malek:2005,
 	author = {Abd-El-Malek, Michael and Ganger, Gregory and Goodson, Garth and Reiter, Michael and Wylie, Jay},
-	title = {Fault-scalable {Byzantine} Fault-tolerant Services},
+	title = {{Fault-scalable {Byzantine} Fault-tolerant Services}},
 	booktitle = SOSP,
 	year = {2005},
 	month =oct,
@@ -460,19 +490,23 @@
 	month=apr,
 } 
 
-@INPROCEEDINGS{Newsome:2005,
-	author = {James Newsome and Dawn Song and James Newsome and Dawn Song},
-	title = {{Dynamic Taint Analysis: Automatic detection, Analysis, and Signature Generation of Exploit Attacks on Commodity Software}},
-	booktitle = {In Proceedings of the Network and Distributed Systems Security Symposium},
-	year = {2005}
-}
-
 @INPROCEEDINGS{Sousa:2005, 
-	author={P. Sousa and N. Neves and P. Verissimo}, 
+	author={P. Sousa and N. Neves and P. Ver{\'i}ssimo}, 
 	booktitle=DSN, 
 	title={{How Resilient are Distributed f Fault/Intrusion-tolerant Systems?}}, 
 	year={2005}, 
 	month=jun,
+}
+
+@article{Verissimo:2006,
+	author    = {Paulo Ver{\'{\i}}ssimo},
+	title     = {{Travelling Through Wormholes: A New Look at Distributed Systems Models}},
+	journal   = {{SIGACT} News},
+	volume    = {37},
+	number    = {1},
+	pages     = {66--81},
+	year      = {2006},
+	month		=mar,
 }
 
 @inproceedings{Cox:2006,
@@ -481,7 +515,6 @@
 	booktitle = USS,
 	year = {2006},
 } 
-
 
 @Inproceedings{Ganapathi:2006,
 	author = {A. Ganapathi and V. Ganapathi and D. Patterson},
@@ -548,7 +581,7 @@
 }
 
 @inproceedings{Sousa:2007,
-	author = {Sousa, Paulo and Neves, Nuno and Verissimo, Paulo},
+	author = {Sousa, Paulo and Neves, Nuno and Ver{\'i}ssimo, Paulo},
 	title = {{Hidden Problems of Asynchronous Proactive Recovery}},
 	booktitle = {Proceedings of the Workshop on Hot Topics in System Dependability},
 	year = {2007},	
@@ -564,6 +597,22 @@
 	number={4}, 
 	pages={280-294}, 
 	month={Oct},
+}
+
+@inproceedings{Cadar:2008,
+	author = {Cadar, Cristian and Dunbar, Daniel and Engler, Dawson},
+	title = {{KLEE: Unassisted and Automatic Generation of High-coverage Tests for Complex Systems Programs}},
+	booktitle =OSDI,
+	year = {2008},
+	month=dec,
+} 
+
+@INPROCEEDINGS{Godefroid:2008, 
+	author={P. Godefroid and M. Levin and D. Molnar}, 
+	booktitle=NDSS, 
+	title={{Automated Whitebox Fuzz Testing}}, 
+	year={2008}, 
+	month=feb,
 }
 
 @INPROCEEDINGS{Brumley:2008, 
@@ -727,7 +776,7 @@
 
 
 @ARTICLE{Sousa:2010, 
-	author={P. Sousa and A. Bessani and M. Correia and N. Neves and P. Verissimo}, 
+	author={P. Sousa and A. Bessani and M. Correia and N. Neves and P. Ver{\'i}ssimo}, 
 	journal=TPDS,
 	title={{Highly Available Intrusion-Tolerant Services with Proactive-Reactive Recovery}}, 
 	year={2010}, 
@@ -776,7 +825,7 @@
 } 
 
 @article{Moniz:2011,
-	author={Moniz, H. and Neves, N. and Correia, M. and Verissimo, P.}, 
+	author={Moniz, H. and Neves, N. and Correia, M. and Ver{\'i}ssimo, P.}, 
 	title = {{RITAS: Services for Randomized Intrusion Tolerance}},
 	journal =TDSC,
 	volume    = {8},
@@ -816,7 +865,7 @@
 @inproceedings{Distler:2011,
 	author = {T. Distler and R. Kapitza and I. Popov and H. Reiser and W. Schr\"{o}der-Preikschat},
 	title = {{SPARE: Replicas on Hold}},
-	booktitle = {Proceedings of the Network and Distributed System Security Symposium},
+	booktitle = NDSS,
 	year = {2011},
 	month=feb,	
 }
@@ -938,7 +987,7 @@
 } 
 
 @ARTICLE{Goues:2012, 
-	author={C. Le Goues and T. Nguyen and S. Forrest and W. Weimer}, 
+	author={C. Goues and T. Nguyen and S. Forrest and W. Weimer}, 
 	journal={IEEE Transactions on Software Engineering}, 
 	title={{GenProg: A Generic Method for Automatic Software Repair}}, 
 	year={2012}, 
@@ -957,6 +1006,14 @@
 	volume="14",
 	number="5",
 	pages="477--495",
+}
+
+@inproceedings{Haller:2013,
+	author = {Istvan Haller and Asia Slowinska and Matthias Neugschwandtner and Herbert Bos},
+	title = {Dowsing for Overflows: A Guided Fuzzer to Find Buffer Boundary Violations},
+	booktitle = USS,
+	year = {2013},
+	month=aug,
 }
 
 @INPROCEEDINGS{Dettoni:2013, 
@@ -1065,7 +1122,7 @@
 }
 
 @ARTICLE{Veronese:2013,
-	author={Veronese, G. and Correia, M. and Bessani, A. and Lau Lung and Verissimo, P.},
+	author={Veronese, G. and Correia, M. and Bessani, A. and Lau Lung and Ver{\'i}ssimo, P.},
 	journal={IEEE Transactions on Computers},
 	title={{Efficient {B}yzantine Fault-Tolerance}},
 	year={2013},
@@ -1076,7 +1133,7 @@
 }
 
 @inproceedings{Kreutz:2013,
-	 author = {Kreutz, D. and Ramos, F. and Verissimo, P.},
+	 author = {Kreutz, D. and Ramos, F. and Ver{\'i}ssimo, P.},
 	 title = {{Towards Secure and Dependable Software-defined Networks}},
 	 booktitle = {Proceedings of the ACM SIGCOMM Workshop on Hot Topics in Software Defined Networking},
 	 year = {2013},
@@ -1088,6 +1145,14 @@
 	title={{Profile-guided Automated Software Diversity}}, 
 	year={2013}, 
 	month=feb,
+}
+
+
+@book{Leskovec:2014,
+	title = {{Mining of massive datasets}},
+	author = {Leskovec, Jure and others},
+	year = {2014},
+	publisher = {Cambridge University Press}
 }
 
 @InProceedings{Nayak:2014,
@@ -1279,6 +1344,14 @@
 	month={Jan},
 }
 
+@inproceedings{Ming:2015,
+	author = {Jiang Ming and Dinghao Wu and Gaoyao Xiao and Jun Wang and Peng Liu},
+	title = {TaintPipe: Pipelined Symbolic Taint Analysis},
+	booktitle = USS,
+	year = {2015},
+	month=aug,
+}
+
 @inproceedings{Hosek:2015,
 	author = {Hosek, Petr and Cadar, Cristian},
 	title = {{VARAN the Unbelievable: An Efficient N-version Execution Framework}},
@@ -1398,7 +1471,7 @@
 @INPROCEEDINGS{Crane:2015,
 	author = {Stephen Crane and Andrei Homescu and Stefan Brunthaler and Per Larsen and Michael Franz},
 	title = {{Thwarting cache side-channel attacks through dynamic software diversity}},
-	booktitle = {In Network and Distributed System Security Symposium},
+	booktitle = NDSS,
 	year = {2015}
 }
 
@@ -1491,7 +1564,7 @@
 	title = {{Shuffler: Fast and Deployable Continuous Code Re-randomization}},
 	booktitle = OSDI,
 	year=2016,
-	mont=nov,
+	month=nov,
 } 
 
 @inproceedings{Co:2016,
@@ -1541,7 +1614,7 @@
 
 @INPROCEEDINGS{Stephens:2016, 
 	author={N. Stephens and J. Grosen and C. Salls and A. Dutcher and R. Wang and J. Corbetta and Y. Shoshitaishvili and C. Kruegel and G. Vigna}, 
-	booktitle={{Proceedings of the USENIX Network and Distributed System Security Symposium}}, 
+	booktitle=NDSS, 
 	title={{Driller: Augmenting Fuzzing Through Selective Symbolic Execution}}, 
 	year={2013}, 
 	month=feb,
@@ -1709,7 +1782,7 @@
 @misc{Symantec:2017,
 	author        = "Symantec",
 	title         = "{{Internet Security Threat Report}}",
-	howpublished	= "https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf",
+	howpublished	= "\url{https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf}",
 	year          = "2017"
 }
 
@@ -1721,6 +1794,14 @@
 	month="Dec",
 	issn="1958-9395",
 }
+
+@INPROCEEDINGS{Marques:2018,
+	author={P. Marques and Z. Dabbabi and M-M. Mironescu and O. Thonnard and A. Bessani and F. Buontempo and I. Gashi},
+	booktitle={IEEE Pacific Rim International Symposium on Dependable Computing},
+	title={{Detecting Malicious Web Scraping Activity: a Study with Diverse Detectors}},
+	year={2018},
+}
+
 
 @inproceedings{Breindenbach:2018,
 	author = {Lorenz Breindenbach and Phil Daian and Florian Tram{\`e}r and Ari Juels},
@@ -1738,7 +1819,7 @@
 }
 
 @inproceedings{Rahli:2018,
-	author = {Rahli, Vincent and Vukotic, Ivana and Volp, Marcus and Verissimo, Paulo},
+	author = {Rahli, Vincent and Vukotic, Ivana and Volp, Marcus and Ver{\'i}ssimo, Paulo},
 	title = {{Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}},
 	booktitle = {Proceedings of the European Symposium on Programming},
 	year = {2018},
@@ -1792,9 +1873,8 @@
 	author = {D. Harkins and D. Carrel},
 	title = {The {Internet Key Exchange}},
 	year = {1998},
-	url = {http://tools.ietf.org/rfc/rfc2409.txt},
 	month=nov,
-   	HOWPUBLISHED = {Requests for Comments (RFC)},
+   	HOWPUBLISHED = "{\url{http://tools.ietf.org/rfc/rfc2409.txt}}",
 }
 
 @misc{nvd,
@@ -1847,7 +1927,7 @@
 }
 
 @misc{edb,
-	author={Exploit Database},
+	author={\relax{Exploit Database}},
 	title =	{{Offensive Security’s Exploit Database Archive}},
 	howpublished = "{\url{https://www.exploit-db.com/}}",
 	note=DATE
@@ -1876,7 +1956,7 @@
 
 @misc{solaris,
 	author = {Oracle},
-	title = {Map of CVE to Advisory/Alert},
+	title = {{Map of CVE to Advisory/Alert}},
 	howpublished = {\url{https://www.oracle.com/technetwork/topics/security/public-vuln-to-advisory-mapping-093627.html}},
 	note = DATE
 }
@@ -1890,7 +1970,7 @@
 
 @misc{freebsd,
 	author = {FreeBSD},
-	title = {FreeBSD Advisories},
+	title = {{FreeBSD Advisories}},
 	howpublished = {\url{https://www.freebsd.org/security/advisories.html}},
 	note = DATE
 }
@@ -2035,29 +2115,29 @@
 
 @misc{wannacry,
 	title="{WannaCry Ransomware Spreads Across the Globe, Makes Organizations Wanna Cry About Microsoft Vulnerability}",
-	author="{Limor Kessem}",
+	author="{L. Kessem}",
 	organization         = {Security Intelligence},
 	howpublished={\url{https://securityintelligence.com/wannacry-ransomware-spreads-across-the-globe-makes-organizations-wanna-cry-about-microsoft-vulnerability/}},
 	note = {2017-5-14},
 }
 
 @misc{stacklash,
-	title="{Stack Clash Linux vulnerability: you need to patch now}",
-	author="{Bill Brenner}",
+	title="{{Stack Clash Linux Vulnerability: You Need to Patch Now}}",
+	author="{B. Brenner}",
 	howpublished={\url{https://nakedsecurity.sophos.com/2017/06/20/stack-clash-linux-vulnerability-you-need-to-patch-now/}},
 	note = {2017-6-20},
 }
 
 @misc{petya,
-	title="{Petya ransomware attack: What it is, and why this is happening again}",
-	author="{Danny Palmer}",
-	howpublished={\url{https://www.zdnet.com/article/petya-ransomware-attack-what-it-is-and-why-this-is-happening-again/}},
-	note = {2017-6-28},
+	title="{Petya ransomware outbreak: Here's what you need to know}",
+	author="{Symantec Security Response}",
+	howpublished={\url{https://www.symantec.com/blogs/threat-intelligence/petya-ransomware-wiper}},
+	note = {2017-10-24},
 }
 
 @misc{bitcoin,
 	title="{A Major Bug In Bitcoin Software Could Have Crashed the Currency}",
-	author="{Jordan Pearson}",
+	author="{J. Pearson}",
 	howpublished={\url{https://motherboard.vice.com/amp/en_us/article/qvakp3/a-major-bug-in-bitcoin-software-could-have-crashed-the-currency?}},
 	note = {2018-9-19},
 }
@@ -2107,16 +2187,16 @@
 }
 
 @misc{linux_kernel,
-	title="{Lines of code of the Linux Kernel Versions}",
-	author="{Linux Counter}",
-	howpublished={\url{https://www.linuxcounter.net/statistics/kernel}},
+	title="{The Linux Kernel Gained 2.5 Million Lines Of Code, 71k Commits In 2017}",
+	author="{M. Larabel}",
+	howpublished={\url{https://www.phoronix.com/scan.php?page=news_item&px=Linux-Kernel-Commits-2017}},
 	note = DATE,
 }
 
 @misc{darpa,
 	title="{The Cyber Grand Challenge}",
 	author="{Defense Advanced Research Projects Agency}",
-	howpublished={\url{http://archive.darpa.mil/cybergrandchallenge/}},
+	howpublished={\url{https://www.darpa.mil/program/cyber-grand-challenge}},
 	note = DATE,
 }
 
@@ -2129,9 +2209,29 @@
 
 @misc{dns_root,
 	title="{DNS root server FAQ}",
-	author="{Netnod's Lars-Johan Liman}",
+	author="{L. Liman}",
 	howpublished={\url{https://www.netnod.se/dns/dns-root-server-faq}},
 	note = DATE,
 }
 
+@misc{amazonblockchain,
+	title="{Amazon Managed Blockchain}",
+	author="{Amazon}",
+	howpublished={\url{https://aws.amazon.com/managed-blockchain/}},
+	note = DATE,
+}
+
+@misc{ibmblockchain,
+	title="{IBM Blockchain}",
+	author="{IBM}",
+	howpublished={\url{https://www.ibm.com/blockchain/platform}},
+	note = DATE,
+}
+
+@misc{razor,
+	title="{How Razor Works}",
+	author="{Puppet}",
+	howpublished={\url{https://puppet.com/docs/pe/2019.0/how_razor_works.html}},
+	note = DATE,
+}
 

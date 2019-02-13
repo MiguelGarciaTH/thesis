@@ -37,7 +37,7 @@ set key inside l top vertical Left reverse noenhanced autotitles columnhead nobo
 set multiplot
 plot	"scatter100.dat" using 1:2 title '100bytes'  with linespoints ls 1, \
 	"scatter500.dat" using 1:2 title '500bytes'  with linespoints ls 3, \
-	"scatter1000.dat" using 1:2 title '1Kbytes'  with linespoints ls 5,
+	"scatter1000.dat" using 1:2 title '1kbytes'  with linespoints ls 5,
 
 # === small plot ===
 set origin 0.5,0.35

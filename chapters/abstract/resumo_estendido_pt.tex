@@ -1,20 +1,103 @@
 %\pagestyle{empty}
-
+%1200 1500 palavras
 % ----------------------------------------------------------------------
 % Página do resumo em Português:
 \selectlanguage{portuguese}
-\chapter*{Resumo Estendido}
+\inputencoding{latin1}
+\chapter*{Resumo Alargado}
 \label{chapter:abstract_pt}
 \vspace*{-10mm}
 
+A Tolerância a Faltas Bizantinas (BFT) é uma área de investigação bem estabelecida ao longo de vários anos. 
+BFT tem como principal objectivo garantir a segurança de sistemas replicados mesmo na presença de faltas nos nós que os compõem. 
+Resumidamente, os protocolos BFT garantem que as réplicas do sistema processam os pedidos dos clientes de maneira semelhante, comportando-se como uma máquina de estados replicada.
+Tipicamente, nestes sistemas a segurança é assegurada mesmo que um subconjunto das réplicas (normalmente, $f$ em $n$ réplicas) seja incorrecta.
+Ainda que não seja explícito, esta assumpção é verdadeira apenas se as réplicas falharem de forma independente.
+Caso contrário, comprometer $f$ réplicas é virtualmente o mesmo que comprometer $f+1$ réplicas.
+
+
+A primeira publicação de BFT é de 1980~\cite{Pease:1980} e foram sendo publicados mais trabalhos uns anos mais tarde~\cite{Reiter:1994,Kihlstrom:1998}.
+No entanto, só em 1999 é que BFT despertou a curiosidade da comunidade cientifica com o trabalho de Castro e Liskov~\cite{Castro:1999}.
+Nos últimos vinte anos de investigação, foram feitos vários avanços no desempenho (ex.,~\cite{Kotla:2010,Aublin:2015,Behl:2015}), uso dos recursos (ex.,~\cite{Yin:2003,Wood:2011,Veronese:2013,Liu:2016,Behl:2017}), e robustez (ex.,~\cite{Amir:2011,Bessani:2014,Clement:2009b}) destes sistemas.
+No entanto, BFT no geral e estes trabalhos em particular assumem, explicitamente ou implicitamente, que as réplicas falham de forma independente.
+Está implícito que é mais difícil comprometer todo o sistema (i.e., $f+1$ réplicas) se as réplicas não partilharem vulnerabilidades.
+Alguns trabalhos apresentam mecanismos ortogonais (ex.,~\cite{Roeder:2010,Avizienis:1995}) para gerar diversidade e impedir vulnerabilidades comuns.
+Além destes, apenas alguns trabalhos implementam mecanismos de diversidade ainda que de forma muito limitada (ex.,~\cite{Castro:2003,Roeder:2010,Amir:2011}).
+
+Actualmente ainda não existe uma forma sistematizada para construir sistemas BFT confiáveis usando diversidade.
+Ademais, considerar um conjunto inicial de $n$ réplicas diferentes, não é suficiente para sistemas que precisem de executar serviços durante muito tempo.
+Algures no tempo o sistema terá $f$ réplicas comprometidas e precisará de as limpar e recuperar dos efeitos de possíveis falhas ou intrusões.
+Já existem vários trabalhos que implementam soluções de recuperação proactiva em sistemas BFT (ex.,~\cite{Castro:2002,Sousa:2010,Roeder:2010,Platania:2014,Distler:2011}).
+Estes reiniciam periodicamente as réplicas de forma a limpar o estado comprometido ou impedir ataques silenciosos em curso.
+No entanto, estes trabalhos (i) assumem que as réplicas falham de forma independente, (ii) não apresentam critérios para as escolhas de diversidade, ou (iii) apresentam soluções mais limitadas, por exemplo ofuscação de memória~\cite{Snow:2013,Bittau:2014}.
+Por estas razões e sem algum cuidado na escolha da diversidade das réplicas, estas podem manter as mesmas vulnerabilidades após as recuperações.
+
+Finalmente, ao contrário das soluções BFT que já apresentam bastante maturidade, poucos investigaram como aplicar diversidade de forma confiável e quando é que as réplicas devem ser recuperadas.
+Esta tese tem como principal objectivo dar uma resposta teórica e prática para este problema. 
+
+
+Primeiramente, estendemos os resultados encorajadores do trabalho de mestrado do autor desta tese sobre diversidade de Sistemas Operativos (SO)~\cite{Garcia:2012}. 
+Esse trabalho foi um dos primeiros passos para construir sistemas BFT confiáveis avaliando se existia realmente razão para assumir (explícita ou implicitamente) as vantagens da diversidade (ex.,~\cite{Abd-El-Malek:2005,Bessani:2008,Castro:2002,Castro:2003,Clement:2009,Correia:2004,Kapitza:2012,Kotla:2010,Moniz:2011,Yin:2003}).
+Em particular, neste trabalho aumentámos o número de anos da análise, desenvolvemos três estratégias manuais para seleccionar SOs diversos de forma a minimizar a ocorrência de vulnerabilidades comuns.
+Além disso, observámos que mesmo utilizando versões diferentes do mesmo SO é possível construir configurações com poucas ou nenhumas vulnerabilidades partilhadas. 
+
+
+Nem todos os sistemas necessitam de técnicas avançadas como a tolerância a intrusões.
+Técnicas que permitam a adopção de diversidade nas réplicas são especialmente relevantes em sistemas críticos.
+Estes, devido à sua natureza, justificam um custo adicional para garantir a sua confiabilidade e segurança.
+Um bom exemplo deste tipo de aplicações são as anteparas (do inglês \emph{firewalls}).
+Estas são usadas tipicamente como a primeira barreira de protecção contra ataques externos. 
+As anteparas são responsáveis por gerir o tráfego que entra e sai de uma rede de acordo com determinadas regras ou comportamentos.
+As soluções mais genéricas sofrem de algumas limitações:
+como qualquer outro programa também contêm vulnerabilidades, normalmente são pontos únicos de falhas, levando a protecção seja comprometida caso uma vulnerabilidade seja explorada.
+É por isso importante garantir o funcionamento correcto deste tipo de sistemas.
+
+
+Propomos, para resolver as limitações existentes, uma antepara aplicacional BFT chamada \sieveq.
+Esta integra o conceito de antepara com o de fila de mensagens.
+A solução apresenta uma arquitectura com vários níveis de filtragem, como uma peneira (do inglês \emph{sieve}).
+Estes níveis permitem descartar mensagens que de outra forma seriam encaminhadas para todas as réplicas da antepara.
+Validámos este sistema em vários cenários de faltas, por exemplo com ataques de negação de serviço.
+Os resultados mostram uma melhoria no desempenho em comparação com sistemas semelhantes.
+Além disso, utilizámos uma amostra do tráfego dos Jogos Olímpicos de Verão de 2012 e verificámos que a nossa antepara tem capacidade para processar uma quantidade de dados realista.
+
+
+Apesar dos primeiros resultados sobre diversidade serem encorajadores, encontrámos algumas limitações que podem comprometer a adopção desta técnica para garantir independência das faltas. 
+Estas limitações afectam todos os trabalhos (ex.,~\cite{Han:2009,Frei:2010,Shahzad:2012,Bozorgi:2010,Allodi:2014,Gorbenko:2017}) que utilizam o \emph{National Vulnerability Database} (NVD).
+É possível encontrar vulnerabilidades no NVD que não foram reportadas para todos os SOs que na prática são afectados.
+Encontrámos esta informação disponível noutras fontes, por exemplo, nos sites dos próprios produtores de programas.
+Além disso, o NVD carece de alguns dados relevantes sobre ataques e correcções (do inglês \emph{patch}) que são relevantes quando consideramos o ciclo de vida das vulnerabilidades.
+Identificámos outro problema nas soluções existentes, relacionado com uso de condições temporais para activar as recuperações das réplicas.
+Está implícito que as réplicas necessitam do mesmo esforço até serem comprometidas. 
+Isto é particularmente relevante quando falamos de sistemas com diversidade~\cite{Nayak:2014}, pois não é realista assumir que réplicas diferentes tenham as mesmas vulnerabilidades.
+É necessário construir soluções que adaptem o sistema de acordo com a avaliação do risco deste ser comprometido, ou seja de $f+1$ réplicas terem a mesma vulnerabilidade e terem a sua segurança quebrada com um só ataque.
+
+Desenvolvemos uma solução que mostra as vantagens de utilizar e gerir a diversidade de forma confiável.
+Esta solução elimina as limitações do NVD utilizando outras fontes de dados para enriquecer a nossa base de conhecimento sobre possíveis vulnerabilidades, ataques e correcções;
+Além disso, utilizamos técnicas de agrupamento de dados (do inglês \emph{clustering}) que permitem agrupar informação não estruturada em grupos organizados por semelhança.
+A nossa solução recolhe informação online para monitorizar o risco do sistema contínua e automaticamente.
+Quando o risco aumenta, o sistema substitui as réplicas potencialmente vulneráveis por uma réplica que maximize a diversidade do conjunto.
+Esta solução foi implementada num protótipo, chamado \system, que é o primeiro sistema a modificar a superfície de ataque de sistemas BFT de forma confiável.
+O protótipo concretiza a gestão das réplicas com recurso à virtualização de máquinas e técnicas de aprovisionamento.
+Actualmente o \system suporta a gestão de 17 versões de SOs.
+
+
+Validámos esta solução em dois conjuntos de experiências.
+A primeira demonstra que a gestão de risco do \system consegue reduzir significativamente o número de vulnerabilidades partilhadas num sistema replicado.
+A segunda avalia o impacto que a virtualização e a diversidade podem ter no desempenho.
+Em particular, estudámos o comportamento do \system com três aplicações diferentes: 
+(1) uma solução de armazenamento chave-valor (KVS); (2) uma antepara de nível aplicacional (\sieveq); e (3) um sistema de ordenação de mensagens para uma plataforma de \emph{blockchain}.
+Os resultados mostram que alguns conjuntos de SOs conseguem ter um desempenho aproximado a uma solução sem diversidade e em máquinas físicas.
+No entanto, algumas decisões de implementação ainda permitem algum espaço para melhorar, uma vez que tiveram um custo considerável no desempenho do sistema.
 
 \vfill
-
 \begin{flushleft}
 \textbf{Palavras-chave:}
-Diversidade, Vulnerabilidades, Sistemas Operativos, Toler\^{a}ncia a Intrus\~{o}es, Recuper\c{c}\~{a}o Proactiva.
+Diversidade, Vulnerabilidades, Sistemas Operativos, Toler\^{a}ncia a Intrus\~{o}es, Rejuvenescimento.
 \end{flushleft}
+\inputencoding{utf8}
+\selectlanguage{english}
 
-\LIMPA
+%\LIMPA
 % Fim da página do resumo em Português
 % ----------------------------------------------------------------------

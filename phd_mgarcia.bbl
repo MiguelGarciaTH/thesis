@@ -2,7 +2,7 @@
 
 \bibitem{Abd-El-Malek:2005}
 M.~Abd-El-Malek, G.~Ganger, G.~Goodson, M.~Reiter, and J.~Wylie.
-\newblock Fault-scalable {Byzantine} fault-tolerant services.
+\newblock {Fault-scalable {Byzantine} Fault-tolerant Services}.
 \newblock In {\em Proceedings of the {ACM} Symposium on Operating Systems
   Principles}, Oct. 2005.
 
@@ -26,6 +26,12 @@ L.~Allodi and F.~Massacci.
   Studies}.
 \newblock {\em ACM Transactions on Information and System Security},
   17(1):1--20, Aug. 2014.
+
+\bibitem{amazonblockchain}
+{Amazon}.
+\newblock {Amazon Managed Blockchain}.
+\newblock \url{https://aws.amazon.com/managed-blockchain/}.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Amir:2011}
 Y.~Amir, B.~Coan, J.~Kirsch, and J.~Lane.
@@ -75,9 +81,16 @@ A.~Avizienis and L.~Chen.
 
 \bibitem{Avizienis:2004}
 A.~Avizienis, J.~Laprie, B.~Randell, and C.~Landwehr.
-\newblock Basic concepts and taxonomy of dependable and secure computing.
+\newblock {Basic Concepts and Taxonomy of Dependable and Secure Computing}.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing},
   1(1):11--33, Jan. 2004.
+
+\bibitem{stacklash}
+{B. Brenner}.
+\newblock {{Stack Clash Linux Vulnerability: You Need to Patch Now}}.
+\newblock
+  \url{https://nakedsecurity.sophos.com/2017/06/20/stack-clash-linux-vulnerability-you-need-to-patch-now/}.
+\newblock 2017-6-20.
 
 \bibitem{Bairavasundaram:2009}
 L.~Bairavasundaram, S.~Sundararaman, A.~Arpaci-Dusseau, and R.~Arpaci-Dusseau.
@@ -147,13 +160,6 @@ L.~Bilge, Y.~Han, and M.~Dell'Amico.
 \newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
   Communications Security}}, Oct. 2017.
 
-\bibitem{stacklash}
-{Bill Brenner}.
-\newblock {Stack Clash Linux vulnerability: you need to patch now}.
-\newblock
-  \url{https://nakedsecurity.sophos.com/2017/06/20/stack-clash-linux-vulnerability-you-need-to-patch-now/}.
-\newblock 2017-6-20.
-
 \bibitem{Bittau:2014}
 A.~Bittau, A.~Belay, A.~Mashtizadeh, D.~Mazi\`{e}res, and D.~Boneh.
 \newblock {Hacking Blind}.
@@ -173,6 +179,13 @@ D.~Brumley, P.~Poosankam, D.~Song, and J.~Zheng.
   Implications}.
 \newblock In {\em Proceedings of the {IEEE} Symposium on Security and Privacy},
   May 2008.
+
+\bibitem{Cadar:2008}
+C.~Cadar, D.~Dunbar, and D.~Engler.
+\newblock {KLEE: Unassisted and Automatic Generation of High-coverage Tests for
+  Complex Systems Programs}.
+\newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
+  Design and Implementation}, Dec. 2008.
 
 \bibitem{Calder:2011}
 B.~Calder, J.~Wang, A.~Ogus, N.~Nilakantan, A.~Skjolsvold, S.~Mckelvie, Y.~Xu,
@@ -219,7 +232,7 @@ L.~Chen and A.~Avizienis.
 \newblock {N-version Programming: A Fault-Tolerance Approach to Reliability of
   Software Operation}.
 \newblock In {\em Proceedings of the IEEE Symposium on Fault-Tolerant
-  Computing}, 1978.
+  Computing}, Jan. 1978.
 
 \bibitem{cisco2}
 Cisco.
@@ -273,71 +286,37 @@ M.~Correia, N.~Neves, and P.~Ver\'{\i}ssimo.
 CVSS.
 \newblock {Common Vulnerability Scoring System}.
 \newblock \url{https://www.first.org/cvss/}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{cvssv2}
-CVSSv2.
-\newblock {Common Vulnerability Scoring System}.
-\newblock \url{https://www.first.org/cvss/v2/guide}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{cvssv3}
 CVSSv3.
 \newblock {Common Vulnerability Scoring System}.
 \newblock \url{https://www.first.org/cvss/specification-document}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{petya}
-{Danny Palmer}.
-\newblock {Petya ransomware attack: What it is, and why this is happening
-  again}.
-\newblock
-  \url{https://www.zdnet.com/article/petya-ransomware-attack-what-it-is-and-why-this-is-happening-again/}.
-\newblock 2017-6-28.
-
-\bibitem{edb}
-E.~Database.
-\newblock {Offensive Security’s Exploit Database Archive}.
-\newblock {\url{https://www.exploit-db.com/}}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{debian}
 Debian.
 \newblock {Debian Security Tracker}.
 \newblock \url{https://security-tracker.debian.org/tracker/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{darpa}
 {Defense Advanced Research Projects Agency}.
 \newblock {The Cyber Grand Challenge}.
-\newblock \url{http://archive.darpa.mil/cybergrandchallenge/}.
-\newblock Accessed: 2018-4-26.
+\newblock \url{https://www.darpa.mil/program/cyber-grand-challenge}.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{sonicwall}
 {Dell}.
 \newblock {Sonicwall}.
 \newblock \url{http://www.sonicwall.com/us/en/products/network-security.html}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{idrac}
-{Dell}.
-\newblock {The Integrated Dell Remote Access Controller}.
-\newblock
-  \url{https://www.dell.com/support/contents/us/en/04/article/product-support/self-support-knowledgebase/enterprise-resource-center/systemsmanagement/idrac}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Deswarte:1998}
 Y.~Deswarte, K.~Kanoun, and J.~Laprie.
 \newblock {Diversity Against Accidental and Deliberate Faults}.
 \newblock In {\em Proceedings of the Conference on Computer Security,
   Dependability, and Assurance: From Needs to Solutions}, July 1998.
-
-\bibitem{Dettoni:2013}
-F.~Dettoni, L.~Lung, M.~Correia, and A.~Luiz.
-\newblock {Byzantine Fault-tolerant Sate Mmachine Replication with Twin Virtual
-  Machines}.
-\newblock In {\em Proceedings of the IEEE Symposium on Computers and
-  Communications}, Mar. 2013.
 
 \bibitem{Distler:2011}
 T.~Distler, R.~Kapitza, I.~Popov, H.~Reiser, and W.~Schr\"{o}der-Preikschat.
@@ -361,19 +340,19 @@ A.~Doudou, B.~Garbinato, R.~Guerraoui, and A.~Schiper.
 Eclipse.
 \newblock {{NeoSCADA}}.
 \newblock \url{https://www.eclipse.org/eclipsescada/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Ethernodes}
 Ethernodes.org.
 \newblock {The Ethereum Nodes Explorer}.
 \newblock \url{https://www.ethernodes.org}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Ethstats}
 Ethstats.
 \newblock {Ethereum Stats}.
 \newblock \url{https://ethstats.net/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{facebook_whitehat}
 {Facebook}.
@@ -402,9 +381,9 @@ J.~Fraga and D.~Powell.
 
 \bibitem{freebsd}
 FreeBSD.
-\newblock Freebsd advisories.
+\newblock {FreeBSD Advisories}.
 \newblock \url{https://www.freebsd.org/security/advisories.html}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{rhimes}
 B.~Freeman.
@@ -437,23 +416,6 @@ M.~Garcia, A.~Bessani, I.~Gashi, N.~Neves, and R.~Obelheiro.
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, June 2011.
 
-\bibitem{Garcia:2014}
-M.~Garcia, A.~Bessani, I.~Gashi, N.~Neves, and R.~Obelheiro.
-\newblock {Analysis of Operating System Diversity for Intrusion Tolerance}.
-\newblock {\em Software: Practice and Experience}, 44(6):735--770, June 2014.
-
-\bibitem{Garcia:2016b}
-M.~Garcia, A.~Bessani, and N.~Neves.
-\newblock {Towards an Execution Environment for Intrusion-Tolerant Systems}.
-\newblock In {\em Poster session in Proceedings of the ACM European Conference
-  on Computer Systems}, June 2016.
-
-\bibitem{Garcia:2012b}
-M.~Garcia, N.~Neves, and A.~Bessani.
-\newblock {DIVERSYS: DIVErse Rejuvenation SYStem}.
-\newblock In {\em {Simp\'{o}sio Nacional de Inform\'{a}tica} (INFORUM)}, Sept.
-  2012.
-
 \bibitem{Garcia:2013}
 M.~Garcia, N.~Neves, and A.~Bessani.
 \newblock {An Intrusion-Tolerant Firewall Design for Protecting SIEM Systems}.
@@ -480,18 +442,24 @@ C.~Giuffrida, L.~Cavallaro, and A.~Tanenbaum.
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, June 2013.
 
+\bibitem{Godefroid:2008}
+P.~Godefroid, M.~Levin, and D.~Molnar.
+\newblock {Automated Whitebox Fuzz Testing}.
+\newblock In {\em Proceedings of the Network and Distributed System Security
+  Symposium}, Feb. 2008.
+
 \bibitem{google_reward}
 {Google}.
 \newblock {Google Vulnerability Reward Program Rules}.
 \newblock
   \url{https://www.google.com/about/appsecurity/reward-program/index.html}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{guava}
 Google.
 \newblock Guava.
 \newblock {\url{https://code.google.com/p/guava-libraries/}}, Accessed:
-  2018-4-26.
+  2019-2-11.
 
 \bibitem{Gorbenko:2017}
 A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
@@ -501,10 +469,16 @@ A.~Gorbenko, A.~Romanovsky, O.~Tarasyuk, and O.~Biloborodov.
   Reliability Engineering}, Oct. 2017.
 
 \bibitem{Goues:2012}
-C.~L. Goues, T.~Nguyen, S.~Forrest, and W.~Weimer.
+C.~Goues, T.~Nguyen, S.~Forrest, and W.~Weimer.
 \newblock {GenProg: A Generic Method for Automatic Software Repair}.
 \newblock {\em IEEE Transactions on Software Engineering}, 38(1):54--72, Jan.
   2012.
+
+\bibitem{Haller:2013}
+I.~Haller, A.~Slowinska, M.~Neugschwandtner, and H.~Bos.
+\newblock Dowsing for overflows: A guided fuzzer to find buffer boundary
+  violations.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, Aug. 2013.
 
 \bibitem{Han:2009}
 J.~Han, D.~Gao, and R.~Deng.
@@ -516,19 +490,13 @@ J.~Han, D.~Gao, and R.~Deng.
 \bibitem{Harkins:1998}
 D.~Harkins and D.~Carrel.
 \newblock The {Internet Key Exchange}.
-\newblock Requests for Comments (RFC), Nov. 1998.
+\newblock {\url{http://tools.ietf.org/rfc/rfc2409.txt}}, Nov. 1998.
 
 \bibitem{vagrant}
 HashiCorp.
 \newblock {Vagrant}.
 \newblock {\url{https://www.vagrantup.com/}}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{vagrantcloud}
-HashiCorp.
-\newblock {Vagrant Cloud}.
-\newblock {\url{https://app.vagrantup.com/boxes/search}}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Hawblitzel:2015}
 C.~Hawblitzel, J.~Howell, M.~Kapritsos, J.~Lorch, B.~Parno, M.~Roberts,
@@ -600,13 +568,18 @@ P.~Hunt, M.~Konar, F.~Junqueira, and B.~Reed.
 \newblock In {\em Proceedings of {USENIX} Annual Technical Conference}, June
   2010.
 
-\bibitem{sgx}
-{Intel}.
-\newblock {Intel Software Guard Extensions: EPID Provisioning and Attestation
-  Services}.
+\bibitem{ibmblockchain}
+{IBM}.
+\newblock {IBM Blockchain}.
+\newblock \url{https://www.ibm.com/blockchain/platform}.
+\newblock Accessed: 2019-2-11.
+
+\bibitem{bitcoin}
+{J. Pearson}.
+\newblock {A Major Bug In Bitcoin Software Could Have Crashed the Currency}.
 \newblock
-  \url{https://software.intel.com/sites/default/files/managed/ac/40/2016\%20WW10\%20sgx\%20provisioning\%20and\%20attesatation\%20final.pdf}.
-\newblock Accessed: 2018-4-26.
+  \url{https://motherboard.vice.com/amp/en_us/article/qvakp3/a-major-bug-in-bitcoin-software-could-have-crashed-the-currency?}
+\newblock 2018-9-19.
 
 \bibitem{Jain:2010}
 A.~Jain.
@@ -619,13 +592,6 @@ Y.~Jang, S.~Lee, and T.~Kim.
 \newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
   Communications Security}}, Oct. 2016.
 
-\bibitem{bitcoin}
-{Jordan Pearson}.
-\newblock {A Major Bug In Bitcoin Software Could Have Crashed the Currency}.
-\newblock
-  \url{https://motherboard.vice.com/amp/en_us/article/qvakp3/a-major-bug-in-bitcoin-software-could-have-crashed-the-currency?}
-\newblock 2018-9-19.
-
 \bibitem{Jumratjaroenvanit:2008}
 A.~Jumratjaroenvanit and Y.~Teng-amnuay.
 \newblock {Probability of Attack Based on System Vulnerability Life Cycle}.
@@ -636,7 +602,7 @@ A.~Jumratjaroenvanit and Y.~Teng-amnuay.
 {Juniper Networks}.
 \newblock {Juniper Networks Security}.
 \newblock \url{http://www.juniper.net/us/en/products-services/security/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Junqueira:2005}
 F.~Junqueira, R.~Bhagwan, A.~Hevia, K.~Marzullo, and G.~Voelker.
@@ -662,7 +628,7 @@ A.~Keromytis and V.~Prevelakis.
 \newblock John Wiley \& Sons, Inc., June 2006.
 
 \bibitem{Kihlstrom:1998}
-K.~P. Kihlstrom, L.~E. Moser, and P.~M. Melliar-Smith.
+K.~Kihlstrom, L.~Moser, and P.~Melliar-Smit.
 \newblock The securering protocols for securing group communication.
 \newblock In {\em Proceedings of the Annual Hawaii International Conference on
   System Sciences}, Jan. 1998.
@@ -723,9 +689,23 @@ D.~Kreutz, A.~Bessani, E.~Feitosa, and H.~Cunha.
 \newblock In {\em Proceedings of the {IEEE} Pacific Rim International Symposium
   on Dependable Computing}, Nov. 2014.
 
+\bibitem{wannacry}
+{L. Kessem}.
+\newblock {WannaCry Ransomware Spreads Across the Globe, Makes Organizations
+  Wanna Cry About Microsoft Vulnerability}.
+\newblock
+  \url{https://securityintelligence.com/wannacry-ransomware-spreads-across-the-globe-makes-organizations-wanna-cry-about-microsoft-vulnerability/}.
+\newblock 2017-5-14.
+
+\bibitem{dns_root}
+{L. Liman}.
+\newblock {DNS root server FAQ}.
+\newblock \url{https://www.netnod.se/dns/dns-root-server-faq}.
+\newblock Accessed: 2019-2-11.
+
 \bibitem{Lamport:1979}
 L.~Lamport.
-\newblock Time, clocks, and the ordering of events in a distributed system.
+\newblock {Time, Clocks, and the Ordering of Events in a Distributed System}.
 \newblock {\em Communications of ACM}, 21(7):558--565, July 1978.
 
 \bibitem{Larsen:2015}
@@ -746,26 +726,17 @@ H.~Lee, J.~Seibert, E.~Hoque, C.~Killian, and C.~Nita-Rotaru.
 \newblock In {\em Proceedings of the IEEE International Conference on
   Distributed Computing Systems}, July 2014.
 
+\bibitem{Leskovec:2014}
+J.~Leskovec et~al.
+\newblock {\em {Mining of massive datasets}}.
+\newblock Cambridge University Press, 2014.
+
 \bibitem{Liao:2016}
 X.~Liao, K.~Yuan, X.~Wang, Z.~Li, L.~Xing, and R.~Beyah.
 \newblock {Acing the IOC Game: Toward Automatic Discovery and Analysis of
   Open-source Cyber Threat Intelligence}.
 \newblock In {\em {Proceedings of the ACM SIGSAC Conference on Computer and
   Communications Security}}, Oct. 2016.
-
-\bibitem{wannacry}
-{Limor Kessem}.
-\newblock {WannaCry Ransomware Spreads Across the Globe, Makes Organizations
-  Wanna Cry About Microsoft Vulnerability}.
-\newblock
-  \url{https://securityintelligence.com/wannacry-ransomware-spreads-across-the-globe-makes-organizations-wanna-cry-about-microsoft-vulnerability/}.
-\newblock 2017-5-14.
-
-\bibitem{linux_kernel}
-{Linux Counter}.
-\newblock {Lines of code of the Linux Kernel Versions}.
-\newblock \url{https://www.linuxcounter.net/statistics/kernel}.
-\newblock Accessed: 2018-4-26.
 
 \bibitem{Liu:2016}
 S.~Liu, P.~Viotti, C.~Cachin, V.~Quema, and M.~Vukolic.
@@ -779,6 +750,22 @@ Y.~Liu, A.~Sarabi, J.~Zhang, P.~Naghizadeh, M.~Karir, M.~Bailey, and M.~Liu.
   Incidents}.
 \newblock In {\em Proceedings of the {USENIX} Security Symposium}, Aug. 2015.
 
+\bibitem{linux_kernel}
+{M. Larabel}.
+\newblock {The Linux Kernel Gained 2.5 Million Lines Of Code, 71k Commits In
+  2017}.
+\newblock
+  \url{https://www.phoronix.com/scan.php?page=news_item&px=Linux-Kernel-Commits-2017}.
+\newblock Accessed: 2019-2-11.
+
+\bibitem{Marques:2018}
+P.~Marques, Z.~Dabbabi, M.-M. Mironescu, O.~Thonnard, A.~Bessani, F.~Buontempo,
+  and I.~Gashi.
+\newblock {Detecting Malicious Web Scraping Activity: a Study with Diverse
+  Detectors}.
+\newblock In {\em IEEE Pacific Rim International Symposium on Dependable
+  Computing}, 2018.
+
 \bibitem{Martins:2013}
 R.~Martins, R.~Gandhi, P.~Narasimhan, S.~Pertet, A.~Casimiro, D.~Kreutz, and
   P.~Ver{\'i}ssimo.
@@ -791,19 +778,24 @@ R.~Martins, R.~Gandhi, P.~Narasimhan, S.~Pertet, A.~Casimiro, D.~Kreutz, and
 {Microsoft}.
 \newblock {Microsoft Bug Bounty Program}.
 \newblock \url{https://technet.microsoft.com/en-us/library/dn425036.aspx}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{microsoft}
 Microsoft.
 \newblock {Microsoft Security Advisories and Bulletins}.
 \newblock \url{https://technet.microsoft.com/en-us/library/security/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Miller:2010}
 D.~Miller, Z.~Payton, A.~Harper, C.~Blask, and S.~VanDyke.
 \newblock {\em Security Information and Event Management (SIEM)
   Implementation}.
 \newblock McGraw-Hill Education, Oct. 2010.
+
+\bibitem{Ming:2015}
+J.~Ming, D.~Wu, G.~Xiao, J.~Wang, and P.~Liu.
+\newblock Taintpipe: Pipelined symbolic taint analysis.
+\newblock In {\em Proceedings of the {USENIX} Security Symposium}, Aug. 2015.
 
 \bibitem{Mishra:2011}
 A.~Mishra, B.~Gupta, and R.~Joshi.
@@ -816,16 +808,16 @@ A.~Mishra, B.~Gupta, and R.~Joshi.
 Mitre.
 \newblock {Common Platform Enumeration}.
 \newblock \url{http://cpe.mitre.org/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{cveterm}
 Mitre.
 \newblock {CVE Terminology}.
 \newblock \url{http://cve.mitre.org/about/terminology.html}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Moniz:2011}
-H.~Moniz, N.~Neves, M.~Correia, and P.~Verissimo.
+H.~Moniz, N.~Neves, M.~Correia, and P.~Ver{\'i}ssimo.
 \newblock {RITAS: Services for Randomized Intrusion Tolerance}.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing},
   8(1):122--136, Dec. 2011.
@@ -848,7 +840,7 @@ A.~Nappa, R.~Johnson, L.~Bilge, J.~Caballero, and T.~Dumitras.
 {National Institute of Standards and Technology}.
 \newblock {National Vulnerability Database}.
 \newblock {\url{http://nvd.nist.gov/}}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Nist:2012}
 {National Institute of Standards and Technology}.
@@ -874,13 +866,7 @@ L.~Nelson, H.~Sigurbjarnarson, K.~Zhang, D.~Johnson, J.~Bornholt, E.~Torlak,
 Netfilter.
 \newblock The netfilter.org project.
 \newblock {\url{http://www.netfilter.org/}}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{dns_root}
-{Netnod's Lars-Johan Liman}.
-\newblock {DNS root server FAQ}.
-\newblock \url{https://www.netnod.se/dns/dns-root-server-faq}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Newell:2015}
 A.~Newell, D.~Obenshain, T.~Tantillo, C.~Nita-Rotaru, and Y.~Amir.
@@ -889,11 +875,12 @@ A.~Newell, D.~Obenshain, T.~Tantillo, C.~Nita-Rotaru, and Y.~Amir.
 \newblock {\em IEEE Transactions on Dependable and Secure Computing},
   12(6):602--614, Nov 2015.
 
-\bibitem{Nogueira:2018}
-A.~Nogueira, M.~Garcia, A.~Bessani, and N.~Neves.
-\newblock {On the Challenges of Building a BFT SCADA}.
-\newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
-  Dependable Systems and Networks}, June 2018.
+\bibitem{Newsome:2005}
+J.~Newsome and D.~Song.
+\newblock {Dynamic Taint Analysis for Automatic Detection, Analysis, and
+  Signature Generation of Exploits on Commodity Software}.
+\newblock In {\em Proceedings of the Network and Distributed System Security
+  Symposium}, Feb. 2005.
 
 \bibitem{Okhravi:2014}
 H.~Okhravi, T.~Hobson, D.~Bigelow, and W.~Streilein.
@@ -902,24 +889,17 @@ H.~Okhravi, T.~Hobson, D.~Bigelow, and W.~Streilein.
 
 \bibitem{solaris}
 Oracle.
-\newblock Map of cve to advisory/alert.
+\newblock {Map of CVE to Advisory/Alert}.
 \newblock
   \url{https://www.oracle.com/technetwork/topics/security/public-vuln-to-advisory-mapping-093627.html}.
-\newblock Accessed: 2018-4-26.
-
-\bibitem{solaris_report}
-{Oracle Solaris}.
-\newblock {Oracle Solaris Third Party Bulletin}.
-\newblock
-  \url{https://www.oracle.com/technetwork/topics/security/bulletinjul2016-3090568.html}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{paloalto}
 {Palo Alto}.
 \newblock {Palo Alto Networks}.
 \newblock
   \url{http://www.paloaltonetworks.com/products/platforms/PA-5000\_Series.html}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Pease:1980}
 M.~Pease, R.~Shostak, and L.~Lamport.
@@ -947,14 +927,20 @@ K.~Prabha and S.~Sukumaran.
 \newblock {\em International Journal of Computer Applications}, 90(9):26--30,
   Mar. 2014.
 
+\bibitem{razor}
+{Puppet}.
+\newblock {How Razor Works}.
+\newblock \url{https://puppet.com/docs/pe/2019.0/how_razor_works.html}.
+\newblock Accessed: 2019-2-11.
+
 \bibitem{pyloris}
 Pyloris.
 \newblock Pyloris.
 \newblock {\url{https://sourceforge.net/projects/pyloris/}}, Accessed:
-  2018-4-26.
+  2019-2-11.
 
 \bibitem{Rahli:2018}
-V.~Rahli, I.~Vukotic, M.~Volp, and P.~Verissimo.
+V.~Rahli, I.~Vukotic, M.~Volp, and P.~Ver{\'i}ssimo.
 \newblock {Velisarios: Byzantine Fault-Tolerant Protocols Powered by Coq}.
 \newblock In {\em Proceedings of the European Symposium on Programming}, Apr.
   2018.
@@ -969,7 +955,13 @@ B.~Randell.
 RedHat.
 \newblock {RedHat CVE Database}.
 \newblock \url{https://access.redhat.com/security/cve/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
+
+\bibitem{Reed:1960}
+I.~Reed and G.~Solomon.
+\newblock Polynomial {C}odes {O}ver {C}ertain {F}inite {F}ields.
+\newblock {\em Journal of the Society for Industrial and Applied Mathematics},
+  8(2):300--304, 1960.
 
 \bibitem{Reiser:2007}
 H.~Reiser and R.~Kapitza.
@@ -979,8 +971,8 @@ H.~Reiser and R.~Kapitza.
   Intrusiton-tolerant Systems}, May 2007.
 
 \bibitem{Reiter:1994}
-M.~K. Reiter.
-\newblock The rampart toolkit for building high-integrity services.
+M.~Reiter.
+\newblock {The Rampart Toolkit for Building High-Integrity Services}.
 \newblock In {\em Proceedings of the International Workshop on Theory and
   Practice in Distributed Systems}, Sept. 1995.
 
@@ -988,19 +980,25 @@ M.~K. Reiter.
 \relax Machine Learning Group at the University~of Waikato.
 \newblock {WEKA}.
 \newblock \url{http://www.cs.waikato.ac.nz/ml/weka/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{virtualbox}
 \relax Oracle.
 \newblock {VirtualBox}.
 \newblock {\url{https://www.virtualbox.org/}}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{cvedetails}
 \relax{CVE Details}.
 \newblock {The Ultimate Security Vulnerability Datasource}.
 \newblock \url{http://www.cvedetails.com/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
+
+\bibitem{edb}
+\relax{Exploit Database}.
+\newblock {Offensive Security’s Exploit Database Archive}.
+\newblock {\url{https://www.exploit-db.com/}}.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Reynolds:2002}
 J.~Reynolds, J.~Just, E.~Lawson, L.~Clough, R.~Maglich, and K.~Levitt.
@@ -1039,11 +1037,16 @@ M.~Shahzad, M.~Shafiq, and A.~Liu.
 \newblock In {\em Proceedings of the International Conference on Software
   Engineering}, June 2012.
 
+\bibitem{Shamir:1979}
+A.~Shamir.
+\newblock {How to Share a Secret}.
+\newblock {\em Communications of ACM}, 22(11):612--613, Nov. 1979.
+
 \bibitem{snort}
 Snort.
 \newblock {Network Intrusion Detection \& Prevention System}.
 \newblock {\url{https://www.snort.org/}}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{Snow:2013}
 K.~Snow, F.~Monrose, L.~Davi, A.~Dmitrienko, C.~Liebchen, and A.~Sadeghi.
@@ -1074,20 +1077,20 @@ J.~{Sousa}, A.~{Bessani}, and M.~{Vukoli{\'c}}.
   Dependable Systems and Networks}, June 2018.
 
 \bibitem{Sousa:2010}
-P.~Sousa, A.~Bessani, M.~Correia, N.~Neves, and P.~Verissimo.
+P.~Sousa, A.~Bessani, M.~Correia, N.~Neves, and P.~Ver{\'i}ssimo.
 \newblock {Highly Available Intrusion-Tolerant Services with Proactive-Reactive
   Recovery}.
 \newblock {\em IEEE Transactions on Parallel and Distributed Systems},
   21(4):452--465, Apr. 2010.
 
 \bibitem{Sousa:2005}
-P.~Sousa, N.~Neves, and P.~Verissimo.
+P.~Sousa, N.~Neves, and P.~Ver{\'i}ssimo.
 \newblock {How Resilient are Distributed f Fault/Intrusion-tolerant Systems?}
 \newblock In {\em Proceedings of the {IEEE/IFIP} International Conference on
   Dependable Systems and Networks}, June 2005.
 
 \bibitem{Sousa:2007}
-P.~Sousa, N.~Neves, and P.~Verissimo.
+P.~Sousa, N.~Neves, and P.~Ver{\'i}ssimo.
 \newblock {Hidden Problems of Asynchronous Proactive Recovery}.
 \newblock In {\em Proceedings of the Workshop on Hot Topics in System
   Dependability}, June 2007.
@@ -1096,8 +1099,8 @@ P.~Sousa, N.~Neves, and P.~Verissimo.
 N.~Stephens, J.~Grosen, C.~Salls, A.~Dutcher, R.~Wang, J.~Corbetta,
   Y.~Shoshitaishvili, C.~Kruegel, and G.~Vigna.
 \newblock {Driller: Augmenting Fuzzing Through Selective Symbolic Execution}.
-\newblock In {\em {Proceedings of the USENIX Network and Distributed System
-  Security Symposium}}, Feb. 2013.
+\newblock In {\em Proceedings of the Network and Distributed System Security
+  Symposium}, Feb. 2013.
 
 \bibitem{Surisetty:2010}
 S.~Surisetty and S.~Kumar.
@@ -1117,8 +1120,15 @@ Symantec.
 Symantec.
 \newblock {{Internet Security Threat Report}}.
 \newblock
-  https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf,
+  \url{https://www.symantec.com/content/dam/symantec/docs/reports/istr-22-2017-en.pdf},
   2017.
+
+\bibitem{petya}
+{Symantec Security Response}.
+\newblock {Petya ransomware outbreak: Here's what you need to know}.
+\newblock
+  \url{https://www.symantec.com/blogs/threat-intelligence/petya-ransomware-wiper}.
+\newblock 2017-10-24.
 
 \bibitem{Syta:2017}
 E.~Syta, P.~Jovanovic, E.~Kogias, N.~Gailly, L.~Gasser, I.~Khoffi, M.~Fischer,
@@ -1143,7 +1153,7 @@ E.~Totel, F.~Majorczyk, and L.~M{\'e}.
 Ubuntu.
 \newblock {Ubuntu Security Notices}.
 \newblock \url{https://usn.ubuntu.com/usn/}.
-\newblock Accessed: 2018-4-26.
+\newblock Accessed: 2019-2-11.
 
 \bibitem{vanderVeen:2017}
 V.~van~der Veen, D.~Andriesse, M.~Stamatogiannakis, X.~Chen, H.~Bos, and
@@ -1160,7 +1170,7 @@ P.~Ver{\'i}ssimo, N.~Neves, and M.~Correia.
 \newblock Springer, 2003.
 
 \bibitem{Veronese:2013}
-G.~Veronese, M.~Correia, A.~Bessani, L.~Lung, and P.~Verissimo.
+G.~Veronese, M.~Correia, A.~Bessani, L.~Lung, and P.~Ver{\'i}ssimo.
 \newblock {Efficient {B}yzantine Fault-Tolerance}.
 \newblock {\em IEEE Transactions on Computers}, 62(1):16--30, Nov. 2013.
 
@@ -1195,14 +1205,14 @@ F.~Wang and R.~Upppalli.
 \bibitem{Wilfredo:2000}
 T.~Wilfredo.
 \newblock {Software Fault Tolerance: A Tutorial}.
-\newblock Technical report, 2000.
+\newblock Technical report, Oct. 2000.
 
 \bibitem{King:2016}
 D.~Williams-King, G.~Gobieski, K.~Williams-King, J.~Blake, X.~Yuan, P.~Colp,
   M.~Zheng, V.~Kemerlis, J.~Yang, and W.~Aiello.
 \newblock {Shuffler: Fast and Deployable Continuous Code Re-randomization}.
 \newblock In {\em Proceedings of the {USENIX} Symposium on Operating Systems
-  Design and Implementation}, 2016.
+  Design and Implementation}, Nov. 2016.
 
 \bibitem{Wood:2011}
 T.~Wood, R.~Singh, A.~Venkataramani, P.~Shenoy, and E.~Cecchet.

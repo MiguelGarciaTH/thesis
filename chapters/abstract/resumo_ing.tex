@@ -1,5 +1,6 @@
 % ----------------------------------------------------------------------
 % Página do resumo em Inglês:
+% 300 palavras
 \selectlanguage{english}
 %\vspace*{2cm}
 %\begin{center}
@@ -10,15 +11,60 @@
 \label{chapter:abstract_en}
 \vspace*{-10mm}
 
+Over the past 20 years, there have been indisputable advances on the development of Byzantine Fault-Tolerant (BFT) replicated systems. 
+These systems keep operational safety as long as at most $f$ out of $n$ replicas fail simultaneously. 
+Therefore, in order to maintain correctness it is assumed that replicas do not suffer from common mode failures, or in other words that replicas fail independently. 
+In an adversarial setting, this requires that replicas do not include similar vulnerabilities, or otherwise a single exploit could be employed to compromise a significant part of the system. 
+The thesis investigates how this assumption can be substantiated in practice by exploring diversity when managing the configurations of replicas.
+
+The thesis begins with an analysis of a large dataset of vulnerability information to get evidence that diversity can contribute to failure independence. 
+In particular, we used the data from a vulnerability database to devise strategies for building groups of $n$ replicas with different Operating Systems (OS). 
+Our results demonstrate that it is possible to create dependable configurations of OSes, which do not share vulnerabilities over reasonable periods of time (i.e., a few years).
+
+Then, the thesis proposes a new design for a firewall-like service that protects and regulates the access to critical systems, and that could benefit from our diversity management approach. 
+The solution provides fault and intrusion tolerance by implementing an architecture based on two filtering layers, enabling efficient removal of invalid messages at early stages in order to decrease the costs associated with BFT replication in the later stages.
+
+The thesis also presents a novel solution for managing diverse replicas. 
+It collects and processes data from several data sources to continuously compute a risk metric. 
+Once the risk increases, the solution replaces a potentially vulnerable replica by another one, 
+trying to maximize the failure independence of the replicated service. 
+Then, the replaced replica is put on quarantine and updated with the available patches, to be prepared for later re-use. 
+We devised various experiments that show the dependability gains and performance impact of our prototype, including key benchmarks and three BFT applications (a key-value store, our firewall-like service, and a blockchain). 
+
+%This thesis addresses the problem of building dependable Byzantine fault-tolerant (BFT) systems through diversity. 
+%Although the indisputable contributions of many works from the BFT research community, diversity management still is a long-standing open problem of this area. 
+%BFT safety holds under the strict assumption that only $f$ out $n$ replicas fail \emph{simultaneously}.
+%Therefore, it is assumed that replicas fail independently (e.g., they do not share vulnerabilities).
+%Otherwise, the amount of effort to compromise $f$ replicas would be the same as to compromise $f+1$, becoming easier to break the BFT safety.
+
+
+%The thesis begins with an analysis (that is in some part prior to this thesis) on security data.
+%This analysis shows evidence to support failure independence among BFT replicas.
+%In particular, we used a vulnerability database to build sets of $n$ replicas with different Operating Systems (OS).
+%Based on these results, it is possible to create dependable configurations of OSes of BFT systems. 
+
+
+%Nevertheless, we have identified some limitations on the previous analysis. 
+%These were mainly due to missing data that would provide inaccurate results.
+%Therefore, we designed a more advanced solution to manage the diversity of any BFT system. 
+%We developed a solution that considers several (free) security data sources.
+%This data, feeds a novel metric that is used to make decisions on diversity sets minimizing the common vulnerabilities.
+%We developed a methodology to address off-the-shelf diversity in general. 
+%However, here we focused on OSes as there resides the replica's major code complexity.
+%Moreover, we extended this contribution in a more practical way and developed a prototype that enables automatic management of BFT replicas' diversity.
+%Hence, we reduce the complexity inherent from dealing with diverse software in replicated systems. 
+
+%We devised a few experiments that show the dependability gains of using an advanced diversity selection and the impact of using different OSes in a few BFT applications (one of them is a BFT firewall-like that is part of the contributions of this thesis).
+%Nevertheless, implementation decisions made us pay an additional cost on the performance to achieve such results on dependability.
 
 \vfill
 
 \begin{flushleft}
 \textbf{Keywords:}
-Diversity, Vulnerabilities, Operating Systems, Intrusion Tolerance, Proactive Recovery.
+Diversity, Vulnerabilities, Operating Systems, Intrusion Tolerance, Rejuvenations.
 \end{flushleft}
 
-\LIMPA
+%\LIMPA
 
 % Fim da página do resumo em Inglês.
 % ----------------------------------------------------------------------
